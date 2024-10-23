@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block html_lang %}{{ page.lang }}{% endblock %}
+
+{% block title %}{{ SITENAME|striptags }} - {{ page.title|striptags }}{%endblock%}
+
+{% block head %}
+  {{ super() }}
+
+  {% import 'translations.html' as translations with context %}
+  {% if translations.entry_hreflang(page) %}
+    {{ translations.entry_hreflang(page) }}
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+<h1 class="post-title">{{ page.title|striptags  }}</h1>
+
+<section class="post-meta">
+    <p>发表于: {{ page.date.strftime('%Y-%m-%d') }} ||</p>
+    <p>分类:<a class="post-link" href="{{ SITEURL }}/{{ page.category.url }}">{{ page.category }}</a> ||</p>
+</section>
+
+<section class="post-content">
+  {{ page.content }}
+</section>
+
+<section class="post-meta">
+  <p>标签:
+    {% for tag in page.tags %}
+      <a class="post-link" href="{{ SITEURL }}/{{ tag.url }}">{{tag}}</a>
+      {% endfor %}
+  </p>
+</section>
+
+{% endblock %}

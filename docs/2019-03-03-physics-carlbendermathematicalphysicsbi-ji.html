@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <title>从冰上的水 - Carl Bender Mathematical Physics Lecture1 Note</title>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Pelican" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/theme/css/style.css" />
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Serif+SC&display=swap" rel="stylesheet">
+ <!--fonts end  -->
+
+<script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/base16/solarized-light.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.1">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.1">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.1">
+
+
+
+
+    <meta name="tags" content="数学物理方法" />
+    <meta name="tags" content="数学" />
+    <meta name="tags" content="物理" />
+    <meta name="tags" content="微扰" />
+    <meta name="tags" content="Carl Bender" />
+
+</head>
+
+<body>
+  <div class="container">
+  <header>
+    <section class="banner"><img src="/images/banner.jpg"></section>
+  </header>
+  <nav class="row">
+      <a class="nav" href="/">首页</a>
+      <a class="nav" href="/categories.html">分类</a>
+      <a class="nav" href="/tags.html">标签</a>
+        <a class="nav" href="/pages/about.html" >关于</a>
+  </nav>
+
+  <main>
+
+<h1 class="post-title">Carl Bender Mathematical Physics Lecture1 Note</h1>
+
+<section class="post-meta">
+    <p>发表于: 2019-03-03 ||</p>
+    <p>分类:<a class="post-link" href="/category/zhuan-ye-bi-ji.html">专业笔记</a> ||</p>
+</section>
+
+<section class="post-content">
+  
+<h2>Information</h2>
+
+<ul>
+<li>Vidoes: <a href='https://www.youtube.com/playlist?list=PLzcd6SoIscwjHuWRE38UXWG92uq0Sy4UF'>https://www.youtube.com/playlist?list=PLzcd6SoIscwjHuWRE38UXWG92uq0Sy4UF</a></li>
+<li>Book: Carl M. Bender, Steven A. Orszag, Advanced Mathematical Methods for Scientists and Engineers I Asympotic Methods and Perturbation Theory, 1999</li>
+</ul>
+<h2>1</h2>
+
+<h3>微扰求解 Hard Problem 的步骤</h3>
+<p>1. 使某一项成为微扰 $\epsilon$
+2. 将无微扰的解加上修正后代回方程, 逐项对应求解
+3. 将所有的项加进来.</p>
+
+
+<blockquote>1. Convert the original problem into a perturbation problem by introducing the small parameter $\epsilon$ .
+2. Assume an expression for the answer in the form of a perturbation series and compute the coefficients of that series.
+3. Recover the answer to the original problem by summing the perturbation series for the appropriate value of $\epsilon$ .</blockquote>
+
+<h3>Symbols</h3>
+
+<blockquote>- $\sim$ : 'is asympotic to'
+\begin{align*}
+  f(x) \sim g(x) \quad (x \to x_0)
+\end{align*}
+means
+\begin{align*}
+  \lim_{x\to x_0} \frac{f(x)}{g(x)} = 1
+\end{align*}</blockquote>
+
+<blockquote>- $\ll$ : 'is negligible compared with'
+\begin{align*}
+  f(x) \ll g(x) \quad (x \to x_0)
+\end{align*}
+means
+\begin{align*}
+  \lim_{x\to x_0} \frac{f(x)}{g(x)} = 0
+\end{align*}</blockquote>
+
+<h3>Method of Dominant Balance</h3>
+
+<p>求方程</p>
+
+$$\begin{align*}
+  \epsilon x^5 +x = 1
+\end{align*}$$
+
+<p>的解在 $\epsilon \to 0$ 时, 行为.</p>
+
+<ul>
+<li>Neglect 1</li>
+</ul>
+
+$$\begin{align*}
+  \epsilon x^5 \sim -x
+\end{align*}$$
+
+<p>得到</p>
+
+$$\begin{align*}
+  x \sim \frac{(-1)^{1/4}}{\epsilon^{1/4}}
+\end{align*}$$
+
+<p>是复平面上四个在无穷远的解. $1$ 相比无穷大, 可以忽略, 不矛盾.</p>
+
+<ul>
+<li>Neglect $x$</li>
+</ul>
+
+$$\begin{align*}
+  \epsilon x^5 \sim 1
+\end{align*}$$
+
+<p>得到</p>
+
+$$\begin{align*}
+  x \sim \frac{1^{1/5}}{\epsilon^{1/5}}
+\end{align*}$$
+
+<p>这里无穷大的 $x$ 相比于 $1$ 是不可忽略的. 矛盾</p>
+
+<ul>
+<li>Neglect $\epsilon x^5$</li>
+</ul>
+
+$$\begin{align*}
+  x \sim 1
+\end{align*}$$
+
+<p>那么</p>
+
+$$\begin{align*}
+  \epsilon x^5 \sim \epsilon\cdot 1 \ll 1
+\end{align*}$$
+
+<p>可以忽略.</p>
+
+</section>
+
+<section class="post-meta">
+    <p>标签:
+        <a class="post-link" href="/tag/shu-xue-wu-li-fang-fa.html">数学物理方法</a>
+        <a class="post-link" href="/tag/shu-xue.html">数学</a>
+        <a class="post-link" href="/tag/wu-li.html">物理</a>
+        <a class="post-link" href="/tag/wei-rao.html">微扰</a>
+        <a class="post-link" href="/tag/carl-bender.html">Carl Bender</a>
+    </p>
+</section>
+
+  </main>
+  <footer>© 2018 - 2024 ZQW</footer>
+</div>
+</body>
+
+</html>

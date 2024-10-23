@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <title>从冰上的水 - 两体束缚态</title>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Pelican" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/theme/css/style.css" />
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Serif+SC&display=swap" rel="stylesheet">
+ <!--fonts end  -->
+
+<script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/base16/solarized-light.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.1">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.1">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.1">
+
+
+
+
+    <meta name="tags" content="two body" />
+    <meta name="tags" content="bound state" />
+
+</head>
+
+<body>
+  <div class="container">
+  <header>
+    <section class="banner"><img src="/images/banner.jpg"></section>
+  </header>
+  <nav class="row">
+      <a class="nav" href="/">首页</a>
+      <a class="nav" href="/categories.html">分类</a>
+      <a class="nav" href="/tags.html">标签</a>
+        <a class="nav" href="/pages/about.html" >关于</a>
+  </nav>
+
+  <main>
+
+<h1 class="post-title">两体束缚态</h1>
+
+<section class="post-meta">
+    <p>发表于: 2021-03-01 ||</p>
+    <p>分类:<a class="post-link" href="/category/zhuan-ye-bi-ji.html">专业笔记</a> ||</p>
+</section>
+
+<section class="post-content">
+  <!-- toc -->
+
+<!-- more -->
+<h1>any</h1>
+<p>\(r &gt; r_0\) 时, \(V(r) = 0\) , 径向 Schrodinger 方程为</p>
+\[
+\label{eq:sq}
+-\chi'' + \frac{l(l+1)}{r^2}\chi = k^2 \chi
+\]
+
+<p>将 \(\chi\) 在 \(k=0\) 处做低能展开</p>
+\[
+\chi(r) = \phi(r) + k^2 f(r) +k^4 g(r) + \mathcal{O}(k^6)
+\]
+
+<p>将展开代回到 \((\ref{eq:sq})\) , 对比 \(k\) 的系数得到:</p>
+<p>零能时, 也就是 \(\phi\) 满足的方程为</p>
+\[
+\label{eq:phi}
+- \phi '' + \frac{l(l+1)}{r^2}\phi = 0
+\]
+<p>\(f\) 满足的方程为</p>
+\[
+\label{eq:f}
+- f '' + \frac{l(l+1)}{r^2}f = \phi
+\]
+<p>\(g\) 满足的方程为</p>
+\[
+\label{eq:g}
+- g'' + \frac{l(l+1)}{r^2}g = f
+\]
+
+<h1>s-wave</h1>
+<p>\(l = 0\) 代入 \((\ref{eq:phi})\) 零能解为</p>
+\[
+\phi \propto \sharp_1  + \sharp_2 r
+\]
+<p>舍去一个归一化因子, 相对系数可定义散射长度</p>
+\[
+\label{eq:phi_s}
+\phi = 1 - \frac{r}{a}
+\]
+
+\[
+\psi(r)|_{k=0} = \frac{\chi(r)}{r} \propto \frac{1}{r} - \frac{1}{a}
+\]
+<p>\((\ref{eq:phi_s})\) 代入 \((\ref{eq:f})\) 解得</p>
+\[
+f = -\frac{r^2}{2} + \frac{r^3}{6a} + C_1 + C_2 r
+\]
+<p>重新定义 \(f \to f - C_1\phi\) (这总是可以做到的, 因为相当于直接在展开的时候令 \(\chi = \phi + k^2 (f-C_1\phi) + k^4 g\) , \(f - C_1 \phi\) 也可以做一到是任意函数 ) ,并用系数定义 effective range</p>
+\[
+\label{eq:f_s}
+f = -\frac{r^2}{2} + \frac{r^3}{6a} + \frac{r_s}{2} r
+\]
+<p>\((\ref{eq:f_s})\) 代入 \((\ref{eq:f})\) ,并做类似地处理 ( \(g\to g - \cdots\) , 定义 \(r_s'\) ) 得到 (  \(r_s'\) <strong>的系数why?1/24??</strong> ) </p>
+\[
+g = \frac{r^4}{24} - \frac{r^5}{120a} - \frac{r_s}{12}r^3 +\frac{r_s'}{24}r
+\]
+<p>s-wave 非零能的径向方程实际是严格可解的, 舍去一个归一化系数, 另一个系数定义相移( 是 \(k\) 的函数 ), 形式为</p>
+\[
+\psi(r) = \frac{\sin (k r + \delta_k)}{r\sin\delta_k}
+\]
+<p>\(\psi(r)\) 也做低能 \(k\to 0\) 的展开</p>
+\[
+\psi(r) = \frac{\chi(r)}{r} = \cot\delta_k \sin(kr)\frac{1}{r} + \cos(kr)\frac{1}{r} 
+= \frac{1}{r} + k\cot\delta_k + \mathcal{O}(r^2)
+\]
+<p>\(k\cot\delta_k\) 为 \(r^0\) 的系数, 因此得到 \(k\cot\delta_k\) 低能展开</p>
+\[
+k\cot \delta_k = -\frac{1}{a} + k^2\frac{r_s}{2} + k^4 \frac{r_s'}{24} + \mathcal{O}(k^6)
+\]
+
+<h1>p-wave</h1>
+<p>\(l = 1\) 代入 \((\ref{eq:phi})\) 零能解为零能时</p>
+\[
+-\phi'' + \frac{1\times(1+1)}{r^2}\phi = 0
+\]
+<p>解为</p>
+\[
+\phi(r) \propto \sharp_1 r^2 + \sharp_2 \frac{1}{r}
+\]
+
+<p>舍去一个归一化因子, 相对系数可定义 \(v\) </p>
+\[
+\label{eq:phi_p}
+\phi(r) = \frac{1}{r} - \frac{r^2}{3v}
+\]
+<p>\((\ref{eq:phi_p})\) 代入 \((\ref{eq:f})\) 解得</p>
+\[
+f = \frac{r}{2} + \frac{r^4}{30v} + \sharp_1 r^2 +\sharp_2 \frac{1}{r}
+\]
+<p>与 s-wave 类似的处理, 用系数定义 \(R\) , 重新定义后的 \(f\) 为</p>
+\[
+f = \frac{r}{2} + \frac{r^4}{30v} - \frac{r^2}{3R}
+\]
+<p>所以</p>
+\[
+\psi(r) = \frac{\chi(r)}{r} = \left( \frac{1}{r^2} - \frac{r}{3v} \right)
+         + k^2 \left( \frac{1}{2} - \frac{r}{3R} + \frac{r^3}{30v}  \right) + \mathcal{O}(k^4)
+\]
+
+<p>~~p-wave 非零能的径向方程的严格解是求 Bessel 函数, 舍去一个归一化系数, 另一个系数定义相移( 是 \(k\) 的函数 ), 在 \(r\to\infty\) 的渐近形式为~~</p>
+<blockquote>
+<p>$$
+\begin{align}
+\psi(r) = \frac{\chi(r)}{r} \sim&amp; \frac{1}{r\sin\delta_k}\sin\left(kr - \frac{1}{2}\pi + \delta_k  \right) \
+ =&amp; -\frac{1}{r}\cot \delta_k  + k + r\frac{k^2}{2}\cot\delta_k+\mathcal{O}(r^2)\quad, \quad \mathrm{as}\, r \to\infty
+ \end{align}
+$$</p>
+</blockquote>
+<p>将严格解也在低能展开 ( <strong>此式的来源???</strong> )</p>
+\[
+\psi(r) = \frac{\chi(r)}{r} \propto \cot\delta_k j_1(kr) - y_1(kr) = \frac{1}{k^2 r^2} + \frac{1}{2} 
+             + \frac{r}{3}k \cot\delta_k + \mathcal{O}(r^2)
+\]
+
+<p>对比 \(\frac{1}{r^2}\) 及 \(r\) 的系数可得</p>
+\[
+\cot \delta_k = -\frac{1}{v k^3} - \frac{1}{kR} + \mathcal{O}(k)
+\]
+
+<h1>d-wave</h1>
+<p>\(l = 2\) 代入 \((\ref{eq:phi})\) 零能解为零能时</p>
+\[
+-\phi'' + \frac{2(2+1)}{r^2}\phi = 0
+\]
+<p>解为</p>
+\[
+\phi(r) = \sharp_1 r^3 + \sharp_2 \frac{1}{r^2}
+\]
+
+<p>舍去一个归一化因子, 相对系数可定义 \(D\) </p>
+\[
+\label{eq:phi_d}
+\phi(r) = \frac{1}{r^2} - \frac{r^3}{45 D}
+\]
+<p>\((\ref{eq:phi_d})\) 代入 \((\ref{eq:f})\) 解得</p>
+\[
+f = \frac{1}{6} + \frac{r^5}{630 D} + \sharp_1 r^3 + \frac{\sharp_2}{r^2}
+\]
+<p>与 s-wave 类似的处理, 用系数定义 \(v\) , 重新定义后的 \(f\) 为</p>
+\[
+\label{eq:f_d}
+f = \frac{1}{6} + \frac{r^5}{630 D} - \frac{r^3}{45v}
+\]
+<p>\((\ref{eq:f_d})\) 代入 \((\ref{eq:g})\) ,并做类似地处理 ( \(g\to g - \cdots\) , 定义 \(r_s'\) ) 得到</p>
+\[
+\begin{align}
+g =&amp; \frac{r^5}{630 v} + \frac{r^2}{24} - \frac{r^7}{22680 D} + \sharp_1 r^3 + \frac{\sharp_2}{r^2} \\
+\Rightarrow g =&amp; \frac{r^5}{630 v} + \frac{r^2}{24} - \frac{r^7}{22680 D} -\frac{r^3}{45R}  
+\end{align}
+\]
+<p>所以</p>
+\[
+\begin{align}
+\psi(r) =&amp; \frac{\chi(r)}{r} = \frac{\phi(r) + k^2 f(r) +k^4 g(r) + \mathcal{O}(k^6)}{r} \\
+        =&amp;  \left(\frac{1}{r^3} - \frac{r^2}{45 D} \right)
+         +k^2\left( \frac{1}{6} + \frac{r^5}{630 D} - \frac{r^3}{45v} \right)
+         +k^4\left( \frac{r^5}{630 v} + \frac{r^2}{24} - \frac{r^7}{22680 D} -\frac{r^3}{45R} \right)
+\end{align}
+\]
+
+<p>将严格解也在低能展开</p>
+\[
+\psi(r) = \frac{\chi(r)}{r} \propto \cot\delta_k j_2(kr) - y_2(kr) 
+        = \frac{3}{k^3 r^3} + \frac{1}{2kr} + \frac{kr}{8} 
+             + \frac{r^2}{15}k^2 \cot\delta_k + \mathcal{O}(r^3)
+\]
+
+<p>对比系数得</p>
+\[
+\cot \delta_k = - \frac{1}{Dk^5} - \frac{1}{vk^3} - \frac{1}{kR} + \mathcal{O}(k)
+\]
+</section>
+
+<section class="post-meta">
+    <p>标签:
+        <a class="post-link" href="/tag/two-body.html">two body</a>
+        <a class="post-link" href="/tag/bound-state.html">bound state</a>
+    </p>
+</section>
+
+  </main>
+  <footer>© 2018 - 2024 ZQW</footer>
+</div>
+</body>
+
+</html>

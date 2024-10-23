@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+<section class="post-list">
+    {% for category, articles in categories|sort %}
+    <h3><a class="post-link" href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a>({{ articles|count }})</h3>
+    {% endfor %}
+</section>
+
+{% endblock %}
