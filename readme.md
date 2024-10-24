@@ -1,5 +1,23 @@
-# zqwblog
+# My Blog v3.0
 
-new version blog. using a new org renderer.
+[zqw.ink](https://zqw.ink)
 
-新版博客, 采用新版 org 渲染引擎.
+## Acknowledge
+
+Generate by [Pelican](https://getpelican.com/).
+
+Use Plugins:
+
+- [sitemap](https://github.com/pelican-plugins/sitemap)
+
+Use package:
+
+- [jinja2](https://github.com/pallets/jinja/)
+
+- [Python-Markdown](https://python-markdown.github.io/)
+
+- [markdown_math_escape](https://github.com/sgryjp/markdown_math_escape)
+
+## Contact Information
+
+zeqing6688@126.com
