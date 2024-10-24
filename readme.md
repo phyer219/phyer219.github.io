@@ -2,7 +2,7 @@
 
 [zqw.ink](https://zqw.ink)
 
-## Acknowledge
+## Introduction
 
 Generate by [Pelican](https://getpelican.com/).
 
@@ -17,6 +17,12 @@ Use package:
 - [Python-Markdown](https://python-markdown.github.io/)
 
 - [markdown_math_escape](https://github.com/sgryjp/markdown_math_escape)
+
+## Acknowledge
+
+[MathJax](https://www.mathjax.org/)
+
+[highlight.js](https://highlightjs.org/)
 
 ## Contact Information
 
