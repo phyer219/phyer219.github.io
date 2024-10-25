@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}">
+
+<head>
+  {% block head %}
+  <meta charset="utf-8" />
+  <title>{% block title %}{{ SITENAME|striptags }}{% endblock title %}</title>
+  <meta name="generator" content="Pelican" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {% if SITESUBTITLE %}
+  <meta name="description" content="{{ SITESUBTITLE }}" />
+  {% endif %} {% if STYLESHEET_URL %}
+  <link rel="stylesheet" type="text/css" href="{{ STYLESHEET_URL }}" />
+  {% endif %} {% if FEED_ALL_ATOM %}
+  <link
+    href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}"
+    type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Full Atom Feed" />
+  {% endif %} {% if FEED_ALL_RSS %}
+  <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}"
+    type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} Full RSS Feed" />
+  {% endif %} {% if FEED_ATOM %}
+  <link href="{{ FEED_DOMAIN }}/{%if FEED_ATOM_URL %}{{ FEED_ATOM_URL }}{% else %}{{ FEED_ATOM }}{% endif %}"
+    type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Atom Feed" />
+  {% endif %} {% if FEED_RSS %}
+  <link href="{{ FEED_DOMAIN }}/{% if FEED_RSS_URL %}{{ FEED_RSS_URL }}{% else %}{{ FEED_RSS }}{% endif %}"
+    type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} RSS Feed" />
+  {% endif %} {% if CATEGORY_FEED_ATOM and category %}
+  <link
+    href="{{ FEED_DOMAIN }}/{% if CATEGORY_FEED_ATOM_URL %}{{ CATEGORY_FEED_ATOM_URL.format(slug=category.slug) }}{% else %}{{ CATEGORY_FEED_ATOM.format(slug=category.slug) }}{% endif %}"
+    type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Categories Atom Feed" />
+  {% endif %} {% if CATEGORY_FEED_RSS and category %}
+  <link
+    href="{{ FEED_DOMAIN }}/{% if CATEGORY_FEED_RSS_URL %}{{ CATEGORY_FEED_RSS_URL.format(slug=category.slug) }}{% else %}{{ CATEGORY_FEED_RSS.format(slug=category.slug) }}{% endif %}"
+    type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} Categories RSS Feed" />
+  {% endif %} {% if TAG_FEED_ATOM and tag %}
+  <link
+    href="{{ FEED_DOMAIN }}/{% if TAG_FEED_ATOM_URL %}{{ TAG_FEED_ATOM_URL.format(slug=tag.slug) }}{% else %}{{ TAG_FEED_ATOM.format(slug=tag.slug) }}{% endif %}"
+    type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Tags Atom Feed" />
+  {% endif %} {% if TAG_FEED_RSS and tag %}
+  <link
+    href="{{ FEED_DOMAIN }}/{% if TAG_FEED_RSS_URL %}{{ TAG_FEED_RSS_URL.format(slug=tag.slug) }}{% else %}{{ TAG_FEED_RSS.format(slug=tag.slug) }}{% endif %}"
+    type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} Tags RSS Feed" />
+  {% endif %}
+  <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/style.css" />
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Serif+SC&display=swap" rel="stylesheet" />
+  <!--fonts end  -->
+  <!-- highlight.js -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <!-- highlight.js end -->
+  {% endblock head %}
+</head>
+
+<body class="star-background">
+  <div class="container">
+    <header>
+      <section class="banner">
+        <img id="banner-img" src="/images/banner.jpg" alt="banner-img" />
+      </section>
+    </header>
+    <nav class="row">
+      {% for title, link in MENUITEMS %}
+      <a class="nav" href="{{ link }}">{{ title }}</a>
+      {% endfor %} {% if DISPLAY_PAGES_ON_MENU %} {% for p in pages %}
+      <a class="nav" href="{{ SITEURL }}/{{ p.url }}" aria-current="page">
+        {{ p.title }}
+      </a>
+      {% endfor %} {% endif %}
+    </nav>
+
+    <main>
+      {% block content_title %} {% endblock %} {% block content %} {% endblock
+      %}
+    </main>
+    <footer>© 2018 - 2024 ZQW</footer>
+  </div>
+</body>
+
+</html>

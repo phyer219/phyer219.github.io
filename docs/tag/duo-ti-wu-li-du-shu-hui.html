@@ -2,16 +2,22 @@
 <html lang="zh">
 
 <head>
-  <title>从冰上的水 - 多体物理读书会 tag</title>
   <meta charset="utf-8" />
+  <title>从冰上的水 - 多体物理读书会 tag</title>
   <meta name="generator" content="Pelican" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="/theme/css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+           <link rel="stylesheet" type="text/css" href="/theme/css/style.css" />
   <!-- fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Serif+SC&display=swap" rel="stylesheet">
- <!--fonts end  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Serif+SC&display=swap" rel="stylesheet" />
+  <!--fonts end  -->
+  <!-- highlight.js -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <!-- highlight.js end -->
 
 <script>
     MathJax = {
@@ -26,31 +32,30 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/base16/solarized-light.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
-<script>hljs.highlightAll();</script>
-
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.1">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.1">
 <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.1">
 </head>
 
-<body>
+<body class="star-background">
   <div class="container">
-  <header>
-    <section class="banner"><img src="/images/banner.jpg"></section>
-  </header>
-  <nav class="row">
+    <header>
+      <section class="banner">
+        <img id="banner-img" src="/images/banner.jpg" alt="banner-img" />
+      </section>
+    </header>
+    <nav class="row">
       <a class="nav" href="/">首页</a>
       <a class="nav" href="/categories.html">分类</a>
       <a class="nav" href="/tags.html">标签</a>
-        <a class="nav" href="/pages/about.html" >关于</a>
-  </nav>
+        <a class="nav" href="/pages/about.html" aria-current="page">
+        关于
+      </a>
+     </nav>
 
-  <main>
+    <main>
     <h1>标签: 多体物理读书会</h1>
-
-
+ 
 <section class="post-list">
 
         <h3>
@@ -132,9 +137,9 @@
 </section>
 
 
-  </main>
-  <footer>© 2018 - 2024 ZQW</footer>
-</div>
+    </main>
+    <footer>© 2018 - 2024 ZQW</footer>
+  </div>
 </body>
 
 </html>

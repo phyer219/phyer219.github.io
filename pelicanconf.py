@@ -40,7 +40,7 @@ STATIC_PATHS = ['.']
 
 SLUGIFY_SOURCE = 'basename'
 DEFAULT_CATEGORY = '未分类'
-THEME = './themes/simple'
+THEME = './themes/universe'
 DISPLAY_CATEGORIES_ON_MENU = False
 MENUITEMS = [('首页', '/'),
              ('分类', '/categories.html'),
