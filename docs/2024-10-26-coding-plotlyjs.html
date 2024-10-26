@@ -80,16 +80,7 @@
 
 <div id="plot" class="img-like"></div>
 
-<script defer>
-
-        window.MathJax = {
-            tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']]
-            },
-            svg: {
-                fontCache: 'global'
-            }
-        };
+<script>
 
         window.MathJax.loader = { load: ['output/svg'] };
         window.MathJax.startup = {
@@ -150,15 +141,7 @@ document.getElementById('form').onsubmit = function (event) {
 </script>
 
 <h2>JavaScript Code</h2>
-<pre><code class="language-javascript">        window.MathJax = {
-            tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']]
-            },
-            svg: {
-                fontCache: 'global'
-            }
-        };
-
+<pre><code class="language-javascript">
         window.MathJax.loader = { load: ['output/svg'] };
         window.MathJax.startup = {
             ready() {

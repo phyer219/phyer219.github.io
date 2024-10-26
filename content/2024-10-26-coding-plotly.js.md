@@ -17,16 +17,7 @@ tags: [javascript, plotly]
 
 <div id="plot" class="img-like"></div>
 
-<script defer>
-
-        window.MathJax = {
-            tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']]
-            },
-            svg: {
-                fontCache: 'global'
-            }
-        };
+<script>
 
         window.MathJax.loader = { load: ['output/svg'] };
         window.MathJax.startup = {
@@ -90,14 +81,6 @@ document.getElementById('form').onsubmit = function (event) {
 ## JavaScript Code
 
 ```javascript
-        window.MathJax = {
-            tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']]
-            },
-            svg: {
-                fontCache: 'global'
-            }
-        };
 
         window.MathJax.loader = { load: ['output/svg'] };
         window.MathJax.startup = {
