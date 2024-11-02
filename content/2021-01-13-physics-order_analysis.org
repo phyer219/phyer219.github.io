@@ -41,7 +41,7 @@
 \mathrm{d}r$ 是一个常数:
 
 [[file:./2021-01-13-physics-order_analysis/fig.png]]
-code: [[file:./2021-01-13-physics-order_analysis/plot.ipynb]] (第一次用 Sage, 有些函
+code: (第一次用 Sage, 有些函
 数不知道怎么实现, 只能和 numpy, pyplot 混着用了 ^_^%)
 #+begin_src python
 # sage file

@@ -6,7 +6,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1286,71 +1286,78 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>/2024-11-02-physics-non_markov_numerical.html</loc>
+<lastmod>2024-11-02T00:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>/archives.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/author/zqw.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/authors.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/category/gu-shi.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/category/le-qu.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/category/other.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/category/ruan-jian-shi-yong.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/category/xiang-shuo.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/category/zhuan-ye-bi-ji.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1364,1869 +1371,1883 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/tag/347.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/ac-stark-effect.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/adiabatic.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/an-hao.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/apache.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/api.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/arch.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/array.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/associated-legendre-functions.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/asymptotic-series.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/atom-light-interaction.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/atomic-and-optical-physics.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/bcs-bec-crossover.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/bcs.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/beamer.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/bec.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/bessel-functions.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/bing-fang.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/bloch-siegert-shift.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/blog.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/bound-state.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/branch-cut.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/c.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/carl-bender.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/center-of-mass.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/chang-fen.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/chemical-potential.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/cheng-zhong-cun.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/chun-tian.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/classical-field-theory.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/classical-mechanics.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/cold-atom.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/cold-atoms.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/complex-analysis.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/contour-integral.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/contraction.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/da-yin-yuan.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/dashed.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/deltahan-shu.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/density-matrix.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/density-operator.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/dian-ci-chang-de-liang-zi-hua.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/dian-ji-ta.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/dian-nao.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/dian-zi-zu-tai.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/dipole-approximation.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/dirac-biao-xiang.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/django.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/drude-model.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/dui-yi.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/duo-ti-wu-li-du-shu-hui.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/effective-ferromagnetic-spin-spin-interaction.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/emacs.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/entropy.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/er-ci-liang-zi-hua.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/fan-dui-yi.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/fei-mi-neng-zi-you-fei-mi-qi-ti.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/fei-mi-ye-ti.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/fen-bo-zhan-kai.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/feng-sha.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/fermiliquid.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/feynman-diagram.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/feynman-graphs.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/fft.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/field-ionization.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/field-theory.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/fine-structure-constant.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/fine-structure.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/flake8.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/flycheck.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/fo-xi.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/font_manager.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/fourier.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/free-particle.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/friedel-oscillations.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/frobenius-series.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/fu-bian-han-shu.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/gamma-function.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/gan-kai.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/gao-deng-liang-zi-li-xue.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/ge-lin-han-shu.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/george-green.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/git.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/goldstone.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/greens-function.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/group-theory.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/group-velocity.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/guang-xue.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/hadamard-integral.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/heisenberg-biao-xiang.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/heisenberg-equation-of-motion.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/helium.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/hexo.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/higgs.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/hyperfine-structure.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/integral.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/intel-python.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/ipad.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/ising-model.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/javascript.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/ji-fen.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/ji-hua-zi.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/ji-zhi.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/ju-zhen.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/ju-zi.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/kai-dai-ji-shi.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/kan-wu-biao.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/kramers-degeneracy.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/ku-lun-shi.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/kuai-jie-jian.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/lagrangian.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/lamor-frequency.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/laplaces-method.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/latex.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/least-action.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/legendre-fucntions.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/legendre-transformation.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/leng-yuan-zi.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/li-lun-li-xue.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/liang-zi-guang-xue-du-shu-hui.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/liang-zi-li-xue.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/lindblad-master-equation.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/linear-repsonse.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/linux.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/liquid-gas-transition.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/lisp.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/liu-shu-ding-li.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/lorentz-transformation.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/lorentz.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/lsp.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/magnetic.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/makepkg.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/malloc.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/manjaro.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/mariadb.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/marker.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/master-equation.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/mathematic.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/mathematical-physics.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/mathematics.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/mathtext.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/matplotlib.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/memory-leak.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/method-of-dominant-balance.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/mod_wsgi.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/mpmath.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/tag/non-markovian.html</loc>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/nsr-calculate.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/numerical-stability.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/tag/numerical.html</loc>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/ode.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/open-system.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/org-mode.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/oscillator.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/other.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/p-wave.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/pade-sequence.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/pade-table.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/pairing-gap.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/particle-physics.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/path-integral.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/pelican.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/phase-velocity.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/phi-4-theory.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/physic.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/physics.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/pi-pulse.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/ping-guo.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/pkgbuild.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/plotly.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/poincare-algebra.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/polaron.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/principal-value.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/propagator.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/pseudopotential.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/pu-mi-du.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/pyright.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/python.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/qi-ji-yin-qiao.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/qing-dao.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/qing-nian-leng-yuan-zi.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/qiu-zuo-biao.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/quadratic-dc-stark-effect.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/quadrature.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/quantum-defect.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/quantum-field-theory.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/quantum-zeno-effect.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/rabi-frequency.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/rabi.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/rabis-formula.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/reduced-dnesity-matrix.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/relativistic-quantum-machinics.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/ren-wu.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/renomalizable-contact-potential.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/renormalization.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/residue-theorem.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/resonance.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/rf-current.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/rfpu.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/ri-ben-yu.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/rotating-wave-approximation.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/round-off-error.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/rubiks-cube.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/running-of-coupling-constant.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/san-she.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/scale.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/scaler-field.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/scattering.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/schrodinger-biao-xiang.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/scipy.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/shanks-transform.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/shear-magic.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/shen-zhen.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/sheng-jiang-suan-fu.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/shi-yan.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/shu-xue-wu-li-fang-fa.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/shu-xue.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/shu-zhi-ji-fen.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/shu-zhi-ji-suan.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/so3.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/special-functions.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/special-relativity.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/spherical-bessel-functions.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/spherical-harmonic.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/spontaneous-emission.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/spontaneous-symmetry.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/ssd.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/stark-effect.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/stationary-phase-approx.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/statistical-mechanics.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/stimulated-emission.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/stirlings-approx.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/summary.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/susskind.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/symmetric-potential.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/thomas-fermi-theory.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/tight-binding.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/time-reversal.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/two-body.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/typora.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/unstable-method.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/van-der-pol-oscillator.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/wai-xing-ren.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/wakatime.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/wave-packet.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/wei-fen-fang-cheng.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/wei-rao.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/wen-ti.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/wen-zhang.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/wigner-d-matrix.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/wigner-eckart-theorem.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/wu-li.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/wu-shi-yin-tu.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/xi-an.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/xia-tian.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/xian-xing-xiang-ying-li-lun.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/xiao-pang-zi.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/xu-shi-yan-hua.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/xu-yan.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/yan-hua-suan-fu.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/yao-zheng-bian-huan.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/yin-guo-ge-lin-han-shu.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/yin-le.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/yu.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/zeeman-effect.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/zero-range-models.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/zeta-function.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/zong-jie.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2024-10-27T03:52:49-00:00</lastmod>
+<lastmod>2024-11-02T16:51:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
