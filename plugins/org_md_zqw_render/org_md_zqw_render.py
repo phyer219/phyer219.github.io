@@ -2,6 +2,7 @@ from pelican import signals
 from pelican.readers import BaseReader
 from pelican.utils import pelican_open
 from .org_render import convert_to_html
+from .ipynb_render import Ipynb
 from markdown import Markdown
 from pelican.readers import MarkdownReader
 from jinja2 import ChoiceLoader, DictLoader, PrefixLoader
@@ -47,10 +48,12 @@ class IpynbReader(BaseReader):
             nb = nbformat.read(f, as_version=4)
         original_meta = nb.cells[0].metadata
         metadata = self._parse_metadata(original_meta)
-        print(original_meta)
-        exporter = HTMLExporter(theme='dark',
-                                template_name=template_name)
-        content, _ = exporter.from_notebook_node(nb)
+        # print(original_meta)
+        # exporter = HTMLExporter(theme='dark',
+        #                         template_name=template_name)
+        # content, _ = exporter.from_notebook_node(nb)
+        ipynb = Ipynb()
+        content = ipynb.convert_from_file(source_path)
         return content, metadata
 
 
