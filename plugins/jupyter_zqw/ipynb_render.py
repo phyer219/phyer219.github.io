@@ -6,15 +6,13 @@ from html import escape
 
 class Ipynb:
 
-    def __init__(self, markdown_settings=[]):
-        self._md = Markdown(extensions=['tables',
-                                                  'fenced_code',
-                                                  MathEscapeExtension(delimiters="dollers")])
+    def __init__(self, markdown_settings={}):
+        self._md = Markdown(**markdown_settings)
 
     def convert_from_file(self, source_path, as_version=4):
         with open(source_path) as f:
             self.notebook = nbformat.read(f, as_version=as_version)
-            self.notebook.cells.pop(0) # first cell is metadata
+            self.notebook.cells.pop(0)   # first cell is metadata
         self.html = self._convert()
         return self.html
 

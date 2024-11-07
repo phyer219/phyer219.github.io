@@ -49,7 +49,7 @@ MENUITEMS = [('首页', '/'),
 
 
 # ----------------- org_md_zqw_render settings -----------------------------
-PLUGINS = ['plugins.org_md_zqw_render']
+PLUGINS = ['plugins.org_md_zqw_render', 'plugins.jupyter_zqw']
 from markdown_math_escape import MathEscapeExtension
 MARKDOWN = {"extension_configs": {'tables': {},
                                   'fenced_code': {},
@@ -58,6 +58,9 @@ MARKDOWN = {"extension_configs": {'tables': {},
                                   },
             "output_format": "html5"
             }
+
+# add some javascript in SCRIPTS_PATH (for example, MathJax) to
+# TEMPLATES_TO_MODIFY, for example, base.html, so all page will changed.
 SCRIPTS_PATH = './plugins/org_md_zqw_render/scripts.html'
 TEMPLATES_TO_MODIFY = ['base.html']
 
