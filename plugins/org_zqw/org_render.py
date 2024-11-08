@@ -1,16 +1,7 @@
-import markdown
-import os
-
-from markdown_math_escape import MathEscapeExtension
-
-# ------------------- LoadFile ---------------
-
 import os
 import shutil
-# from http.server import HTTPServer, SimpleHTTPRequestHandler
-# import webbrowser
-# from multiprocessing import Process
-
+import re
+from copy import deepcopy
 
 
 def clean_dir(dir):
@@ -26,17 +17,6 @@ def load_file(path):
     with open(path, 'r') as f:
         res = f.read()
     return res
-
-
-# ------------------------------------------------
-
-
-
-
-# ------------------- OrgExtractor ---------------
-
-import re
-import time
 
 
 class Extractor:
@@ -117,12 +97,7 @@ class OrgExtractor(Extractor):
 # ------------------------------------------------
 
 
-
 # ------------------- OrgFilter ---------------
-
-import re
-
-
 class Filter:
     def addFilter(self, pattern, name):
         def filter(block, renderer):
@@ -145,23 +120,9 @@ class OrgFilter(Filter):
         self.addFilter(r'(\[\[)(?P<url>http.*?)(\]\]|\]\[(?P<tag>.*?)\]\])', 'url')
         self.addFilter(r'(\[\[)(file:)(?P<path>.*?\.(png|jpg|gif))(\]\]|\]\[(?P<figalt>.*?)\]\])', 'figure')
         self.addFilter(r'(\[\[)(file:)(?P<path>.*?\.(py|mp4))(\]\]|\]\[(?P<tag>.*?)\]\])', 'file')
-
-
 #-----------------------------------------------
 
-
-
-
-
-
-
 # ------------------ OrgBlocksParser ---------------
-
-from functools import reduce
-import re
-from copy import deepcopy
-
-
 class Block:
     protect = False
     bmeta = {}

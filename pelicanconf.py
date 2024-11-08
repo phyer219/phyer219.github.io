@@ -46,10 +46,9 @@ MENUITEMS = [('首页', '/'),
              ('分类', '/categories.html'),
              ('标签', '/tags.html')
              ]
+# My config end -------------------------------------------------------------
 
-
-# ----------------- org_md_zqw_render settings -----------------------------
-PLUGINS = ['plugins.org_md_zqw_render', 'plugins.jupyter_zqw']
+# ----------------- My plugins and settings ---------------------------------
 from markdown_math_escape import MathEscapeExtension
 MARKDOWN = {"extension_configs": {'tables': {},
                                   'fenced_code': {},
@@ -59,14 +58,13 @@ MARKDOWN = {"extension_configs": {'tables': {},
             "output_format": "html5"
             }
 
-# add some javascript in SCRIPTS_PATH (for example, MathJax) to
-# TEMPLATES_TO_MODIFY, for example, base.html, so all page will changed.
-SCRIPTS_PATH = './plugins/org_md_zqw_render/scripts.html'
+PLUGINS = ['plugins.md_zqw',
+           'plugins.jupyter_zqw',
+           'plugins.org_zqw']
+
+PLUGINS.append('plugins.modify_templates')
+SCRIPTS_PATH = './plugins/modify_templates/scripts.html'
 TEMPLATES_TO_MODIFY = ['base.html']
 
-# ----------------- org_md_zqw_render settings end --------------------------
-
 PLUGINS.append('plugins.sitemap')
-
-# STATIC_PATHS = ['images', 'extra/CNAME']
-# EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
+# ----------------- My plugins and settings  end ----------------------------
