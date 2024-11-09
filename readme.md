@@ -24,10 +24,6 @@ Use package:
 
 [highlight.js](https://highlightjs.org/)
 
-## TODO
-
-fix the site map
-
 ## Contact Information
 
 zeqing6688@126.com
