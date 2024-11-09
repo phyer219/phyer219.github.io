@@ -1,6 +1,6 @@
 AUTHOR = 'ZQW'
 SITENAME = '从冰上的水'
-SITEURL = ""
+SITEURL = "https://zqw.ink"
 
 PATH = "content"
 OUTPUT_PATH = 'docs'
