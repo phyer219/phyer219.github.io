@@ -1,5 +1,4 @@
 from markdown import Markdown
-from markdown_math_escape import MathEscapeExtension
 import nbformat
 from html import escape
 
@@ -20,8 +19,14 @@ class Ipynb:
         cells = self.notebook.cells
         html_cells = []
         for cell in cells:
-            html_cell = self._process_cell(cell)
-            html_cells.append(html_cell)
+            try:
+                html_cell = self._process_cell(cell)
+                html_cells.append(html_cell)
+            except Exception:
+                import traceback
+                print('&&&&&&&&&&&&&&&&&&&&&&&&')
+                traceback.print_exc()
+                print('&&&&&&&&&&&&&&&&&&&&&&&&')
         self.html = '\n'.join(html_cells)
         return self.html
 
@@ -41,32 +46,47 @@ class Ipynb:
     def _process_cell_code(self, cell):
         code_str = '```python\n' + cell['source'] + '\n```\n'
         code_html = self._md.convert(code_str)
-        # print(cell)
         ec = cell['execution_count']
         execution_count = f'<p><pre>In [{ec:n}]</pre></p>'
 
         outputs = []
         if cell['outputs']:
-            try:
-                for output in cell['outputs']:
-                    text = getattr(output['data'], 'text/plain', '')
-                    fig = getattr(output['data'], 'image/png', '')
-                    outputs.append('<pre>' + escape(text) + '</pre>')
-                    if fig:
-                        outputs.append('<img '
-                                    + """src=\"data:image/png;base64,"""
-                                    + fig
-                                   + """\"/>""")
-            except Exception:
-                import traceback
-                traceback.print_exc()
-                print('&&&&&&&&&&&&&&&&&&&&&&&&')
-                print(output)
-                print('&&&&&&&&&&&&&&&&&&&&&&&&')
+            outputs.append(self._process_outputs(cell['outputs']))
         return execution_count + code_html + '\n'.join(outputs)
 
     def _process_cell_raw(self, cell):
         return cell['source']
+
+    def _process_outputs(self, outputs):
+        outputs_html = []
+        for output in outputs:
+            if output["output_type"] == 'excute_result':
+                exec_count = output['execution_count']
+                output_html = f'<p><pre>Out [{exec_count:n}]</pre></p>'
+                output_html += self._process_output_data(output['data'])
+                outputs_html.append(output_html)
+            elif output["output_type"] == 'display_data':
+                output_html = self._process_output_data(output['data'])
+                outputs_html.append(output_html)
+            elif output["output_type"] == 'stream':
+                outputs_html.append(self._process_output_text(output["text"]))
+        return '\n'.join(outputs_html)
+
+    def _process_output_data(self, output_data):
+        output_data_html = []
+        text = getattr(output_data, 'text/plain', '')
+        fig = getattr(output_data, 'image/png', '')
+        output_data_html = '<pre>' + escape(text) + '</pre>'
+        if fig:
+            output_data_html += ('<img '
+                                 + """src=\"data:image/png;base64,"""
+                                 + fig
+                                 + """\"/>""")
+        return output_data_html
+
+    def _process_output_text(self, output_text):
+        source = '```python\n' + output_text + '\n```\n'
+        return self._md.convert(source)
 
     def save_html(self, file_name):
         with open(file_name, 'w') as f:

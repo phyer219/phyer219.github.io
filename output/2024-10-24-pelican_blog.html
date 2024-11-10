@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8" />
+  <title>从冰上的水 - 博客第二次改版的说明及一些笔记</title>
+  <meta name="generator" content="Pelican" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+           <link rel="stylesheet" type="text/css" href="https://zqw.ink/theme/css/style.css" />
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Serif+SC&display=swap" rel="stylesheet" />
+  <!--fonts end  -->
+  <!-- highlight.js -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <!-- highlight.js end -->
+
+<script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.1">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.1">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.1">
+
+
+
+
+    <meta name="tags" content="python" />
+    <meta name="tags" content="pelican" />
+    <meta name="tags" content="blog" />
+
+</head>
+
+<body class="star-background">
+  <div class="container">
+    <header>
+      <section class="banner">
+        <img id="banner-img" src="/images/banner.jpg" alt="banner-img" />
+      </section>
+    </header>
+    <nav class="row">
+      <a class="nav" href="/">首页</a>
+      <a class="nav" href="/categories.html">分类</a>
+      <a class="nav" href="/tags.html">标签</a>
+        <a class="nav" href="https://zqw.ink/pages/about.html" aria-current="page">
+        关于
+      </a>
+     </nav>
+
+    <main>
+  <h1 class="post-title">博客第二次改版的说明及一些笔记</h1>
+
+<section class="post-meta">
+    <p>发表于: 2024-10-24 ||</p>
+    <p>分类:<a class="post-link" href="https://zqw.ink/category/ruan-jian-shi-yong.html">软件使用</a> ||</p>
+</section>
+
+<section class="post-content">
+  <ul>
+<li><a href="#升级说明">升级说明</a></li>
+<li><a href="#升级博客过程中的笔记由-chatgpt-生成">升级博客过程中的笔记(由 ChatGPT 生成)</a></li>
+<li><a href="#类型注解">类型注解</a></li>
+<li><a href="#itertoolschain"><code>itertools.chain</code></a></li>
+<li><a href="#示例代码使用-️-multiprocessingqueue-实现生产者-消费">示例代码：使用 🛠️ multiprocessing.Queue 实现生产者-消费</a></li>
+<li><a href="#示例代码使用--while-true-实现无限循环的应用">示例代码：使用 🔄 while True 实现无限循环的应用</a><ul>
+<li><a href="#1-实现用户输入验证">1. 实现用户输入验证</a></li>
+<li><a href="#2-服务器监听-️">2. 服务器监听 🖥️</a></li>
+<li><a href="#3-多进程的任务分配-">3. 多进程的任务分配 👥🔄</a></li>
+</ul>
+</li>
+<li><a href="#动态导入的使用场景">动态导入的使用场景</a></li>
+<li><a href="#getattr-的用法"><code>getattr()</code> 的用法</a><ul>
+<li><a href="#示例代码">示例代码</a></li>
+<li><a href="#注意事项">注意事项</a></li>
+</ul>
+</li>
+<li><a href="#使用注意事项-️">使用注意事项 ⚠️</a></li>
+<li><a href="#acknowledge">Acknowledge</a></li>
+</ul>
+<h2>升级说明</h2>
+<p>最近终于能抽出一些时间, 打算把博客升级一下, 修复之前的一些 bug.
+但是发现之前写的程序很乱. 而且当时水平不如现在, 程序思路很乱.
+这次过了两年多, 决定使用 <a href="https://getpelican.com/"><code>Pelican</code></a> 生成, 然后再使用一些插件, 自己写一些插件, 把原来的主题移植过来. 就成为了现在呈现的版本.</p>
+<p>之前自己写静态博客生成器原因是:</p>
+<ul>
+<li>本站的需求比较简单</li>
+<li>想要练习写程序</li>
+<li>Hexo 等, 更新之后有时会产生一些兼容问题</li>
+<li>难以随心所欲的修改博客的样式, 添加一些新的页面, 组件</li>
+</ul>
+<p>现在使用 <a href="https://getpelican.com/"><code>Pelican</code></a> 的原因是</p>
+<ul>
+<li>练习写程序. 由于博客源文件中有一些格式比较特别, 所有要自己设置一下. 这个过程中了解了 <a href="https://getpelican.com/"><code>Pelican</code></a> 的插件机制, 学些到了<a href="#升级博客过程中的笔记由-chatgpt-生成">许多知识</a>.</li>
+<li>由于现在会自己写插件, 所以兼容行问题可以自己解决了. 同时也学会了自己写主题, 可以随心所欲的修改博客的样式.</li>
+<li>之前的需求都实现了,同时还可用获得 <a href="https://getpelican.com/"><code>Pelican</code></a> 的好处. 比如: 许许多多的主题, 丰富的插件(自己写也很方便).</li>
+</ul>
+<h2>升级博客过程中的笔记(由 ChatGPT 生成)</h2>
+<h3>类型注解</h3>
+<p><code>Tuple[str, ...]：</code> 这是类型注解，表示 <code>mandatory_properties</code> 的类型是一个字符串元组（tuple），并且元组中的元素类型是字符串（str）。... 表示元组的长度是可变的，可以包含任意数量的字符串。</p>
+<h3><code>itertools.chain</code></h3>
+<p><code>itertools.chain</code> 是 🐍 <code>Python</code> 标准库 <code>itertools</code> 模块中的一个函数，用于将多个可迭代对象🔗连接在一起，生成一个连续的单个迭代器。它可以接受任意数量的可迭代对象，并依次迭代每个可迭代对象的元素，就像将它们“链接”成一个整体。</p>
+<h3>示例代码：使用 🛠️ multiprocessing.Queue 实现生产者-消费</h3>
+<pre><code class="language-python">import multiprocessing  # 🛠️ 导入多进程模块
+import time  # ⏳ 导入时间模块
+
+def producer(queue):  # 🏭 生产者函数
+    for i in range(5):
+        print(f&quot;Producing item {i}&quot;)  # 🛠️ 生产物品
+        queue.put(i)  # 📥 将物品放入队列
+        time.sleep(1)  # ⏱️ 延时 1 秒
+
+def consumer(queue):  # 🛍️ 消费者函数
+    while True:
+        item = queue.get()  # 取出队列中的一个元素 📤
+        if item is None:  # 接收到 None 表示生产者已结束 🚫
+            break
+        print(f&quot;Consuming item {item}&quot;)  # 🛠️ 消费物品
+
+if __name__ == &quot;__main__&quot;:
+    queue = multiprocessing.Queue()  # 📦 创建队列
+
+    # 创建生产者进程和消费者进程 👥
+    producer_process = multiprocessing.Process(target=producer, args=(queue,))
+    consumer_process = multiprocessing.Process(target=consumer, args=(queue,))
+
+    # 启动生产者和消费者进程 ▶️
+    producer_process.start()
+    consumer_process.start()
+
+    # 等待生产者完成 ⏳
+    producer_process.join()
+
+    # 生产者结束后，向队列中放入一个 None，通知消费者退出 🚫
+    queue.put(None)
+
+    # 等待消费者完成 ⏳
+    consumer_process.join()
+
+    print(&quot;Main process is finishing.&quot;)  # 🎬 主进程结束
+</code></pre>
+<h3>示例代码：使用 🔄 while True 实现无限循环的应用</h3>
+<p><code>while True:</code> 是一个常见的无限循环结构，广泛应用于需要持续运行、持续监听或者重复执行某项任务的场景中。以下是几个使用 <code>while True:</code> 的实际例子：</p>
+<h4>1. 实现用户输入验证</h4>
+<p>在用户输入中，我们可以用 <code>while True:</code> 来不断请求用户输入，直到输入满足条件为止：</p>
+<pre><code class="language-python">while True:  # 🔄 无限循环请求用户输入
+    user_input = input(&quot;Enter a number (q to quit): &quot;)  # 📥 用户输入
+    if user_input == &quot;q&quot;:
+        print(&quot;Quitting...&quot;)  # 🚪 退出程序
+        break
+    try:
+        number = int(user_input)
+        print(f&quot;You entered: {number}&quot;)
+    except ValueError:
+        print(&quot;Invalid input, please enter a number.&quot;)  # ⚠️ 输入无效
+</code></pre>
+<h4>2. 服务器监听 🖥️</h4>
+<p>在服务器应用程序中，我们可以用 <code>while True:</code> 来持续监听请求，例如一个简单的 TCP 服务器：</p>
+<pre><code class="language-python">import socket  # 🌐 导入套接字模块
+
+server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # 创建服务器套接字
+server_socket.bind(('localhost', 8080))  # 绑定地址和端口
+server_socket.listen(5)  # 监听连接
+print(&quot;Server is listening on port 8080...&quot;)  # 🖥️ 服务器监听
+
+while True:  # 🔄 持续监听客户端连接
+    client_socket, address = server_socket.accept()  # 接受客户端连接
+    print(f&quot;Connection from {address} has been established.&quot;)  # 🤝 连接建立
+    client_socket.send(bytes(&quot;Welcome to the server!&quot;, &quot;utf-8&quot;))  # 发送欢迎消息
+    client_socket.close()  # 关闭客户端连接
+</code></pre>
+<h4>3. 多进程的任务分配 👥🔄</h4>
+<p>在某些场景下，可以使用 <code>while True:</code> 来持续从队列中取任务并进行处理，如生产者-消费者模型：</p>
+<pre><code class="language-python">import multiprocessing
+import time
+
+def worker(queue):  # 工作者函数
+    while True:
+        task = queue.get()  # 从队列中取任务 📤
+        if task is None:  # 任务队列结束标志 🚫
+            break
+        print(f&quot;Processing task: {task}&quot;)  # 🔧 处理任务
+        time.sleep(1)  # ⏱️ 模拟处理时间
+
+if __name__ == &quot;__main__&quot;:
+    task_queue = multiprocessing.Queue()  # 📦 创建任务队列
+
+    # 添加任务 📋
+    for i in range(5):
+        task_queue.put(f&quot;Task {i}&quot;)
+
+    # 添加结束标志 🚫
+    task_queue.put(None)
+
+    # 启动工作进程 ▶️
+    process = multiprocessing.Process(target=worker, args=(task_queue,))
+    process.start()
+
+    # 等待进程完成 ⏳
+    process.join()
+
+    print(&quot;All tasks are completed.&quot;)  # 🎬 所有任务完成
+</code></pre>
+<h3>动态导入的使用场景</h3>
+<p><code>__import__()</code> 是 Python 中用于动态导入模块的内置函数，通常用于模块名在运行时才确定的情况，提供了一种灵活的导入机制。它在以下场景中非常有用：</p>
+<ol>
+<li>
+<p><strong>插件系统</strong>：可以根据用户需求或配置文件选择性地导入某些模块。例如，某些插件可能需要在运行时按需加载。</p>
+</li>
+<li>
+<p><strong>模块管理</strong>：当模块的名称是动态生成或用户输入的，使用 <code>__import__()</code> 可以让程序根据名字导入相应的模块。</p>
+</li>
+</ol>
+<p>示例代码：</p>
+<pre><code class="language-python">module_name = &quot;math&quot;  # 模块名可能从用户输入或配置文件中获取
+module = __import__(module_name)  # 动态导入模块
+
+# 使用导入的模块
+print(module.sqrt(16))  # 输出: 4.0
+</code></pre>
+<h3><code>getattr()</code> 的用法</h3>
+<p><code>cls = getattr(module, cls_name)</code> 是 Python 中一种动态获取属性的方式，用于从模块或对象中获取名称为 <code>cls_name</code> 的属性。这里 <code>getattr()</code> 函数被用来从 <code>module</code> 中获取名为 <code>cls_name</code> 的类，变量 <code>cls</code> 最终会指向该类。</p>
+<h4>示例代码</h4>
+<p>假设你有一个模块 <code>shapes</code>，其中定义了两个类 <code>Circle</code> 和 <code>Square</code>。你可以通过字符串名称动态地从模块中获取类。</p>
+<p><code>shapes.py</code> 模块：</p>
+<pre><code class="language-python"># shapes.py
+class Circle:
+    def draw(self):
+        print(&quot;Drawing a Circle&quot;)
+
+class Square:
+    def draw(self):
+        print(&quot;Drawing a Square&quot;)
+</code></pre>
+<p>主代码：</p>
+<pre><code class="language-python">import shapes
+
+# 动态获取类名
+cls_name = &quot;Circle&quot;
+cls = getattr(shapes, cls_name)
+
+# cls 现在指向 Circle 类，可以创建其实例
+shape = cls()
+shape.draw()  # 输出: Drawing a Circle
+</code></pre>
+<h4>注意事项</h4>
+<ul>
+<li><strong>属性不存在时引发异常</strong>：如果 <code>name</code> 不存在且未提供 <code>default</code> 参数，<code>getattr()</code> 会引发 <code>AttributeError</code>。为避免异常，可以传递一个默认值。
+  <code>python
+  cls = getattr(module, "NonExistentClass", None)
+  if cls is None:
+      print("Class not found")</code></li>
+<li><strong>安全性问题</strong>：使用 <code>getattr()</code> 获取属性需要特别小心，因为它可以动态地访问任意属性或方法，可能会带来安全性风险。如果用户能够控制传递给 <code>getattr()</code> 的字符串，他们可以试图访问不应暴露的内部类或方法。因此，在使用时要确保输入是可信的或经过适当的验证。</li>
+</ul>
+<h3>使用注意事项 ⚠️</h3>
+<ol>
+<li><strong><code>break</code> 退出</strong>：<code>while True:</code> 是无限循环，所以为了避免程序一直运行下去，通常需要使用 <code>break</code> 来在合适的条件下跳出循环。</li>
+<li><strong>性能问题 🖥️</strong>：在某些情况下，使用 <code>while True:</code> 可能会导致程序占用大量 CPU 资源，因此在循环中应该使用适当的延时（如 <code>time.sleep()</code> ⏱️) 或等待机制来减少 CPU 的占用。</li>
+<li><strong>结束条件 🚪</strong>：务必为循环设置合理的结束条件，避免程序进入死循环导致资源浪费。</li>
+</ol>
+<p><code>while True:</code> 是一种简单但非常强大的循环结构，广泛应用于需要不断重复某些操作的场景，如输入验证、监听服务器、生产者-消费者模型等。它可以确保程序不断运行，直到某个条件触发 <code>break</code> 退出循环，从而灵活地控制程序的执行流程。</p>
+<h2>Acknowledge</h2>
+<p>ChatGPT</p>
+</section>
+
+<section class="post-meta">
+    <p>标签:
+        <a class="post-link" href="https://zqw.ink/tag/python.html">python</a>
+        <a class="post-link" href="https://zqw.ink/tag/pelican.html">pelican</a>
+        <a class="post-link" href="https://zqw.ink/tag/blog.html">blog</a>
+    </p>
+</section>
+
+    </main>
+    <footer>© 2018 - 2024 ZQW</footer>
+  </div>
+</body>
+
+</html>

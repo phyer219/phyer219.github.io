@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8" />
+  <title>从冰上的水 - Emacs使用笔记</title>
+  <meta name="generator" content="Pelican" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+           <link rel="stylesheet" type="text/css" href="https://zqw.ink/theme/css/style.css" />
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Serif+SC&display=swap" rel="stylesheet" />
+  <!--fonts end  -->
+  <!-- highlight.js -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <!-- highlight.js end -->
+
+<script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.1">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.1">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.1">
+
+
+
+
+    <meta name="tags" content="Emacs" />
+    <meta name="tags" content="快捷键" />
+
+</head>
+
+<body class="star-background">
+  <div class="container">
+    <header>
+      <section class="banner">
+        <img id="banner-img" src="/images/banner.jpg" alt="banner-img" />
+      </section>
+    </header>
+    <nav class="row">
+      <a class="nav" href="/">首页</a>
+      <a class="nav" href="/categories.html">分类</a>
+      <a class="nav" href="/tags.html">标签</a>
+        <a class="nav" href="https://zqw.ink/pages/about.html" aria-current="page">
+        关于
+      </a>
+     </nav>
+
+    <main>
+  <h1 class="post-title">Emacs使用笔记</h1>
+
+<section class="post-meta">
+    <p>发表于: 2018-09-07 ||</p>
+    <p>分类:<a class="post-link" href="https://zqw.ink/category/ruan-jian-shi-yong.html">软件使用</a> ||</p>
+</section>
+
+<section class="post-content">
+  <!-- toc -->
+
+<!-- more -->
+
+<h3>修改配色</h3>
+<p>打开Emacs的配置文件。配置文件在~/.emacs。增加：</p>
+<blockquote>
+<p>(set-background-color "black") ;; 使用黑色背景
+(set-foreground-color "white") ;; 使用白色前景
+(set-face-foreground 'region "green")  ;; 区域前景颜色设为绿色
+(set-face-background 'region "blue") ;; 区域背景色设为蓝色</p>
+</blockquote>
+<p>尽管可以重启Emacs使配置生效，但更快捷的方式是在打开~/.emacs的时候执行命令M-x eval-buffer，就可以使配置文件立即生效。</p>
+<h3>快捷键</h3>
+<p>中文帮助：<code>C-h t</code> </p>
+<p>撤消：<code>C-x u</code> <code>C-/</code> </p>
+<p>启动自动折行模式：<code>M-x auto-fill-mode &lt;Return&gt;</code> </p>
+<p>相关命令搜索（Command Apropos）：<code>C-h a</code> </p>
+<p>Emacs 使用手册（manual）：<code>C-h r</code> </p>
+<p>自动补全：<code>M-/</code>     </p>
+<p>在另一个窗口打开缓冲：<code>C-x 4 b</code>     </p>
+<p>复制：<code>M-w</code> </p>
+<p>把当前进程放到后台（之后可用''fg''命令回到前台）： <code>Ctrl Z</code>   </p>
+<p>清屏：<code>ctrl L</code></p>
+<h3>打开</h3>
+<p>终端模式：<code>emacs -nw</code></p>
+<h3>配置备份</h3>
+<pre><code class="language-lisp">;;用xetex编译,以支持中文
+(setq-default TeX-engine 'xetex)
+;;默认输出pdf
+(setq-default TeX-PDF-mode t)
+
+;;ELPA (Emacs Lisp Package Archive)扩展插件管理,用命令`package-list-packages`调用.
+;;主题网站https://emacsthemes.com/ 
+(require 'package)
+(add-to-list 'package-archives 
+             '(&quot;melpa&quot; . &quot;http://melpa.org/packages/&quot;))
+(package-initialize)
+
+;;加载主题
+(load-theme 'light-blue t)
+;;auctex插件
+(load &quot;auctex.el&quot; nil t t)
+(load &quot;preview-latex.el&quot; nil t t)
+(setq TeX-auto-save t)
+(setq TeX-parse-self t)
+(setq-default TeX-master nil)
+
+;;在 LaTeX mode 中，默认开启 PDF mode，即默认使用 xelatex 直接生成 pdf 文 件，而不用每次用 'C-c C-t C-p' 进行切换。设置 'Tex-show-compilation' 为 t，在另一个窗口显示编译信息，对于错误的排除很方便。另外，编译时默认直接 保存文件，绑定补全符号到 TAB 键。
+(add-hook 'LaTeX-mode-hook
+          (lambda ()
+            (setq TeX-auto-untabify t     ; remove all tabs before saving
+                  TeX-engine 'xetex       ; use xelatex default
+                  TeX-show-compilation t) ; display compilation windows
+            (TeX-global-PDF-mode t)       ; PDF mode enable, not plain
+            (setq TeX-save-query nil)
+            (imenu-add-menubar-index)
+            (define-key LaTeX-mode-map (kbd &quot;TAB&quot;) 'TeX-complete-symbol)))
+
+
+;;自动换行，数学公式，reftex，显示号
+(mapc (lambda (mode)
+      (add-hook 'LaTeX-mode-hook mode))
+      (list 'auto-fill-mode
+            'LaTeX-math-mode
+            'turn-on-reftex
+            'linum-mode))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages (quote (pyim nord-theme))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+(elpy-use-ipython)
+
+; python-mode
+(setq py-install-directory &quot;~/.emacs.d/python-mode-6.0.11&quot;)
+(add-to-list 'load-path py-install-directory)
+(require 'python-mode)
+
+; use IPython
+(setq-default py-shell-name &quot;ipython&quot;)
+(setq-default py-which-bufname &quot;IPython&quot;)
+; use the wx backend, for both mayavi and matplotlib
+(setq py-python-command-args
+  '(&quot;--gui=wx&quot; &quot;--pylab=wx&quot; &quot;-colors&quot; &quot;Linux&quot;))
+(setq py-force-py-shell-name-p t)
+
+; switch to the interpreter after executing code
+(setq py-shell-switch-buffers-on-execute-p t)
+(setq py-switch-buffers-on-execute-p t)
+; don't split windows
+(setq py-split-windows-on-execute-p nil)
+; try to automagically figure out indentation
+(setq py-smart-indentation t)
+
+
+(setq TeX-view-program-list
+      '((&quot;SumatraPDF&quot; &quot;SumatraPDF.exe %o&quot;)
+        (&quot;Gsview&quot; &quot;gsview32.exe %o&quot;)
+        (&quot;Okular&quot; &quot;okular --unique %o&quot;)
+        (&quot;Evince&quot; &quot;evince %o&quot;)
+        (&quot;Firefox&quot; &quot;firefox %o&quot;)))
+ ((eq system-type 'gnu/linux)
+  (add-hook 'LaTeX-mode-hook
+            (lambda ()
+              (setq TeX-view-program-selection '((output-pdf &quot;Okular&quot;)
+                                                 (output-dvi &quot;Okular&quot;)))))))
+
+
+(add-to-list 'load-path &quot;/home/dx/Downloads/neotree&quot;)
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+
+(require 'sr-speedbar)
+
+</code></pre>
+</section>
+
+<section class="post-meta">
+    <p>标签:
+        <a class="post-link" href="https://zqw.ink/tag/emacs.html">Emacs</a>
+        <a class="post-link" href="https://zqw.ink/tag/kuai-jie-jian.html">快捷键</a>
+    </p>
+</section>
+
+    </main>
+    <footer>© 2018 - 2024 ZQW</footer>
+  </div>
+</body>
+
+</html>

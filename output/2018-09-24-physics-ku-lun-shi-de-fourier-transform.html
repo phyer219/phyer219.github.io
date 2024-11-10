@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8" />
+  <title>从冰上的水 - 库仑势的Fourier transform(update 16/Nov/2020)</title>
+  <meta name="generator" content="Pelican" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+           <link rel="stylesheet" type="text/css" href="https://zqw.ink/theme/css/style.css" />
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Serif+SC&display=swap" rel="stylesheet" />
+  <!--fonts end  -->
+  <!-- highlight.js -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <!-- highlight.js end -->
+
+<script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.1">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.1">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.1">
+
+
+
+
+    <meta name="tags" content="数学" />
+    <meta name="tags" content="物理" />
+    <meta name="tags" content="库仑势" />
+    <meta name="tags" content="Fourier" />
+
+</head>
+
+<body class="star-background">
+  <div class="container">
+    <header>
+      <section class="banner">
+        <img id="banner-img" src="/images/banner.jpg" alt="banner-img" />
+      </section>
+    </header>
+    <nav class="row">
+      <a class="nav" href="/">首页</a>
+      <a class="nav" href="/categories.html">分类</a>
+      <a class="nav" href="/tags.html">标签</a>
+        <a class="nav" href="https://zqw.ink/pages/about.html" aria-current="page">
+        关于
+      </a>
+     </nav>
+
+    <main>
+  <h1 class="post-title">库仑势的Fourier transform(update 16/Nov/2020)</h1>
+
+<section class="post-meta">
+    <p>发表于: 2018-09-24 ||</p>
+    <p>分类:<a class="post-link" href="https://zqw.ink/category/zhuan-ye-bi-ji.html">专业笔记</a> ||</p>
+</section>
+
+<section class="post-content">
+  <!-- toc -->
+
+<!-- more -->
+
+<h2>问题</h2>
+<p>三维库仑势的形式为：</p>
+\[
+V(\vec{r}) = \frac{1}{r}
+\]
+<p>按动量Fourier展开：</p>
+\[
+V(\vec{r}) = \frac{1}{(2\pi)^3} \int_{-\infty}^{+\infty} \mathrm{d}^3\vec{k} \cdot V(\vec{k})\cdot e^{i\vec{k}\cdot\vec{r}}
+\]
+<p>求 \(V(\vec{k})\) 。</p>
+<h2>求解</h2>
+\[
+V{(\vec{k})} = \int_{-\infty}^{+\infty} \mathrm{d}^3\vec{r}\cdot V(\vec{r})\cdot e^{-i\vec{k}\cdot \vec{r}} = \int_0^{2\pi}\mathrm{d}\varphi \int_0^{+\infty}\mathrm{d}r\int_0^{\pi}\mathrm{d}\theta\cdot \frac{1}{r}e^{-ikr\cos\theta}r^2\sin\theta \\\\
+=2\pi\int_0^{+\infty}\mathrm{d}r\int_0^{\pi}\mathrm{d}\theta\cdot e^{-ikr\cos\theta}r\sin\theta  = -2\pi\int_0^{+\infty}\mathrm{d}r\int_1^{-1}\mathrm{d}\cos\theta\cdot e^{-ikr\cos\theta}r \\\\
+=-2\pi\int_0^{+\infty}\mathrm{d}r\cdot \left[e^{-ikr\cos\theta}r\frac{1}{-ikr}\right]_{\cos\theta = 1}^{\cos\theta =-1} = 2\pi\int_0^{+\infty}\mathrm{d}r\cdot \left[(e^{ikr}-e^{-ikr})\frac{1}{ik}\right] \\\\
+=\frac{2\pi}{ik}\left[\frac{e^{ikr}}{ik}-\frac{e^{-ikr}}{-ik}\right] _0^{+\infty}
+\]
+
+<p>但 \(e^{-ikr}\) 与 \(e^{-ikr}\) 在 \(+\infty\) 处发散。</p>
+<h2>使其收敛</h2>
+<p>为了解决发散问题，可在一开始令</p>
+\[
+V(\vec{r}) = \frac{1}{r} = \lim_{\mu\rightarrow 0} \frac{e^{-\mu r}}{r}
+\]
+<p>所以</p>
+\[
+V{(\vec{k})}  = \lim_{\mu\rightarrow 0} 2\pi\int_0^{+\infty}\mathrm{d}r\cdot \left[(e^{(ik-\mu)r}-e^{(-ik-\mu)r})\frac{1}{ik}\right] \\\\
+= \lim_{\mu\rightarrow 0}\frac{2\pi}{ik}\left[\frac{e^{(ik-\mu)r}}{ik-\mu r}-\frac{e^{(-ik-\mu)r}}{-ik-\mu r}\right] _0^{+\infty} \\\\
+\]
+
+\[
+= \lim_{\mu\rightarrow 0}\frac{2\pi}{ik}\left[\frac{-1}{ik-\mu }-\frac{-1}{-ik-\mu }\right] \\\\
+=\lim_{\mu\rightarrow 0}\frac{2\pi}{ik}\frac{2ik}{k^2 + \mu ^2} =\lim_{\mu\rightarrow 0}\frac{4\pi}{k^2 + \mu ^2} \\\\
+=\frac{4\pi}{k^2}
+\]
+
+<h3>注</h3>
+<p>函数满足一致收敛，积分与极限才可交换顺序。</p>
+<h2>类似的变换</h2>
+<p>用同样的方法, 可以得到</p>
+\[
+\lim_{\eta \to 0^+}\int \mathrm{d}^3\vec{r} . e^{\mathrm{i}\vec{k}\cdot\vec{r}} r e^{-r\eta}
+ = \frac{8 \pi}{k^4}
+\]
+\[
+\lim_{\eta \to 0^+}\int \mathrm{d}^3\vec{r} . e^{\mathrm{i}\vec{k}\cdot\vec{r}} e^{-r\eta}
+ = 0
+\]
+
+<p>用 Mathematica 可以验证.</p>
+<h2>Reference</h2>
+<ul>
+<li>关于使其收敛的说明, 分别从物理的角度, 数学的角度阐述这样做的合理性和必要性: https://physics.stackexchange.com/questions/7462/fourier-transform-of-the-coulomb-potential</li>
+</ul>
+</section>
+
+<section class="post-meta">
+    <p>标签:
+        <a class="post-link" href="https://zqw.ink/tag/shu-xue.html">数学</a>
+        <a class="post-link" href="https://zqw.ink/tag/wu-li.html">物理</a>
+        <a class="post-link" href="https://zqw.ink/tag/ku-lun-shi.html">库仑势</a>
+        <a class="post-link" href="https://zqw.ink/tag/fourier.html">Fourier</a>
+    </p>
+</section>
+
+    </main>
+    <footer>© 2018 - 2024 ZQW</footer>
+  </div>
+</body>
+
+</html>
