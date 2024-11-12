@@ -18,6 +18,8 @@ Use package:
 
 - [markdown_math_escape](https://github.com/sgryjp/markdown_math_escape)
 
+- [nbformat](https://github.com/jupyter/nbformat)
+
 ## Acknowledge
 
 [MathJax](https://www.mathjax.org/)
