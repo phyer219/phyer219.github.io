@@ -16,3 +16,6 @@ __pycache__/
 *.blg
 
 *.pyc
+
+# for macOS
+*.DS_Store
