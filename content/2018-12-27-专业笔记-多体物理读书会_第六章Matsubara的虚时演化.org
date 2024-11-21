@@ -4,7 +4,8 @@
 #+TAGS: 多体物理读书会, 物理, 虚时演化
 #+HTML: <!-- toc -->
 #+HTML: <!-- more -->
-#+LATEX_HEADER: \usepackage{ctex}
+
+
 PDF: [[file:./2018-12-27-专业笔记-多体物理读书会:第六章Matsubara的虚时演化/2018-12-27-专业笔记-多体物理读书会:第六章Matsubara的虚时演化.pdf]]
 
 * 引入

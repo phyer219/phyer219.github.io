@@ -5,8 +5,6 @@
 #+HTML: <!-- toc -->
 #+HTML: <!-- more -->
 
-#+LATEX_COMPILER: xelatex
-#+LATEX_HEADER: \usepackage{ctex}
 
 
 * 符号说明
@@ -18,7 +16,7 @@
 
 
 * 插入代码
-** 行间代码(org9.2 更新后, 默认以下方法不可行, 新方法 =C-c C-= , 见 [[https://emacs.stackexchange.com/questions/46988/why-do-easy-templates-e-g-s-tab-in-org-9-2-not-work]]) 
+** 行间代码(org9.2 更新后, 默认以下方法不可行, 新方法 =C-c C-= , 见 [[https://emacs.stackexchange.com/questions/46988/why-do-easy-templates-e-g-s-tab-in-org-9-2-not-work]])
 在空白行输入
 #+BEGIN_SRC org-mode
 < s TAB
@@ -168,7 +166,7 @@ c = 2
 d = 3
 x = np.linspace(c-1,d+1,1000)
 f = np.e**(-((1/(x-c))+(1/(d-x))))
-y = np.piecewise(x,[x<=c,x>c],[0,1])*np.piecewise(x,[x<=d,x>d],[1,0])*f 
+y = np.piecewise(x,[x<=c,x>c],[0,1])*np.piecewise(x,[x<=d,x>d],[1,0])*f
 plt.plot(x,y)
 plt.show()
 #+END_SRC
