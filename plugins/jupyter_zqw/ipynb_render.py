@@ -24,9 +24,9 @@ class Ipynb:
                 html_cells.append(html_cell)
             except Exception:
                 import traceback
-                print('&&&&&&&&&&&&&&&&&&&&&&&&')
+                print('&&&&&&& ipynb_render traceback &&&&&&&&&&')
                 traceback.print_exc()
-                print('&&&&&&&&&&&&&&&&&&&&&&&&')
+                print('&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&')
         self.html = '\n'.join(html_cells)
         return self.html
 
@@ -47,7 +47,11 @@ class Ipynb:
         code_str = '```python\n' + cell['source'] + '\n```\n'
         code_html = self._md.convert(code_str)
         ec = cell['execution_count']
-        execution_count = f'<p><pre>In [{ec:n}]</pre></p>'
+        if ec:
+            ec = f'In [{ec:n}]'
+        else:
+            ec = 'In [ ]'
+        execution_count = '<p><pre>' + ec + '</pre></p>'
 
         outputs = []
         if cell['outputs']:
@@ -85,8 +89,7 @@ class Ipynb:
         return output_data_html
 
     def _process_output_text(self, output_text):
-        source = '```python\n' + output_text + '\n```\n'
-        return self._md.convert(source)
+        return '<pre>' + escape(output_text) + '</pre>'
 
     def save_html(self, file_name):
         with open(file_name, 'w') as f:
