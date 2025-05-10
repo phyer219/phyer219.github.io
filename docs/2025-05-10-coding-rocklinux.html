@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8" />
+  <title>从冰上的水 - Linux 使用笔记（进阶）</title>
+  <meta name="generator" content="Pelican" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+           <link rel="stylesheet" type="text/css" href="/theme/css/style.css" />
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Serif+SC&display=swap" rel="stylesheet" />
+  <!--fonts end  -->
+  <!-- highlight.js -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <!-- highlight.js end -->
+
+<script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.1">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.1">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.1">
+
+
+
+
+    <meta name="tags" content="SELinux" />
+    <meta name="tags" content="RockyLinux" />
+
+</head>
+
+<body class="star-background">
+  <div class="container">
+    <header>
+      <section class="banner">
+        <img id="banner-img" src="/images/banner.jpg" alt="banner-img" />
+      </section>
+    </header>
+    <nav class="row">
+      <a class="nav" href="/">首页</a>
+      <a class="nav" href="/categories.html">分类</a>
+      <a class="nav" href="/tags.html">标签</a>
+        <a class="nav" href="/pages/about.html" aria-current="page">
+        关于
+      </a>
+     </nav>
+
+    <main>
+  <h1 class="post-title">Linux 使用笔记（进阶）</h1>
+
+<section class="post-meta">
+    <p>发表于: 2025-05-10 ||</p>
+    <p>分类:<a class="post-link" href="/category/ruan-jian-shi-yong.html">软件使用</a> ||</p>
+</section>
+
+<section class="post-content">
+  <h2>引言</h2>
+<p>从 2018 年开始入门 Linux，已经 7 年了。
+从 Deepin 到 Manjaro，再到 Rocky Linux。
+中间也尝试过 ArchLinux, Debian, Ubuntu, CentOS等等。</p>
+<p>一开始入门是能用就行，折腾桌面环境。
+到现在开始考虑一些安全性，长期的稳定性，不再为了图省事直接关闭防火墙和 SELinux。
+每一行代码都想要理解含义。
+理解配置的逻辑和哲学。</p>
+<h2><code>Rocky Linux</code></h2>
+<p>用 <code>Rocky Linux</code> 用的还不多，在此写一些备忘。</p>
+<p><code>Rocky Linux</code> 是 CentOS 替代品，适用于服务器。</p>
+<ul>
+<li>
+<p>默认使用 <code>SELinux</code>，</p>
+</li>
+<li>
+<p>使用<code>Cockpit</code> 面版，</p>
+</li>
+<li>
+<p>使用 LVM 和 <code>xfs</code>文件系统。
+<code>xfs</code>文件系统，性能高，适合处理大文件，并行写入，可以不停机扩容，但是不支持缩容，跨平台兼容性差。</p>
+</li>
+</ul>
+<h2>LVM（逻辑卷管理）</h2>
+<table>
+<thead>
+<tr>
+<th>层级</th>
+<th>作用</th>
+<th>类比</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>物理卷 PV</strong></td>
+<td>实际的硬盘或分区</td>
+<td>地基</td>
+</tr>
+<tr>
+<td><strong>卷组 VG</strong></td>
+<td>若干物理卷组合的池子</td>
+<td>水泥池</td>
+</tr>
+<tr>
+<td><strong>逻辑卷 LV</strong></td>
+<td>从卷组中划分出来的卷</td>
+<td>建在池子里的房间</td>
+</tr>
+</tbody>
+</table>
+<p>可以用 <code>pvdispaly</code> 查看，或者简写为 <code>pvs</code>。同理 <code>vgs</code> 和 <code>lvs</code></p>
+<h3>示例</h3>
+<p>先用 <code>lsblk</code> 查看硬盘情况。只有 <code>nvme0n1p3</code> 分区中有 3 个 lv：</p>
+<pre><code class="language-shell">AMD-ZQW-srv ➜  ~ lsblk -f
+NAME        FSTYPE      FSVER    LABEL UUID                                   FSAVAIL FSUSE% MOUNTPOINTS
+sda
+└─sda1      ntfs                 Music 123419620B147062                         37.4G    98% /hdd7
+nvme0n1
+├─nvme0n1p1 vfat        FAT32          1234-B31A                               562.6M     6% /boot/efi
+├─nvme0n1p2 xfs                        1234d41c-4f32-4759-9d14-652ee9c5688f     64.6M    93% /boot
+└─nvme0n1p3 LVM2_member LVM2 001       1234Wo-pyLw-p278-rTFa-D4ix-7ob1-jEKxpp
+  ├─rl-root xfs                        12347aef-b5a5-4034-8b01-1449de8cc13f     21.7G    69% /
+  ├─rl-swap swap        1              1234c97d-5ec9-4720-84f2-30440f4269d3                  [SWAP]
+  └─rl-home xfs                        1234270f-41f8-4d69-bd4d-43e20c790d82    768.9G     9% /home
+
+</code></pre>
+<p>3个 lv 中，有一个是 swap，另外两个 lv 的文件格式都是 xfs。</p>
+<p>再 <code>df</code> 一下，作为参考：</p>
+<pre><code class="language-shell">AMD-ZQW-srv ➜  ~ df -hT
+Filesystem          Type      Size  Used Avail Use% Mounted on
+devtmpfs            devtmpfs  4.0M     0  4.0M   0% /dev
+tmpfs               tmpfs      16G   84K   16G   1% /dev/shm
+tmpfs               tmpfs     6.1G   11M  6.1G   1% /run
+efivarfs            efivarfs  128K   36K   88K  30% /sys/firmware/efi/efivars
+/dev/mapper/rl-root xfs        70G   49G   22G  69% /
+/dev/mapper/rl-home xfs       845G   76G  769G   9% /home
+/dev/nvme0n1p2      xfs       960M  896M   65M  94% /boot
+/dev/nvme0n1p1      vfat      599M   37M  563M   7% /boot/efi
+/dev/sda1           fuseblk   1.9T  1.8T   38G  98% /hdd7
+tmpfs               tmpfs     3.1G  200K  3.1G   1% /run/user/1000
+</code></pre>
+<p><code>nvme0n1p3</code> 分区是一个 pv：</p>
+<pre><code class="language-shell">AMD-ZQW-srv ➜  ~ sudo pvs
+  PV             VG Fmt  Attr PSize   PFree
+  /dev/nvme0n1p3 rl lvm2 a--  929.92g    0
+</code></pre>
+<p><code>/dev/nvme0n1p3</code> pv 中的三个 lv 组成一个名为 <code>rl</code> (Rocky Linux) 的 vg：</p>
+<pre><code class="language-shell">AMD-ZQW-srv ➜  ~ sudo vgs
+  VG #PV #LV #SN Attr   VSize   VFree
+  rl   1   3   0 wz--n- 929.92g    0
+</code></pre>
+<p>查看所有的 lv，3 个 lv 分别为 <code>home</code> <code>root</code> <code>swap</code> ，全都属于 vg <code>rl</code>：</p>
+<pre><code class="language-shell">AMD-ZQW-srv ➜  ~ sudo lvs
+  LV   VG Attr       LSize    Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
+  home rl -wi-ao---- &lt;844.63g
+  root rl -wi-ao----   70.00g
+  swap rl -wi-ao----   15.29g
+</code></pre>
+<h2>DNF 和 rpm</h2>
+<p><code>Rocky Linux</code> 使用 <code>dnf</code> 和 <code>rpm</code> 管理软件包。</p>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>查找软件包</td>
+<td><code>dnf search &lt;关键词&gt;</code></td>
+</tr>
+<tr>
+<td>安装软件包</td>
+<td><code>dnf install &lt;软件包名&gt;</code></td>
+</tr>
+<tr>
+<td>删除软件包</td>
+<td><code>dnf remove &lt;软件包名&gt;</code></td>
+</tr>
+<tr>
+<td>更新所有包</td>
+<td><code>dnf upgrade</code></td>
+</tr>
+<tr>
+<td>查看包信息</td>
+<td><code>dnf info &lt;软件包名&gt;</code></td>
+</tr>
+<tr>
+<td>清理缓存</td>
+<td><code>dnf clean all</code></td>
+</tr>
+<tr>
+<td>显示所有可更新包</td>
+<td><code>dnf check-update</code></td>
+</tr>
+<tr>
+<td>启用/禁用源</td>
+<td><code>dnf config-manager --set-enabled &lt;repo&gt;</code></td>
+</tr>
+<tr>
+<td>查看软件源</td>
+<td><code>dnf repolist</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rpm</code></td>
+<td>管理单个 <code>.rpm</code> 包（安装、查询、卸载等）</td>
+</tr>
+<tr>
+<td><code>dnf</code></td>
+<td><strong>依赖于 <code>rpm</code></strong>，自动处理依赖，连接仓库</td>
+</tr>
+</tbody>
+</table>
+<h2>zsh</h2>
+<h3>硬盘挂载</h3>
+<h2>journalctl 查看日志</h2>
+<h2>Podman(Docker)</h2>
+<p>开放端口</p>
+<pre><code class="language-shell">sudo semanage port -a -t http_port_t -r 's0' -p tcp xxxx
+</code></pre>
+<p>允许访问目录，以及递归的子目录</p>
+<pre><code class="language-shell">sudo semanage fcontext -a -f a -t container_file_t -r 's0' '/home/zqw/(/.*)?'
+</code></pre>
+<h2>SELinux</h2>
+<p>查看 SELinux 状态：
+<code>getenforce</code></p>
+<p>关闭：
+<code>setenforce 0</code></p>
+<p>开启：
+<code>setenforce 1</code></p>
+<h2>Firewall</h2>
+<h2>Systemctl</h2>
+<h2>初始化与用户、权限管理</h2>
+<p>出于安全考虑修改 <code>ssh</code> 的默认端口。</p>
+<h2>引导</h2>
+<h2>致谢</h2>
+<p>所有为 ChatGPT 提供训练素材的人。</p>
+</section>
+
+<section class="post-meta">
+    <p>标签:
+        <a class="post-link" href="/tag/selinux.html">SELinux</a>
+        <a class="post-link" href="/tag/rockylinux.html">RockyLinux</a>
+    </p>
+</section>
+
+    </main>
+    <footer>© 2018 - 2024 ZQW</footer>
+  </div>
+</body>
+
+</html>
