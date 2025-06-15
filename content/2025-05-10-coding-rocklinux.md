@@ -98,7 +98,16 @@ AMD-ZQW-srv ➜  ~ sudo lvs
   swap rl -wi-ao----   15.29g
 ```
 
-## DNF 和 rpm
+
+```
+sudo lvmdevices --adddev /dev/nvme1n1p3
+sudo pvscan
+sudo vgchange -ay
+sudo lvs
+
+```
+
+## dnf 和 rpm
 
 `Rocky Linux` 使用 `dnf` 和 `rpm` 管理软件包。
 
@@ -122,29 +131,113 @@ AMD-ZQW-srv ➜  ~ sudo lvs
 
 ## zsh
 
+## 硬盘挂载
 
+`etc/systemd/system/hdd1.mount `
 
-### 硬盘挂载
+```
+[Unit]
+Description=Mount hdd1
+# After=local-fs.target
+
+[Mount]
+What=/dev/sda1
+Where=/hdd1
+Type=ntfs
+Options=defaults,uid=1000,gid=1000
+
+[Install]
+WantedBy=multi-user.target
+```
 
 ## journalctl 查看日志
 
 ## Podman(Docker)
 
-开放端口
+以 NextCloud为例
+
+```shell
+~/.config/containers/systemd/nextcloud.pod
+[Pod]
+PodName=nextcloud
+Network=bridge
+PublishPort=xxxx:80
+
+[Install]
+WantedBy=default.target
+```
+
+```shell
+~/.config/containers/systemd/nextcloud-app.container
+[Container]
+Image=docker.io/library/nextcloud:apache
+Pod=nextcloud.pod
+ContainerName=nextcloud-app
+Volume=/XXX/data:/var/www/html:Z
+Environment=MYSQL_PASSWORD=nextcloudpass
+Environment=MYSQL_DATABASE=nextcloud
+Environment=MYSQL_USER=nextcloud
+Environment=MYSQL_HOST=nextcloud-db
+#Environment=NEXTCLOUD_ADMIN_USER=admin
+#Environment=NEXTCLOUD_ADMIN_PASSWORD=adminpass
+Environment="NEXTCLOUD_TRUSTED_DOMAINS=192.168.0.XX xx.xxx.com"
+#Exec=sleep infinity
+```
+
+```shell
+~/.config/containers/systemd/nextcloud-db.container
+[Container]
+Image=docker.io/library/mariadb:10.6
+Pod=nextcloud.pod
+ContainerName=nextcloud-db
+Volume=/XXX/db:/var/lib/mysql:Z
+Environment=MYSQL_ROOT_PASSWORD=rootpass
+Environment=MYSQL_PASSWORD=nextcloudpass
+Environment=MYSQL_DATABASE=nextcloud
+Environment=MYSQL_USER=nextcloud
+#Exec=sleep infinity
+
+```
+
+```shell
+loginctl enable-linger <user>
+```
+
+`quadlet`是一次性读取所有的`.pod` `.container` 文件，所以只要有一个格式不对，就会导致所有的文件都不能生成相应的服务。可以用如下命令测试，看看是哪个文件格式有问题：
+```shell
+/usr/lib/systemd/system-generators/podman-system-generator --user --dryrun
+```
+
+
+## SELinux
+
+| 部分              | 含义说明                                     |
+| --------------- | ---------------------------------------- |
+| `sudo`          | 以超级用户身份运行命令                              |
+| `semanage`      | SELinux 管理工具，用来配置策略（如端口、文件类型等）           |
+| `port`          | 操作对象是“端口”                                |
+| `-a`            | 添加一个新记录（a = add）                         |
+| `-t ssh_port_t` | 设置这个端口的类型为 `ssh_port_t`（也就是允许 `sshd` 使用） |
+| `-p tcp`        | 协议类型为 TCP（SSH 是基于 TCP 的）                 |
+| `2222`          | 要添加的新端口号                                 |
+
+
+添加端口
 
 ```shell
 sudo semanage port -a -t http_port_t -r 's0' -p tcp xxxx
+
+sudo semanage port -a -t http_port_t -p tcp 8096
+sudo semanage port -a -t http_port_t -p tcp 8920
 ```
 
 允许访问目录，以及递归的子目录
 
 ```shell
-sudo semanage fcontext -a -f a -t container_file_t -r 's0' '/home/zqw/(/.*)?'
+sudo semanage fcontext -a -f a -t container_file_t -r 's0' '/home/zqw(/.*)?'
+sudo restorecon -Rv /home/zqw/
 ```
 
-
-
-## SELinux
 
 查看 SELinux 状态：
 `getenforce`
@@ -157,14 +250,107 @@ sudo semanage fcontext -a -f a -t container_file_t -r 's0' '/home/zqw/(/.*)?'
 
 ## Firewall
 
+```xml
+<!-- /etc/firewalld/services/emby.xml -->
+<service>
+  <short>Emby</short>
+  <description>Media server</description>
+  <port protocol="tcp" port="8096"/>
+  <port protocol="tcp" port="8920"/>
+</service>
+```
+
+```shell
+sudo firewall-cmd --permanent --add-service=emby
+sudo firewall-cmd --reload
+```
+
+## Rsync
+
+远程同步
+```
+rsync -av --delete --info=progress2 -e 'ssh -p ****' ./music/ ***@***.***:/hdd1/musiclib/
+```
 
 ## Systemctl
 
 ## 初始化与用户、权限管理
 
 出于安全考虑修改 `ssh` 的默认端口。
+修改 `/etc/ssh/sshd_config` 中的 `Port`
+
+`semanage port -a -t ssh_port_t -p tcp #PORTNUMBER`
+
+`firewall-cmd --permanent --add-port=2222/tcp`
+
+`firewall-cmd --reload`
+`systemctl restart sshd`
+
+`chsh -s /usr/bin/zsh`
 
 ## 引导
+
+ESP (EFI System Partition)
+
+```
+sudo efibootmgr --create \
+  --disk /dev/sdX \
+  --part Y \
+  --label "RockyLinux-GRUB" \
+  --loader "\EFI\rocky\grubx64.efi"
+```
+/dev/sdX 是你的 EFI 分区所在的磁盘，比如 /dev/sda
+
+Y 是该 EFI 分区在该盘上的分区号，比如是 /dev/sda1，那就是 --part 1
+
+```
+sudo efibootmgr --bootorder 0005
+```
+
+```
+sudo efibootmgr --bootnum 0002 --delete-bootnum
+```
+
+## Kdump
+
+## rsync
+
+```
+rsync -ah --info=progress2 ../home_old/zqw/immich-app ./immich-app
+```
+| 参数                   | 作用                            |
+| -------------------- | ----------------------------- |
+| `-a`                 | 归档模式，保留权限、时间戳、符号链接等           |
+| `-v`                 | verbose，显示详细信息                |
+| `-h`                 | human-readable，以 KB/MB 显示文件大小 |
+| `--progress`         | 显示每个文件的复制进度                   |
+| `/source/path/`      | 结尾有 `/` 表示复制**目录内容**（而非目录本身）  |
+| `/destination/path/` | 目标路径，需有写权限                    |
+|`--info=progress2`    | 显示总进度 |
+
+
+
+## WordPress 迁移
+
+`wp-settings.php` 中添加：
+```php
+define('WP_HOME', 'http://your.new.domain');
+define('WP_SITEURL', 'http://your.new.domain');
+```
+
+用`wp-cli`替换旧域名：
+```shell
+curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+chmod +x wp-cli.phar
+mv wp-cli.phar /usr/local/bin/wp
+
+wp --info
+
+cd /var/www/html
+wp search-replace 'http://xxx.xxx' 'http://xxx.xxx.xxx.xxx:xxxx' --all-tables --allow-root
+
+```
+
 
 ## 致谢
 
