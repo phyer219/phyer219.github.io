@@ -36,6 +36,7 @@ DEFAULT_PAGINATION = False
 
 # My config -----------------------------------------------------------------
 STATIC_PATHS = ['.']
+READERS = {'html': None}
 
 
 SLUGIFY_SOURCE = 'basename'

@@ -32,6 +32,14 @@ img {
 }
 
 
+iframe {
+    max-width: 100%;
+    background-color: var(--bg-light-color);
+    border: 5px solid var(--mid-color);
+    box-shadow: 0px 0px 40px var(--text-color);
+    border-radius: 20px;
+}
+
 #banner-img {
     max-width: 100%;
     border: 0px solid var(--mid-color);
