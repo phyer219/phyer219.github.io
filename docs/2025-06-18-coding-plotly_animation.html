@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8" />
+  <title>从冰上的水 - Plotly 绘制动图</title>
+  <meta name="generator" content="Pelican" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+           <link rel="stylesheet" type="text/css" href="/theme/css/style.css" />
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Serif+SC&display=swap" rel="stylesheet" />
+  <!--fonts end  -->
+  <!-- highlight.js -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <!-- highlight.js end -->
+
+<script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.1">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.1">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.1">
+
+
+
+
+    <meta name="tags" content="plotly" />
+    <meta name="tags" content="python" />
+
+</head>
+
+<body class="star-background">
+  <div class="container">
+    <header>
+      <section class="banner">
+        <img id="banner-img" src="/images/banner.jpg" alt="banner-img" />
+      </section>
+    </header>
+    <nav class="row">
+      <a class="nav" href="/">首页</a>
+      <a class="nav" href="/categories.html">分类</a>
+      <a class="nav" href="/tags.html">标签</a>
+        <a class="nav" href="/pages/about.html" aria-current="page">
+        关于
+      </a>
+     </nav>
+
+    <main>
+  <h1 class="post-title">Plotly 绘制动图</h1>
+
+<section class="post-meta">
+    <p>发表于: 2025-06-18 ||</p>
+    <p>分类:<a class="post-link" href="/category/ruan-jian-shi-yong.html">软件使用</a> ||</p>
+</section>
+
+<section class="post-content">
+  <h2>基础版本</h2>
+<pre><code class="language-python">import plotly.graph_objects as go
+import numpy as np
+
+x = np.linspace(0, 2*np.pi, 50)
+t = np.linspace(0, 2*np.pi, 500)
+yt = [np.sin(x + ti) for ti in t]
+frames = [go.Frame(data=[go.Scatter(x=x, y=y1i)]) for y1i in yt]
+
+fig = go.Figure(data=frames[0].data, frames=frames)
+
+ani_opts = dict(frame={&quot;duration&quot;: 20, &quot;redraw&quot;: False})
+bt = go.layout.updatemenu.Button(label=&quot;Play&quot;, method=&quot;animate&quot;,
+                                 args=[None, ani_opts])
+
+fig.update_layout(updatemenus=[dict(type='buttons', buttons=[bt])])
+
+fig.write_html(file=&quot;basic_ver.html&quot;, include_mathjax='cdn', auto_play=False)
+</code></pre>
+<p><a href="2025-06-18-coding-plotly_animation/basic_ver.py">basic_ver.py</a></p>
+<iframe src="2025-06-18-coding-plotly_animation/basic_ver.html" width="100%" height=600></iframe>
+
+<h2>高级版本</h2>
+<pre><code class="language-python">import plotly.graph_objects as go
+import numpy as np
+import plotly.io as pio
+
+pio.renderers.default = 'notebook_connected'
+
+x = np.linspace(0, 2*np.pi, 50)
+t = np.linspace(0, 2*np.pi, 500)
+y1t = [np.sin(x + ti) for ti in t]
+y2t = [np.cos(x + ti) for ti in t]
+frames = [go.Frame(data=[go.Scatter(x=x, y=y1i, name=r'$\sin(x+t)$'),
+                         go.Scatter(x=x, y=y2i, name=r'$\cos(x+t)$')],
+                   name=f'{ti:.2f}')
+          for y1i, y2i, ti in zip(y1t, y2t, t)]
+
+fig = go.Figure(data=frames[0].data, frames=frames)
+
+ani_opts = dict(frame={&quot;duration&quot;: 20, &quot;redraw&quot;: False})
+bt_play = go.layout.updatemenu.Button(label=&quot;Play&quot;, method=&quot;animate&quot;,
+                                      args=[None, ani_opts])
+
+ani_opts_stop = dict(mode='immediate')
+bt_stop = go.layout.updatemenu.Button(
+    label=&quot;Stop&quot;, method=&quot;animate&quot;,
+    args=[[fig.frames[0].name, fig.frames[1].name], ani_opts_stop])
+
+ani_opts_slider = dict(frame={&quot;duration&quot;: 20, &quot;redraw&quot;: True})
+slider_steps = [go.layout.slider.Step(args=[[f.name], ani_opts_slider],
+                                      label=f.name, method='animate')
+                for f in fig.frames]
+slider = go.layout.Slider(active=0, steps=slider_steps)
+
+
+fig.update_layout(updatemenus=[dict(type='buttons',
+                                    buttons=[bt_play, bt_stop])],
+                  sliders=[slider],
+                  xaxis_title=r'$x$',
+                  paper_bgcolor='rgba(0,0,0,0)',
+                  plot_bgcolor='rgba(0,0,0,0)')
+
+fig.write_html(file=&quot;pro_ver.html&quot;, include_mathjax='cdn', auto_play=False)
+</code></pre>
+<p><a href="2025-06-18-coding-plotly_animation/pro_ver.py">pro_ver.py</a></p>
+<iframe src="2025-06-18-coding-plotly_animation/pro_ver.html" width="100%" height=600></iframe>
+
+<h2>参考</h2>
+<p><a href="https://plotly.com/python/animations/">Plotly Animations</a></p>
+</section>
+
+<section class="post-meta">
+    <p>标签:
+        <a class="post-link" href="/tag/plotly.html">plotly</a>
+        <a class="post-link" href="/tag/python.html">python</a>
+    </p>
+</section>
+
+    </main>
+    <footer>© 2018 - 2024 ZQW</footer>
+  </div>
+</body>
+
+</html>
