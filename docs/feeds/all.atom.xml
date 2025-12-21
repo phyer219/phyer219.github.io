@@ -1,130 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/all.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2025-12-21T00:00:00+08:00</updated><entry><title>测试</title><link href="https://zqw.ink/2025-12-21-coding-test.html" rel="alternate"/><published>2025-12-21T00:00:00+08:00</published><updated>2025-12-21T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-12-21:/2025-12-21-coding-test.html</id><summary type="html">&lt;h2&gt;SSL加密&lt;/h2&gt;
-&lt;p&gt;在使用自己搭建的服务，如 &lt;code&gt;emby&lt;/code&gt; ,&lt;code&gt;nextcloud&lt;/code&gt;, &lt;code&gt;immich&lt;/code&gt; 时，如果使用域名访问，当没有进行受信任的 SSL 加密时，对应的手机 app 会连不上，提醒，或 …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;SSL加密&lt;/h2&gt;
-&lt;p&gt;在使用自己搭建的服务，如 &lt;code&gt;emby&lt;/code&gt; ,&lt;code&gt;nextcloud&lt;/code&gt;, &lt;code&gt;immich&lt;/code&gt; 时，如果使用域名访问，当没有进行受信任的 SSL 加密时，对应的手机 app 会连不上，提醒，或报错。&lt;/p&gt;
-&lt;p&gt;最简单的方式是用 &lt;code&gt;certbot&lt;/code&gt; 获取一个 90 天期限的 SSL 证书，到期后再更新。此篇博客做一备忘。&lt;/p&gt;
-&lt;h2&gt;证书获取过程&lt;/h2&gt;
-&lt;p&gt;安装好certbot后，执行以下命令手动获取 SSL 证书，并用在域名上添加一条 txt 解析的方式进行域名验证：&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-shell"&gt;certbot certonly --manual --preferred-challenges dns -d xxx.xxx.com
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;按提示在域名提供商处添加记录：&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-shell"&gt;Saving debug log to /var/log/letsencrypt/letsencrypt.log
-Requesting a certificate for xxx.xxx.com
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-Please deploy a DNS TXT record under the name:
-
-_acme-challenge.xxx.xxx.com.
-
-with the following value:
-
-GxxxxxxxxxxxxxQ
-
-Before continuing, verify the TXT record has been deployed. Depending on the DNS
-provider, this may take some time, from a few seconds to multiple minutes. You can
-check if it has finished deploying with aid of online tools, such as the Google
-Admin Toolbox: https://toolbox.googleapps.com/apps/dig/#TXT/_acme-challenge.xxx.xxx.com.
-Look for one or more bolded line(s) below the line ';ANSWER'. It should show the
-value(s) you've just added.
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-Press Enter to Continue
-
-Successfully received certificate.
-Certificate is saved at: /etc/letsencrypt/live/xxx.xxx.com/fullchain.pem
-Key is saved at:         /etc/letsencrypt/live/xxx.xxx.com/privkey.pem
-This certificate expires on 2025-12-13.
-These files will be updated when the certificate renews.
-
-NEXT STEPS:
-- This certificate will not be renewed automatically. Autorenewal of --manual certificates requires the use of an authentication hook script (--manual-auth-hook) but one was not provided. To renew this certificate, repeat this same certbot command before the certificate's expiry date.
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-If you like Certbot, please consider supporting our work by:
- * Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
- * Donating to EFF:                    https://eff.org/donate-le
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;code&gt;.pem&lt;/code&gt;、&lt;code&gt;.crt&lt;/code&gt;、&lt;code&gt;.key&lt;/code&gt; 本质上都是文本格式的证书/密钥文件，只是扩展名不同而已。可以直接需要复制或改名：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;fullchain.pem -&amp;gt;.crt
-privkey.pem -&amp;gt;.key
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;正确设置权限，参考如下：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;-rw-r--r--. 1 zqw zqw 2.8K Sep 14 17:40 server.crt
--rw-------. 1 zqw zqw  227 Sep 14 17:40 server.key
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;代理的 Podman 文件，代理容器的配置文件示例&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;nextcloud-proxy.container&lt;/code&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-shell"&gt;[Container]
-ContainerName=nextcloud-proxy
-Pod=nextcloud.pod
-Image=docker.io/library/httpd:2.4
-Volume=/xxx/extra-proxy.conf:/usr/local/apache2/conf/extra/proxy.conf:ro,Z
-Volume=/xxx/httpd.conf:/usr/local/apache2/conf/httpd.conf:ro,Z
-Volume=/xxx/server.crt:/usr/local/apache2/conf/server.crt:ro,Z
-Volume=/xxx/server.key:/usr/local/apache2/conf/server.key:ro,Z
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;code&gt;httpd.conf&lt;/code&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-shell"&gt;# Real-time info on requests and configuration
-#Include conf/extra/httpd-info.conf
-
-# Virtual hosts
-#Include conf/extra/httpd-vhosts.conf
-
-# Local access to the Apache HTTP Server Manual
-#Include conf/extra/httpd-manual.conf
-
-# Distributed authoring and versioning (WebDAV)
-#Include conf/extra/httpd-dav.conf
-
-# Various default settings
-#Include conf/extra/httpd-default.conf
-
-# Configure mod_proxy_html to understand HTML4/XHTML1
-&amp;lt;IfModule proxy_html_module&amp;gt;
-Include conf/extra/proxy-html.conf
-&amp;lt;/IfModule&amp;gt;
-
-# Secure (SSL/TLS) connections
-#Include conf/extra/httpd-ssl.conf
-#
-# Note: The following must must be present to support
-#       starting without SSL on platforms with no /dev/random equivalent
-#       but a statically compiled-in mod_ssl.
-#
-&amp;lt;IfModule ssl_module&amp;gt;
-SSLRandomSeed startup builtin
-SSLRandomSeed connect builtin
-&amp;lt;/IfModule&amp;gt;
-
-Include conf/extra/proxy.conf
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;反向代理容器和 nextcloud 容器在同个 pod 内，把nextcloud 默认的 80 代理到了 443:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-shell"&gt;LoadModule proxy_module modules/mod_proxy.so
-LoadModule proxy_http_module modules/mod_proxy_http.so
-
-&amp;lt;IfModule mod_proxy.c&amp;gt;
-    ProxyPreserveHost On
-    ProxyPass / http://localhost:80/
-    ProxyPassReverse / http://localhost:80/
-&amp;lt;/IfModule&amp;gt;
-
-LoadModule socache_shmcb_module modules/mod_socache_shmcb.so
-LoadModule ssl_module modules/mod_ssl.so
-Include conf/extra/httpd-ssl.conf
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;在 &lt;code&gt;~/.config/containers/systemd/nextcloud.pod&lt;/code&gt; 文件中，再把 443 映射到想要的端口（如9999），这样就可能在外网通过 SSL 访问 NextCloud 容器:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-shell"&gt;
-[Pod]
-PodName=nextcloud
-Network=bridge
-PublishPort=9999:443
-
-[Install]
-WantedBy=default.target
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;参考&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://wiki.archlinux.org/title/Certbot"&gt;ArchWiki: Certbot&lt;/a&gt;&lt;/p&gt;</content><category term="测试"/><category term="SSL"/><category term="certbot"/></entry><entry><title>用 certbot 手动获取受信任的 SSL证，并实现对 NextCloud 容器80端口的SSL访问</title><link href="https://zqw.ink/2025-09-14-coding-certbot.html" rel="alternate"/><published>2025-09-14T00:00:00+08:00</published><updated>2025-09-14T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-09-14:/2025-09-14-coding-certbot.html</id><summary type="html">&lt;h2&gt;SSL加密&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/all.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2025-09-14T00:00:00+08:00</updated><entry><title>用 certbot 手动获取受信任的 SSL证，并实现对 NextCloud 容器80端口的SSL访问</title><link href="https://zqw.ink/2025-09-14-coding-certbot.html" rel="alternate"/><published>2025-09-14T00:00:00+08:00</published><updated>2025-09-14T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-09-14:/2025-09-14-coding-certbot.html</id><summary type="html">&lt;h2&gt;SSL加密&lt;/h2&gt;
 &lt;p&gt;在使用自己搭建的服务，如 &lt;code&gt;emby&lt;/code&gt; ,&lt;code&gt;nextcloud&lt;/code&gt;, &lt;code&gt;immich&lt;/code&gt; 时，如果使用域名访问，当没有进行受信任的 SSL 加密时，对应的手机 app 会连不上，提醒，或 …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;SSL加密&lt;/h2&gt;
 &lt;p&gt;在使用自己搭建的服务，如 &lt;code&gt;emby&lt;/code&gt; ,&lt;code&gt;nextcloud&lt;/code&gt;, &lt;code&gt;immich&lt;/code&gt; 时，如果使用域名访问，当没有进行受信任的 SSL 加密时，对应的手机 app 会连不上，提醒，或报错。&lt;/p&gt;
 &lt;p&gt;最简单的方式是用 &lt;code&gt;certbot&lt;/code&gt; 获取一个 90 天期限的 SSL 证书，到期后再更新。此篇博客做一备忘。&lt;/p&gt;
@@ -17819,4 +17694,305 @@ $U|n\rangle\langle n|U^{\dagger}$ , $U$ 和 $U^{\dagger}$ 的位置刚好相反.
 &lt;li&gt;https://en.wikipedia.org/wiki/Density_matrix&lt;/li&gt;
 &lt;li&gt;https://physics.stackexchange.com/questions/112984/liouville-von-neumann-equation-can-be-directly-derived-from-heisenberg-picture&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="专业笔记"/><category term="物理"/><category term="Heisenberg equation of motion"/></entry></feed>
+</content><category term="专业笔记"/><category term="物理"/><category term="Heisenberg equation of motion"/></entry><entry><title>庞加莱代数</title><link href="https://zqw.ink/2020-07-07-physics-poincarealgebra.html" rel="alternate"/><published>2020-07-07T00:00:00+08:00</published><updated>2020-07-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-07-07:/2020-07-07-physics-poincarealgebra.html</id><summary type="html">
+&lt;h2&gt;说明&lt;/h2&gt;
+
+&lt;p&gt;'可以证明' 在本文中的意思是, 可以证明但是我懒不想写证明或者我不会证明. Weinberg
+的书真的太强了, 一句话也不多余, 一 …&lt;/p&gt;</summary><content type="html">
+&lt;h2&gt;说明&lt;/h2&gt;
+
+&lt;p&gt;'可以证明' 在本文中的意思是, 可以证明但是我懒不想写证明或者我不会证明. Weinberg
+的书真的太强了, 一句话也不多余, 一句话也不欠缺. 我只能把已经看明白的写出来, 并试
+着验算一些结果. 更加详细的过程记于活页手稿 $21$ .&lt;/p&gt;
+
+&lt;h2&gt;Lorentz Transformation&lt;/h2&gt;
+
+&lt;p&gt;假设取光速 $c&lt;code&gt;1$ 在所有惯性系中都是不变的, $x^{\mu}$ 是惯性系中的坐标 ( $x^0&lt;/code&gt;t$ 是
+时间坐标, $x^1, x^2, x^3$ 是空间坐标). 那么可以得到在任意两个惯性系中有 &lt;/p&gt;
+
+$$\begin{align}
+  \eta_{\mu\nu} \mathrm{d}x'^{\mu} \mathrm{d}x'^{\nu}
+  =  \eta_{\mu\nu} \mathrm{d}x^{\mu} \mathrm{d}x^{\nu}
+\end{align}$$
+
+&lt;p&gt;其中&lt;/p&gt;
+
+$$\begin{align}
+  \eta = \left(
+  \begin{array}{cccc}
+    -1  &amp;  0  &amp; 0 &amp; 0 \\
+    0   &amp;  1    &amp; 0 &amp; 0 \\
+    0  &amp;  0    &amp; 1 &amp; 0 \\
+    0  &amp;  0    &amp; 0 &amp; 1
+  \end{array}
+ \right)
+\end{align}$$
+
+&lt;blockquote&gt;由一个例子说明上式的合理性.
+
+在垂直于 $y$ 方向上放两面相距为 $l$ 的镜子, 在 $xOy$ 平面内, 一束光从一面镜子射
+出, 出射的方向与 $z$ 轴垂直, 到达另一面镜子后反射, 再回到第一面镜子上. 在相对镜
+子静止的参考系中, 光走过的路程为 $c\Delta t = 2\sqrt{(\frac{\Delta x}{2})^2 + l^2}$ . 在另
+一个沿 $x$ 方向相对匀速运动的惯性系中, 光走过的路程为 $c\Delta t' = 2\sqrt{(\frac{\Delta
+x'}{2})^2 + l^2}$ , 由这两式可得 $- (c \Delta t)^2 + (\Delta x)^2 = - (c \Delta t')^2 + (\Delta x')^2$ .&lt;/blockquote&gt;
+
+&lt;p&gt;可以证明, 不同惯性系之间的 Lorentz 变换(沿 $x_1$ 方向)可以写为&lt;/p&gt;
+
+$$\begin{align}
+  x'^{\mu} = \Lambda ^{\mu}_{\,\nu} x^{\nu}
+\end{align}$$
+
+&lt;p&gt;其中 $\Lambda ^{\mu}_{\,\nu}$ 满足&lt;/p&gt;
+
+$$\begin{align}
+  \eta_{\mu\nu} \Lambda^{\mu}_{\,\,\rho}\Lambda^{\nu}_{\,\,\sigma} = \eta_{\rho\sigma}
+\end{align}$$
+
+&lt;p&gt;将上式的两边同时左乘 $\eta^{\tau\rho}$ 可以得到 $\Lambda$ 的逆为&lt;/p&gt;
+
+$$\begin{align}
+(\Lambda^{-1}) ^{\rho} _{\,\,\nu} = \Lambda_{\nu}^{\,\,\rho} \equiv \eta_{\nu\mu} \eta^{\rho\sigma} \Lambda^{\mu}_{\,\,\sigma}
+\end{align}$$
+
+
+
+&lt;blockquote&gt;Exercise: 
+
+沿 $x$ 方向的 Lorentz transformation 可以写为
+\begin{align}
+  \Lambda = \left(
+  \begin{array}{cccc}
+    \gamma  &amp;  \beta \gamma  &amp; 0 &amp; 0 \\
+    \beta\gamma &amp;  \gamma    &amp; 0 &amp; 0 \\
+    0  &amp;  0    &amp; 1 &amp; 0 \\
+    0  &amp;  0    &amp; 0 &amp; 1
+  \end{array}
+ \right)
+\end{align}
+其中 $\beta = \frac{v}{c}$, $\gamma = \frac{1}{\sqrt{1- \beta^2}}$ . 
+验证其逆变换为
+\begin{align}
+  \Lambda^{-1} = \left(
+  \begin{array}{cccc}
+    \gamma  &amp; -\beta \gamma  &amp; 0 &amp; 0 \\
+   -\beta\gamma &amp;  \gamma    &amp; 0 &amp; 0 \\
+    0  &amp;  0    &amp; 1 &amp; 0 \\
+    0  &amp;  0    &amp; 0 &amp; 1
+  \end{array}
+ \right)
+\end{align}
+验证 $\Lambda$ 满足
+\begin{align}
+  \eta_{\mu\nu} \Lambda^{\mu}_{\,\,\rho}\Lambda^{\nu}_{\,\,\sigma} = \eta_{\rho\sigma}
+\end{align}&lt;/blockquote&gt;
+
+
+&lt;p&gt;Lorentz tranformation 构成 Lorentz group. &lt;/p&gt;
+
+&lt;h2&gt;Poincare Group&lt;/h2&gt;
+
+&lt;p&gt;在 Lorentz transformation 的基础上, 再加上时间与空间平移, 就构成了 Poincare
+group. 它的变换为&lt;/p&gt;
+
+$$\begin{align}
+  x'^{\mu} = \Lambda ^{\mu}_{\,\nu} x^{\nu} + a^{\mu}
+\end{align}$$
+
+&lt;p&gt;在量子力学中, 它对应一个幺正变换&lt;/p&gt;
+
+$$\begin{align}
+  \Psi \to U(\Lambda, a) \Psi
+\end{align}$$
+
+
+&lt;blockquote&gt;Exercise:
+
+由定义 $x^{\mu} \to x'^{\mu} \to x''^{\mu}$ 验证如果作用两次, 其结果为
+\begin{align}
+U(\bar{\Lambda}, \bar{a})U(\Lambda, a) = U(\bar{\Lambda}\Lambda, \bar{\Lambda}a + \bar{a})
+\end{align}&lt;/blockquote&gt;
+
+&lt;blockquote&gt;Exercise:
+
+由上面的结果验证
+\begin{align}
+U^{-1}(\Lambda, a) = U(\Lambda^{-1}, -\Lambda^{-1}a)
+\end{align}&lt;/blockquote&gt;
+
+&lt;h2&gt;The Poincare Algebra&lt;/h2&gt;
+
+&lt;h3&gt;生成元&lt;/h3&gt;
+
+&lt;p&gt;李群的标准作法, 考虑在 identity 附近的的变换&lt;/p&gt;
+
+$$\begin{align}
+  \Lambda^{\mu}_{\,\,\nu} = \delta^{\mu}_{\,\,\nu} + \omega^{\mu}_{\,\,\nu}, \quad \quad a^{\mu} = \epsilon^{\mu}
+\end{align}$$
+
+&lt;p&gt;它应当满足 $\eta_{\mu\nu} \Lambda^{\mu}_{\,\,\rho}\Lambda^{\nu}_{\,\,\sigma} = \eta_{\rho\sigma}$ , 也就是&lt;/p&gt;
+
+$$\begin{align}
+  \eta_{\rho\sigma} =&amp; \eta_{\mu\nu} (\delta^{\mu}_{\,\,\rho} + \omega^{\mu}_{\,\,\rho})
+  (\delta^{\nu}_{\,\,\sigma} + \omega^{\nu}_{\,\,\sigma}) \\
+  = &amp; \eta_{\rho\sigma} + \eta_{\rho\nu} \omega ^{\nu}_{\,\,\sigma} + \eta_{\mu\sigma} \omega ^{\mu}_{\,\,\rho} +\mathcal{O}(\omega^{2}) \\
+  = &amp; \eta_{\rho\sigma} +  \omega _{\rho\sigma} + \omega_{\sigma\rho} + \mathcal{O}(\omega^{2})
+\end{align}$$
+
+&lt;p&gt;采用了 $\eta_{\mu\nu} , \eta^{\mu\nu}$ 可以将上标变成下标, 下标变成上标的规定, 也就是&lt;/p&gt;
+
+$$\begin{align}
+\omega_{\sigma\rho} \equiv&amp; \eta_{\mu\sigma} \omega^{\mu} _{\,\,\rho} \\
+\omega^{\mu} _{\,\,\rho}  \equiv&amp; \eta^{\mu\sigma} \omega_{\sigma\rho}
+\end{align}$$
+
+&lt;p&gt;所以由 $\eta_{\mu\nu} \Lambda^{\mu}_{\,\,\rho}\Lambda^{\nu}_{\,\,\sigma} = \eta_{\rho\sigma}$ 可以得到
+$\omega_{\mu\nu}$ 是反对称的, 也就是&lt;/p&gt;
+
+$$\begin{align}
+  \omega_{\mu\nu} = - \omega_{\nu\mu}
+\end{align}$$
+
+&lt;p&gt;那么, 相互独立的 $\omega_{\rho\sigma}$ 有 $6$ 个, 再加上四个 $\epsilon^{\mu}$ , 一共有 $10$ 个参
+数. 对应到量子力学中, 无穷小的变换对应的幺正算符就可以写成 $\omega_{\rho\sigma}$ 和 $\epsilon_{\rho}$
+的线性组合再加上 $1$ &lt;/p&gt;
+
+$$\begin{align}
+  U(1 + \omega, \epsilon) = 1 + \frac{1}{2}\mathrm{i}\omega_{\rho\sigma} J^{\rho\sigma} - \mathrm{i}\epsilon_{\rho} P^{\rho} + \cdots
+\end{align}$$
+
+&lt;p&gt;要使 $U(1 + \omega, \epsilon)$ 是幺正的, 那么 $J^{\rho\sigma}$ 和 $P^{\rho}$ 就必须是厄米的, 也就
+是&lt;/p&gt;
+
+$$\begin{align}
+  J^{\rho\sigma\dagger} = J^{\rho\sigma}, \quad\quad P^{\rho\dagger} = P^{\rho}
+\end{align}$$
+
+&lt;p&gt;$\omega_{\rho\sigma}$ 是反对称的, $J^{\rho\sigma}$ 也可以取成反对称&lt;/p&gt;
+
+$$\begin{align}
+  J^{\rho\sigma} = - J^{\rho\sigma}
+\end{align}$$
+
+&lt;p&gt;其实, $P^1, P^2, P^3$ 就是动量算符, $P^{0}$ 就是能量, 也就是 Hamiltonian, $J^{23},
+J^{31}, J^{12}$ 就是角动量算符.&lt;/p&gt;
+
+&lt;h3&gt;生成元如何变换&lt;/h3&gt;
+
+&lt;p&gt;李群的性质反应在对易关系上. 因此计算&lt;/p&gt;
+
+$$\begin{align}
+  U(\Lambda, a) U(1 + \omega, \epsilon) U^{-1}(\Lambda, a)
+\end{align}$$
+
+&lt;p&gt;如果将 $U(1 + \omega, \epsilon)$ 直接展开, 可以得到&lt;/p&gt;
+
+$$\begin{align}
+  &amp;U(\Lambda, a) U(1 + \omega, \epsilon) U^{-1}(\Lambda, a) \\
+ =&amp; 1  + \frac{1}{2}\mathrm{i}\omega_{\rho\sigma} U(\Lambda, a) J^{\rho\sigma} U^{-1}(\Lambda, a)
+  - \mathrm{i}\epsilon_{\rho}U(\Lambda, a) P^{\rho} U^{-1}(\Lambda, a)
+\end{align}$$
+
+&lt;p&gt;如果先把三个作用合并, 再展开, 可以得到&lt;/p&gt;
+
+$$\begin{align}
+  &amp;U(\Lambda, a) U(1 + \omega, \epsilon) U^{-1}(\Lambda, a) \\
+ =&amp; 1  + \frac{1}{2}\mathrm{i}\Lambda_{\rho}^{\,\,\mu} \omega_{\mu\nu}\Lambda_{\sigma}^{\,\,\nu}J^{\rho\sigma}
+  - \mathrm{i} \Lambda_{\rho}^{\,\,\mu} \epsilon_{\mu} P^{\rho}
+  + \mathrm{i} \Lambda_{\rho}^{\,\,\mu} \omega_{\mu\nu}\Lambda_{\sigma}^{\,\,\nu} a^{\sigma} P^{\rho}
+\end{align}$$
+
+&lt;blockquote&gt;Exercise:
+
+下面验证上式
+\begin{align}
+  &amp; U(\Lambda, a) U(1 + \omega, \epsilon) U^{-1}(\Lambda, a) \\
+  =&amp; U(1 + \Lambda\omega\Lambda^{-1}, \Lambda\epsilon - \Lambda\omega\Lambda^{-1}a)\\
+  = &amp; 1 + \frac{1}{2}\mathrm{i}(\Lambda\omega\Lambda^{-1})_{\rho\sigma} J^{\rho\sigma} - \mathrm{i}(\Lambda\epsilon - \Lambda\omega\Lambda^{-1}a)_{\rho} P^{\rho} \\
+ =&amp; 1  + \frac{1}{2}\mathrm{i}\Lambda_{\rho\mu} \omega^{\mu}_{\,\,\nu}\Lambda_{\sigma}^{\,\,\nu}J^{\rho\sigma}
+  - \mathrm{i} \Lambda_{\rho\mu} \epsilon^{\mu} P^{\rho}
+  + \mathrm{i} \Lambda_{\rho\mu} \omega^{\mu}_{\,\,\nu}\Lambda_{\sigma}^{\,\,\nu} a^{\sigma} P^{\rho} \\
+ =&amp; 1  + \frac{1}{2}\mathrm{i}\Lambda_{\rho}^{\,\,\mu} \omega_{\mu\nu}\Lambda_{\sigma}^{\,\,\nu}J^{\rho\sigma}
+  - \mathrm{i} \Lambda_{\rho}^{\,\,\mu} \epsilon_{\mu} P^{\rho}
+  + \mathrm{i} \Lambda_{\rho}^{\,\,\mu} \omega_{\mu\nu}\Lambda_{\sigma}^{\,\,\nu} a^{\sigma} P^{\rho}
+\end{align}&lt;/blockquote&gt;
+&lt;p&gt;对比上面两种展开的系数. 首先对应 $\omega_{\rho\sigma}$ 的系数得&lt;/p&gt;
+
+$$\begin{align}
+  U(\Lambda, a) J^{\rho\sigma}U^{-1}(\Lambda, a) = \Lambda_{\mu}^{\,\,\rho} \Lambda_{\nu}^{\,\,\sigma}
+    (J^{\mu\nu} + a^{\nu} P^{\mu} - a^{\mu}P^{\nu})
+\end{align}$$
+
+&lt;p&gt;对应 $\epsilon_{\rho}$ 的系数得&lt;/p&gt;
+
+$$\begin{align}
+  U(\Lambda, a) P^{\rho}U^{-1}(\Lambda, a) = \Lambda_{\mu}^{\,\,\rho}P^{\mu}
+\end{align}$$
+
+
+&lt;h3&gt;对易关系&lt;/h3&gt;
+
+&lt;p&gt;将上面两个式子中的 $U(\Lambda, a) = U(1 + \omega, \epsilon)$ 也在单位元处展开 &lt;/p&gt;
+
+$$\begin{align}
+  U(\Lambda, a) =&amp; 1 + \frac{1}{2}\mathrm{i}\omega_{\rho\sigma} J^{\rho\sigma} - \mathrm{i}\epsilon_{\rho} P^{\rho}\\
+  U^{-1}(\Lambda, a) =&amp; 1 - \frac{1}{2}\mathrm{i}\omega_{\rho\sigma} J^{\rho\sigma} + \mathrm{i}\epsilon_{\rho} P^{\rho}
+\end{align}$$
+
+&lt;p&gt;保留到一阶项&lt;/p&gt;
+
+$$\begin{align}
+  U(\Lambda, a) J^{\rho\sigma}U^{-1}(\Lambda, a) =&amp; J^{\rho\sigma} 
+     +\frac{1}{2}\mathrm{i}\omega_{\mu\nu} [J^{\mu\nu}, J^{\rho\sigma}]
+     - \mathrm{i}\epsilon_{\mu} [P^{\mu}, J^{\rho\sigma}] \\
+=&amp; \\
+ \Lambda_{\mu}^{\,\,\rho} \Lambda_{\nu}^{\,\,\sigma}
+    (J^{\mu\nu} + a^{\nu} P^{\mu} - a^{\mu}P^{\nu}) = &amp; J^{\rho\sigma}
+  + \omega_{\mu\nu}\eta^{\nu\rho}J^{\mu\sigma} + \omega_{\mu\nu}\eta^{\nu\sigma} J^{\rho\mu}
+  - \epsilon_{\mu}\eta^{\mu\rho}P^{\sigma} + \epsilon_{\mu} \eta^{\mu\sigma} P^{\rho}
+\end{align}$$
+
+&lt;p&gt;对应 $\omega_{\mu\nu}$ 的系数可得&lt;/p&gt;
+
+$$\begin{align}
+  \mathrm{i}[J^{\mu\nu}, J^{\rho\sigma}] = 
+   \eta^{\nu\rho} J^{\mu\sigma} - \eta^{\mu\rho} J^{\nu\sigma} - \eta^{\sigma\mu} J^{\rho\nu} + \eta^{\sigma\nu} J^{\rho\mu} 
+\end{align}$$
+
+&lt;p&gt;对应 $\epsilon_{\mu}$ 的系数得&lt;/p&gt;
+
+$$\begin{align}
+  \mathrm{i}[P^{\mu}, J^{\rho\sigma}] = \eta^{\mu\rho} P^{\sigma} - \eta^{\mu\sigma} P^{\rho}
+\end{align}$$
+
+&lt;p&gt;同理对 $U(\Lambda, a) P^{\rho}U^{-1}(\Lambda, a) = \Lambda_{\mu}^{\,\,\rho}P^{\mu}$ 展开可以得到&lt;/p&gt;
+
+$$\begin{align}
+[P^{\mu}, P^{\rho}] = 0
+\end{align}$$
+
+&lt;p&gt;所以至此就得到了庞加莱代数的所有对易关系&lt;/p&gt;
+
+$$\begin{align}
+  \mathrm{i}[J^{\mu\nu}, J^{\rho\sigma}] =&amp; 
+   \eta^{\nu\rho} J^{\mu\sigma} - \eta^{\mu\rho} J^{\nu\sigma} - \eta^{\sigma\mu} J^{\rho\nu} + \eta^{\sigma\nu} J^{\rho\mu}  \\
+  \mathrm{i}[P^{\mu}, J^{\rho\sigma}] =&amp; \eta^{\mu\rho} P^{\sigma} - \eta^{\mu\sigma} P^{\rho} \\
+    [P^{\mu}, P^{\rho}] =&amp; 0
+\end{align}$$
+
+&lt;blockquote&gt;Exercise:
+
+验证动量和角动量 $\vec{P} = \{P^1, P^2, P^{3} \}, \vec{J} = \{J^{23}, J^{31}, J^{12}\}$ 是守恒量, 也就是它们和 $H
+= P^0$ 对易. 而 boost three-vector $K = \{J^{01}, J^{02}, J^{03}\}$ 不是守恒量. &lt;/blockquote&gt;
+&lt;blockquote&gt;Exercise:
+
+从庞加莱代数的对易关系得到量子力学中常见的动量与角动量之间的对易关系. &lt;/blockquote&gt;
+
+
+&lt;h2&gt;Reference&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Steven Weinberg, The Quantum Theory of Fields Foundations Vol. 1(1995, Cambridge University Press)&lt;/li&gt;
+&lt;li&gt;A. Zee, Group Theory in a Nutshell for Physicists (2016, Princeton University Press)&lt;/li&gt;
+&lt;li&gt;Tom Lancaster, Stephen J. Blundell, Quantum Field Theory for the Gifted Amateur (2014, Oxford University Press)&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="专业笔记"/><category term="数学"/><category term="Poincare Algebra"/><category term="Relativistic Quantum Machinics"/><category term="Lorentz Transformation"/></entry></feed>
