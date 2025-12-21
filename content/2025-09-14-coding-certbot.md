@@ -14,10 +14,13 @@ tags: [SSL, certbot]
 ## 证书获取过程
 
 安装好certbot后，执行以下命令手动获取 SSL 证书，并用在域名上添加一条 txt 解析的方式进行域名验证：
+
 ```shell
 certbot certonly --manual --preferred-challenges dns -d xxx.xxx.com
 ```
+
 按提示在域名提供商处添加记录：
+
 ```shell
 Saving debug log to /var/log/letsencrypt/letsencrypt.log
 Requesting a certificate for xxx.xxx.com
@@ -56,15 +59,17 @@ If you like Certbot, please consider supporting our work by:
  * Donating to EFF:                    https://eff.org/donate-le
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ```
+
 `.pem`、`.crt`、`.key` 本质上都是文本格式的证书/密钥文件，只是扩展名不同而已。可以直接需要复制或改名：
 
-
-```
+```shell
 fullchain.pem ->.crt
 privkey.pem ->.key
 ```
+
 正确设置权限，参考如下：
-```
+
+```shell
 -rw-r--r--. 1 zqw zqw 2.8K Sep 14 17:40 server.crt
 -rw-------. 1 zqw zqw  227 Sep 14 17:40 server.key
 ```
@@ -72,6 +77,7 @@ privkey.pem ->.key
 ## 代理的 Podman 文件，代理容器的配置文件示例
 
 `nextcloud-proxy.container`:
+
 ```shell
 [Container]
 ContainerName=nextcloud-proxy
@@ -84,6 +90,7 @@ Volume=/xxx/server.key:/usr/local/apache2/conf/server.key:ro,Z
 ```
 
 `httpd.conf`
+
 ```shell
 # Real-time info on requests and configuration
 #Include conf/extra/httpd-info.conf
@@ -119,7 +126,9 @@ SSLRandomSeed connect builtin
 
 Include conf/extra/proxy.conf
 ```
+
 反向代理容器和 nextcloud 容器在同个 pod 内，把nextcloud 默认的 80 代理到了 443:
+
 ```shell
 LoadModule proxy_module modules/mod_proxy.so
 LoadModule proxy_http_module modules/mod_proxy_http.so
@@ -136,6 +145,7 @@ Include conf/extra/httpd-ssl.conf
 ```
 
 在 `~/.config/containers/systemd/nextcloud.pod` 文件中，再把 443 映射到想要的端口（如9999），这样就可能在外网通过 SSL 访问 NextCloud 容器:
+
 ```shell
 
 [Pod]

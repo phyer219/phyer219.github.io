@@ -26,6 +26,20 @@ Use package:
 
 [highlight.js](https://highlightjs.org/)
 
+## Usage
+
+Parameters:
+
+- `-r`: auto reloading
+- `-l`: listen
+- `-s`: with setting file
+
+Publish with publish configure:
+
+```shell
+pelican -s publishconf.py
+```
+
 ## Contact Information
 
-zeqing6688@126.com
+<zeqing6688@126.com>

@@ -121,11 +121,11 @@ If you like Certbot, please consider supporting our work by:
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 </code></pre>
 <p><code>.pem</code>、<code>.crt</code>、<code>.key</code> 本质上都是文本格式的证书/密钥文件，只是扩展名不同而已。可以直接需要复制或改名：</p>
-<pre><code>fullchain.pem -&gt;.crt
+<pre><code class="language-shell">fullchain.pem -&gt;.crt
 privkey.pem -&gt;.key
 </code></pre>
 <p>正确设置权限，参考如下：</p>
-<pre><code>-rw-r--r--. 1 zqw zqw 2.8K Sep 14 17:40 server.crt
+<pre><code class="language-shell">-rw-r--r--. 1 zqw zqw 2.8K Sep 14 17:40 server.crt
 -rw-------. 1 zqw zqw  227 Sep 14 17:40 server.key
 </code></pre>
 <h2>代理的 Podman 文件，代理容器的配置文件示例</h2>

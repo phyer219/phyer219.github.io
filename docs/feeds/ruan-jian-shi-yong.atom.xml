@@ -46,11 +46,11 @@ If you like Certbot, please consider supporting our work by:
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;code&gt;.pem&lt;/code&gt;、&lt;code&gt;.crt&lt;/code&gt;、&lt;code&gt;.key&lt;/code&gt; 本质上都是文本格式的证书/密钥文件，只是扩展名不同而已。可以直接需要复制或改名：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;fullchain.pem -&amp;gt;.crt
+&lt;pre&gt;&lt;code class="language-shell"&gt;fullchain.pem -&amp;gt;.crt
 privkey.pem -&amp;gt;.key
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;正确设置权限，参考如下：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;-rw-r--r--. 1 zqw zqw 2.8K Sep 14 17:40 server.crt
+&lt;pre&gt;&lt;code class="language-shell"&gt;-rw-r--r--. 1 zqw zqw 2.8K Sep 14 17:40 server.crt
 -rw-------. 1 zqw zqw  227 Sep 14 17:40 server.key
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;代理的 Podman 文件，代理容器的配置文件示例&lt;/h2&gt;
