@@ -7,7 +7,7 @@ OUTPUT_PATH = 'docs'
 
 TIMEZONE = 'Asia/Shanghai'
 
-DEFAULT_LANG = 'zh'
+DEFAULT_LANG = 'zh_CN'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
