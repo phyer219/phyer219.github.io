@@ -10,7 +10,7 @@
 * 符号说明
 - =M= : Mate 键
 - =S= : Shift 键
-- =C= : Ctrl 键
+- =C= : Ctrl 键
 * 视图优化
 - 使列表有缩进: =M-x org-indent-mode=
 
