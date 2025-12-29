@@ -35,13 +35,17 @@ DEFAULT_PAGINATION = False
 # RELATIVE_URLS = True
 
 # My config -----------------------------------------------------------------
+from datetime import datetime
+JINJA_GLOBALS = {
+    'current_year': datetime.now().year,
+}
+
 STATIC_PATHS = ['.']
 READERS = {'html': None}
 
-
 SLUGIFY_SOURCE = 'basename'
 DEFAULT_CATEGORY = '未分类'
-THEME = './themes/universe'
+THEME = './themes/simple-modern'
 DISPLAY_CATEGORIES_ON_MENU = False
 MENUITEMS = [('首页', '/'),
              ('分类', '/categories.html'),

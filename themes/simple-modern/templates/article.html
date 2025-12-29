@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block html_lang %}{{ article.lang }}{% endblock %}
+
+{% block title %}{{ SITENAME|striptags }} - {{ article.title|striptags  }}{% endblock %}
+
+{% block head %}
+  {{ super() }}
+
+  {% import 'translations.html' as translations with context %}
+  {% if translations.entry_hreflang(article) %}
+    {{ translations.entry_hreflang(article) }}
+  {% endif %}
+
+  {% if article.description %}
+    <meta name="description" content="{{article.description}}" />
+  {% endif %}
+
+  {% for tag in article.tags %}
+    <meta name="tags" content="{{tag}}" />
+  {% endfor %}
+
+{% endblock %}
+
+{% block content %}
+<h1 class="post-title">{{ article.title|striptags  }}</h1>
+
+<section class="post-meta">
+    <p>发表于: {{ article.date.strftime('%Y-%m-%d') }} ||</p>
+    <p>分类:<a class="post-link" href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a> ||</p>
+</section>
+
+<section class="post-content">
+  {{ article.content }}
+</section>
+
+<section class="post-meta">
+    <p>标签:
+      {% for tag in article.tags %}
+        <a class="post-link" href="{{ SITEURL }}/{{ tag.url }}">{{tag}}</a>
+        {% endfor %}
+    </p>
+</section>
+
+{% endblock %}

@@ -2,27 +2,53 @@
 <html lang="zh_cn">
 
 <head>
-  <meta charset="utf-8" />
   <title>从冰上的水</title>
+  <meta charset="utf-8" />
   <meta name="generator" content="Pelican" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
     href="https://zqw.ink/feeds/all.atom.xml"
     type="application/atom+xml" rel="alternate" title="从冰上的水 Full Atom Feed" />
-      <link
+  <link
     href="https://zqw.ink/feeds/ruan-jian-shi-yong.atom.xml"
     type="application/atom+xml" rel="alternate" title="从冰上的水 Categories Atom Feed" />
-     <link rel="stylesheet" type="text/css" href="https://zqw.ink/theme/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="https://zqw.ink/theme/css/style.css" />
   <!-- fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Serif+SC&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Serif+SC&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <!--fonts end  -->
   <!-- highlight.js -->
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+  <link id="hljs-light" rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" disabled>
+  <link id="hljs-dark" rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" disabled>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
-  <script>hljs.highlightAll();</script>
+  <script>
+    hljs.highlightAll();
+    (function () {
+      const light = document.getElementById('hljs-light');
+      const dark = document.getElementById('hljs-dark');
+      if (!light || !dark) return;
+
+      function resolveTheme() {
+        return document.documentElement.getAttribute('data-theme') || 'light';
+      }
+
+      function applyTheme(theme) {
+        const isDark = theme === 'dark';
+        light.disabled = isDark;
+        dark.disabled = !isDark;
+      }
+
+      const observer = new MutationObserver(function () {
+        applyTheme(resolveTheme());
+      });
+      observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+      applyTheme(resolveTheme());
+    })();
+  </script>
   <!-- highlight.js end -->
 
 <script>
@@ -43,249 +69,369 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.1">
 </head>
 
-<body class="star-background">
-  <div class="container">
-    <header>
-      <section class="banner">
-        <img id="banner-img" src="/images/banner.jpg" alt="banner-img" />
-      </section>
-    </header>
-    <nav class="row">
-      <a class="nav" href="/">首页</a>
-      <a class="nav" href="/categories.html">分类</a>
-      <a class="nav" href="/tags.html">标签</a>
-        <a class="nav" href="https://zqw.ink/pages/about.html" aria-current="page">
-        关于
-      </a>
-     </nav>
-
-    <main>
+<body>
+  <header>
+    <div id="header-container">
+      <nav>
+        <ul>
+            <li>
+              <a href="/">首页</a>
+            </li>
+            <li>
+              <a href="/categories.html">分类</a>
+            </li>
+            <li>
+              <a href="/tags.html">标签</a>
+            </li>
+              <li>
+                <a href="https://zqw.ink/pages/about.html" >关于</a>
+              </li>
+          </ul>
+      </nav>
+      <button id="theme-toggle" aria-label="切换到深色模式" title="切换主题">
+        <i class="theme-icon icon-sun fa-solid fa-sun" aria-hidden="true"></i>
+        <i class="theme-icon icon-moon fa-solid fa-moon" aria-hidden="true"></i>
+      </button>
+      <div class="rss">
+          <a href="https://zqw.ink/feeds/all.atom.xml" aria-label="Atom 订阅">
+            <i class="fa-solid fa-rss" aria-hidden="true"></i>
+          </a>
+      </div>
+    </div>
+  </header>
+  <main>
     <h1>分类: 软件使用</h1>
- 
+
+
 <section class="post-list">
 
-        <h3>
-            <a href="https://zqw.ink/2025-09-14-coding-certbot.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2025-09-14</span>
+            <a href="https://zqw.ink/2025-09-14-coding-certbot.html" class="post-link" rel="bookmark"
                 title="Permalink to 用 certbot 手动获取受信任的 SSL证，并实现对 NextCloud 容器80端口的SSL访问">
-                2025-09-14  用 certbot 手动获取受信任的 SSL证，并实现对 NextCloud 容器80端口的SSL访问</a>
-        </h3>
+                用 certbot 手动获取受信任的 SSL证，并实现对 NextCloud 容器80端口的SSL访问</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2025-06-18-coding-plotly_animation.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2025-06-18</span>
+            <a href="https://zqw.ink/2025-06-18-coding-plotly_animation.html" class="post-link" rel="bookmark"
                 title="Permalink to Plotly 绘制动图">
-                2025-06-18  Plotly 绘制动图</a>
-        </h3>
+                Plotly 绘制动图</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2025-05-10-coding-rocklinux.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2025-05-10</span>
+            <a href="https://zqw.ink/2025-05-10-coding-rocklinux.html" class="post-link" rel="bookmark"
                 title="Permalink to Linux 使用笔记（进阶）">
-                2025-05-10  Linux 使用笔记（进阶）</a>
-        </h3>
+                Linux 使用笔记（进阶）</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2024-10-26-coding-plotlyjs.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2024-10-26</span>
+            <a href="https://zqw.ink/2024-10-26-coding-plotlyjs.html" class="post-link" rel="bookmark"
                 title="Permalink to 在博客中嵌入 JavaScript 之 Plotly.js">
-                2024-10-26  在博客中嵌入 JavaScript 之 Plotly.js</a>
-        </h3>
+                在博客中嵌入 JavaScript 之 Plotly.js</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2024-10-24-pelican_blog.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2024-10-24</span>
+            <a href="https://zqw.ink/2024-10-24-pelican_blog.html" class="post-link" rel="bookmark"
                 title="Permalink to 博客第二次改版的说明及一些笔记">
-                2024-10-24  博客第二次改版的说明及一些笔记</a>
-        </h3>
+                博客第二次改版的说明及一些笔记</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2023-11-16-coding-makepkg-copy.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2023-11-16</span>
+            <a href="https://zqw.ink/2023-11-16-coding-makepkg-copy.html" class="post-link" rel="bookmark"
                 title="Permalink to Arch安装deb包：为 deb 包编写 PKGBUILD 文件">
-                2023-11-16  Arch安装deb包：为 deb 包编写 PKGBUILD 文件</a>
-        </h3>
+                Arch安装deb包：为 deb 包编写 PKGBUILD 文件</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2023-10-12-coding-matplotlib.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2023-10-12</span>
+            <a href="https://zqw.ink/2023-10-12-coding-matplotlib.html" class="post-link" rel="bookmark"
                 title="Permalink to matplotlib 科研作图总结">
-                2023-10-12  matplotlib 科研作图总结</a>
-        </h3>
+                matplotlib 科研作图总结</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2023-04-23-coding-intel_python.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2023-04-23</span>
+            <a href="https://zqw.ink/2023-04-23-coding-intel_python.html" class="post-link" rel="bookmark"
                 title="Permalink to Intel AI Analytics Toolkit 加速 numpy, scipy">
-                2023-04-23  Intel AI Analytics Toolkit 加速 numpy, scipy</a>
-        </h3>
+                Intel AI Analytics Toolkit 加速 numpy, scipy</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2022-07-31-coding-py_api.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2022-07-31</span>
+            <a href="https://zqw.ink/2022-07-31-coding-py_api.html" class="post-link" rel="bookmark"
                 title="Permalink to 最简单的调用网站api的程序">
-                2022-07-31  最简单的调用网站api的程序</a>
-        </h3>
+                最简单的调用网站api的程序</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2021-12-09-coding-py_ode.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2021-12-09</span>
+            <a href="https://zqw.ink/2021-12-09-coding-py_ode.html" class="post-link" rel="bookmark"
                 title="Permalink to scipy 数值求解微分方程, 方程组, 复微分方程组">
-                2021-12-09  scipy 数值求解微分方程, 方程组, 复微分方程组</a>
-        </h3>
+                scipy 数值求解微分方程, 方程组, 复微分方程组</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2021-11-10-coding-matplot_fonts.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2021-11-10</span>
+            <a href="https://zqw.ink/2021-11-10-coding-matplot_fonts.html" class="post-link" rel="bookmark"
                 title="Permalink to python matplotlib 画图小技巧: 自定义字体">
-                2021-11-10  python matplotlib 画图小技巧: 自定义字体</a>
-        </h3>
+                python matplotlib 画图小技巧: 自定义字体</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2021-10-21-coding-dash_circle.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2021-10-21</span>
+            <a href="https://zqw.ink/2021-10-21-coding-dash_circle.html" class="post-link" rel="bookmark"
                 title="Permalink to python matplotlib 画图小技巧: 虚线的圆与虚线的五角星">
-                2021-10-21  python matplotlib 画图小技巧: 虚线的圆与虚线的五角星</a>
-        </h3>
+                python matplotlib 画图小技巧: 虚线的圆与虚线的五角星</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2021-09-16-physics-scipy_integrate.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2021-09-16</span>
+            <a href="https://zqw.ink/2021-09-16-physics-scipy_integrate.html" class="post-link" rel="bookmark"
                 title="Permalink to scipy.integrate.quad 是如何取点的, 以及记录所计算的点(update 4/April/2023)">
-                2021-09-16  scipy.integrate.quad 是如何取点的, 以及记录所计算的点(update 4/April/2023)</a>
-        </h3>
+                scipy.integrate.quad 是如何取点的, 以及记录所计算的点(update 4/April/2023)</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2021-06-24-coding-beamer_note.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2021-06-24</span>
+            <a href="https://zqw.ink/2021-06-24-coding-beamer_note.html" class="post-link" rel="bookmark"
                 title="Permalink to beamer 笔记">
-                2021-06-24  beamer 笔记</a>
-        </h3>
+                beamer 笔记</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2021-05-15-coding-unstable_method.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2021-05-15</span>
+            <a href="https://zqw.ink/2021-05-15-coding-unstable_method.html" class="post-link" rel="bookmark"
                 title="Permalink to round-off error, unstable method, mpmath(update 15/Mar/2022)">
-                2021-05-15  round-off error, unstable method, mpmath(update 15/Mar/2022)</a>
-        </h3>
+                round-off error, unstable method, mpmath(update 15/Mar/2022)</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2021-05-14-coding-c_pointer_malloc.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2021-05-14</span>
+            <a href="https://zqw.ink/2021-05-14-coding-c_pointer_malloc.html" class="post-link" rel="bookmark"
                 title="Permalink to C 中的指针与动态内存分配">
-                2021-05-14  C 中的指针与动态内存分配</a>
-        </h3>
+                C 中的指针与动态内存分配</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2021-03-19-coding-lsp_flycheck.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2021-03-19</span>
+            <a href="https://zqw.ink/2021-03-19-coding-lsp_flycheck.html" class="post-link" rel="bookmark"
                 title="Permalink to 记一次折腾上头经历: lsp-pyright vs. flycheck & flake8">
-                2021-03-19  记一次折腾上头经历: lsp-pyright vs. flycheck & flake8</a>
-        </h3>
+                记一次折腾上头经历: lsp-pyright vs. flycheck & flake8</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2021-01-20-coding-lisp.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2021-01-20</span>
+            <a href="https://zqw.ink/2021-01-20-coding-lisp.html" class="post-link" rel="bookmark"
                 title="Permalink to 欢迎来到 Emacs 主义至上教室(lisp note -_-)">
-                2021-01-20  欢迎来到 Emacs 主义至上教室(lisp note -_-)</a>
-        </h3>
+                欢迎来到 Emacs 主义至上教室(lisp note -_-)</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2021-01-13-coding-multiprocessor.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2021-01-13</span>
+            <a href="https://zqw.ink/2021-01-13-coding-multiprocessor.html" class="post-link" rel="bookmark"
                 title="Permalink to python 并行的简单例子">
-                2021-01-13  python 并行的简单例子</a>
-        </h3>
+                python 并行的简单例子</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2021-01-13-coding-setup_tools.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2021-01-13</span>
+            <a href="https://zqw.ink/2021-01-13-coding-setup_tools.html" class="post-link" rel="bookmark"
                 title="Permalink to 如何将 python 程序打包成一个 package">
-                2021-01-13  如何将 python 程序打包成一个 package</a>
-        </h3>
+                如何将 python 程序打包成一个 package</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2020-11-29-coding-newssd.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2020-11-29</span>
+            <a href="https://zqw.ink/2020-11-29-coding-newssd.html" class="post-link" rel="bookmark"
                 title="Permalink to SSD 备忘与趣事">
-                2020-11-29  SSD 备忘与趣事</a>
-        </h3>
+                SSD 备忘与趣事</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2020-09-18-coding-animation_plot.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2020-09-18</span>
+            <a href="https://zqw.ink/2020-09-18-coding-animation_plot.html" class="post-link" rel="bookmark"
                 title="Permalink to matplotlib.animation 制作动图">
-                2020-09-18  matplotlib.animation 制作动图</a>
-        </h3>
+                matplotlib.animation 制作动图</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2020-07-28-coding-wakatime.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2020-07-28</span>
+            <a href="https://zqw.ink/2020-07-28-coding-wakatime.html" class="post-link" rel="bookmark"
                 title="Permalink to 坎坷的 wakatime-mode">
-                2020-07-28  坎坷的 wakatime-mode</a>
-        </h3>
+                坎坷的 wakatime-mode</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2020-02-03-physics-django.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2020-02-03</span>
+            <a href="https://zqw.ink/2020-02-03-physics-django.html" class="post-link" rel="bookmark"
                 title="Permalink to Django 笔记：CentOS+Apache+Mariadb+mod_wsgi+Django">
-                2020-02-03  Django 笔记：CentOS+Apache+Mariadb+mod_wsgi+Django</a>
-        </h3>
+                Django 笔记：CentOS+Apache+Mariadb+mod_wsgi+Django</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2019-10-25-coding-objectplot.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2019-10-25</span>
+            <a href="https://zqw.ink/2019-10-25-coding-objectplot.html" class="post-link" rel="bookmark"
                 title="Permalink to 面向对象, 花式作图">
-                2019-10-25  面向对象, 花式作图</a>
-        </h3>
+                面向对象, 花式作图</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2019-04-18-coding-git-shi-yong-bei-wang.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2019-04-18</span>
+            <a href="https://zqw.ink/2019-04-18-coding-git-shi-yong-bei-wang.html" class="post-link" rel="bookmark"
                 title="Permalink to Git 使用备忘">
-                2019-04-18  Git 使用备忘</a>
-        </h3>
+                Git 使用备忘</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2018-11-11-coding-manjaro-18-gnome-zhuang-ji-bei-wang.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2018-11-11</span>
+            <a href="https://zqw.ink/2018-11-11-coding-manjaro-18-gnome-zhuang-ji-bei-wang.html" class="post-link" rel="bookmark"
                 title="Permalink to Manjaro-18-Gnome 装机备忘">
-                2018-11-11  Manjaro-18-Gnome 装机备忘</a>
-        </h3>
+                Manjaro-18-Gnome 装机备忘</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2018-10-18-coding-hello-org-mode.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2018-10-18</span>
+            <a href="https://zqw.ink/2018-10-18-coding-hello-org-mode.html" class="post-link" rel="bookmark"
                 title="Permalink to Hello org-mode">
-                2018-10-18  Hello org-mode</a>
-        </h3>
+                Hello org-mode</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2018-09-07-coding-emacsshi-yong-bi-ji.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2018-09-07</span>
+            <a href="https://zqw.ink/2018-09-07-coding-emacsshi-yong-bi-ji.html" class="post-link" rel="bookmark"
                 title="Permalink to Emacs使用笔记">
-                2018-09-07  Emacs使用笔记</a>
-        </h3>
+                Emacs使用笔记</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2018-09-07-coding-linuxshi-yong-bi-ji.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2018-09-07</span>
+            <a href="https://zqw.ink/2018-09-07-coding-linuxshi-yong-bi-ji.html" class="post-link" rel="bookmark"
                 title="Permalink to Linux使用笔记(update 28/Jan/2021)">
-                2018-09-07  Linux使用笔记(update 28/Jan/2021)</a>
-        </h3>
+                Linux使用笔记(update 28/Jan/2021)</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2018-09-07-coding-typorashi-yong-bi-ji.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2018-09-07</span>
+            <a href="https://zqw.ink/2018-09-07-coding-typorashi-yong-bi-ji.html" class="post-link" rel="bookmark"
                 title="Permalink to Typora使用笔记">
-                2018-09-07  Typora使用笔记</a>
-        </h3>
+                Typora使用笔记</a>
+        </h2>
 
 </section>
 
 
-    </main>
-    <footer>© 2018 - 2025 ZQW</footer>
-  </div>
+  </main>
+  <footer role="contentinfo">
+    <p>Copyright &copy; 2018 - 2025 ZQW</p>
+  </footer>
+  <script>
+  (function() {
+    const key = 'theme';
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const saved = localStorage.getItem(key);
+    const init = saved ? saved : 'system';
+    const effective = init === 'system' ? (prefersDark ? 'dark' : 'light') : init;
+    document.documentElement.setAttribute('data-theme', effective);
+    updateThemeButton(effective);
+
+    document.getElementById('theme-toggle')?.addEventListener('click', function () {
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem(key, next);
+      updateThemeButton(next);
+    });
+
+    function updateThemeButton(theme) {
+      const btn = document.getElementById('theme-toggle');
+      if (btn) {
+        btn.setAttribute('aria-label', theme === 'dark' ? '切换到浅色模式' : '切换到深色模式');
+      }
+    }
+  })();
+  </script>
+  <script>
+  (function() {
+    const blocks = document.querySelectorAll('pre > code');
+    blocks.forEach((code) => {
+      const pre = code.parentElement;
+      if (!pre) return;
+
+      if (!pre.dataset.lang) {
+        const cls = Array.from(code.classList);
+        const langClass = cls.find((name) => name.startsWith('language-') || name.startsWith('lang-'));
+        if (langClass) {
+          const raw = langClass.replace(/^language-/, '').replace(/^lang-/, '');
+          pre.dataset.lang = raw.replace(/_/g, ' ').toUpperCase();
+        }
+      }
+
+      if (pre.querySelector('.copy-btn')) return;
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'copy-btn';
+      btn.setAttribute('aria-label', '复制代码');
+      btn.textContent = 'Copy';
+      btn.addEventListener('click', async function () {
+        try {
+          await navigator.clipboard.writeText(code.innerText);
+          btn.textContent = 'Copied';
+        } catch (err) {
+          const range = document.createRange();
+          range.selectNodeContents(code);
+          const selection = window.getSelection();
+          selection.removeAllRanges();
+          selection.addRange(range);
+          try {
+            document.execCommand('copy');
+            btn.textContent = 'Copied';
+          } finally {
+            selection.removeAllRanges();
+          }
+        }
+        setTimeout(() => {
+          btn.textContent = 'Copy';
+        }, 1500);
+      });
+      pre.appendChild(btn);
+    });
+  })();
+  </script>
 </body>
 
 </html>

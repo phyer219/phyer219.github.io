@@ -2,27 +2,53 @@
 <html lang="zh_cn">
 
 <head>
-  <meta charset="utf-8" />
   <title>从冰上的水</title>
+  <meta charset="utf-8" />
   <meta name="generator" content="Pelican" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
     href="https://zqw.ink/feeds/all.atom.xml"
     type="application/atom+xml" rel="alternate" title="从冰上的水 Full Atom Feed" />
-      <link
+  <link
     href="https://zqw.ink/feeds/xiang-shuo.atom.xml"
     type="application/atom+xml" rel="alternate" title="从冰上的水 Categories Atom Feed" />
-     <link rel="stylesheet" type="text/css" href="https://zqw.ink/theme/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="https://zqw.ink/theme/css/style.css" />
   <!-- fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Serif+SC&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Serif+SC&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <!--fonts end  -->
   <!-- highlight.js -->
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+  <link id="hljs-light" rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" disabled>
+  <link id="hljs-dark" rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" disabled>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
-  <script>hljs.highlightAll();</script>
+  <script>
+    hljs.highlightAll();
+    (function () {
+      const light = document.getElementById('hljs-light');
+      const dark = document.getElementById('hljs-dark');
+      if (!light || !dark) return;
+
+      function resolveTheme() {
+        return document.documentElement.getAttribute('data-theme') || 'light';
+      }
+
+      function applyTheme(theme) {
+        const isDark = theme === 'dark';
+        light.disabled = isDark;
+        dark.disabled = !isDark;
+      }
+
+      const observer = new MutationObserver(function () {
+        applyTheme(resolveTheme());
+      });
+      observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+      applyTheme(resolveTheme());
+    })();
+  </script>
   <!-- highlight.js end -->
 
 <script>
@@ -43,179 +69,289 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.1">
 </head>
 
-<body class="star-background">
-  <div class="container">
-    <header>
-      <section class="banner">
-        <img id="banner-img" src="/images/banner.jpg" alt="banner-img" />
-      </section>
-    </header>
-    <nav class="row">
-      <a class="nav" href="/">首页</a>
-      <a class="nav" href="/categories.html">分类</a>
-      <a class="nav" href="/tags.html">标签</a>
-        <a class="nav" href="https://zqw.ink/pages/about.html" aria-current="page">
-        关于
-      </a>
-     </nav>
-
-    <main>
+<body>
+  <header>
+    <div id="header-container">
+      <nav>
+        <ul>
+            <li>
+              <a href="/">首页</a>
+            </li>
+            <li>
+              <a href="/categories.html">分类</a>
+            </li>
+            <li>
+              <a href="/tags.html">标签</a>
+            </li>
+              <li>
+                <a href="https://zqw.ink/pages/about.html" >关于</a>
+              </li>
+          </ul>
+      </nav>
+      <button id="theme-toggle" aria-label="切换到深色模式" title="切换主题">
+        <i class="theme-icon icon-sun fa-solid fa-sun" aria-hidden="true"></i>
+        <i class="theme-icon icon-moon fa-solid fa-moon" aria-hidden="true"></i>
+      </button>
+      <div class="rss">
+          <a href="https://zqw.ink/feeds/all.atom.xml" aria-label="Atom 订阅">
+            <i class="fa-solid fa-rss" aria-hidden="true"></i>
+          </a>
+      </div>
+    </div>
+  </header>
+  <main>
     <h1>分类: 想说</h1>
- 
+
+
 <section class="post-list">
 
-        <h3>
-            <a href="https://zqw.ink/2025-04-06-thinking-baicaoyuan_huizhou.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2025-04-06</span>
+            <a href="https://zqw.ink/2025-04-06-thinking-baicaoyuan_huizhou.html" class="post-link" rel="bookmark"
                 title="Permalink to 研六一年，延期一年，鹅城半载———从品园到百草园，再从百草园到龙光城（连载中……）">
-                2025-04-06  研六一年，延期一年，鹅城半载———从品园到百草园，再从百草园到龙光城（连载中……）</a>
-        </h3>
+                研六一年，延期一年，鹅城半载———从品园到百草园，再从百草园到龙光城（连载中……）</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2022-09-14-thinking-summary_grade_5_2.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2022-09-14</span>
+            <a href="https://zqw.ink/2022-09-14-thinking-summary_grade_5_2.html" class="post-link" rel="bookmark"
                 title="Permalink to 研五下学期总结">
-                2022-09-14  研五下学期总结</a>
-        </h3>
+                研五下学期总结</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2022-08-31-thinking-shenzhen.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2022-08-31</span>
+            <a href="https://zqw.ink/2022-08-31-thinking-shenzhen.html" class="post-link" rel="bookmark"
                 title="Permalink to 深圳小记">
-                2022-08-31  深圳小记</a>
-        </h3>
+                深圳小记</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2022-04-16-thinking-blog_evolution.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2022-04-16</span>
+            <a href="https://zqw.ink/2022-04-16-thinking-blog_evolution.html" class="post-link" rel="bookmark"
                 title="Permalink to 博客改版">
-                2022-04-16  博客改版</a>
-        </h3>
+                博客改版</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2022-02-18-thinking-summary_grade_5_1.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2022-02-18</span>
+            <a href="https://zqw.ink/2022-02-18-thinking-summary_grade_5_1.html" class="post-link" rel="bookmark"
                 title="Permalink to 研五上学期总结">
-                2022-02-18  研五上学期总结</a>
-        </h3>
+                研五上学期总结</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2021-09-07-thinking-summary_grade_4_2.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2021-09-07</span>
+            <a href="https://zqw.ink/2021-09-07-thinking-summary_grade_4_2.html" class="post-link" rel="bookmark"
                 title="Permalink to 研四下学期总结">
-                2021-09-07  研四下学期总结</a>
-        </h3>
+                研四下学期总结</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2021-08-31-thinking-tsingtao.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2021-08-31</span>
+            <a href="https://zqw.ink/2021-08-31-thinking-tsingtao.html" class="post-link" rel="bookmark"
                 title="Permalink to 青岛青年冷原子">
-                2021-08-31  青岛青年冷原子</a>
-        </h3>
+                青岛青年冷原子</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2021-07-24-thinking-ipad_sereen.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2021-07-24</span>
+            <a href="https://zqw.ink/2021-07-24-thinking-ipad_sereen.html" class="post-link" rel="bookmark"
                 title="Permalink to ipad2018 换屏">
-                2021-07-24  ipad2018 换屏</a>
-        </h3>
+                ipad2018 换屏</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2021-06-15-thinking-no_summer.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2021-06-15</span>
+            <a href="https://zqw.ink/2021-06-15-thinking-no_summer.html" class="post-link" rel="bookmark"
                 title="Permalink to 从来没有一个安宁的夏天">
-                2021-06-15  从来没有一个安宁的夏天</a>
-        </h3>
+                从来没有一个安宁的夏天</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2021-03-13-thinking-2nd_rubiks_cube.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2021-03-13</span>
+            <a href="https://zqw.ink/2021-03-13-thinking-2nd_rubiks_cube.html" class="post-link" rel="bookmark"
                 title="Permalink to Second Order Rubik's Cube Fun">
-                2021-03-13  Second Order Rubik's Cube Fun</a>
-        </h3>
+                Second Order Rubik's Cube Fun</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2021-02-28-thinking-summary_grade_4_1.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2021-02-28</span>
+            <a href="https://zqw.ink/2021-02-28-thinking-summary_grade_4_1.html" class="post-link" rel="bookmark"
                 title="Permalink to 研四上学期总结">
-                2021-02-28  研四上学期总结</a>
-        </h3>
+                研四上学期总结</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2020-09-09-thinking-iamback.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2020-09-09</span>
+            <a href="https://zqw.ink/2020-09-09-thinking-iamback.html" class="post-link" rel="bookmark"
                 title="Permalink to I am back!">
-                2020-09-09  I am back!</a>
-        </h3>
+                I am back!</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2020-09-07-thinking-summary_grade_3_2.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2020-09-07</span>
+            <a href="https://zqw.ink/2020-09-07-thinking-summary_grade_3_2.html" class="post-link" rel="bookmark"
                 title="Permalink to 研三下学期总结">
-                2020-09-07  研三下学期总结</a>
-        </h3>
+                研三下学期总结</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2020-01-27-thinking-summary_grade_3_1.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2020-01-27</span>
+            <a href="https://zqw.ink/2020-01-27-thinking-summary_grade_3_1.html" class="post-link" rel="bookmark"
                 title="Permalink to 研三上学期总结">
-                2020-01-27  研三上学期总结</a>
-        </h3>
+                研三上学期总结</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2019-10-27-thinking-347homework.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2019-10-27</span>
+            <a href="https://zqw.ink/2019-10-27-thinking-347homework.html" class="post-link" rel="bookmark"
                 title="Permalink to 347 第一次作业">
-                2019-10-27  347 第一次作业</a>
-        </h3>
+                347 第一次作业</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2019-10-08-thinking-poetry.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2019-10-08</span>
+            <a href="https://zqw.ink/2019-10-08-thinking-poetry.html" class="post-link" rel="bookmark"
                 title="Permalink to 诗句">
-                2019-10-08  诗句</a>
-        </h3>
+                诗句</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2019-08-01-thinking-xian.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2019-08-01</span>
+            <a href="https://zqw.ink/2019-08-01-thinking-xian.html" class="post-link" rel="bookmark"
                 title="Permalink to 西安青年冷原子">
-                2019-08-01  西安青年冷原子</a>
-        </h3>
+                西安青年冷原子</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2019-02-28-thinking-fo-xi.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2019-02-28</span>
+            <a href="https://zqw.ink/2019-02-28-thinking-fo-xi.html" class="post-link" rel="bookmark"
                 title="Permalink to 佛系">
-                2019-02-28  佛系</a>
-        </h3>
+                佛系</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2019-01-12-thinking-ju-zi.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2019-01-12</span>
+            <a href="https://zqw.ink/2019-01-12-thinking-ju-zi.html" class="post-link" rel="bookmark"
                 title="Permalink to 句子">
-                2019-01-12  句子</a>
-        </h3>
+                句子</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2018-12-26-thinking-an-hao.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2018-12-26</span>
+            <a href="https://zqw.ink/2018-12-26-thinking-an-hao.html" class="post-link" rel="bookmark"
                 title="Permalink to 暗号">
-                2018-12-26  暗号</a>
-        </h3>
+                暗号</a>
+        </h2>
 
 
-        <h3>
-            <a href="https://zqw.ink/2018-09-21-thinking-goldsteinde-li-lun-li-xue-shu.html" class='post-link' rel="bookmark"
+        <h2 class="post-title">
+            <span class="post-date">2018-09-21</span>
+            <a href="https://zqw.ink/2018-09-21-thinking-goldsteinde-li-lun-li-xue-shu.html" class="post-link" rel="bookmark"
                 title="Permalink to Goldstein的理论力学书">
-                2018-09-21  Goldstein的理论力学书</a>
-        </h3>
+                Goldstein的理论力学书</a>
+        </h2>
 
 </section>
 
 
-    </main>
-    <footer>© 2018 - 2025 ZQW</footer>
-  </div>
+  </main>
+  <footer role="contentinfo">
+    <p>Copyright &copy; 2018 - 2025 ZQW</p>
+  </footer>
+  <script>
+  (function() {
+    const key = 'theme';
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const saved = localStorage.getItem(key);
+    const init = saved ? saved : 'system';
+    const effective = init === 'system' ? (prefersDark ? 'dark' : 'light') : init;
+    document.documentElement.setAttribute('data-theme', effective);
+    updateThemeButton(effective);
+
+    document.getElementById('theme-toggle')?.addEventListener('click', function () {
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem(key, next);
+      updateThemeButton(next);
+    });
+
+    function updateThemeButton(theme) {
+      const btn = document.getElementById('theme-toggle');
+      if (btn) {
+        btn.setAttribute('aria-label', theme === 'dark' ? '切换到浅色模式' : '切换到深色模式');
+      }
+    }
+  })();
+  </script>
+  <script>
+  (function() {
+    const blocks = document.querySelectorAll('pre > code');
+    blocks.forEach((code) => {
+      const pre = code.parentElement;
+      if (!pre) return;
+
+      if (!pre.dataset.lang) {
+        const cls = Array.from(code.classList);
+        const langClass = cls.find((name) => name.startsWith('language-') || name.startsWith('lang-'));
+        if (langClass) {
+          const raw = langClass.replace(/^language-/, '').replace(/^lang-/, '');
+          pre.dataset.lang = raw.replace(/_/g, ' ').toUpperCase();
+        }
+      }
+
+      if (pre.querySelector('.copy-btn')) return;
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'copy-btn';
+      btn.setAttribute('aria-label', '复制代码');
+      btn.textContent = 'Copy';
+      btn.addEventListener('click', async function () {
+        try {
+          await navigator.clipboard.writeText(code.innerText);
+          btn.textContent = 'Copied';
+        } catch (err) {
+          const range = document.createRange();
+          range.selectNodeContents(code);
+          const selection = window.getSelection();
+          selection.removeAllRanges();
+          selection.addRange(range);
+          try {
+            document.execCommand('copy');
+            btn.textContent = 'Copied';
+          } finally {
+            selection.removeAllRanges();
+          }
+        }
+        setTimeout(() => {
+          btn.textContent = 'Copy';
+        }, 1500);
+      });
+      pre.appendChild(btn);
+    });
+  })();
+  </script>
 </body>
 
 </html>
