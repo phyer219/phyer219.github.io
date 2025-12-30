@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% block title %}{{ SITENAME|striptags }} - Homepage{% endblock %}
 {% block content %}
 {% set about_page = pages | selectattr('slug', 'equalto', 'home') | first %}
 
