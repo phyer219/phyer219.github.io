@@ -13,6 +13,15 @@
     href="https://zqw.ink/feeds/blog.atom.xml"
     type="application/atom+xml" rel="alternate" title="从冰上的水 Categories Atom Feed" />
   <link rel="stylesheet" type="text/css" href="https://zqw.ink/theme/css/style.css" />
+  <!-- SEO: site-level structured data (WebSite) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "从冰上的水",
+    "url": "https://zqw.ink/"
+  }
+  </script>
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,12 +81,32 @@
 
 
 
+  <!-- SEO: page description for search results -->
+    <meta name="description" content="办个事情还真是麻烦！还得跑出去找打印店。 行人稀疏，崭新的大马路，路面很干净。街边也大多是树，要么就是小区围墙。 风景 …" />
 
     <meta name="tags" content="小胖子" />
     <meta name="tags" content="打印员" />
     <meta name="tags" content="电脑" />
     <meta name="tags" content="故事" />
     <meta name="tags" content="文学青年" />
+
+  <!-- SEO: structured data for articles (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "小胖子打印员",
+    "datePublished": "2019-09-14T00:00:00+08:00",
+    "author": {
+      "@type": "Person",
+      "name": "ZQW"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://zqw.ink/2019-09-14-story-printingboy.html"
+    }
+  }
+  </script>
 
 </head>
 

@@ -13,6 +13,15 @@
     href="https://zqw.ink/feeds/ruan-jian-shi-yong.atom.xml"
     type="application/atom+xml" rel="alternate" title="从冰上的水 Categories Atom Feed" />
   <link rel="stylesheet" type="text/css" href="https://zqw.ink/theme/css/style.css" />
+  <!-- SEO: site-level structured data (WebSite) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "从冰上的水",
+    "url": "https://zqw.ink/"
+  }
+  </script>
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,9 +81,29 @@
 
 
 
+  <!-- SEO: page description for search results -->
+    <meta name="description" content="修改配色 打开Emacs的配置文件。配置文件在~/.emacs。增加： (set-background-color "black") ;; 使用黑色背景 (set-foreground-color "white") ;; 使用白色前景 (set-face-foreground 'region "green")..." />
 
     <meta name="tags" content="Emacs" />
     <meta name="tags" content="快捷键" />
+
+  <!-- SEO: structured data for articles (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Emacs使用笔记",
+    "datePublished": "2018-09-07T00:00:00+08:00",
+    "author": {
+      "@type": "Person",
+      "name": "ZQW"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://zqw.ink/2018-09-07-coding-emacs_note.html"
+    }
+  }
+  </script>
 
 </head>
 

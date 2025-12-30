@@ -13,6 +13,15 @@
     href="https://zqw.ink/feeds/ruan-jian-shi-yong.atom.xml"
     type="application/atom+xml" rel="alternate" title="从冰上的水 Categories Atom Feed" />
   <link rel="stylesheet" type="text/css" href="https://zqw.ink/theme/css/style.css" />
+  <!-- SEO: site-level structured data (WebSite) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "从冰上的水",
+    "url": "https://zqw.ink/"
+  }
+  </script>
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,8 +81,28 @@
 
 
 
+  <!-- SEO: page description for search results -->
+    <meta name="description" content="示例 一个简单的示例. 比如写了一个名为 saudade 的包. 目录结构为(用 tree 生成, 不错的程 序, 之前没用过) . ├── demo │ └── __init__.py ├── saudade │ ├── coding_func.py │ ├── __init__.py │ └──..." />
 
     <meta name="tags" content="python" />
+
+  <!-- SEO: structured data for articles (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "如何将 python 程序打包成一个 package",
+    "datePublished": "2021-01-13T00:00:00+08:00",
+    "author": {
+      "@type": "Person",
+      "name": "ZQW"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://zqw.ink/2021-01-13-coding-setup_tools.html"
+    }
+  }
+  </script>
 
 </head>
 

@@ -13,6 +13,15 @@
     href="https://zqw.ink/feeds/blog.atom.xml"
     type="application/atom+xml" rel="alternate" title="从冰上的水 Categories Atom Feed" />
   <link rel="stylesheet" type="text/css" href="https://zqw.ink/theme/css/style.css" />
+  <!-- SEO: site-level structured data (WebSite) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "从冰上的水",
+    "url": "https://zqw.ink/"
+  }
+  </script>
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,6 +81,8 @@
 
 
 
+  <!-- SEO: page description for search results -->
+    <meta name="description" content="本特别篇为本人日记本原文，语法错误及错别字均未改正，蓝色部分为本人编辑里所添，黑色部分为原文。 作者记于2010年8月10日。 2007年11月19日 星 …" />
 
     <meta name="tags" content="初中" />
     <meta name="tags" content="初中回忆录" />
@@ -79,6 +90,24 @@
     <meta name="tags" content="友情" />
     <meta name="tags" content="日记" />
     <meta name="tags" content="少年" />
+
+  <!-- SEO: structured data for articles (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "初中回忆录——特别篇：日记精选（一）",
+    "datePublished": "2010-08-10T00:00:00+08:00",
+    "author": {
+      "@type": "Person",
+      "name": "ZQW"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://zqw.ink/2010-08-10-blog-mid_school_memory_diary.html"
+    }
+  }
+  </script>
 
 </head>
 

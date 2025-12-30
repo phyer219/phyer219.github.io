@@ -13,6 +13,15 @@
     href="https://zqw.ink/feeds/ruan-jian-shi-yong.atom.xml"
     type="application/atom+xml" rel="alternate" title="从冰上的水 Categories Atom Feed" />
   <link rel="stylesheet" type="text/css" href="https://zqw.ink/theme/css/style.css" />
+  <!-- SEO: site-level structured data (WebSite) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "从冰上的水",
+    "url": "https://zqw.ink/"
+  }
+  </script>
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,9 +81,29 @@
 
 
 
+  <!-- SEO: page description for search results -->
+    <meta name="description" content="符号说明 M : Mate 键 S : Shift 键 C : Ctrl 键 视图优化 使列表有缩进: M-x org-indent-mode 插入代码 行间代码(org9.2 更新后, 默认以下方法不可行, 新方法 …" />
 
     <meta name="tags" content="emacs" />
     <meta name="tags" content="org-mode" />
+
+  <!-- SEO: structured data for articles (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Hello org-mode",
+    "datePublished": "2018-10-18T00:00:00+08:00",
+    "author": {
+      "@type": "Person",
+      "name": "ZQW"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://zqw.ink/2018-10-18-coding-hello-org-mode.html"
+    }
+  }
+  </script>
 
 </head>
 

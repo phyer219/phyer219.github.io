@@ -13,6 +13,15 @@
     href="https://zqw.ink/feeds/ruan-jian-shi-yong.atom.xml"
     type="application/atom+xml" rel="alternate" title="从冰上的水 Categories Atom Feed" />
   <link rel="stylesheet" type="text/css" href="https://zqw.ink/theme/css/style.css" />
+  <!-- SEO: site-level structured data (WebSite) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "从冰上的水",
+    "url": "https://zqw.ink/"
+  }
+  </script>
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,9 +81,29 @@
 
 
 
+  <!-- SEO: page description for search results -->
+    <meta name="description" content="结合近几年的经验，把matplotlib作图常用的脚本集合在此。这包含了之前一些关于matplotlib作图的博文。 作图风格 from matplotlib import rc def prettify_plot(): """ change the plot …" />
 
     <meta name="tags" content="python" />
     <meta name="tags" content="matplotlib" />
+
+  <!-- SEO: structured data for articles (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "matplotlib 科研作图总结",
+    "datePublished": "2023-10-12T00:00:00+08:00",
+    "author": {
+      "@type": "Person",
+      "name": "ZQW"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://zqw.ink/2023-10-12-coding-matplotlib.html"
+    }
+  }
+  </script>
 
 </head>
 

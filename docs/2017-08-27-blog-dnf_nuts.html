@@ -13,6 +13,15 @@
     href="https://zqw.ink/feeds/blog.atom.xml"
     type="application/atom+xml" rel="alternate" title="从冰上的水 Categories Atom Feed" />
   <link rel="stylesheet" type="text/css" href="https://zqw.ink/theme/css/style.css" />
+  <!-- SEO: site-level structured data (WebSite) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "从冰上的水",
+    "url": "https://zqw.ink/"
+  }
+  </script>
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,6 +81,8 @@
 
 
 
+  <!-- SEO: page description for search results -->
+    <meta name="description" content="从25号这几天天天拔果子，怪累啊！晚上玩DNF，直到今天晚上才又整理真题。题目除了2011年的都打完了。" />
 
     <meta name="tags" content="夏天" />
     <meta name="tags" content="拔果子" />
@@ -80,6 +91,24 @@
     <meta name="tags" content="考研" />
     <meta name="tags" content="假期" />
     <meta name="tags" content="日记" />
+
+  <!-- SEO: structured data for articles (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "拔果子，打 DNF，写考研真题",
+    "datePublished": "2017-08-27T00:00:00+08:00",
+    "author": {
+      "@type": "Person",
+      "name": "ZQW"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://zqw.ink/2017-08-27-blog-dnf_nuts.html"
+    }
+  }
+  </script>
 
 </head>
 

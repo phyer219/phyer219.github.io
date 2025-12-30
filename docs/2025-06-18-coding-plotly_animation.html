@@ -13,6 +13,15 @@
     href="https://zqw.ink/feeds/coding.atom.xml"
     type="application/atom+xml" rel="alternate" title="从冰上的水 Categories Atom Feed" />
   <link rel="stylesheet" type="text/css" href="https://zqw.ink/theme/css/style.css" />
+  <!-- SEO: site-level structured data (WebSite) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "从冰上的水",
+    "url": "https://zqw.ink/"
+  }
+  </script>
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,9 +81,29 @@
 
 
 
+  <!-- SEO: page description for search results -->
+    <meta name="description" content="基础版本 import plotly.graph_objects as go import numpy as np x = np.linspace(0, 2*np.pi, 50) t = np.linspace(0, 2*np.pi, 500) yt = [np.sin(x + ti) for ti in t]..." />
 
     <meta name="tags" content="plotly" />
     <meta name="tags" content="python" />
+
+  <!-- SEO: structured data for articles (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Plotly 绘制动图",
+    "datePublished": "2025-06-18T00:00:00+08:00",
+    "author": {
+      "@type": "Person",
+      "name": "ZQW"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://zqw.ink/2025-06-18-coding-plotly_animation.html"
+    }
+  }
+  </script>
 
 </head>
 

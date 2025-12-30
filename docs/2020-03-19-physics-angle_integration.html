@@ -13,6 +13,15 @@
     href="https://zqw.ink/feeds/zhuan-ye-bi-ji.atom.xml"
     type="application/atom+xml" rel="alternate" title="从冰上的水 Categories Atom Feed" />
   <link rel="stylesheet" type="text/css" href="https://zqw.ink/theme/css/style.css" />
+  <!-- SEO: site-level structured data (WebSite) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "从冰上的水",
+    "url": "https://zqw.ink/"
+  }
+  </script>
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,9 +81,29 @@
 
 
 
+  <!-- SEO: page description for search results -->
+    <meta name="description" content="问题积分 $$ \begin{align} I(\Omega) =& \frac{1}{2\pi}\int_0^{\infty}\mathrm{d}^3\vec{q}\cdot \mathrm{Im}..." />
 
     <meta name="tags" content="积分" />
     <meta name="tags" content="数值计算" />
+
+  <!-- SEO: structured data for articles (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "数值积分遇到的一个坑",
+    "datePublished": "2020-03-19T00:00:00+08:00",
+    "author": {
+      "@type": "Person",
+      "name": "ZQW"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://zqw.ink/2020-03-19-physics-angle_integration.html"
+    }
+  }
+  </script>
 
 </head>
 

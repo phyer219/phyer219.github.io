@@ -13,6 +13,15 @@
     href="https://zqw.ink/feeds/coding.atom.xml"
     type="application/atom+xml" rel="alternate" title="从冰上的水 Categories Atom Feed" />
   <link rel="stylesheet" type="text/css" href="https://zqw.ink/theme/css/style.css" />
+  <!-- SEO: site-level structured data (WebSite) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "从冰上的水",
+    "url": "https://zqw.ink/"
+  }
+  </script>
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,8 +81,28 @@
 
 
 
+  <!-- SEO: page description for search results -->
+    <meta name="description" content="博客文件名：yyyy-mm-dd-category-blog_slug.md 日期（yyyy-mm-dd） 分类（category）：一篇博客只有一个分类，且为英文，全部小写 Blog slug（blog_slug）:一般全部小写，用下划线连接。如果有些 …" />
 
     <meta name="tags" content="style guide" />
+
+  <!-- SEO: structured data for articles (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "个人博客风格指南（备忘）",
+    "datePublished": "2025-12-30T00:00:00+08:00",
+    "author": {
+      "@type": "Person",
+      "name": "ZQW"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://zqw.ink/2025-12-30-coding-style_guide.html"
+    }
+  }
+  </script>
 
 </head>
 

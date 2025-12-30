@@ -13,6 +13,15 @@
     href="https://zqw.ink/feeds/ruan-jian-shi-yong.atom.xml"
     type="application/atom+xml" rel="alternate" title="从冰上的水 Categories Atom Feed" />
   <link rel="stylesheet" type="text/css" href="https://zqw.ink/theme/css/style.css" />
+  <!-- SEO: site-level structured data (WebSite) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "从冰上的水",
+    "url": "https://zqw.ink/"
+  }
+  </script>
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,12 +81,32 @@
 
 
 
+  <!-- SEO: page description for search results -->
+    <meta name="description" content="起因于昨天下午. 在科研课题久久没有进展之后, 突然有了一些想法. 遂写程序. 在寒假配置的 Emacs 个人新版配置终于有了用 …" />
 
     <meta name="tags" content="emacs" />
     <meta name="tags" content="lsp" />
     <meta name="tags" content="pyright" />
     <meta name="tags" content="flycheck" />
     <meta name="tags" content="flake8" />
+
+  <!-- SEO: structured data for articles (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "记一次折腾上头经历: lsp-pyright vs. flycheck & flake8",
+    "datePublished": "2021-03-19T00:00:00+08:00",
+    "author": {
+      "@type": "Person",
+      "name": "ZQW"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://zqw.ink/2021-03-19-coding-lsp_flycheck.html"
+    }
+  }
+  </script>
 
 </head>
 

@@ -13,6 +13,15 @@
     href="https://zqw.ink/feeds/blog.atom.xml"
     type="application/atom+xml" rel="alternate" title="从冰上的水 Categories Atom Feed" />
   <link rel="stylesheet" type="text/css" href="https://zqw.ink/theme/css/style.css" />
+  <!-- SEO: site-level structured data (WebSite) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "从冰上的水",
+    "url": "https://zqw.ink/"
+  }
+  </script>
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,6 +81,8 @@
 
 
 
+  <!-- SEO: page description for search results -->
+    <meta name="description" content="今天，我一大早就起来了，吃完早饭，就到好友于海龙家。 我骑着自行车走在雾茫茫的路上，我捎了点东西，于是这抄小路，小路 …" />
 
     <meta name="tags" content="小学" />
     <meta name="tags" content="少年" />
@@ -79,6 +90,24 @@
     <meta name="tags" content="乒乓球" />
     <meta name="tags" content="纸质资料电子化" />
     <meta name="tags" content="日记" />
+
+  <!-- SEO: structured data for articles (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "星期六 天气雾转晴",
+    "datePublished": "2007-09-15T00:00:00+08:00",
+    "author": {
+      "@type": "Person",
+      "name": "ZQW"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://zqw.ink/2007-09-15-blog-yu_memory.html"
+    }
+  }
+  </script>
 
 </head>
 

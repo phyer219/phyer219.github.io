@@ -13,6 +13,15 @@
     href="https://zqw.ink/feeds/ruan-jian-shi-yong.atom.xml"
     type="application/atom+xml" rel="alternate" title="从冰上的水 Categories Atom Feed" />
   <link rel="stylesheet" type="text/css" href="https://zqw.ink/theme/css/style.css" />
+  <!-- SEO: site-level structured data (WebSite) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "从冰上的水",
+    "url": "https://zqw.ink/"
+  }
+  </script>
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,11 +81,31 @@
 
 
 
+  <!-- SEO: page description for search results -->
+    <meta name="description" content="Some examples 1D Real $$\begin{align} \frac{\mathrm{d}}{\mathrm{d}t}y(t) = 2 t y(t) \end{align}$$ exact solution is $$\begin{align} y(t) = e^{t^2}y(0)..." />
 
     <meta name="tags" content="python" />
     <meta name="tags" content="ode" />
     <meta name="tags" content="Rabi" />
     <meta name="tags" content="Van der Pol oscillator" />
+
+  <!-- SEO: structured data for articles (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "scipy 数值求解微分方程, 方程组, 复微分方程组",
+    "datePublished": "2021-12-09T00:00:00+08:00",
+    "author": {
+      "@type": "Person",
+      "name": "ZQW"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://zqw.ink/2021-12-09-coding-py_ode.html"
+    }
+  }
+  </script>
 
 </head>
 
