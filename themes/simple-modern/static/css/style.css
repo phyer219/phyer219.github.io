@@ -504,6 +504,6 @@ blockquote{
     display: flex;
     flex-direction: row;
     margin: 10px;
-    color: black;
+    /* color: black; */
     flex-flow: wrap;
 }
