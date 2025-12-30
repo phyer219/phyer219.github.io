@@ -3,7 +3,6 @@ title: 个人数据管理策略与感想
 date: 2025-12-28
 category: blog
 tags: [immich, zotero]
-slug: data_manage_backup
 ---
 
 有时引入数据库会使数据看起来很漂亮，但如无必要，应尽量避免引入数据库。

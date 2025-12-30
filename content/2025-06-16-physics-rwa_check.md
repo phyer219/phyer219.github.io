@@ -5,7 +5,6 @@ categories: physics
 tags:
   - 'rotating wave approximation'
   - ploly
-slug: rwa_check
 ---
 
 ```python

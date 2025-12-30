@@ -5,7 +5,6 @@ category: coding
 tags:
   - SSL
   - certbot
-slug: certbot
 ---
 
 ## SSL加密

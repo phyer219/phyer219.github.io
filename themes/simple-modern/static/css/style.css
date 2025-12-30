@@ -473,6 +473,7 @@ blockquote{
 
 .markdown-body a {
   color: var(--link);
+  text-decoration: underline;
   text-decoration-color: var(--link);
 }
 

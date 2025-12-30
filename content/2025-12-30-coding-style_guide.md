@@ -4,7 +4,6 @@ date: 2025-12-30
 category: coding
 tags:
   - 'style guide'
-slug: style_guide
 ---
 
 ## 博客文件名：`yyyy-mm-dd-category-blog_slug.md`
@@ -26,7 +25,6 @@ tags:
   - 'first tag'
   - 'second tag'
   - tag3
-slug: blog_title
 ---
 ```
 
@@ -40,11 +38,6 @@ slug: blog_title
   - 用空格连接，不用下划线。如果有空格则加单引号引起来，没有空格不必加单引号。
   - 一般全部小写，如果有些词习惯大小，则可大写。
   - 一些形成系列的博客，可以用同一个 tag 组织，如“总结”系列。
-- slug：
-  - 与文件名中的一致。
-  - 一般取 title 的英文意译。
-  - 用下划线连接。
-  - 一般全部小写，如果有些词习惯大小，则可大写。
 
 ## 正文内容
 

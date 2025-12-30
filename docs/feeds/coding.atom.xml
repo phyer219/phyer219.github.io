@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水 - coding</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/coding.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2025-12-30T00:00:00+08:00</updated><entry><title>个人博客风格指南（备忘）</title><link href="https://zqw.ink/style_guide.html" rel="alternate"/><published>2025-12-30T00:00:00+08:00</published><updated>2025-12-30T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-12-30:/style_guide.html</id><summary type="html">&lt;h2&gt;博客文件名：&lt;code&gt;yyyy-mm-dd-category-blog_slug.md&lt;/code&gt;&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水 - coding</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/coding.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2025-12-30T00:00:00+08:00</updated><entry><title>个人博客风格指南（备忘）</title><link href="https://zqw.ink/2025-12-30-coding-style_guide.html" rel="alternate"/><published>2025-12-30T00:00:00+08:00</published><updated>2025-12-30T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-12-30:/2025-12-30-coding-style_guide.html</id><summary type="html">&lt;h2&gt;博客文件名：&lt;code&gt;yyyy-mm-dd-category-blog_slug.md&lt;/code&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;日期（yyyy-mm-dd）&lt;/li&gt;
 &lt;li&gt;分类（category）：一篇博客只有一个分类，且为英文，全部小写&lt;/li&gt;
@@ -19,7 +19,6 @@ tags:
   - 'first tag'
   - 'second tag'
   - tag3
-slug: blog_title
 ---
 &lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
@@ -35,13 +34,6 @@ slug: blog_title
 &lt;li&gt;一些形成系列的博客，可以用同一个 tag 组织，如“总结”系列。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;slug：&lt;ul&gt;
-&lt;li&gt;与文件名中的一致。&lt;/li&gt;
-&lt;li&gt;一般取 title 的英文意译。&lt;/li&gt;
-&lt;li&gt;用下划线连接。&lt;/li&gt;
-&lt;li&gt;一般全部小写，如果有些词习惯大小，则可大写。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;正文内容&lt;/h2&gt;
 &lt;p&gt;参考 &lt;a href="https://github.com/DavidAnson/markdownlint/tree/v0.40.0?tab=readme-ov-file"&gt;markdownlint&lt;/a&gt;&lt;/p&gt;
@@ -52,7 +44,7 @@ slug: blog_title
 &lt;li&gt;英文或阿拉伯数字与汉字用空格隔开。&lt;/li&gt;
 &lt;li&gt;中文括号中为英文，不加空格。如：风格指南（Style guide）。&lt;/li&gt;
 &lt;li&gt;逗号，句号等后为英文，按英文的习惯，加一个空格。&lt;/li&gt;
-&lt;/ul&gt;</content><category term="coding"/><category term="style guide"/></entry><entry><title>用 certbot 手动获取受信任的 SSL证，并实现对 NextCloud 容器 80 端口的 SSL 访问</title><link href="https://zqw.ink/certbot.html" rel="alternate"/><published>2025-09-14T00:00:00+08:00</published><updated>2025-09-14T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-09-14:/certbot.html</id><summary type="html">&lt;h2&gt;SSL加密&lt;/h2&gt;
+&lt;/ul&gt;</content><category term="coding"/><category term="style guide"/></entry><entry><title>用 certbot 手动获取受信任的 SSL证，并实现对 NextCloud 容器 80 端口的 SSL 访问</title><link href="https://zqw.ink/2025-09-14-coding-certbot.html" rel="alternate"/><published>2025-09-14T00:00:00+08:00</published><updated>2025-09-14T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-09-14:/2025-09-14-coding-certbot.html</id><summary type="html">&lt;h2&gt;SSL加密&lt;/h2&gt;
 &lt;p&gt;在使用自己搭建的服务，如 &lt;code&gt;emby&lt;/code&gt; ,&lt;code&gt;nextcloud&lt;/code&gt;, &lt;code&gt;immich&lt;/code&gt; 时，如果使用域名访问，当没有进行受信任的 SSL 加密时，对应的手机 app 会连不上，提醒，或 …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;SSL加密&lt;/h2&gt;
 &lt;p&gt;在使用自己搭建的服务，如 &lt;code&gt;emby&lt;/code&gt; ,&lt;code&gt;nextcloud&lt;/code&gt;, &lt;code&gt;immich&lt;/code&gt; 时，如果使用域名访问，当没有进行受信任的 SSL 加密时，对应的手机 app 会连不上，提醒，或报错。&lt;/p&gt;
 &lt;p&gt;最简单的方式是用 &lt;code&gt;certbot&lt;/code&gt; 获取一个 90 天期限的 SSL 证书，到期后再更新。此篇博客做一备忘。&lt;/p&gt;

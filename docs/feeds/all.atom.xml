@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/all.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2025-12-30T00:00:00+08:00</updated><entry><title>个人博客风格指南（备忘）</title><link href="https://zqw.ink/style_guide.html" rel="alternate"/><published>2025-12-30T00:00:00+08:00</published><updated>2025-12-30T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-12-30:/style_guide.html</id><summary type="html">&lt;h2&gt;博客文件名：&lt;code&gt;yyyy-mm-dd-category-blog_slug.md&lt;/code&gt;&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/all.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2025-12-30T00:00:00+08:00</updated><entry><title>个人博客风格指南（备忘）</title><link href="https://zqw.ink/2025-12-30-coding-style_guide.html" rel="alternate"/><published>2025-12-30T00:00:00+08:00</published><updated>2025-12-30T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-12-30:/2025-12-30-coding-style_guide.html</id><summary type="html">&lt;h2&gt;博客文件名：&lt;code&gt;yyyy-mm-dd-category-blog_slug.md&lt;/code&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;日期（yyyy-mm-dd）&lt;/li&gt;
 &lt;li&gt;分类（category）：一篇博客只有一个分类，且为英文，全部小写&lt;/li&gt;
@@ -19,7 +19,6 @@ tags:
   - 'first tag'
   - 'second tag'
   - tag3
-slug: blog_title
 ---
 &lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
@@ -35,13 +34,6 @@ slug: blog_title
 &lt;li&gt;一些形成系列的博客，可以用同一个 tag 组织，如“总结”系列。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;slug：&lt;ul&gt;
-&lt;li&gt;与文件名中的一致。&lt;/li&gt;
-&lt;li&gt;一般取 title 的英文意译。&lt;/li&gt;
-&lt;li&gt;用下划线连接。&lt;/li&gt;
-&lt;li&gt;一般全部小写，如果有些词习惯大小，则可大写。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;正文内容&lt;/h2&gt;
 &lt;p&gt;参考 &lt;a href="https://github.com/DavidAnson/markdownlint/tree/v0.40.0?tab=readme-ov-file"&gt;markdownlint&lt;/a&gt;&lt;/p&gt;
@@ -52,7 +44,7 @@ slug: blog_title
 &lt;li&gt;英文或阿拉伯数字与汉字用空格隔开。&lt;/li&gt;
 &lt;li&gt;中文括号中为英文，不加空格。如：风格指南（Style guide）。&lt;/li&gt;
 &lt;li&gt;逗号，句号等后为英文，按英文的习惯，加一个空格。&lt;/li&gt;
-&lt;/ul&gt;</content><category term="coding"/><category term="style guide"/></entry><entry><title>个人数据管理策略与感想</title><link href="https://zqw.ink/data_manage_backup.html" rel="alternate"/><published>2025-12-28T00:00:00+08:00</published><updated>2025-12-28T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-12-28:/data_manage_backup.html</id><summary type="html">&lt;p&gt;有时引入数据库会使数据看起来很漂亮，但如无必要，应尽量避免引入数据库。&lt;/p&gt;
+&lt;/ul&gt;</content><category term="coding"/><category term="style guide"/></entry><entry><title>个人数据管理策略与感想</title><link href="https://zqw.ink/2025-12-28-blog-data_manage_backup.html" rel="alternate"/><published>2025-12-28T00:00:00+08:00</published><updated>2025-12-28T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-12-28:/2025-12-28-blog-data_manage_backup.html</id><summary type="html">&lt;p&gt;有时引入数据库会使数据看起来很漂亮，但如无必要，应尽量避免引入数据库。&lt;/p&gt;
 &lt;h2&gt;照片的确需要数据库&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;照片很多。&lt;/li&gt;
@@ -94,7 +86,7 @@ slug: blog_title
 &lt;p&gt;3-2-1 备份原则指：存储 3 份完整文件，一份原件加上两份拷贝；将文件起码保持在 2 种不同的介质上；将一份拷贝保存在异地。&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</content><category term="blog"/><category term="immich"/><category term="zotero"/></entry><entry><title>用 certbot 手动获取受信任的 SSL证，并实现对 NextCloud 容器 80 端口的 SSL 访问</title><link href="https://zqw.ink/certbot.html" rel="alternate"/><published>2025-09-14T00:00:00+08:00</published><updated>2025-09-14T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-09-14:/certbot.html</id><summary type="html">&lt;h2&gt;SSL加密&lt;/h2&gt;
+&lt;/div&gt;</content><category term="blog"/><category term="immich"/><category term="zotero"/></entry><entry><title>用 certbot 手动获取受信任的 SSL证，并实现对 NextCloud 容器 80 端口的 SSL 访问</title><link href="https://zqw.ink/2025-09-14-coding-certbot.html" rel="alternate"/><published>2025-09-14T00:00:00+08:00</published><updated>2025-09-14T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-09-14:/2025-09-14-coding-certbot.html</id><summary type="html">&lt;h2&gt;SSL加密&lt;/h2&gt;
 &lt;p&gt;在使用自己搭建的服务，如 &lt;code&gt;emby&lt;/code&gt; ,&lt;code&gt;nextcloud&lt;/code&gt;, &lt;code&gt;immich&lt;/code&gt; 时，如果使用域名访问，当没有进行受信任的 SSL 加密时，对应的手机 app 会连不上，提醒，或 …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;SSL加密&lt;/h2&gt;
 &lt;p&gt;在使用自己搭建的服务，如 &lt;code&gt;emby&lt;/code&gt; ,&lt;code&gt;nextcloud&lt;/code&gt;, &lt;code&gt;immich&lt;/code&gt; 时，如果使用域名访问，当没有进行受信任的 SSL 加密时，对应的手机 app 会连不上，提醒，或报错。&lt;/p&gt;
 &lt;p&gt;最简单的方式是用 &lt;code&gt;certbot&lt;/code&gt; 获取一个 90 天期限的 SSL 证书，到期后再更新。此篇博客做一备忘。&lt;/p&gt;
@@ -296,7 +288,7 @@ fig.write_html(file=&amp;quot;pro_ver.html&amp;quot;, include_mathjax='cdn', aut
 &lt;iframe src="2025-06-18-coding-plotly_animation/pro_ver.html" width="100%" height=600&gt;&lt;/iframe&gt;
 
 &lt;h2&gt;参考&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://plotly.com/python/animations/"&gt;Plotly Animations&lt;/a&gt;&lt;/p&gt;</content><category term="coding"/><category term="plotly"/><category term="python"/></entry><entry><title>Rotating Wave Approximation Numerical Check</title><link href="https://zqw.ink/rwa_check.html" rel="alternate"/><published>2025-06-16T00:00:00+08:00</published><updated>2025-06-16T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-06-16:/rwa_check.html</id><summary type="html">&lt;pre&gt;&lt;code class="language-python"&gt;import numpy as np
+&lt;p&gt;&lt;a href="https://plotly.com/python/animations/"&gt;Plotly Animations&lt;/a&gt;&lt;/p&gt;</content><category term="coding"/><category term="plotly"/><category term="python"/></entry><entry><title>Rotating Wave Approximation Numerical Check</title><link href="https://zqw.ink/2025-06-16-physics-rwa_check.html" rel="alternate"/><published>2025-06-16T00:00:00+08:00</published><updated>2025-06-16T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-06-16:/2025-06-16-physics-rwa_check.html</id><summary type="html">&lt;pre&gt;&lt;code class="language-python"&gt;import numpy as np
 import qutip as qtp
 import plotly.graph_objects as go
 import plotly.io as pio
@@ -15877,7 +15869,171 @@ $$\begin{align}
 &lt;p&gt;两个安装好之后, 还要激活模块(这个在安装 virtualbox 时有过一行提示)&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;sudo modprobe vboxdrv
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;之后即可正常使用&lt;/p&gt;</content><category term="软件使用"/><category term="SSD"/><category term="manjaro"/></entry><entry><title>p 波接触相互作用参数的重整化</title><link href="https://zqw.ink/2020-10-29-physics-pwaverenormal.html" rel="alternate"/><published>2020-10-29T00:00:00+08:00</published><updated>2020-10-29T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-10-29:/2020-10-29-physics-pwaverenormal.html</id><summary type="html">
+&lt;p&gt;之后即可正常使用&lt;/p&gt;</content><category term="软件使用"/><category term="SSD"/><category term="manjaro"/></entry><entry><title>跑鞋</title><link href="https://zqw.ink/2020-11-08-blog-shoes.html" rel="alternate"/><published>2020-11-08T00:00:00+08:00</published><updated>2020-11-08T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-11-08:/2020-11-08-blog-shoes.html</id><summary type="html">&lt;h2&gt;主线故事框架&lt;/h2&gt;
+&lt;p&gt;我想要一双跑鞋.&lt;/p&gt;
+&lt;p&gt;我喜欢跑步, 也擅长跑步. 无论短跑还是长跑. 学校每年秋天举办的运动会中, 我总会得冠
+军 …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;主线故事框架&lt;/h2&gt;
+&lt;p&gt;我想要一双跑鞋.&lt;/p&gt;
+&lt;p&gt;我喜欢跑步, 也擅长跑步. 无论短跑还是长跑. 学校每年秋天举办的运动会中, 我总会得冠
+军.&lt;/p&gt;
+&lt;p&gt;除了长跑, 我还喜欢画漫画, 也擅长画漫画. 一个人照着动漫截图画, 还没有遇到相同喜好
+的人.&lt;/p&gt;
+&lt;p&gt;除此之外, 再没有别的喜好, 也没有别的擅长的事情.&lt;/p&gt;
+&lt;p&gt;我小学时的成绩还不错, 初中的成绩也不错. 因此, 我能够继续上高中. 大多数初中同学毕
+业就结束了学生生涯. 或者都没熬到初中毕业就回家了. 去饭店打工. 找个修车师傅当学徒.
+总之就最好有一门手艺, 才能混口饭吃. 还有一些就去小区当保安, 就等着十八岁一到, 想
+办法去当兵, 圆从小的自己的梦想, 当然家里也非常支持.&lt;/p&gt;
+&lt;p&gt;镇上没有高中, 隔周乘坐班车从县实验中学回家, 再回学校.&lt;/p&gt;
+&lt;p&gt;我也不知道为什么上高中, 反正成绩还可以就上了.&lt;/p&gt;
+&lt;p&gt;高一入校, 正赶上校区搬迁. 新校区在县郊一片桃园隔壁, 以前是一块坟地. 操场还没有建
+好. 冬天课间去跑操, 坑坑洼洼, 激起阵阵黄烟. 我们就是帮学校压操场的.&lt;/p&gt;
+&lt;p&gt;新校区光秃秃的, 小树苗刚栽上, 就那么几片叶.&lt;/p&gt;
+&lt;p&gt;高一开学没多久, 就要举行秋季运动会了. 我当然取得了很好的成绩.&lt;/p&gt;
+&lt;p&gt;县体教局的人找上门来. 说好条件不错, 可以去参加运动员选拔, 成为职业运动员. 我太开
+心了. 时间定了, 就在下个月, 10 月 25 号.&lt;/p&gt;
+&lt;p&gt;回到宿舍, 当天晚上久久不能入睡. 激动兴奋.&lt;/p&gt;
+&lt;p&gt;接下来的日子里, 我每天早起, 为选拔而努力着. 就在黄土操场上每天开心地帮学校压路.&lt;/p&gt;
+&lt;p&gt;终于到了选拔那天. 信心满满地去参加. 可是结果却是离入选差了一名. 选拔的老师看了看
+我的鞋, 告诉我, 你天赋非常好, 回去好好练习, 换一双合适的鞋, 明年一定能入选. 看了
+看自己的双脚上的布鞋, 又看了看别人的双脚上跑鞋. 我明白了, 我需要一双跑鞋. 就是之
+前在大集上看到的那种. 大概 50 元一双?&lt;/p&gt;
+&lt;p&gt;今天周一, 这周刚好大修, 回家说一声, 去集上买一双.&lt;/p&gt;
+&lt;p&gt;终于到了回家的日子, 周五下午提前放学赶上了班车, 回家!&lt;/p&gt;
+&lt;p&gt;回到家里, 向爸爸及此事. 可他的答复却是:"跑什么步, 好好上你的学吧!" 总之不给买.
+爸爸说不买, 也就不说什么了. 我据理力争, 最终却还是以失败告终.&lt;/p&gt;
+&lt;p&gt;我也很灰心丧气. 即使如此, 其实我可以找别人借一双, 明年去参赛, 也可以打工买一双.
+总之, 如果我想, 可以有一百种方法, 得到一双跑鞋去参加明年的选拔. 但是, 心中总有个
+东西压着. 如果爸爸不买, 我就不去参加选拔了.&lt;/p&gt;
+&lt;p&gt;从此, 我再也不愿意跑步. 也不愿意参加运动会. 运动会的时候, 我就躲在教室里画画.&lt;/p&gt;
+&lt;p&gt;我也努力学习. 奇怪的是, 总也追赶不上那些成绩优秀的同学. 不仅如此, 还越来越差. 入
+学的时候, 全年级 1200 人, 我的成绩是 150 名, 高一下期末, 我是 600 名. 高二下上期
+末, 是 1000 名, 几乎垫底了. 我失去了继续下去的勇气. 这个名次, 参加高考就是浪费时
+间与报名费. 全校前 50 名才有可能考上一本.&lt;/p&gt;
+&lt;p&gt;我缀学回家了. 却没有找到合适的地方打工. 家里花 1200 元给我买了手机. 我就每天在家
+里的小南屋里打游戏, 每天下午一点起床. 不知道该干什么.&lt;/p&gt;
+&lt;p&gt;有天, 同村的, 妈妈的好话友来我们玩. 恰好爸爸也在家. 她走后, 你看人家的你哥哥, 上
+研究生. 你在这天天打游戏!&lt;/p&gt;
+&lt;p&gt;就在我缀学的同学, 姐姐从日本回来了. 当然是去打工, 出国劳务. 去了三年. 她当初一度
+想要回家, 那里太累了. 可是签了劳务合同, 回不来. 也不是回不来, 只是违约要交好多钱.&lt;/p&gt;
+&lt;p&gt;姐姐回来还带了日元, 还给我们带了礼物. 她在日本的时候, 让我妈给她邮寄各种菜种子.&lt;/p&gt;
+&lt;p&gt;我还是在小南屋里打游戏. 本来应该是高考的日子. 姐姐要跟人定婚了.&lt;/p&gt;
+&lt;p&gt;我想, 我是不是要在小南屋里打游戏来度过这一生.&lt;/p&gt;
+&lt;p&gt;二十多年过去了, 我不再埋怨或者怪罪爸爸妈妈. 他们从小受到的教育, 就是这样. 他们认
+为, 要好好学习考大学, 不要整那些没用的. 他们的时代就是这样, 他们的观念就是这样,
+村里的观念就是这样.&lt;/p&gt;
+&lt;p&gt;我也没有怪罪我自己, 当时怄气, 放弃选拔. 成为职业运动员不见得比现在当程序员好很多.
+但是, 我那几年的青春就在小南屋里度过了. 那最美好的青春!&lt;/p&gt;
+&lt;h2&gt;支线故事&lt;/h2&gt;
+&lt;p&gt;开学第一次上体育课的时候, 站在我前面的女生问我:"你也是桃墟镇的吗?" 她似乎还略微
+带点鼻涕.&lt;/p&gt;
+&lt;p&gt;经过一番交谈, 得知她从小就在县城. 她爸爸那一代就已经考上大学, 是佼佼者.&lt;/p&gt;
+&lt;p&gt;是因为老乡吗?&lt;/p&gt;
+&lt;h2&gt;事件细节: 高一入学后的运动会&lt;/h2&gt;
+&lt;h3&gt;事件细节: 体教局的人找上门&lt;/h3&gt;
+&lt;h4&gt;事件细节: 初次选拔&lt;/h4&gt;
+&lt;h3&gt;事件细节: 与爸爸说跑鞋的事情&lt;/h3&gt;
+&lt;h3&gt;事件细节: 缀学&lt;/h3&gt;</content><category term="blog"/><category term="故事"/><category term="文学青年"/></entry><entry><title>羅生門（らしょうもん）</title><link href="https://zqw.ink/2020-11-07-blog-rashomon.html" rel="alternate"/><published>2020-11-07T00:00:00+08:00</published><updated>2020-11-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-11-07:/2020-11-07-blog-rashomon.html</id><summary type="html">&lt;p&gt;羅生門, 芥川龍之介, 译林出版社, 2005, 林少华译&lt;/p&gt;
+&lt;p&gt;是一篇短篇集.&lt;/p&gt;
+&lt;p&gt;芥川龍之介（あくたがわ　りゅうのすけ）, 1892.3.1 - 1927.7.24 .&lt;/p&gt;
+&lt;h2&gt;罗生门&lt;/h2&gt;
+&lt;p&gt;年 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;羅生門, 芥川龍之介, 译林出版社, 2005, 林少华译&lt;/p&gt;
+&lt;p&gt;是一篇短篇集.&lt;/p&gt;
+&lt;p&gt;芥川龍之介（あくたがわ　りゅうのすけ）, 1892.3.1 - 1927.7.24 .&lt;/p&gt;
+&lt;h2&gt;罗生门&lt;/h2&gt;
+&lt;p&gt;年景惨, 一位仆人被打发出门. 在满是死尸的罗生门前思考是要饿死, 还是成为一名强盗.&lt;/p&gt;
+&lt;p&gt;突然发现一个老太太在拔一个尸体上的头发. 仆人冲上去审问. 经过一番对话后. 仆人做出
+了他的决定.&lt;/p&gt;
+&lt;h2&gt;鼻&lt;/h2&gt;
+&lt;p&gt;禅智内供有一个长长的鼻子, 为此非常苦恼. 终有一日鼻子变短, 去失去了别人的同情. 最
+后又变了回来, 往日如初.&lt;/p&gt;
+&lt;h2&gt;手帕&lt;/h2&gt;
+&lt;p&gt;教授的学生病逝. 学生的母亲来到教授的家中. 母亲的表现却不像有丧子之痛的人. 教授不
+经意间发现, 原来母亲的痛苦都隐藏在了桌下那双拿着手帕的剧烈颤抖的手上, 这让教授联
+想到了武士道.&lt;/p&gt;
+&lt;h2&gt;地狱变&lt;/h2&gt;
+&lt;p&gt;技艺高超, 沉迷绘画, 却又自大自满的画师良秀应老殿下画一幅地狱变. 画师没有见过的东
+西不会画, 请求殿下将一名少女在槟榔车中烈火焚烧. 结果车中的少女却是良秀最疼爱的女
+儿. 最终画成杰作, 良秀也悬梁自缢.&lt;/p&gt;
+&lt;h2&gt;蛛丝&lt;/h2&gt;
+&lt;p&gt;佛祖念地狱中的大盗犍陀多生前怜悯一只蜘蛛的性命, 放下条蛛丝让他从地狱爬出. 犍陀多
+却发现身后有许多罪人也跟着爬来. 最终, 所有人又一同坠回地狱.&lt;/p&gt;
+&lt;h2&gt;橘&lt;/h2&gt;
+&lt;p&gt;烦闷的我在列车上遇到一位令我厌恶的乡下小姑娘. 看到她将几个橘子扔给窗外前来送行的
+弟弟们后, 我暂时忘却了烦闷的心情.&lt;/p&gt;
+&lt;h2&gt;舞会&lt;/h2&gt;
+&lt;p&gt;1886 年, 十七岁的明子小姐在一个舞会上与一位法兰西海军军官邂逅. 1918(32 年后), 已
+经成为 H 老夫人的明子在车上与一位青年小说家提及此事, 原来那位海军军官就是写了 *
+菊花夫人* 的 &lt;a href="https://zh.wikipedia.org/wiki/%E7%9A%AE%E5%9F%83%E7%88%BE%C2%B7%E6%B4%9B%E8%92%82"&gt;Pierre
+Loti&lt;/a&gt;
+. 但夫人坚持说那位海军军官叫朱利安·韦奥(Pierre
+Loti 的原名).&lt;/p&gt;
+&lt;h2&gt;密林中&lt;/h2&gt;
+&lt;p&gt;从六个人的视角讲述一个人死亡的过程&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;樵夫: 描述他在竹林中发现的尸体的情况&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;行脚僧: 目睹死者在死之前与一名女子骑马赶路&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;捕快: 描述他抓到的一名盗贼, 名叫多襄丸. 作恶多端, 疑似凶手.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;老媪: 死者的岳母. 与死者一同骑马赶路的正是死者的妻子. 希望查明真相.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;多襄丸: 承认自己是凶手. 碰上死者夫妻二人, 欲杀男子而夺女人. 诱骗二人至竹林中,
+  将男人捆绑, 当面与女人成事. 事后女人说自己与死者必死一人, 她跟活着的. 此时才杀
+  了男人, 但杀完后女人已经不见.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;女人: 男人玷污了自己后, 从丈夫眼中看到了鄙视的冷光. 之后昏迷. 醒后欲杀夫, 之后
+  自杀. 丈夫同意. 杀夫后数次自杀未遂.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;死者: 妻子被强盗糟蹋后, 又被花言巧语诱骗, 要跟强盗走. 妻子要强盗杀死自己. 强盗
+  却问自己如何处理妻子. 自己从心理上原谅了强盗. 之后在昏迷中自杀.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;矿车&lt;/h2&gt;
+&lt;p&gt;良平八岁时非常憧憬村外修筑铁路的(轨道)矿车. 偷玩一次却被发现. 后来跟着新来的两个
+人推矿车到很远的地方. 天都快黑了才开始回家. 路上的良平焦急并害怕, 到家里天已大黑.
+良平二十六岁时在东京还时常想起小时候的这件事情.&lt;/p&gt;
+&lt;h2&gt;阿富的贞操&lt;/h2&gt;
+&lt;p&gt;马上就要开战. 大家都已经撤离. 阿富被安排回来找夫人非常重视的猫, 却碰见了乞丐新公.
+新公用猫做威胁, 要阿富委身于他. 阿富同意. 但阿富脱光衣服躺在那里里, 新公却说是开
+玩笑的. 二十三年后, 阿富早已成家, 一家人在路上又遇见了新公, 此时的新公在马车上名
+誉满身.&lt;/p&gt;
+&lt;h2&gt;一篇爱情小说&lt;/h2&gt;
+&lt;p&gt;妇女杂志主编邀请保吉为他们写一篇严肃的爱情小说. 保吉与主编讨论了小说的主要情节:
+新婚的外交官夫人误将音乐家对钢琴的爱当成对自己的爱, 爱上了钢琴家. 外交官与夫人因
+工作远离钢琴家, 夫人却对钢琴家念念不忘. 念念不忘的同时, 夫人也有了许多孩子, 身材
+也渐渐发胖, 但沉浸在对钢琴家爱的幻想中幸福地生活.&lt;/p&gt;
+&lt;h2&gt;单相思&lt;/h2&gt;
+&lt;p&gt;在电车上, 我的朋友给我讲述了他在宴会上听阿德, 一个他的朋友迷恋的女招待, 吐露她对
+一个电影演员单相思的故事, 而我的朋友认为她是编造的, 说不定她是对他们当中的某个人
+害单相思.&lt;/p&gt;
+&lt;h2&gt;侏儒警语&lt;/h2&gt;
+&lt;p&gt;占本书 40%, 是像微博一样的小句子.&lt;/p&gt;</content><category term="blog"/><category term="读书笔记"/><category term="羅生門"/><category term="芥川龍之介"/><category term="kindleunlimited"/></entry><entry><title>仿生人会梦见电子门羊吗</title><link href="https://zqw.ink/2020-11-06-blog-do_androids_dream_of_electric_eheep.html" rel="alternate"/><published>2020-11-06T00:00:00+08:00</published><updated>2020-11-06T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-11-06:/2020-11-06-blog-do_androids_dream_of_electric_eheep.html</id><summary type="html">&lt;p&gt;仿生人会梦见电子门羊吗? 译林出版社, 2017, Philip K. Dick, 许东华译.&lt;/p&gt;
+&lt;p&gt;cyberpunk 经典电影作品 &lt;em&gt;Blade Runner(译: 银翼杀手)&lt;/em&gt; 据此改编. 不过, 根据书中译后 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;仿生人会梦见电子门羊吗? 译林出版社, 2017, Philip K. Dick, 许东华译.&lt;/p&gt;
+&lt;p&gt;cyberpunk 经典电影作品 &lt;em&gt;Blade Runner(译: 银翼杀手)&lt;/em&gt; 据此改编. 不过, 根据书中译后
+所言&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Blade Runner&lt;/em&gt; 这个片名其实来自另一部完全不相干的科幻小说.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;取此片名的原因, 只是因为 Blade Runner 这个说法很酷!&lt;/p&gt;
+&lt;p&gt;看完小说, 又看了一遍电影. 几年前看过此电影, 剧情已经忘光, 只觉得几个场景有些熟悉
+而已.&lt;/p&gt;
+&lt;p&gt;电影相对小说, 剧情已经做了相当大的改动.&lt;/p&gt;
+&lt;p&gt;小说写于 1968 年, 故事发生于 1992 年的旧金山.&lt;/p&gt;
+&lt;p&gt;由于战争的破坏, 地球大气中充满放射
+性尘埃, 已经不适合人类生存, 大部分人都已经移民到火星. 少量留在地球上的人, 许多都
+由于恶劣的生存环境而患上各种疾病, 大脑智力受损.&lt;/p&gt;
+&lt;p&gt;为了在火星开拓生存环境, 制造仿生人的公司应运而生. 仿生人(Androids) 与人类的肉体
+无异, 脑芯片也已经相当高级, 只有通过做骨髓鉴定才能真正确定是仿生人还是真正的人类.&lt;/p&gt;
+&lt;p&gt;有一些仿生人逃到了地球伪装成人类. 因此警局便雇佣赏金猎人追杀这些仿生人. 男主里克
+便是这样一位赏金猎人.&lt;/p&gt;
+&lt;p&gt;这个时代活着的生物已经少见. 而每个人都要养宠物. 里克起初的宠物是一只电子羊......&lt;/p&gt;
+&lt;p&gt;电影没有了养宠物的设定, 也没有默瑟主义.&lt;/p&gt;</content><category term="blog"/><category term="读书笔记"/><category term="blade runner"/><category term="Philip K. Dick"/><category term="kindleunlimited"/></entry><entry><title>p 波接触相互作用参数的重整化</title><link href="https://zqw.ink/2020-10-29-physics-pwaverenormal.html" rel="alternate"/><published>2020-10-29T00:00:00+08:00</published><updated>2020-10-29T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-10-29:/2020-10-29-physics-pwaverenormal.html</id><summary type="html">
 &lt;h2&gt;p-Wave Scattering Amplitude &lt;/h2&gt;
 
 &lt;p&gt;由 Taylor 书 (6.14) 可得 $l$ 分波的散射振幅&lt;/p&gt;
@@ -17398,297 +17554,4 @@ plt.show()&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;I am back!&lt;/p&gt;
 
 &lt;p&gt;&lt;p&gt;&lt;img src='./2020-09-09-thinking-iamback/kendama.jpg' alt='figalt' max-width:100%&gt;&lt;p&gt;&lt;/p&gt;
-</content><category term="想说"/></entry><entry><title>研三下学期总结</title><link href="https://zqw.ink/2020-09-07-thinking-summary_grade_3_2.html" rel="alternate"/><published>2020-09-07T00:00:00+08:00</published><updated>2020-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-09-07:/2020-09-07-thinking-summary_grade_3_2.html</id><summary type="html">
-&lt;h2&gt;序&lt;/h2&gt;
-
-&lt;p&gt;在家里过了一个学期. 现在虽然开学了, 但是还是去不了北园.&lt;/p&gt;
-
-&lt;h2&gt;课题&lt;/h2&gt;
-
-&lt;p&gt;完成了主要的数值计算部分(在忽略自能实部的情况 …&lt;/p&gt;</summary><content type="html">
-&lt;h2&gt;序&lt;/h2&gt;
-
-&lt;p&gt;在家里过了一个学期. 现在虽然开学了, 但是还是去不了北园.&lt;/p&gt;
-
-&lt;h2&gt;课题&lt;/h2&gt;
-
-&lt;p&gt;完成了主要的数值计算部分(在忽略自能实部的情况下). 用 python 写了一个比较规范的程
-序. Fortran 也写了. 两个程序的结果一致. 写的过程中遇到一些麻烦, 但都在老师的帮助
-下解决了.&lt;/p&gt;
-
-&lt;p&gt;完善了 note. 从 rf 谱的定义出发, 推出了它与格林函数的关系. 计算格林函数的部分,
-准确地对应到了费曼规则.&lt;/p&gt;
-
-&lt;p&gt;接下来的任务是推导 d 波和 p 波的分子格林函数, 以及验证粒子数分布的 tail .&lt;/p&gt;
-
-&lt;h2&gt;读书&lt;/h2&gt;
-
-&lt;p&gt;读书会读了量子光学. 毕竟在家读的, 书也写得比较简洁. 我的收获可以忽略.&lt;/p&gt;
-
-&lt;p&gt;Zee 的群论书基本算是过完一遍了. 挑了会用到的部分仔细看了. 如果以后再用到某些部分,
-再回去仔细推导即可.&lt;/p&gt;
-
-&lt;p&gt;Weinberg 的书看了第二章 Poincare 代数的部分, 终于知道了如何用群论的知识推导出标
-准模型的各种粒子是一个什么思路. 照这个进度, 年底是不可能看完了. 不过近期也不打算
-继续看了. &lt;/p&gt;
-
-&lt;p&gt;暑假(话说由于疫情, 貌似原本应该放假的, 但是也借助现代科技的力量而进行线上讨论,
-就没有放假了...)开始的 Simons 的书, 仔细地看完了第二章, 前瞻性好浏览到第四章.&lt;/p&gt;
-
-&lt;p&gt;还做了光学助教. 也就是说, 把上课的作业都跟着做了一遍, 算上对本科没有好好学的一种
-弥补吧.&lt;/p&gt;
-
-&lt;h2&gt;业余&lt;/h2&gt;
-
-&lt;p&gt;毕竟在家也没法成天学习, 于是开发各种兴趣爱好. 不仅有些付储了实践, 更多的都放在了
-B 站的吃灰收藏夹里了. 同时貌似我也多了一个兴趣爱好: 看各种教学视频. 即使没有去实
-践也很有意思. 比如爵士鼓的教学, 我买不起也没地方放, 但是看了一些入门视频知道了一
-套鼓组有什么鼓, 有哪些比较基本的节奏. Bass 我估计也不会去弹, 但看教学视频了解了
-自己经常听到但很陌生的东西.&lt;/p&gt;
-
-&lt;p&gt;寒假地时候, 学了一把 Django, 很爽! 做好了诗词网站放到了 saba.fun 上面. 但是由于
-要线上开学, 此项目也迫中止. 学习 Django 有一个对 "正业" 的好处, 那就是在这里怎么
-组织程序, 写标准的程序, 用到了写课题的程序中.&lt;/p&gt;
-
-&lt;p&gt;卡林巴琴. 用它弹了带伴奏的小星星. 原来钢琴就是这么给配的伴奏. 小巧有趣的乐器.&lt;/p&gt;
-
-&lt;p&gt;看完了多年前就想看的 Yale 的聆听音乐公开课, 还买了书. 收获很大. 被教授所折服. 正
-如教授最后说的, 这门课并不是真正地在讲如何聆听音乐, 而是在向大家推广古典音乐. 但
-是其中许多东西在各种音乐都是一样的. 这也一定程度上弥补了我在中小学时候缺失的音乐
-鉴赏课程. 中小学从来没有人认真地讲如何鉴赏音乐.&lt;/p&gt;
-
-&lt;p&gt;数位板. ctl-472 . 做助教写答案, 顺便画画. 讲主文献课的时候也用的. 还是很有意思的.
-也由于发现了一个特别优秀的开源软件 Krita! 数位板是不会白买的, 即使不画画, 也可以
-联电脑手写笔记.&lt;/p&gt;
-
-&lt;p&gt;文明6. 好几年前玩过一局文明五, 基本忘得差不多了. 还和 s 哥进行了联机. 人生何其短
-暂, 只有游戏才能让人去体验不一样的人生, 去体验帝国兴衰. 从水下第一个生命萌芽...
-你已经历许多... &lt;/p&gt;
-
-&lt;p&gt;618 的时候买了 Kindle Oasis 来代替大二时的入门版(放在学校了没带回家). &lt;/p&gt;
-
-&lt;p&gt;然后买了铃木 scx64 . 不得不说, 第一次吹半音阶时, 那用声音的饱满, 低音区的震动真
-的棒. 练了一段时间, 还是亏在了乐理上.&lt;/p&gt;
-
-&lt;p&gt;BanG Dream! 兴趣使然的游戏, 却无法自拔! 让没有学过音乐的我, 体验到演奏节奏的兴奋
-与机动. 那种感觉, 没错, 就是 キラキラ　ドキドキ　！&lt;/p&gt;
-
-&lt;p&gt;玩了剑玉, 现在能稳定 皿上来回 了, 止剑成功率大约在 20% .&lt;/p&gt;
-
-&lt;p&gt;水果 FL Studio. 多年以前玩过 Cubase. 先是在 Manjaro 上 Ardor, 但是网上基本没有教
-程. 之后知道 FL Studio 对鼠标党有友好, 因此用它来入门. 过段时间, 如果安顿下来,
-可以考虑买个 midi 键盘. 编曲是个非常有趣的东西, 其中的乐趣就和写程序差不多, 但
-是又更容易与人分享成果. 期间了解到 Wiwi , 是让我佩服的人.&lt;/p&gt;
-
-&lt;p&gt;将来哪一天我抑郁了, 上面这些杂七杂八的东西中的某一个, 或许会拯救我的余生, 成为我
-活下去的理由.&lt;/p&gt;
-
-&lt;h2&gt;总&lt;/h2&gt;
-
-&lt;p&gt;感觉这学期什么也没有做, 什么也没做好. 但是回想起来还是有这么多的东西. 很意外地在
-家里待了这么长的时间, 貌似是我从高一之后, 在家最长的一段时间. 感觉对家里的人更熟
-悉了, 许多以前我没有了解他们的一些方面. &lt;/p&gt;
-
-&lt;p&gt;不知疫情何时结束, 能够回到 2019 年冬天之前的那个世界.&lt;/p&gt;
-</content><category term="想说"/><category term="总结"/></entry><entry><title>Legendre Transform</title><link href="https://zqw.ink/2020-08-05-physics-legendretrans.html" rel="alternate"/><published>2020-08-05T00:00:00+08:00</published><updated>2020-08-05T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-08-05:/2020-08-05-physics-legendretrans.html</id><summary type="html">
-&lt;h2&gt;Intro&lt;/h2&gt;
-
-&lt;p&gt;多次看到过 Legendre transform 这个名词.&lt;/p&gt;
-
-&lt;p&gt;Reference [Am. J. Phys. 77 (7), July 2009] 非常详细清晰友好地解答了我心中的各种
-疑惑, 现将它做一个整理.&lt;/p&gt;
-
-&lt;p&gt;它在 …&lt;/p&gt;</summary><content type="html">
-&lt;h2&gt;Intro&lt;/h2&gt;
-
-&lt;p&gt;多次看到过 Legendre transform 这个名词.&lt;/p&gt;
-
-&lt;p&gt;Reference [Am. J. Phys. 77 (7), July 2009] 非常详细清晰友好地解答了我心中的各种
-疑惑, 现将它做一个整理.&lt;/p&gt;
-
-&lt;p&gt;它在开头说道:&lt;/p&gt;
-
-&lt;blockquote&gt;The Legendre transform is a powerful tool in theoretical physics and plays an
-important role in classical mechanics, statistical mechanics, and
-thermodynamics. 
-
-Legendre transform 在理论物理领域是一个强有用的工具, 在经典力学, 统计力学, 以及
-热力学中发挥了的作用.&lt;/blockquote&gt;
-
-&lt;p&gt;进行 Legendre transform 之后, 相当于是相同的信息, 用了不同的方式进行展示
-(display).&lt;/p&gt;
-
-&lt;h2&gt;Definition &lt;/h2&gt;
-
-&lt;p&gt;给定一个函数 $F(x)$ 如果它满足&lt;/p&gt;
-
-&lt;p&gt;1. 是一个凸(conves)函数, 也就是像 $y=x^2$ 这种二阶导数恒正的函数. 并且是光滑的函
-   数.&lt;/p&gt;
-
-&lt;p&gt;2. $F$ 的导数, 比 $x$ 本身, 更加容易去测量, 控制或者考虑.&lt;/p&gt;
-
-&lt;p&gt;那么对它 Legendre transform 更加方便.&lt;/p&gt;
-
-
-&lt;p&gt;对于函数 $F(x)$ 它的斜率&lt;/p&gt;
-
-$$\begin{align}
-  s(x) \equiv \frac{\mathrm{d}F(x)}{\mathrm{d}x}
-\end{align}$$
-
-&lt;p&gt;$s(x)$ 是一个单调函数, 也就是说 $s$ 和 $x$ 是一一对应的. 那么, 就可以将 $s$ 做为
-一个独立变量来代替 $x$, 即&lt;/p&gt;
-
-$$\begin{align}
-  F(x(s))
-\end{align}$$
-
-&lt;p&gt;也就是说我们用了 $F$ 的导数, 而不是 $x$ 本身来描述这个函数关系.&lt;/p&gt;
-
-&lt;p&gt;这个用复合函数的方法, 将 $x$ 用 $F$ 的导数, 即 $s$ 做了替换. 这是最容易想到的.
-而 Legendre transform 提供了另一种方法, 定义 $F(x)$ 的 Legendre transform $G(s)$
-为&lt;/p&gt;
-
-$$\begin{align}
-  G(s) \equiv s x(s) - F(x(s))
-\end{align}$$
-
-&lt;p&gt;需要注意的是上式只有一个独立变量 $s$ . Legendre transform 的好处是, $G(s)$ 和
-$F(x)$ 一种对称的的关系(此外 Reference [Am. J. Phys. 77 (7), July 2009] 给出一一
-种几何上的直观理解) 以及一些其它的性质. 这体现在&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-$$\begin{align}
-  x(s) = \frac{\mathrm{d}G}{\mathrm{d}s} \\
-  s(x) = \frac{\mathrm{d}F}{\mathrm{d}x}
-\end{align} $$
-
-
-&lt;ul&gt;
-&lt;li&gt;Legendre 变换的逆变换是它本身. 也就是说经过两次 Legendre 变换后, 回到函数本身. 形式上将这种关系表示为&lt;/li&gt;
-&lt;/ul&gt;
-
-$$\begin{align}
- \{F, x\} \Leftrightarrow \{G, s\} \\
-  G(s) + f(x) = sx
-\end{align}$$
-
-&lt;p&gt;要注意独立变量只有一个, $s, x$ 并不相互独立.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;它们的极值&lt;/li&gt;
-&lt;/ul&gt;
-
-$$\begin{align}
-  F_{\mathrm{min}} = -G(0) \\
-  G_{\mathrm{min}} = -F(0)
-\end{align}$$
-
-
-&lt;h2&gt;Examples&lt;/h2&gt;
-
-&lt;h3&gt;Lagrangian to Hamiltonian&lt;/h3&gt;
-
-&lt;h3&gt;In Statistical Thermodynamics&lt;/h3&gt;
-
-&lt;h2&gt;Reference&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Herbert Goldstein Charles P. Poole John Safko - Classical Mechanics&lt;/li&gt;
-&lt;li&gt;Making sense of the Legendre transform, Am. J. Phys. 77 (7), July 2009 (arXiv:0806.1147v2  [physics.ed-ph]  4 Mar 2009)&lt;/li&gt;
-&lt;/ul&gt;
-</content><category term="专业笔记"/><category term="物理"/><category term="数学"/><category term="Legendre Transformation"/><category term="Classical Mechanics"/><category term="Statistical Mechanics"/></entry><entry><title>坎坷的 wakatime-mode</title><link href="https://zqw.ink/2020-07-28-coding-wakatime.html" rel="alternate"/><published>2020-07-28T00:00:00+08:00</published><updated>2020-07-28T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-07-28:/2020-07-28-coding-wakatime.html</id><summary type="html">
-&lt;p&gt;(许久没有更新折腾类的了.)&lt;/p&gt;
-
-&lt;h2&gt;ailien invasion&lt;/h2&gt;
-
-&lt;p&gt;最近按照 《Python编程：从入门到实践 - 2016》 一书重复了 ailien invasion 这一
-project (见 https://github.com/phyer219/alien_invasion ) ! 本身是个写游戏的项 …&lt;/p&gt;</summary><content type="html">
-&lt;p&gt;(许久没有更新折腾类的了.)&lt;/p&gt;
-
-&lt;h2&gt;ailien invasion&lt;/h2&gt;
-
-&lt;p&gt;最近按照 《Python编程：从入门到实践 - 2016》 一书重复了 ailien invasion 这一
-project (见 https://github.com/phyer219/alien_invasion ) ! 本身是个写游戏的项目.
-但是很多方法都可以借鉴到其它的 project 中. 对于我这种没有正经地学过写程序的人来
-说(我不想回忆本科时上的那门程序设计课...), 收获还是颇丰的!&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;对类的应用&lt;/li&gt;
-&lt;li&gt;要给每个函数写 docstring&lt;/li&gt;
-&lt;li&gt;把不同功能的函数放到不同的文件里&lt;/li&gt;
-&lt;li&gt;写一些程序后, 要进行重构(Refactoring), 降低一些函数的长度. 使程序的结构清晰.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;感谢这本书的作者和翻译者. 这样完整且标准的去重复这样的 project 的机会真的难得!&lt;/p&gt;
-
-&lt;p&gt;得益于 ailien invasion , 又用了一天的时间把正在做的课题用 python 重新算了一遍.
-经过修改一些 bug 后, 和之前的 fortran 符合得很好, 我终于能够对自己写的 fortran
-程序的正确性很有信心了!&lt;/p&gt;
-
-&lt;h2&gt;VS Code &lt;/h2&gt;
-
-&lt;p&gt;就我目前所处的 emacs 学习曲线的阶段来说, 还是 VS Code / Atom 这类的编辑器写这种
-project 比较合适. 它的特点是 &lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;程序分散在不同的文件里, 要频繁来回切换, 反复修改.&lt;/li&gt;
-&lt;li&gt;总的代码量并不大.&lt;/li&gt;
-&lt;li&gt;要时常查看函数的 docstring .&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;VS Code 新插件 Pylance 真的方便. (期间遇到问题, 才知道 VS Code 有好多分支, code,
-vscodium ...)&lt;/p&gt;
-
-&lt;p&gt;但写 tex , emacs + auctex 的效率还是无敌的! &lt;/p&gt;
-
-&lt;h2&gt;wakatime-mode&lt;/h2&gt;
-
-&lt;p&gt;用了 VS Code, 不免要看看有哪些好玩的插件. 于是就发现了 wakatime. 统计你在不同去
-的 project, 不同的时间段, 不同的编辑器上花费的时间的插件. 好玩! 好玩在展示统计结
-果的界面, 真好看! 我此时认为统计的主要魅力就在于那些漂亮的图表!&lt;/p&gt;
-
-&lt;p&gt;昨天发现 wakatime 还有 emacs 的插件, 那岂不美哉! &lt;/p&gt;
-
-&lt;p&gt;但是无论怎么搞, 它都会报错&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-lisp"&gt;error "WakaTime Error 104 Invalid API Key. Set your api key with: (custom-set-variables '(wakatime-api-key \"XXXX\")) &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;几个小时没有解决(折腾这种事容易上头, 这还是近几个月来少见地上头了) . 回头一看 VS
-code 竟然也 Invalid API Key 了, 在 atom 也是 Invalid API Key . 然后换了系统, 换
-了账号, 都是 Invalid API Key . 而其它类似的插件是可以正常连接的. 此时, 我已基本
-断定, 这个报错的原因极有可能是服务器出了问题. 于是没有再理.&lt;/p&gt;
-
-&lt;p&gt;今天早上一看, 昨天果是它们的服务器的问题, VS Code 和 atom 都正常了. emacs 仍然是
-Invalid API Key. 我打开 dashboard 一看, 让我震惊的是 dashboard 上竟然显示了我昨
-天在 atom 和 emacs 上的活动! 也就是说, 虽然 wakatime-mode 报错 Invalid API Key,
-但是实际是 dashboard 已经收到信号了. 这是谎报的!&lt;/p&gt;
-
-&lt;p&gt;经过一波测试, 断定是 emacs 的 wakatime-mode 插件的 bug! 于是找到插件对应的
-wakatime-mode.elc , 定位到 Error 104 对应的语句&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-lisp"&gt;    (set-process-sentinel process
-      `(lambda (process signal)
-         (when (memq (process-status process) '(exit signal))
-           (kill-buffer (process-buffer process))
-           (let ((exit-status (process-exit-status process)))
-             (when (and (not (= 0 exit-status)) (not (= 102 exit-status)))
-               (cond
-                 ((= exit-status 103) (error "WakaTime Error (%s) Config file parse error. Check your ~/.wakatime.cfg file." exit-status))
-                 ((= exit-status 104) (error "WakaTime Error (%s) Invalid API Key. Set your api key with: (custom-set-variables '(wakatime-api-key \"XXXX\"))" exit-status))
-                 ((= exit-status 105) (error "WakaTime Error (%s) Unknown wakatime-cli error. Please check your ~/.wakatime.log file and open a new issue at https://github.com/wakatime/wakatime-mode" exit-status))
-                 ((= exit-status 106) (error "WakaTime Error (%s) Malformed heartbeat error. Please check your ~/.wakatime.log file and open a new issue at https://github.com/wakatime/wakatime-mode" exit-status))
-                 (t (error "WakaTime Error (%s) Make sure this command runs in a Terminal: %s" exit-status (wakatime-client-command nil)))
-               )
-             )
-           )
-         )
-      )
-    )&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;果断删除了&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-lisp"&gt; ((= exit-status 104) (error "WakaTime Error (%s) Invalid API Key. Set your api key with: (custom-set-variables '(wakatime-api-key \"XXXX\"))" exit-status))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;再测试一波, dashboard 能统计到 emacs 的活动, emacs 的 wakatime-mode 也不再报错.
-完美解决.&lt;/p&gt;
-
-&lt;p&gt;对我来说是解决了, 如果有能力的话, 还是把这个 bug 报给开发都比较好. 我还是算了...&lt;/p&gt;
-</content><category term="软件使用"/><category term="emacs"/><category term="wakatime"/></entry></feed>
+</content><category term="想说"/></entry></feed>
