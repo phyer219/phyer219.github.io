@@ -1,6 +1,6 @@
 #+TITLE: 青岛青年冷原子
 #+DATE: <2021-08-31>
-#+CATEGORIES: 想说
+#+CATEGORIES: blog
 #+TAGS: 青岛, 青年冷原子
 #+HTML: <!-- toc -->
 #+HTML: <!-- more -->

@@ -66,7 +66,8 @@ MARKDOWN_ZQW = {
                    'footnotes',
                    'mdx_truly_sane_lists',
                    'markdown_math_escape',
-                   'full_yaml_metadata'],
+                   'full_yaml_metadata',
+                   "pymdownx.tilde"],
     'extension_configs': {
         'mdx_truly_sane_lists': {'nested_indent': 2},
         },

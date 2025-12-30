@@ -1,6 +1,6 @@
 #+TITLE: Fourier transform 总结
 #+DATE: <2018-09-07>
-#+CATEGORIES: 专业笔记
+#+CATEGORIES: physics
 #+TAGS: Fourier, 数学
 #+HTML: <!-- toc -->
 #+HTML: <!-- more -->
