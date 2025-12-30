@@ -2,7 +2,7 @@
 <html lang="zh_cn">
 
 <head>
-    <title>从冰上的水 - 疫情，吐槽</title>
+    <title>从冰上的水 - Emacs使用笔记</title>
   <meta charset="utf-8" />
   <meta name="generator" content="Pelican" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
     href="https://zqw.ink/feeds/all.atom.xml"
     type="application/atom+xml" rel="alternate" title="从冰上的水 Full Atom Feed" />
   <link
-    href="https://zqw.ink/feeds/blog.atom.xml"
+    href="https://zqw.ink/feeds/ruan-jian-shi-yong.atom.xml"
     type="application/atom+xml" rel="alternate" title="从冰上的水 Categories Atom Feed" />
   <link rel="stylesheet" type="text/css" href="https://zqw.ink/theme/css/style.css" />
   <!-- fonts -->
@@ -73,9 +73,8 @@
 
 
 
-    <meta name="tags" content="疫情" />
-    <meta name="tags" content="假期" />
-    <meta name="tags" content="日记" />
+    <meta name="tags" content="Emacs" />
+    <meta name="tags" content="快捷键" />
 
 </head>
 
@@ -119,29 +118,143 @@
   </header>
   <main>
 
-<h1 class="post-title">疫情，吐槽</h1>
+<h1 class="post-title">Emacs使用笔记</h1>
 
 <section class="post-meta">
-    <p>2020-03-08</p>
-    <p>-<a class="post-link" href="https://zqw.ink/category/blog.html">blog</a></p>
+    <p>2018-09-07</p>
+    <p>-<a class="post-link" href="https://zqw.ink/category/ruan-jian-shi-yong.html">软件使用</a></p>
 </section>
 
 <section class="markdown-body">
-  
-<p>许久没有写了。翻了一下，最早是刚刚买到小黑时开始写，我说那是新的开始。最近爆发了新型冠状病毒的疫情，所有人都被焖在家里。</p>
-<p>开学也是遥遥无期，只能每天在家里。难受的不是在家里，而是在家里还得做科研。</p>
-<p>近期也没什么效率，每天象征性地做那么点科研，改改光学作业。学习，是真的没有那个心情。至少我们这种普通家庭，我这种性格，是很难做到在家高效学习的。</p>
-<p>最近就在想，我其实蛮有天赋的，高考这样烂确实是由于环境。我的假期在家都是直接放弃学习的。如果我从小到大的假期都充分利用，那我的人生必然也是竞赛大神那种人生。</p>
-<p>可是，我又算是幸运，比上不足比下有余，这样的环境还是允许我自己努力，比之那种家庭不和睦人家庭，简直好太多。</p>
-<p>最近买了好多东西。年前买了米兔公路赛，这几天又买了卡林巴。我好像对什么都感兴趣一般。</p>
+  <!-- toc -->
+<!-- more -->
+<h3>修改配色</h3>
+<p>打开Emacs的配置文件。配置文件在~/.emacs。增加：</p>
+<blockquote>
+<p>(set-background-color &quot;black&quot;) ;; 使用黑色背景<br />
+(set-foreground-color &quot;white&quot;) ;; 使用白色前景<br />
+(set-face-foreground 'region &quot;green&quot;)  ;; 区域前景颜色设为绿色<br />
+(set-face-background 'region &quot;blue&quot;) ;; 区域背景色设为蓝色</p>
+</blockquote>
+<p>尽管可以重启Emacs使配置生效，但更快捷的方式是在打开~/.emacs的时候执行命令M-x eval-buffer，就可以使配置文件立即生效。</p>
+<h3>快捷键</h3>
+<p>中文帮助：<code>C-h t</code></p>
+<p>撤消：<code>C-x u</code> <code>C-/</code></p>
+<p>启动自动折行模式：<code>M-x auto-fill-mode &lt;Return&gt;</code></p>
+<p>相关命令搜索（Command Apropos）：<code>C-h a</code></p>
+<p>Emacs 使用手册（manual）：<code>C-h r</code></p>
+<p>自动补全：<code>M-/</code></p>
+<p>在另一个窗口打开缓冲：<code>C-x 4 b</code></p>
+<p>复制：<code>M-w</code></p>
+<p>把当前进程放到后台（之后可用''fg''命令回到前台）： <code>Ctrl Z</code></p>
+<p>清屏：<code>ctrl L</code></p>
+<h3>打开</h3>
+<p>终端模式：<code>emacs -nw</code></p>
+<h3>配置备份</h3>
+<pre><code class="language-lisp">;;用xetex编译,以支持中文
+(setq-default TeX-engine 'xetex)
+;;默认输出pdf
+(setq-default TeX-PDF-mode t)
+
+;;ELPA (Emacs Lisp Package Archive)扩展插件管理,用命令`package-list-packages`调用.
+;;主题网站https://emacsthemes.com/ 
+(require 'package)
+(add-to-list 'package-archives 
+             '(&quot;melpa&quot; . &quot;http://melpa.org/packages/&quot;))
+(package-initialize)
+
+;;加载主题
+(load-theme 'light-blue t)
+;;auctex插件
+(load &quot;auctex.el&quot; nil t t)
+(load &quot;preview-latex.el&quot; nil t t)
+(setq TeX-auto-save t)
+(setq TeX-parse-self t)
+(setq-default TeX-master nil)
+
+;;在 LaTeX mode 中，默认开启 PDF mode，即默认使用 xelatex 直接生成 pdf 文 件，而不用每次用 'C-c C-t C-p' 进行切换。设置 'Tex-show-compilation' 为 t，在另一个窗口显示编译信息，对于错误的排除很方便。另外，编译时默认直接 保存文件，绑定补全符号到 TAB 键。
+(add-hook 'LaTeX-mode-hook
+          (lambda ()
+            (setq TeX-auto-untabify t     ; remove all tabs before saving
+                  TeX-engine 'xetex       ; use xelatex default
+                  TeX-show-compilation t) ; display compilation windows
+            (TeX-global-PDF-mode t)       ; PDF mode enable, not plain
+            (setq TeX-save-query nil)
+            (imenu-add-menubar-index)
+            (define-key LaTeX-mode-map (kbd &quot;TAB&quot;) 'TeX-complete-symbol)))
+
+
+;;自动换行，数学公式，reftex，显示号
+(mapc (lambda (mode)
+      (add-hook 'LaTeX-mode-hook mode))
+      (list 'auto-fill-mode
+            'LaTeX-math-mode
+            'turn-on-reftex
+            'linum-mode))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages (quote (pyim nord-theme))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+(elpy-use-ipython)
+
+; python-mode
+(setq py-install-directory &quot;~/.emacs.d/python-mode-6.0.11&quot;)
+(add-to-list 'load-path py-install-directory)
+(require 'python-mode)
+
+; use IPython
+(setq-default py-shell-name &quot;ipython&quot;)
+(setq-default py-which-bufname &quot;IPython&quot;)
+; use the wx backend, for both mayavi and matplotlib
+(setq py-python-command-args
+  '(&quot;--gui=wx&quot; &quot;--pylab=wx&quot; &quot;-colors&quot; &quot;Linux&quot;))
+(setq py-force-py-shell-name-p t)
+
+; switch to the interpreter after executing code
+(setq py-shell-switch-buffers-on-execute-p t)
+(setq py-switch-buffers-on-execute-p t)
+; don't split windows
+(setq py-split-windows-on-execute-p nil)
+; try to automagically figure out indentation
+(setq py-smart-indentation t)
+
+
+(setq TeX-view-program-list
+      '((&quot;SumatraPDF&quot; &quot;SumatraPDF.exe %o&quot;)
+        (&quot;Gsview&quot; &quot;gsview32.exe %o&quot;)
+        (&quot;Okular&quot; &quot;okular --unique %o&quot;)
+        (&quot;Evince&quot; &quot;evince %o&quot;)
+        (&quot;Firefox&quot; &quot;firefox %o&quot;)))
+ ((eq system-type 'gnu/linux)
+  (add-hook 'LaTeX-mode-hook
+            (lambda ()
+              (setq TeX-view-program-selection '((output-pdf &quot;Okular&quot;)
+                                                 (output-dvi &quot;Okular&quot;)))))))
+
+
+(add-to-list 'load-path &quot;/home/dx/Downloads/neotree&quot;)
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+
+(require 'sr-speedbar)
+
+</code></pre>
 
 </section>
 
 <section class="post-meta">
     <p>
-        <a class="post-link" href="https://zqw.ink/tag/yi-qing.html">#疫情</a>
-        <a class="post-link" href="https://zqw.ink/tag/jia-qi.html">#假期</a>
-        <a class="post-link" href="https://zqw.ink/tag/ri-ji.html">#日记</a>
+        <a class="post-link" href="https://zqw.ink/tag/emacs.html">#Emacs</a>
+        <a class="post-link" href="https://zqw.ink/tag/kuai-jie-jian.html">#快捷键</a>
     </p>
 </section>
 

@@ -130,9 +130,7 @@
 
 <section class="markdown-body">
   <!-- toc -->
-
 <!-- more -->
-
 <h1>写在前面的声明</h1>
 <p>本人非专业人士，对于写程序只是业余爱好。以下内容仅供参考，我一个业余人士也不能保证内容的准确性，对一些命令的解释也只是为了便于记忆和理解，更加专业准确的知识还请查询如官方文档这样的资料。</p>
 <h1>引言</h1>
@@ -208,7 +206,7 @@ pip 20.0.2 from /root/sabafun/.sabafun/lib/python3.7/site-packages/pip (python 3
 </code></pre>
 <p>进入虚拟环境中，在命令的开头会出现 (.sabafun) ，表示在虚拟环境中。可以看出，在虚拟环境中直接运行 Python 就是我们创建虚拟环境时指定的 Python 版本。这样就和系统的环境隔离来，以避免一些冲突，因为如果将系统的 Python 绑定到 Python3.7 会导致系统中一些依赖 Python2 的程序无法正常运行。</p>
 <p>source 命令是让某些文件中的设置立即生效，这里是使虚拟环境中的设置生效。source 还用于当我们修改配置文件中的环境变量后，source 一下配置文件，就可以使配置马上生效，而不需要重启设备。</p>
-<p>要停止使用虚拟环境,可执行命令 deactivate </p>
+<p>要停止使用虚拟环境,可执行命令 deactivate</p>
 <pre><code class="language-shell">(.sabafun)[root@cloud]$ deactivate 
 [root@cloud]$ 
 </code></pre>
@@ -229,7 +227,7 @@ pip 20.0.2 from /root/sabafun/.sabafun/lib/python3.7/site-packages/pip (python 3
 </code></pre>
 <p>对项目的一些操作都保存在 mange.py 文件中。出现关于数据库的提示可以忽略。Django 默认用 SQLite 作数据库。而我们不用它，而是用 Mariadb。</p>
 <p>此时从本地访问 http://你的服务器IP:8000 ，出现如下小火箭界面，表示成功</p>
-<p><img alt="image-20200204125926942" src="./2020-02-03-physics-Django/image-20200204125926942.png"></p>
+<p><img src="./2020-02-03-physics-Django/image-20200204125926942.png" alt="image-20200204125926942" /></p>
 <p>如果无法访问，可以查看一下服务器的 8000 端口是否开放。一般都可以从云服务器的管理页面中找到安全组设置。</p>
 <h1>Django 的大致工作流程</h1>
 <p>比较业余的理解，Django 是一个用 Python 写网站的框架。我们可以用 Python 语言写一些函数来实现想要的功能。web 服务器，如 Apache，负责将我们设计好的功能提供给浏览器。而 mod_wsgi 负责将我们用 Python 写的功能翻译给 Apache。网站的数据，如我们用于展示的《诗经》就存储在 Mariadb 数据库中。</p>
@@ -289,7 +287,7 @@ MariaDB [(none)]&gt; grant all on sabafun.* to django@localhost;
 MariaDB [(none)]&gt; exit
 </code></pre>
 <p>django@localhost 是说用户名是 django，localhost 表示是本地用户。sabafun 是数据库的名字。character 之后的内容是设置编码。一定注意设置编码！要不然可能没法导入中文！注意不要漏掉每条命令后的分号。命令不区分大小写。</p>
-<p>grant 是设置数据库的权限。all 表示权限的种类是所有权限， sabafun.<em> 表示要设置权限的数据库是 sabafun，</em> 表示这个数据库中所有的表，to 后面是将权限所赋予的用户。</p>
+<p>grant 是设置数据库的权限。all 表示权限的种类是所有权限， sabafun.* 表示要设置权限的数据库是 sabafun，* 表示这个数据库中所有的表，to 后面是将权限所赋予的用户。</p>
 <p>创建一个数据库就好像创建一个 Excel 文件，一个数据库中有好多表，不同的表就像 Excel 文件中的 sheet1, sheet2...，而每一个表中有好多行和列存储具体的数据。只不过数据库中的数据可能关系要复杂一些。</p>
 <p>创建用户后，可以查看已有的数据库，来确认刚刚创建的数据库确实已经存在</p>
 <pre><code>MariaDB [(none)]&gt; show databases;
@@ -372,7 +370,7 @@ urlpatterns = [
 ]
 </code></pre>
 <h1>创建 Shijing Models</h1>
-<p>修改文件 poetry/models.py </p>
+<p>修改文件 poetry/models.py</p>
 <pre><code class="language-python">from django.db import models
 
 # Create your models here.                                                    
@@ -423,7 +421,7 @@ admin.site.register(Shijing)
 <pre><code class="language-shell">(.sabafun)[root@cloud]$ python manage.py runserver 0.0.0.0:8000
 </code></pre>
 <p>在本地通过浏览器访问 IP::8000/admin/ 就会看到 Shijing</p>
-<p><img alt="image-20200204153009618" src="./2020-02-03-physics-Django/image-20200204153009618.png"></p>
+<p><img src="./2020-02-03-physics-Django/image-20200204153009618.png" alt="image-20200204153009618" /></p>
 <h1>迁入 json 数据</h1>
 <p>然后将 github 上的诗词数据库 https://github.com/chinese-poetry/chinese-poetry 中的 shijing.json 传到服务器上，并在同一目录下编写文件 json_to_database.py</p>
 <pre><code class="language-python">(.sabafun)[root@cloud]$ emacs json_to_database.py
@@ -489,7 +487,7 @@ poetry.commit()                                      # 提交更改
 </code></pre>
 <p>就把 305 首诗经导入到数据库中了！</p>
 <p>进入管理界面，看到 305 个导入的数据</p>
-<p><img alt="image-20200204165427906" src="./2020-02-03-physics-Django/image-20200204165427906.png"></p>
+<p><img src="./2020-02-03-physics-Django/image-20200204165427906.png" alt="image-20200204165427906" /></p>
 <p>成功！</p>
 <h1>修改 poetry/views.py 文件</h1>
 <p>至此为止，我们只能够在管理页面中看到诗经，下面让它在网页上显示。</p>
@@ -529,7 +527,7 @@ poetry
 &lt;/body&gt;                                                                       
 </code></pre>
 <p>shijing_list 就是通过 render() 函数传递过来的字典的键。重启 httpd 从本地访问 IP/poetry，就看到如下界面了！</p>
-<p><img alt="image-20200204210647475" src="./2020-02-03-physics-Django/image-20200204210647475.png"></p>
+<p><img src="./2020-02-03-physics-Django/image-20200204210647475.png" alt="image-20200204210647475" /></p>
 <h1>后续操作</h1>
 <p>Apache 配置</p>
 <pre><code># 连接 Django                                                                 
@@ -622,7 +620,7 @@ xps13.pub                                   100%  744     6.8KB/s   00:00
 <pre><code class="language-shell">[root@cloud]$ python --version
 Python 2.7.5
 </code></pre>
-<p>是 Python2 。Django 需要 Python3 因此安装 </p>
+<p>是 Python2 。Django 需要 Python3 因此安装</p>
 <pre><code class="language-shell">[root@cloud]$ yum install python3
 </code></pre>
 <p>安装后查看确认</p>
@@ -634,11 +632,11 @@ pip 9.0.3 from /usr/lib/python3.6/site-packages (python 3.6)
 <p>安装 Apache</p>
 <pre><code class="language-shell">[root@cloud]$ yum install httpd
 </code></pre>
-<p>运行 </p>
+<p>运行</p>
 <pre><code class="language-shell">[root@cloud]$ systemctl start httpd
 </code></pre>
 <p>从本机登录 IP 会看到测试界面</p>
-<p><img alt="image-20200204114524492" src="./2020-02-03-physics-Django/image-20200204114524492.png"></p>
+<p><img src="./2020-02-03-physics-Django/image-20200204114524492.png" alt="image-20200204114524492" /></p>
 <p>让 Apache 开机自动运行</p>
 <pre><code class="language-shell">[root@cloud]$ systemctl enable httpd
 </code></pre>
@@ -832,7 +830,7 @@ Quit the server with CONTROL-C.
 
 </code></pre>
 <p>此时从本地访问 8000 端口，终于出现了小火箭界面</p>
-<p><img alt="image-20200204125926942" src="./2020-02-03-physics-Django/image-20200204125926942.png"></p>
+<p><img src="./2020-02-03-physics-Django/image-20200204125926942.png" alt="image-20200204125926942" /></p>
 <p>参考官方文档连接 Apache https://docs.djangoproject.com/zh-hans/3.0/howto/deployment/wsgi/modwsgi/</p>
 <h2>连接 mod_wsgi</h2>
 <p>首先安装 mod_wsgi</p>
@@ -976,7 +974,7 @@ System check identified some issues:
 
 WARNINGS:
 ?: (mysql.W002) MySQL Strict Mode is not set for database connection 'default'
-    HINT: MySQL's Strict Mode fixes many data integrity problems in MySQL, such as data truncation upon insertion, by escalating warnings into errors. It is strongly recommended you activate it. See: https://docs.djangoproject.com/en/3.0/ref/databases/#mysql-sql-mode
+	HINT: MySQL's Strict Mode fixes many data integrity problems in MySQL, such as data truncation upon insertion, by escalating warnings into errors. It is strongly recommended you activate it. See: https://docs.djangoproject.com/en/3.0/ref/databases/#mysql-sql-mode
 Operations to perform:
   Apply all migrations: admin, auth, contenttypes, sessions
 Running migrations:
@@ -1003,7 +1001,7 @@ Running migrations:
 <p>创建管理页面</p>
 <pre><code class="language-shell">(.sabafun)[root@cloud]$ python manage.py createsuperuser
 </code></pre>
-<p>时候要重启　httpd　才能进入　IP/admin　。而且好像有些问题。因此，在编写项目的过程中用　django　自带的开发服务器，它有一些好处，比如官方文档中说的　</p>
+<p>时候要重启　httpd　才能进入　IP/admin　。而且好像有些问题。因此，在编写项目的过程中用　django　自带的开发服务器，它有一些好处，比如官方文档中说的</p>
 <blockquote>
 <p>会自动重新加载的服务器 <a href="https://docs.djangoproject.com/zh-hans/3.0/ref/django-admin/#django-admin-runserver"><code>runserver</code></a></p>
 <p>用于开发的服务器在需要的情况下会对每一次的访问请求重新载入一遍 Python 代码。所以你不需要为了让修改的代码生效而频繁的重新启动服务器。然而，一些动作，比如添加新文件，将不会触发自动重新加载，这时你得自己手动重启服务器。</p>
@@ -1032,13 +1030,13 @@ from django.shortcuts import render
 
 # Create your views here.                                                     
 
-from django.http import HttpResponse
+from django.http import	HttpResponse
 
 def poetry(request):
     return HttpResponse(&quot;Hello, poetry!&quot;)
 </code></pre>
 <pre><code class="language-python">(.sabafun)[root@cloud]$ emacs poetry/urls.py
-
+                                   
 from django.urls import path
 
 from . import views
@@ -1106,7 +1104,7 @@ System check identified some issues:
 
 WARNINGS:
 ?: (mysql.W002) MySQL Strict Mode is not set for database connection 'default'
-    HINT: MySQL's Strict Mode fixes many data integrity problems in MySQL, such as data truncation upon insertion, by escalating warnings into errors. It is strongly recommended you activate it. See: https://docs.djangoproject.com/en/3.0/ref/databases/#mysql-sql-mode
+	HINT: MySQL's Strict Mode fixes many data integrity problems in MySQL, such as data truncation upon insertion, by escalating warnings into errors. It is strongly recommended you activate it. See: https://docs.djangoproject.com/en/3.0/ref/databases/#mysql-sql-mode
 Operations to perform:
   Apply all migrations: admin, auth, contenttypes, poetry, sessions
 Running migrations:
@@ -1124,7 +1122,7 @@ from .models import Shijing
 admin.site.register(Shijing)
 </code></pre>
 <p>这时 IP::8000/admin/　就会看到 Shijing</p>
-<p><img alt="image-20200204153009618" src="./2020-02-03-physics-Django/image-20200204153009618.png"></p>
+<p><img src="./2020-02-03-physics-Django/image-20200204153009618.png" alt="image-20200204153009618" /></p>
 <h2>迁入 json 数据</h2>
 <pre><code class="language-mysql">删除表中所有条目
 truncate table poetry_shijing;
@@ -1196,7 +1194,7 @@ poetry.commit()                                      # 提交更改
 <pre><code class="language-shell">(.sabafun)[root@cloud]$ python json_to_database.py
 </code></pre>
 <p>进入管理界面，看到 305 个导入的数据</p>
-<p><img alt="image-20200204165427906" src="./2020-02-03-physics-Django/image-20200204165427906.png"></p>
+<p><img src="./2020-02-03-physics-Django/image-20200204165427906.png" alt="image-20200204165427906" /></p>
 <p>成功！</p>
 <h2>编写网页，来显示</h2>
 <pre><code class="language-shell">(.sabafun)[root@cloud sabafun]# cd poetry/
@@ -1208,12 +1206,12 @@ poetry
 </code></pre>
 <pre><code class="language-html">(.sabafun)[root@cloud sabafun]# emacs poetry/templates/poetry/poetry.html
 
-
-
+                                                                              
+                                                                              
 &lt;body&gt;                                                                        
 {% for item in shijing_list %}                                                
-
-
+                                                                              
+                                                                              
 &lt;center&gt;                                                                      
 第{{ item.fixed_id }}篇：                                                     
 &lt;h1&gt;                                                                          
@@ -1240,13 +1238,14 @@ def poetry(request):
     return render(request, 'poetry/poetry.html', context)
 </code></pre>
 <p>重启 httpd 从本地访问 IP/poetry，就看到界面了</p>
-<p><img alt="image-20200204210647475" src="./2020-02-03-physics-Django/image-20200204210647475.png"></p>
+<p><img src="./2020-02-03-physics-Django/image-20200204210647475.png" alt="image-20200204210647475" /></p>
 <h1>参考资料</h1>
 <ol>
 <li>Eric Matthes 著，袁国忠 译, Python 编程从入门到实践，中国工信出版集团，2016，人民邮电出版社</li>
 <li>https://docs.djangoproject.com/zh-hans/3.0/intro/tutorial01/</li>
 <li>www.google.com</li>
 </ol>
+
 </section>
 
 <section class="post-meta">

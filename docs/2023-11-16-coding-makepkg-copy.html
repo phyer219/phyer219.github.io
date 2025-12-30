@@ -128,12 +128,13 @@
 </section>
 
 <section class="markdown-body">
-  <ul>
-<li><a href="#前言">前言</a></li>
-<li><a href="#makepkg-简介"><code>makepkg</code> 简介</a></li>
-<li><a href="#一个最简单的-pkgbuild-文件">一个最简单的 <code>PKGBUILD</code> 文件</a></li>
-<li><a href="#打包流程一个不-trivial-的测试">打包流程（一个不 trivial 的测试）</a></li>
-<li><a href="#deb-包示例wps-office">deb 包示例：wps-office</a></li>
+  
+<ul>
+<li><a href="#%E5%89%8D%E8%A8%80">前言</a></li>
+<li><a href="#makepkg-%E7%AE%80%E4%BB%8B"><code>makepkg</code> 简介</a></li>
+<li><a href="#%E4%B8%80%E4%B8%AA%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84-pkgbuild-%E6%96%87%E4%BB%B6">一个最简单的 <code>PKGBUILD</code> 文件</a></li>
+<li><a href="#%E6%89%93%E5%8C%85%E6%B5%81%E7%A8%8B%E4%B8%80%E4%B8%AA%E4%B8%8D-trivial-%E7%9A%84%E6%B5%8B%E8%AF%95">打包流程（一个不 trivial 的测试）</a></li>
+<li><a href="#deb-%E5%8C%85%E7%A4%BA%E4%BE%8Bwps-office">deb 包示例：wps-office</a></li>
 </ul>
 <h2>前言</h2>
 <p>使用 Arch, 或者基于 Arch 的 Manjaro 时，有些软件官方仓库里没有，而网上又可以下载到编译好的二进制文件，deb包，或者rpm包。二进制文件可以直接运行，deb或者rpm包解压后，找到对应的二进制文件，也可以直接运行。</p>
@@ -156,7 +157,7 @@ pkgrel=1
 arch=('x86_64')
 
 package() {
-    echo &quot;packaging...&quot;
+	echo &quot;packaging...&quot;
 }
 </code></pre>
 <p>前四行定义了四个变量，是软件的名字，版本，以及运行架构。最后三行定义了一个函数，输出一行字 packaging...。</p>
@@ -179,25 +180,25 @@ md5sums=('541126551a459a74e740ac6a82875d24')
 
 
 prepare() {
-    echo &quot;prepare...&quot;
+	echo &quot;prepare...&quot;
 }
 
 build() {
-    echo &quot;building...&quot;
-#   pwd
-#   cd ${srcdir}
-#   pwd
-#   mkdir diraa
+	echo &quot;building...&quot;
+#	pwd
+#	cd ${srcdir}
+#	pwd
+#	mkdir diraa
 }
 
 check() {
-    echo &quot;checking...&quot;
+	echo &quot;checking...&quot;
 }
 
 package() {
-    echo &quot;packaging...&quot;
-    mkdir ${pkgdir}/home
-    cp m.vsix ${pkgdir}/home/m.vsix
+	echo &quot;packaging...&quot;
+	mkdir ${pkgdir}/home
+	cp m.vsix ${pkgdir}/home/m.vsix
 }
 </code></pre>
 <p><code>PKGBUILD</code> 文件所在的目录结构如下：</p>
@@ -208,7 +209,7 @@ package() {
 <p>与之前相比，多定义了两个变量，<code>source</code> 和 <code>md5sums</code> 。这两个变量有什么用处呢？那应该先说一下 <code>makepkg</code> 具体都做了什么。</p>
 <p>首先，它们通过我们定义的变量，得到软件包的名字，版本号等信息。<code>source</code> 变量是告诉 <code>makepkg</code> 我们打包过程中所需要的文件，它可以是一个本地文件，也可以是一个文件网址。 <code>makepkg</code> 会获取这个文件，验证它的 md5，然后将它放在（链接）目录 <code>src</code> 下。 <code>src</code> 目录是 <code>makepkg</code> 进行一些处理，比如编译，时的工作目录。</p>
 <p>接下来， <code>makepkg</code> 依次执行四个函数 <code>prepare()</code> 、 <code>build()</code> 、 <code>check()</code> 、 <code>package()</code> 。 <code>prepare()</code> 一般做编译前的处理，比如解压文件。 <code>build()</code> 进行编译。<code>check()</code> 检查编译结果。最后 <code>package()</code> 进行打包。我们这里的 <code>prepare()</code> 、 <code>build()</code> 、 <code>check()</code> 不进行操作，只输出一行文字提示。</p>
-<p>最后，我在函数 <code>package()</code> 中，先新建了一个目录 <code>\({pkgdir}/home` 。这里先说明一下，  `makepkg` 会默认定义两个变量：`\){srcdir}</code> 是前面提到的工作路径 <code>src</code>；另一个 <code>\({pkgdir}` 是软件包的目录 `pkg/\){pkgname}</code> 。 <code>\({pkgdir}` 目录就是最终打包成 `.pkg.tar.zst` 的目录。在安装包时，`\){pkgdir}</code> 会被安装对应的目录中。比如我们在这个例子中，将文件 <code>m.vsix</code> 放在 <code>${pkgdir}/home/m.vsix</code> ，那么我们用 <code>pacman -U</code> 安装时，就会把 <code>m.vsix</code> 复制到 <code>/home/m.vsix</code> 。</p>
+<p>最后，我在函数 <code>package()</code> 中，先新建了一个目录 <code>${pkgdir}/home</code> 。这里先说明一下，  <code>makepkg</code> 会默认定义两个变量：<code>${srcdir}</code> 是前面提到的工作路径 <code>src</code>；另一个 <code>${pkgdir}</code> 是软件包的目录 <code>pkg/${pkgname}</code> 。 <code>${pkgdir}</code> 目录就是最终打包成 <code>.pkg.tar.zst</code> 的目录。在安装包时，<code>${pkgdir}</code> 会被安装对应的目录中。比如我们在这个例子中，将文件 <code>m.vsix</code> 放在 <code>${pkgdir}/home/m.vsix</code> ，那么我们用 <code>pacman -U</code> 安装时，就会把 <code>m.vsix</code> 复制到 <code>/home/m.vsix</code> 。</p>
 <p>运行</p>
 <pre><code class="language-shell">makepkg
 </code></pre>
@@ -263,10 +264,10 @@ md5sums=('c80a2b32604cb2a8eb0de456a062fe30')
 
 
 prepare() {
-    mv wps-office_11.1.0.11698.XA_amd64.deb ${pkgver}_${pkgver}.deb
-    ar -x ${pkgver}_${pkgver}.deb
-    mkdir ${pkgname}-${pkgver}
-    tar -xf data.tar.xz --directory=&quot;${pkgname}-${pkgver}&quot;
+	mv wps-office_11.1.0.11698.XA_amd64.deb ${pkgver}_${pkgver}.deb
+ 	ar -x ${pkgver}_${pkgver}.deb
+  	mkdir ${pkgname}-${pkgver}
+	tar -xf data.tar.xz --directory=&quot;${pkgname}-${pkgver}&quot;
 }
 
 
@@ -276,6 +277,7 @@ package() {
 }
 </code></pre>
 <p>这里说明一下， <code>deb</code> 包全部解压后会有两个文件夹，<code>control</code> 和 <code>data</code> 。<code>control</code> 类似于我们的  <code>PKGBUILD</code> ，包含了软件的信息和安装过程中进行的一些操作。 <code>data</code> 类似于 <code>{pkgdir}</code> ，包含了需要安装的所有文件。因此我们要做的就是把 <code>deb</code> 全部解压，然后将 <code>data</code> 目录打包。</p>
+
 </section>
 
 <section class="post-meta">

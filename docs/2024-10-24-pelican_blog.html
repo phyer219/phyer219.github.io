@@ -127,32 +127,36 @@
 </section>
 
 <section class="markdown-body">
-  <ul>
-<li><a href="#升级说明">升级说明</a></li>
-<li><a href="#升级博客过程中的笔记由-chatgpt-生成">升级博客过程中的笔记(由 ChatGPT 生成)</a><ul>
-<li><a href="#类型注解">类型注解</a></li>
+  
+<ul>
+<li><a href="#%E5%8D%87%E7%BA%A7%E8%AF%B4%E6%98%8E">升级说明</a></li>
+<li><a href="#%E5%8D%87%E7%BA%A7%E5%8D%9A%E5%AE%A2%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E7%AC%94%E8%AE%B0%E7%94%B1-chatgpt-%E7%94%9F%E6%88%90">升级博客过程中的笔记(由 ChatGPT 生成)</a>
+<ul>
+<li><a href="#%E7%B1%BB%E5%9E%8B%E6%B3%A8%E8%A7%A3">类型注解</a></li>
 <li><a href="#itertoolschain"><code>itertools.chain</code></a></li>
-<li><a href="#示例代码使用-️-multiprocessingqueue-实现生产者-消费">示例代码：使用 🛠️ multiprocessing.Queue 实现生产者-消费</a></li>
-<li><a href="#示例代码使用--while-true-实现无限循环的应用">示例代码：使用 🔄 while True 实现无限循环的应用</a><ul>
-<li><a href="#1-实现用户输入验证">1. 实现用户输入验证</a></li>
-<li><a href="#2-服务器监听-️">2. 服务器监听 🖥️</a></li>
-<li><a href="#3-多进程的任务分配-">3. 多进程的任务分配 👥🔄</a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81%E4%BD%BF%E7%94%A8-%EF%B8%8F-multiprocessingqueue-%E5%AE%9E%E7%8E%B0%E7%94%9F%E4%BA%A7%E8%80%85-%E6%B6%88%E8%B4%B9">示例代码：使用 🛠️ multiprocessing.Queue 实现生产者-消费</a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81%E4%BD%BF%E7%94%A8--while-true-%E5%AE%9E%E7%8E%B0%E6%97%A0%E9%99%90%E5%BE%AA%E7%8E%AF%E7%9A%84%E5%BA%94%E7%94%A8">示例代码：使用 🔄 while True 实现无限循环的应用</a>
+<ul>
+<li><a href="#1-%E5%AE%9E%E7%8E%B0%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5%E9%AA%8C%E8%AF%81">1. 实现用户输入验证</a></li>
+<li><a href="#2-%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%91%E5%90%AC-%EF%B8%8F">2. 服务器监听 🖥️</a></li>
+<li><a href="#3-%E5%A4%9A%E8%BF%9B%E7%A8%8B%E7%9A%84%E4%BB%BB%E5%8A%A1%E5%88%86%E9%85%8D-">3. 多进程的任务分配 👥🔄</a></li>
 </ul>
 </li>
-<li><a href="#动态导入的使用场景">动态导入的使用场景</a></li>
-<li><a href="#getattr-的用法"><code>getattr()</code> 的用法</a><ul>
-<li><a href="#示例代码">示例代码</a></li>
-<li><a href="#注意事项">注意事项</a></li>
+<li><a href="#%E5%8A%A8%E6%80%81%E5%AF%BC%E5%85%A5%E7%9A%84%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF">动态导入的使用场景</a></li>
+<li><a href="#getattr-%E7%9A%84%E7%94%A8%E6%B3%95"><code>getattr()</code> 的用法</a>
+<ul>
+<li><a href="#%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81">示例代码</a></li>
+<li><a href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">注意事项</a></li>
 </ul>
 </li>
-<li><a href="#使用注意事项-️">使用注意事项 ⚠️</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-%EF%B8%8F">使用注意事项 ⚠️</a></li>
 </ul>
 </li>
 <li><a href="#acknowledge">Acknowledge</a></li>
 </ul>
 <h2>升级说明</h2>
-<p>最近终于能抽出一些时间, 打算把博客升级一下, 修复之前的一些 bug.
-但是发现之前写的程序很乱. 而且当时水平不如现在, 程序思路很乱.
+<p>最近终于能抽出一些时间, 打算把博客升级一下, 修复之前的一些 bug.<br />
+但是发现之前写的程序很乱. 而且当时水平不如现在, 程序思路很乱.<br />
 这次过了两年多, 决定使用 <a href="https://getpelican.com/"><code>Pelican</code></a> 生成, 然后再使用一些插件, 自己写一些插件, 把原来的主题移植过来. 就成为了现在呈现的版本.</p>
 <p>之前自己写静态博客生成器原因是:</p>
 <ul>
@@ -163,7 +167,7 @@
 </ul>
 <p>现在使用 <a href="https://getpelican.com/"><code>Pelican</code></a> 的原因是</p>
 <ul>
-<li>练习写程序. 由于博客源文件中有一些格式比较特别, 所有要自己设置一下. 这个过程中了解了 <a href="https://getpelican.com/"><code>Pelican</code></a> 的插件机制, 学些到了<a href="#升级博客过程中的笔记由-chatgpt-生成">许多知识</a>.</li>
+<li>练习写程序. 由于博客源文件中有一些格式比较特别, 所有要自己设置一下. 这个过程中了解了 <a href="https://getpelican.com/"><code>Pelican</code></a> 的插件机制, 学些到了<a href="#%E5%8D%87%E7%BA%A7%E5%8D%9A%E5%AE%A2%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E7%AC%94%E8%AE%B0%E7%94%B1-chatgpt-%E7%94%9F%E6%88%90">许多知识</a>.</li>
 <li>由于现在会自己写插件, 所以兼容行问题可以自己解决了. 同时也学会了自己写主题, 可以随心所欲的修改博客的样式.</li>
 <li>之前的需求都实现了,同时还可用获得 <a href="https://getpelican.com/"><code>Pelican</code></a> 的好处. 比如: 许许多多的主题, 丰富的插件(自己写也很方便).</li>
 </ul>
@@ -317,11 +321,11 @@ shape.draw()  # 输出: Drawing a Circle
 </code></pre>
 <h4>注意事项</h4>
 <ul>
-<li><strong>属性不存在时引发异常</strong>：如果 <code>name</code> 不存在且未提供 <code>default</code> 参数，<code>getattr()</code> 会引发 <code>AttributeError</code>。为避免异常，可以传递一个默认值。
-  <code>python
-  cls = getattr(module, "NonExistentClass", None)
-  if cls is None:
-      print("Class not found")</code></li>
+<li><strong>属性不存在时引发异常</strong>：如果 <code>name</code> 不存在且未提供 <code>default</code> 参数，<code>getattr()</code> 会引发 <code>AttributeError</code>。为避免异常，可以传递一个默认值。<pre><code class="language-python">cls = getattr(module, &quot;NonExistentClass&quot;, None)
+if cls is None:
+    print(&quot;Class not found&quot;)
+</code></pre>
+</li>
 <li><strong>安全性问题</strong>：使用 <code>getattr()</code> 获取属性需要特别小心，因为它可以动态地访问任意属性或方法，可能会带来安全性风险。如果用户能够控制传递给 <code>getattr()</code> 的字符串，他们可以试图访问不应暴露的内部类或方法。因此，在使用时要确保输入是可信的或经过适当的验证。</li>
 </ul>
 <h3>使用注意事项 ⚠️</h3>
@@ -333,6 +337,7 @@ shape.draw()  # 输出: Drawing a Circle
 <p><code>while True:</code> 是一种简单但非常强大的循环结构，广泛应用于需要不断重复某些操作的场景，如输入验证、监听服务器、生产者-消费者模型等。它可以确保程序不断运行，直到某个条件触发 <code>break</code> 退出循环，从而灵活地控制程序的执行流程。</p>
 <h2>Acknowledge</h2>
 <p>ChatGPT</p>
+
 </section>
 
 <section class="post-meta">

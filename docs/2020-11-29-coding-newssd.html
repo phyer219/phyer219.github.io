@@ -127,12 +127,10 @@
 
 <section class="markdown-body">
   <!-- toc -->
-
 <!-- more -->
-
 <h1>引言</h1>
 <p>办公室电脑原来的机械硬盘实在有点不行了, 换了一块新的 SSD.</p>
-<p>本来想买个再好一点的, 但是主板有只有 sata 接口. 虽说再折腾一下也可以换更高级的 SSD, 但是也没(有)那(点)么(懒)多(啊)时(啊)间. </p>
+<p>本来想买个再好一点的, 但是主板有只有 sata 接口. 虽说再折腾一下也可以换更高级的 SSD, 但是也没(有)那(点)么(懒)多(啊)时(啊)间.</p>
 <p>我发现 11 月份没有写新的博客. 就这样水?一篇吧! 其实这个可以合在之前那篇 manjaro 装机 note 里的的.</p>
 <h1>买 SSD</h1>
 <p>我之前只知道 SSD 分好几种, 具体也没怎么研究过. 要自己买当然要拆开看看主板上有什么接口. 哎, 自己看了半天也不知道哪个是 SSD接口. 把图片发给店家, 立马知道要买什么样的了!</p>
@@ -140,14 +138,14 @@
 <p>在卖家的帮忙下(吐嘈一下, 东芝改名叫铠侠, 觉得不如原来好听) , 买了 SSD 和 sata 线.</p>
 <h1>装 SSD</h1>
 <p>很快啊, 新的 SSD 第二天就来了. 一拿的感觉是: 轻!</p>
-<p>直接插上 sata 线连上, 开机! 竟然没有识别. 思考为什么会这样的时候, 瞟了一眼说明说: SSD 还需要接电源的! 看来"不用读系列"有时候还是要看的. 我说这硬盘上怎么有两块呲出来的.</p>
+<p>直接插上 sata 线连上, 开机! 竟然没有识别. 思考为什么会这样的时候, 瞟了一眼说明说: SSD 还需要接电源的! 看来&quot;不用读系列&quot;有时候还是要看的. 我说这硬盘上怎么有两块呲出来的.</p>
 <p>可是我并没有买电源线. 就在我一边责怪卖家没有告诉我, 一边又想又得再等一天快递了, 一边又想从哪个废旧电脑上拆一根时, 突然又想到光驱也是 sata 线连到主板上的, 应该也有电源线. 机智如我, 直接拔下来接到了 SSD 上. 开机, 开不了机了, 原来那里接的是机械硬盘. 又一次偶然发现, 这根电源线中间还伸出一个头. 不错, 接上, 完美解决!</p>
 <h1>安装 SSD manjaro</h1>
 <p>记录一下注意的点. Bootloader 选到 KIOXIA (新 SSD ) 上, BIOS select device 也先 KIOXIA.</p>
 <h1>幽灵般的网络</h1>
 <p>在 SSD 上装 win10 和 manjaro 很顺利. 但接下来有一件事我至今不明白是为什么.</p>
-<p>win10 是有网的. 然后装 manjaro, 打开之后没网. 心想是网络配置不对. 然后打开机械硬盘上的 manjaro 对一下配置. 再重启进 SSD manjaro, 突然有网了. 虽然奇怪, 但问题自己好了. </p>
-<p>在 SSD manjaro 上进行了一些设置后, 重启, 又没网了, 啊! 再重启进机械硬盘 manjaro, 啊, 机械 manjaro 也没网了, 很奇怪啊, 之前 机械 manjaro 用了很久, 也没有出现连不上网的情况. 怀疑是办公室的网络出问题了, 进 SSD win10, 也没网, 更加断定我的判断. </p>
+<p>win10 是有网的. 然后装 manjaro, 打开之后没网. 心想是网络配置不对. 然后打开机械硬盘上的 manjaro 对一下配置. 再重启进 SSD manjaro, 突然有网了. 虽然奇怪, 但问题自己好了.</p>
+<p>在 SSD manjaro 上进行了一些设置后, 重启, 又没网了, 啊! 再重启进机械硬盘 manjaro, 啊, 机械 manjaro 也没网了, 很奇怪啊, 之前 机械 manjaro 用了很久, 也没有出现连不上网的情况. 怀疑是办公室的网络出问题了, 进 SSD win10, 也没网, 更加断定我的判断.</p>
 <p>问了一下别人, 有网?</p>
 <p>那是我这根线上的路由器被我搞冲突了? 但是 yf 的还有网, 而且又边了它的网线, 也连不上网, 它的电脑却能连上. 那就是我电脑的问题了.</p>
 <p>应该也不是软件的问题, 因为无论新旧, 四个系统每个都边不上网.</p>
@@ -165,7 +163,7 @@
 <p>一切都好了, 是网卡驱动的问题. 之前 cy 机械硬盘 manjaro 连不上网估计也是这个问题.</p>
 <p>但是!!! 之前四个系统都连不上的原因我依然不知道, 我能想到的就只能是... 想不到是为什么 . 太奇怪了!</p>
 <p>附网上安装: 右键安装</p>
-<p><img alt="fig" src="./2020-11-29-coding-newSSD/image-20201128212856147.png"></p>
+<p><img src="./2020-11-29-coding-newSSD/image-20201128212856147.png" alt="fig" /></p>
 <h1>wayland 换 xorg</h1>
 <p>奇怪的网络问题让我对了机械和 SSD 的 gnome 版本, 发现新的 manjaro 包默认是 wayland. 我突然意识到之前给 cy 的机械硬盘装 manjaro 后闪屏的问题, 很有可能也是用了 wayland.</p>
 <p>换回 Xorg 直接安装 Xorg 包就好了</p>
@@ -175,8 +173,8 @@
 <h1>输入法</h1>
 <p>arch wiki 关于中文输入法的部分升级了, 存放环境变量的文件有了变化, 详见: https://wiki.archlinux.org/index.php/Fcitx_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#.E5.AE.89.E8.A3.85</p>
 <p>还是比较习惯之前的快捷键设置, 截图记录.</p>
-<p><img alt="image-20201128215138108" src="./2020-11-29-coding-newSSD/image-20201128215138108.png"></p>
-<p><img alt="image-20201128215200197" src="./2020-11-29-coding-newSSD/image-20201128215200197.png"></p>
+<p><img src="./2020-11-29-coding-newSSD/image-20201128215138108.png" alt="image-20201128215138108" /></p>
+<p><img src="./2020-11-29-coding-newSSD/image-20201128215200197.png" alt="image-20201128215200197" /></p>
 <h1>evince 中文问题</h1>
 <p>之前装 xpdf 就好了, 可这次不好使了. 这样, 也促使我找到了问题的原因: https://blog.csdn.net/nevasun/article/details/7303529 okular, epdfview, evince的pdf功能均由xpdf的分支poppler提供，poppler从fontconfig的配置文件中读取字体取代pdf里的字体。</p>
 <p>这次安装 <code>poppler-data</code> 就好了</p>
@@ -197,14 +195,14 @@
 <p>新的 manjaro 包里也没有了 GRUB theme, 有点不好看, 可以直接 <code>yaourt grub theme</code> 找到 manjaro 的 grub theme 安装就好.</p>
 <h1>开机挂载</h1>
 <p>旧的机械硬盘可以设置开机自动挂到某个目录, 方法是修改 <code>/etc/fstab</code> , 比如增加记录</p>
-<pre><code class="language-shell">/dev/sda5                 /docu      ntfs    defaults           0 0
+<pre><code class="language-shell">/dev/sda5				  /docu		 ntfs	 defaults		    0 0
 </code></pre>
 <h1>对 manjaro 版本时用到的命令</h1>
 <pre><code class="language-shell">lsb_release -a
 </code></pre>
 <h1>对 hexo</h1>
-<p>hexo 貌似对新版的 node 支持不友好, 需要将 node 进行版本回退才可以正常 deploy. </p>
-<p>用 <code>n</code> 来管理和切换 node 版本. </p>
+<p>hexo 貌似对新版的 node 支持不友好, 需要将 node 进行版本回退才可以正常 deploy.</p>
+<p>用 <code>n</code> 来管理和切换 node 版本.</p>
 <p>查看 node 版本</p>
 <pre><code class="language-shell">node -v
 </code></pre>
@@ -222,6 +220,7 @@
 <pre><code class="language-shell">sudo modprobe vboxdrv
 </code></pre>
 <p>之后即可正常使用</p>
+
 </section>
 
 <section class="post-meta">

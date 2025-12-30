@@ -128,15 +128,12 @@
 <section class="markdown-body">
   <script src="https://unpkg.com/mathjs@13.2.0/lib/browser/math.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.35.0/plotly.min.js"></script>
-
 <form id="form", class="img-like">
   <label for="eq">Enter an equation: f(x)=</label>
   <input type="text" id="eq" value="sin(x)" />
   <input type="submit" value="Draw" />
 </form>
-
 <div id="plot" class="img-like"></div>
-
 <script>
 
         window.MathJax.loader = { load: ['output/svg'] };
@@ -168,21 +165,21 @@ async function draw(idToPlot) {
         const layout = {
             title: 'Plot Example',
             xaxis: {title: {text: '$x$'},
-                    showgrid: false,
-                    // linecolor: 'blue',
-                    // zerolinecolor: 'red'
-                    },
+			        showgrid: false,
+					// linecolor: 'blue',
+					// zerolinecolor: 'red'
+					},
             yaxis: {title: {text: '$f(x)$'}, showgrid: false},
-            paper_bgcolor: "rgba(255, 200, 200, 0)",
-            plot_bgcolor: "rgba(200, 200, 255, 0)",
-            gridcolor:"rgba(0, 0, 255, 1)",
-            autosize: true
+			paper_bgcolor: "rgba(255, 200, 200, 0)",
+			plot_bgcolor: "rgba(200, 200, 255, 0)",
+			gridcolor:"rgba(0, 0, 255, 1)",
+			autosize: true
         };
         const config = {
             responsive: false,
         };
 
-        await Plotly.newPlot(idToPlot, [trace1], layout, config);
+		await Plotly.newPlot(idToPlot, [trace1], layout, config);
         MathJax.typesetPromise();
     }
     catch (err) {
@@ -196,7 +193,6 @@ document.getElementById('form').onsubmit = function (event) {
     draw("plot")
 };
 </script>
-
 <h2>JavaScript Code</h2>
 <pre><code class="language-javascript">
         window.MathJax.loader = { load: ['output/svg'] };
@@ -228,21 +224,21 @@ async function draw(idToPlot) {
         const layout = {
             title: 'Plot Example',
             xaxis: {title: {text: '$x$'},
-                    showgrid: false,
-                    // linecolor: 'blue',
-                    // zerolinecolor: 'red'
-                    },
+			        showgrid: false,
+					// linecolor: 'blue',
+					// zerolinecolor: 'red'
+					},
             yaxis: {title: {text: '$f(x)$'}, showgrid: false},
-            paper_bgcolor: &quot;rgba(255, 200, 200, 0)&quot;,
-            plot_bgcolor: &quot;rgba(200, 200, 255, 0)&quot;,
-            gridcolor:&quot;rgba(0, 0, 255, 1)&quot;,
-            autosize: true
+			paper_bgcolor: &quot;rgba(255, 200, 200, 0)&quot;,
+			plot_bgcolor: &quot;rgba(200, 200, 255, 0)&quot;,
+			gridcolor:&quot;rgba(0, 0, 255, 1)&quot;,
+			autosize: true
         };
         const config = {
             responsive: false,
         };
 
-        await Plotly.newPlot(idToPlot, [trace1], layout, config);
+		await Plotly.newPlot(idToPlot, [trace1], layout, config);
         MathJax.typesetPromise();
     }
     catch (err) {
@@ -262,6 +258,7 @@ document.getElementById('form').onsubmit = function (event) {
 <li><a href="https://github.com/plotly/plotly.js/pull/6073">https://github.com/plotly/plotly.js/pull/6073</a></li>
 <li>ChatGPT 4o</li>
 </ul>
+
 </section>
 
 <section class="post-meta">

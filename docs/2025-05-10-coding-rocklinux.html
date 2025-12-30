@@ -126,26 +126,29 @@
 </section>
 
 <section class="markdown-body">
-  <h2>引言</h2>
-<p>从 2018 年开始入门 Linux，已经 7 年了。
-从 Deepin 到 Manjaro，再到 Rocky Linux。
+  
+<h2>引言</h2>
+<p>从 2018 年开始入门 Linux，已经 7 年了。<br />
+从 Deepin 到 Manjaro，再到 Rocky Linux。<br />
 中间也尝试过 ArchLinux, Debian, Ubuntu, CentOS等等。</p>
-<p>一开始入门是能用就行，折腾桌面环境。
-到现在开始考虑一些安全性，长期的稳定性，不再为了图省事直接关闭防火墙和 SELinux。
-每一行代码都想要理解含义。
+<p>一开始入门是能用就行，折腾桌面环境。<br />
+到现在开始考虑一些安全性，长期的稳定性，不再为了图省事直接关闭防火墙和 SELinux。<br />
+每一行代码都想要理解含义。<br />
 理解配置的逻辑和哲学。</p>
 <h2><code>Rocky Linux</code></h2>
 <p>用 <code>Rocky Linux</code> 用的还不多，在此写一些备忘。</p>
 <p><code>Rocky Linux</code> 是 CentOS 替代品，适用于服务器。</p>
 <ul>
-<li>默认使用 <code>SELinux</code>，</li>
-</ul>
-<ul>
-<li>使用<code>Cockpit</code> 面版，</li>
-</ul>
-<ul>
-<li>使用 LVM 和 <code>xfs</code>文件系统。
-<code>xfs</code>文件系统，性能高，适合处理大文件，并行写入，可以不停机扩容，但是不支持缩容，跨平台兼容性差。</li>
+<li>
+<p>默认使用 <code>SELinux</code>，</p>
+</li>
+<li>
+<p>使用<code>Cockpit</code> 面版，</p>
+</li>
+<li>
+<p>使用 LVM 和 <code>xfs</code>文件系统。<br />
+<code>xfs</code>文件系统，性能高，适合处理大文件，并行写入，可以不停机扩容，但是不支持缩容，跨平台兼容性差。</p>
+</li>
 </ul>
 <h2>LVM（逻辑卷管理）</h2>
 <table>
@@ -296,7 +299,7 @@ sudo lvs
 </table>
 <h2>zsh</h2>
 <h2>硬盘挂载</h2>
-<p><code>etc/systemd/system/hdd1.mount</code></p>
+<p><code>etc/systemd/system/hdd1.mount </code></p>
 <pre><code>[Unit]
 Description=Mount hdd1
 # After=local-fs.target
@@ -404,11 +407,11 @@ sudo semanage port -a -t http_port_t -p tcp 8920
 <pre><code class="language-shell">sudo semanage fcontext -a -f a -t container_file_t -r 's0' '/home/zqw(/.*)?'
 sudo restorecon -Rv /home/zqw/
 </code></pre>
-<p>查看 SELinux 状态：
+<p>查看 SELinux 状态：<br />
 <code>getenforce</code></p>
-<p>关闭：
+<p>关闭：<br />
 <code>setenforce 0</code></p>
-<p>开启：
+<p>开启：<br />
 <code>setenforce 1</code></p>
 <h2>Firewall</h2>
 <pre><code class="language-xml">&lt;!-- /etc/firewalld/services/emby.xml --&gt;
@@ -428,11 +431,11 @@ sudo firewall-cmd --reload
 </code></pre>
 <h2>Systemctl</h2>
 <h2>初始化与用户、权限管理</h2>
-<p>出于安全考虑修改 <code>ssh</code> 的默认端口。
+<p>出于安全考虑修改 <code>ssh</code> 的默认端口。<br />
 修改 <code>/etc/ssh/sshd_config</code> 中的 <code>Port</code></p>
 <p><code>semanage port -a -t ssh_port_t -p tcp #PORTNUMBER</code></p>
 <p><code>firewall-cmd --permanent --add-port=2222/tcp</code></p>
-<p><code>firewall-cmd --reload</code>
+<p><code>firewall-cmd --reload</code><br />
 <code>systemctl restart sshd</code></p>
 <p><code>chsh -s /usr/bin/zsh</code></p>
 <h2>引导</h2>
@@ -509,6 +512,7 @@ wp search-replace 'http://xxx.xxx' 'http://xxx.xxx.xxx.xxx:xxxx' --all-tables --
 </code></pre>
 <h2>致谢</h2>
 <p>所有为 ChatGPT 提供训练素材的人。</p>
+
 </section>
 
 <section class="post-meta">

@@ -59,20 +59,6 @@ MENUITEMS = [('Home', '/'),
 # My config end -------------------------------------------------------------
 
 # ----------------- My plugins and settings ---------------------------------
-# from markdown_math_escape import MathEscapeExtension
-MARKDOWN_ZQW = {
-    'extensions': ['tables',
-                   'fenced_code',
-                   'footnotes',
-                   'mdx_truly_sane_lists',
-                   'markdown_math_escape',
-                   'full_yaml_metadata',
-                   "pymdownx.tilde"],
-    'extension_configs': {
-        'mdx_truly_sane_lists': {'nested_indent': 2},
-        },
-    'output_format': 'html5'}
-
 PLUGINS = ['plugins.md_zqw',
            'plugins.jupyter_zqw',
            'plugins.org_zqw']
@@ -83,3 +69,19 @@ TEMPLATES_TO_MODIFY = ['base.html']
 
 PLUGINS.append('plugins.sitemap')
 # ----------------- My plugins and settings  end ----------------------------
+
+# ----------------- ODL -----------------------------------------------------
+# When use python-markdown, we need this. Now we use markdown-it-py
+# from markdown_math_escape import MathEscapeExtension
+# MARKDOWN_ZQW = {
+#     'extensions': ['tables',
+#                    'fenced_code',
+#                    'footnotes',
+#                    'mdx_truly_sane_lists',
+#                    'markdown_math_escape',
+#                    'full_yaml_metadata',
+#                    "pymdownx.tilde"],
+#     'extension_configs': {
+#         'mdx_truly_sane_lists': {'nested_indent': 2},
+#         },
+#     'output_format': 'html5'}

@@ -127,9 +127,7 @@
 
 <section class="markdown-body">
   <!-- toc -->
-
 <!-- more -->
-
 <p>结合近几年的经验，把<code>matplotlib</code>作图常用的脚本集合在此。这包含了之前一些关于<code>matplotlib</code>作图的博文。</p>
 <h1>作图风格</h1>
 <pre><code class="language-python">from matplotlib import rc
@@ -195,7 +193,7 @@ plt.imshow(np.random.randn(100, 100), cmap=newcmap('jet'))
 plt.colorbar()
 plt.savefig('newcmap.png', transparent=True)
 </code></pre>
-<p><img alt="image-newcamp" src="2023-10-12-coding-matplotlib/newcmap.png"></p>
+<p><img src="2023-10-12-coding-matplotlib/newcmap.png" alt="image-newcamp" /></p>
 <p><a href="2023-10-12-coding-matplotlib/newcmap.py">newcmap.py</a></p>
 <h2>在每个子图插入 colorbar</h2>
 <pre><code class="language-python">import matplotlib.pyplot as plt
@@ -222,7 +220,7 @@ fig.colorbar(im2, ax_cb2)
 fig.savefig('divider.png', transparent=True)
 </code></pre>
 <p><a href="2023-10-12-coding-matplotlib/divider.py">divider.py</a></p>
-<p><img alt="divider" src="2023-10-12-coding-matplotlib/divider.png"></p>
+<p><img src="2023-10-12-coding-matplotlib/divider.png" alt="divider" /></p>
 <h1>双重坐标轴</h1>
 <pre><code class="language-python">import numpy as np
 import matplotlib.pyplot as plt
@@ -243,7 +241,7 @@ ax01.plot(x, np.cos(x))
 ax01.secondary_xaxis(location='top', functions=(lambda x: 2*x, lambda x: 2*x))
 fig.savefig('double_ax.png', transparent=True)
 </code></pre>
-<p><img alt="image-double_ax" src="2023-10-12-coding-matplotlib/double_ax.png"></p>
+<p><img src="2023-10-12-coding-matplotlib/double_ax.png" alt="image-double_ax" /></p>
 <p><a href="2023-10-12-coding-matplotlib/double_ax.py">double_ax.py</a></p>
 <h1>示例 Phys. Rev. B 108, 054313 (2023) fig1</h1>
 <pre><code class="language-python">import matplotlib.pyplot as plt
@@ -473,11 +471,12 @@ fig.savefig(get_file_name(__file__)[:-4] + '.pdf', dpi=200)
 fig.savefig(get_file_name(__file__)[:-4] + '.png', dpi=200, transparent=True)
 </code></pre>
 <p>画图数据：<a href="2023-10-12-coding-matplotlib/fig2/fig2.json">fig2.json</a></p>
-<p><img alt="image-fig2" src="2023-10-12-coding-matplotlib/fig2/fig2.png"></p>
+<p><img src="2023-10-12-coding-matplotlib/fig2/fig2.png" alt="image-fig2" /></p>
 <h1>参考资料</h1>
 <ol>
 <li><a href="https://matplotlib.org/stable/">https://matplotlib.org/stable/</a></li>
 </ol>
+
 </section>
 
 <section class="post-meta">

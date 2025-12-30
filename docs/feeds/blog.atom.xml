@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水 - blog</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/blog.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2025-12-28T00:00:00+08:00</updated><entry><title>个人数据管理策略与感想</title><link href="https://zqw.ink/2025-12-28-blog-data_manage_backup.html" rel="alternate"/><published>2025-12-28T00:00:00+08:00</published><updated>2025-12-28T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-12-28:/2025-12-28-blog-data_manage_backup.html</id><summary type="html">&lt;p&gt;有时引入数据库会使数据看起来很漂亮，但如无必要，应尽量避免引入数据库。&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水 - blog</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/blog.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2025-12-28T00:00:00+08:00</updated><entry><title>个人数据管理策略与感想</title><link href="https://zqw.ink/2025-12-28-blog-data_manage_backup.html" rel="alternate"/><published>2025-12-28T00:00:00+08:00</published><updated>2025-12-28T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-12-28:/2025-12-28-blog-data_manage_backup.html</id><summary type="html">
+&lt;p&gt;有时引入数据库会使数据看起来很漂亮，但如无必要，应尽量避免引入数据库。&lt;/p&gt;
 &lt;h2&gt;照片的确需要数据库&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;照片很多。&lt;/li&gt;
-&lt;li&gt;我们经常需 …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;有时引入数据库会使数据看起来很漂亮，但如无必要，应尽量避免引入数据库。&lt;/p&gt;
+&lt;li&gt;我们经常需 …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
+&lt;p&gt;有时引入数据库会使数据看起来很漂亮，但如无必要，应尽量避免引入数据库。&lt;/p&gt;
 &lt;h2&gt;照片的确需要数据库&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;照片很多。&lt;/li&gt;
@@ -13,9 +15,11 @@
 &lt;h2&gt;不引入没有必要的数据库&lt;/h2&gt;
 &lt;p&gt;引入不必的数据库，会导致：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;数据依赖某个软件。这会导致：&lt;ul&gt;
+&lt;li&gt;数据依赖某个软件。这会导致：
+&lt;ul&gt;
 &lt;li&gt;迁移时数据会很麻烦，甚至丢失。比如用了很多 obsidian 插件。&lt;/li&gt;
-&lt;li&gt;跨端读取的困难，比如：&lt;ul&gt;
+&lt;li&gt;跨端读取的困难，比如：
+&lt;ul&gt;
 &lt;li&gt;文件命名不利于其它软件读取（zotero， calibre）。而有些软件本身并非全平台开发。&lt;/li&gt;
 &lt;li&gt;如果软件本身只有本地数据库，如果用 webDev 同步时会有数据库冲突的风险。&lt;/li&gt;
 &lt;/ul&gt;
@@ -26,32 +30,35 @@
 &lt;/ul&gt;
 &lt;h2&gt;现行方案&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;照片： immich 用 3-2-1 备份原则&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
-&lt;li&gt;其它全直接存文件，用 nextcloud 同步：&lt;ul&gt;
+&lt;li&gt;照片： immich 用 3-2-1 备份原则&lt;sup class="footnote-ref"&gt;&lt;a href="#fn1" id="fnref1"&gt;[1]&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;其它全直接存文件，用 nextcloud 同步：
+&lt;ul&gt;
 &lt;li&gt;论文：直接放到对应的课题内的 reference 的文件夹中。按 &lt;code&gt;year-cite-title&lt;/code&gt; 的格式命名。&lt;/li&gt;
 &lt;li&gt;电子书：直接存相应的文件。&lt;/li&gt;
 &lt;li&gt;随笔：存成 markdown 格式，写好元信息。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="footnote"&gt;
-&lt;hr&gt;
-&lt;ol&gt;
-&lt;li id="fn:1"&gt;
-&lt;p&gt;3-2-1 备份原则指：存储 3 份完整文件，一份原件加上两份拷贝；将文件起码保持在 2 种不同的介质上；将一份拷贝保存在异地。&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;hr class="footnotes-sep" /&gt;
+&lt;section class="footnotes"&gt;
+&lt;ol class="footnotes-list"&gt;
+&lt;li id="fn1" class="footnote-item"&gt;&lt;p&gt;3-2-1 备份原则指：存储 3 份完整文件，一份原件加上两份拷贝；将文件起码保持在 2 种不同的介质上；将一份拷贝保存在异地。 &lt;a href="#fnref1" class="footnote-backref"&gt;↩︎&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</content><category term="blog"/><category term="immich"/><category term="zotero"/></entry><entry><title>研六一年，延期一年，鹅城半载———从品园到百草园，再从百草园到龙光城（连载中……）</title><link href="https://zqw.ink/2025-04-06-blog-baicaoyuan_huizhou.html" rel="alternate"/><published>2025-04-06T00:00:00+08:00</published><updated>2025-04-06T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-04-06:/2025-04-06-blog-baicaoyuan_huizhou.html</id><summary type="html">&lt;h2&gt;序&lt;/h2&gt;
+&lt;/section&gt;
+</content><category term="blog"/><category term="immich"/><category term="zotero"/></entry><entry><title>研六一年，延期一年，鹅城半载———从品园到百草园，再从百草园到龙光城（连载中……）</title><link href="https://zqw.ink/2025-04-06-blog-baicaoyuan_huizhou.html" rel="alternate"/><published>2025-04-06T00:00:00+08:00</published><updated>2025-04-06T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-04-06:/2025-04-06-blog-baicaoyuan_huizhou.html</id><summary type="html">
+&lt;h2&gt;序&lt;/h2&gt;
 &lt;p&gt;从 2022 年 9 月 14 日的《研五下学期总结》，已经过去了两年半的时间。&lt;/p&gt;
-&lt;p&gt;遗憾的是，并没有如《研五下学期总结》中所说，能够按时毕 …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;序&lt;/h2&gt;
+&lt;p&gt;遗憾的是，并没有如《研五下学期总结》中所说，能够按时毕 …&lt;/p&gt;</summary><content type="html">
+&lt;h2&gt;序&lt;/h2&gt;
 &lt;p&gt;从 2022 年 9 月 14 日的《研五下学期总结》，已经过去了两年半的时间。&lt;/p&gt;
 &lt;p&gt;遗憾的是，并没有如《研五下学期总结》中所说，能够按时毕业。&lt;/p&gt;
 &lt;p&gt;令人满意的是，找到了一个心仪的博后。&lt;/p&gt;
 &lt;h2&gt;研六上&lt;/h2&gt;
 &lt;h3&gt;学业上&lt;/h3&gt;
 &lt;p&gt;2022年秋冬，研六上学期，主要在为毕业准备两个事情。&lt;/p&gt;
-&lt;p&gt;一是准备同步阻塞的文章，准备用来毕业。但是，此时合作老师建议重新调整一下，投 PRL。
-所以又重新画图。此时，这个工作能在 2023 年 3 月份前接收，这个念头从我脑中消失，不再抱有希望。
+&lt;p&gt;一是准备同步阻塞的文章，准备用来毕业。但是，此时合作老师建议重新调整一下，投 PRL。&lt;br /&gt;
+所以又重新画图。此时，这个工作能在 2023 年 3 月份前接收，这个念头从我脑中消失，不再抱有希望。&lt;br /&gt;
 这个工作在研六上学期结束后的寒假，春节过后，才投出去。&lt;/p&gt;
 &lt;p&gt;这个学期的另一个事情，是写 rf 谱的文章，这成了我可能按时毕业的一线希望。如果能够尽快写好，投 CTP，然后一个月被接收，就有按时毕业的希望。然而，几乎没有进展。&lt;/p&gt;
 &lt;p&gt;同时，这个学期也联系了香港大学的一个老师，他也有空位，欢迎到时再联系。&lt;/p&gt;
@@ -59,7 +66,7 @@
 &lt;p&gt;这是从深圳回来后的第一个学期，组里的人员发生了变化，舒哥和 cy 毕业了，xc 加入到了组里。组里也产生了新的大师姐，大师兄。人员变化，大家之间的关系也有变化。之前不怎么熟悉的成员变得更加熟悉。&lt;/p&gt;
 &lt;h3&gt;疫情&lt;/h3&gt;
 &lt;p&gt;也是在这个学期，大家几乎都阳了，清零政策再也执行不下去。&lt;/p&gt;
-&lt;p&gt;全面解封的前几天，学校里出现阳的，哪个宿舍楼里有阳的，就当天早上封楼。
+&lt;p&gt;全面解封的前几天，学校里出现阳的，哪个宿舍楼里有阳的，就当天早上封楼。&lt;br /&gt;
 我也总是想，早上早点出宿舍，就不至于在宿舍荒废一天。去不了北园，就在明德楼找教室上自习。&lt;/p&gt;
 &lt;p&gt;清楚地记得，在巨大的毕业压力下，在兵荒马乱的疫情下，我竟然一大早起来，跑到明德楼的教室，就我一个人在教室里，看高等量子力学，理解之前疑惑和不清晰的地方，大概是含时微扰那一部分。一方面，是我菜，一方面，有点浪漫主义的感觉。&lt;/p&gt;
 &lt;p&gt;终于，我也阳了，2022 年 12 月 13 日 21 点 56 分，就是在明德楼开心地看了一天高等量子力学，回到宿舍之后，体温烧起来了，37度7。发烧，浑身疼得整晚没睡着觉，还是头一回经历。&lt;/p&gt;
@@ -89,7 +96,7 @@
 &lt;p&gt;仿佛，这个学期，才是2020年春天的，博一。&lt;/p&gt;
 &lt;h2&gt;研七上&lt;/h2&gt;
 &lt;p&gt;研七上，延期上。2023年9月。开学没几天，就决定了再延期半年。&lt;/p&gt;
-&lt;p&gt;这学期是在百草园度过的第一个学期。在百草园和学校之前通勤。坐二层公交。果真人对时间的感觉是对数的，现在的我，明明每一个小学同学的名字都记得很清楚，却不记得两年前坐了一年的公交是几路。如果记忆从5岁算起，小学的有效时候长度是 \(\ln(13-5) \ln(7-5) \approx 1.386\) ，而百草园的通勤时光不过是 \(\ln(29-5) \ln(28-5) \approx 0.043\)。&lt;/p&gt;
+&lt;p&gt;这学期是在百草园度过的第一个学期。在百草园和学校之前通勤。坐二层公交。果真人对时间的感觉是对数的，现在的我，明明每一个小学同学的名字都记得很清楚，却不记得两年前坐了一年的公交是几路。如果记忆从5岁算起，小学的有效时候长度是 $\ln(13-5) \ln(7-5) \approx 1.386$ ，而百草园的通勤时光不过是 $\ln(29-5) \ln(28-5) \approx 0.043$。&lt;/p&gt;
 &lt;p&gt;9月26，大家一起去了深圳，第一次去深技大。晚上一起去堕落街吃饭，去海滩玩滑沙，第一次出境，去香港玩到很晚才回，去澳门更是战到凌晨，在车上过夜。&lt;/p&gt;
 &lt;p&gt;从深圳回到北京，分到了宿舍。本来想冬天的时候，如果懒了，可以住在学校。就买了所有的宿舍用品。结果却是一次没用过，来看夏天毕业的时候，又把全新的宿舍用品搬了出来。&lt;/p&gt;
 &lt;p&gt;10月份的时候，还兴致勃勃的去北科参加了ASML的招聘，还参加了当场的笔试。然后之前再也没有收到他们的消息。这大概是目前为止我唯一一次参加某个企业的招聘了。&lt;/p&gt;
@@ -104,14 +111,15 @@
 &lt;p&gt;学生生涯的最后一个学期。&lt;/p&gt;
 &lt;p&gt;这学期自己做饭的次数少了，减肥事业也迎来了巅峰，66公斤左右。&lt;/p&gt;
 &lt;p&gt;在准备答辩的同时，也在找博后的位置。发了好多邮件，期待回复。&lt;/p&gt;
-&lt;p&gt;在找博后位置的同时，突然心血来潮，又是烫头，又是打羽毛球，认识了非常好的朋友。
+&lt;p&gt;在找博后位置的同时，突然心血来潮，又是烫头，又是打羽毛球，认识了非常好的朋友。&lt;br /&gt;
 虽然有一丝丝遗憾，但是我觉得我的学生生涯可以圆满结束了。&lt;/p&gt;
 &lt;p&gt;在五一的时候，大奔和阿斯旺来找我玩了。七年没见了，大奔成为了战神，阿斯旺变得有沧桑。&lt;/p&gt;
 &lt;p&gt;在毕业的事情基本完成之后，去杭州找了坤哥，去上海找了建国。算是毕业旅行。这是第一次以旅行为目的的独自远行。&lt;/p&gt;
 &lt;p&gt;毕业之后暑假去了重庆冷原子。吃重庆火锅，去重庆的各个景点玩，在街头演出的地方点歌，这也算是毕业旅行吧。&lt;/p&gt;
 &lt;p&gt;8月份的时候从北京回家，去济南找了老师口中的好学生刘老板。这也是毕业旅行的一部分的。&lt;/p&gt;
 &lt;h2&gt;鹅城 GAP&lt;/h2&gt;
-&lt;p&gt;8 月底回到百草园，在进行了一个月的告别之后，我和舒哥先行一步，在 9 月份准备南下。&lt;/p&gt;</content><category term="blog"/><category term="总结"/><category term="深圳"/><category term="延期"/><category term="毕业"/><category term="鹅城"/><category term="惠州"/></entry><entry><title>青岛青年冷原子</title><link href="https://zqw.ink/2021-08-31-thinking-tsingtao.html" rel="alternate"/><published>2021-08-31T00:00:00+08:00</published><updated>2021-08-31T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-08-31:/2021-08-31-thinking-tsingtao.html</id><summary type="html">
+&lt;p&gt;8 月底回到百草园，在进行了一个月的告别之后，我和舒哥先行一步，在 9 月份准备南下。&lt;/p&gt;
+</content><category term="blog"/><category term="总结"/><category term="深圳"/><category term="延期"/><category term="毕业"/><category term="鹅城"/><category term="惠州"/></entry><entry><title>青岛青年冷原子</title><link href="https://zqw.ink/2021-08-31-thinking-tsingtao.html" rel="alternate"/><published>2021-08-31T00:00:00+08:00</published><updated>2021-08-31T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-08-31:/2021-08-31-thinking-tsingtao.html</id><summary type="html">
 &lt;h2&gt;还是最喜欢 poster 环节&lt;/h2&gt;
 
 &lt;p&gt;第二次参加青年冷原子. 第一次是在两年前. 还是最喜欢 poster 环节, 与人交流的快感.&lt;/p&gt;
@@ -161,21 +169,23 @@
 &lt;p&gt;总觉得现在的事, 应该发生在 16 岁身上. 多么希望青春不曾结束, 不要结束!&lt;/p&gt;
 
 &lt;p&gt;&lt;p&gt;&lt;img src='2021-08-31-thinking-tsingtao/stop.jpg' alt='figalt' max-width:100%&gt;&lt;p&gt;&lt;/p&gt;
-</content><category term="blog"/><category term="青岛"/><category term="青年冷原子"/></entry><entry><title>从来没有一个安宁的夏天</title><link href="https://zqw.ink/2021-06-15-thinking-no_summer.html" rel="alternate"/><published>2021-06-15T00:00:00+08:00</published><updated>2021-06-15T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-06-15:/2021-06-15-thinking-no_summer.html</id><summary type="html">&lt;hr&gt;
+</content><category term="blog"/><category term="青岛"/><category term="青年冷原子"/></entry><entry><title>从来没有一个安宁的夏天</title><link href="https://zqw.ink/2021-06-15-thinking-no_summer.html" rel="alternate"/><published>2021-06-15T00:00:00+08:00</published><updated>2021-06-15T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-06-15:/2021-06-15-thinking-no_summer.html</id><summary type="html">
+&lt;hr /&gt;
 &lt;p&gt;命运,&lt;/p&gt;
 &lt;p&gt;在毫无征兆时,&lt;/p&gt;
 &lt;p&gt;就在一瞬间被别人改变.&lt;/p&gt;
 &lt;p&gt;没有任何反应的时间.&lt;/p&gt;
-&lt;hr&gt;
+&lt;hr /&gt;
 &lt;p&gt;夏天,&lt;/p&gt;
 &lt;p&gt;被施加了诅咒.&lt;/p&gt;
 &lt;p&gt;每当满怀期待地去迎接,&lt;/p&gt;
-&lt;p&gt;就会迎来一 …&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
+&lt;p&gt;就会迎来一 …&lt;/p&gt;</summary><content type="html">
+&lt;hr /&gt;
 &lt;p&gt;命运,&lt;/p&gt;
 &lt;p&gt;在毫无征兆时,&lt;/p&gt;
 &lt;p&gt;就在一瞬间被别人改变.&lt;/p&gt;
 &lt;p&gt;没有任何反应的时间.&lt;/p&gt;
-&lt;hr&gt;
+&lt;hr /&gt;
 &lt;p&gt;夏天,&lt;/p&gt;
 &lt;p&gt;被施加了诅咒.&lt;/p&gt;
 &lt;p&gt;每当满怀期待地去迎接,&lt;/p&gt;
@@ -187,7 +197,7 @@
 &lt;p&gt;不喜欢看悬疑恐怖的原因,&lt;/p&gt;
 &lt;p&gt;是人生就已经悬疑恐怖了,&lt;/p&gt;
 &lt;p&gt;只能靠美好的剧情活下去.&lt;/p&gt;
-&lt;hr&gt;
+&lt;hr /&gt;
 &lt;p&gt;温柔地人,&lt;/p&gt;
 &lt;p&gt;总是不断地被伤害.&lt;/p&gt;
 &lt;p&gt;至于原因,&lt;/p&gt;
@@ -200,12 +210,12 @@
 &lt;p&gt;还是失望,&lt;/p&gt;
 &lt;p&gt;除了悲伤,&lt;/p&gt;
 &lt;p&gt;还是悲伤.&lt;/p&gt;
-&lt;hr&gt;
+&lt;hr /&gt;
 &lt;p&gt;厌倦了太多的人在喋喋不休的讲大道理.&lt;/p&gt;
 &lt;p&gt;而更可笑的是,&lt;/p&gt;
 &lt;p&gt;那些讲大道理的人,&lt;/p&gt;
 &lt;p&gt;总有一天自己也因为讲过的大道理而被人耻笑.&lt;/p&gt;
-&lt;hr&gt;
+&lt;hr /&gt;
 &lt;p&gt;努力,&lt;/p&gt;
 &lt;p&gt;真的是一个骗人的东西.&lt;/p&gt;
 &lt;p&gt;努力不过是和自己较劲而已.&lt;/p&gt;
@@ -220,7 +230,7 @@
 &lt;p&gt;童年就只剩下谎言,&lt;/p&gt;
 &lt;p&gt;少年就只是一个异类.&lt;/p&gt;
 &lt;p&gt;成年人就只是被掏空的躯壳而已了.&lt;/p&gt;
-&lt;hr&gt;
+&lt;hr /&gt;
 &lt;p&gt;命运,&lt;/p&gt;
 &lt;p&gt;也仿佛被施加了诅咒.&lt;/p&gt;
 &lt;p&gt;每天的日常,&lt;/p&gt;
@@ -232,7 +242,7 @@
 &lt;p&gt;降临之时,&lt;/p&gt;
 &lt;p&gt;根本无法拒绝!&lt;/p&gt;
 &lt;p&gt;也意想不到的木然.&lt;/p&gt;
-&lt;hr&gt;
+&lt;hr /&gt;
 &lt;p&gt;夏天,&lt;/p&gt;
 &lt;p&gt;想有一个夏天,&lt;/p&gt;
 &lt;p&gt;一个简单的夏天,&lt;/p&gt;
@@ -246,7 +256,7 @@
 &lt;p&gt;微风吹动,&lt;/p&gt;
 &lt;p&gt;就躺在那里,&lt;/p&gt;
 &lt;p&gt;什么也不想.&lt;/p&gt;
-&lt;hr&gt;
+&lt;hr /&gt;
 &lt;p&gt;可是,&lt;/p&gt;
 &lt;p&gt;美好的夏天总是在别人的世界里.&lt;/p&gt;
 &lt;p&gt;我的夏天是被诅咒的夏天,&lt;/p&gt;
@@ -255,103 +265,116 @@
 &lt;p&gt;好想被别人爱,&lt;/p&gt;
 &lt;p&gt;可是,&lt;/p&gt;
 &lt;p&gt;还有勇气和力气吗?&lt;/p&gt;
-&lt;hr&gt;</content><category term="blog"/><category term="夏天"/><category term="文学青年"/></entry><entry><title>穿网线</title><link href="https://zqw.ink/2021-02-09-blog-net_wire.html" rel="alternate"/><published>2021-02-09T00:00:00+08:00</published><updated>2021-02-09T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-02-09:/2021-02-09-blog-net_wire.html</id><summary type="html">&lt;h2&gt;2021-02-09 星期二&lt;/h2&gt;
+&lt;hr /&gt;
+</content><category term="blog"/><category term="夏天"/><category term="文学青年"/></entry><entry><title>穿网线</title><link href="https://zqw.ink/2021-02-09-blog-net_wire.html" rel="alternate"/><published>2021-02-09T00:00:00+08:00</published><updated>2021-02-09T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-02-09:/2021-02-09-blog-net_wire.html</id><summary type="html">
+&lt;h2&gt;2021-02-09 星期二&lt;/h2&gt;
 &lt;p&gt;天气: 睛 Entered on [2021-02-09 二 22:50]&lt;/p&gt;
 &lt;p&gt;今天去奶奶家了.&lt;/p&gt;
 &lt;p&gt;回老家玩了一下午, 看了看初中的物理课本.&lt;/p&gt;
 &lt;p&gt;下午在车里把盖侬打了.&lt;/p&gt;
-&lt;p&gt;晚上 …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;2021-02-09 星期二&lt;/h2&gt;
+&lt;p&gt;晚上 …&lt;/p&gt;</summary><content type="html">
+&lt;h2&gt;2021-02-09 星期二&lt;/h2&gt;
 &lt;p&gt;天气: 睛 Entered on [2021-02-09 二 22:50]&lt;/p&gt;
 &lt;p&gt;今天去奶奶家了.&lt;/p&gt;
 &lt;p&gt;回老家玩了一下午, 看了看初中的物理课本.&lt;/p&gt;
 &lt;p&gt;下午在车里把盖侬打了.&lt;/p&gt;
 &lt;p&gt;晚上穿网线, 穿了一晚上也没穿过来. 最后把红米路由器设成中继解决了(之前怎么没想到...)&lt;/p&gt;
-&lt;p&gt;放弃 openwrt 了, 学不到什么实质性的东西.&lt;/p&gt;</content><category term="blog"/><category term="日记"/><category term="org-mode 日记"/><category term="openwrt"/></entry><entry><title>搞 openwrt，失败</title><link href="https://zqw.ink/2021-02-08-blog-openwrt.html" rel="alternate"/><published>2021-02-08T00:00:00+08:00</published><updated>2021-02-08T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-02-08:/2021-02-08-blog-openwrt.html</id><content type="html">&lt;h2&gt;2021-02-08 星期一&lt;/h2&gt;
+&lt;p&gt;放弃 openwrt 了, 学不到什么实质性的东西.&lt;/p&gt;
+</content><category term="blog"/><category term="日记"/><category term="org-mode 日记"/><category term="openwrt"/></entry><entry><title>搞 openwrt，失败</title><link href="https://zqw.ink/2021-02-08-blog-openwrt.html" rel="alternate"/><published>2021-02-08T00:00:00+08:00</published><updated>2021-02-08T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-02-08:/2021-02-08-blog-openwrt.html</id><content type="html">
+&lt;h2&gt;2021-02-08 星期一&lt;/h2&gt;
 &lt;p&gt;天气: 睛 Entered on [2021-02-08 一 23:26]&lt;/p&gt;
 &lt;p&gt;在 rasberry pi 4b 上搞 openwrt 没搞好, 头疼.&lt;/p&gt;
-&lt;p&gt;还看了一些编译原理.&lt;/p&gt;</content><category term="blog"/><category term="日记"/><category term="org-mode 日记"/><category term="openwrt"/><category term="编译原理"/></entry><entry><title>扛管子，学 org-mode</title><link href="https://zqw.ink/2021-02-07-blog-kang_guan_zi.html" rel="alternate"/><published>2021-02-07T00:00:00+08:00</published><updated>2021-02-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-02-07:/2021-02-07-blog-kang_guan_zi.html</id><content type="html">&lt;h2&gt;*** 2021-02-07 星期日&lt;/h2&gt;
+&lt;p&gt;还看了一些编译原理.&lt;/p&gt;
+</content><category term="blog"/><category term="日记"/><category term="org-mode 日记"/><category term="openwrt"/><category term="编译原理"/></entry><entry><title>扛管子，学 org-mode</title><link href="https://zqw.ink/2021-02-07-blog-kang_guan_zi.html" rel="alternate"/><published>2021-02-07T00:00:00+08:00</published><updated>2021-02-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-02-07:/2021-02-07-blog-kang_guan_zi.html</id><content type="html">
+&lt;h2&gt;*** 2021-02-07 星期日&lt;/h2&gt;
 &lt;p&gt;天气: 睛 Entered on [2021-02-07 日 22:21]&lt;/p&gt;
 &lt;p&gt;今天第一天用 org-mode 写日记.&lt;/p&gt;
 &lt;p&gt;主要学习了 org-mode 的 capture.&lt;/p&gt;
-&lt;p&gt;回家扛架管干了一些活.&lt;/p&gt;</content><category term="blog"/><category term="日记"/><category term="org-mode 日记"/><category term="扛管子"/></entry><entry><title>和唯一知道星星为什么会发光的人一起散步</title><link href="https://zqw.ink/2020-12-20-blog-walk_with_why_star_shining.html" rel="alternate"/><published>2020-12-20T00:00:00+08:00</published><updated>2020-12-20T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-12-20:/2020-12-20-blog-walk_with_why_star_shining.html</id><summary type="html">&lt;p&gt;&lt;em&gt;《和唯一知道星星为什么会发光的人一起散步》, 蒋方舟, 中信出版集团, 2020&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;全局共有四篇小说, 外加一篇后记, 是蒋方舟的新书 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;em&gt;《和唯一知道星星为什么会发光的人一起散步》, 蒋方舟, 中信出版集团, 2020&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;回家扛架管干了一些活.&lt;/p&gt;
+</content><category term="blog"/><category term="日记"/><category term="org-mode 日记"/><category term="扛管子"/></entry><entry><title>和唯一知道星星为什么会发光的人一起散步</title><link href="https://zqw.ink/2020-12-20-blog-walk_with_why_star_shining.html" rel="alternate"/><published>2020-12-20T00:00:00+08:00</published><updated>2020-12-20T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-12-20:/2020-12-20-blog-walk_with_why_star_shining.html</id><summary type="html">
+&lt;p&gt;&lt;em&gt;《和唯一知道星星为什么会发光的人一起散步》, 蒋方舟, 中信出版集团, 2020&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;全局共有四篇小说, 外加一篇后记, 是蒋方舟的新书 …&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;&lt;em&gt;《和唯一知道星星为什么会发光的人一起散步》, 蒋方舟, 中信出版集团, 2020&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;全局共有四篇小说, 外加一篇后记, 是蒋方舟的新书, 买的签名版.&lt;/p&gt;
 &lt;p&gt;上周就读完了, 没有时间来写.&lt;/p&gt;
-&lt;p&gt;如果按喜欢程度排序的话, 是 边境来了陌生人 &amp;gt; 和唯一知道星星为什么会发光的人一起散
+&lt;p&gt;如果按喜欢程度排序的话, 是 边境来了陌生人 &amp;gt; 和唯一知道星星为什么会发光的人一起散&lt;br /&gt;
 步 &amp;gt; 在海边放了一颗巨大的蛋 &amp;gt; 在威尼斯重建时间&lt;/p&gt;
 &lt;p&gt;我觉得作者写的故事很好, 但是关于科幻, 或者说幻想的部分有些生硬, 奇怪.&lt;/p&gt;
 &lt;h2&gt;在海边放了一颗巨大的蛋&lt;/h2&gt;
-&lt;p&gt;有一天, 在海边的一个村子里, 突然多出了一块巨大的石头. 至于是从哪里来的, 每个人都
-有不同的看法. 有一个叫普修的人, 在石头里造了一个与世隔绝的世界. 大家后来搬了进去.
+&lt;p&gt;有一天, 在海边的一个村子里, 突然多出了一块巨大的石头. 至于是从哪里来的, 每个人都&lt;br /&gt;
+有不同的看法. 有一个叫普修的人, 在石头里造了一个与世隔绝的世界. 大家后来搬了进去.&lt;br /&gt;
 原来这个巨大的石头是南十字星人的一颗棋子.&lt;/p&gt;
 &lt;h2&gt;和唯一知道星星为什么会发光的人一起散步&lt;/h2&gt;
-&lt;p&gt;"我" 经历了大瘟疫, 之后人们的心灵都留下了创伤. 之后嫁给了一位地理老师. 瘟疫在世
-界各国人们心里留下的创伤, 促使世界不断爆发战争. 战争中人们都疯狂了. 战争结束, 国
-家却完全自我封闭, 对国民, 新出生的小孩都教育他们没有外国这个概念的存在. "我" 的
+&lt;p&gt;&amp;quot;我&amp;quot; 经历了大瘟疫, 之后人们的心灵都留下了创伤. 之后嫁给了一位地理老师. 瘟疫在世&lt;br /&gt;
+界各国人们心里留下的创伤, 促使世界不断爆发战争. 战争中人们都疯狂了. 战争结束, 国&lt;br /&gt;
+家却完全自我封闭, 对国民, 新出生的小孩都教育他们没有外国这个概念的存在. &amp;quot;我&amp;quot; 的&lt;br /&gt;
 丈夫和他的一个学生, 也是情人出逃国外, 中途丧生.&lt;/p&gt;
 &lt;h2&gt;在威尼斯重建时间&lt;/h2&gt;
-&lt;p&gt;"我" 是一名物理物理学家, 双亲皆不在人世. 却被一位科学家朋友做了他新发明的手术,
-"我" 不再被时间束缚, 穿梭于不同的时间, 不同的世界. "我" 却同时也像是被关在时间的
+&lt;p&gt;&amp;quot;我&amp;quot; 是一名物理物理学家, 双亲皆不在人世. 却被一位科学家朋友做了他新发明的手术,&lt;br /&gt;
+&amp;quot;我&amp;quot; 不再被时间束缚, 穿梭于不同的时间, 不同的世界. &amp;quot;我&amp;quot; 却同时也像是被关在时间的&lt;br /&gt;
 牢笼里.&lt;/p&gt;
 &lt;h2&gt;边境来了陌生人&lt;/h2&gt;
 &lt;p&gt;边境小镇来了一位陌生人, 小屋里有许多的人. 每个人都讲了一个美妙绝伦的故事.&lt;/p&gt;
 &lt;h2&gt;后记&lt;/h2&gt;
-&lt;p&gt;原来这四个故事都是对应于一个建筑.&lt;/p&gt;</content><category term="blog"/><category term="读书笔记"/><category term="蒋方舟"/></entry><entry><title>跑鞋</title><link href="https://zqw.ink/2020-11-08-blog-shoes.html" rel="alternate"/><published>2020-11-08T00:00:00+08:00</published><updated>2020-11-08T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-11-08:/2020-11-08-blog-shoes.html</id><summary type="html">&lt;h2&gt;主线故事框架&lt;/h2&gt;
+&lt;p&gt;原来这四个故事都是对应于一个建筑.&lt;/p&gt;
+</content><category term="blog"/><category term="读书笔记"/><category term="蒋方舟"/></entry><entry><title>跑鞋</title><link href="https://zqw.ink/2020-11-08-blog-shoes.html" rel="alternate"/><published>2020-11-08T00:00:00+08:00</published><updated>2020-11-08T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-11-08:/2020-11-08-blog-shoes.html</id><summary type="html">
+&lt;h2&gt;主线故事框架&lt;/h2&gt;
 &lt;p&gt;我想要一双跑鞋.&lt;/p&gt;
-&lt;p&gt;我喜欢跑步, 也擅长跑步. 无论短跑还是长跑. 学校每年秋天举办的运动会中, 我总会得冠
-军 …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;主线故事框架&lt;/h2&gt;
+&lt;p&gt;我喜欢跑步, 也擅长跑步. 无论短跑还是长跑. 学校每年秋天举办的运动会中, 我总会得冠&lt;br /&gt;
+军 …&lt;/p&gt;</summary><content type="html">
+&lt;h2&gt;主线故事框架&lt;/h2&gt;
 &lt;p&gt;我想要一双跑鞋.&lt;/p&gt;
-&lt;p&gt;我喜欢跑步, 也擅长跑步. 无论短跑还是长跑. 学校每年秋天举办的运动会中, 我总会得冠
+&lt;p&gt;我喜欢跑步, 也擅长跑步. 无论短跑还是长跑. 学校每年秋天举办的运动会中, 我总会得冠&lt;br /&gt;
 军.&lt;/p&gt;
-&lt;p&gt;除了长跑, 我还喜欢画漫画, 也擅长画漫画. 一个人照着动漫截图画, 还没有遇到相同喜好
+&lt;p&gt;除了长跑, 我还喜欢画漫画, 也擅长画漫画. 一个人照着动漫截图画, 还没有遇到相同喜好&lt;br /&gt;
 的人.&lt;/p&gt;
 &lt;p&gt;除此之外, 再没有别的喜好, 也没有别的擅长的事情.&lt;/p&gt;
-&lt;p&gt;我小学时的成绩还不错, 初中的成绩也不错. 因此, 我能够继续上高中. 大多数初中同学毕
-业就结束了学生生涯. 或者都没熬到初中毕业就回家了. 去饭店打工. 找个修车师傅当学徒.
-总之就最好有一门手艺, 才能混口饭吃. 还有一些就去小区当保安, 就等着十八岁一到, 想
+&lt;p&gt;我小学时的成绩还不错, 初中的成绩也不错. 因此, 我能够继续上高中. 大多数初中同学毕&lt;br /&gt;
+业就结束了学生生涯. 或者都没熬到初中毕业就回家了. 去饭店打工. 找个修车师傅当学徒.&lt;br /&gt;
+总之就最好有一门手艺, 才能混口饭吃. 还有一些就去小区当保安, 就等着十八岁一到, 想&lt;br /&gt;
 办法去当兵, 圆从小的自己的梦想, 当然家里也非常支持.&lt;/p&gt;
 &lt;p&gt;镇上没有高中, 隔周乘坐班车从县实验中学回家, 再回学校.&lt;/p&gt;
 &lt;p&gt;我也不知道为什么上高中, 反正成绩还可以就上了.&lt;/p&gt;
-&lt;p&gt;高一入校, 正赶上校区搬迁. 新校区在县郊一片桃园隔壁, 以前是一块坟地. 操场还没有建
+&lt;p&gt;高一入校, 正赶上校区搬迁. 新校区在县郊一片桃园隔壁, 以前是一块坟地. 操场还没有建&lt;br /&gt;
 好. 冬天课间去跑操, 坑坑洼洼, 激起阵阵黄烟. 我们就是帮学校压操场的.&lt;/p&gt;
 &lt;p&gt;新校区光秃秃的, 小树苗刚栽上, 就那么几片叶.&lt;/p&gt;
 &lt;p&gt;高一开学没多久, 就要举行秋季运动会了. 我当然取得了很好的成绩.&lt;/p&gt;
-&lt;p&gt;县体教局的人找上门来. 说好条件不错, 可以去参加运动员选拔, 成为职业运动员. 我太开
+&lt;p&gt;县体教局的人找上门来. 说好条件不错, 可以去参加运动员选拔, 成为职业运动员. 我太开&lt;br /&gt;
 心了. 时间定了, 就在下个月, 10 月 25 号.&lt;/p&gt;
 &lt;p&gt;回到宿舍, 当天晚上久久不能入睡. 激动兴奋.&lt;/p&gt;
 &lt;p&gt;接下来的日子里, 我每天早起, 为选拔而努力着. 就在黄土操场上每天开心地帮学校压路.&lt;/p&gt;
-&lt;p&gt;终于到了选拔那天. 信心满满地去参加. 可是结果却是离入选差了一名. 选拔的老师看了看
-我的鞋, 告诉我, 你天赋非常好, 回去好好练习, 换一双合适的鞋, 明年一定能入选. 看了
-看自己的双脚上的布鞋, 又看了看别人的双脚上跑鞋. 我明白了, 我需要一双跑鞋. 就是之
+&lt;p&gt;终于到了选拔那天. 信心满满地去参加. 可是结果却是离入选差了一名. 选拔的老师看了看&lt;br /&gt;
+我的鞋, 告诉我, 你天赋非常好, 回去好好练习, 换一双合适的鞋, 明年一定能入选. 看了&lt;br /&gt;
+看自己的双脚上的布鞋, 又看了看别人的双脚上跑鞋. 我明白了, 我需要一双跑鞋. 就是之&lt;br /&gt;
 前在大集上看到的那种. 大概 50 元一双?&lt;/p&gt;
 &lt;p&gt;今天周一, 这周刚好大修, 回家说一声, 去集上买一双.&lt;/p&gt;
 &lt;p&gt;终于到了回家的日子, 周五下午提前放学赶上了班车, 回家!&lt;/p&gt;
-&lt;p&gt;回到家里, 向爸爸及此事. 可他的答复却是:"跑什么步, 好好上你的学吧!" 总之不给买.
+&lt;p&gt;回到家里, 向爸爸及此事. 可他的答复却是:&amp;quot;跑什么步, 好好上你的学吧!&amp;quot; 总之不给买.&lt;br /&gt;
 爸爸说不买, 也就不说什么了. 我据理力争, 最终却还是以失败告终.&lt;/p&gt;
-&lt;p&gt;我也很灰心丧气. 即使如此, 其实我可以找别人借一双, 明年去参赛, 也可以打工买一双.
-总之, 如果我想, 可以有一百种方法, 得到一双跑鞋去参加明年的选拔. 但是, 心中总有个
+&lt;p&gt;我也很灰心丧气. 即使如此, 其实我可以找别人借一双, 明年去参赛, 也可以打工买一双.&lt;br /&gt;
+总之, 如果我想, 可以有一百种方法, 得到一双跑鞋去参加明年的选拔. 但是, 心中总有个&lt;br /&gt;
 东西压着. 如果爸爸不买, 我就不去参加选拔了.&lt;/p&gt;
 &lt;p&gt;从此, 我再也不愿意跑步. 也不愿意参加运动会. 运动会的时候, 我就躲在教室里画画.&lt;/p&gt;
-&lt;p&gt;我也努力学习. 奇怪的是, 总也追赶不上那些成绩优秀的同学. 不仅如此, 还越来越差. 入
-学的时候, 全年级 1200 人, 我的成绩是 150 名, 高一下期末, 我是 600 名. 高二下上期
-末, 是 1000 名, 几乎垫底了. 我失去了继续下去的勇气. 这个名次, 参加高考就是浪费时
+&lt;p&gt;我也努力学习. 奇怪的是, 总也追赶不上那些成绩优秀的同学. 不仅如此, 还越来越差. 入&lt;br /&gt;
+学的时候, 全年级 1200 人, 我的成绩是 150 名, 高一下期末, 我是 600 名. 高二下上期&lt;br /&gt;
+末, 是 1000 名, 几乎垫底了. 我失去了继续下去的勇气. 这个名次, 参加高考就是浪费时&lt;br /&gt;
 间与报名费. 全校前 50 名才有可能考上一本.&lt;/p&gt;
-&lt;p&gt;我缀学回家了. 却没有找到合适的地方打工. 家里花 1200 元给我买了手机. 我就每天在家
+&lt;p&gt;我缀学回家了. 却没有找到合适的地方打工. 家里花 1200 元给我买了手机. 我就每天在家&lt;br /&gt;
 里的小南屋里打游戏, 每天下午一点起床. 不知道该干什么.&lt;/p&gt;
-&lt;p&gt;有天, 同村的, 妈妈的好话友来我们玩. 恰好爸爸也在家. 她走后, 你看人家的你哥哥, 上
+&lt;p&gt;有天, 同村的, 妈妈的好话友来我们玩. 恰好爸爸也在家. 她走后, 你看人家的你哥哥, 上&lt;br /&gt;
 研究生. 你在这天天打游戏!&lt;/p&gt;
-&lt;p&gt;就在我缀学的同学, 姐姐从日本回来了. 当然是去打工, 出国劳务. 去了三年. 她当初一度
+&lt;p&gt;就在我缀学的同学, 姐姐从日本回来了. 当然是去打工, 出国劳务. 去了三年. 她当初一度&lt;br /&gt;
 想要回家, 那里太累了. 可是签了劳务合同, 回不来. 也不是回不来, 只是违约要交好多钱.&lt;/p&gt;
 &lt;p&gt;姐姐回来还带了日元, 还给我们带了礼物. 她在日本的时候, 让我妈给她邮寄各种菜种子.&lt;/p&gt;
 &lt;p&gt;我还是在小南屋里打游戏. 本来应该是高考的日子. 姐姐要跟人定婚了.&lt;/p&gt;
 &lt;p&gt;我想, 我是不是要在小南屋里打游戏来度过这一生.&lt;/p&gt;
-&lt;p&gt;二十多年过去了, 我不再埋怨或者怪罪爸爸妈妈. 他们从小受到的教育, 就是这样. 他们认
-为, 要好好学习考大学, 不要整那些没用的. 他们的时代就是这样, 他们的观念就是这样,
+&lt;p&gt;二十多年过去了, 我不再埋怨或者怪罪爸爸妈妈. 他们从小受到的教育, 就是这样. 他们认&lt;br /&gt;
+为, 要好好学习考大学, 不要整那些没用的. 他们的时代就是这样, 他们的观念就是这样,&lt;br /&gt;
 村里的观念就是这样.&lt;/p&gt;
-&lt;p&gt;我也没有怪罪我自己, 当时怄气, 放弃选拔. 成为职业运动员不见得比现在当程序员好很多.
+&lt;p&gt;我也没有怪罪我自己, 当时怄气, 放弃选拔. 成为职业运动员不见得比现在当程序员好很多.&lt;br /&gt;
 但是, 我那几年的青春就在小南屋里度过了. 那最美好的青春!&lt;/p&gt;
 &lt;h2&gt;支线故事&lt;/h2&gt;
-&lt;p&gt;开学第一次上体育课的时候, 站在我前面的女生问我:"你也是桃墟镇的吗?" 她似乎还略微
+&lt;p&gt;开学第一次上体育课的时候, 站在我前面的女生问我:&amp;quot;你也是桃墟镇的吗?&amp;quot; 她似乎还略微&lt;br /&gt;
 带点鼻涕.&lt;/p&gt;
 &lt;p&gt;经过一番交谈, 得知她从小就在县城. 她爸爸那一代就已经考上大学, 是佼佼者.&lt;/p&gt;
 &lt;p&gt;是因为老乡吗?&lt;/p&gt;
@@ -359,141 +382,164 @@
 &lt;h3&gt;事件细节: 体教局的人找上门&lt;/h3&gt;
 &lt;h3&gt;事件细节: 初次选拔&lt;/h3&gt;
 &lt;h3&gt;事件细节: 与爸爸说跑鞋的事情&lt;/h3&gt;
-&lt;h3&gt;事件细节: 缀学&lt;/h3&gt;</content><category term="blog"/><category term="故事"/><category term="文学青年"/></entry><entry><title>羅生門（らしょうもん）</title><link href="https://zqw.ink/2020-11-07-blog-rashomon.html" rel="alternate"/><published>2020-11-07T00:00:00+08:00</published><updated>2020-11-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-11-07:/2020-11-07-blog-rashomon.html</id><summary type="html">&lt;p&gt;&lt;em&gt;《羅生門》, 芥川龍之介, 译林出版社, 2005, 林少华译&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;事件细节: 缀学&lt;/h3&gt;
+</content><category term="blog"/><category term="故事"/><category term="文学青年"/></entry><entry><title>羅生門（らしょうもん）</title><link href="https://zqw.ink/2020-11-07-blog-rashomon.html" rel="alternate"/><published>2020-11-07T00:00:00+08:00</published><updated>2020-11-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-11-07:/2020-11-07-blog-rashomon.html</id><summary type="html">
+&lt;p&gt;&lt;em&gt;《羅生門》, 芥川龍之介, 译林出版社, 2005, 林少华译&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;是一篇短篇集.&lt;/p&gt;
 &lt;p&gt;芥川龍之介（あくたがわ　りゅうのすけ）, 1892.3.1 - 1927.7.24 .&lt;/p&gt;
 &lt;h2&gt;罗生门&lt;/h2&gt;
-&lt;p&gt;年 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;em&gt;《羅生門》, 芥川龍之介, 译林出版社, 2005, 林少华译&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;年 …&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;&lt;em&gt;《羅生門》, 芥川龍之介, 译林出版社, 2005, 林少华译&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;是一篇短篇集.&lt;/p&gt;
 &lt;p&gt;芥川龍之介（あくたがわ　りゅうのすけ）, 1892.3.1 - 1927.7.24 .&lt;/p&gt;
 &lt;h2&gt;罗生门&lt;/h2&gt;
 &lt;p&gt;年景惨, 一位仆人被打发出门. 在满是死尸的罗生门前思考是要饿死, 还是成为一名强盗.&lt;/p&gt;
-&lt;p&gt;突然发现一个老太太在拔一个尸体上的头发. 仆人冲上去审问. 经过一番对话后. 仆人做出
+&lt;p&gt;突然发现一个老太太在拔一个尸体上的头发. 仆人冲上去审问. 经过一番对话后. 仆人做出&lt;br /&gt;
 了他的决定.&lt;/p&gt;
 &lt;h2&gt;鼻&lt;/h2&gt;
-&lt;p&gt;禅智内供有一个长长的鼻子, 为此非常苦恼. 终有一日鼻子变短, 去失去了别人的同情. 最
+&lt;p&gt;禅智内供有一个长长的鼻子, 为此非常苦恼. 终有一日鼻子变短, 去失去了别人的同情. 最&lt;br /&gt;
 后又变了回来, 往日如初.&lt;/p&gt;
 &lt;h2&gt;手帕&lt;/h2&gt;
-&lt;p&gt;教授的学生病逝. 学生的母亲来到教授的家中. 母亲的表现却不像有丧子之痛的人. 教授不
-经意间发现, 原来母亲的痛苦都隐藏在了桌下那双拿着手帕的剧烈颤抖的手上, 这让教授联
+&lt;p&gt;教授的学生病逝. 学生的母亲来到教授的家中. 母亲的表现却不像有丧子之痛的人. 教授不&lt;br /&gt;
+经意间发现, 原来母亲的痛苦都隐藏在了桌下那双拿着手帕的剧烈颤抖的手上, 这让教授联&lt;br /&gt;
 想到了武士道.&lt;/p&gt;
 &lt;h2&gt;地狱变&lt;/h2&gt;
-&lt;p&gt;技艺高超, 沉迷绘画, 却又自大自满的画师良秀应老殿下画一幅地狱变. 画师没有见过的东
-西不会画, 请求殿下将一名少女在槟榔车中烈火焚烧. 结果车中的少女却是良秀最疼爱的女
+&lt;p&gt;技艺高超, 沉迷绘画, 却又自大自满的画师良秀应老殿下画一幅地狱变. 画师没有见过的东&lt;br /&gt;
+西不会画, 请求殿下将一名少女在槟榔车中烈火焚烧. 结果车中的少女却是良秀最疼爱的女&lt;br /&gt;
 儿. 最终画成杰作, 良秀也悬梁自缢.&lt;/p&gt;
 &lt;h2&gt;蛛丝&lt;/h2&gt;
-&lt;p&gt;佛祖念地狱中的大盗犍陀多生前怜悯一只蜘蛛的性命, 放下条蛛丝让他从地狱爬出. 犍陀多
+&lt;p&gt;佛祖念地狱中的大盗犍陀多生前怜悯一只蜘蛛的性命, 放下条蛛丝让他从地狱爬出. 犍陀多&lt;br /&gt;
 却发现身后有许多罪人也跟着爬来. 最终, 所有人又一同坠回地狱.&lt;/p&gt;
 &lt;h2&gt;橘&lt;/h2&gt;
-&lt;p&gt;烦闷的我在列车上遇到一位令我厌恶的乡下小姑娘. 看到她将几个橘子扔给窗外前来送行的
+&lt;p&gt;烦闷的我在列车上遇到一位令我厌恶的乡下小姑娘. 看到她将几个橘子扔给窗外前来送行的&lt;br /&gt;
 弟弟们后, 我暂时忘却了烦闷的心情.&lt;/p&gt;
 &lt;h2&gt;舞会&lt;/h2&gt;
-&lt;p&gt;1886 年, 十七岁的明子小姐在一个舞会上与一位法兰西海军军官邂逅. 1918(32 年后), 已
-经成为 H 老夫人的明子在车上与一位青年小说家提及此事, 原来那位海军军官就是写了 *
-菊花夫人* 的 &lt;a href="https://zh.wikipedia.org/wiki/%E7%9A%AE%E5%9F%83%E7%88%BE%C2%B7%E6%B4%9B%E8%92%82"&gt;Pierre
-Loti&lt;/a&gt;
-. 但夫人坚持说那位海军军官叫朱利安·韦奥(Pierre
+&lt;p&gt;1886 年, 十七岁的明子小姐在一个舞会上与一位法兰西海军军官邂逅. 1918(32 年后), 已&lt;br /&gt;
+经成为 H 老夫人的明子在车上与一位青年小说家提及此事, 原来那位海军军官就是写了 *&lt;br /&gt;
+菊花夫人* 的 &lt;a href="https://zh.wikipedia.org/wiki/%E7%9A%AE%E5%9F%83%E7%88%BE%C2%B7%E6%B4%9B%E8%92%82"&gt;Pierre&lt;br /&gt;
+Loti&lt;/a&gt;&lt;br /&gt;
+. 但夫人坚持说那位海军军官叫朱利安·韦奥(Pierre&lt;br /&gt;
 Loti 的原名).&lt;/p&gt;
 &lt;h2&gt;密林中&lt;/h2&gt;
 &lt;p&gt;从六个人的视角讲述一个人死亡的过程&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;樵夫: 描述他在竹林中发现的尸体的情况&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;行脚僧: 目睹死者在死之前与一名女子骑马赶路&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;捕快: 描述他抓到的一名盗贼, 名叫多襄丸. 作恶多端, 疑似凶手.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;老媪: 死者的岳母. 与死者一同骑马赶路的正是死者的妻子. 希望查明真相.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;多襄丸: 承认自己是凶手. 碰上死者夫妻二人, 欲杀男子而夺女人. 诱骗二人至竹林中,
-  将男人捆绑, 当面与女人成事. 事后女人说自己与死者必死一人, 她跟活着的. 此时才杀
-  了男人, 但杀完后女人已经不见.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;女人: 男人玷污了自己后, 从丈夫眼中看到了鄙视的冷光. 之后昏迷. 醒后欲杀夫, 之后
-  自杀. 丈夫同意. 杀夫后数次自杀未遂.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;死者: 妻子被强盗糟蹋后, 又被花言巧语诱骗, 要跟强盗走. 妻子要强盗杀死自己. 强盗
-  却问自己如何处理妻子. 自己从心理上原谅了强盗. 之后在昏迷中自杀.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;樵夫: 描述他在竹林中发现的尸体的情况&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;行脚僧: 目睹死者在死之前与一名女子骑马赶路&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;捕快: 描述他抓到的一名盗贼, 名叫多襄丸. 作恶多端, 疑似凶手.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;老媪: 死者的岳母. 与死者一同骑马赶路的正是死者的妻子. 希望查明真相.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;多襄丸: 承认自己是凶手. 碰上死者夫妻二人, 欲杀男子而夺女人. 诱骗二人至竹林中,&lt;br /&gt;
+将男人捆绑, 当面与女人成事. 事后女人说自己与死者必死一人, 她跟活着的. 此时才杀&lt;br /&gt;
+了男人, 但杀完后女人已经不见.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;女人: 男人玷污了自己后, 从丈夫眼中看到了鄙视的冷光. 之后昏迷. 醒后欲杀夫, 之后&lt;br /&gt;
+自杀. 丈夫同意. 杀夫后数次自杀未遂.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;死者: 妻子被强盗糟蹋后, 又被花言巧语诱骗, 要跟强盗走. 妻子要强盗杀死自己. 强盗&lt;br /&gt;
+却问自己如何处理妻子. 自己从心理上原谅了强盗. 之后在昏迷中自杀.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;矿车&lt;/h2&gt;
-&lt;p&gt;良平八岁时非常憧憬村外修筑铁路的(轨道)矿车. 偷玩一次却被发现. 后来跟着新来的两个
-人推矿车到很远的地方. 天都快黑了才开始回家. 路上的良平焦急并害怕, 到家里天已大黑.
+&lt;p&gt;良平八岁时非常憧憬村外修筑铁路的(轨道)矿车. 偷玩一次却被发现. 后来跟着新来的两个&lt;br /&gt;
+人推矿车到很远的地方. 天都快黑了才开始回家. 路上的良平焦急并害怕, 到家里天已大黑.&lt;br /&gt;
 良平二十六岁时在东京还时常想起小时候的这件事情.&lt;/p&gt;
 &lt;h2&gt;阿富的贞操&lt;/h2&gt;
-&lt;p&gt;马上就要开战. 大家都已经撤离. 阿富被安排回来找夫人非常重视的猫, 却碰见了乞丐新公.
-新公用猫做威胁, 要阿富委身于他. 阿富同意. 但阿富脱光衣服躺在那里里, 新公却说是开
-玩笑的. 二十三年后, 阿富早已成家, 一家人在路上又遇见了新公, 此时的新公在马车上名
+&lt;p&gt;马上就要开战. 大家都已经撤离. 阿富被安排回来找夫人非常重视的猫, 却碰见了乞丐新公.&lt;br /&gt;
+新公用猫做威胁, 要阿富委身于他. 阿富同意. 但阿富脱光衣服躺在那里里, 新公却说是开&lt;br /&gt;
+玩笑的. 二十三年后, 阿富早已成家, 一家人在路上又遇见了新公, 此时的新公在马车上名&lt;br /&gt;
 誉满身.&lt;/p&gt;
 &lt;h2&gt;一篇爱情小说&lt;/h2&gt;
-&lt;p&gt;妇女杂志主编邀请保吉为他们写一篇严肃的爱情小说. 保吉与主编讨论了小说的主要情节:
-新婚的外交官夫人误将音乐家对钢琴的爱当成对自己的爱, 爱上了钢琴家. 外交官与夫人因
-工作远离钢琴家, 夫人却对钢琴家念念不忘. 念念不忘的同时, 夫人也有了许多孩子, 身材
+&lt;p&gt;妇女杂志主编邀请保吉为他们写一篇严肃的爱情小说. 保吉与主编讨论了小说的主要情节:&lt;br /&gt;
+新婚的外交官夫人误将音乐家对钢琴的爱当成对自己的爱, 爱上了钢琴家. 外交官与夫人因&lt;br /&gt;
+工作远离钢琴家, 夫人却对钢琴家念念不忘. 念念不忘的同时, 夫人也有了许多孩子, 身材&lt;br /&gt;
 也渐渐发胖, 但沉浸在对钢琴家爱的幻想中幸福地生活.&lt;/p&gt;
 &lt;h2&gt;单相思&lt;/h2&gt;
-&lt;p&gt;在电车上, 我的朋友给我讲述了他在宴会上听阿德, 一个他的朋友迷恋的女招待, 吐露她对
-一个电影演员单相思的故事, 而我的朋友认为她是编造的, 说不定她是对他们当中的某个人
+&lt;p&gt;在电车上, 我的朋友给我讲述了他在宴会上听阿德, 一个他的朋友迷恋的女招待, 吐露她对&lt;br /&gt;
+一个电影演员单相思的故事, 而我的朋友认为她是编造的, 说不定她是对他们当中的某个人&lt;br /&gt;
 害单相思.&lt;/p&gt;
 &lt;h2&gt;侏儒警语&lt;/h2&gt;
-&lt;p&gt;占本书 40%, 是像微博一样的小句子.&lt;/p&gt;</content><category term="blog"/><category term="读书笔记"/><category term="羅生門"/><category term="芥川龍之介"/><category term="kindleunlimited"/></entry><entry><title>仿生人会梦见电子门羊吗</title><link href="https://zqw.ink/2020-11-06-blog-do_androids_dream_of_electric_eheep.html" rel="alternate"/><published>2020-11-06T00:00:00+08:00</published><updated>2020-11-06T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-11-06:/2020-11-06-blog-do_androids_dream_of_electric_eheep.html</id><summary type="html">&lt;p&gt;&lt;em&gt;《仿生人会梦见电子门羊吗?》 译林出版社, 2017, Philip K. Dick, 许东华译.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;cyberpunk 经典电影作品 &lt;em&gt;Blade Runner(译: 银翼杀手)&lt;/em&gt; 据此改编. 不过, 根据书中译后 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;em&gt;《仿生人会梦见电子门羊吗?》 译林出版社, 2017, Philip K. Dick, 许东华译.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;cyberpunk 经典电影作品 &lt;em&gt;Blade Runner(译: 银翼杀手)&lt;/em&gt; 据此改编. 不过, 根据书中译后
+&lt;p&gt;占本书 40%, 是像微博一样的小句子.&lt;/p&gt;
+</content><category term="blog"/><category term="读书笔记"/><category term="羅生門"/><category term="芥川龍之介"/><category term="kindleunlimited"/></entry><entry><title>仿生人会梦见电子门羊吗</title><link href="https://zqw.ink/2020-11-06-blog-do_androids_dream_of_electric_eheep.html" rel="alternate"/><published>2020-11-06T00:00:00+08:00</published><updated>2020-11-06T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-11-06:/2020-11-06-blog-do_androids_dream_of_electric_eheep.html</id><summary type="html">
+&lt;p&gt;&lt;em&gt;《仿生人会梦见电子门羊吗?》 译林出版社, 2017, Philip K. Dick, 许东华译.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;cyberpunk 经典电影作品 &lt;em&gt;Blade Runner(译: 银翼杀手)&lt;/em&gt; 据此改编. 不过, 根据书中译后 …&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;&lt;em&gt;《仿生人会梦见电子门羊吗?》 译林出版社, 2017, Philip K. Dick, 许东华译.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;cyberpunk 经典电影作品 &lt;em&gt;Blade Runner(译: 银翼杀手)&lt;/em&gt; 据此改编. 不过, 根据书中译后&lt;br /&gt;
 所言&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;Blade Runner&lt;/em&gt; 这个片名其实来自另一部完全不相干的科幻小说.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;取此片名的原因, 只是因为 Blade Runner 这个说法很酷!&lt;/p&gt;
-&lt;p&gt;看完小说, 又看了一遍电影. 几年前看过此电影, 剧情已经忘光, 只觉得几个场景有些熟悉
+&lt;p&gt;看完小说, 又看了一遍电影. 几年前看过此电影, 剧情已经忘光, 只觉得几个场景有些熟悉&lt;br /&gt;
 而已.&lt;/p&gt;
 &lt;p&gt;电影相对小说, 剧情已经做了相当大的改动.&lt;/p&gt;
 &lt;p&gt;小说写于 1968 年, 故事发生于 1992 年的旧金山.&lt;/p&gt;
-&lt;p&gt;由于战争的破坏, 地球大气中充满放射
-性尘埃, 已经不适合人类生存, 大部分人都已经移民到火星. 少量留在地球上的人, 许多都
+&lt;p&gt;由于战争的破坏, 地球大气中充满放射&lt;br /&gt;
+性尘埃, 已经不适合人类生存, 大部分人都已经移民到火星. 少量留在地球上的人, 许多都&lt;br /&gt;
 由于恶劣的生存环境而患上各种疾病, 大脑智力受损.&lt;/p&gt;
-&lt;p&gt;为了在火星开拓生存环境, 制造仿生人的公司应运而生. 仿生人(Androids) 与人类的肉体
+&lt;p&gt;为了在火星开拓生存环境, 制造仿生人的公司应运而生. 仿生人(Androids) 与人类的肉体&lt;br /&gt;
 无异, 脑芯片也已经相当高级, 只有通过做骨髓鉴定才能真正确定是仿生人还是真正的人类.&lt;/p&gt;
-&lt;p&gt;有一些仿生人逃到了地球伪装成人类. 因此警局便雇佣赏金猎人追杀这些仿生人. 男主里克
+&lt;p&gt;有一些仿生人逃到了地球伪装成人类. 因此警局便雇佣赏金猎人追杀这些仿生人. 男主里克&lt;br /&gt;
 便是这样一位赏金猎人.&lt;/p&gt;
 &lt;p&gt;这个时代活着的生物已经少见. 而每个人都要养宠物. 里克起初的宠物是一只电子羊......&lt;/p&gt;
-&lt;p&gt;电影没有了养宠物的设定, 也没有默瑟主义.&lt;/p&gt;</content><category term="blog"/><category term="读书笔记"/><category term="blade runner"/><category term="Philip K. Dick"/><category term="kindleunlimited"/></entry><entry><title>又一个夏天</title><link href="https://zqw.ink/2020-06-28-blog-summer_2020.html" rel="alternate"/><published>2020-06-28T00:00:00+08:00</published><updated>2020-06-28T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-06-28:/2020-06-28-blog-summer_2020.html</id><summary type="html">&lt;p&gt;又是一个夏天。&lt;/p&gt;
+&lt;p&gt;电影没有了养宠物的设定, 也没有默瑟主义.&lt;/p&gt;
+</content><category term="blog"/><category term="读书笔记"/><category term="blade runner"/><category term="Philip K. Dick"/><category term="kindleunlimited"/></entry><entry><title>又一个夏天</title><link href="https://zqw.ink/2020-06-28-blog-summer_2020.html" rel="alternate"/><published>2020-06-28T00:00:00+08:00</published><updated>2020-06-28T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-06-28:/2020-06-28-blog-summer_2020.html</id><summary type="html">
+&lt;p&gt;又是一个夏天。&lt;/p&gt;
 &lt;p&gt;午后躺在床上，看着书架上的鸡毛毽子随风摆动。&lt;/p&gt;
-&lt;p&gt;我一直在等一个什么事情都没有的夏天，却没有想到是以 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;又是一个夏天。&lt;/p&gt;
+&lt;p&gt;我一直在等一个什么事情都没有的夏天，却没有想到是以 …&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;又是一个夏天。&lt;/p&gt;
 &lt;p&gt;午后躺在床上，看着书架上的鸡毛毽子随风摆动。&lt;/p&gt;
 &lt;p&gt;我一直在等一个什么事情都没有的夏天，却没有想到是以这样的方式降临。&lt;/p&gt;
 &lt;p&gt;自认为很宅的我，也开始期待出去玩，我也对此感到十分诧异！同时也感到无比诡异！&lt;/p&gt;
 &lt;p&gt;又是一个夏天。前几个夏天，总有那么一段时间充斥着压抑和悲伤，所以一直期待一个安静的夏天，看看书，吹吹风，没有压抑和悲伤的事情。将来，随着年龄的增长，想象中安静的夏天或许更是越来越少。长大了，知道了太多的事情，想太多的事情。可是即使这样，我也不觉得小时候比现在更好，因为现在比小时候自由。&lt;/p&gt;
 &lt;p&gt;只能午后躺在床上，看着书架上的鸡毛毽子随风摆动。有些老同学开学的开学，复工的复工，我就只能躺在床上看鸡毛毽子随风摆动。从前我很努力，现在我不想那么拼命了，我不想成为工作狂。我只想去搞我还在好奇物理，只想本份地做课题以便能够让我顺利毕业。对于一个打算踏入科研生涯的人来说，对发文章没什么兴趣，可能有些致命了。就像一个农夫只想种田，却对收割没有兴趣。对发文章没有兴趣的原因，大概是自己水平太渣，也许终有一日，我把我好奇的东西学会，我变得超级屌，发文章就像写博客一样了，那我肯定会对发文章有兴趣。&lt;/p&gt;
 &lt;p&gt;今年的夏天终于安逸了，只是安逸的理由让我十分难以开心起来。从三月到四月，到五月，到六月。就现在的形势现在看来，九月开学的希望也变得渺茫起来。在家里待着，就像吃糖一样，吃个一颗两颗很甜。小孩吃糖不会腻。成年人老吃糖就不想吃了。糖也不能当饭吃，吃多了对牙齿也不好。牙齿和糖就很矛盾了。&lt;/p&gt;
-&lt;p&gt;无聊到顶，就一个人散步了，倒是满足了我多年前对大雄羡慕，羡慕他悠闲地在黄昏之际散步。散步的时候我就觉得不真实，竟然会发生这样的疫情，竟然到现在还没有开学，更可怕的是不知道什么时候开学，而且即使开学了，大概率也是只能封闭在学校。不过，我也足够幸运，在家里也可以继续做工作。走在街上散步的时候，会看到有人开私家车在路边摆摊买辣酱，会听到有人打电话抱怨说今年什么活也找不到。到底有多少人在这次疫情中生活无望，既而导致不断的家庭矛盾，又有谁知道呢？&lt;/p&gt;</content><category term="blog"/><category term="夏天"/><category term="2020"/><category term="日记"/><category term="疫情"/></entry><entry><title>做出了超吹，意外，无奈</title><link href="https://zqw.ink/2020-04-08-blog-mr350.html" rel="alternate"/><published>2020-04-08T00:00:00+08:00</published><updated>2020-04-08T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-04-08:/2020-04-08-blog-mr350.html</id><summary type="html">&lt;p&gt;今天收到了新买的 MR350。 结果我用 sp20 做出了超吹。有点意外和无奈。&lt;/p&gt;
-&lt;p&gt;讲完主文献这几天，没有什么效率，一直在玩。每天晚上也是 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;今天收到了新买的 MR350。 结果我用 sp20 做出了超吹。有点意外和无奈。&lt;/p&gt;
-&lt;p&gt;讲完主文献这几天，没有什么效率，一直在玩。每天晚上也是到很晚。以后一定要在十二点左右睡，七点半左右起。&lt;/p&gt;</content><category term="blog"/><category term="MR350"/><category term="口琴"/><category term="日记"/><category term="疫情"/><category term="音乐"/></entry><entry><title>疫情，吐槽</title><link href="https://zqw.ink/2020-03-08-blog-20200308.html" rel="alternate"/><published>2020-03-08T00:00:00+08:00</published><updated>2020-03-08T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-03-08:/2020-03-08-blog-20200308.html</id><summary type="html">&lt;p&gt;许久没有写了。翻了一下，最早是刚刚买到小黑时开始写，我说那是新的开始。最近爆发了新型冠状病毒的疫情，所有人都被 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;许久没有写了。翻了一下，最早是刚刚买到小黑时开始写，我说那是新的开始。最近爆发了新型冠状病毒的疫情，所有人都被焖在家里。&lt;/p&gt;
+&lt;p&gt;无聊到顶，就一个人散步了，倒是满足了我多年前对大雄羡慕，羡慕他悠闲地在黄昏之际散步。散步的时候我就觉得不真实，竟然会发生这样的疫情，竟然到现在还没有开学，更可怕的是不知道什么时候开学，而且即使开学了，大概率也是只能封闭在学校。不过，我也足够幸运，在家里也可以继续做工作。走在街上散步的时候，会看到有人开私家车在路边摆摊买辣酱，会听到有人打电话抱怨说今年什么活也找不到。到底有多少人在这次疫情中生活无望，既而导致不断的家庭矛盾，又有谁知道呢？&lt;/p&gt;
+</content><category term="blog"/><category term="夏天"/><category term="2020"/><category term="日记"/><category term="疫情"/></entry><entry><title>做出了超吹，意外，无奈</title><link href="https://zqw.ink/2020-04-08-blog-mr350.html" rel="alternate"/><published>2020-04-08T00:00:00+08:00</published><updated>2020-04-08T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-04-08:/2020-04-08-blog-mr350.html</id><summary type="html">
+&lt;p&gt;今天收到了新买的 MR350。 结果我用 sp20 做出了超吹。有点意外和无奈。&lt;/p&gt;
+&lt;p&gt;讲完主文献这几天，没有什么效率，一直在玩。每天晚上也是 …&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;今天收到了新买的 MR350。 结果我用 sp20 做出了超吹。有点意外和无奈。&lt;/p&gt;
+&lt;p&gt;讲完主文献这几天，没有什么效率，一直在玩。每天晚上也是到很晚。以后一定要在十二点左右睡，七点半左右起。&lt;/p&gt;
+</content><category term="blog"/><category term="MR350"/><category term="口琴"/><category term="日记"/><category term="疫情"/><category term="音乐"/></entry><entry><title>疫情，吐槽</title><link href="https://zqw.ink/2020-03-08-blog-20200308.html" rel="alternate"/><published>2020-03-08T00:00:00+08:00</published><updated>2020-03-08T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-03-08:/2020-03-08-blog-20200308.html</id><summary type="html">
+&lt;p&gt;许久没有写了。翻了一下，最早是刚刚买到小黑时开始写，我说那是新的开始。最近爆发了新型冠状病毒的疫情，所有人都被 …&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;许久没有写了。翻了一下，最早是刚刚买到小黑时开始写，我说那是新的开始。最近爆发了新型冠状病毒的疫情，所有人都被焖在家里。&lt;/p&gt;
 &lt;p&gt;开学也是遥遥无期，只能每天在家里。难受的不是在家里，而是在家里还得做科研。&lt;/p&gt;
 &lt;p&gt;近期也没什么效率，每天象征性地做那么点科研，改改光学作业。学习，是真的没有那个心情。至少我们这种普通家庭，我这种性格，是很难做到在家高效学习的。&lt;/p&gt;
 &lt;p&gt;最近就在想，我其实蛮有天赋的，高考这样烂确实是由于环境。我的假期在家都是直接放弃学习的。如果我从小到大的假期都充分利用，那我的人生必然也是竞赛大神那种人生。&lt;/p&gt;
 &lt;p&gt;可是，我又算是幸运，比上不足比下有余，这样的环境还是允许我自己努力，比之那种家庭不和睦人家庭，简直好太多。&lt;/p&gt;
-&lt;p&gt;最近买了好多东西。年前买了米兔公路赛，这几天又买了卡林巴。我好像对什么都感兴趣一般。&lt;/p&gt;</content><category term="blog"/><category term="疫情"/><category term="假期"/><category term="日记"/></entry><entry><title>347 第一次作业</title><link href="https://zqw.ink/2019-10-27-blog-347_homework.html" rel="alternate"/><published>2019-10-27T00:00:00+08:00</published><updated>2019-10-27T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2019-10-27:/2019-10-27-blog-347_homework.html</id><summary type="html">&lt;p&gt;作为一名 2019 级的新生，前些日子我去了百团大战！&lt;/p&gt;
+&lt;p&gt;最近买了好多东西。年前买了米兔公路赛，这几天又买了卡林巴。我好像对什么都感兴趣一般。&lt;/p&gt;
+</content><category term="blog"/><category term="疫情"/><category term="假期"/><category term="日记"/></entry><entry><title>347 第一次作业</title><link href="https://zqw.ink/2019-10-27-blog-347_homework.html" rel="alternate"/><published>2019-10-27T00:00:00+08:00</published><updated>2019-10-27T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2019-10-27:/2019-10-27-blog-347_homework.html</id><summary type="html">
+&lt;p&gt;作为一名 2019 级的新生，前些日子我去了百团大战！&lt;/p&gt;
 &lt;p&gt;347动漫社的同学很热情，送给了我两张名信片！&lt;/p&gt;
 &lt;p&gt;后来我就加了347动漫社的创作部（只是加了个群而已。。。）！&lt;/p&gt;
-&lt;p&gt;我要开始学 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;作为一名 2019 级的新生，前些日子我去了百团大战！&lt;/p&gt;
+&lt;p&gt;我要开始学 …&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;作为一名 2019 级的新生，前些日子我去了百团大战！&lt;/p&gt;
 &lt;p&gt;347动漫社的同学很热情，送给了我两张名信片！&lt;/p&gt;
 &lt;p&gt;后来我就加了347动漫社的创作部（只是加了个群而已。。。）！&lt;/p&gt;
 &lt;p&gt;我要开始学画画了！哈哈！&lt;/p&gt;
 &lt;p&gt;这是第一周的作业，是画两个不同风格的大头。我就画了西片和小埋（奇怪的cp）！&lt;/p&gt;
-&lt;p&gt;这是草稿：
-&lt;img alt="草稿" src="./2019-10-27-blog-347_homework/2019-10-27-17-21-42-2.PNG"&gt;
-这是西片：
-&lt;img alt="西片" src="./2019-10-27-blog-347_homework/2019-10-27-17-21-42-4.PNG"&gt;
-这是小埋：
-&lt;img alt="小埋" src="./2019-10-27-blog-347_homework/2019-10-27-17-21-42-3.PNG"&gt;
-这是合照：
-&lt;img alt="西片小埋合照" src="./2019-10-27-blog-347_homework/2019-10-27-17-21-42-1.PNG"&gt;
-哈哈哈哈！&lt;/p&gt;</content><category term="blog"/><category term="347"/></entry><entry><title>被风吹过的夏天</title><link href="https://zqw.ink/2019-09-14-blog-summer.html" rel="alternate"/><published>2019-09-14T00:00:00+08:00</published><updated>2019-09-14T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2019-09-14:/2019-09-14-blog-summer.html</id><summary type="html">&lt;p&gt;病房在十二楼。透过大大的窗户向南望去，是绿色的植被和远处朦胧的山岭。&lt;/p&gt;
-&lt;p&gt;所有人都在午休。微风轻拂淡蓝色的，波浪形状 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;病房在十二楼。透过大大的窗户向南望去，是绿色的植被和远处朦胧的山岭。&lt;/p&gt;
+&lt;p&gt;这是草稿：&lt;br /&gt;
+&lt;img src="./2019-10-27-blog-347_homework/2019-10-27-17-21-42-2.PNG" alt="草稿" /&gt;&lt;br /&gt;
+这是西片：&lt;br /&gt;
+&lt;img src="./2019-10-27-blog-347_homework/2019-10-27-17-21-42-4.PNG" alt="西片" /&gt;&lt;br /&gt;
+这是小埋：&lt;br /&gt;
+&lt;img src="./2019-10-27-blog-347_homework/2019-10-27-17-21-42-3.PNG" alt="小埋" /&gt;&lt;br /&gt;
+这是合照：&lt;br /&gt;
+&lt;img src="./2019-10-27-blog-347_homework/2019-10-27-17-21-42-1.PNG" alt="西片小埋合照" /&gt;&lt;br /&gt;
+哈哈哈哈！&lt;/p&gt;
+</content><category term="blog"/><category term="347"/></entry><entry><title>被风吹过的夏天</title><link href="https://zqw.ink/2019-09-14-blog-summer.html" rel="alternate"/><published>2019-09-14T00:00:00+08:00</published><updated>2019-09-14T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2019-09-14:/2019-09-14-blog-summer.html</id><summary type="html">
+&lt;p&gt;病房在十二楼。透过大大的窗户向南望去，是绿色的植被和远处朦胧的山岭。&lt;/p&gt;
+&lt;p&gt;所有人都在午休。微风轻拂淡蓝色的，波浪形状 …&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;病房在十二楼。透过大大的窗户向南望去，是绿色的植被和远处朦胧的山岭。&lt;/p&gt;
 &lt;p&gt;所有人都在午休。微风轻拂淡蓝色的，波浪形状的窗帘，就像夏天被风吹过。&lt;/p&gt;
 &lt;p&gt;老旧的病房里，空调不太好用，而且时不时地喷出水滴。确实有些热，好多人都自己带来了电风扇。这是一间大病房，有八位病人呢！说是病人也不太恰当，因为这是一家以骨科而在当地闻名的医院，所以大部分病人并没有什么病，都是意外中受的类似骨折的硬伤。称为伤都或许更为恰当。&lt;/p&gt;
 &lt;p&gt;大部分伤者，以及伤者的家属都在等待出院的日子。也有伤者没有在等出院的日子。&lt;/p&gt;
@@ -512,9 +558,12 @@ Loti 的原名).&lt;/p&gt;
 &lt;p&gt;晚上晚饭过后，护士打完针，一屋的人就闲聊起来，你这是怎么伤的，他家是哪儿的，我儿子在某某学院上大学，那个病房有个人疯了，那个病房有个人跳楼了……&lt;/p&gt;
 &lt;p&gt;有时候有好笑的话，大家都会笑。聊完天有些人就睡了。也有伤得重的人为今后的日子发愁，难以入睡。&lt;/p&gt;
 &lt;p&gt;大大的病房，年代久远的空调喷着水滴。窗户大开着，个人的小风扇也开着。走廊里偶尔传来摄人心魄的哭声。&lt;/p&gt;
-&lt;p&gt;夏季的微风轻拂淡蓝色的，波浪形状的窗帘，就像林俊杰的歌里唱的，被风吹过的夏天。&lt;/p&gt;</content><category term="blog"/><category term="夏天"/><category term="病房"/><category term="文学青年"/><category term="故事"/></entry><entry><title>小胖子打印员</title><link href="https://zqw.ink/2019-09-14-story-printingboy.html" rel="alternate"/><published>2019-09-14T00:00:00+08:00</published><updated>2019-09-14T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2019-09-14:/2019-09-14-story-printingboy.html</id><summary type="html">&lt;p&gt;办个事情还真是麻烦！还得跑出去找打印店。&lt;/p&gt;
+&lt;p&gt;夏季的微风轻拂淡蓝色的，波浪形状的窗帘，就像林俊杰的歌里唱的，被风吹过的夏天。&lt;/p&gt;
+</content><category term="blog"/><category term="夏天"/><category term="病房"/><category term="文学青年"/><category term="故事"/></entry><entry><title>小胖子打印员</title><link href="https://zqw.ink/2019-09-14-story-printingboy.html" rel="alternate"/><published>2019-09-14T00:00:00+08:00</published><updated>2019-09-14T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2019-09-14:/2019-09-14-story-printingboy.html</id><summary type="html">
+&lt;p&gt;办个事情还真是麻烦！还得跑出去找打印店。&lt;/p&gt;
 &lt;p&gt;行人稀疏，崭新的大马路，路面很干净。街边也大多是树，要么就是小区围墙。&lt;/p&gt;
-&lt;p&gt;风景 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;办个事情还真是麻烦！还得跑出去找打印店。&lt;/p&gt;
+&lt;p&gt;风景 …&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;办个事情还真是麻烦！还得跑出去找打印店。&lt;/p&gt;
 &lt;p&gt;行人稀疏，崭新的大马路，路面很干净。街边也大多是树，要么就是小区围墙。&lt;/p&gt;
 &lt;p&gt;风景倒是不错，打印店却是不好找。&lt;/p&gt;
 &lt;p&gt;终于在路边发现了一家。是在小区围墙的外面，比马路矮不少。&lt;/p&gt;
@@ -567,43 +616,51 @@ Loti 的原名).&lt;/p&gt;
 &lt;p&gt;办完事情，回家吃午饭饭。&lt;/p&gt;
 &lt;p&gt;小胖子打印员还真是可爱，平时可能贪玩，也没其它的电脑吧，就用那老旧的电脑，折腾各种东西，装各种软件，打印员自己也认为比较懂电脑了吧。可以实在是老旧，只能用同样老旧版本的单机CS与之匹配，才能勉强玩一下。&lt;/p&gt;
 &lt;p&gt;爸妈让他看店。可这种地方的打印店实在没有什么人，就玩起了CS。来了这么个打印的客人，他就成了店里的主人，大人模样的对话，大人模样的客气，大人模样的吐槽电脑卡。&lt;/p&gt;
-&lt;p&gt;可他还是一名初中生，再怎么大人模样也不失失天真可爱！&lt;/p&gt;</content><category term="blog"/><category term="小胖子"/><category term="打印员"/><category term="电脑"/><category term="故事"/><category term="文学青年"/></entry><entry><title>西安青年冷原子</title><link href="https://zqw.ink/2019-08-01-thinking-xian.html" rel="alternate"/><published>2019-08-01T00:00:00+08:00</published><updated>2019-08-01T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2019-08-01:/2019-08-01-thinking-xian.html</id><summary type="html">&lt;h2&gt;最喜欢的 poster 环节&lt;/h2&gt;
+&lt;p&gt;可他还是一名初中生，再怎么大人模样也不失失天真可爱！&lt;/p&gt;
+</content><category term="blog"/><category term="小胖子"/><category term="打印员"/><category term="电脑"/><category term="故事"/><category term="文学青年"/></entry><entry><title>西安青年冷原子</title><link href="https://zqw.ink/2019-08-01-thinking-xian.html" rel="alternate"/><published>2019-08-01T00:00:00+08:00</published><updated>2019-08-01T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2019-08-01:/2019-08-01-thinking-xian.html</id><summary type="html">
+&lt;h2&gt;最喜欢的 poster 环节&lt;/h2&gt;
 &lt;p&gt;第一次参加青年冷原子. 今天刚刚结束了 poster 环节.&lt;/p&gt;
-&lt;p&gt;这是第一次做 poster. 严格来说这次也不算. 因为我还什么也 …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;最喜欢的 poster 环节&lt;/h2&gt;
+&lt;p&gt;这是第一次做 poster. 严格来说这次也不算. 因为我还什么也 …&lt;/p&gt;</summary><content type="html">
+&lt;h2&gt;最喜欢的 poster 环节&lt;/h2&gt;
 &lt;p&gt;第一次参加青年冷原子. 今天刚刚结束了 poster 环节.&lt;/p&gt;
-&lt;p&gt;这是第一次做 poster. 严格来说这次也不算. 因为我还什么也没有做出来, 全
-篇都是 Introduction. 不过, poster 展示的环节很有感染力. poster 环节可
-以跟任何感兴趣的人交流, 也有在心里期待有人对自己的 poster 感兴趣.
-poster 环节是我这次参会最喜欢的环节, 也是收获最多的环节. 无论科技怎么
-发展, 一对一, 面对面的交流都是最有效, 最深入的交流. 交流的深浅, 会因为
-两个人的水平, 背景而不断调节, 这就比听报告一对多的方式更高效. 面对面的
-交流, 有面部表情, 有肢体语言, 有眼神的交流, 比线上交流不知道要深入多少
+&lt;p&gt;这是第一次做 poster. 严格来说这次也不算. 因为我还什么也没有做出来, 全&lt;br /&gt;
+篇都是 Introduction. 不过, poster 展示的环节很有感染力. poster 环节可&lt;br /&gt;
+以跟任何感兴趣的人交流, 也有在心里期待有人对自己的 poster 感兴趣.&lt;br /&gt;
+poster 环节是我这次参会最喜欢的环节, 也是收获最多的环节. 无论科技怎么&lt;br /&gt;
+发展, 一对一, 面对面的交流都是最有效, 最深入的交流. 交流的深浅, 会因为&lt;br /&gt;
+两个人的水平, 背景而不断调节, 这就比听报告一对多的方式更高效. 面对面的&lt;br /&gt;
+交流, 有面部表情, 有肢体语言, 有眼神的交流, 比线上交流不知道要深入多少&lt;br /&gt;
 倍. 我喜欢这样一对一, 面对面的交流.&lt;/p&gt;
-&lt;p&gt;poster 环节让我有很强的参与感. 和别人交流, 无论最终对对方的工作了解了
-多少, 都会激起自己对物理的热情. 与之相反, 我很喜欢的自己看书的方式, 即
-使最终会有很多收获, 但有时过程确实有些乏味, 让人昏昏欲睡. 也让我想起了
-教我们格林函数的刘老师说过的一句话, "要多和人交流, 哪怕那个人是在胡说
-八道, 但是就有可能点醒你". 与别人的交流, 往往能够产生意想不到的收获.
+&lt;p&gt;poster 环节让我有很强的参与感. 和别人交流, 无论最终对对方的工作了解了&lt;br /&gt;
+多少, 都会激起自己对物理的热情. 与之相反, 我很喜欢的自己看书的方式, 即&lt;br /&gt;
+使最终会有很多收获, 但有时过程确实有些乏味, 让人昏昏欲睡. 也让我想起了&lt;br /&gt;
+教我们格林函数的刘老师说过的一句话, &amp;quot;要多和人交流, 哪怕那个人是在胡说&lt;br /&gt;
+八道, 但是就有可能点醒你&amp;quot;. 与别人的交流, 往往能够产生意想不到的收获.&lt;br /&gt;
 简简单单的相互作用, 也会产生丰富的物理现象.&lt;/p&gt;
-&lt;p&gt;比较遗憾的是自己还没有做出自己的工作, poster 的内容也比较无聊, 就那么
-几个卡通示意图. 不过我还是很意外, 有三四个人对我的 poster 内容感兴趣,
+&lt;p&gt;比较遗憾的是自己还没有做出自己的工作, poster 的内容也比较无聊, 就那么&lt;br /&gt;
+几个卡通示意图. 不过我还是很意外, 有三四个人对我的 poster 内容感兴趣,&lt;br /&gt;
 让我给它们讲解. 希望下次做 poster 能做出自己的东西!&lt;/p&gt;
-&lt;p&gt;把我第一次做的 poster 放在这里, 纪念一下(被google推给了某个师兄, 还是
-撤下来吧, 不能给老板丢人...). (右上角的冰糖葫芦是自己用
-inkscape 画得, 它和左边的人大校徽上的三个人相呼应. 感谢 B 站up主 疯王子
-录制的 inkscape 教学视频:
+&lt;p&gt;把我第一次做的 poster 放在这里, 纪念一下(被google推给了某个师兄, 还是&lt;br /&gt;
+撤下来吧, 不能给老板丢人...). (右上角的冰糖葫芦是自己用&lt;br /&gt;
+inkscape 画得, 它和左边的人大校徽上的三个人相呼应. 感谢 B 站up主 疯王子&lt;br /&gt;
+录制的 inkscape 教学视频:&lt;br /&gt;
 &lt;a href="https://space.bilibili.com/5884683/channel/detail?cid=39695"&gt;https://space.bilibili.com/5884683/channel/detail?cid=39695&lt;/a&gt;)&lt;/p&gt;
 &lt;h2&gt;大唐不夜城&lt;/h2&gt;
-&lt;p&gt;三次到大唐不夜城. 喜欢这大唐的大气, 色彩明亮, 不喜欢大清的风格. 不管如
+&lt;p&gt;三次到大唐不夜城. 喜欢这大唐的大气, 色彩明亮, 不喜欢大清的风格. 不管如&lt;br /&gt;
 何地商业化, 它还是让我心情好了一些, 忘记一些烦恼, 还拍了几张好看的照片.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="大唐不夜城" src="./2019-08-01-thinking-xian/IMG_20190730_200413.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="西安景色" src="./2019-08-01-thinking-xian/IMG_20190730_201903.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="夜树" src="./2019-08-01-thinking-xian/IMG_20190730_202146.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="./2019-08-01-thinking-xian/IMG_20190730_200413.jpg" alt="大唐不夜城" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="./2019-08-01-thinking-xian/IMG_20190730_201903.jpg" alt="西安景色" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="./2019-08-01-thinking-xian/IMG_20190730_202146.jpg" alt="夜树" /&gt;&lt;/p&gt;
 &lt;h2&gt;生活中总有东西对你微笑&lt;/h2&gt;
 &lt;p&gt;从某个报告的 PPT 上发现了一张笑脸.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="PPT 上的笑脸" src="./2019-08-01-thinking-xian/IMG_20190730_110744.jpg"&gt;&lt;/p&gt;</content><category term="blog"/><category term="西安"/><category term="青年冷原子"/></entry><entry><title>拔果子，打 DNF，写考研真题</title><link href="https://zqw.ink/2017-08-27-blog-dnf_nuts.html" rel="alternate"/><published>2017-08-27T00:00:00+08:00</published><updated>2017-08-27T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2017-08-27:/2017-08-27-blog-dnf_nuts.html</id><content type="html">&lt;p&gt;从25号这几天天天拔果子，怪累啊！晚上玩DNF，直到今天晚上才又整理真题。题目除了2011年的都打完了。&lt;/p&gt;</content><category term="blog"/><category term="夏天"/><category term="拔果子"/><category term="DNF"/><category term="暑假"/><category term="考研"/><category term="假期"/><category term="日记"/></entry><entry><title>初中回忆录——特别篇：日记精选（一）</title><link href="https://zqw.ink/2010-08-10-blog-mid_school_memory_diary.html" rel="alternate"/><published>2010-08-10T00:00:00+08:00</published><updated>2010-08-10T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2010-08-10:/2010-08-10-blog-mid_school_memory_diary.html</id><summary type="html">&lt;p&gt;本特别篇为本人日记本原文，语法错误及错别字均未改正，蓝色部分为本人编辑里所添，黑色部分为原文。&lt;/p&gt;
+&lt;p&gt;&lt;img src="./2019-08-01-thinking-xian/IMG_20190730_110744.jpg" alt="PPT 上的笑脸" /&gt;&lt;/p&gt;
+</content><category term="blog"/><category term="西安"/><category term="青年冷原子"/></entry><entry><title>拔果子，打 DNF，写考研真题</title><link href="https://zqw.ink/2017-08-27-blog-dnf_nuts.html" rel="alternate"/><published>2017-08-27T00:00:00+08:00</published><updated>2017-08-27T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2017-08-27:/2017-08-27-blog-dnf_nuts.html</id><content type="html">
+&lt;p&gt;从25号这几天天天拔果子，怪累啊！晚上玩DNF，直到今天晚上才又整理真题。题目除了2011年的都打完了。&lt;/p&gt;
+</content><category term="blog"/><category term="夏天"/><category term="拔果子"/><category term="DNF"/><category term="暑假"/><category term="考研"/><category term="假期"/><category term="日记"/></entry><entry><title>初中回忆录——特别篇：日记精选（一）</title><link href="https://zqw.ink/2010-08-10-blog-mid_school_memory_diary.html" rel="alternate"/><published>2010-08-10T00:00:00+08:00</published><updated>2010-08-10T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2010-08-10:/2010-08-10-blog-mid_school_memory_diary.html</id><summary type="html">
+&lt;p&gt;本特别篇为本人日记本原文，语法错误及错别字均未改正，蓝色部分为本人编辑里所添，黑色部分为原文。&lt;/p&gt;
 &lt;p&gt;作者记于2010年8月10日。&lt;/p&gt;
-&lt;p&gt;2007年11月19日 星 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;本特别篇为本人日记本原文，语法错误及错别字均未改正，蓝色部分为本人编辑里所添，黑色部分为原文。&lt;/p&gt;
+&lt;p&gt;2007年11月19日 星 …&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;本特别篇为本人日记本原文，语法错误及错别字均未改正，蓝色部分为本人编辑里所添，黑色部分为原文。&lt;/p&gt;
 &lt;p&gt;作者记于2010年8月10日。&lt;/p&gt;
 &lt;p&gt;2007年11月19日 星期一 天气晴&lt;/p&gt;
 &lt;p&gt;洪水的暴发（上）&lt;/p&gt;
@@ -623,9 +680,12 @@ inkscape 画得, 它和左边的人大校徽上的三个人相呼应. 感谢 B �
 &lt;p&gt;桌洞浸湿书本数本，&lt;/p&gt;
 &lt;p&gt;感情一份，&lt;/p&gt;
 &lt;p&gt;……&lt;/p&gt;
-&lt;p&gt;这次战役，不仅破坏了同学之间的友谊，而且破坏了许多书本，是同学战史上一次不可忽计的战役！&lt;/p&gt;</content><category term="blog"/><category term="初中"/><category term="初中回忆录"/><category term="新浪博客"/><category term="友情"/><category term="日记"/><category term="少年"/></entry><entry><title>初中回忆录（六）</title><link href="https://zqw.ink/2010-08-06-blog-mid_school_memory6.html" rel="alternate"/><published>2010-08-06T00:00:00+08:00</published><updated>2010-08-06T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2010-08-06:/2010-08-06-blog-mid_school_memory6.html</id><summary type="html">&lt;p&gt;接着上篇。&lt;/p&gt;
+&lt;p&gt;这次战役，不仅破坏了同学之间的友谊，而且破坏了许多书本，是同学战史上一次不可忽计的战役！&lt;/p&gt;
+</content><category term="blog"/><category term="初中"/><category term="初中回忆录"/><category term="新浪博客"/><category term="友情"/><category term="日记"/><category term="少年"/></entry><entry><title>初中回忆录（六）</title><link href="https://zqw.ink/2010-08-06-blog-mid_school_memory6.html" rel="alternate"/><published>2010-08-06T00:00:00+08:00</published><updated>2010-08-06T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2010-08-06:/2010-08-06-blog-mid_school_memory6.html</id><summary type="html">
+&lt;p&gt;接着上篇。&lt;/p&gt;
 &lt;p&gt;你虽然是老被大家欺负，但是你从来不会怒（好像有一次，你怒过，连你大师兄也揍了，哈哈。）&lt;/p&gt;
-&lt;p&gt;我们两个打过架，你一定 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;接着上篇。&lt;/p&gt;
+&lt;p&gt;我们两个打过架，你一定 …&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;接着上篇。&lt;/p&gt;
 &lt;p&gt;你虽然是老被大家欺负，但是你从来不会怒（好像有一次，你怒过，连你大师兄也揍了，哈哈。）&lt;/p&gt;
 &lt;p&gt;我们两个打过架，你一定也记得，那时王老师请假了一个学期，由高老师给我们班带英语。上课前，我们闹了点矛盾，你就把我的铅笔盒抢走了，我要不来就上课了。我没有笔用了，就用手戳你，你不给我，也不动，我急了，就动了手，记得你的手都出血了，不久就被老师发现了，就说了句英语“Don't fight with others.”下课后，我们两个就和好了（我也不知怎么的就和你和好了。）老板把我们两个叫去，本想找我们两个谈话，可是我们已经和好了，当然表示一下惩罚是一定要有的。就罚写检讨，那次检讨，也是我唯一一次写检讨，那之前，那之后都没有写过。只是写也就罢了，要命的是我们还得班会的时候站在讲台上读。真是丢人丢大发了！&lt;/p&gt;
 &lt;p&gt;也是从那以后，我们就成了真正意义上的好朋友。&lt;/p&gt;
@@ -633,13 +693,16 @@ inkscape 画得, 它和左边的人大校徽上的三个人相呼应. 感谢 B �
 &lt;p&gt;初中，你就上网了，我们的交流比以前少了，也许是没有了那晚自习抬头就可以看见星星的露天场所供大家玩耍。也许是你不骑你的自行车，而是骑了电动车，但是近来来是不错的。&lt;/p&gt;
 &lt;p&gt;网络不好，写这些吧！&lt;/p&gt;
 &lt;p&gt;（八）川哥&lt;/p&gt;
-&lt;p&gt;川哥，这人怪，很少有人真正的可以和它做朋友，他的性格太奇怪，每一句话都像是在辩论。唉，我这个语文水平是没法写好川哥的。就简单的写一下吧！
+&lt;p&gt;川哥，这人怪，很少有人真正的可以和它做朋友，他的性格太奇怪，每一句话都像是在辩论。唉，我这个语文水平是没法写好川哥的。就简单的写一下吧！&lt;br /&gt;
 前面写大叔的时候写过了，他喜欢听收音机。透露一条重要秘密：川哥没有QQ号，也不上网，最喜欢玩扫雷。&lt;/p&gt;
 &lt;p&gt;他经常和别人打架。下午放学我们就一块走，我们就谈着玩，什么都谈，很少有人会这样和我谈话&lt;/p&gt;
 &lt;p&gt;一来前面写和大叔提水的时候真的写得差不多了，二来我的语文水平的确不够。所以就写这些。&lt;/p&gt;
-&lt;p&gt;川哥，下一届国家主席！（小郭封。）&lt;/p&gt;</content><category term="blog"/><category term="初中"/><category term="初中回忆录"/><category term="新浪博客"/><category term="友情"/><category term="少年"/></entry><entry><title>初中回忆录（五）</title><link href="https://zqw.ink/2010-08-04-blog-mid_school_memory5.html" rel="alternate"/><published>2010-08-04T00:00:00+08:00</published><updated>2010-08-04T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2010-08-04:/2010-08-04-blog-mid_school_memory5.html</id><summary type="html">&lt;p&gt;（五）洋哥&lt;/p&gt;
+&lt;p&gt;川哥，下一届国家主席！（小郭封。）&lt;/p&gt;
+</content><category term="blog"/><category term="初中"/><category term="初中回忆录"/><category term="新浪博客"/><category term="友情"/><category term="少年"/></entry><entry><title>初中回忆录（五）</title><link href="https://zqw.ink/2010-08-04-blog-mid_school_memory5.html" rel="alternate"/><published>2010-08-04T00:00:00+08:00</published><updated>2010-08-04T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2010-08-04:/2010-08-04-blog-mid_school_memory5.html</id><summary type="html">
+&lt;p&gt;（五）洋哥&lt;/p&gt;
 &lt;p&gt;此洋哥，非那位阳哥，性格绝对不同。&lt;/p&gt;
-&lt;p&gt;记得开学不久我就和他同桌了，就感觉他像我一小学同学，直接就有种想管他叫 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;（五）洋哥&lt;/p&gt;
+&lt;p&gt;记得开学不久我就和他同桌了，就感觉他像我一小学同学，直接就有种想管他叫 …&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;（五）洋哥&lt;/p&gt;
 &lt;p&gt;此洋哥，非那位阳哥，性格绝对不同。&lt;/p&gt;
 &lt;p&gt;记得开学不久我就和他同桌了，就感觉他像我一小学同学，直接就有种想管他叫我那小学同学的名。他和我那小学同学惟一的不同就是他的质量不够。初中有一次见了我那小学同学，真是发福了，胖的，贼可爱了。&lt;/p&gt;
 &lt;p&gt;洋哥，那可是大人物，我们班男生宿舍舍长（注，我们班初三是男生就他一个住校的。）。他绝对是个好学生，老板曾曰：“**洋是个好学生！”，是个好人。别看平时老实，其实他不老实，只要你接近他就知道了。&lt;/p&gt;
@@ -659,8 +722,11 @@ inkscape 画得, 它和左边的人大校徽上的三个人相呼应. 感谢 B �
 &lt;p&gt;（七）老牛&lt;/p&gt;
 &lt;p&gt;第一印象，高大，第二印象，胖，第三印象，你的胸怀比天空更博大！&lt;/p&gt;
 &lt;p&gt;你是我三徒弟，记得初一上晚自习的时候，你老被大家群殴。&lt;/p&gt;
-&lt;p&gt;今天不早了，就先开个头吧！&lt;/p&gt;</content><category term="blog"/><category term="初中"/><category term="初中回忆录"/><category term="新浪博客"/><category term="友情"/><category term="少年"/></entry><entry><title>初中回忆录（四）</title><link href="https://zqw.ink/2010-08-03-blog-mid_school_memory4.html" rel="alternate"/><published>2010-08-03T00:00:00+08:00</published><updated>2010-08-03T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2010-08-03:/2010-08-03-blog-mid_school_memory4.html</id><summary type="html">&lt;p&gt;再接着说我大徒弟的事。&lt;/p&gt;
-&lt;p&gt;他挺能学的，得过一次班里的No.1。不过我两次，嘿嘿！他是政治课代表，又是我徒弟，我便和政治老师 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;再接着说我大徒弟的事。&lt;/p&gt;
+&lt;p&gt;今天不早了，就先开个头吧！&lt;/p&gt;
+</content><category term="blog"/><category term="初中"/><category term="初中回忆录"/><category term="新浪博客"/><category term="友情"/><category term="少年"/></entry><entry><title>初中回忆录（四）</title><link href="https://zqw.ink/2010-08-03-blog-mid_school_memory4.html" rel="alternate"/><published>2010-08-03T00:00:00+08:00</published><updated>2010-08-03T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2010-08-03:/2010-08-03-blog-mid_school_memory4.html</id><summary type="html">
+&lt;p&gt;再接着说我大徒弟的事。&lt;/p&gt;
+&lt;p&gt;他挺能学的，得过一次班里的No.1。不过我两次，嘿嘿！他是政治课代表，又是我徒弟，我便和政治老师 …&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;再接着说我大徒弟的事。&lt;/p&gt;
 &lt;p&gt;他挺能学的，得过一次班里的No.1。不过我两次，嘿嘿！他是政治课代表，又是我徒弟，我便和政治老师关系熟悉了，叫老都都经常是一块去的，还拿了政治老师的两本杂志，我还看过，只不过最后不知道让谁给贪了。说实在的，他是我主要的学习交流对象，因为我们班里一直是阴盛阳衰的。&lt;/p&gt;
 &lt;p&gt;有一段时间我们经常玩四国军棋，和他一伙我就没想着赢过（有点夸张。），从此，我的军棋路一直走下坡路......最终得了个－400多分，胜率23%。不过最近又有回升，嘿嘿！他这人看着挺老实的，挺正直的，不过有一天早上听他说巧可力豆的事，才明白了。听过他说他的三个人生理想：篮球 上大学 取老婆（记不清了。）&lt;/p&gt;
 &lt;p&gt;总的说他是很不错的，是一个值的交的好朋友，！ 还有，他是大叔的初中最后一任同桌！&lt;/p&gt;
@@ -680,33 +746,46 @@ inkscape 画得, 它和左边的人大校徽上的三个人相呼应. 感谢 B �
 &lt;p&gt;再后来，我们两个就不同桌了，和那个王一某一桌，我是强烈的不同意啊，要求让她和你换位，老板说通了，可是那王一某不同意啊，说是你那边地理条件不好，不去，不过最后还是让我说服了，我们俩又一桌了，我开始向你讨教书法，还把我在家里写的字拿给你看，那次算是让你打击的完全没自信了，不过后来我决定自己练，不追求靠哪种体。一次上美术课的时候老师让带毛笔，那你可真是一字千金啊，都向你要字（不过我记得那时好像是没和你同桌，但那件事我记忆很深刻。）&lt;/p&gt;
 &lt;p&gt;我是习惯用钢笔的，我们就交流，你拿了好几根，真不孬！后来我和正哥同桌的时候，你又是在我前边，你遇见了正哥，那就好比磁铁见了铁，一天没完没了的谈笑风生，自习照谈不误，不过为了这事没少挨老板的批，还把你们调开了。最后也记不清了，好像你俩又同桌了。&lt;/p&gt;
 &lt;p&gt;说实话，我们两个关系，那是仅仅限在初一初二的，初三，也许是人生追求不同，性格也不同，就没怎么有什么联系，你和正哥，三金，班长谈游戏，我也没什么可说的，似乎是我们两个是背道而行，越走越远了。最终初三毕业，你给我同学录上写得说我能学，还有点二，这也许就是待人接物的方式不同所产生的两种截然不同的观念。&lt;/p&gt;
-&lt;p&gt;虽然是这样，但是我们曾经是好朋友，现在也是，只是共同语言不如以前多了，这纯属是我的感受。不管怎样，你这个兄弟我都不会忘。我们的事当然不止这些，将来有空再写。祝你将来好好的，乐观点（我不知道你是因为什么事发生了这么大的改变，整日低沉，也许不是你的改变，而是我的观念变了，才会有这种感觉。），深沉点（太健谈了），每天都开心。一定不要忘了我，你曾经的同桌，一起被罚款的兄弟！&lt;/p&gt;</content><category term="blog"/><category term="初中"/><category term="初中回忆录"/><category term="新浪博客"/><category term="友情"/><category term="少年"/></entry><entry><title>初中回忆录（二）</title><link href="https://zqw.ink/2010-08-02-blog-mid_school_memory2.html" rel="alternate"/><published>2010-08-02T00:00:00+08:00</published><updated>2010-08-02T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2010-08-02:/2010-08-02-blog-mid_school_memory2.html</id><summary type="html">&lt;p&gt;上次说到政治老师了。并且写了写老校的教室。今天就说一说在老校发生的事。&lt;/p&gt;
-&lt;p&gt;要是说到我的朋友，不能不说我大叔（一家了 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;上次说到政治老师了。并且写了写老校的教室。今天就说一说在老校发生的事。&lt;/p&gt;
+&lt;p&gt;虽然是这样，但是我们曾经是好朋友，现在也是，只是共同语言不如以前多了，这纯属是我的感受。不管怎样，你这个兄弟我都不会忘。我们的事当然不止这些，将来有空再写。祝你将来好好的，乐观点（我不知道你是因为什么事发生了这么大的改变，整日低沉，也许不是你的改变，而是我的观念变了，才会有这种感觉。），深沉点（太健谈了），每天都开心。一定不要忘了我，你曾经的同桌，一起被罚款的兄弟！&lt;/p&gt;
+</content><category term="blog"/><category term="初中"/><category term="初中回忆录"/><category term="新浪博客"/><category term="友情"/><category term="少年"/></entry><entry><title>初中回忆录（二）</title><link href="https://zqw.ink/2010-08-02-blog-mid_school_memory2.html" rel="alternate"/><published>2010-08-02T00:00:00+08:00</published><updated>2010-08-02T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2010-08-02:/2010-08-02-blog-mid_school_memory2.html</id><summary type="html">
+&lt;p&gt;上次说到政治老师了。并且写了写老校的教室。今天就说一说在老校发生的事。&lt;/p&gt;
+&lt;p&gt;要是说到我的朋友，不能不说我大叔（一家了 …&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;上次说到政治老师了。并且写了写老校的教室。今天就说一说在老校发生的事。&lt;/p&gt;
 &lt;p&gt;要是说到我的朋友，不能不说我大叔（一家了，按辈分来吧。），小胖兼我的二徒弟（以前我叫他车轱辘子，不过没叫起来，倒是小胖由于他的体形叫的比较多。），小郭（没外号，就叫姓吧）兼我的小徒弟（不知道怎么的也叫我师傅，最后一个徒弟也数不清是老几了，就叫小徒弟吧。），王油条兼我的大徒弟，老牛兼我的三弟，洋哥（也没叫起来的外号，就用名字的第二个字。），邢胖子兼我的六徒弟，Hellen兼我的四徒弟，马户兼我的五徒弟，既然兼我的八徒弟，阳哥，羽哥（又一个没外号的，又名字的最后一个字。）兼我的十二徒弟，川哥兼我的十徒弟（不欺负人了，孙子就不写了，其实孙子也是被逼无奈。），潇十一狼（没外号用网名。）兼我的九徒弟，朴哥（“朴”这个字念什么呢？呵呵。）班长，正哥，赵三金，大胖（尹胖子）......多的是，就不一一写了。以上外号均为本人编的，请不要介意，如需更正，请与本人联系。下面就一个一个写吧！&lt;/p&gt;
 &lt;p&gt;（一）大叔&lt;/p&gt;
 &lt;p&gt;先说那位大叔，当然是有缘分，老家在一个镇，又是一家子，按辈分得叫大叔。自打开学就觉得他很特别，有铁齿铜牙（指牙套），不过后来铁齿铜牙没人，倒是成了火眼金睛（指近视眼镜），据他本人所述是放暑假在家躺在床上品三国品的。后来就和他成了同桌，那时候还没有搬校，那段时光也许是初中最快乐的时候（那时候学习不紧，虽说是上晚自习，可是也给我们更多的时间在一起。）一件件的事还历历在目。记得是那次下午放学，我拥抱大胖，结果把自己的手亲吻了教室前的墙，那时老校的墙很粗糙，不用说我的手就负伤了。就是两位兄弟——大叔和小胖不吃饭陪我出去到校门口包伤口，那个时候我真的很感动，现在也很感动，永远也忘不了！你们两个那时陪我的表情现在还清晰的浮现在眼前，眼神里有义气，有焦急。&lt;/p&gt;
 &lt;p&gt;还是在老校上晚自习的时候，因为音乐老师的要求，我们几乎每一个人都有竖笛，接下来，音乐丐帮便顺应时代的潮流而生，威振一时，鼎盛时期连班里的女生都有很多加入了。音乐丐帮是由我创立的——偶然间，在电视上听到九指琴魔弹《笑傲江湖》，觉得熟悉，就想用竖笛吹，可是没有谱，这难不倒我，用电子琴一个音一个音的找，虽然有错的，但是听起来绝对是好听，就为此我联合大叔，创立音乐丐帮，我们二人有分工，一个长老，一个帮主。此后，报名参加之人更是如潮水般涌来，音乐丐帮随之壮大。自打我们音乐丐帮创立，我们的07j。12bAn就没有寂寞过，每天上晚自习前都充满《笑傲江湖》的笛声，当然有些人嫌烦，那纯是他们不懂欣赏艺术，哈哈！我还要负责向帮里成员们传授《笑傲江湖》的吹法，为此我还写了不少的传单，上面有我写的谱。大叔就把成员们分级，有什么二袋......我不大懂这个，有空请教他吧。后来我们音乐丐帮不仅只吹《笑傲江湖》，还有其它的曲目，这谱都是大家提供的，在此表示感谢！其实音乐丐帮不仅就只有这些故事，还有很多，以后想起来再说吧！再次向曾经是音乐丐帮成员的同学们表示感谢！&lt;/p&gt;
 &lt;p&gt;与大叔也不仅是有成功的合作，也有时带来惨重的灾难！也是在老校，上晚自习前，吃了饭，在教室里，我和大叔举起水杯子，当酒杯，还吟诗呢，现在一回想真是潇洒也！不过潇洒的过头，把水不小心倒在了林教头的凳子上，当时好像是没在，不过回来了时候就完了，林教头一怒之下，拿起水杯就四处波，弄得人家羽哥也受灾，我和大叔损失更是惨重。此事过后，还没上晚自习，我和大叔就在日志本上写下即兴文章（我好像是就写了那么一次即兴文章），我是写了两张，大叔写了几张我忘了，那星期的日志就差不多完成了。事后拿出来看时真的像是王羲之写完《兰亭序》的第二天再写，怎么也不如那一本好。那个日记本我还珍藏着，有空把文章打上来，哈哈！&lt;/p&gt;
 &lt;p&gt;初一同桌之后，很长时间就没和他同桌，直到初三，我们才同桌。事情更是有趣，在此不在多说。如果本人有幸还能把这些文章整理一下，一定一一道来。&lt;/p&gt;
-&lt;p&gt;（原载于 &lt;a href="https://blog.sina.com.cn/s/blog_66fe88b60100kd0r.html"&gt;https://blog.sina.com.cn/s/blog_66fe88b60100kd0r.html&lt;/a&gt;）&lt;/p&gt;</content><category term="blog"/><category term="初中"/><category term="初中回忆录"/><category term="新浪博客"/><category term="友情"/><category term="少年"/></entry><entry><title>初中回忆录（三）</title><link href="https://zqw.ink/2010-08-02-blog-mid_school_memory3.html" rel="alternate"/><published>2010-08-02T00:00:00+08:00</published><updated>2010-08-02T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2010-08-02:/2010-08-02-blog-mid_school_memory3.html</id><summary type="html">&lt;p&gt;今天晚上又有空了，我又想起了许多和大叔的事，接着写大叔。&lt;/p&gt;
-&lt;p&gt;我们俩个还有一个共同的职业，提水！这个是什么时候开始一 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;今天晚上又有空了，我又想起了许多和大叔的事，接着写大叔。&lt;/p&gt;
+&lt;p&gt;（原载于 &lt;a href="https://blog.sina.com.cn/s/blog_66fe88b60100kd0r.html"&gt;https://blog.sina.com.cn/s/blog_66fe88b60100kd0r.html&lt;/a&gt;）&lt;/p&gt;
+</content><category term="blog"/><category term="初中"/><category term="初中回忆录"/><category term="新浪博客"/><category term="友情"/><category term="少年"/></entry><entry><title>初中回忆录（三）</title><link href="https://zqw.ink/2010-08-02-blog-mid_school_memory3.html" rel="alternate"/><published>2010-08-02T00:00:00+08:00</published><updated>2010-08-02T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2010-08-02:/2010-08-02-blog-mid_school_memory3.html</id><summary type="html">
+&lt;p&gt;今天晚上又有空了，我又想起了许多和大叔的事，接着写大叔。&lt;/p&gt;
+&lt;p&gt;我们俩个还有一个共同的职业，提水！这个是什么时候开始一 …&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;今天晚上又有空了，我又想起了许多和大叔的事，接着写大叔。&lt;/p&gt;
 &lt;p&gt;我们俩个还有一个共同的职业，提水！这个是什么时候开始一起提的忘了，不过应该是多于一年半。在老校的时候，最先和他提水的时候用的好像是水桶，后来水桶坏了，干脆就把保温桶弄到接水的地方，这样干是我们俩开的先河，不过桶不久就坏了，我们俩开创新道路的前辈就有难了，幸好老板只是说了说，不用罚钱，嘿嘿！桶可是非常壮观的，底掉了，海绵都露出来了，提水的活就不好干了。后来搬校了，还得把那个破桶带去，也不嫌费事，我们班可是在顶楼，真是苦那个搬桶的同学了（声明：我不知道是谁，欢迎提供线索，一经采用最低奖励舒爽喷湿器（QQ宠物用）一个。）。跑题了...  说说那个保温桶的归宿吧。好像是成了垃圾桶，有一次我打开看里边有一点水，水里边还有一个袋，盛什么的忘了，不过应该是五毛钱一包的零食，自打搬校后坏了就一直放在顶楼最西头（也就是我们教室旁边）看风景，大约看了一年吧，我们就毕业了，毕业走的时候好像还在那守候，还是搬走了？记忆有点模糊了。那个桶坏了以后我们提水的同学终于不用鼓捣那个破桶了，两个铁的，哈哈，一人一个（这玩艺也不好啊，有次把我最喜欢的裤子刮破了，心疼。）。言归正传，说大叔！最后一次提水我记得非常清晰，他把脚崴了，还坚持和我最后一次提水，还有点小激动，也有感动的成分。我和大叔提水还有一件有趣的事，剪子包袱锤，谁输了谁提，不过我的运气不好，老输。搬了校后提水下一代国家主席——川哥经常拿着他的军用水壶一起去，路上我们就聊天，有政治方面的（怕审核不过这篇文章，内容就不写了。），有理想方面的，川哥说他特别想当飞行员，只他的视力不行了，还说手术恢复的视力不被认可......有生活方面的，川哥说他在家没事就听收音机，我说我也听，我们俩就来了共同语言，他问我听不听短波，还说他听见别国的东西......有暑假计划方面的，他说放了暑假要在家造世界上成本最低的车，控制在5000元之内，不知道现在造得怎么样了。  又跑题了...&lt;/p&gt;
 &lt;p&gt;还有什么关于大叔的事想起来再写吧！他就先到这儿了！接下来登场的是我的大徒弟——王油条！&lt;/p&gt;
 &lt;p&gt;（二）王油条&lt;/p&gt;
 &lt;p&gt;说起我大徒弟，可是一有才的人。&lt;/p&gt;
 &lt;p&gt;还是从初一开始说，他可真是神气，走路老抬着头，特有霸气，不过初三就没有了，低了头了，也许是被学习给压的。我问过他为什么走路老抬头，他说有一次就因为过马路底头，差点让汽车撞了（说实话，本人不大相信。）&lt;/p&gt;
 &lt;p&gt;至于他怎么成我徒弟的我也忘了，正如他说的，稀里糊涂的就成了我的徒弟。第一次叫我师傅好像是有一次下午放学，教室里就剩我们俩了，他忘了什么作业，无奈之下便叫了我一声师傅，我就告诉了他，自从这以后他就成了我的第一个徒弟，从此我的收徒之路也一发不可收拾，一连收了十几个，说实话，大部分徒弟都是被我逼迫才叫我师傅，不过也有自愿拜师的。前期，我们俩没什么有趣的事，就是搬了校之后，缘分才真正开始了。一次打赌，他叫了我好几个月的师傅，事情是这样的：一次语文轮到我演讲，上课之前我拿他练，让他听，我有点夸张的改了改稿子，有一句“同学们！听师傅一句话，醒醒吧，再不醒就挂了。”他可能是听得不耐烦了，就说“你要是敢上课的时候这么演讲我就叫你师傅！”“好！”，上课的时候我果然说了，只不过前边加了句“假如我将来成为一名教师，一定会和我的同学这样说‘同学们！听师傅一句话，......’”下课之后，王油条郁闷死了，当然叫了我师傅。之后一直叫，后来他好像是叫我“兄弟！”我没答话，便让这小子给赖了，说我是默认怎么地，以后我让他叫我师傅，他就总是说“记住，我们之间是兄弟关系。”同学录上也是称呼我兄弟，不过，就在前天，他写日志，又承认我是他师傅，哈哈！&lt;/p&gt;
-&lt;p&gt;时间不早了，就写到这儿吧，有空把日记本找找，好有点线索！&lt;/p&gt;</content><category term="blog"/><category term="初中"/><category term="初中回忆录"/><category term="新浪博客"/><category term="友情"/><category term="少年"/></entry><entry><title>初中回忆录（一）</title><link href="https://zqw.ink/2010-08-01-blog-mid_school_memory1.html" rel="alternate"/><published>2010-08-01T00:00:00+08:00</published><updated>2010-08-01T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2010-08-01:/2010-08-01-blog-mid_school_memory1.html</id><summary type="html">&lt;p&gt;同学们，放假一个半月了，真的是很怀念初中。曾经给几个同学填的同学录，让你们7月1号来我的博客，说有东西，可是那几天没网费了，今天补 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;同学们，放假一个半月了，真的是很怀念初中。曾经给几个同学填的同学录，让你们7月1号来我的博客，说有东西，可是那几天没网费了，今天补上吧，不知道来没来。&lt;/p&gt;
+&lt;p&gt;时间不早了，就写到这儿吧，有空把日记本找找，好有点线索！&lt;/p&gt;
+</content><category term="blog"/><category term="初中"/><category term="初中回忆录"/><category term="新浪博客"/><category term="友情"/><category term="少年"/></entry><entry><title>初中回忆录（一）</title><link href="https://zqw.ink/2010-08-01-blog-mid_school_memory1.html" rel="alternate"/><published>2010-08-01T00:00:00+08:00</published><updated>2010-08-01T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2010-08-01:/2010-08-01-blog-mid_school_memory1.html</id><summary type="html">
+&lt;p&gt;同学们，放假一个半月了，真的是很怀念初中。曾经给几个同学填的同学录，让你们7月1号来我的博客，说有东西，可是那几天没网费了，今天补 …&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;同学们，放假一个半月了，真的是很怀念初中。曾经给几个同学填的同学录，让你们7月1号来我的博客，说有东西，可是那几天没网费了，今天补上吧，不知道来没来。&lt;/p&gt;
 &lt;p&gt;想一想，从入学那天，我们就到了蒙阴三中，第一天不知道校园内不能骑车，有个小学的同学骑车还被抓了，嘿嘿！我们那两间破教室，如今早已变成了什么我也没去看，不过老校的照片我还有几张。老教室地上有坑，上面漏雨（记得搬校前星期五上政治课，没上完课下雨了，好家伙，那场面，好几个同学把桌子都搬了。后来，搬了校，又是一星期的最后一节课，还是政治老师的，又下雨，虽然不漏雨了，但是同学们心急，想回家，教室里一片混乱，后来政治老师不愿意要这节课，就和老板换了，上老板的课就没有敢造反了，哈哈。），中午灰尘满教室飞，弄的鼻子难受。即使有不好的地方，但是有美好的回忆。上晚自习的时候，下了课，到外面能看见星星。这几天这么热，一想那样的夜晚真凉快！&lt;/p&gt;
 &lt;p&gt;说起了政治老师，就想想吧。他的手下（政治课代表）就是我的徒弟（他怎么是我徒弟呢，说来就话长了，以后再写吧），学习贼用功（当然是在男生中来说）。言归正传，政治老师给我的印象有一个是节俭，为什么呢？记得搬校的时候，他从来都是骑自行车上班的，可那天骑摩托来了，原来是把楼前那些废品回收了，真的很令人佩服。还有就是他的字，特别帅。记得他给我的毕业赠言是：有理想的地方地狱就是天堂。不能不说这句话是很富有哲理的。他的个子高高的，戴一副眼镜，脸有点长，我徒弟叫他“长脸”（没有不尊重的意思，只是亲切的称谓）。他讲课也像个领导一样，经常是听不清的，（附口头禅：课代表起来回答一下。***起来回答一下。）叫起来回答问题的同学也总是那么几个，好像就认识那几个同学（不过叫起来的同学一般都被看作是不幸的，因为他问的问题都是听不清。纯属个人感受），不过初三的时候我和他的关系那可是不一般了，我佩服他的政治头脑，因为我也是比较喜欢政治的。讲话也比较幽默。&lt;/p&gt;
 &lt;p&gt;今天就说这些吧！&lt;/p&gt;
-&lt;p&gt;&lt;img alt="dream" src="./2010-08-01-blog-mid_school_memory1/dream.png"&gt;&lt;/p&gt;
-&lt;p&gt;（原载于 &lt;a href="https://blog.sina.com.cn/s/blog_66fe88b60100kciq.html"&gt;https://blog.sina.com.cn/s/blog_66fe88b60100kciq.html&lt;/a&gt; ）&lt;/p&gt;</content><category term="blog"/><category term="初中"/><category term="初中回忆录"/><category term="新浪博客"/><category term="政治老师"/><category term="少年"/></entry><entry><title>星期六 天气雾转晴</title><link href="https://zqw.ink/2007-09-15-blog-yu_memory.html" rel="alternate"/><published>2007-09-15T00:00:00+08:00</published><updated>2007-09-15T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2007-09-15:/2007-09-15-blog-yu_memory.html</id><summary type="html">&lt;p&gt;今天，我一大早就起来了，吃完早饭，就到好友于海龙家。&lt;/p&gt;
-&lt;p&gt;我骑着自行车走在雾茫茫的路上，我捎了点东西，于是这抄小路，小路 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;今天，我一大早就起来了，吃完早饭，就到好友于海龙家。&lt;/p&gt;
+&lt;p&gt;&lt;img src="./2010-08-01-blog-mid_school_memory1/dream.png" alt="dream" /&gt;&lt;/p&gt;
+&lt;p&gt;（原载于 &lt;a href="https://blog.sina.com.cn/s/blog_66fe88b60100kciq.html"&gt;https://blog.sina.com.cn/s/blog_66fe88b60100kciq.html&lt;/a&gt; ）&lt;/p&gt;
+</content><category term="blog"/><category term="初中"/><category term="初中回忆录"/><category term="新浪博客"/><category term="政治老师"/><category term="少年"/></entry><entry><title>星期六 天气雾转晴</title><link href="https://zqw.ink/2007-09-15-blog-yu_memory.html" rel="alternate"/><published>2007-09-15T00:00:00+08:00</published><updated>2007-09-15T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2007-09-15:/2007-09-15-blog-yu_memory.html</id><summary type="html">
+&lt;p&gt;今天，我一大早就起来了，吃完早饭，就到好友于海龙家。&lt;/p&gt;
+&lt;p&gt;我骑着自行车走在雾茫茫的路上，我捎了点东西，于是这抄小路，小路 …&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;今天，我一大早就起来了，吃完早饭，就到好友于海龙家。&lt;/p&gt;
 &lt;p&gt;我骑着自行车走在雾茫茫的路上，我捎了点东西，于是这抄小路，小路就是一片森林，加上白茫茫的雾，地下枯黄的树叶，向前望不到头，向后望不到尾，白茫茫的一片，如同书中所写地竹林，进去就出不来。&lt;/p&gt;
-&lt;p&gt;我终于上了公路了，但是雾比我出来时更大了，许多车都打开了灯，我只能靠着边缘行始(驶)，又通过 "跃进桥" 这时下面地水是看不到了，只能听见声音，向四周望，都是雾，就像一坐(座)通往天堂的云梯，也像电视剧&amp;lt;&amp;lt;西游记&amp;gt;&amp;gt;中神仙的府地。&lt;/p&gt;
+&lt;p&gt;我终于上了公路了，但是雾比我出来时更大了，许多车都打开了灯，我只能靠着边缘行始(驶)，又通过 &amp;quot;跃进桥&amp;quot; 这时下面地水是看不到了，只能听见声音，向四周望，都是雾，就像一坐(座)通往天堂的云梯，也像电视剧&amp;lt;&amp;lt;西游记&amp;gt;&amp;gt;中神仙的府地。&lt;/p&gt;
 &lt;p&gt;我到了于海龙家，受到了热情的款待。之后，我和他一起出发，去爬宏蒙塔，我和他两层两层地爬，爬到了顶层，微风吹来，心旷神怡，往下望，雾已经散了，眼睛可以遍布蒙阴县，美景尽收眼底。&lt;/p&gt;
 &lt;p&gt;在回去的路上，我们又参观了战斗机。&lt;/p&gt;
 &lt;p&gt;我们沿着河边，骑自行车走在柳树下边沿途欣赏风景。我们看见水中地小船，也想去坐，可是钱不够。&lt;/p&gt;
 &lt;p&gt;下午，他和我一起打乒乓球，直到 3:00 他才回家，我们玩得很快乐。&lt;/p&gt;
-&lt;p&gt;今天，经历了雾和晴，还爬了塔，可谓是快乐的一个日子啊!&lt;/p&gt;</content><category term="blog"/><category term="小学"/><category term="少年"/><category term="友情"/><category term="乒乓球"/><category term="纸质资料电子化"/><category term="日记"/></entry></feed>
+&lt;p&gt;今天，经历了雾和晴，还爬了塔，可谓是快乐的一个日子啊!&lt;/p&gt;
+</content><category term="blog"/><category term="小学"/><category term="少年"/><category term="友情"/><category term="乒乓球"/><category term="纸质资料电子化"/><category term="日记"/></entry></feed>

@@ -6,13 +6,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="Pelican" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link
-    href="https://zqw.ink/feeds/all.atom.xml"
-    type="application/atom+xml" rel="alternate" title="从冰上的水 Full Atom Feed" />
-  <link
-    href="https://zqw.ink/feeds/ruan-jian-shi-yong.atom.xml"
-    type="application/atom+xml" rel="alternate" title="从冰上的水 Categories Atom Feed" />
-  <link rel="stylesheet" type="text/css" href="https://zqw.ink/theme/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="/theme/css/style.css" />
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -109,9 +103,6 @@
           <i class="theme-icon icon-moon fa-solid fa-moon" aria-hidden="true"></i>
         </button>
         <div class="rss">
-            <a href="https://zqw.ink/feeds/all.atom.xml" aria-label="Atom 订阅">
-              <i class="fa-solid fa-rss" aria-hidden="true"></i>
-            </a>
         </div>
       </div>
     </div>
@@ -122,33 +113,31 @@
 
 <section class="post-meta">
     <p>2018-09-07</p>
-    <p>-<a class="post-link" href="https://zqw.ink/category/ruan-jian-shi-yong.html">软件使用</a></p>
+    <p>-<a class="post-link" href="/category/ruan-jian-shi-yong.html">软件使用</a></p>
 </section>
 
 <section class="markdown-body">
   <!-- toc -->
-
 <!-- more -->
-
 <h3>修改配色</h3>
 <p>打开Emacs的配置文件。配置文件在~/.emacs。增加：</p>
 <blockquote>
-<p>(set-background-color "black") ;; 使用黑色背景
-(set-foreground-color "white") ;; 使用白色前景
-(set-face-foreground 'region "green")  ;; 区域前景颜色设为绿色
-(set-face-background 'region "blue") ;; 区域背景色设为蓝色</p>
+<p>(set-background-color &quot;black&quot;) ;; 使用黑色背景<br />
+(set-foreground-color &quot;white&quot;) ;; 使用白色前景<br />
+(set-face-foreground 'region &quot;green&quot;)  ;; 区域前景颜色设为绿色<br />
+(set-face-background 'region &quot;blue&quot;) ;; 区域背景色设为蓝色</p>
 </blockquote>
 <p>尽管可以重启Emacs使配置生效，但更快捷的方式是在打开~/.emacs的时候执行命令M-x eval-buffer，就可以使配置文件立即生效。</p>
 <h3>快捷键</h3>
-<p>中文帮助：<code>C-h t</code> </p>
-<p>撤消：<code>C-x u</code> <code>C-/</code> </p>
-<p>启动自动折行模式：<code>M-x auto-fill-mode &lt;Return&gt;</code> </p>
-<p>相关命令搜索（Command Apropos）：<code>C-h a</code> </p>
-<p>Emacs 使用手册（manual）：<code>C-h r</code> </p>
-<p>自动补全：<code>M-/</code>     </p>
-<p>在另一个窗口打开缓冲：<code>C-x 4 b</code>     </p>
-<p>复制：<code>M-w</code> </p>
-<p>把当前进程放到后台（之后可用''fg''命令回到前台）： <code>Ctrl Z</code>   </p>
+<p>中文帮助：<code>C-h t</code></p>
+<p>撤消：<code>C-x u</code> <code>C-/</code></p>
+<p>启动自动折行模式：<code>M-x auto-fill-mode &lt;Return&gt;</code></p>
+<p>相关命令搜索（Command Apropos）：<code>C-h a</code></p>
+<p>Emacs 使用手册（manual）：<code>C-h r</code></p>
+<p>自动补全：<code>M-/</code></p>
+<p>在另一个窗口打开缓冲：<code>C-x 4 b</code></p>
+<p>复制：<code>M-w</code></p>
+<p>把当前进程放到后台（之后可用''fg''命令回到前台）： <code>Ctrl Z</code></p>
 <p>清屏：<code>ctrl L</code></p>
 <h3>打开</h3>
 <p>终端模式：<code>emacs -nw</code></p>
@@ -250,12 +239,13 @@
 (require 'sr-speedbar)
 
 </code></pre>
+
 </section>
 
 <section class="post-meta">
     <p>
-        <a class="post-link" href="https://zqw.ink/tag/emacs.html">#Emacs</a>
-        <a class="post-link" href="https://zqw.ink/tag/kuai-jie-jian.html">#快捷键</a>
+        <a class="post-link" href="/tag/emacs.html">#Emacs</a>
+        <a class="post-link" href="/tag/kuai-jie-jian.html">#快捷键</a>
     </p>
 </section>
 

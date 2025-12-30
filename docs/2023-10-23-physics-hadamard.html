@@ -127,61 +127,56 @@
 
 <section class="markdown-body">
   <!-- toc -->
-
 <!-- more -->
-<p>\(F(\rho, z)\) 是一个光滑，并且在正负无穷快速decay到时0,的函数，比如 \(F(\rho, z) = 1/(z^2 + 1)\)。我们想要计算</p>
-\[
+<p>$F(\rho, z)$ 是一个光滑，并且在正负无穷快速decay到时0,的函数，比如 $F(\rho, z) = 1/(z^2 + 1)$。我们想要计算<br />
+$$
 \lim_{\rho\to 0} \frac{\partial}{\partial\rho}\left[\rho
 \int_{-\infty}^{+\infty} \frac{F(\rho, z)}{\rho^2 + z^2}\mathrm{d}z\right]
-\]
-
-<p>其中的积分</p>
-\[
+$$</p>
+<h1>其中的积分<br />
+$$
 \int_{-\infty}^{+\infty} \frac{F(\rho, z)}{\rho^2 + z^2}\mathrm{d}z
-\]
-<p>可以在 \(\rho\to 0\) 处展开</p>
-\[
+$$<br />
+可以在 $\rho\to 0$ 处展开<br />
+$$
 \int_{-\infty}^{+\infty} \frac{F(\rho, z)}{\rho^2 + z^2}\mathrm{d}z
 = \frac{\pi}{\rho}F(0, 0) + C_0 + C_1 \rho + C_2\rho^2 + \cdots
-\]
-<p>其中第一项</p>
-\[
+$$<br />
+其中第一项<br />
+$$
 \lim_{\rho\to 0}\int_{-\infty}^{+\infty} \frac{F(\rho, z)}{\rho^2 + z^2}\mathrm{d}z
 =\lim_{\rho\to 0}\int_{-\infty}^{+\infty} \frac{F(\rho, z)}{\rho}\frac{\rho}{\rho^2 + z^2}\mathrm{d}z
 =\int_{-\infty}^{+\infty} \frac{F(\rho, z)}{\rho}\pi\delta(z)\mathrm{d}z
 = \frac{\pi}{\rho}F(0, 0)
-\]
-<p>代回原式后得</p>
-\[
+$$<br />
+代回原式后得<br />
+$$
 \lim_{\rho\to 0} \frac{\partial}{\partial\rho}\left[\rho
 \int_{-\infty}^{+\infty} \frac{F(\rho, z)}{\rho^2 + z^2}\mathrm{d}z\right]
  = C_0
-\]
-<p>也就是说，我们想要的就是 \(C_0\)。但这在数值上如何计算呢？我们可以把发散的部分</p>
-\[
-\lim_{\rho\to 0}\int_{-\infty}^{+\infty} \frac{F(\rho, z)}{\rho^2 + z^2}\mathrm{d}z
-=
-\int_{-\infty}^{+\infty} \frac{F(0, z)}{ z^2}\mathrm{d}z
-= \frac{\pi}{\rho}F(0, 0)
-\]
-<p>减去，就得到</p>
-\[
-\lim_{\rho\to 0} \frac{\partial}{\partial\rho}\left[\rho
-\int_{-\infty}^{+\infty} \frac{F(\rho, z)}{\rho^2 + z^2}\mathrm{d}z\right]
-=
-\int_{-\infty}^{\infty}\left[
-\frac{F(0, z)}{z^2} - \frac{F(0, 0)}{z^2}\right]\mathrm{d}z
-\]
-<p>这样我们就可以做数值计算了。</p>
+$$<br />
+也就是说，我们想要的就是 $C_0$。但这在数值上如何计算呢？我们可以把发散的部分<br />
+$$<br />
+\lim_{\rho\to 0}\int_{-\infty}^{+\infty} \frac{F(\rho, z)}{\rho^2 + z^2}\mathrm{d}z</h1>
+<h1>\int_{-\infty}^{+\infty} \frac{F(0, z)}{ z^2}\mathrm{d}z<br />
+= \frac{\pi}{\rho}F(0, 0)<br />
+$$
+减去，就得到
+$$<br />
+\lim_{\rho\to 0} \frac{\partial}{\partial\rho}\left[\rho<br />
+\int_{-\infty}^{+\infty} \frac{F(\rho, z)}{\rho^2 + z^2}\mathrm{d}z\right]</h1>
+<p>\int_{-\infty}^{\infty}\left[<br />
+\frac{F(0, z)}{z^2} - \frac{F(0, 0)}{z^2}\right]\mathrm{d}z<br />
+$$<br />
+这样我们就可以做数值计算了。</p>
 <h1>例</h1>
-<p>比如\(F(\rho, z) = 1/(z^2 + 1)\)时，</p>
-\[
+<p>比如$F(\rho, z) = 1/(z^2 + 1)$时，<br />
+$$
 \int_{-\infty}^{\infty}\left[
 \frac{1}{z^2}\frac{1}{z^2 + 1} - \frac{1}{z^2}\frac{1}{0^2 + 1}\right]\mathrm{d}z
 = \int_{-\infty}^{\infty}
 \frac{-1}{z^2 + 1} \mathrm{d}z = -\pi
-\]
-
+$$</p>
 <pre><code class="language-python">import matplotlib.pyplot as plt
 import numpy as np
 from scipy.integrate import quad
@@ -245,13 +240,14 @@ plt.savefig('finite-part.png', transparent=True)
 analytic: 314.1592653589793
 (-3.140592653672964, 4.381553441406457e-11)
 </code></pre>
-<p><img alt="first-term" src="2023-10-23-physics-Hadamard/first-term.png"></p>
-<p><img alt="finite-part" src="2023-10-23-physics-Hadamard/finite-part.png"></p>
+<p><img src="2023-10-23-physics-Hadamard/first-term.png" alt="first-term" /></p>
+<p><img src="2023-10-23-physics-Hadamard/finite-part.png" alt="finite-part" /></p>
 <p><a href="2023-10-23-physics-Hadamard/Hadamard.py">Hadamard.py</a></p>
 <h1>致谢</h1>
 <ol>
 <li>F Yang and R Qi</li>
 </ol>
+
 </section>
 
 <section class="post-meta">

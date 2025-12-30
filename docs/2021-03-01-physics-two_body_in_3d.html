@@ -127,179 +127,171 @@
 
 <section class="markdown-body">
   <!-- toc -->
-
 <!-- more -->
 <h1>any</h1>
-<p>\(r &gt; r_0\) 时, \(V(r) = 0\) , 径向 Schrodinger 方程为</p>
-\[
+<p>$r > r_0$ 时, $V(r) = 0$ , 径向 Schrodinger 方程为<br />
+$$
 \label{eq:sq}
 -\chi'' + \frac{l(l+1)}{r^2}\chi = k^2 \chi
-\]
-
-<p>将 \(\chi\) 在 \(k=0\) 处做低能展开</p>
-\[
+$$</p>
+<p>将 $\chi$ 在 $k=0$ 处做低能展开<br />
+$$
 \chi(r) = \phi(r) + k^2 f(r) +k^4 g(r) + \mathcal{O}(k^6)
-\]
-
-<p>将展开代回到 \((\ref{eq:sq})\) , 对比 \(k\) 的系数得到:</p>
-<p>零能时, 也就是 \(\phi\) 满足的方程为</p>
-\[
-\label{eq:phi}
-- \phi '' + \frac{l(l+1)}{r^2}\phi = 0
-\]
-<p>\(f\) 满足的方程为</p>
-\[
-\label{eq:f}
-- f '' + \frac{l(l+1)}{r^2}f = \phi
-\]
-<p>\(g\) 满足的方程为</p>
-\[
-\label{eq:g}
-- g'' + \frac{l(l+1)}{r^2}g = f
-\]
-
+$$</p>
+<p>将展开代回到 $(\ref{eq:sq})$ , 对比 <eq>k</eq> 的系数得到:</p>
+<p>零能时, 也就是 $\phi$ 满足的方程为<br />
+$$<br />
+\label{eq:phi}</p>
+<ul>
+<li>\phi '' + \frac{l(l+1)}{r^2}\phi = 0<br />
+$$<br />
+<eq>f</eq> 满足的方程为<br />
+$$<br />
+\label{eq:f}</li>
+<li>f '' + \frac{l(l+1)}{r^2}f = \phi<br />
+$$<br />
+<eq>g</eq> 满足的方程为<br />
+$$<br />
+\label{eq:g}</li>
+<li>g'' + \frac{l(l+1)}{r^2}g = f<br />
+$$</li>
+</ul>
 <h1>s-wave</h1>
-<p>\(l = 0\) 代入 \((\ref{eq:phi})\) 零能解为</p>
-\[
+<p>$l = 0$ 代入 $(\ref{eq:phi})$ 零能解为<br />
+$$
 \phi \propto \sharp_1  + \sharp_2 r
-\]
-<p>舍去一个归一化因子, 相对系数可定义散射长度</p>
-\[
+$$<br />
+舍去一个归一化因子, 相对系数可定义散射长度<br />
+$$
 \label{eq:phi_s}
 \phi = 1 - \frac{r}{a}
-\]
+$$</p>
+$$
 
-\[
 \psi(r)|_{k=0} = \frac{\chi(r)}{r} \propto \frac{1}{r} - \frac{1}{a}
-\]
-<p>\((\ref{eq:phi_s})\) 代入 \((\ref{eq:f})\) 解得</p>
-\[
+
+$$<p>$(\ref{eq:phi_s})$ 代入 $(\ref{eq:f})$ 解得<br />
+$$
 f = -\frac{r^2}{2} + \frac{r^3}{6a} + C_1 + C_2 r
-\]
-<p>重新定义 \(f \to f - C_1\phi\) (这总是可以做到的, 因为相当于直接在展开的时候令 \(\chi = \phi + k^2 (f-C_1\phi) + k^4 g\) , \(f - C_1 \phi\) 也可以做一到是任意函数 ) ,并用系数定义 effective range</p>
-\[
+$$<br />
+重新定义 $f \to f - C_1\phi$ (这总是可以做到的, 因为相当于直接在展开的时候令 $\chi = \phi + k^2 (f-C_1\phi) + k^4 g$ , $f - C_1 \phi$ 也可以做一到是任意函数 ) ,并用系数定义 effective range<br />
+$$
 \label{eq:f_s}
 f = -\frac{r^2}{2} + \frac{r^3}{6a} + \frac{r_s}{2} r
-\]
-<p>\((\ref{eq:f_s})\) 代入 \((\ref{eq:f})\) ,并做类似地处理 ( \(g\to g - \cdots\) , 定义 \(r_s'\) ) 得到 (  \(r_s'\) <strong>的系数why?1/24??</strong> ) </p>
-\[
+$$<br />
+$(\ref{eq:f_s})$ 代入 $(\ref{eq:f})$ ,并做类似地处理 ( $g\to g - \cdots$ , 定义 $r_s'$ ) 得到 (  $r_s'$ <strong>的系数why?1/24??</strong> )<br />
+$$
 g = \frac{r^4}{24} - \frac{r^5}{120a} - \frac{r_s}{12}r^3 +\frac{r_s'}{24}r
-\]
-<p>s-wave 非零能的径向方程实际是严格可解的, 舍去一个归一化系数, 另一个系数定义相移( 是 \(k\) 的函数 ), 形式为</p>
-\[
+$$<br />
+s-wave 非零能的径向方程实际是严格可解的, 舍去一个归一化系数, 另一个系数定义相移( 是 <eq>k</eq> 的函数 ), 形式为<br />
+$$
 \psi(r) = \frac{\sin (k r + \delta_k)}{r\sin\delta_k}
-\]
-<p>\(\psi(r)\) 也做低能 \(k\to 0\) 的展开</p>
-\[
+$$<br />
+$\psi(r)$ 也做低能 $k\to 0$ 的展开<br />
+$$
 \psi(r) = \frac{\chi(r)}{r} = \cot\delta_k \sin(kr)\frac{1}{r} + \cos(kr)\frac{1}{r} 
 = \frac{1}{r} + k\cot\delta_k + \mathcal{O}(r^2)
-\]
-<p>\(k\cot\delta_k\) 为 \(r^0\) 的系数, 因此得到 \(k\cot\delta_k\) 低能展开</p>
-\[
+$$<br />
+$k\cot\delta_k$ 为 $r^0$ 的系数, 因此得到 $k\cot\delta_k$ 低能展开<br />
+$$
 k\cot \delta_k = -\frac{1}{a} + k^2\frac{r_s}{2} + k^4 \frac{r_s'}{24} + \mathcal{O}(k^6)
-\]
-
+$$</p>
 <h1>p-wave</h1>
-<p>\(l = 1\) 代入 \((\ref{eq:phi})\) 零能解为零能时</p>
-\[
+<p>$l = 1$ 代入 $(\ref{eq:phi})$ 零能解为零能时<br />
+$$
 -\phi'' + \frac{1\times(1+1)}{r^2}\phi = 0
-\]
-<p>解为</p>
-\[
+$$<br />
+解为<br />
+$$
 \phi(r) \propto \sharp_1 r^2 + \sharp_2 \frac{1}{r}
-\]
-
-<p>舍去一个归一化因子, 相对系数可定义 \(v\) </p>
-\[
+$$</p>
+<p>舍去一个归一化因子, 相对系数可定义 <eq>v</eq><br />
+$$
 \label{eq:phi_p}
 \phi(r) = \frac{1}{r} - \frac{r^2}{3v}
-\]
-<p>\((\ref{eq:phi_p})\) 代入 \((\ref{eq:f})\) 解得</p>
-\[
+$$<br />
+$(\ref{eq:phi_p})$ 代入 $(\ref{eq:f})$ 解得<br />
+$$
 f = \frac{r}{2} + \frac{r^4}{30v} + \sharp_1 r^2 +\sharp_2 \frac{1}{r}
-\]
-<p>与 s-wave 类似的处理, 用系数定义 \(R\) , 重新定义后的 \(f\) 为</p>
-\[
+$$<br />
+与 s-wave 类似的处理, 用系数定义 <eq>R</eq> , 重新定义后的 <eq>f</eq> 为<br />
+$$
 f = \frac{r}{2} + \frac{r^4}{30v} - \frac{r^2}{3R}
-\]
-<p>所以</p>
-\[
+$$<br />
+所以<br />
+$$
 \psi(r) = \frac{\chi(r)}{r} = \left( \frac{1}{r^2} - \frac{r}{3v} \right)
          + k^2 \left( \frac{1}{2} - \frac{r}{3R} + \frac{r^3}{30v}  \right) + \mathcal{O}(k^4)
-\]
-
-<p><del>p-wave 非零能的径向方程的严格解是求 Bessel 函数, 舍去一个归一化系数, 另一个系数定义相移( 是 \(k\) 的函数 ), 在 \(r\to\infty\) 的渐近形式为</del></p>
-<blockquote>
-<p>$$
-\begin{align}
-\psi(r) = \frac{\chi(r)}{r} \sim&amp; \frac{1}{r\sin\delta_k}\sin\left(kr - \frac{1}{2}\pi + \delta_k  \right) \
- =&amp; -\frac{1}{r}\cot \delta_k  + k + r\frac{k^2}{2}\cot\delta_k+\mathcal{O}(r^2)\quad, \quad \mathrm{as}\, r \to\infty
- \end{align}
 $$</p>
-</blockquote>
-<p>将严格解也在低能展开 ( <strong>此式的来源???</strong> )</p>
-\[
+<p><s>p-wave 非零能的径向方程的严格解是求 Bessel 函数, 舍去一个归一化系数, 另一个系数定义相移( 是 <eq>k</eq> 的函数 ), 在 $r\to\infty$ 的渐近形式为</s></p>
+<blockquote>
+$$
+
+> \begin{align}
+> \psi(r) = \frac{\chi(r)}{r} \sim& \frac{1}{r\sin\delta_k}\sin\left(kr - \frac{1}{2}\pi + \delta_k  \right) \\
+>  =& -\frac{1}{r}\cot \delta_k  + k + r\frac{k^2}{2}\cot\delta_k+\mathcal{O}(r^2)\quad, \quad \mathrm{as}\, r \to\infty
+>  \end{align}
+> 
+$$</blockquote>
+<p>将严格解也在低能展开 ( <strong>此式的来源???</strong> )<br />
+$$
 \psi(r) = \frac{\chi(r)}{r} \propto \cot\delta_k j_1(kr) - y_1(kr) = \frac{1}{k^2 r^2} + \frac{1}{2} 
              + \frac{r}{3}k \cot\delta_k + \mathcal{O}(r^2)
-\]
-
-<p>对比 \(\frac{1}{r^2}\) 及 \(r\) 的系数可得</p>
-\[
+$$</p>
+<p>对比 $\frac{1}{r^2}$ 及 <eq>r</eq> 的系数可得<br />
+$$
 \cot \delta_k = -\frac{1}{v k^3} - \frac{1}{kR} + \mathcal{O}(k)
-\]
-
+$$</p>
 <h1>d-wave</h1>
-<p>\(l = 2\) 代入 \((\ref{eq:phi})\) 零能解为零能时</p>
-\[
+<p>$l = 2$ 代入 $(\ref{eq:phi})$ 零能解为零能时<br />
+$$
 -\phi'' + \frac{2(2+1)}{r^2}\phi = 0
-\]
-<p>解为</p>
-\[
+$$<br />
+解为<br />
+$$
 \phi(r) = \sharp_1 r^3 + \sharp_2 \frac{1}{r^2}
-\]
-
-<p>舍去一个归一化因子, 相对系数可定义 \(D\) </p>
-\[
+$$</p>
+<p>舍去一个归一化因子, 相对系数可定义 <eq>D</eq><br />
+$$
 \label{eq:phi_d}
 \phi(r) = \frac{1}{r^2} - \frac{r^3}{45 D}
-\]
-<p>\((\ref{eq:phi_d})\) 代入 \((\ref{eq:f})\) 解得</p>
-\[
+$$<br />
+$(\ref{eq:phi_d})$ 代入 $(\ref{eq:f})$ 解得<br />
+$$
 f = \frac{1}{6} + \frac{r^5}{630 D} + \sharp_1 r^3 + \frac{\sharp_2}{r^2}
-\]
-<p>与 s-wave 类似的处理, 用系数定义 \(v\) , 重新定义后的 \(f\) 为</p>
-\[
+$$<br />
+与 s-wave 类似的处理, 用系数定义 <eq>v</eq> , 重新定义后的 <eq>f</eq> 为<br />
+$$
 \label{eq:f_d}
 f = \frac{1}{6} + \frac{r^5}{630 D} - \frac{r^3}{45v}
-\]
-<p>\((\ref{eq:f_d})\) 代入 \((\ref{eq:g})\) ,并做类似地处理 ( \(g\to g - \cdots\) , 定义 \(r_s'\) ) 得到</p>
-\[
+$$<br />
+$(\ref{eq:f_d})$ 代入 $(\ref{eq:g})$ ,并做类似地处理 ( $g\to g - \cdots$ , 定义 $r_s'$ ) 得到<br />
+$$
 \begin{align}
-g =&amp; \frac{r^5}{630 v} + \frac{r^2}{24} - \frac{r^7}{22680 D} + \sharp_1 r^3 + \frac{\sharp_2}{r^2} \\
-\Rightarrow g =&amp; \frac{r^5}{630 v} + \frac{r^2}{24} - \frac{r^7}{22680 D} -\frac{r^3}{45R}  
+g =& \frac{r^5}{630 v} + \frac{r^2}{24} - \frac{r^7}{22680 D} + \sharp_1 r^3 + \frac{\sharp_2}{r^2} \\
+\Rightarrow g =& \frac{r^5}{630 v} + \frac{r^2}{24} - \frac{r^7}{22680 D} -\frac{r^3}{45R}  
 \end{align}
-\]
-<p>所以</p>
-\[
+$$<br />
+所以<br />
+$$
 \begin{align}
-\psi(r) =&amp; \frac{\chi(r)}{r} = \frac{\phi(r) + k^2 f(r) +k^4 g(r) + \mathcal{O}(k^6)}{r} \\
-        =&amp;  \left(\frac{1}{r^3} - \frac{r^2}{45 D} \right)
+\psi(r) =& \frac{\chi(r)}{r} = \frac{\phi(r) + k^2 f(r) +k^4 g(r) + \mathcal{O}(k^6)}{r} \\
+        =&  \left(\frac{1}{r^3} - \frac{r^2}{45 D} \right)
          +k^2\left( \frac{1}{6} + \frac{r^5}{630 D} - \frac{r^3}{45v} \right)
          +k^4\left( \frac{r^5}{630 v} + \frac{r^2}{24} - \frac{r^7}{22680 D} -\frac{r^3}{45R} \right)
 \end{align}
-\]
-
-<p>将严格解也在低能展开</p>
-\[
+$$</p>
+<p>将严格解也在低能展开<br />
+$$
 \psi(r) = \frac{\chi(r)}{r} \propto \cot\delta_k j_2(kr) - y_2(kr) 
         = \frac{3}{k^3 r^3} + \frac{1}{2kr} + \frac{kr}{8} 
              + \frac{r^2}{15}k^2 \cot\delta_k + \mathcal{O}(r^3)
-\]
-
-<p>对比系数得</p>
-\[
+$$</p>
+<p>对比系数得<br />
+$$
 \cot \delta_k = - \frac{1}{Dk^5} - \frac{1}{vk^3} - \frac{1}{kR} + \mathcal{O}(k)
-\]
+$$</p>
+
 </section>
 
 <section class="post-meta">

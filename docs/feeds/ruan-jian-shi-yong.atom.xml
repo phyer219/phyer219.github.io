@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水 - 软件使用</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/ruan-jian-shi-yong.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2024-10-26T00:00:00+08:00</updated><entry><title>在博客中嵌入 JavaScript 之 Plotly.js</title><link href="https://zqw.ink/2024-10-26-coding-plotlyjs.html" rel="alternate"/><published>2024-10-26T00:00:00+08:00</published><updated>2024-10-26T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2024-10-26:/2024-10-26-coding-plotlyjs.html</id><summary type="html">&lt;script src="https://unpkg.com/mathjs@13.2.0/lib/browser/math.js"&gt;&lt;/script&gt;
 &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.35.0/plotly.min.js"&gt;&lt;/script&gt;
-
 &lt;form id="form", class="img-like"&gt;
   &lt;label for="eq"&gt;Enter an equation: f(x)=&lt;/label&gt;
   &lt;input type="text" id="eq" value="sin(x)" /&gt;
   &lt;input type="submit" value="Draw" /&gt;
 &lt;/form&gt;
-
 &lt;div id="plot" class="img-like"&gt;&lt;/div&gt;
-
 &lt;script&gt;
 
         window.MathJax.loader = { load: ['output/svg'] };
@@ -29,15 +26,12 @@ async function draw(idToPlot) {
         // evaluate the expression repeatedly for different values of x
         const …&lt;/script&gt;</summary><content type="html">&lt;script src="https://unpkg.com/mathjs@13.2.0/lib/browser/math.js"&gt;&lt;/script&gt;
 &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.35.0/plotly.min.js"&gt;&lt;/script&gt;
-
 &lt;form id="form", class="img-like"&gt;
   &lt;label for="eq"&gt;Enter an equation: f(x)=&lt;/label&gt;
   &lt;input type="text" id="eq" value="sin(x)" /&gt;
   &lt;input type="submit" value="Draw" /&gt;
 &lt;/form&gt;
-
 &lt;div id="plot" class="img-like"&gt;&lt;/div&gt;
-
 &lt;script&gt;
 
         window.MathJax.loader = { load: ['output/svg'] };
@@ -69,21 +63,21 @@ async function draw(idToPlot) {
         const layout = {
             title: 'Plot Example',
             xaxis: {title: {text: '$x$'},
-                    showgrid: false,
-                    // linecolor: 'blue',
-                    // zerolinecolor: 'red'
-                    },
+			        showgrid: false,
+					// linecolor: 'blue',
+					// zerolinecolor: 'red'
+					},
             yaxis: {title: {text: '$f(x)$'}, showgrid: false},
-            paper_bgcolor: "rgba(255, 200, 200, 0)",
-            plot_bgcolor: "rgba(200, 200, 255, 0)",
-            gridcolor:"rgba(0, 0, 255, 1)",
-            autosize: true
+			paper_bgcolor: "rgba(255, 200, 200, 0)",
+			plot_bgcolor: "rgba(200, 200, 255, 0)",
+			gridcolor:"rgba(0, 0, 255, 1)",
+			autosize: true
         };
         const config = {
             responsive: false,
         };
 
-        await Plotly.newPlot(idToPlot, [trace1], layout, config);
+		await Plotly.newPlot(idToPlot, [trace1], layout, config);
         MathJax.typesetPromise();
     }
     catch (err) {
@@ -97,7 +91,6 @@ document.getElementById('form').onsubmit = function (event) {
     draw("plot")
 };
 &lt;/script&gt;
-
 &lt;h2&gt;JavaScript Code&lt;/h2&gt;
 &lt;pre&gt;&lt;code class="language-javascript"&gt;
         window.MathJax.loader = { load: ['output/svg'] };
@@ -129,21 +122,21 @@ async function draw(idToPlot) {
         const layout = {
             title: 'Plot Example',
             xaxis: {title: {text: '$x$'},
-                    showgrid: false,
-                    // linecolor: 'blue',
-                    // zerolinecolor: 'red'
-                    },
+			        showgrid: false,
+					// linecolor: 'blue',
+					// zerolinecolor: 'red'
+					},
             yaxis: {title: {text: '$f(x)$'}, showgrid: false},
-            paper_bgcolor: &amp;quot;rgba(255, 200, 200, 0)&amp;quot;,
-            plot_bgcolor: &amp;quot;rgba(200, 200, 255, 0)&amp;quot;,
-            gridcolor:&amp;quot;rgba(0, 0, 255, 1)&amp;quot;,
-            autosize: true
+			paper_bgcolor: &amp;quot;rgba(255, 200, 200, 0)&amp;quot;,
+			plot_bgcolor: &amp;quot;rgba(200, 200, 255, 0)&amp;quot;,
+			gridcolor:&amp;quot;rgba(0, 0, 255, 1)&amp;quot;,
+			autosize: true
         };
         const config = {
             responsive: false,
         };
 
-        await Plotly.newPlot(idToPlot, [trace1], layout, config);
+		await Plotly.newPlot(idToPlot, [trace1], layout, config);
         MathJax.typesetPromise();
     }
     catch (err) {
@@ -162,38 +155,45 @@ document.getElementById('form').onsubmit = function (event) {
 &lt;li&gt;&lt;a href="https://mathjs.org/examples/browser/plot.html.html"&gt;https://mathjs.org/examples/browser/plot.html.html&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/plotly/plotly.js/pull/6073"&gt;https://github.com/plotly/plotly.js/pull/6073&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;ChatGPT 4o&lt;/li&gt;
-&lt;/ul&gt;</content><category term="软件使用"/><category term="javascript"/><category term="plotly"/></entry><entry><title>博客第二次改版的说明及一些笔记</title><link href="https://zqw.ink/2024-10-24-pelican_blog.html" rel="alternate"/><published>2024-10-24T00:00:00+08:00</published><updated>2024-10-24T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2024-10-24:/2024-10-24-pelican_blog.html</id><summary type="html">&lt;ul&gt;
-&lt;li&gt;&lt;a href="#升级说明"&gt;升级说明&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#升级博客过程中的笔记由-chatgpt-生成"&gt;升级博客过程中的笔记(由 ChatGPT 生成)&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href="#类型注解"&gt;类型注解&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="软件使用"/><category term="javascript"/><category term="plotly"/></entry><entry><title>博客第二次改版的说明及一些笔记</title><link href="https://zqw.ink/2024-10-24-pelican_blog.html" rel="alternate"/><published>2024-10-24T00:00:00+08:00</published><updated>2024-10-24T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2024-10-24:/2024-10-24-pelican_blog.html</id><summary type="html">
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#%E5%8D%87%E7%BA%A7%E8%AF%B4%E6%98%8E"&gt;升级说明&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E5%8D%87%E7%BA%A7%E5%8D%9A%E5%AE%A2%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E7%AC%94%E8%AE%B0%E7%94%B1-chatgpt-%E7%94%9F%E6%88%90"&gt;升级博客过程中的笔记(由 ChatGPT 生成)&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#%E7%B1%BB%E5%9E%8B%E6%B3%A8%E8%A7%A3"&gt;类型注解&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#itertoolschain"&gt;&lt;code&gt;itertools.chain&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#示例代码使用-️-multiprocessingqueue-实现生产者-消费"&gt;示例代码：使用 🛠️ multiprocessing.Queue 实现生产者-消费&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#示例代码使用--while-true-实现无限循环的应用"&gt;示例代码：使用 🔄 while True 实现无 …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;ul&gt;
-&lt;li&gt;&lt;a href="#升级说明"&gt;升级说明&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#升级博客过程中的笔记由-chatgpt-生成"&gt;升级博客过程中的笔记(由 ChatGPT 生成)&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href="#类型注解"&gt;类型注解&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81%E4%BD%BF%E7%94%A8-%EF%B8%8F-multiprocessingqueue-%E5%AE%9E%E7%8E%B0%E7%94%9F%E4%BA%A7%E8%80%85-%E6%B6%88%E8%B4%B9"&gt;示例代码：使用 🛠️ multiprocessing.Queue 实现生产者-消费&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81%E4%BD%BF%E7%94%A8--while-true-%E5%AE%9E%E7%8E%B0%E6%97%A0%E9%99%90%E5%BE%AA%E7%8E%AF%E7%9A%84%E5%BA%94%E7%94%A8"&gt;示例代码：使用 🔄 while True 实现无 …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#%E5%8D%87%E7%BA%A7%E8%AF%B4%E6%98%8E"&gt;升级说明&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E5%8D%87%E7%BA%A7%E5%8D%9A%E5%AE%A2%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E7%AC%94%E8%AE%B0%E7%94%B1-chatgpt-%E7%94%9F%E6%88%90"&gt;升级博客过程中的笔记(由 ChatGPT 生成)&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#%E7%B1%BB%E5%9E%8B%E6%B3%A8%E8%A7%A3"&gt;类型注解&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#itertoolschain"&gt;&lt;code&gt;itertools.chain&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#示例代码使用-️-multiprocessingqueue-实现生产者-消费"&gt;示例代码：使用 🛠️ multiprocessing.Queue 实现生产者-消费&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#示例代码使用--while-true-实现无限循环的应用"&gt;示例代码：使用 🔄 while True 实现无限循环的应用&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href="#1-实现用户输入验证"&gt;1. 实现用户输入验证&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#2-服务器监听-️"&gt;2. 服务器监听 🖥️&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#3-多进程的任务分配-"&gt;3. 多进程的任务分配 👥🔄&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81%E4%BD%BF%E7%94%A8-%EF%B8%8F-multiprocessingqueue-%E5%AE%9E%E7%8E%B0%E7%94%9F%E4%BA%A7%E8%80%85-%E6%B6%88%E8%B4%B9"&gt;示例代码：使用 🛠️ multiprocessing.Queue 实现生产者-消费&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81%E4%BD%BF%E7%94%A8--while-true-%E5%AE%9E%E7%8E%B0%E6%97%A0%E9%99%90%E5%BE%AA%E7%8E%AF%E7%9A%84%E5%BA%94%E7%94%A8"&gt;示例代码：使用 🔄 while True 实现无限循环的应用&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#1-%E5%AE%9E%E7%8E%B0%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5%E9%AA%8C%E8%AF%81"&gt;1. 实现用户输入验证&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#2-%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%91%E5%90%AC-%EF%B8%8F"&gt;2. 服务器监听 🖥️&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#3-%E5%A4%9A%E8%BF%9B%E7%A8%8B%E7%9A%84%E4%BB%BB%E5%8A%A1%E5%88%86%E9%85%8D-"&gt;3. 多进程的任务分配 👥🔄&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="#动态导入的使用场景"&gt;动态导入的使用场景&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#getattr-的用法"&gt;&lt;code&gt;getattr()&lt;/code&gt; 的用法&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href="#示例代码"&gt;示例代码&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#注意事项"&gt;注意事项&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E5%8A%A8%E6%80%81%E5%AF%BC%E5%85%A5%E7%9A%84%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"&gt;动态导入的使用场景&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#getattr-%E7%9A%84%E7%94%A8%E6%B3%95"&gt;&lt;code&gt;getattr()&lt;/code&gt; 的用法&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81"&gt;示例代码&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"&gt;注意事项&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="#使用注意事项-️"&gt;使用注意事项 ⚠️&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-%EF%B8%8F"&gt;使用注意事项 ⚠️&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href="#acknowledge"&gt;Acknowledge&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;升级说明&lt;/h2&gt;
-&lt;p&gt;最近终于能抽出一些时间, 打算把博客升级一下, 修复之前的一些 bug.
-但是发现之前写的程序很乱. 而且当时水平不如现在, 程序思路很乱.
+&lt;p&gt;最近终于能抽出一些时间, 打算把博客升级一下, 修复之前的一些 bug.&lt;br /&gt;
+但是发现之前写的程序很乱. 而且当时水平不如现在, 程序思路很乱.&lt;br /&gt;
 这次过了两年多, 决定使用 &lt;a href="https://getpelican.com/"&gt;&lt;code&gt;Pelican&lt;/code&gt;&lt;/a&gt; 生成, 然后再使用一些插件, 自己写一些插件, 把原来的主题移植过来. 就成为了现在呈现的版本.&lt;/p&gt;
 &lt;p&gt;之前自己写静态博客生成器原因是:&lt;/p&gt;
 &lt;ul&gt;
@@ -204,7 +204,7 @@ document.getElementById('form').onsubmit = function (event) {
 &lt;/ul&gt;
 &lt;p&gt;现在使用 &lt;a href="https://getpelican.com/"&gt;&lt;code&gt;Pelican&lt;/code&gt;&lt;/a&gt; 的原因是&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;练习写程序. 由于博客源文件中有一些格式比较特别, 所有要自己设置一下. 这个过程中了解了 &lt;a href="https://getpelican.com/"&gt;&lt;code&gt;Pelican&lt;/code&gt;&lt;/a&gt; 的插件机制, 学些到了&lt;a href="#升级博客过程中的笔记由-chatgpt-生成"&gt;许多知识&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;练习写程序. 由于博客源文件中有一些格式比较特别, 所有要自己设置一下. 这个过程中了解了 &lt;a href="https://getpelican.com/"&gt;&lt;code&gt;Pelican&lt;/code&gt;&lt;/a&gt; 的插件机制, 学些到了&lt;a href="#%E5%8D%87%E7%BA%A7%E5%8D%9A%E5%AE%A2%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E7%AC%94%E8%AE%B0%E7%94%B1-chatgpt-%E7%94%9F%E6%88%90"&gt;许多知识&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;由于现在会自己写插件, 所以兼容行问题可以自己解决了. 同时也学会了自己写主题, 可以随心所欲的修改博客的样式.&lt;/li&gt;
 &lt;li&gt;之前的需求都实现了,同时还可用获得 &lt;a href="https://getpelican.com/"&gt;&lt;code&gt;Pelican&lt;/code&gt;&lt;/a&gt; 的好处. 比如: 许许多多的主题, 丰富的插件(自己写也很方便).&lt;/li&gt;
 &lt;/ul&gt;
@@ -358,11 +358,11 @@ shape.draw()  # 输出: Drawing a Circle
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h4&gt;注意事项&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;属性不存在时引发异常&lt;/strong&gt;：如果 &lt;code&gt;name&lt;/code&gt; 不存在且未提供 &lt;code&gt;default&lt;/code&gt; 参数，&lt;code&gt;getattr()&lt;/code&gt; 会引发 &lt;code&gt;AttributeError&lt;/code&gt;。为避免异常，可以传递一个默认值。
-  &lt;code&gt;python
-  cls = getattr(module, "NonExistentClass", None)
-  if cls is None:
-      print("Class not found")&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;属性不存在时引发异常&lt;/strong&gt;：如果 &lt;code&gt;name&lt;/code&gt; 不存在且未提供 &lt;code&gt;default&lt;/code&gt; 参数，&lt;code&gt;getattr()&lt;/code&gt; 会引发 &lt;code&gt;AttributeError&lt;/code&gt;。为避免异常，可以传递一个默认值。&lt;pre&gt;&lt;code class="language-python"&gt;cls = getattr(module, &amp;quot;NonExistentClass&amp;quot;, None)
+if cls is None:
+    print(&amp;quot;Class not found&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;安全性问题&lt;/strong&gt;：使用 &lt;code&gt;getattr()&lt;/code&gt; 获取属性需要特别小心，因为它可以动态地访问任意属性或方法，可能会带来安全性风险。如果用户能够控制传递给 &lt;code&gt;getattr()&lt;/code&gt; 的字符串，他们可以试图访问不应暴露的内部类或方法。因此，在使用时要确保输入是可信的或经过适当的验证。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;使用注意事项 ⚠️&lt;/h3&gt;
@@ -373,20 +373,23 @@ shape.draw()  # 输出: Drawing a Circle
 &lt;/ol&gt;
 &lt;p&gt;&lt;code&gt;while True:&lt;/code&gt; 是一种简单但非常强大的循环结构，广泛应用于需要不断重复某些操作的场景，如输入验证、监听服务器、生产者-消费者模型等。它可以确保程序不断运行，直到某个条件触发 &lt;code&gt;break&lt;/code&gt; 退出循环，从而灵活地控制程序的执行流程。&lt;/p&gt;
 &lt;h2&gt;Acknowledge&lt;/h2&gt;
-&lt;p&gt;ChatGPT&lt;/p&gt;</content><category term="软件使用"/><category term="python"/><category term="pelican"/><category term="blog"/></entry><entry><title>Arch安装deb包：为 deb 包编写 PKGBUILD 文件</title><link href="https://zqw.ink/2023-11-16-coding-makepkg-copy.html" rel="alternate"/><published>2023-11-16T00:00:00+08:00</published><updated>2023-11-16T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2023-11-16:/2023-11-16-coding-makepkg-copy.html</id><summary type="html">&lt;ul&gt;
-&lt;li&gt;&lt;a href="#前言"&gt;前言&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#makepkg-简介"&gt;&lt;code&gt;makepkg&lt;/code&gt; 简介&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#一个最简单的-pkgbuild-文件"&gt;一个最简单的 &lt;code&gt;PKGBUILD&lt;/code&gt; 文件&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#打包流程一个不-trivial-的测试"&gt;打包流程（一个不 trivial 的测试）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#deb-包示例wps-office"&gt;deb 包示例：wps-office&lt;/a&gt;&lt;/li&gt;
+&lt;p&gt;ChatGPT&lt;/p&gt;
+</content><category term="软件使用"/><category term="python"/><category term="pelican"/><category term="blog"/></entry><entry><title>Arch安装deb包：为 deb 包编写 PKGBUILD 文件</title><link href="https://zqw.ink/2023-11-16-coding-makepkg-copy.html" rel="alternate"/><published>2023-11-16T00:00:00+08:00</published><updated>2023-11-16T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2023-11-16:/2023-11-16-coding-makepkg-copy.html</id><summary type="html">
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#%E5%89%8D%E8%A8%80"&gt;前言&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#makepkg-%E7%AE%80%E4%BB%8B"&gt;&lt;code&gt;makepkg&lt;/code&gt; 简介&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E4%B8%80%E4%B8%AA%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84-pkgbuild-%E6%96%87%E4%BB%B6"&gt;一个最简单的 &lt;code&gt;PKGBUILD&lt;/code&gt; 文件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E6%89%93%E5%8C%85%E6%B5%81%E7%A8%8B%E4%B8%80%E4%B8%AA%E4%B8%8D-trivial-%E7%9A%84%E6%B5%8B%E8%AF%95"&gt;打包流程（一个不 trivial 的测试）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#deb-%E5%8C%85%E7%A4%BA%E4%BE%8Bwps-office"&gt;deb 包示例：wps-office&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;前言&lt;/h2&gt;
-&lt;p&gt;使用 Arch, 或者基于 Arch 的 Manjaro 时，有些软件官方仓 …&lt;/p&gt;</summary><content type="html">&lt;ul&gt;
-&lt;li&gt;&lt;a href="#前言"&gt;前言&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#makepkg-简介"&gt;&lt;code&gt;makepkg&lt;/code&gt; 简介&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#一个最简单的-pkgbuild-文件"&gt;一个最简单的 &lt;code&gt;PKGBUILD&lt;/code&gt; 文件&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#打包流程一个不-trivial-的测试"&gt;打包流程（一个不 trivial 的测试）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#deb-包示例wps-office"&gt;deb 包示例：wps-office&lt;/a&gt;&lt;/li&gt;
+&lt;p&gt;使用 Arch, 或者基于 Arch 的 Manjaro 时，有些软件官方仓 …&lt;/p&gt;</summary><content type="html">
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#%E5%89%8D%E8%A8%80"&gt;前言&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#makepkg-%E7%AE%80%E4%BB%8B"&gt;&lt;code&gt;makepkg&lt;/code&gt; 简介&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E4%B8%80%E4%B8%AA%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84-pkgbuild-%E6%96%87%E4%BB%B6"&gt;一个最简单的 &lt;code&gt;PKGBUILD&lt;/code&gt; 文件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E6%89%93%E5%8C%85%E6%B5%81%E7%A8%8B%E4%B8%80%E4%B8%AA%E4%B8%8D-trivial-%E7%9A%84%E6%B5%8B%E8%AF%95"&gt;打包流程（一个不 trivial 的测试）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#deb-%E5%8C%85%E7%A4%BA%E4%BE%8Bwps-office"&gt;deb 包示例：wps-office&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;前言&lt;/h2&gt;
 &lt;p&gt;使用 Arch, 或者基于 Arch 的 Manjaro 时，有些软件官方仓库里没有，而网上又可以下载到编译好的二进制文件，deb包，或者rpm包。二进制文件可以直接运行，deb或者rpm包解压后，找到对应的二进制文件，也可以直接运行。&lt;/p&gt;
@@ -409,7 +412,7 @@ pkgrel=1
 arch=('x86_64')
 
 package() {
-    echo &amp;quot;packaging...&amp;quot;
+	echo &amp;quot;packaging...&amp;quot;
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;前四行定义了四个变量，是软件的名字，版本，以及运行架构。最后三行定义了一个函数，输出一行字 packaging...。&lt;/p&gt;
@@ -432,25 +435,25 @@ md5sums=('541126551a459a74e740ac6a82875d24')
 
 
 prepare() {
-    echo &amp;quot;prepare...&amp;quot;
+	echo &amp;quot;prepare...&amp;quot;
 }
 
 build() {
-    echo &amp;quot;building...&amp;quot;
-#   pwd
-#   cd ${srcdir}
-#   pwd
-#   mkdir diraa
+	echo &amp;quot;building...&amp;quot;
+#	pwd
+#	cd ${srcdir}
+#	pwd
+#	mkdir diraa
 }
 
 check() {
-    echo &amp;quot;checking...&amp;quot;
+	echo &amp;quot;checking...&amp;quot;
 }
 
 package() {
-    echo &amp;quot;packaging...&amp;quot;
-    mkdir ${pkgdir}/home
-    cp m.vsix ${pkgdir}/home/m.vsix
+	echo &amp;quot;packaging...&amp;quot;
+	mkdir ${pkgdir}/home
+	cp m.vsix ${pkgdir}/home/m.vsix
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;code&gt;PKGBUILD&lt;/code&gt; 文件所在的目录结构如下：&lt;/p&gt;
@@ -461,7 +464,7 @@ package() {
 &lt;p&gt;与之前相比，多定义了两个变量，&lt;code&gt;source&lt;/code&gt; 和 &lt;code&gt;md5sums&lt;/code&gt; 。这两个变量有什么用处呢？那应该先说一下 &lt;code&gt;makepkg&lt;/code&gt; 具体都做了什么。&lt;/p&gt;
 &lt;p&gt;首先，它们通过我们定义的变量，得到软件包的名字，版本号等信息。&lt;code&gt;source&lt;/code&gt; 变量是告诉 &lt;code&gt;makepkg&lt;/code&gt; 我们打包过程中所需要的文件，它可以是一个本地文件，也可以是一个文件网址。 &lt;code&gt;makepkg&lt;/code&gt; 会获取这个文件，验证它的 md5，然后将它放在（链接）目录 &lt;code&gt;src&lt;/code&gt; 下。 &lt;code&gt;src&lt;/code&gt; 目录是 &lt;code&gt;makepkg&lt;/code&gt; 进行一些处理，比如编译，时的工作目录。&lt;/p&gt;
 &lt;p&gt;接下来， &lt;code&gt;makepkg&lt;/code&gt; 依次执行四个函数 &lt;code&gt;prepare()&lt;/code&gt; 、 &lt;code&gt;build()&lt;/code&gt; 、 &lt;code&gt;check()&lt;/code&gt; 、 &lt;code&gt;package()&lt;/code&gt; 。 &lt;code&gt;prepare()&lt;/code&gt; 一般做编译前的处理，比如解压文件。 &lt;code&gt;build()&lt;/code&gt; 进行编译。&lt;code&gt;check()&lt;/code&gt; 检查编译结果。最后 &lt;code&gt;package()&lt;/code&gt; 进行打包。我们这里的 &lt;code&gt;prepare()&lt;/code&gt; 、 &lt;code&gt;build()&lt;/code&gt; 、 &lt;code&gt;check()&lt;/code&gt; 不进行操作，只输出一行文字提示。&lt;/p&gt;
-&lt;p&gt;最后，我在函数 &lt;code&gt;package()&lt;/code&gt; 中，先新建了一个目录 &lt;code&gt;\({pkgdir}/home` 。这里先说明一下，  `makepkg` 会默认定义两个变量：`\){srcdir}&lt;/code&gt; 是前面提到的工作路径 &lt;code&gt;src&lt;/code&gt;；另一个 &lt;code&gt;\({pkgdir}` 是软件包的目录 `pkg/\){pkgname}&lt;/code&gt; 。 &lt;code&gt;\({pkgdir}` 目录就是最终打包成 `.pkg.tar.zst` 的目录。在安装包时，`\){pkgdir}&lt;/code&gt; 会被安装对应的目录中。比如我们在这个例子中，将文件 &lt;code&gt;m.vsix&lt;/code&gt; 放在 &lt;code&gt;${pkgdir}/home/m.vsix&lt;/code&gt; ，那么我们用 &lt;code&gt;pacman -U&lt;/code&gt; 安装时，就会把 &lt;code&gt;m.vsix&lt;/code&gt; 复制到 &lt;code&gt;/home/m.vsix&lt;/code&gt; 。&lt;/p&gt;
+&lt;p&gt;最后，我在函数 &lt;code&gt;package()&lt;/code&gt; 中，先新建了一个目录 &lt;code&gt;${pkgdir}/home&lt;/code&gt; 。这里先说明一下，  &lt;code&gt;makepkg&lt;/code&gt; 会默认定义两个变量：&lt;code&gt;${srcdir}&lt;/code&gt; 是前面提到的工作路径 &lt;code&gt;src&lt;/code&gt;；另一个 &lt;code&gt;${pkgdir}&lt;/code&gt; 是软件包的目录 &lt;code&gt;pkg/${pkgname}&lt;/code&gt; 。 &lt;code&gt;${pkgdir}&lt;/code&gt; 目录就是最终打包成 &lt;code&gt;.pkg.tar.zst&lt;/code&gt; 的目录。在安装包时，&lt;code&gt;${pkgdir}&lt;/code&gt; 会被安装对应的目录中。比如我们在这个例子中，将文件 &lt;code&gt;m.vsix&lt;/code&gt; 放在 &lt;code&gt;${pkgdir}/home/m.vsix&lt;/code&gt; ，那么我们用 &lt;code&gt;pacman -U&lt;/code&gt; 安装时，就会把 &lt;code&gt;m.vsix&lt;/code&gt; 复制到 &lt;code&gt;/home/m.vsix&lt;/code&gt; 。&lt;/p&gt;
 &lt;p&gt;运行&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;makepkg
 &lt;/code&gt;&lt;/pre&gt;
@@ -516,10 +519,10 @@ md5sums=('c80a2b32604cb2a8eb0de456a062fe30')
 
 
 prepare() {
-    mv wps-office_11.1.0.11698.XA_amd64.deb ${pkgver}_${pkgver}.deb
-    ar -x ${pkgver}_${pkgver}.deb
-    mkdir ${pkgname}-${pkgver}
-    tar -xf data.tar.xz --directory=&amp;quot;${pkgname}-${pkgver}&amp;quot;
+	mv wps-office_11.1.0.11698.XA_amd64.deb ${pkgver}_${pkgver}.deb
+ 	ar -x ${pkgver}_${pkgver}.deb
+  	mkdir ${pkgname}-${pkgver}
+	tar -xf data.tar.xz --directory=&amp;quot;${pkgname}-${pkgver}&amp;quot;
 }
 
 
@@ -528,19 +531,16 @@ package() {
   cp -r ./ ${pkgdir}/
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;这里说明一下， &lt;code&gt;deb&lt;/code&gt; 包全部解压后会有两个文件夹，&lt;code&gt;control&lt;/code&gt; 和 &lt;code&gt;data&lt;/code&gt; 。&lt;code&gt;control&lt;/code&gt; 类似于我们的  &lt;code&gt;PKGBUILD&lt;/code&gt; ，包含了软件的信息和安装过程中进行的一些操作。 &lt;code&gt;data&lt;/code&gt; 类似于 &lt;code&gt;{pkgdir}&lt;/code&gt; ，包含了需要安装的所有文件。因此我们要做的就是把 &lt;code&gt;deb&lt;/code&gt; 全部解压，然后将 &lt;code&gt;data&lt;/code&gt; 目录打包。&lt;/p&gt;</content><category term="软件使用"/><category term="Arch"/><category term="manjaro"/><category term="makepkg"/><category term="PKGBUILD"/></entry><entry><title>matplotlib 科研作图总结</title><link href="https://zqw.ink/2023-10-12-coding-matplotlib.html" rel="alternate"/><published>2023-10-12T00:00:00+08:00</published><updated>2023-10-12T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2023-10-12:/2023-10-12-coding-matplotlib.html</id><summary type="html">&lt;!-- toc --&gt;
-
+&lt;p&gt;这里说明一下， &lt;code&gt;deb&lt;/code&gt; 包全部解压后会有两个文件夹，&lt;code&gt;control&lt;/code&gt; 和 &lt;code&gt;data&lt;/code&gt; 。&lt;code&gt;control&lt;/code&gt; 类似于我们的  &lt;code&gt;PKGBUILD&lt;/code&gt; ，包含了软件的信息和安装过程中进行的一些操作。 &lt;code&gt;data&lt;/code&gt; 类似于 &lt;code&gt;{pkgdir}&lt;/code&gt; ，包含了需要安装的所有文件。因此我们要做的就是把 &lt;code&gt;deb&lt;/code&gt; 全部解压，然后将 &lt;code&gt;data&lt;/code&gt; 目录打包。&lt;/p&gt;
+</content><category term="软件使用"/><category term="Arch"/><category term="manjaro"/><category term="makepkg"/><category term="PKGBUILD"/></entry><entry><title>matplotlib 科研作图总结</title><link href="https://zqw.ink/2023-10-12-coding-matplotlib.html" rel="alternate"/><published>2023-10-12T00:00:00+08:00</published><updated>2023-10-12T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2023-10-12:/2023-10-12-coding-matplotlib.html</id><summary type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
-
 &lt;p&gt;结合近几年的经验，把&lt;code&gt;matplotlib&lt;/code&gt;作图常用的脚本集合在此。这包含了之前一些关于&lt;code&gt;matplotlib&lt;/code&gt;作图的博文。&lt;/p&gt;
 &lt;h1&gt;作图风格&lt;/h1&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;from matplotlib import rc
 def prettify_plot():
     &amp;quot;&amp;quot;&amp;quot;
     change the plot …&lt;/code&gt;&lt;/pre&gt;</summary><content type="html">&lt;!-- toc --&gt;
-
 &lt;!-- more --&gt;
-
 &lt;p&gt;结合近几年的经验，把&lt;code&gt;matplotlib&lt;/code&gt;作图常用的脚本集合在此。这包含了之前一些关于&lt;code&gt;matplotlib&lt;/code&gt;作图的博文。&lt;/p&gt;
 &lt;h1&gt;作图风格&lt;/h1&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;from matplotlib import rc
@@ -606,7 +606,7 @@ plt.imshow(np.random.randn(100, 100), cmap=newcmap('jet'))
 plt.colorbar()
 plt.savefig('newcmap.png', transparent=True)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img alt="image-newcamp" src="2023-10-12-coding-matplotlib/newcmap.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="2023-10-12-coding-matplotlib/newcmap.png" alt="image-newcamp" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="2023-10-12-coding-matplotlib/newcmap.py"&gt;newcmap.py&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;在每个子图插入 colorbar&lt;/h2&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;import matplotlib.pyplot as plt
@@ -633,7 +633,7 @@ fig.colorbar(im2, ax_cb2)
 fig.savefig('divider.png', transparent=True)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;a href="2023-10-12-coding-matplotlib/divider.py"&gt;divider.py&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="divider" src="2023-10-12-coding-matplotlib/divider.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="2023-10-12-coding-matplotlib/divider.png" alt="divider" /&gt;&lt;/p&gt;
 &lt;h1&gt;双重坐标轴&lt;/h1&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;import numpy as np
 import matplotlib.pyplot as plt
@@ -654,7 +654,7 @@ ax01.plot(x, np.cos(x))
 ax01.secondary_xaxis(location='top', functions=(lambda x: 2*x, lambda x: 2*x))
 fig.savefig('double_ax.png', transparent=True)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img alt="image-double_ax" src="2023-10-12-coding-matplotlib/double_ax.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="2023-10-12-coding-matplotlib/double_ax.png" alt="image-double_ax" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="2023-10-12-coding-matplotlib/double_ax.py"&gt;double_ax.py&lt;/a&gt;&lt;/p&gt;
 &lt;h1&gt;示例 Phys. Rev. B 108, 054313 (2023) fig1&lt;/h1&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;import matplotlib.pyplot as plt
@@ -884,11 +884,12 @@ fig.savefig(get_file_name(__file__)[:-4] + '.pdf', dpi=200)
 fig.savefig(get_file_name(__file__)[:-4] + '.png', dpi=200, transparent=True)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;画图数据：&lt;a href="2023-10-12-coding-matplotlib/fig2/fig2.json"&gt;fig2.json&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image-fig2" src="2023-10-12-coding-matplotlib/fig2/fig2.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="2023-10-12-coding-matplotlib/fig2/fig2.png" alt="image-fig2" /&gt;&lt;/p&gt;
 &lt;h1&gt;参考资料&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://matplotlib.org/stable/"&gt;https://matplotlib.org/stable/&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><category term="软件使用"/><category term="python"/><category term="matplotlib"/></entry><entry><title>Intel AI Analytics Toolkit 加速 numpy, scipy</title><link href="https://zqw.ink/2023-04-23-coding-intel_python.html" rel="alternate"/><published>2023-04-23T00:00:00+08:00</published><updated>2023-04-23T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2023-04-23:/2023-04-23-coding-intel_python.html</id><summary type="html">
+&lt;/ol&gt;
+</content><category term="软件使用"/><category term="python"/><category term="matplotlib"/></entry><entry><title>Intel AI Analytics Toolkit 加速 numpy, scipy</title><link href="https://zqw.ink/2023-04-23-coding-intel_python.html" rel="alternate"/><published>2023-04-23T00:00:00+08:00</published><updated>2023-04-23T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2023-04-23:/2023-04-23-coding-intel_python.html</id><summary type="html">
 &lt;h2&gt;MATLAB&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class="language-matlab"&gt;clear all;
@@ -3004,18 +3005,14 @@ class PrincipalValueInt():
         return imag&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;包中的另一些函数.&lt;/p&gt;
 </content><category term="软件使用"/><category term="python"/></entry><entry><title>SSD 备忘与趣事</title><link href="https://zqw.ink/2020-11-29-coding-newssd.html" rel="alternate"/><published>2020-11-29T00:00:00+08:00</published><updated>2020-11-29T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-11-29:/2020-11-29-coding-newssd.html</id><summary type="html">&lt;!-- toc --&gt;
-
 &lt;!-- more --&gt;
-
 &lt;h1&gt;引言&lt;/h1&gt;
 &lt;p&gt;办公室电脑原来的机械硬盘实在有点不行了, 换了一块新的 SSD.&lt;/p&gt;
 &lt;p&gt;本来想买个再好一点的, 但是主板有只有 sata 接口. 虽说 …&lt;/p&gt;</summary><content type="html">&lt;!-- toc --&gt;
-
 &lt;!-- more --&gt;
-
 &lt;h1&gt;引言&lt;/h1&gt;
 &lt;p&gt;办公室电脑原来的机械硬盘实在有点不行了, 换了一块新的 SSD.&lt;/p&gt;
-&lt;p&gt;本来想买个再好一点的, 但是主板有只有 sata 接口. 虽说再折腾一下也可以换更高级的 SSD, 但是也没(有)那(点)么(懒)多(啊)时(啊)间. &lt;/p&gt;
+&lt;p&gt;本来想买个再好一点的, 但是主板有只有 sata 接口. 虽说再折腾一下也可以换更高级的 SSD, 但是也没(有)那(点)么(懒)多(啊)时(啊)间.&lt;/p&gt;
 &lt;p&gt;我发现 11 月份没有写新的博客. 就这样水?一篇吧! 其实这个可以合在之前那篇 manjaro 装机 note 里的的.&lt;/p&gt;
 &lt;h1&gt;买 SSD&lt;/h1&gt;
 &lt;p&gt;我之前只知道 SSD 分好几种, 具体也没怎么研究过. 要自己买当然要拆开看看主板上有什么接口. 哎, 自己看了半天也不知道哪个是 SSD接口. 把图片发给店家, 立马知道要买什么样的了!&lt;/p&gt;
@@ -3023,14 +3020,14 @@ class PrincipalValueInt():
 &lt;p&gt;在卖家的帮忙下(吐嘈一下, 东芝改名叫铠侠, 觉得不如原来好听) , 买了 SSD 和 sata 线.&lt;/p&gt;
 &lt;h1&gt;装 SSD&lt;/h1&gt;
 &lt;p&gt;很快啊, 新的 SSD 第二天就来了. 一拿的感觉是: 轻!&lt;/p&gt;
-&lt;p&gt;直接插上 sata 线连上, 开机! 竟然没有识别. 思考为什么会这样的时候, 瞟了一眼说明说: SSD 还需要接电源的! 看来"不用读系列"有时候还是要看的. 我说这硬盘上怎么有两块呲出来的.&lt;/p&gt;
+&lt;p&gt;直接插上 sata 线连上, 开机! 竟然没有识别. 思考为什么会这样的时候, 瞟了一眼说明说: SSD 还需要接电源的! 看来&amp;quot;不用读系列&amp;quot;有时候还是要看的. 我说这硬盘上怎么有两块呲出来的.&lt;/p&gt;
 &lt;p&gt;可是我并没有买电源线. 就在我一边责怪卖家没有告诉我, 一边又想又得再等一天快递了, 一边又想从哪个废旧电脑上拆一根时, 突然又想到光驱也是 sata 线连到主板上的, 应该也有电源线. 机智如我, 直接拔下来接到了 SSD 上. 开机, 开不了机了, 原来那里接的是机械硬盘. 又一次偶然发现, 这根电源线中间还伸出一个头. 不错, 接上, 完美解决!&lt;/p&gt;
 &lt;h1&gt;安装 SSD manjaro&lt;/h1&gt;
 &lt;p&gt;记录一下注意的点. Bootloader 选到 KIOXIA (新 SSD ) 上, BIOS select device 也先 KIOXIA.&lt;/p&gt;
 &lt;h1&gt;幽灵般的网络&lt;/h1&gt;
 &lt;p&gt;在 SSD 上装 win10 和 manjaro 很顺利. 但接下来有一件事我至今不明白是为什么.&lt;/p&gt;
-&lt;p&gt;win10 是有网的. 然后装 manjaro, 打开之后没网. 心想是网络配置不对. 然后打开机械硬盘上的 manjaro 对一下配置. 再重启进 SSD manjaro, 突然有网了. 虽然奇怪, 但问题自己好了. &lt;/p&gt;
-&lt;p&gt;在 SSD manjaro 上进行了一些设置后, 重启, 又没网了, 啊! 再重启进机械硬盘 manjaro, 啊, 机械 manjaro 也没网了, 很奇怪啊, 之前 机械 manjaro 用了很久, 也没有出现连不上网的情况. 怀疑是办公室的网络出问题了, 进 SSD win10, 也没网, 更加断定我的判断. &lt;/p&gt;
+&lt;p&gt;win10 是有网的. 然后装 manjaro, 打开之后没网. 心想是网络配置不对. 然后打开机械硬盘上的 manjaro 对一下配置. 再重启进 SSD manjaro, 突然有网了. 虽然奇怪, 但问题自己好了.&lt;/p&gt;
+&lt;p&gt;在 SSD manjaro 上进行了一些设置后, 重启, 又没网了, 啊! 再重启进机械硬盘 manjaro, 啊, 机械 manjaro 也没网了, 很奇怪啊, 之前 机械 manjaro 用了很久, 也没有出现连不上网的情况. 怀疑是办公室的网络出问题了, 进 SSD win10, 也没网, 更加断定我的判断.&lt;/p&gt;
 &lt;p&gt;问了一下别人, 有网?&lt;/p&gt;
 &lt;p&gt;那是我这根线上的路由器被我搞冲突了? 但是 yf 的还有网, 而且又边了它的网线, 也连不上网, 它的电脑却能连上. 那就是我电脑的问题了.&lt;/p&gt;
 &lt;p&gt;应该也不是软件的问题, 因为无论新旧, 四个系统每个都边不上网.&lt;/p&gt;
@@ -3048,7 +3045,7 @@ class PrincipalValueInt():
 &lt;p&gt;一切都好了, 是网卡驱动的问题. 之前 cy 机械硬盘 manjaro 连不上网估计也是这个问题.&lt;/p&gt;
 &lt;p&gt;但是!!! 之前四个系统都连不上的原因我依然不知道, 我能想到的就只能是... 想不到是为什么 . 太奇怪了!&lt;/p&gt;
 &lt;p&gt;附网上安装: 右键安装&lt;/p&gt;
-&lt;p&gt;&lt;img alt="fig" src="./2020-11-29-coding-newSSD/image-20201128212856147.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="./2020-11-29-coding-newSSD/image-20201128212856147.png" alt="fig" /&gt;&lt;/p&gt;
 &lt;h1&gt;wayland 换 xorg&lt;/h1&gt;
 &lt;p&gt;奇怪的网络问题让我对了机械和 SSD 的 gnome 版本, 发现新的 manjaro 包默认是 wayland. 我突然意识到之前给 cy 的机械硬盘装 manjaro 后闪屏的问题, 很有可能也是用了 wayland.&lt;/p&gt;
 &lt;p&gt;换回 Xorg 直接安装 Xorg 包就好了&lt;/p&gt;
@@ -3058,8 +3055,8 @@ class PrincipalValueInt():
 &lt;h1&gt;输入法&lt;/h1&gt;
 &lt;p&gt;arch wiki 关于中文输入法的部分升级了, 存放环境变量的文件有了变化, 详见: https://wiki.archlinux.org/index.php/Fcitx_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#.E5.AE.89.E8.A3.85&lt;/p&gt;
 &lt;p&gt;还是比较习惯之前的快捷键设置, 截图记录.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image-20201128215138108" src="./2020-11-29-coding-newSSD/image-20201128215138108.png"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image-20201128215200197" src="./2020-11-29-coding-newSSD/image-20201128215200197.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="./2020-11-29-coding-newSSD/image-20201128215138108.png" alt="image-20201128215138108" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="./2020-11-29-coding-newSSD/image-20201128215200197.png" alt="image-20201128215200197" /&gt;&lt;/p&gt;
 &lt;h1&gt;evince 中文问题&lt;/h1&gt;
 &lt;p&gt;之前装 xpdf 就好了, 可这次不好使了. 这样, 也促使我找到了问题的原因: https://blog.csdn.net/nevasun/article/details/7303529 okular, epdfview, evince的pdf功能均由xpdf的分支poppler提供，poppler从fontconfig的配置文件中读取字体取代pdf里的字体。&lt;/p&gt;
 &lt;p&gt;这次安装 &lt;code&gt;poppler-data&lt;/code&gt; 就好了&lt;/p&gt;
@@ -3080,14 +3077,14 @@ class PrincipalValueInt():
 &lt;p&gt;新的 manjaro 包里也没有了 GRUB theme, 有点不好看, 可以直接 &lt;code&gt;yaourt grub theme&lt;/code&gt; 找到 manjaro 的 grub theme 安装就好.&lt;/p&gt;
 &lt;h1&gt;开机挂载&lt;/h1&gt;
 &lt;p&gt;旧的机械硬盘可以设置开机自动挂到某个目录, 方法是修改 &lt;code&gt;/etc/fstab&lt;/code&gt; , 比如增加记录&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-shell"&gt;/dev/sda5                 /docu      ntfs    defaults           0 0
+&lt;pre&gt;&lt;code class="language-shell"&gt;/dev/sda5				  /docu		 ntfs	 defaults		    0 0
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h1&gt;对 manjaro 版本时用到的命令&lt;/h1&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;lsb_release -a
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h1&gt;对 hexo&lt;/h1&gt;
-&lt;p&gt;hexo 貌似对新版的 node 支持不友好, 需要将 node 进行版本回退才可以正常 deploy. &lt;/p&gt;
-&lt;p&gt;用 &lt;code&gt;n&lt;/code&gt; 来管理和切换 node 版本. &lt;/p&gt;
+&lt;p&gt;hexo 貌似对新版的 node 支持不友好, 需要将 node 进行版本回退才可以正常 deploy.&lt;/p&gt;
+&lt;p&gt;用 &lt;code&gt;n&lt;/code&gt; 来管理和切换 node 版本.&lt;/p&gt;
 &lt;p&gt;查看 node 版本&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;node -v
 &lt;/code&gt;&lt;/pre&gt;
@@ -3104,7 +3101,8 @@ class PrincipalValueInt():
 &lt;p&gt;两个安装好之后, 还要激活模块(这个在安装 virtualbox 时有过一行提示)&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;sudo modprobe vboxdrv
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;之后即可正常使用&lt;/p&gt;</content><category term="软件使用"/><category term="SSD"/><category term="manjaro"/></entry><entry><title>matplotlib.animation 制作动图</title><link href="https://zqw.ink/2020-09-18-coding-animation_plot.html" rel="alternate"/><published>2020-09-18T00:00:00+08:00</published><updated>2020-09-18T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-09-18:/2020-09-18-coding-animation_plot.html</id><summary type="html">
+&lt;p&gt;之后即可正常使用&lt;/p&gt;
+</content><category term="软件使用"/><category term="SSD"/><category term="manjaro"/></entry><entry><title>matplotlib.animation 制作动图</title><link href="https://zqw.ink/2020-09-18-coding-animation_plot.html" rel="alternate"/><published>2020-09-18T00:00:00+08:00</published><updated>2020-09-18T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-09-18:/2020-09-18-coding-animation_plot.html</id><summary type="html">
 &lt;pre&gt;&lt;code class="language-python"&gt;import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as ani
@@ -3253,14 +3251,10 @@ wakatime-mode.elc , 定位到 Error 104 对应的语句&lt;/p&gt;
 
 &lt;p&gt;对我来说是解决了, 如果有能力的话, 还是把这个 bug 报给开发都比较好. 我还是算了...&lt;/p&gt;
 </content><category term="软件使用"/><category term="emacs"/><category term="wakatime"/></entry><entry><title>Django 笔记：CentOS+Apache+Mariadb+mod_wsgi+Django</title><link href="https://zqw.ink/2020-02-03-physics-django.html" rel="alternate"/><published>2020-02-03T00:00:00+08:00</published><updated>2020-02-03T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-02-03:/2020-02-03-physics-django.html</id><summary type="html">&lt;!-- toc --&gt;
-
 &lt;!-- more --&gt;
-
 &lt;h1&gt;写在前面的声明&lt;/h1&gt;
 &lt;p&gt;本人非专业人士，对于写程序只是业余爱好。以下内容仅供参考，我一个业余人士也不能保证内容的准确 …&lt;/p&gt;</summary><content type="html">&lt;!-- toc --&gt;
-
 &lt;!-- more --&gt;
-
 &lt;h1&gt;写在前面的声明&lt;/h1&gt;
 &lt;p&gt;本人非专业人士，对于写程序只是业余爱好。以下内容仅供参考，我一个业余人士也不能保证内容的准确性，对一些命令的解释也只是为了便于记忆和理解，更加专业准确的知识还请查询如官方文档这样的资料。&lt;/p&gt;
 &lt;h1&gt;引言&lt;/h1&gt;
@@ -3336,7 +3330,7 @@ pip 20.0.2 from /root/sabafun/.sabafun/lib/python3.7/site-packages/pip (python 3
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;进入虚拟环境中，在命令的开头会出现 (.sabafun) ，表示在虚拟环境中。可以看出，在虚拟环境中直接运行 Python 就是我们创建虚拟环境时指定的 Python 版本。这样就和系统的环境隔离来，以避免一些冲突，因为如果将系统的 Python 绑定到 Python3.7 会导致系统中一些依赖 Python2 的程序无法正常运行。&lt;/p&gt;
 &lt;p&gt;source 命令是让某些文件中的设置立即生效，这里是使虚拟环境中的设置生效。source 还用于当我们修改配置文件中的环境变量后，source 一下配置文件，就可以使配置马上生效，而不需要重启设备。&lt;/p&gt;
-&lt;p&gt;要停止使用虚拟环境,可执行命令 deactivate &lt;/p&gt;
+&lt;p&gt;要停止使用虚拟环境,可执行命令 deactivate&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;(.sabafun)[root@cloud]$ deactivate 
 [root@cloud]$ 
 &lt;/code&gt;&lt;/pre&gt;
@@ -3357,7 +3351,7 @@ pip 20.0.2 from /root/sabafun/.sabafun/lib/python3.7/site-packages/pip (python 3
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;对项目的一些操作都保存在 mange.py 文件中。出现关于数据库的提示可以忽略。Django 默认用 SQLite 作数据库。而我们不用它，而是用 Mariadb。&lt;/p&gt;
 &lt;p&gt;此时从本地访问 http://你的服务器IP:8000 ，出现如下小火箭界面，表示成功&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image-20200204125926942" src="./2020-02-03-physics-Django/image-20200204125926942.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="./2020-02-03-physics-Django/image-20200204125926942.png" alt="image-20200204125926942" /&gt;&lt;/p&gt;
 &lt;p&gt;如果无法访问，可以查看一下服务器的 8000 端口是否开放。一般都可以从云服务器的管理页面中找到安全组设置。&lt;/p&gt;
 &lt;h1&gt;Django 的大致工作流程&lt;/h1&gt;
 &lt;p&gt;比较业余的理解，Django 是一个用 Python 写网站的框架。我们可以用 Python 语言写一些函数来实现想要的功能。web 服务器，如 Apache，负责将我们设计好的功能提供给浏览器。而 mod_wsgi 负责将我们用 Python 写的功能翻译给 Apache。网站的数据，如我们用于展示的《诗经》就存储在 Mariadb 数据库中。&lt;/p&gt;
@@ -3417,7 +3411,7 @@ MariaDB [(none)]&amp;gt; grant all on sabafun.* to django@localhost;
 MariaDB [(none)]&amp;gt; exit
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;django@localhost 是说用户名是 django，localhost 表示是本地用户。sabafun 是数据库的名字。character 之后的内容是设置编码。一定注意设置编码！要不然可能没法导入中文！注意不要漏掉每条命令后的分号。命令不区分大小写。&lt;/p&gt;
-&lt;p&gt;grant 是设置数据库的权限。all 表示权限的种类是所有权限， sabafun.&lt;em&gt; 表示要设置权限的数据库是 sabafun，&lt;/em&gt; 表示这个数据库中所有的表，to 后面是将权限所赋予的用户。&lt;/p&gt;
+&lt;p&gt;grant 是设置数据库的权限。all 表示权限的种类是所有权限， sabafun.* 表示要设置权限的数据库是 sabafun，* 表示这个数据库中所有的表，to 后面是将权限所赋予的用户。&lt;/p&gt;
 &lt;p&gt;创建一个数据库就好像创建一个 Excel 文件，一个数据库中有好多表，不同的表就像 Excel 文件中的 sheet1, sheet2...，而每一个表中有好多行和列存储具体的数据。只不过数据库中的数据可能关系要复杂一些。&lt;/p&gt;
 &lt;p&gt;创建用户后，可以查看已有的数据库，来确认刚刚创建的数据库确实已经存在&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;MariaDB [(none)]&amp;gt; show databases;
@@ -3500,7 +3494,7 @@ urlpatterns = [
 ]
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h1&gt;创建 Shijing Models&lt;/h1&gt;
-&lt;p&gt;修改文件 poetry/models.py &lt;/p&gt;
+&lt;p&gt;修改文件 poetry/models.py&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;from django.db import models
 
 # Create your models here.                                                    
@@ -3551,7 +3545,7 @@ admin.site.register(Shijing)
 &lt;pre&gt;&lt;code class="language-shell"&gt;(.sabafun)[root@cloud]$ python manage.py runserver 0.0.0.0:8000
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;在本地通过浏览器访问 IP::8000/admin/ 就会看到 Shijing&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image-20200204153009618" src="./2020-02-03-physics-Django/image-20200204153009618.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="./2020-02-03-physics-Django/image-20200204153009618.png" alt="image-20200204153009618" /&gt;&lt;/p&gt;
 &lt;h1&gt;迁入 json 数据&lt;/h1&gt;
 &lt;p&gt;然后将 github 上的诗词数据库 https://github.com/chinese-poetry/chinese-poetry 中的 shijing.json 传到服务器上，并在同一目录下编写文件 json_to_database.py&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;(.sabafun)[root@cloud]$ emacs json_to_database.py
@@ -3617,7 +3611,7 @@ poetry.commit()                                      # 提交更改
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;就把 305 首诗经导入到数据库中了！&lt;/p&gt;
 &lt;p&gt;进入管理界面，看到 305 个导入的数据&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image-20200204165427906" src="./2020-02-03-physics-Django/image-20200204165427906.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="./2020-02-03-physics-Django/image-20200204165427906.png" alt="image-20200204165427906" /&gt;&lt;/p&gt;
 &lt;p&gt;成功！&lt;/p&gt;
 &lt;h1&gt;修改 poetry/views.py 文件&lt;/h1&gt;
 &lt;p&gt;至此为止，我们只能够在管理页面中看到诗经，下面让它在网页上显示。&lt;/p&gt;
@@ -3657,7 +3651,7 @@ poetry
 &amp;lt;/body&amp;gt;                                                                       
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;shijing_list 就是通过 render() 函数传递过来的字典的键。重启 httpd 从本地访问 IP/poetry，就看到如下界面了！&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image-20200204210647475" src="./2020-02-03-physics-Django/image-20200204210647475.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="./2020-02-03-physics-Django/image-20200204210647475.png" alt="image-20200204210647475" /&gt;&lt;/p&gt;
 &lt;h1&gt;后续操作&lt;/h1&gt;
 &lt;p&gt;Apache 配置&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;# 连接 Django                                                                 
@@ -3750,7 +3744,7 @@ xps13.pub                                   100%  744     6.8KB/s   00:00
 &lt;pre&gt;&lt;code class="language-shell"&gt;[root@cloud]$ python --version
 Python 2.7.5
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;是 Python2 。Django 需要 Python3 因此安装 &lt;/p&gt;
+&lt;p&gt;是 Python2 。Django 需要 Python3 因此安装&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;[root@cloud]$ yum install python3
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;安装后查看确认&lt;/p&gt;
@@ -3762,11 +3756,11 @@ pip 9.0.3 from /usr/lib/python3.6/site-packages (python 3.6)
 &lt;p&gt;安装 Apache&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;[root@cloud]$ yum install httpd
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;运行 &lt;/p&gt;
+&lt;p&gt;运行&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;[root@cloud]$ systemctl start httpd
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;从本机登录 IP 会看到测试界面&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image-20200204114524492" src="./2020-02-03-physics-Django/image-20200204114524492.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="./2020-02-03-physics-Django/image-20200204114524492.png" alt="image-20200204114524492" /&gt;&lt;/p&gt;
 &lt;p&gt;让 Apache 开机自动运行&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;[root@cloud]$ systemctl enable httpd
 &lt;/code&gt;&lt;/pre&gt;
@@ -3960,7 +3954,7 @@ Quit the server with CONTROL-C.
 
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;此时从本地访问 8000 端口，终于出现了小火箭界面&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image-20200204125926942" src="./2020-02-03-physics-Django/image-20200204125926942.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="./2020-02-03-physics-Django/image-20200204125926942.png" alt="image-20200204125926942" /&gt;&lt;/p&gt;
 &lt;p&gt;参考官方文档连接 Apache https://docs.djangoproject.com/zh-hans/3.0/howto/deployment/wsgi/modwsgi/&lt;/p&gt;
 &lt;h2&gt;连接 mod_wsgi&lt;/h2&gt;
 &lt;p&gt;首先安装 mod_wsgi&lt;/p&gt;
@@ -4104,7 +4098,7 @@ System check identified some issues:
 
 WARNINGS:
 ?: (mysql.W002) MySQL Strict Mode is not set for database connection 'default'
-    HINT: MySQL's Strict Mode fixes many data integrity problems in MySQL, such as data truncation upon insertion, by escalating warnings into errors. It is strongly recommended you activate it. See: https://docs.djangoproject.com/en/3.0/ref/databases/#mysql-sql-mode
+	HINT: MySQL's Strict Mode fixes many data integrity problems in MySQL, such as data truncation upon insertion, by escalating warnings into errors. It is strongly recommended you activate it. See: https://docs.djangoproject.com/en/3.0/ref/databases/#mysql-sql-mode
 Operations to perform:
   Apply all migrations: admin, auth, contenttypes, sessions
 Running migrations:
@@ -4131,7 +4125,7 @@ Running migrations:
 &lt;p&gt;创建管理页面&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;(.sabafun)[root@cloud]$ python manage.py createsuperuser
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;时候要重启　httpd　才能进入　IP/admin　。而且好像有些问题。因此，在编写项目的过程中用　django　自带的开发服务器，它有一些好处，比如官方文档中说的　&lt;/p&gt;
+&lt;p&gt;时候要重启　httpd　才能进入　IP/admin　。而且好像有些问题。因此，在编写项目的过程中用　django　自带的开发服务器，它有一些好处，比如官方文档中说的&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;会自动重新加载的服务器 &lt;a href="https://docs.djangoproject.com/zh-hans/3.0/ref/django-admin/#django-admin-runserver"&gt;&lt;code&gt;runserver&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;用于开发的服务器在需要的情况下会对每一次的访问请求重新载入一遍 Python 代码。所以你不需要为了让修改的代码生效而频繁的重新启动服务器。然而，一些动作，比如添加新文件，将不会触发自动重新加载，这时你得自己手动重启服务器。&lt;/p&gt;
@@ -4160,13 +4154,13 @@ from django.shortcuts import render
 
 # Create your views here.                                                     
 
-from django.http import HttpResponse
+from django.http import	HttpResponse
 
 def poetry(request):
     return HttpResponse(&amp;quot;Hello, poetry!&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;(.sabafun)[root@cloud]$ emacs poetry/urls.py
-
+                                   
 from django.urls import path
 
 from . import views
@@ -4234,7 +4228,7 @@ System check identified some issues:
 
 WARNINGS:
 ?: (mysql.W002) MySQL Strict Mode is not set for database connection 'default'
-    HINT: MySQL's Strict Mode fixes many data integrity problems in MySQL, such as data truncation upon insertion, by escalating warnings into errors. It is strongly recommended you activate it. See: https://docs.djangoproject.com/en/3.0/ref/databases/#mysql-sql-mode
+	HINT: MySQL's Strict Mode fixes many data integrity problems in MySQL, such as data truncation upon insertion, by escalating warnings into errors. It is strongly recommended you activate it. See: https://docs.djangoproject.com/en/3.0/ref/databases/#mysql-sql-mode
 Operations to perform:
   Apply all migrations: admin, auth, contenttypes, poetry, sessions
 Running migrations:
@@ -4252,7 +4246,7 @@ from .models import Shijing
 admin.site.register(Shijing)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;这时 IP::8000/admin/　就会看到 Shijing&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image-20200204153009618" src="./2020-02-03-physics-Django/image-20200204153009618.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="./2020-02-03-physics-Django/image-20200204153009618.png" alt="image-20200204153009618" /&gt;&lt;/p&gt;
 &lt;h2&gt;迁入 json 数据&lt;/h2&gt;
 &lt;pre&gt;&lt;code class="language-mysql"&gt;删除表中所有条目
 truncate table poetry_shijing;
@@ -4324,7 +4318,7 @@ poetry.commit()                                      # 提交更改
 &lt;pre&gt;&lt;code class="language-shell"&gt;(.sabafun)[root@cloud]$ python json_to_database.py
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;进入管理界面，看到 305 个导入的数据&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image-20200204165427906" src="./2020-02-03-physics-Django/image-20200204165427906.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="./2020-02-03-physics-Django/image-20200204165427906.png" alt="image-20200204165427906" /&gt;&lt;/p&gt;
 &lt;p&gt;成功！&lt;/p&gt;
 &lt;h2&gt;编写网页，来显示&lt;/h2&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;(.sabafun)[root@cloud sabafun]# cd poetry/
@@ -4336,12 +4330,12 @@ poetry
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code class="language-html"&gt;(.sabafun)[root@cloud sabafun]# emacs poetry/templates/poetry/poetry.html
 
-
-
+                                                                              
+                                                                              
 &amp;lt;body&amp;gt;                                                                        
 {% for item in shijing_list %}                                                
-
-
+                                                                              
+                                                                              
 &amp;lt;center&amp;gt;                                                                      
 第{{ item.fixed_id }}篇：                                                     
 &amp;lt;h1&amp;gt;                                                                          
@@ -4368,13 +4362,14 @@ def poetry(request):
     return render(request, 'poetry/poetry.html', context)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;重启 httpd 从本地访问 IP/poetry，就看到界面了&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image-20200204210647475" src="./2020-02-03-physics-Django/image-20200204210647475.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="./2020-02-03-physics-Django/image-20200204210647475.png" alt="image-20200204210647475" /&gt;&lt;/p&gt;
 &lt;h1&gt;参考资料&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;Eric Matthes 著，袁国忠 译, Python 编程从入门到实践，中国工信出版集团，2016，人民邮电出版社&lt;/li&gt;
 &lt;li&gt;https://docs.djangoproject.com/zh-hans/3.0/intro/tutorial01/&lt;/li&gt;
 &lt;li&gt;www.google.com&lt;/li&gt;
-&lt;/ol&gt;</content><category term="软件使用"/><category term="Django"/><category term="Mariadb"/><category term="Python"/><category term="mod_wsgi"/><category term="Apache"/></entry><entry><title>面向对象, 花式作图</title><link href="https://zqw.ink/2019-10-25-coding-objectplot.html" rel="alternate"/><published>2019-10-25T00:00:00+08:00</published><updated>2019-10-25T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2019-10-25:/2019-10-25-coding-objectplot.html</id><summary type="html">
+&lt;/ol&gt;
+</content><category term="软件使用"/><category term="Django"/><category term="Mariadb"/><category term="Python"/><category term="mod_wsgi"/><category term="Apache"/></entry><entry><title>面向对象, 花式作图</title><link href="https://zqw.ink/2019-10-25-coding-objectplot.html" rel="alternate"/><published>2019-10-25T00:00:00+08:00</published><updated>2019-10-25T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2019-10-25:/2019-10-25-coding-objectplot.html</id><summary type="html">
 &lt;h2&gt;面向对象&lt;/h2&gt;
 
 &lt;p&gt;面向对象写程序, 是一直在对一些对象作一些操作.&lt;/p&gt;
@@ -5125,39 +5120,35 @@ Tammy Mark Karl Lisa Don
 
 
 
-</content><category term="软件使用"/><category term="emacs"/><category term="org-mode"/></entry><entry><title>Emacs使用笔记</title><link href="https://zqw.ink/2018-09-07-coding-emacsshi-yong-bi-ji.html" rel="alternate"/><published>2018-09-07T00:00:00+08:00</published><updated>2018-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-07:/2018-09-07-coding-emacsshi-yong-bi-ji.html</id><summary type="html">&lt;!-- toc --&gt;
-
+</content><category term="软件使用"/><category term="emacs"/><category term="org-mode"/></entry><entry><title>Emacs使用笔记</title><link href="https://zqw.ink/2018-09-07-coding-emacs_note.html" rel="alternate"/><published>2018-09-07T00:00:00+08:00</published><updated>2018-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-07:/2018-09-07-coding-emacs_note.html</id><summary type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
-
 &lt;h3&gt;修改配色&lt;/h3&gt;
 &lt;p&gt;打开Emacs的配置文件。配置文件在~/.emacs。增加：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;(set-background-color "black") ;; 使用黑色背景
-(set-foreground-color "white") ;; 使用白色前景
-(set-face-foreground 'region "green")  ;; 区域前景颜色设为绿色
-(set-face-background 'region "blue") ;; 区域背 …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;!-- toc --&gt;
-
+&lt;p&gt;(set-background-color &amp;quot;black&amp;quot;) ;; 使用黑色背景&lt;br /&gt;
+(set-foreground-color &amp;quot;white&amp;quot;) ;; 使用白色前景&lt;br /&gt;
+(set-face-foreground 'region &amp;quot;green&amp;quot;)  ;; 区域前景颜色设为绿色&lt;br /&gt;
+(set-face-background 'region &amp;quot;blue&amp;quot;) ;; 区域背 …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
-
 &lt;h3&gt;修改配色&lt;/h3&gt;
 &lt;p&gt;打开Emacs的配置文件。配置文件在~/.emacs。增加：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;(set-background-color "black") ;; 使用黑色背景
-(set-foreground-color "white") ;; 使用白色前景
-(set-face-foreground 'region "green")  ;; 区域前景颜色设为绿色
-(set-face-background 'region "blue") ;; 区域背景色设为蓝色&lt;/p&gt;
+&lt;p&gt;(set-background-color &amp;quot;black&amp;quot;) ;; 使用黑色背景&lt;br /&gt;
+(set-foreground-color &amp;quot;white&amp;quot;) ;; 使用白色前景&lt;br /&gt;
+(set-face-foreground 'region &amp;quot;green&amp;quot;)  ;; 区域前景颜色设为绿色&lt;br /&gt;
+(set-face-background 'region &amp;quot;blue&amp;quot;) ;; 区域背景色设为蓝色&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;尽管可以重启Emacs使配置生效，但更快捷的方式是在打开~/.emacs的时候执行命令M-x eval-buffer，就可以使配置文件立即生效。&lt;/p&gt;
 &lt;h3&gt;快捷键&lt;/h3&gt;
-&lt;p&gt;中文帮助：&lt;code&gt;C-h t&lt;/code&gt; &lt;/p&gt;
-&lt;p&gt;撤消：&lt;code&gt;C-x u&lt;/code&gt; &lt;code&gt;C-/&lt;/code&gt; &lt;/p&gt;
-&lt;p&gt;启动自动折行模式：&lt;code&gt;M-x auto-fill-mode &amp;lt;Return&amp;gt;&lt;/code&gt; &lt;/p&gt;
-&lt;p&gt;相关命令搜索（Command Apropos）：&lt;code&gt;C-h a&lt;/code&gt; &lt;/p&gt;
-&lt;p&gt;Emacs 使用手册（manual）：&lt;code&gt;C-h r&lt;/code&gt; &lt;/p&gt;
-&lt;p&gt;自动补全：&lt;code&gt;M-/&lt;/code&gt;     &lt;/p&gt;
-&lt;p&gt;在另一个窗口打开缓冲：&lt;code&gt;C-x 4 b&lt;/code&gt;     &lt;/p&gt;
-&lt;p&gt;复制：&lt;code&gt;M-w&lt;/code&gt; &lt;/p&gt;
-&lt;p&gt;把当前进程放到后台（之后可用''fg''命令回到前台）： &lt;code&gt;Ctrl Z&lt;/code&gt;   &lt;/p&gt;
+&lt;p&gt;中文帮助：&lt;code&gt;C-h t&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;撤消：&lt;code&gt;C-x u&lt;/code&gt; &lt;code&gt;C-/&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;启动自动折行模式：&lt;code&gt;M-x auto-fill-mode &amp;lt;Return&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;相关命令搜索（Command Apropos）：&lt;code&gt;C-h a&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Emacs 使用手册（manual）：&lt;code&gt;C-h r&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;自动补全：&lt;code&gt;M-/&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;在另一个窗口打开缓冲：&lt;code&gt;C-x 4 b&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;复制：&lt;code&gt;M-w&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;把当前进程放到后台（之后可用''fg''命令回到前台）： &lt;code&gt;Ctrl Z&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;清屏：&lt;code&gt;ctrl L&lt;/code&gt;&lt;/p&gt;
 &lt;h3&gt;打开&lt;/h3&gt;
 &lt;p&gt;终端模式：&lt;code&gt;emacs -nw&lt;/code&gt;&lt;/p&gt;
@@ -5258,7 +5249,8 @@ Tammy Mark Karl Lisa Don
 
 (require 'sr-speedbar)
 
-&lt;/code&gt;&lt;/pre&gt;</content><category term="软件使用"/><category term="Emacs"/><category term="快捷键"/></entry><entry><title>Linux使用笔记(update 28/Jan/2021)</title><link href="https://zqw.ink/2018-09-07-coding-linuxshi-yong-bi-ji.html" rel="alternate"/><published>2018-09-07T00:00:00+08:00</published><updated>2018-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-07:/2018-09-07-coding-linuxshi-yong-bi-ji.html</id><summary type="html">
+&lt;/code&gt;&lt;/pre&gt;
+</content><category term="软件使用"/><category term="Emacs"/><category term="快捷键"/></entry><entry><title>Linux使用笔记(update 28/Jan/2021)</title><link href="https://zqw.ink/2018-09-07-coding-linuxshi-yong-bi-ji.html" rel="alternate"/><published>2018-09-07T00:00:00+08:00</published><updated>2018-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-07:/2018-09-07-coding-linuxshi-yong-bi-ji.html</id><summary type="html">
 &lt;h2&gt;常用命令&lt;/h2&gt;
 
 &lt;p&gt;1. 显示已安装的软件包列表：&lt;code&gt;dpkg -l&lt;/code&gt;
@@ -5839,10 +5831,8 @@ username@servername:/var/www/remote\_dir/（远程目录）
 &lt;li&gt;Linux Command Line and Shell Scripting&lt;/li&gt;
 &lt;li&gt;&lt;a href='https://www.runoob.com/linux/linux-user-manage.html'&gt;鸟哥&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="软件使用"/><category term="Linux"/></entry><entry><title>Typora使用笔记</title><link href="https://zqw.ink/2018-09-07-coding-typorashi-yong-bi-ji.html" rel="alternate"/><published>2018-09-07T00:00:00+08:00</published><updated>2018-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-07:/2018-09-07-coding-typorashi-yong-bi-ji.html</id><summary type="html">&lt;!-- toc --&gt;
-
+</content><category term="软件使用"/><category term="Linux"/></entry><entry><title>Typora使用笔记</title><link href="https://zqw.ink/2018-09-07-coding-typora_note.html" rel="alternate"/><published>2018-09-07T00:00:00+08:00</published><updated>2018-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-07:/2018-09-07-coding-typora_note.html</id><summary type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
-
 &lt;h2&gt;标题&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;“#” 一级标题&lt;/li&gt;
@@ -5851,12 +5841,10 @@ username@servername:/var/www/remote\_dir/（远程目录）
 &lt;/ul&gt;
 &lt;h2&gt;列表&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;无序号列表：“- ”列表内容。注意"- "后有空格&lt;/li&gt;
+&lt;li&gt;无序号列表：“- ”列表内容。注意&amp;quot;- &amp;quot;后有空格&lt;/li&gt;
 &lt;li&gt;有序号列表：“1. ”列表内容&lt;/li&gt;
 &lt;li&gt;任 …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;!-- toc --&gt;
-
 &lt;!-- more --&gt;
-
 &lt;h2&gt;标题&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;“#” 一级标题&lt;/li&gt;
@@ -5865,60 +5853,62 @@ username@servername:/var/www/remote\_dir/（远程目录）
 &lt;/ul&gt;
 &lt;h2&gt;列表&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;无序号列表：“- ”列表内容。注意"- "后有空格&lt;/li&gt;
+&lt;li&gt;无序号列表：“- ”列表内容。注意&amp;quot;- &amp;quot;后有空格&lt;/li&gt;
 &lt;li&gt;有序号列表：“1. ”列表内容&lt;/li&gt;
 &lt;li&gt;任务列表：“- [ ]”列表内容&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;居中&lt;/h2&gt;
-&lt;p&gt;"\&amp;lt;center&amp;gt;"跟居中的内容&lt;/p&gt;
+&lt;p&gt;&amp;quot;&amp;lt;center&amp;gt;&amp;quot;跟居中的内容&lt;/p&gt;
 &lt;h2&gt;引用与代码&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;引用文字：“&amp;gt; ”引用内容&lt;/li&gt;
-&lt;li&gt;引用网址："\&amp;lt;"网址"&amp;gt;"&lt;/li&gt;
-&lt;li&gt;单行代码："`"代码内容"`" &lt;/li&gt;
-&lt;li&gt;多行代码："```"代码内容"```"&lt;/li&gt;
-&lt;li&gt;注释：“[^注释内容]” &lt;/li&gt;
+&lt;li&gt;引用网址：&amp;quot;&amp;lt;&amp;quot;网址&amp;quot;&amp;gt;&amp;quot;&lt;/li&gt;
+&lt;li&gt;单行代码：&amp;quot;`&amp;quot;代码内容&amp;quot;`&amp;quot;&lt;/li&gt;
+&lt;li&gt;多行代码：&amp;quot;```&amp;quot;代码内容&amp;quot;```&amp;quot;&lt;/li&gt;
+&lt;li&gt;注释：“[^注释内容]”&lt;/li&gt;
+&lt;li&gt;&lt;a href="./2018-09-07-coding-emacs_note.html"&gt;引用博客&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;字体设置&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;斜体："*"斜体内容"*"&lt;/li&gt;
-&lt;li&gt;加粗："**"加粗内容"**"&lt;/li&gt;
-&lt;li&gt;下划线："\&amp;lt;u&amp;gt;"下划线内容“\&amp;lt;/u&amp;gt;” &lt;/li&gt;
-&lt;li&gt;删除线："~~"删除内容"~~"&lt;/li&gt;
+&lt;li&gt;斜体：&amp;quot;*&amp;quot;斜体内容&amp;quot;*&amp;quot;&lt;/li&gt;
+&lt;li&gt;加粗：&amp;quot;**&amp;quot;加粗内容&amp;quot;**&amp;quot;&lt;/li&gt;
+&lt;li&gt;下划线：&amp;quot;&amp;lt;u&amp;gt;&amp;quot;下划线内容“&amp;lt;/u&amp;gt;”&lt;/li&gt;
+&lt;li&gt;删除线：&amp;quot;~~&amp;quot;删除内容&amp;quot;~~&amp;quot;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;分割线&lt;/h2&gt;
-&lt;p&gt;"---" &lt;/p&gt;
+&lt;p&gt;&amp;quot;---&amp;quot;&lt;/p&gt;
 &lt;h2&gt;转义&lt;/h2&gt;
 &lt;p&gt;\ 转义符号&lt;/p&gt;
 &lt;h2&gt;插入&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;图片：直接拖入&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;图片：直接拖入&lt;/p&gt;
+&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;表格：&lt;/p&gt;
-&lt;p&gt;|表   |格 |&lt;/p&gt;
-&lt;p&gt;|内   |容 |&lt;/p&gt;
+&lt;p&gt;|表	|格	|&lt;/p&gt;
+&lt;p&gt;|内	|容	|&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;行内公式："\$"公式内容"\$"&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;单独成行的公式："\$\$"公式内容"\$\$"&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;表情：":"表情内容":"。表情内容见附录&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;目录："[toc]"&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;行内公式：&amp;quot;$&amp;quot;公式内容&amp;quot;$&amp;quot;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;单独成行的公式：&amp;quot;$$&amp;quot;公式内容&amp;quot;$$&amp;quot;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;表情：&amp;quot;:&amp;quot;表情内容&amp;quot;:&amp;quot;。表情内容见附录&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;目录：&amp;quot;[toc]&amp;quot;&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;附录：表情列表&lt;/h2&gt;
 &lt;h3&gt;Symbols&lt;/h3&gt;
-&lt;p&gt;2️⃣ 3️⃣ 4️⃣ 5️⃣ 6️⃣ 7️⃣ 8️⃣ 9️⃣ 🔟 🔢 0️⃣ #️⃣ 🔣 ◀️ ⬇️ ▶️ ⬅️ 🔠 🔡 🔤 ↙️ ↘️ ➡️ ⬆️ ↖️ ↗️ ⏬ ⏫ 🔽 ⤵️ ⤴️ ↩️ ↪️ ↔️ ↕️ 🔼 🔃 🔄 ⏪ ⏩ ℹ️ 🆗 🔀 🔁 🔂 🆕 🔝 🆙 🆒 🆓 🆖 🎦 🈁 📶 :u5272: :u5408: :u55b6: :u6307: :u6708: :u6709: 🈵 :u7121: :u7533: :u7a7a: :u7981: 🈂️ 🚻 🚹 🚺 🚼 🚭 🅿️ ♿️ 🚇 🛄 🉑 🚾 🚰 🚮 ㊙️ ㊗️ Ⓜ️ 🛂 🛅 🛃 🉐 🆑 🆘 🆔 🚫 🔞 📵 🚯 🚱 🚳 🚷 🚸 ⛔️ ✳️ ❇️ ✴️ 💟 🆚 📳 📴 💹 💱 ♈️ ♉️ ♊️ ♋️ ♌️ ♍️ ♎️ ♏️ ♐️ ♑️ ♒️ ♓️ ⛎ 🔯 ❎ 🅰️ 🅱️ 🆎 🅾️ 💠 ♻️ 🔚 🔙 🔛 🔜 🕐 🕜 🕙 🕥 🕚 🕦 🕛 🕧 🕑 🕝 🕒 🕞 🕓 🕟 🕔 🕠 🕕 🕡 🕖 🕢 🕗 🕣 🕘 🕤 💲 ©️ ®️ ™️ ❌ ❗️ ‼️ ⁉️ ⭕️ ✖️ ➕ ➖ ➗ 💮 💯 ✔️ ☑️ 🔘 🔗 ➰ 〰️ 〽️ 🔱 ▪️ ▫️ ◾️ ◽️ ◼️ ◻️ ⬛️ ⬜️ ✅ 🔲 🔳 ⚫️ ⚪️ 🔴 🔵 🔷 🔶 🔹 🔸 🔺 🔻 :shipit:  &lt;/p&gt;
+&lt;p&gt;2️⃣ 3️⃣ 4️⃣ 5️⃣ 6️⃣ 7️⃣ 8️⃣ 9️⃣ 🔟 🔢 0️⃣ #️⃣ 🔣 ◀️ ⬇️ ▶️ ⬅️ 🔠 🔡 🔤 ↙️ ↘️ ➡️ ⬆️ ↖️ ↗️ ⏬ ⏫ 🔽 ⤵️ ⤴️ ↩️ ↪️ ↔️ ↕️ 🔼 🔃 🔄 ⏪ ⏩ ℹ️ 🆗 🔀 🔁 🔂 🆕 🔝 🆙 🆒 🆓 🆖 🎦 🈁 📶 :u5272: :u5408: :u55b6: :u6307: :u6708: :u6709: 🈵 :u7121: :u7533: :u7a7a: :u7981: 🈂️ 🚻 🚹 🚺 🚼 🚭 🅿️ ♿️ 🚇 🛄 🉑 🚾 🚰 🚮 ㊙️ ㊗️ Ⓜ️ 🛂 🛅 🛃 🉐 🆑 🆘 🆔 🚫 🔞 📵 🚯 🚱 🚳 🚷 🚸 ⛔️ ✳️ ❇️ ✴️ 💟 🆚 📳 📴 💹 💱 ♈️ ♉️ ♊️ ♋️ ♌️ ♍️ ♎️ ♏️ ♐️ ♑️ ♒️ ♓️ ⛎ 🔯 ❎ 🅰️ 🅱️ 🆎 🅾️ 💠 ♻️ 🔚 🔙 🔛 🔜 🕐 🕜 🕙 🕥 🕚 🕦 🕛 🕧 🕑 🕝 🕒 🕞 🕓 🕟 🕔 🕠 🕕 🕡 🕖 🕢 🕗 🕣 🕘 🕤 💲 ©️ ®️ ™️ ❌ ❗️ ‼️ ⁉️ ⭕️ ✖️ ➕ ➖ ➗ 💮 💯 ✔️ ☑️ 🔘 🔗 ➰ 〰️ 〽️ 🔱 ▪️ ▫️ ◾️ ◽️ ◼️ ◻️ ⬛️ ⬜️ ✅ 🔲 🔳 ⚫️ ⚪️ 🔴 🔵 🔷 🔶 🔹 🔸 🔺 🔻 :shipit:&lt;/p&gt;
 &lt;h3&gt;Places&lt;/h3&gt;
-&lt;p&gt;🏠 🏡 🏫 🏢 🏣 🏥 🏦 🏪 🏩 🏨 💒 ⛪️ 🏬 🏤 🌇 🌆 🏯 🏰 ⛺️ 🏭 🗼 🗾 🗻 🌄 🌅 🌠 🗽 🌉 🎠 🌈 🎡 ⛲️ 🎢 🚢 🚤 ⛵️ ⛵️ 🚣 ⚓️ 🚀 ✈️ 🚁 🚂 🚊 🚞 🚲 🚡 🚟 🚠 🚜 🚙 🚘 🚗 🚗 🚕 🚖 🚛 🚌 🚍 🚨 🚓 🚔 🚒 🚑 🚐 🚚 🚋 🚉 🚆 🚅 🚄 🚈 🚝 🚃 🚎 🎫 ⛽️ 🚦 🚥 ⚠️ 🚧 🔰 🏧 🎰 🚏 💈 ♨️ 🏁 🎌 🏮 🗿 🎪 🎭 📍 🚩 🇯🇵 🇰🇷 🇨🇳 🇺🇸 🇫🇷 🇪🇸 🇮🇹 🇷🇺 🇬🇧 🇬🇧 🇩🇪 &lt;/p&gt;
+&lt;p&gt;🏠 🏡 🏫 🏢 🏣 🏥 🏦 🏪 🏩 🏨 💒 ⛪️ 🏬 🏤 🌇 🌆 🏯 🏰 ⛺️ 🏭 🗼 🗾 🗻 🌄 🌅 🌠 🗽 🌉 🎠 🌈 🎡 ⛲️ 🎢 🚢 🚤 ⛵️ ⛵️ 🚣 ⚓️ 🚀 ✈️ 🚁 🚂 🚊 🚞 🚲 🚡 🚟 🚠 🚜 🚙 🚘 🚗 🚗 🚕 🚖 🚛 🚌 🚍 🚨 🚓 🚔 🚒 🚑 🚐 🚚 🚋 🚉 🚆 🚅 🚄 🚈 🚝 🚃 🚎 🎫 ⛽️ 🚦 🚥 ⚠️ 🚧 🔰 🏧 🎰 🚏 💈 ♨️ 🏁 🎌 🏮 🗿 🎪 🎭 📍 🚩 🇯🇵 🇰🇷 🇨🇳 🇺🇸 🇫🇷 🇪🇸 🇮🇹 🇷🇺 🇬🇧 🇬🇧 🇩🇪&lt;/p&gt;
 &lt;h3&gt;People&lt;/h3&gt;
-&lt;p&gt;:bowtie: 😄 :simple_smile: 😆 😊 😃 ☺️ 😏 😍 😘 😚 😳 😌 😆 😁 😉 😜 😝 😀 😗 😙 😛 😴 😟 😦 😧 😮 😬 😕 😯 😑 😒 😅 😓 😥 😩 😔 😞 😖 😨 😰 😣 😢 😭 😂 😲 😱 :neckbeard: 😫 😠 😡 😤 😪 😋 😷 😎 😵 👿 😈 😐 😶 😇 👽 💛 💙 💜 ❤️ 💚 💔 💓 💗 💕 💞 💘 💖 ✨ ⭐️ 🌟 💫 💥 💥 💢 ❗️ ❓ ❕ ❔ 💤 💨 💦 🎶 🎵 🔥 💩 💩 💩 👍 👍 👎 👎 👌 👊 👊 ✊ ✌️ 👋 ✋ ✋ 👐 ☝️ 👇 👈 👉 🙌 🙏 👆 👏 💪 🤘 🖕 🏃 🏃 👫 👪 👬 👭 💃 👯 🙆 🙅 💁 🙋 👰 🙎 🙍 🙇 :couplekiss: 💑 💆 💇 💅 👦 👧 👩 👨 👶 👵 👴 👱 👲 👳 👷 👮 👼 👸 😺 😸 😻 😽 😼 🙀 😿 😹 😾 👹 👺 🙈 🙉 🙊 💂 💀 🐾 👄 💋 💧 👂 👀 👃 👅 💌 👤 👥 💬 💭 :feelsgood: :finnadie: :goberserk: :godmode: :hurtrealbad: :rage1: :rage2: :rage3: :rage4: :suspect: :trollface: &lt;/p&gt;
+&lt;p&gt;:bowtie: 😄 :simple_smile: 😆 😊 😃 ☺️ 😏 😍 😘 😚 😳 😌 😆 😁 😉 😜 😝 😀 😗 😙 😛 😴 😟 😦 😧 😮 😬 😕 😯 😑 😒 😅 😓 😥 😩 😔 😞 😖 😨 😰 😣 😢 😭 😂 😲 😱 :neckbeard: 😫 😠 😡 😤 😪 😋 😷 😎 😵 👿 😈 😐 😶 😇 👽 💛 💙 💜 ❤️ 💚 💔 💓 💗 💕 💞 💘 💖 ✨ ⭐️ 🌟 💫 💥 💥 💢 ❗️ ❓ ❕ ❔ 💤 💨 💦 🎶 🎵 🔥 💩 💩 💩 👍 👍 👎 👎 👌 👊 👊 ✊ ✌️ 👋 ✋ ✋ 👐 ☝️ 👇 👈 👉 🙌 🙏 👆 👏 💪 🤘 🖕 🏃 🏃 👫 👪 👬 👭 💃 👯 🙆 🙅 💁 🙋 👰 🙎 🙍 🙇 :couplekiss: 💑 💆 💇 💅 👦 👧 👩 👨 👶 👵 👴 👱 👲 👳 👷 👮 👼 👸 😺 😸 😻 😽 😼 🙀 😿 😹 😾 👹 👺 🙈 🙉 🙊 💂 💀 🐾 👄 💋 💧 👂 👀 👃 👅 💌 👤 👥 💬 💭 :feelsgood: :finnadie: :goberserk: :godmode: :hurtrealbad: :rage1: :rage2: :rage3: :rage4: :suspect: :trollface:&lt;/p&gt;
 &lt;h3&gt;Nature&lt;/h3&gt;
-&lt;p&gt;☀️ ☔️ ☁️ ❄️ ⛄️ ⚡️ 🌀 🌁 🌊 🐱 🐶 🐭 🐹 🐰 🐺 🐸 🐯 🐨 🐻 🐷 🐽 🐮 🐗 🐵 🐒 🐴 🐎 🐫 🐑 🐘 🐼 🐍 🐦 🐤 🐥 🐣 🐔 🐧 🐢 🐛 🐝 🐜 🐞 🐌 🐙 🐠 🐟 🐳 🐋 🐬 🐄 🐏 🐀 🐃 🐅 🐇 🐉 🐐 🐓 🐕 🐖 🐁 🐂 🐲 🐡 🐊 🐪 🐆 🐈 🐩 🐾 💐 🌸 🌷 🍀 🌹 🌻 🌺 🍁 🍃 🍂 🌿 🍄 🌵 🌴 🌲 🌳 🌰 🌱 🌼 🌾 🐚 🌐 🌞 🌝 🌚 🌑 🌒 🌓 🌔 🌕 🌖 🌗 🌘 🌜 🌛 🌙 🌍 🌎 🌏 🌋 🌌 ⛅️ :octocat: :squirrel: Objects 🎍 💝 🎎 🎒 🎓 🎏 🎆 🎇 🎐 🎑 🎃 👻 🎅 🎄 🎁 🔔 🔕 🎋 🎉 🎊 🎈 🔮 💿 📀 💾 📷 📹 🎥 💻 📺 📱 ☎️ ☎️ 📞 📟 📠 💽 📼 🔉 🔈 🔇 📢 📣 ⌛️ ⏳ ⏰ ⌚️ 📻 📡 ➿ 🔍 🔎 🔓 🔒 🔏 🔐 🔑 💡 🔦 🔆 🔅 🔌 🔋 📲 ✉️ 📫 📮 🛀 🛁 🚿 🚽 🔧 🔩 🔨 💺 💰 💴 💵 💷 💶 💳 💸 📧 📥 📤 ✉️ 📨 📯 📪 📬 📭 📦 🚪 🚬 💣 🔫 🔪 💊 💉 📄 📃 📑 📊 📈 📉 📜 📋 📆 📅 📇 📁 📂 ✂️ 📌 📎 ✒️ ✏️ 📏 📐 📕 📗 📘 📙 📓 📔 📒 📚 🔖 📛 🔬 🔭 📰 🏈 🏀 ⚽️ ⚾️ 🎾 🎱 🏉 🎳 ⛳️ 🚵 🚴 🏇 🏂 🏊 🏄 🎿 ♠️ ♥️ ♣️ ♦️ 💎 💍 🏆 🎼 🎹 🎻 👾 🎮 🃏 🎴 🎲 🎯 🀄️ 🎬 📝 📝 📖 🎨 🎤 🎧 🎺 🎷 🎸 👞 👡 👠 💄 👢 👕 👕 👔 👚 👗 🎽 👖 👘 👙 🎀 🎩 👑 👒 👞 🌂 💼 👜 👝 👛 👓 🎣 ☕️ 🍵 🍶 🍼 🍺 🍻 🍸 🍹 🍷 🍴 🍕 🍔 🍟 🍗 🍖 🍝 🍛 🍤 🍱 🍣 🍥 🍙 🍘 🍚 🍜 🍲 🍢 🍡 🥚 🍞 🍩 🍮 🍦 🍨 🍧 🎂 🍰 🍪 🍫 🍬 🍭 🍯 🍎 🍏 🍊 🍋 🍒 🍇 🍉 🍓 🍑 🍈 🍌 🍐 🍍 🍠 🍆 🍅 🌽 &lt;/p&gt;</content><category term="软件使用"/><category term="Typora"/></entry></feed>
+&lt;p&gt;☀️ ☔️ ☁️ ❄️ ⛄️ ⚡️ 🌀 🌁 🌊 🐱 🐶 🐭 🐹 🐰 🐺 🐸 🐯 🐨 🐻 🐷 🐽 🐮 🐗 🐵 🐒 🐴 🐎 🐫 🐑 🐘 🐼 🐍 🐦 🐤 🐥 🐣 🐔 🐧 🐢 🐛 🐝 🐜 🐞 🐌 🐙 🐠 🐟 🐳 🐋 🐬 🐄 🐏 🐀 🐃 🐅 🐇 🐉 🐐 🐓 🐕 🐖 🐁 🐂 🐲 🐡 🐊 🐪 🐆 🐈 🐩 🐾 💐 🌸 🌷 🍀 🌹 🌻 🌺 🍁 🍃 🍂 🌿 🍄 🌵 🌴 🌲 🌳 🌰 🌱 🌼 🌾 🐚 🌐 🌞 🌝 🌚 🌑 🌒 🌓 🌔 🌕 🌖 🌗 🌘 🌜 🌛 🌙 🌍 🌎 🌏 🌋 🌌 ⛅️ :octocat: :squirrel: Objects 🎍 💝 🎎 🎒 🎓 🎏 🎆 🎇 🎐 🎑 🎃 👻 🎅 🎄 🎁 🔔 🔕 🎋 🎉 🎊 🎈 🔮 💿 📀 💾 📷 📹 🎥 💻 📺 📱 ☎️ ☎️ 📞 📟 📠 💽 📼 🔉 🔈 🔇 📢 📣 ⌛️ ⏳ ⏰ ⌚️ 📻 📡 ➿ 🔍 🔎 🔓 🔒 🔏 🔐 🔑 💡 🔦 🔆 🔅 🔌 🔋 📲 ✉️ 📫 📮 🛀 🛁 🚿 🚽 🔧 🔩 🔨 💺 💰 💴 💵 💷 💶 💳 💸 📧 📥 📤 ✉️ 📨 📯 📪 📬 📭 📦 🚪 🚬 💣 🔫 🔪 💊 💉 📄 📃 📑 📊 📈 📉 📜 📋 📆 📅 📇 📁 📂 ✂️ 📌 📎 ✒️ ✏️ 📏 📐 📕 📗 📘 📙 📓 📔 📒 📚 🔖 📛 🔬 🔭 📰 🏈 🏀 ⚽️ ⚾️ 🎾 🎱 🏉 🎳 ⛳️ 🚵 🚴 🏇 🏂 🏊 🏄 🎿 ♠️ ♥️ ♣️ ♦️ 💎 💍 🏆 🎼 🎹 🎻 👾 🎮 🃏 🎴 🎲 🎯 🀄️ 🎬 📝 📝 📖 🎨 🎤 🎧 🎺 🎷 🎸 👞 👡 👠 💄 👢 👕 👕 👔 👚 👗 🎽 👖 👘 👙 🎀 🎩 👑 👒 👞 🌂 💼 👜 👝 👛 👓 🎣 ☕️ 🍵 🍶 🍼 🍺 🍻 🍸 🍹 🍷 🍴 🍕 🍔 🍟 🍗 🍖 🍝 🍛 🍤 🍱 🍣 🍥 🍙 🍘 🍚 🍜 🍲 🍢 🍡 🥚 🍞 🍩 🍮 🍦 🍨 🍧 🎂 🍰 🍪 🍫 🍬 🍭 🍯 🍎 🍏 🍊 🍋 🍒 🍇 🍉 🍓 🍑 🍈 🍌 🍐 🍍 🍠 🍆 🍅 🌽&lt;/p&gt;
+</content><category term="软件使用"/><category term="Typora"/></entry></feed>

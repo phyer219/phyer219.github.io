@@ -128,100 +128,97 @@
 
 <section class="markdown-body">
   <!-- toc -->
-
 <!-- more -->
-
 <h1>利用虚时传播子求解定态散射问题</h1>
 <p>本文考虑一维问题</p>
 <h2>传播子(propagator)</h2>
-<p>如果 \(\hat{H}\) 不含时，虚时传播子为</p>
-\[
+<p>如果 $\hat{H}$ 不含时，虚时传播子为<br />
+$$
 \begin{align}
   K(x, \tau; x', 0) = \langle x | e^{-\hat{H}\tau} | x'\rangle
   = \sum_n e^{-E_n\tau}\langle x| n\rangle \langle n| x'\rangle
 \end{align}
-\]
-<p>其中 \(|n\rangle\) 是 \(\hat{H}\) 的本征态</p>
-\[
+$$<br />
+其中 $|n\rangle$ 是 $\hat{H}$ 的本征态<br />
+$$
 \begin{align}
   \hat H | n\rangle = E_n | n\rangle
 \end{align}
-\]
-
+$$</p>
 <h2>散射问题</h2>
-\[
+$$
+
 \begin{align}
   (\hat{H} + \hat{V} )|\phi\rangle = E|\phi\rangle
 \end{align}
-\]
-<p>移项并投影到 \(\hat{H}\) 的本征态 \(|n\rangle\) 上</p>
-\[
+
+$$<p>移项并投影到 $\hat{H}$ 的本征态 $|n\rangle$ 上<br />
+$$
 \begin{align}
   \langle n|(\hat{H} - E )|\phi\rangle = -\langle n|\hat{V}|\phi\rangle
 \end{align}
-\]
-\[
+$$<br />
+$$
 \begin{align}
-  \langle n|\phi\rangle =&amp; -\frac{1}{E_n - E }\langle n|\hat{V}|\phi\rangle \\
-  =&amp; -\frac{1}{E_n - E }\langle n|\hat{V}|\phi\rangle \\
-  =&amp;-\int_0^{\infty} \mathrm{d}\tau \, e^{-(E_n - E)\tau}\langle n|V|\phi\rangle \\
-  =&amp;-\int_0^{\infty} \mathrm{d}\tau \, e^{E\tau}\cdot e^{-E_n \tau}\langle n|V|\phi\rangle
+  \langle n|\phi\rangle =& -\frac{1}{E_n - E }\langle n|\hat{V}|\phi\rangle \\
+  =& -\frac{1}{E_n - E }\langle n|\hat{V}|\phi\rangle \\
+  =&-\int_0^{\infty} \mathrm{d}\tau \, e^{-(E_n - E)\tau}\langle n|V|\phi\rangle \\
+  =&-\int_0^{\infty} \mathrm{d}\tau \, e^{E\tau}\cdot e^{-E_n \tau}\langle n|V|\phi\rangle
 \end{align}
-\]
-<p>最后一步 Schwinger parametrization 需要散射能量 \(E\) 小于 \(E_n\).</p>
-<p>散射波函数可以写成</p>
-\[
+$$<br />
+最后一步 Schwinger parametrization 需要散射能量 <eq>E</eq> 小于 $E_n$.</p>
+<p>散射波函数可以写成<br />
+$$
 \begin{align}
   \phi(x) = \langle x|\phi\rangle
   = \sum_n \langle x | n \rangle \langle n|\phi\rangle
 \end{align}
-\]
-<p>代入我们之前算得的 \(\langle n |\phi\rangle\)</p>
-\[
+$$<br />
+代入我们之前算得的 $\langle n |\phi\rangle$<br />
+$$
 \begin{align}
-  \phi(x) =&amp; -\int_0^{\infty} \mathrm{d}\tau \, e^{E\tau}\cdot
+  \phi(x) =& -\int_0^{\infty} \mathrm{d}\tau \, e^{E\tau}\cdot
   \sum_n e^{-E_n \tau}  \langle x | n \rangle \langle n|V|\phi\rangle \\
-  =&amp; -\int_0^{\infty} \mathrm{d}\tau \, e^{E\tau}\cdot
+  =& -\int_0^{\infty} \mathrm{d}\tau \, e^{E\tau}\cdot
   \int \mathrm{d} x'\,
   \sum_n e^{-E_n \tau}  \langle x | n \rangle \langle n|x'\rangle\langle x'|V|\phi\rangle
 \end{align}
-\]
-<p>会发现其中出现了传播子.就得到</p>
-\[
+$$<br />
+会发现其中出现了传播子.就得到<br />
+$$
 \begin{align}
-  \phi(x) =&amp; -\int_0^{\infty} \mathrm{d}\tau \, e^{E\tau}\cdot
+  \phi(x) =& -\int_0^{\infty} \mathrm{d}\tau \, e^{E\tau}\cdot
   \sum_n e^{-E_n \tau}  \langle x | n \rangle \langle n|V|\phi\rangle \\
-  =&amp; -\int_0^{\infty} \mathrm{d}\tau \, e^{E\tau}\cdot
+  =& -\int_0^{\infty} \mathrm{d}\tau \, e^{E\tau}\cdot
   \int \mathrm{d} x'\,
    \langle x'|V|\phi\rangle K(x, \tau; x', 0)
 \end{align}
-\]
-
+$$</p>
 <h2>例: 一维简谐势中接触吸引的两粒子</h2>
-<p>通过质心相对坐标分离后，相对运动部分的哈密顿量为</p>
-\[
+<p>通过质心相对坐标分离后，相对运动部分的哈密顿量为<br />
+$$
 \begin{align}
   \hat{H} +\hat{V} = \frac{\hat{p}^2}{2\mu} + \frac{\mu}{2}\omega^2 \hat{x}^2 + \hat{V}
 \end{align}
-\]
-<p>其中 \(\hat{V}\) 是接触相吸引互作用，</p>
-\[
+$$<br />
+其中 $\hat{V}$ 是接触相吸引互作用，<br />
+$$
 \begin{align}
   \hat{V} |x\rangle = -g\delta(x) |x\rangle
 \end{align}
-\]
-<p>那么散射波函数为</p>
-\[
+$$<br />
+那么散射波函数为<br />
+$$
 \begin{align}
   \phi(x)
-  =&amp; -\int_0^{\infty} \mathrm{d}\tau \, e^{E\tau}\cdot
+  =& -\int_0^{\infty} \mathrm{d}\tau \, e^{E\tau}\cdot
   \int \mathrm{d} x'\,
    \langle x'|V|\phi\rangle K(x, \tau; x', 0) \\
-   =&amp; g \phi(0)\int_0^{\infty} \mathrm{d}\tau \, e^{E\tau}\cdot
+   =& g \phi(0)\int_0^{\infty} \mathrm{d}\tau \, e^{E\tau}\cdot
   K(x, \tau; x', 0)
 \end{align}
-\]
-<p>其中的传播子即为一维谐振子的传播子: <a href="https://en.wikipedia.org/wiki/Mehler_kernel">Mehler kernel</a>。</p>
+$$<br />
+其中的传播子即为一维谐振子的传播子: <a href="https://en.wikipedia.org/wiki/Mehler_kernel">Mehler kernel</a>。</p>
 <h2>数值验证传播子</h2>
 <pre><code class="language-python">import numpy as np
 import matplotlib.pyplot as plt
@@ -290,7 +287,7 @@ plt.legend()
 plt.savefig('HO_propagator.svg', transparent=True)
 
 </code></pre>
-<p><img alt="HO_propagator" src="./2024-04-24-physics-propagator_scattering/HO_propagator.svg"></p>
+<p><img src="./2024-04-24-physics-propagator_scattering/HO_propagator.svg" alt="HO_propagator" /></p>
 <h2>Reference</h2>
 <ul>
 <li>Shina Tan 的 lecture note.</li>
@@ -300,6 +297,7 @@ plt.savefig('HO_propagator.svg', transparent=True)
 <li><a href="https://physics.stackexchange.com/questions/20797/differentiating-propagator-greens-function-correlation-function-etc/476630#476630">Physics Stackexchange: Differentiating Propagator, Green's function, Correlation function, etc</a></li>
 <li><a href="https://physics.stackexchange.com/questions/209846/dirac-delta-in-definition-of-green-function">Physics Stackexchange: Dirac Delta in definition of Green function</a></li>
 </ul>
+
 </section>
 
 <section class="post-meta">

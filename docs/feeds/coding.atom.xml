@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水 - coding</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/coding.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2025-12-30T00:00:00+08:00</updated><entry><title>个人博客风格指南（备忘）</title><link href="https://zqw.ink/2025-12-30-coding-style_guide.html" rel="alternate"/><published>2025-12-30T00:00:00+08:00</published><updated>2025-12-30T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-12-30:/2025-12-30-coding-style_guide.html</id><summary type="html">&lt;h2&gt;博客文件名：&lt;code&gt;yyyy-mm-dd-category-blog_slug.md&lt;/code&gt;&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水 - coding</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/coding.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2025-12-30T00:00:00+08:00</updated><entry><title>个人博客风格指南（备忘）</title><link href="https://zqw.ink/2025-12-30-coding-style_guide.html" rel="alternate"/><published>2025-12-30T00:00:00+08:00</published><updated>2025-12-30T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-12-30:/2025-12-30-coding-style_guide.html</id><summary type="html">
+&lt;h2&gt;博客文件名：&lt;code&gt;yyyy-mm-dd-category-blog_slug.md&lt;/code&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;日期（yyyy-mm-dd）&lt;/li&gt;
 &lt;li&gt;分类（category）：一篇博客只有一个分类，且为英文，全部小写&lt;/li&gt;
-&lt;li&gt;Blog slug（blog_slug）:一般全部小写，用下划线连接。如果有些 …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;h2&gt;博客文件名：&lt;code&gt;yyyy-mm-dd-category-blog_slug.md&lt;/code&gt;&lt;/h2&gt;
+&lt;li&gt;Blog slug（blog_slug）:一般全部小写，用下划线连接。如果有些 …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
+&lt;h2&gt;博客文件名：&lt;code&gt;yyyy-mm-dd-category-blog_slug.md&lt;/code&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;日期（yyyy-mm-dd）&lt;/li&gt;
 &lt;li&gt;分类（category）：一篇博客只有一个分类，且为英文，全部小写&lt;/li&gt;
@@ -25,7 +27,8 @@ tags:
 &lt;li&gt;title：无要求。&lt;/li&gt;
 &lt;li&gt;date: yyyy-mm-dd 应与文件名一致。&lt;/li&gt;
 &lt;li&gt;category: 唯一，应与文件名一致。&lt;/li&gt;
-&lt;li&gt;tags:&lt;ul&gt;
+&lt;li&gt;tags:
+&lt;ul&gt;
 &lt;li&gt;中英文皆可。&lt;/li&gt;
 &lt;li&gt;写成 &lt;a href="https://zh.wikipedia.org/zh-cn/YAML"&gt;YAML&lt;/a&gt; 清单的形式。&lt;/li&gt;
 &lt;li&gt;空，一个，或多个。&lt;/li&gt;
@@ -44,8 +47,11 @@ tags:
 &lt;li&gt;英文或阿拉伯数字与汉字用空格隔开。&lt;/li&gt;
 &lt;li&gt;中文括号中为英文，不加空格。如：风格指南（Style guide）。&lt;/li&gt;
 &lt;li&gt;逗号，句号等后为英文，按英文的习惯，加一个空格。&lt;/li&gt;
-&lt;/ul&gt;</content><category term="coding"/><category term="style guide"/></entry><entry><title>用 certbot 手动获取受信任的 SSL证，并实现对 NextCloud 容器 80 端口的 SSL 访问</title><link href="https://zqw.ink/2025-09-14-coding-certbot.html" rel="alternate"/><published>2025-09-14T00:00:00+08:00</published><updated>2025-09-14T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-09-14:/2025-09-14-coding-certbot.html</id><summary type="html">&lt;h2&gt;SSL加密&lt;/h2&gt;
-&lt;p&gt;在使用自己搭建的服务，如 &lt;code&gt;emby&lt;/code&gt; ,&lt;code&gt;nextcloud&lt;/code&gt;, &lt;code&gt;immich&lt;/code&gt; 时，如果使用域名访问，当没有进行受信任的 SSL 加密时，对应的手机 app 会连不上，提醒，或 …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;SSL加密&lt;/h2&gt;
+&lt;/ul&gt;
+</content><category term="coding"/><category term="style guide"/></entry><entry><title>用 certbot 手动获取受信任的 SSL证，并实现对 NextCloud 容器 80 端口的 SSL 访问</title><link href="https://zqw.ink/2025-09-14-coding-certbot.html" rel="alternate"/><published>2025-09-14T00:00:00+08:00</published><updated>2025-09-14T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-09-14:/2025-09-14-coding-certbot.html</id><summary type="html">
+&lt;h2&gt;SSL加密&lt;/h2&gt;
+&lt;p&gt;在使用自己搭建的服务，如 &lt;code&gt;emby&lt;/code&gt; ,&lt;code&gt;nextcloud&lt;/code&gt;, &lt;code&gt;immich&lt;/code&gt; 时，如果使用域名访问，当没有进行受信任的 SSL 加密时，对应的手机 app 会连不上，提醒，或 …&lt;/p&gt;</summary><content type="html">
+&lt;h2&gt;SSL加密&lt;/h2&gt;
 &lt;p&gt;在使用自己搭建的服务，如 &lt;code&gt;emby&lt;/code&gt; ,&lt;code&gt;nextcloud&lt;/code&gt;, &lt;code&gt;immich&lt;/code&gt; 时，如果使用域名访问，当没有进行受信任的 SSL 加密时，对应的手机 app 会连不上，提醒，或报错。&lt;/p&gt;
 &lt;p&gt;最简单的方式是用 &lt;code&gt;certbot&lt;/code&gt; 获取一个 90 天期限的 SSL 证书，到期后再更新。此篇博客做一备忘。&lt;/p&gt;
 &lt;h2&gt;证书获取过程&lt;/h2&gt;
@@ -169,14 +175,17 @@ PublishPort=9999:443
 WantedBy=default.target
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;参考资料&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://wiki.archlinux.org/title/Certbot"&gt;ArchWiki: Certbot&lt;/a&gt;&lt;/p&gt;</content><category term="coding"/><category term="SSL"/><category term="certbot"/></entry><entry><title>Plotly 绘制动图</title><link href="https://zqw.ink/2025-06-18-coding-plotly_animation.html" rel="alternate"/><published>2025-06-18T00:00:00+08:00</published><updated>2025-06-18T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-06-18:/2025-06-18-coding-plotly_animation.html</id><summary type="html">&lt;h2&gt;基础版本&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://wiki.archlinux.org/title/Certbot"&gt;ArchWiki: Certbot&lt;/a&gt;&lt;/p&gt;
+</content><category term="coding"/><category term="SSL"/><category term="certbot"/></entry><entry><title>Plotly 绘制动图</title><link href="https://zqw.ink/2025-06-18-coding-plotly_animation.html" rel="alternate"/><published>2025-06-18T00:00:00+08:00</published><updated>2025-06-18T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-06-18:/2025-06-18-coding-plotly_animation.html</id><summary type="html">
+&lt;h2&gt;基础版本&lt;/h2&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;import plotly.graph_objects as go
 import numpy as np
 
 x = np.linspace(0, 2*np.pi, 50)
 t = np.linspace(0, 2*np.pi, 500)
 yt = [np.sin(x + ti) for ti in t]
-frames = [go.Frame(data=[go.Scatter(x=x, y=y1i)]) for y1i …&lt;/code&gt;&lt;/pre&gt;</summary><content type="html">&lt;h2&gt;基础版本&lt;/h2&gt;
+frames = [go.Frame(data=[go.Scatter(x=x, y=y1i)]) for y1i …&lt;/code&gt;&lt;/pre&gt;</summary><content type="html">
+&lt;h2&gt;基础版本&lt;/h2&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;import plotly.graph_objects as go
 import numpy as np
 
@@ -197,7 +206,6 @@ fig.write_html(file=&amp;quot;basic_ver.html&amp;quot;, include_mathjax='cdn', a
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;a href="2025-06-18-coding-plotly_animation/basic_ver.py"&gt;basic_ver.py&lt;/a&gt;&lt;/p&gt;
 &lt;iframe src="2025-06-18-coding-plotly_animation/basic_ver.html" width="100%" height=600&gt;&lt;/iframe&gt;
-
 &lt;h2&gt;高级版本&lt;/h2&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;import plotly.graph_objects as go
 import numpy as np
@@ -244,33 +252,37 @@ fig.write_html(file=&amp;quot;pro_ver.html&amp;quot;, include_mathjax='cdn', aut
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;a href="2025-06-18-coding-plotly_animation/pro_ver.py"&gt;pro_ver.py&lt;/a&gt;&lt;/p&gt;
 &lt;iframe src="2025-06-18-coding-plotly_animation/pro_ver.html" width="100%" height=600&gt;&lt;/iframe&gt;
-
 &lt;h2&gt;参考&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://plotly.com/python/animations/"&gt;Plotly Animations&lt;/a&gt;&lt;/p&gt;</content><category term="coding"/><category term="plotly"/><category term="python"/></entry><entry><title>Linux 使用笔记（进阶）</title><link href="https://zqw.ink/2025-05-10-coding-rocklinux.html" rel="alternate"/><published>2025-05-10T00:00:00+08:00</published><updated>2025-05-10T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-05-10:/2025-05-10-coding-rocklinux.html</id><summary type="html">&lt;h2&gt;引言&lt;/h2&gt;
-&lt;p&gt;从 2018 年开始入门 Linux，已经 7 年了。
-从 Deepin 到 Manjaro，再到 Rocky Linux。
+&lt;p&gt;&lt;a href="https://plotly.com/python/animations/"&gt;Plotly Animations&lt;/a&gt;&lt;/p&gt;
+</content><category term="coding"/><category term="plotly"/><category term="python"/></entry><entry><title>Linux 使用笔记（进阶）</title><link href="https://zqw.ink/2025-05-10-coding-rocklinux.html" rel="alternate"/><published>2025-05-10T00:00:00+08:00</published><updated>2025-05-10T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-05-10:/2025-05-10-coding-rocklinux.html</id><summary type="html">
+&lt;h2&gt;引言&lt;/h2&gt;
+&lt;p&gt;从 2018 年开始入门 Linux，已经 7 年了。&lt;br /&gt;
+从 Deepin 到 Manjaro，再到 Rocky Linux。&lt;br /&gt;
 中间也尝试过 ArchLinux, Debian, Ubuntu, CentOS等等。&lt;/p&gt;
-&lt;p&gt;一开始入门是能用就行，折腾桌面环境。
-到 …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;引言&lt;/h2&gt;
-&lt;p&gt;从 2018 年开始入门 Linux，已经 7 年了。
-从 Deepin 到 Manjaro，再到 Rocky Linux。
+&lt;p&gt;一开始入门是能用就行，折腾桌面环境。&lt;br /&gt;
+到 …&lt;/p&gt;</summary><content type="html">
+&lt;h2&gt;引言&lt;/h2&gt;
+&lt;p&gt;从 2018 年开始入门 Linux，已经 7 年了。&lt;br /&gt;
+从 Deepin 到 Manjaro，再到 Rocky Linux。&lt;br /&gt;
 中间也尝试过 ArchLinux, Debian, Ubuntu, CentOS等等。&lt;/p&gt;
-&lt;p&gt;一开始入门是能用就行，折腾桌面环境。
-到现在开始考虑一些安全性，长期的稳定性，不再为了图省事直接关闭防火墙和 SELinux。
-每一行代码都想要理解含义。
+&lt;p&gt;一开始入门是能用就行，折腾桌面环境。&lt;br /&gt;
+到现在开始考虑一些安全性，长期的稳定性，不再为了图省事直接关闭防火墙和 SELinux。&lt;br /&gt;
+每一行代码都想要理解含义。&lt;br /&gt;
 理解配置的逻辑和哲学。&lt;/p&gt;
 &lt;h2&gt;&lt;code&gt;Rocky Linux&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;用 &lt;code&gt;Rocky Linux&lt;/code&gt; 用的还不多，在此写一些备忘。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Rocky Linux&lt;/code&gt; 是 CentOS 替代品，适用于服务器。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;默认使用 &lt;code&gt;SELinux&lt;/code&gt;，&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;使用&lt;code&gt;Cockpit&lt;/code&gt; 面版，&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;使用 LVM 和 &lt;code&gt;xfs&lt;/code&gt;文件系统。
-&lt;code&gt;xfs&lt;/code&gt;文件系统，性能高，适合处理大文件，并行写入，可以不停机扩容，但是不支持缩容，跨平台兼容性差。&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;默认使用 &lt;code&gt;SELinux&lt;/code&gt;，&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用&lt;code&gt;Cockpit&lt;/code&gt; 面版，&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用 LVM 和 &lt;code&gt;xfs&lt;/code&gt;文件系统。&lt;br /&gt;
+&lt;code&gt;xfs&lt;/code&gt;文件系统，性能高，适合处理大文件，并行写入，可以不停机扩容，但是不支持缩容，跨平台兼容性差。&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;LVM（逻辑卷管理）&lt;/h2&gt;
 &lt;table&gt;
@@ -421,7 +433,7 @@ sudo lvs
 &lt;/table&gt;
 &lt;h2&gt;zsh&lt;/h2&gt;
 &lt;h2&gt;硬盘挂载&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;etc/systemd/system/hdd1.mount&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;etc/systemd/system/hdd1.mount &lt;/code&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;[Unit]
 Description=Mount hdd1
 # After=local-fs.target
@@ -529,11 +541,11 @@ sudo semanage port -a -t http_port_t -p tcp 8920
 &lt;pre&gt;&lt;code class="language-shell"&gt;sudo semanage fcontext -a -f a -t container_file_t -r 's0' '/home/zqw(/.*)?'
 sudo restorecon -Rv /home/zqw/
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;查看 SELinux 状态：
+&lt;p&gt;查看 SELinux 状态：&lt;br /&gt;
 &lt;code&gt;getenforce&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;关闭：
+&lt;p&gt;关闭：&lt;br /&gt;
 &lt;code&gt;setenforce 0&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;开启：
+&lt;p&gt;开启：&lt;br /&gt;
 &lt;code&gt;setenforce 1&lt;/code&gt;&lt;/p&gt;
 &lt;h2&gt;Firewall&lt;/h2&gt;
 &lt;pre&gt;&lt;code class="language-xml"&gt;&amp;lt;!-- /etc/firewalld/services/emby.xml --&amp;gt;
@@ -553,11 +565,11 @@ sudo firewall-cmd --reload
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;Systemctl&lt;/h2&gt;
 &lt;h2&gt;初始化与用户、权限管理&lt;/h2&gt;
-&lt;p&gt;出于安全考虑修改 &lt;code&gt;ssh&lt;/code&gt; 的默认端口。
+&lt;p&gt;出于安全考虑修改 &lt;code&gt;ssh&lt;/code&gt; 的默认端口。&lt;br /&gt;
 修改 &lt;code&gt;/etc/ssh/sshd_config&lt;/code&gt; 中的 &lt;code&gt;Port&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;semanage port -a -t ssh_port_t -p tcp #PORTNUMBER&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;firewall-cmd --permanent --add-port=2222/tcp&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;firewall-cmd --reload&lt;/code&gt;
+&lt;p&gt;&lt;code&gt;firewall-cmd --reload&lt;/code&gt;&lt;br /&gt;
 &lt;code&gt;systemctl restart sshd&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;chsh -s /usr/bin/zsh&lt;/code&gt;&lt;/p&gt;
 &lt;h2&gt;引导&lt;/h2&gt;
@@ -633,4 +645,5 @@ wp search-replace 'http://xxx.xxx' 'http://xxx.xxx.xxx.xxx:xxxx' --all-tables --
 
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;致谢&lt;/h2&gt;
-&lt;p&gt;所有为 ChatGPT 提供训练素材的人。&lt;/p&gt;</content><category term="coding"/><category term="SELinux"/><category term="RockyLinux"/></entry></feed>
+&lt;p&gt;所有为 ChatGPT 提供训练素材的人。&lt;/p&gt;
+</content><category term="coding"/><category term="SELinux"/><category term="RockyLinux"/></entry></feed>

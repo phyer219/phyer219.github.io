@@ -129,175 +129,170 @@
 
 <section class="markdown-body">
   <!-- toc -->
-
 <!-- more -->
-
 <h2>做法之一</h2>
-<p>球坐标基矢按直角坐标展开：</p>
-\[
+<p>球坐标基矢按直角坐标展开：<br />
+$$
 \begin{cases}
-\hat{r} &amp;= \sin\theta\cos\varphi \hat{x} +\sin\theta\sin\varphi \hat{y} +\cos\theta \hat{z}\\\\
-\hat{\theta} &amp;= \cos\theta\cos\varphi \hat{x} +\cos\theta\sin\varphi \hat{y} -\sin\theta \hat{z}\\\\
-\hat{\varphi} &amp;= -\sin\varphi \hat{x} +\cos \varphi \hat{y}
+\hat{r} &= \sin\theta\cos\varphi \hat{x} +\sin\theta\sin\varphi \hat{y} +\cos\theta \hat{z}\\\\
+\hat{\theta} &= \cos\theta\cos\varphi \hat{x} +\cos\theta\sin\varphi \hat{y} -\sin\theta \hat{z}\\\\
+\hat{\varphi} &= -\sin\varphi \hat{x} +\cos \varphi \hat{y}
 \end{cases}
-\]
-<p>球坐标系的基矢不像直角坐标的基矢一样是固定的，而是随坐标的改变而改变：</p>
-\[
+$$<br />
+球坐标系的基矢不像直角坐标的基矢一样是固定的，而是随坐标的改变而改变：<br />
+$$
 \begin{cases}
-\hat{r} &amp;= \hat{r}(\theta,\varphi) \\\\
-\hat{\theta} &amp;=  \hat{r}(\theta,\varphi) \\\\
-\hat{\varphi} &amp;=  \hat{r}(\varphi)
+\hat{r} &= \hat{r}(\theta,\varphi) \\\\
+\hat{\theta} &=  \hat{r}(\theta,\varphi) \\\\
+\hat{\varphi} &=  \hat{r}(\varphi)
 \end{cases}
-\]
-<p>所球坐标系中的坐标的表达式为：</p>
-\[
+$$<br />
+所球坐标系中的坐标的表达式为：<br />
+$$
 \vec{r} = r \hat{r}
-\]
-<p>速度的表达式为：</p>
-\[
+$$<br />
+速度的表达式为：<br />
+$$
 \dot{\vec{r}} = \dot{r}\hat{r} + r \dot{\hat{r}}
-\]
-<p>而：</p>
-\[
+$$<br />
+而：<br />
+$$
 \begin{split}
-\dot{\hat{r}} =&amp; \dot{\theta}(\cos\theta\cos\varphi \hat{x} +\cos\theta\sin\varphi \hat{y} -\sin\theta \hat{z}) \\\\
-&amp;+\dot{\varphi}(-\sin\theta\sin\varphi \hat{x} +\sin\theta\cos \varphi \hat{y}) \\\\
-=&amp; \dot{\theta}\hat{\theta} + \dot{\varphi}\sin\theta \hat{\varphi}
+\dot{\hat{r}} =& \dot{\theta}(\cos\theta\cos\varphi \hat{x} +\cos\theta\sin\varphi \hat{y} -\sin\theta \hat{z}) \\\\
+&+\dot{\varphi}(-\sin\theta\sin\varphi \hat{x} +\sin\theta\cos \varphi \hat{y}) \\\\
+=& \dot{\theta}\hat{\theta} + \dot{\varphi}\sin\theta \hat{\varphi}
 \end{split}
-\]
-<p>所以：</p>
-\[
+$$<br />
+所以：<br />
+$$
 \dot{\vec{r}} = \dot{r}\hat{r} + r \dot{\hat{r}} =  \dot{r}\hat{r} +r\dot{\theta}\hat{\theta} + r\dot{\varphi}\sin\theta \hat{\varphi}
-\]
-<p>加速度的表达式为：</p>
-\[
+$$<br />
+加速度的表达式为：<br />
+$$
 \ddot{\vec{r}} = \ddot{r}\hat{r}+\dot{r}\dot{\hat{r}}+\dot{r}\dot{\hat{r}}+ r \ddot{\hat{r}} =  \ddot{r}\hat{r}+2\dot{r}\dot{\hat{r}}++ r \ddot{\hat{r}}
-\]
-<p>而：</p>
-\[
+$$<br />
+而：<br />
+$$
 \ddot{\hat{r}} = \ddot{\theta}\hat{\theta}+\dot{\theta}\dot{\hat{\theta}} + \ddot{\varphi}\sin\theta\hat{\varphi} +\dot{\theta}\dot{\varphi}\cos\theta\hat{\varphi} + \dot{\varphi}\sin\theta \dot{\hat{\varphi}}
-\]
-<p>其中 \(\dot{\hat{\theta}}\) 和 \(\dot{\hat{\varphi}}\) 为：</p>
-\[
+$$<br />
+其中 $\dot{\hat{\theta}}$ 和 $\dot{\hat{\varphi}}$ 为：<br />
+$$
 \begin{split}
-\dot{\hat{\theta}} =&amp; \dot{\theta}(-\sin\theta\cos\varphi \hat{x} -\sin\theta\sin\varphi \hat{y} -\cos\theta \hat{z}) \\\\
-&amp;+\dot{\varphi}(-\cos\theta\sin\varphi \hat{x} +\cos\theta\cos \varphi \hat{y}) \\\\
-=&amp; -\dot{\theta}\hat{r} + \dot{\varphi}\cos\theta\hat{\varphi}
+\dot{\hat{\theta}} =& \dot{\theta}(-\sin\theta\cos\varphi \hat{x} -\sin\theta\sin\varphi \hat{y} -\cos\theta \hat{z}) \\\\
+&+\dot{\varphi}(-\cos\theta\sin\varphi \hat{x} +\cos\theta\cos \varphi \hat{y}) \\\\
+=& -\dot{\theta}\hat{r} + \dot{\varphi}\cos\theta\hat{\varphi}
 \end{split}
-\]
+$$</p>
+$$
 
-\[
 \begin{split}
-\dot{\hat{\varphi}} =&amp;\dot{\varphi}(-\cos\varphi \hat{x}-\sin\varphi\hat{y}) = \dot\varphi (-\sin\theta\hat{r}-\cos\theta\hat{\theta})
+\dot{\hat{\varphi}} =&\dot{\varphi}(-\cos\varphi \hat{x}-\sin\varphi\hat{y}) = \dot\varphi (-\sin\theta\hat{r}-\cos\theta\hat{\theta})
 \end{split}
-\]
 
-<p>则：</p>
-\[
+$$<p>则：<br />
+$$
 \begin{split}
-\ddot{\hat{r}} =&amp; -\dot{\theta}^2\hat{r}+\dot{\theta}\dot{\varphi}\cos\theta\hat{\varphi}+ \ddot{\theta}\hat{\theta}+ \ddot{\varphi}\sin\theta\hat{\varphi} +\dot{\theta}\dot{\varphi}\cos\theta\hat{\varphi} -\dot{\varphi}^2\sin^2\theta\hat{r}-\dot{\varphi}^2\sin\theta\cos\theta\hat{\theta} \\\\
-=&amp; (-\dot{\theta}^2-\dot{\varphi}^2\sin^2\theta)\hat{r} +(\ddot{\theta}-\dot{\varphi}^2\sin\theta\cos\theta)\hat\theta +(2\dot{\theta}\dot{\varphi}\cos\theta+\ddot{\varphi}\sin\theta)\hat{\varphi}
+\ddot{\hat{r}} =& -\dot{\theta}^2\hat{r}+\dot{\theta}\dot{\varphi}\cos\theta\hat{\varphi}+ \ddot{\theta}\hat{\theta}+ \ddot{\varphi}\sin\theta\hat{\varphi} +\dot{\theta}\dot{\varphi}\cos\theta\hat{\varphi} -\dot{\varphi}^2\sin^2\theta\hat{r}-\dot{\varphi}^2\sin\theta\cos\theta\hat{\theta} \\\\
+=& (-\dot{\theta}^2-\dot{\varphi}^2\sin^2\theta)\hat{r} +(\ddot{\theta}-\dot{\varphi}^2\sin\theta\cos\theta)\hat\theta +(2\dot{\theta}\dot{\varphi}\cos\theta+\ddot{\varphi}\sin\theta)\hat{\varphi}
 \end{split}
-\]
-<p>最终得加速度的表达式为：</p>
-\[
+$$<br />
+最终得加速度的表达式为：<br />
+$$
 \begin{split}
-\ddot{\vec{r}} = &amp; \ddot{r}\hat{r}+2\dot{r}\dot{\theta}\hat{\theta}+2\dot{r}\dot{\varphi}\sin\theta\hat{\varphi}+ r \ddot{\hat{r}}  \\\\
-=&amp;(\ddot{r}-r\dot{\theta}^2-r\dot{\varphi}^2\sin^2\theta)\hat{r} \\\\
-&amp;+(2\dot{r}\dot{\theta}+r\ddot{\theta}-r\dot{\varphi}^2\sin\theta\cos\theta)\hat{\theta} \\\\
-&amp;+(2\dot{r}\dot{\varphi}\sin\theta+2r\dot{\theta}\dot{\varphi}\cos\theta+r\ddot{\varphi}\sin\theta)\hat{\varphi}
+\ddot{\vec{r}} = & \ddot{r}\hat{r}+2\dot{r}\dot{\theta}\hat{\theta}+2\dot{r}\dot{\varphi}\sin\theta\hat{\varphi}+ r \ddot{\hat{r}}  \\\\
+=&(\ddot{r}-r\dot{\theta}^2-r\dot{\varphi}^2\sin^2\theta)\hat{r} \\\\
+&+(2\dot{r}\dot{\theta}+r\ddot{\theta}-r\dot{\varphi}^2\sin\theta\cos\theta)\hat{\theta} \\\\
+&+(2\dot{r}\dot{\varphi}\sin\theta+2r\dot{\theta}\dot{\varphi}\cos\theta+r\ddot{\varphi}\sin\theta)\hat{\varphi}
 \end{split}
-\]
-
+$$</p>
 <h2>做法之二</h2>
-<p>坐标基矢之间的变换：</p>
-\[
-\left(\begin{matrix}
-\hat{e}_r\\
-\hat{e}_{\theta}\\
-\hat{e}_{\phi}\\
-\end{matrix}\right) 
-=
-\left(\begin{matrix}
-\sin\theta\cos\phi	&amp;\sin\theta\sin\phi	&amp;\cos\theta \\
-\cos\theta\cos\phi		&amp;\cos\theta\sin\phi		&amp;-\sin\theta \\
--\sin\phi 			&amp;\cos\phi		&amp; 0
-\end{matrix}\right) 
-\left(\begin{matrix}
-\hat{e}_x\\
-\hat{e}_y\\
-\hat{e}_z\\
-\end{matrix}\right)
-\]
-<p>坐标基矢之间的逆变换：</p>
-\[
-\left(\begin{matrix}
-\hat{e}_x\\
-\hat{e}_y\\
-\hat{e}_z\\
-\end{matrix}\right)
-=
-\left(\begin{matrix}
-\sin\theta\cos\phi	&amp;\cos\theta\cos\phi	&amp;-\sin\phi \\
-\sin\theta\sin\phi		&amp;\cos\theta\sin\phi		&amp;\cos\phi \\
-\cos\theta 			&amp;-\sin\theta		&amp; 0
-\end{matrix}\right) 
-\left(\begin{matrix}
-\hat{e}_r\\
-\hat{e}_{\theta}\\
-\hat{e}_{\phi}\\
-\end{matrix}\right)
-\]
-<p>坐标之间的变换：</p>
-\[
-\begin{cases}
-r = \sqrt{x^2+y^2+z^2}\\
-\theta = \arccos\frac{z}{ \sqrt{x^2+y^2+z^2}} \\
-\phi = \arctan\frac{y}{x}
-\end{cases}
-\]
-<p>坐标之间的逆变换：</p>
-\[
-\begin{cases}
-x &amp;= r\sin\theta\cos\phi \\
-y &amp;=r\sin\theta\sin\phi\\
-z &amp;= r\cos\theta
-\end{cases}
-\]
-<p>质点位置的表达式：</p>
-\[
-\vec{r} = x \hat{e}_x +y\hat{e}_y + z\hat{e}_z
-\]
-<p>将坐标的变换和基矢的变换代入可得：</p>
-\[
-\vec{r} = r \hat{e}_r
-\]
-<p>速度的表达式为：</p>
-\[
-\vec{v} = \dot{x} \hat{e}_x +  \dot{y} \hat{e}_y + \dot{z} \hat{e}_z
-\]
-<p>其中</p>
-\[
-\begin{cases}
-\dot{x} &amp;= \dot{r}\sin\theta\cos\phi +r\dot{\theta}\cos\theta\cos\phi-r\dot{\phi}\sin\theta\sin\phi \\
-\dot{y} &amp;=\dot{r}\sin\theta\sin\phi+r\dot{\theta}\cos\theta\sin\phi+r\dot{\phi}\sin\theta\cos\phi \\
-\dot{z} &amp;= \dot{r}\cos\theta-r\dot{\theta}\sin\theta
-\end{cases}
-\]
-<p>代入变换关系可得：</p>
-\[
-\vec{v} = \dot{r}\hat{e}_r + r\dot{\theta}\hat{e}_{\theta} + r\dot{\phi}\sin\theta \hat{e}_{\phi}
-\]
-<p>加速度表达式为： </p>
-\[
-\vec{a} =  \ddot{x} \hat{e}_x +  \ddot{y} \hat{e}_y + \ddot{z} \hat{e}_z
-\]
-<p>代入变换关系可得</p>
-\[
-\vec{a}=(\ddot{r}-r\dot{\theta}^2-r\dot{\phi}^2\sin^2\theta)\hat{e}_{r} \\\\
-+(2\dot{r}\dot{\theta}+r\ddot{\theta}-r\dot{\phi}^2\sin\theta\cos\theta)\hat{e}_{\theta} \\\\
-+(2\dot{r}\dot{\phi}\sin\theta+2r\dot{\theta}\dot{\phi}\cos\theta+r\ddot{\phi}\sin\theta)\hat{e}_{\varphi}
-\]
+<h1>坐标基矢之间的变换：<br />
+$$<br />
+\left(\begin{matrix}<br />
+\hat{e}<em>r\<br />
+\hat{e}</em>{\theta}\<br />
+\hat{e}_{\phi}\<br />
+\end{matrix}\right)</h1>
+<h1>\left(\begin{matrix}<br />
+\sin\theta\cos\phi	&amp;\sin\theta\sin\phi	&amp;\cos\theta \<br />
+\cos\theta\cos\phi		&amp;\cos\theta\sin\phi		&amp;-\sin\theta \<br />
+-\sin\phi 			&amp;\cos\phi		&amp; 0<br />
+\end{matrix}\right)<br />
+\left(\begin{matrix}<br />
+\hat{e}_x\<br />
+\hat{e}_y\<br />
+\hat{e}_z\<br />
+\end{matrix}\right)<br />
+$$
+坐标基矢之间的逆变换：
+$$<br />
+\left(\begin{matrix}<br />
+\hat{e}_x\<br />
+\hat{e}_y\<br />
+\hat{e}_z\<br />
+\end{matrix}\right)</h1>
+<p>\left(\begin{matrix}<br />
+\sin\theta\cos\phi	&amp;\cos\theta\cos\phi	&amp;-\sin\phi \<br />
+\sin\theta\sin\phi		&amp;\cos\theta\sin\phi		&amp;\cos\phi \<br />
+\cos\theta 			&amp;-\sin\theta		&amp; 0<br />
+\end{matrix}\right)<br />
+\left(\begin{matrix}<br />
+\hat{e}<em>r\<br />
+\hat{e}</em>{\theta}\<br />
+\hat{e}_{\phi}\<br />
+\end{matrix}\right)<br />
+$$
+坐标之间的变换：
+$$<br />
+\begin{cases}<br />
+r = \sqrt{x^2+y^2+z^2}\<br />
+\theta = \arccos\frac{z}{ \sqrt{x^2+y^2+z^2}} \<br />
+\phi = \arctan\frac{y}{x}<br />
+\end{cases}<br />
+$$
+坐标之间的逆变换：
+$$<br />
+\begin{cases}<br />
+x &amp;= r\sin\theta\cos\phi \<br />
+y &amp;=r\sin\theta\sin\phi\<br />
+z &amp;= r\cos\theta<br />
+\end{cases}<br />
+$$
+质点位置的表达式：
+$$<br />
+\vec{r} = x \hat{e}_x +y\hat{e}_y + z\hat{e}_z<br />
+$$
+将坐标的变换和基矢的变换代入可得：
+$$<br />
+\vec{r} = r \hat{e}_r<br />
+$$
+速度的表达式为：
+$$<br />
+\vec{v} = \dot{x} \hat{e}_x +  \dot{y} \hat{e}_y + \dot{z} \hat{e}<em>z<br />
+$$
+其中
+$$<br />
+\begin{cases}<br />
+\dot{x} &amp;= \dot{r}\sin\theta\cos\phi +r\dot{\theta}\cos\theta\cos\phi-r\dot{\phi}\sin\theta\sin\phi \<br />
+\dot{y} &amp;=\dot{r}\sin\theta\sin\phi+r\dot{\theta}\cos\theta\sin\phi+r\dot{\phi}\sin\theta\cos\phi \<br />
+\dot{z} &amp;= \dot{r}\cos\theta-r\dot{\theta}\sin\theta<br />
+\end{cases}<br />
+$$
+代入变换关系可得：
+$$<br />
+\vec{v} = \dot{r}\hat{e}<em>r + r\dot{\theta}\hat{e}</em>{\theta} + r\dot{\phi}\sin\theta \hat{e}</em>{\phi}<br />
+$$
+加速度表达式为： 
+$$<br />
+\vec{a} =  \ddot{x} \hat{e}<em>x +  \ddot{y} \hat{e}<em>y + \ddot{z} \hat{e}<em>z<br />
+$$
+代入变换关系可得
+$$<br />
+\vec{a}=(\ddot{r}-r\dot{\theta}^2-r\dot{\phi}^2\sin^2\theta)\hat{e}</em>{r} \\<br />
++(2\dot{r}\dot{\theta}+r\ddot{\theta}-r\dot{\phi}^2\sin\theta\cos\theta)\hat{e}</em>{\theta} \\<br />
++(2\dot{r}\dot{\phi}\sin\theta+2r\dot{\theta}\dot{\phi}\cos\theta+r\ddot{\phi}\sin\theta)\hat{e}</em>{\varphi}<br />
+$$</p>
+
 </section>
 
 <section class="post-meta">
