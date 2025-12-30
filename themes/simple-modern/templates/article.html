@@ -11,6 +11,7 @@
     {{ translations.entry_hreflang(article) }}
   {% endif %}
 
+  <!-- SEO: page description for search results -->
   {% if article.description %}
     <meta name="description" content="{{ article.description }}" />
   {% elif article.summary %}
@@ -22,6 +23,27 @@
   {% for tag in article.tags %}
     <meta name="tags" content="{{tag}}" />
   {% endfor %}
+
+  <!-- SEO: structured data for articles (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ article.title|striptags }}",
+    "datePublished": "{{ article.date.isoformat() }}",
+    {% if article.modified %}
+    "dateModified": "{{ article.modified.isoformat() }}",
+    {% endif %}
+    "author": {
+      "@type": "Person",
+      "name": "{{ AUTHOR|default(SITENAME)|striptags }}"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ SITEURL }}/{{ article.url }}"
+    }
+  }
+  </script>
 
 {% endblock %}
 
