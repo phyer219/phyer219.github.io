@@ -55,7 +55,8 @@
 <script>
     MathJax = {
       tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']]
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        tags: 'ams'   // 自动给 AMS 环境/显示公式编号
       },
       svg: {
         fontCache: 'global'
@@ -227,7 +228,7 @@ f = \frac{r}{2} + \frac{r^4}{30v} - \frac{r^2}{3R}
          + k^2 \left( \frac{1}{2} - \frac{r}{3R} + \frac{r^3}{30v}  \right) + \mathcal{O}(k^4)
 \]
 
-<p>~~p-wave 非零能的径向方程的严格解是求 Bessel 函数, 舍去一个归一化系数, 另一个系数定义相移( 是 \(k\) 的函数 ), 在 \(r\to\infty\) 的渐近形式为~~</p>
+<p><del>p-wave 非零能的径向方程的严格解是求 Bessel 函数, 舍去一个归一化系数, 另一个系数定义相移( 是 \(k\) 的函数 ), 在 \(r\to\infty\) 的渐近形式为</del></p>
 <blockquote>
 <p>$$
 \begin{align}

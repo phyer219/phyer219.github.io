@@ -497,6 +497,13 @@ blockquote > :last-child {
   text-decoration-color: var(--primary);
 }
 
+.markdown-body del,
+.markdown-body s,
+.markdown-body strike {
+  color: var(--text-muted);
+  text-decoration-color: var(--text-muted);
+}
+
 .copy-btn {
   position: absolute;
   top: 0.5rem;
