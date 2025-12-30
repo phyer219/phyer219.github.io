@@ -68,6 +68,8 @@ SCRIPTS_PATH = './plugins/modify_templates/scripts.html'
 TEMPLATES_TO_MODIFY = ['base.html']
 
 PLUGINS.append('plugins.sitemap')
+
+TEMPLATE_PAGES = {'robots.txt': 'robots.txt'}  # SEO optimize
 # ----------------- My plugins and settings  end ----------------------------
 
 # ----------------- ODL -----------------------------------------------------
