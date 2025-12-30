@@ -1,8 +1,10 @@
 ---
 title: Plotly 绘制动图
-date: 2025/06/18
-categories: 软件使用
-tags: [plotly, python]
+date: 2025-06-18
+categories: coding
+tags:
+  - plotly
+  - python
 ---
 
 ## 基础版本
@@ -26,6 +28,7 @@ fig.update_layout(updatemenus=[dict(type='buttons', buttons=[bt])])
 
 fig.write_html(file="basic_ver.html", include_mathjax='cdn', auto_play=False)
 ```
+
 [basic_ver.py](2025-06-18-coding-plotly_animation/basic_ver.py)
 
 <iframe src="2025-06-18-coding-plotly_animation/basic_ver.html" width="100%" height=600></iframe>
@@ -74,11 +77,12 @@ fig.update_layout(updatemenus=[dict(type='buttons',
                   plot_bgcolor='rgba(0,0,0,0)')
 
 fig.write_html(file="pro_ver.html", include_mathjax='cdn', auto_play=False)
+
 ```
+
 [pro_ver.py](2025-06-18-coding-plotly_animation/pro_ver.py)
 
 <iframe src="2025-06-18-coding-plotly_animation/pro_ver.html" width="100%" height=600></iframe>
-
 
 ## 参考
 

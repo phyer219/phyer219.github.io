@@ -1,8 +1,10 @@
 ---
 title: Linux 使用笔记（进阶）
-date: 2025/05/10
-categories: 软件使用
-tags: [SELinux, RockyLinux]
+date: 2025-05-10
+categories: coding
+tags:
+  - SELinux
+  - RockyLinux
 ---
 
 ## 引言

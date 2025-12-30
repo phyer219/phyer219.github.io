@@ -42,26 +42,35 @@ JINJA_GLOBALS = {
 
 STATIC_PATHS = ['.']
 READERS = {'html': None}
+DISPLAY_PAGES_ON_MENU = False
 
 SLUGIFY_SOURCE = 'basename'
 DEFAULT_CATEGORY = '未分类'
 THEME = './themes/simple-modern'
 DISPLAY_CATEGORIES_ON_MENU = False
-MENUITEMS = [('首页', '/'),
-             ('分类', '/categories.html'),
-             ('标签', '/tags.html')
+MENUITEMS = [('Home', '/'),
+            #  ('分类', '/categories.html'),
+             ('Physics', '/category/physics'),
+             ('Blog', '/category/blog'),
+             ('Coding', '/category/coding'),
+             ('All', '/archives'),
+            #  ('Tags', '/tags.html')
              ]
 # My config end -------------------------------------------------------------
 
 # ----------------- My plugins and settings ---------------------------------
-from markdown_math_escape import MathEscapeExtension
-MARKDOWN = {"extension_configs": {'tables': {},
-                                  'fenced_code': {},
-                                  MathEscapeExtension(delimiters="dollers"): {},
-                                  'markdown.extensions.meta': {}
-                                  },
-            "output_format": "html5"
-            }
+# from markdown_math_escape import MathEscapeExtension
+MARKDOWN_ZQW = {
+    'extensions': ['tables',
+                   'fenced_code',
+                   'footnotes',
+                   'mdx_truly_sane_lists',
+                   'markdown_math_escape',
+                   'full_yaml_metadata'],
+    'extension_configs': {
+        'mdx_truly_sane_lists': {'nested_indent': 2},
+        },
+    'output_format': 'html5'}
 
 PLUGINS = ['plugins.md_zqw',
            'plugins.jupyter_zqw',

@@ -40,6 +40,8 @@ Publish with publish configure:
 pelican -s publishconf.py
 ```
 
+## Style Guide
+
 ## Contact Information
 
 <zeqing6688@126.com>

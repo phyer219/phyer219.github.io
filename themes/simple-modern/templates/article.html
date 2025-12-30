@@ -25,18 +25,18 @@
 <h1 class="post-title">{{ article.title|striptags  }}</h1>
 
 <section class="post-meta">
-    <p>发表于: {{ article.date.strftime('%Y-%m-%d') }} ||</p>
-    <p>分类:<a class="post-link" href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a> ||</p>
+    <p>{{ article.date.strftime('%Y-%m-%d') }}</p>
+    <p>-<a class="post-link" href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></p>
 </section>
 
-<section class="post-content">
+<section class="markdown-body">
   {{ article.content }}
 </section>
 
 <section class="post-meta">
-    <p>标签:
+    <p>
       {% for tag in article.tags %}
-        <a class="post-link" href="{{ SITEURL }}/{{ tag.url }}">{{tag}}</a>
+        <a class="post-link" href="{{ SITEURL }}/{{ tag.url }}">#{{tag}}</a>
         {% endfor %}
     </p>
 </section>

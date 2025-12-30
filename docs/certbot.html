@@ -2,21 +2,16 @@
 <html lang="zh_cn">
 
 <head>
-    <title>从冰上的水 - 用 certbot 手动获取受信任的 SSL证，并实现对 NextCloud 容器80端口的SSL访问</title>
+    <title>从冰上的水 - 用 certbot 手动获取受信任的 SSL证，并实现对 NextCloud 容器 80 端口的 SSL 访问</title>
   <meta charset="utf-8" />
   <meta name="generator" content="Pelican" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link
-    href="https://zqw.ink/feeds/all.atom.xml"
-    type="application/atom+xml" rel="alternate" title="从冰上的水 Full Atom Feed" />
-  <link
-    href="https://zqw.ink/feeds/ruan-jian-shi-yong.atom.xml"
-    type="application/atom+xml" rel="alternate" title="从冰上的水 Categories Atom Feed" />
-  <link rel="stylesheet" type="text/css" href="https://zqw.ink/theme/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="/theme/css/style.css" />
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Serif+SC&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.6.1/github-markdown.min.css" integrity="sha512-wpdV3v8V8vWajD1kH8rI1UO1H2q9TQ3s8o1mG7lH8fS1dZ+3q1B1p4lH2tF8rQm2u0n8oV6rN3tV4nQWmY4nTw==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <!--fonts end  -->
   <!-- highlight.js -->
@@ -82,17 +77,20 @@
       <nav>
         <ul>
             <li>
-              <a href="/">首页</a>
+              <a href="/">Home</a>
             </li>
             <li>
-              <a href="/categories.html">分类</a>
+              <a href="/category/physics">Physics</a>
             </li>
             <li>
-              <a href="/tags.html">标签</a>
+              <a href="/category/blog">Blog</a>
             </li>
-              <li>
-                <a href="https://zqw.ink/pages/about.html" >关于</a>
-              </li>
+            <li>
+              <a href="/category/coding">Coding</a>
+            </li>
+            <li>
+              <a href="/archives">All</a>
+            </li>
           </ul>
       </nav>
       <button id="theme-toggle" aria-label="切换到深色模式" title="切换主题">
@@ -100,31 +98,28 @@
         <i class="theme-icon icon-moon fa-solid fa-moon" aria-hidden="true"></i>
       </button>
       <div class="rss">
-          <a href="https://zqw.ink/feeds/all.atom.xml" aria-label="Atom 订阅">
-            <i class="fa-solid fa-rss" aria-hidden="true"></i>
-          </a>
       </div>
     </div>
   </header>
   <main>
 
-<h1 class="post-title">用 certbot 手动获取受信任的 SSL证，并实现对 NextCloud 容器80端口的SSL访问</h1>
+<h1 class="post-title">用 certbot 手动获取受信任的 SSL证，并实现对 NextCloud 容器 80 端口的 SSL 访问</h1>
 
 <section class="post-meta">
-    <p>发表于: 2025-09-14 ||</p>
-    <p>分类:<a class="post-link" href="https://zqw.ink/category/ruan-jian-shi-yong.html">软件使用</a> ||</p>
+    <p>2025-09-14</p>
+    <p>-<a class="post-link" href="/category/coding.html">coding</a></p>
 </section>
 
-<section class="post-content">
+<section class="markdown-body">
   <h2>SSL加密</h2>
 <p>在使用自己搭建的服务，如 <code>emby</code> ,<code>nextcloud</code>, <code>immich</code> 时，如果使用域名访问，当没有进行受信任的 SSL 加密时，对应的手机 app 会连不上，提醒，或报错。</p>
 <p>最简单的方式是用 <code>certbot</code> 获取一个 90 天期限的 SSL 证书，到期后再更新。此篇博客做一备忘。</p>
 <h2>证书获取过程</h2>
 <p>安装好certbot后，执行以下命令手动获取 SSL 证书，并用在域名上添加一条 txt 解析的方式进行域名验证：</p>
-<pre><code class="language-shell">certbot certonly --manual --preferred-challenges dns -d xxx.xxx.com
+<pre><code class="language-bash">certbot certonly --manual --preferred-challenges dns -d xxx.xxx.com
 </code></pre>
 <p>按提示在域名提供商处添加记录：</p>
-<pre><code class="language-shell">Saving debug log to /var/log/letsencrypt/letsencrypt.log
+<pre><code class="language-bash">Saving debug log to /var/log/letsencrypt/letsencrypt.log
 Requesting a certificate for xxx.xxx.com
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -162,16 +157,16 @@ If you like Certbot, please consider supporting our work by:
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 </code></pre>
 <p><code>.pem</code>、<code>.crt</code>、<code>.key</code> 本质上都是文本格式的证书/密钥文件，只是扩展名不同而已。可以直接需要复制或改名：</p>
-<pre><code class="language-shell">fullchain.pem -&gt;.crt
+<pre><code class="language-bash">fullchain.pem -&gt;.crt
 privkey.pem -&gt;.key
 </code></pre>
 <p>正确设置权限，参考如下：</p>
-<pre><code class="language-shell">-rw-r--r--. 1 zqw zqw 2.8K Sep 14 17:40 server.crt
+<pre><code class="language-bash">-rw-r--r--. 1 zqw zqw 2.8K Sep 14 17:40 server.crt
 -rw-------. 1 zqw zqw  227 Sep 14 17:40 server.key
 </code></pre>
 <h2>代理的 Podman 文件，代理容器的配置文件示例</h2>
 <p><code>nextcloud-proxy.container</code>:</p>
-<pre><code class="language-shell">[Container]
+<pre><code class="language-bash">[Container]
 ContainerName=nextcloud-proxy
 Pod=nextcloud.pod
 Image=docker.io/library/httpd:2.4
@@ -181,7 +176,7 @@ Volume=/xxx/server.crt:/usr/local/apache2/conf/server.crt:ro,Z
 Volume=/xxx/server.key:/usr/local/apache2/conf/server.key:ro,Z
 </code></pre>
 <p><code>httpd.conf</code></p>
-<pre><code class="language-shell"># Real-time info on requests and configuration
+<pre><code class="language-bash"># Real-time info on requests and configuration
 #Include conf/extra/httpd-info.conf
 
 # Virtual hosts
@@ -216,7 +211,7 @@ SSLRandomSeed connect builtin
 Include conf/extra/proxy.conf
 </code></pre>
 <p>反向代理容器和 nextcloud 容器在同个 pod 内，把nextcloud 默认的 80 代理到了 443:</p>
-<pre><code class="language-shell">LoadModule proxy_module modules/mod_proxy.so
+<pre><code class="language-bash">LoadModule proxy_module modules/mod_proxy.so
 LoadModule proxy_http_module modules/mod_proxy_http.so
 
 &lt;IfModule mod_proxy.c&gt;
@@ -230,7 +225,7 @@ LoadModule ssl_module modules/mod_ssl.so
 Include conf/extra/httpd-ssl.conf
 </code></pre>
 <p>在 <code>~/.config/containers/systemd/nextcloud.pod</code> 文件中，再把 443 映射到想要的端口（如9999），这样就可能在外网通过 SSL 访问 NextCloud 容器:</p>
-<pre><code class="language-shell">
+<pre><code class="language-bash">
 [Pod]
 PodName=nextcloud
 Network=bridge
@@ -239,14 +234,14 @@ PublishPort=9999:443
 [Install]
 WantedBy=default.target
 </code></pre>
-<h2>参考</h2>
+<h2>参考资料</h2>
 <p><a href="https://wiki.archlinux.org/title/Certbot">ArchWiki: Certbot</a></p>
 </section>
 
 <section class="post-meta">
-    <p>标签:
-        <a class="post-link" href="https://zqw.ink/tag/ssl.html">SSL</a>
-        <a class="post-link" href="https://zqw.ink/tag/certbot.html">certbot</a>
+    <p>
+        <a class="post-link" href="/tag/ssl.html">#SSL</a>
+        <a class="post-link" href="/tag/certbot.html">#certbot</a>
     </p>
 </section>
 

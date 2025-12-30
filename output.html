@@ -1,0 +1,53 @@
+<hr />
+<h2>title: 个人数据管理策略与感想<br />
+date: 2025-12-28<br />
+category: blog<br />
+tags: [immich, zotero]<br />
+slug: data_manage_backup</h2>
+<p>有时引入数据库会使数据看起来很漂亮，但如无必要，应尽量避免引入数据库。</p>
+<h2>照片的确需要数据库</h2>
+<ul>
+<li>照片很多。</li>
+<li>我们经常需要按时间、地点、人物等进行预览。</li>
+<li>数据库只做缓存/索引，不做唯一真相。数据库中的数据应大部分为能够从文件自动生成的数据，不在数据库中写入过多信息，减少数据库丢失导致的信息损失。</li>
+</ul>
+<h2>不引入没有必要的数据库</h2>
+<p>引入不必的数据库，会导致：</p>
+<ul>
+<li>数据依赖某个软件。这会导致：
+<ul>
+<li>迁移时数据会很麻烦，甚至丢失。比如用了很多 obsidian 插件。</li>
+<li>跨端读取的困难，比如：
+<ul>
+<li>文件命名不利于其它软件读取（zotero， calibre）。而有些软件本身并非全平台开发。</li>
+<li>如果软件本身只有本地数据库，如果用 webDev 同步时会有数据库冲突的风险。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>由于引入了数据库，导入文件时往往会不经过自己的大脑，看起来数据井井有条，但实际上自己对数据库的掌控变低了。</li>
+</ul>
+<p><eq>lpha</eq></p>
+<section>
+<eqn>
+\pi
+</eqn>
+</section>
+<h2>现行方案</h2>
+<ul>
+<li>照片： immich 用 3-2-1 备份原则<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></li>
+<li>其它全直接存文件，用 nextcloud 同步：
+<ul>
+<li>论文：直接放到对应的课题内的 reference 的文件夹中。按 <code>year-cite-title</code> 的格式命名。</li>
+<li>电子书：直接存相应的文件。</li>
+<li>随笔：存成 markdown 格式，写好元信息。</li>
+</ul>
+</li>
+</ul>
+<hr class="footnotes-sep" />
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>3-2-1 备份原则指：存储 3 份完整文件，一份原件加上两份拷贝；将文件起码保持在 2 种不同的介质上；将一份拷贝保存在异地。 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>

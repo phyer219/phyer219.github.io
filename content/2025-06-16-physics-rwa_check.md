@@ -1,8 +1,11 @@
 ---
 title: Rotating Wave Approximation Numerical Check
-date: 2025/06/16
-categories: 专业笔记
-tags: [rotating wave approximation, ploly]
+date: 2025-06-16
+categories: physics
+tags:
+  - 'rotating wave approximation'
+  - ploly
+slug: rwa_check
 ---
 
 ```python

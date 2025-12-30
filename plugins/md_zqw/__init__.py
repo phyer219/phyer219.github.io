@@ -1,33 +1,47 @@
 from pelican import signals
 from pelican.utils import pelican_open
 from markdown import Markdown
-from pelican.readers import MarkdownReader
+from pelican.readers import BaseReader
 
 
-class MyMDReader(MarkdownReader):
+class MyMDReader(BaseReader):
     """
     Reader for Markdown files
     """
-    def _format_metadata(self, meta):
-        if 'tags' in meta:
-            meta['tags'][0] = meta['tags'][0].strip('[]')
-        if 'categories' in meta:
+    enabled = True
+    file_extensions = ['md']
+
+    def _parse_metadata(self, meta):
+        if not meta:
+            return {}
+        if 'categories' in meta and 'category' not in meta:
             meta['category'] = meta['categories']
-        return meta
+
+        output = {}
+        all_lists = all(isinstance(value, list) for value in meta.values())
+        if all_lists:
+            return {key: self.process_metadata(key, value)
+                    for key, value in meta.items()}
+
+        for key, value in meta.items():
+            if hasattr(value, "isoformat") and not hasattr(value, "tzinfo"):
+                value = value.isoformat()
+            try:
+                output[key] = self.process_metadata(key, value)
+            except Exception:
+                output[key] = value
+        return output
 
     def read(self, source_path):
         """Parse content and metadata of markdown files"""
         self._source_path = source_path
-        self._md = Markdown(**self.settings["MARKDOWN"])
+        self._md = Markdown(**self.settings["MARKDOWN_ZQW"])
         with pelican_open(source_path) as text:
             content = self._md.convert(text)
-        if hasattr(self._md, "Meta"):
-            original_meta = self._md.Meta
-            original_meta = self._format_metadata(original_meta)
 
-            metadata = self._parse_metadata(original_meta)
-        else:
-            metadata = {}
+        meta = getattr(self._md, "Meta", None)
+        metadata = self._parse_metadata(meta)
+
         return content, metadata
 
 

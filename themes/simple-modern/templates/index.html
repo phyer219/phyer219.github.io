@@ -1,18 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
+{% set about_page = pages | selectattr('slug', 'equalto', 'home') | first %}
 
-<section class="post-list">
-    {% for article in articles_page.object_list %}
-
-        <h2 class="post-title">
-            <span class="post-date">{{ article.date.strftime('%Y-%m-%d') }}</span>
-            <a href="{{ SITEURL }}/{{ article.url }}" class="post-link" rel="bookmark"
-                title="Permalink to {{ article.title|striptags }}">
-                {{ article.title }}</a>
-        </h2>
-
-    {% endfor %}
-</section>
-
+{% if about_page %}
+  <section class="post-content markdown-body">
+    {{ about_page.content }}
+  </section>
+{% else %}
+  <section class="post-content markdown-body">
+    <p>未找到 about-academy 页面，请检查文件名或 slug。</p>
+  </section>
+{% endif %}
 
 {% endblock content %}

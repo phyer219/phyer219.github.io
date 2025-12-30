@@ -1,8 +1,11 @@
 ---
-title: 用 certbot 手动获取受信任的 SSL证，并实现对 NextCloud 容器80端口的SSL访问
-date: 2025/09/14
-categories: 软件使用
-tags: [SSL, certbot]
+title: 用 certbot 手动获取受信任的 SSL证，并实现对 NextCloud 容器 80 端口的 SSL 访问
+date: 2025-09-14
+category: coding
+tags:
+  - SSL
+  - certbot
+slug: certbot
 ---
 
 ## SSL加密
@@ -15,13 +18,13 @@ tags: [SSL, certbot]
 
 安装好certbot后，执行以下命令手动获取 SSL 证书，并用在域名上添加一条 txt 解析的方式进行域名验证：
 
-```shell
+```bash
 certbot certonly --manual --preferred-challenges dns -d xxx.xxx.com
 ```
 
 按提示在域名提供商处添加记录：
 
-```shell
+```bash
 Saving debug log to /var/log/letsencrypt/letsencrypt.log
 Requesting a certificate for xxx.xxx.com
 
@@ -62,14 +65,14 @@ If you like Certbot, please consider supporting our work by:
 
 `.pem`、`.crt`、`.key` 本质上都是文本格式的证书/密钥文件，只是扩展名不同而已。可以直接需要复制或改名：
 
-```shell
+```bash
 fullchain.pem ->.crt
 privkey.pem ->.key
 ```
 
 正确设置权限，参考如下：
 
-```shell
+```bash
 -rw-r--r--. 1 zqw zqw 2.8K Sep 14 17:40 server.crt
 -rw-------. 1 zqw zqw  227 Sep 14 17:40 server.key
 ```
@@ -78,7 +81,7 @@ privkey.pem ->.key
 
 `nextcloud-proxy.container`:
 
-```shell
+```bash
 [Container]
 ContainerName=nextcloud-proxy
 Pod=nextcloud.pod
@@ -91,7 +94,7 @@ Volume=/xxx/server.key:/usr/local/apache2/conf/server.key:ro,Z
 
 `httpd.conf`
 
-```shell
+```bash
 # Real-time info on requests and configuration
 #Include conf/extra/httpd-info.conf
 
@@ -129,7 +132,7 @@ Include conf/extra/proxy.conf
 
 反向代理容器和 nextcloud 容器在同个 pod 内，把nextcloud 默认的 80 代理到了 443:
 
-```shell
+```bash
 LoadModule proxy_module modules/mod_proxy.so
 LoadModule proxy_http_module modules/mod_proxy_http.so
 
@@ -146,7 +149,7 @@ Include conf/extra/httpd-ssl.conf
 
 在 `~/.config/containers/systemd/nextcloud.pod` 文件中，再把 443 映射到想要的端口（如9999），这样就可能在外网通过 SSL 访问 NextCloud 容器:
 
-```shell
+```bash
 
 [Pod]
 PodName=nextcloud
@@ -157,6 +160,6 @@ PublishPort=9999:443
 WantedBy=default.target
 ```
 
-## 参考
+## 参考资料
 
 [ArchWiki: Certbot](https://wiki.archlinux.org/title/Certbot)

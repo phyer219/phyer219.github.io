@@ -6,17 +6,12 @@
   <meta charset="utf-8" />
   <meta name="generator" content="Pelican" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link
-    href="https://zqw.ink/feeds/all.atom.xml"
-    type="application/atom+xml" rel="alternate" title="从冰上的水 Full Atom Feed" />
-  <link
-    href="https://zqw.ink/feeds/zhuan-ye-bi-ji.atom.xml"
-    type="application/atom+xml" rel="alternate" title="从冰上的水 Categories Atom Feed" />
-  <link rel="stylesheet" type="text/css" href="https://zqw.ink/theme/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="/theme/css/style.css" />
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Serif+SC&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.6.1/github-markdown.min.css" integrity="sha512-wpdV3v8V8vWajD1kH8rI1UO1H2q9TQ3s8o1mG7lH8fS1dZ+3q1B1p4lH2tF8rQm2u0n8oV6rN3tV4nQWmY4nTw==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <!--fonts end  -->
   <!-- highlight.js -->
@@ -83,17 +78,20 @@
       <nav>
         <ul>
             <li>
-              <a href="/">首页</a>
+              <a href="/">Home</a>
             </li>
             <li>
-              <a href="/categories.html">分类</a>
+              <a href="/category/physics">Physics</a>
             </li>
             <li>
-              <a href="/tags.html">标签</a>
+              <a href="/category/blog">Blog</a>
             </li>
-              <li>
-                <a href="https://zqw.ink/pages/about.html" >关于</a>
-              </li>
+            <li>
+              <a href="/category/coding">Coding</a>
+            </li>
+            <li>
+              <a href="/archives">All</a>
+            </li>
           </ul>
       </nav>
       <button id="theme-toggle" aria-label="切换到深色模式" title="切换主题">
@@ -101,9 +99,6 @@
         <i class="theme-icon icon-moon fa-solid fa-moon" aria-hidden="true"></i>
       </button>
       <div class="rss">
-          <a href="https://zqw.ink/feeds/all.atom.xml" aria-label="Atom 订阅">
-            <i class="fa-solid fa-rss" aria-hidden="true"></i>
-          </a>
       </div>
     </div>
   </header>
@@ -112,11 +107,11 @@
 <h1 class="post-title">NSR 计算 s-wave BEC-BCS crossover 的临界温度</h1>
 
 <section class="post-meta">
-    <p>发表于: 2024-11-13 ||</p>
-    <p>分类:<a class="post-link" href="https://zqw.ink/category/zhuan-ye-bi-ji.html">专业笔记</a> ||</p>
+    <p>2024-11-13</p>
+    <p>-<a class="post-link" href="/category/zhuan-ye-bi-ji.html">专业笔记</a></p>
 </section>
 
-<section class="post-content">
+<section class="markdown-body">
   <h2>Sokhotski-Plemelj 积分</h2>
 <p>根据 Sokhotski-Plemelj 定理有
 \begin{align}
@@ -128,633 +123,632 @@
   \mathrm{Im} \int\mathrm{d}x\cdot \frac{f(x)}{a x^2 + bx + c + \mathrm{i}0^+}
    =  \frac{-\pi}{a|x_1-x_2|}\int \mathrm{d}x\cdot f(x)[\cdot \delta(x-x_1) + \delta(x - x_2)]
 \end{align}
-其中 \(x_1, x_2\) 是 \(a x^2 + bx + c\) 的两个根。在数值计算自能虚部时，对 \(q\) 的积分是
+其中 $x_1, x_2$ 是 $a x^2 + bx + c$ 的两个根。在数值计算自能虚部时，对 $q$ 的积分是
 形如  的积分。</p>
 <h2>计算积分 （<a href="./2024-11-13-physics-NSR-Tc-s-wave/nsr.py">源文件：nsr.py</a>）(大概运行了37分钟)</h2>
-<p><pre>In [2]</pre></p><pre><code class="language-python"># Reference:
-# 博士学位论文： BEC-BCS 过渡体系的热力学性质与旋量 BEC 中的非阿贝尔约瑟夫森效应的研究 齐燃
-# 计算过程，全部以温度 T 做单位，进行无量纲化处理
-import numpy as np
-from scipy import integrate
-from scipy.special import zeta
-from scipy import optimize
-from scipy.misc import derivative
-import matplotlib.pyplot as plt
-from mpmath import polylog
-
-
-def bose(beta, energy):
-    &quot;&quot;&quot; Bose 分布函数
-    有些计算中, energy 也可能是负的.
-    &quot;&quot;&quot;
-    x = -beta * energy
-    if energy &gt; 0:
-        return np.exp(x) / (1 - np.exp(x))
-    else:
-        return 1 / (np.exp(-x) - 1)
-
-
-def fermi(beta, energy):
-    '''
-    Fermi distribution function
-    '''
-    x = -beta * energy
-    return np.exp(x) / (1 + np.exp(x))
-
-
-def free_fermion_density(mu):
-    &quot;&quot;&quot;
-    Integrate[q^2/\[Pi]^2 1/(E^(q^2/2-\[Mu])+1),{q, 0, \[Infinity]}]
-    &gt;&gt;  -(PolyLog[3/2,-E^\[Mu]]/(Sqrt[2] \[Pi]^(3/2)))
-    &quot;&quot;&quot;
-    return - polylog(s=3/2, z=-np.exp(mu)).real / (np.sqrt(2) * np.pi**(3/2))
-
-
-class PrincipalValueInt():
-    &quot;&quot;&quot;Calculate a 2nd order Cauchy integral:
-    int  dx    f(x) / (a*x^2 + b^x + i0^+)
-    latex:
-    \int \mathrm{d}x \frac{f(x)}{a x^2 + b x + \mathrm{i}0^+}
-
-    Attributes
-    ----------
-    get_image : float
-                Calculate the imaginary part of the integral.
-    get_real : float
-        Calculate the real part of the integral.
-    &quot;&quot;&quot;
-
-    def __init__(self, numerator, coeff: list,
-                 lower_lim, upper_lim, debug=False):
-        &quot;&quot;&quot;
-        numerator: function f(x)
-        coeff: [a, b, c] is the coefficients in the denominator.
-        lower_lim: lower limit of the integral
-        upper_lim: upper limit of the integral
-        &quot;&quot;&quot;
-        self.debug = debug
-        self.numerator = numerator
-        if isinstance(numerator, (int, float)):
-            self.numerator = lambda x: numerator
-        else:
-            self.numerator = numerator
-        self.lower_lim = lower_lim
-        self.upper_lim = upper_lim
-        self.a = coeff[0]
-        if self.a == 0:
-            raise ValueError(&quot;a should not be 0!&quot;)  # TODO: deal the a=0 case.
-        self.b = coeff[1]
-        self.c = coeff[2]
-        self.delta = self.b**2 - 4*self.a*self.c
-        self.root_exist = (self.delta &gt; 0) and (self.a != 0)
-
-        if self.root_exist:
-            if self.a &gt; 0:
-                self.root1 = (-self.b - np.sqrt(self.delta)) / (2*self.a)
-                self.root2 = (-self.b + np.sqrt(self.delta)) / (2*self.a)
-            else:
-                self.root1 = (-self.b + np.sqrt(self.delta)) / (2*self.a)
-                self.root2 = (-self.b - np.sqrt(self.delta)) / (2*self.a)
-            # cherck if the roots in the integral interval
-            self.root1_in = lower_lim &lt; self.root1 and self.root1 &lt; upper_lim
-            self.root2_in = lower_lim &lt; self.root2 and self.root2 &lt; upper_lim
-
-    def get_imag(self):
-        &quot;&quot;&quot;Imaginary part of the integral.&quot;&quot;&quot;
-        if self.root_exist:
-            imag = (self.root1_in) * self.numerator(self.root1)
-            imag += (self.root2_in) * self.numerator(self.root2)
-            imag *= -np.pi / np.abs(self.root2 - self.root1)
-        else:
-            imag = 0
-        imag *= 1/self.a
-        return imag
-
-    def get_real(self):
-        &quot;&quot;&quot;
-        Real part of the integral.
-
-        Note(TODO):
-        When upper_lim is very larg, e.g. self.upper_lim &gt; 1e4,
-        if the function do not decay to 0, the result is wrong.
-        The same warning in Mathematica:
-        NIntegrate[1/(x-10^8)^2, {x, 1, 10^8+1}]
-        &quot;&quot;&quot;
-        if self.root_exist:
-            if (not self.root1_in) and (not self.root2_in):
-                if self.debug:
-                    print('No root in!!!!!!!!!')
-                res = integrate.quad((lambda x: self.numerator(x)
-                                      / (self.a*x**2 + self.b*x + self.c)),
-                                     self.lower_lim, self.upper_lim)[0]
-                inte_metheod = 'no_root_in'
-            elif self.root1_in and self.root2_in:
-                if self.debug:
-                    print('All root in~~~~~~~~~')
-                mid = (self.root2 + self.root1)/2
-
-                real1 = integrate.quad((lambda x: self.numerator(x)
-                                        / (self.a * (x - self.root2))),
-                                       self.lower_lim, mid,
-                                       weight='cauchy', wvar=self.root1)[0]
-
-                right_range = 2*self.root2 - self.root1
-                if self.upper_lim &gt; right_range:
-                    # 如果积分上限特别大, 就分段积, 要不然算法找不到 pole 的贡献.
-                    if self.debug:
-                        print('Big upbound, range has been split!')
-                    real2 = integrate.quad((lambda x: self.numerator(x)
-                                            / (self.a * (x - self.root1))),
-                                           mid, right_range,
-                                           weight='cauchy', wvar=self.root2)[0]
-                    real2 += integrate.quad((lambda x: self.numerator(x)
-                                             / (self.a*x**2 + self.b*x +
-                                                self.c)),
-                                            right_range, self.upper_lim)[0]
-
-                else:
-                    real2 = integrate.quad((lambda x: self.numerator(x)
-                                            / (self.a * (x - self.root1))),
-                                           mid, self.upper_lim,
-                                           weight='cauchy', wvar=self.root2)[0]
-                res = real1 + real2
-                inte_metheod = 'all_root_in'
-            elif self.root1_in:
-                if self.debug:
-                    print('root1 in 111111111111111111111')
-                res = integrate.quad((lambda x: self.numerator(x)
-                                      / (self.a * (x - self.root2))),
-                                     self.lower_lim, self.upper_lim,
-                                     weight='cauchy', wvar=self.root1)[0]
-                inte_metheod = 'root1_in'
-            else:
-                if self.debug:
-                    print('root2 in 2222222222222222')
-
-                right_range = 2*self.root2 - self.root1
-                if self.upper_lim &gt; right_range:
-                    # 如果积分上限特别大, 就分段积, 要不然算法找不到 pole 的贡献.
-                    if self.debug:
-                        print('Big upbound, range has been split!')
-                    res = integrate.quad((lambda x: self.numerator(x)
-                                          / (self.a * (x - self.root1))),
-                                         self.lower_lim, right_range,
-                                         weight='cauchy', wvar=self.root2)[0]
-                    res += integrate.quad((lambda x: self.numerator(x)
-                                           / (self.a*x**2 + self.b*x +
-                                              self.c)),
-                                          right_range, self.upper_lim)[0]
-                else:
-                    res = integrate.quad((lambda x: self.numerator(x)
-                                          / (self.a * (x - self.root1))),
-                                         self.lower_lim, self.upper_lim,
-                                         weight='cauchy', wvar=self.root2)[0]
-                inte_metheod = 'root2_in'
-        else:
-            if self.a == 0:
-                if self.debug:
-                    print('a = 0 ! 000000000000')
-                res = integrate.quad(lambda x: self.numerator(x)/self.b,
-                                     self.lower_lim, self.upper_lim,
-                                     weight='cauchy', wvar=-self.c/self.b)[0]
-                inte_metheod = 'trivial'
-            else:
-                if self.debug:
-                    print('Root Not Exist!...................')
-                res = integrate.quad((lambda x: self.numerator(x)
-                                      / (self.a*x**2 + self.b*x + self.c)),
-                                     self.lower_lim, self.upper_lim)[0]
-                inte_metheod = 'root_not_exist'
-        return res, inte_metheod
-
-
-def _g(x, y, muT, debug=False):
-    &quot;&quot;&quot;Qi PhD Eq.(3.48)
-
-    Parameters
-    ----------
-    x : float
-        x
-    y : float
-        y
-    muT : float
-          μ / T
-    debug : bool
-            debug
-    Returns
-    -------
-    res : float
-          g
-    &quot;&quot;&quot;
-    a = x**2/2 + y**2/8 - muT
-    b = x*y / 2
-    if debug:
-        print(f'a = {a:.2f}, b = {b:.2f}')
-    if b == 0:
-        # g = 4/(1 + np.exp(a))
-        g = 4*np.exp(-a) / (np.exp(-a) + 1)
-    else:
-        g = np.exp(-b) + np.exp(-a)
-        denominator = np.exp(-b) + np.exp(-a - 2*b)
-        if denominator == 0:
-            g = np.inf
-        else:
-            g /= denominator
-        g = np.log(g)
-        g *= 2/b
-    return g
-
-
-def _g_diff_a(x, y, muT):
-    &quot;&quot;&quot;d g / d a&quot;&quot;&quot;
-    a = x**2/2 + y**2/8 - muT
-    b = x*y / 2
-    if b == 0:
-        dg = np.exp(-a)
-        dg /= (np.exp(-a) + 1)**2
-    else:
-        dg = 1 - np.exp(-2*b)
-        dg /= 1 + np.exp(-2*b) + np.exp(-a-b) + np.exp(a-b)
-        dg *= -2 / b
-    return dg
-
-
-def Gamma_0_re(q, omega, mu, a):
-    &quot;&quot;&quot; 以 T 作单位制下的 particle-partilce propagator
-    Eq.(3.47)
-    Real part of inverse BCS pair propagator.
-
-    a: a_s, s-wave scattering length, in unit of temperature
-    q: q / sqrt(T)
-    omega: omega / T
-    mu : mu / T
-    &quot;&quot;&quot;
-
-    Omega = omega + 2*mu - q**2/4
-
-    re = -1 / (4*np.pi*a)
-    pv = PrincipalValueInt(numerator=lambda x: x**2 * _g(x, q, muT=mu),
-                           coeff=[1, 0, -Omega],
-                           lower_lim=0, upper_lim=10).get_real()[0]
-    re += pv / (4*np.pi**2)
-    if Omega &lt; 0:
-        re += np.sqrt(-Omega) / (4*np.pi)
-    return re
-
-
-def Gamma_0_im(q, omega, mu):
-    &quot;&quot;&quot; 以 T 作单位制下的 particle-partilce propagator
-    (3.47)
-    Imaginary part of inverse BCS pair propagator.
-    虚部与散射长度无关!!!!!
-
-    a: a_s, s-wave scattering length, in unit of temperature
-    q: q / sqrt(T)
-    omega: omega / T
-    mu : mu / T
-    &quot;&quot;&quot;
-
-    Omega = omega + 2*mu - q**2/4
-
-    if Omega &gt; 0:
-        im = np.sqrt(Omega) / (8*np.pi)
-        im *= _g(np.sqrt(Omega), q, muT=mu) - 2
-    else:
-        im = 0
-    return im
-
-
-def find_muT_at_Tc(a):
-    &quot;&quot;&quot;Find Tc
-
-    use Re(0, 0, muT, aT) = 0, given a aT, return muT
-
-    Parameters
-    ----------
-    a : scattering length (a_s * sqrt(T))
-    Returns
-    -------
-    muT : float
-          μ / T
-    &quot;&quot;&quot;
-    res = optimize.root(lambda muT: Gamma_0_re(q=0, omega=0, mu=muT, a=a), -1)
-    if not res.success:
-        print('IMPORTANT ERROR !!!!!!!!!! ROOT NOT FIND!!!!!!find muT!')
-    muT = res.x[0]
-    return muT
-
-
-def find_omegaT(qT, muT, a, debug=False):
-    &quot;&quot;&quot;Given aT, aT, find the dispersion curve ω_q
-    a: s-wave scattering length in unit of temperature
-    &quot;&quot;&quot;
-    def re_qT_omegaT(omegaT, qT=qT):
-        return Gamma_0_re(q=qT, omega=omegaT, mu=muT, a=a)
-
-    if qT &gt; 1e-4:
-        res = optimize.root(re_qT_omegaT, 0, options={'xtol': 1e-9})
-        # 如果比较低的精度就能满足要求, 可以用比较低的精度, 来避免返回 res.success=False.
-        if debug and (not res.success):
-            print('Error infind omegaT, error message is:')
-            print(res.message)
-            print('error parameters is')
-            print(f'qT={qT:.15f}, muT={muT:.15f}')
-            print(f'res para={1/a:.15f}, root={res.x[0]}')
-        omegaT = res.x[0]
-    else:                       # 线性近似
-        # TODO: 为了避免在 qT 很小时会剧烈抖动而找不到根, 采用了线性近似. 这个还是要改
-        # 的. 现在去除了乘了两次 fluc 的 bug 后应该就没有这个问题了.
-        omegaT = qT / (1e-4) * optimize.root((lambda omegaT:
-                                                re_qT_omegaT(omegaT,
-                                                            qT=1e-4)),
-                                                0, options={'xtol':
-                                                            1e-13}).x[0]
-    return omegaT
-
-
-class Density():
-    &quot;&quot;&quot;Density, in unit of Temperature
-    &quot;&quot;&quot;
-    def __init__(self, mu, a, debug=True):
-        &quot;&quot;&quot;
-        mu : chemical potential in unit of temperature, μ / T
-        a: s-wave scattering length in unit of temperature,
-        &quot;&quot;&quot;
-        self.mu = mu
-        self.a = a
-        self.debug = debug
-
-    def _im_diff_mu_s(self, qT: float, omegaT: float):
-        &quot;&quot;&quot;d im / d μ, (delta part has no contribution)
-           验证过, 没有问题! s-wave
-        &quot;&quot;&quot;
-        OT = omegaT + 2*self.mu - qT**2/4
-        if OT &gt; 0:
-            dim = (_g(np.sqrt(OT), qT, muT=self.mu) - 2) / np.sqrt(OT)
-            dim += np.sqrt(OT) * _g_diff_a(np.sqrt(OT), qT, muT=self.mu)
-            dim /= 8*np.pi
-            dim += - np.sqrt(OT) / (8*np.pi) * _g_diff_a(np.sqrt(OT), qT,
-                                                         muT=self.mu)
-        else:
-            dim = 0
-        return dim
-
-    def _fluc1_dense(self, qT, omegaT):
-        &quot;&quot;&quot;Eq. (3.49) and Eq. (3.49)&quot;&quot;&quot;
-        real = Gamma_0_re(q=qT, omega=omegaT, mu=self.mu,
-                          a=self.a)
-        imag = Gamma_0_im(q=qT, omega=omegaT, mu=self.mu)
-
-        volume_elem = (1 / np.pi) * (1 / (2*np.pi**2))
-
-        diff_re = derivative((lambda mu: Gamma_0_re(q=qT, omega=omegaT, mu=mu,
-                                                    a=self.a)),
-                             self.mu, dx=.1)
-        diff_im = self._im_diff_mu_s(qT, omegaT)
-        fluctdens = qT**2 * bose(1, omegaT)
-        fluctdens *= (imag*diff_re - real*diff_im) / (imag**2+real**2)
-        res = fluctdens * volume_elem
-        return res
-
-    def _fluc1_s(self, qT, BCS):
-        &quot;&quot;&quot; 计算 pair 涨落在连续激发区的贡献 &quot;&quot;&quot;
-        # 实部为 0 时对应的准粒子激发
-        omega_p = find_omegaT(qT=qT, muT=self.mu,
-                              a=self.a)
-        # print('omega p is', omega_p)
-
-        if BCS:
-            &quot;如果在 BCS 极限下的的话, 连续激发边界的边界有比较重要的贡献&quot;
-            boundary = qT**2/4 - 2*self.mu  # 连续激发的边界
-            # 从连续激发边界, 到准粒子激发处的贡献
-            int1 = integrate.quad((lambda omega:
-                                   self._fluc1_dense(qT=qT, omegaT=omega)),
-                                  boundary, -2*omega_p, epsrel=1e-3, limit=40)
-        else:
-            int1 = [0]
-
-        # 准粒子激发的贡献
-        int3 = integrate.quad(lambda omega: self._fluc1_dense(qT=qT,
-                                                              omegaT=omega),
-                              -10*omega_p, 11*omega_p, epsrel=1e-3, limit=40)
-        res = int1[0] + int3[0]
-        return res
-
-    def _fluc2_s(self, qT):
-        &quot;&quot;&quot; use Qi PhD Eq.(3.52) at Tc
-            pair 涨落的 single pole 部分.
-        &quot;&quot;&quot;
-        volume_elem = qT**2 / (2*np.pi**2)
-
-        def omega_q(muT):
-            return find_omegaT(qT=qT, muT=muT, a=self.a)
-
-        diff = derivative(omega_q, self.mu, dx=.1)
-        energy = omega_q(self.mu)  # qT**2/4  # - 2*muT - aT**2
-        if energy &lt; qT**2/4 - 2*self.mu:
-            fluc = bose(1, energy)
-            fluc *= - diff
-            fluc *= volume_elem
-        else:
-            fluc = 0
-        return fluc
-
-    def s_wave_density(self, para, debug=True):
-        &quot;&quot;&quot; n / (T)^(3/2)
-        Calculate the density.
-
-        According the interaction strength, we use three different method to
-        calculate the density.
-
-        Parameters
-        ----------
-        muT : float
-              μ / T
-        aT : folat
-             1 / (as * sqrt(T))
-        Returns
-        -------
-        n : float
-            density
-        &quot;&quot;&quot;
-        if para.method == 'SinglePole_StrongBEC':
-            &quot;&quot;&quot;
-            method [1]: SinglePole_StrongBEC.
-            In Strong BEC limit, the density are mainly contributed by the
-            dimers formed by two Fermion.
-
-            Mathematica code:
-            Integrate[q^2/(Exp[q^2/4]-1),{q,0,Infinity}]
-            &gt;&gt; 2 Sqrt[\[Pi]] Zeta[3/2]
-            &quot;&quot;&quot;
-            n = 4*np.sqrt(np.pi)*zeta(3/2)
-
-        elif para.method == 'SinglePole':
-            &quot;&quot;&quot;
-            method [2]: SinglePole.
-            准粒子激发在 q=0 时, ω(q)=0. 因此, 在 μ&lt;0 时, 准粒子激发完
-            全位于连续激发外, 是孤立的奇点. 此时, 考虑自由费米子(几乎可以忽略) 和 Single
-            Pole 的 pair 涨落的贡献.
-            &quot;&quot;&quot;
-            n_fluc2 = integrate.quad(self._fluc2_s, 0, para.n_fluc2_up,
-                                     epsrel=para.n_fluc2_epsrel)
-            # 此处也用较低的精度即可. 接近 0 时平滑地走近于一个常数. TODO: 动量积分的下限
-            # 做了近似, 0 处有bug
-            n_fluc = n_fluc2[0]
-            n_free = free_fermion_density(self.mu)
-            n = n_free + n_fluc
-            # print('*************', n_fxluc, n_free)
-        elif para.method == 'NSR':
-            &quot;&quot;&quot;
-            method [3]: NSR.
-            在 μ&gt;0 时, 准粒子激发几乎位于连续激发内, 在低动量低频率区有尖锐的
-            准粒子峰贡献.
-            BEC Unitary侧, 考虑自由费米子 和 pair 涨落(连续激发).&quot;&quot;&quot;
-            n_fluc1 = integrate.quad((lambda qT:
-                                      self._fluc1_s(qT, BCS=para.fluc1_BCS)),
-                                     para.n_fluc1_a, para.n_fluc1_b,
-                                     epsrel=para.n_fluc1_epsrel,
-                                     limit=para.n_fluc1_limit)
-            n_fluc = n_fluc1[0]
-            n_free = free_fermion_density(self.mu)
-            n = n_free + n_fluc
-        return n
-
-
-def plot_Tc(aT, para, debug=False):
-    &quot;&quot;&quot;
-    aT : scattering length in unit of temperature
-    &quot;&quot;&quot;
-    muT = []
-    density_T = []
-    for aTi in aT:
-        print('Calculating the results for point a_s*sqrt(T)=',
-              aTi, ' START!')
-        muTi = find_muT_at_Tc(a=1/aTi)
-        muT.append(muTi)
-        density_T.append(Density(mu=muTi, a=1/aTi).s_wave_density(para))
-        print('Calculating the results for point a_s*sqrt(T)=',
-              aTi, ' FINISH!')
-
-    n_T = np.array(density_T)  # density in unit of temperature
-    kF = (3*np.pi**2*n_T) ** (1/3)  # Fermi momentum in unit of temperature
-    EF = kF**2 / 2  # Fermi energy in unit of temperature
-    kfas = aT / kF  # 1 / (k_F * a_s)
-    Tc_EF = 1 / EF
-    plt.plot(kfas, Tc_EF, 'o', label=&quot;This numerical program&quot;)
-
-
-def plot_paper():
-    &quot;&quot;&quot;
-    The data from the published papers.
-    &quot;&quot;&quot;
-    paper_data = np.array([[-1.99903, 0.016667],
-                           [-1.59262, 0.034058],
-                           [-1.30582, 0.052899],
-                           [-0.98741, 0.084058],
-                           [-0.73053, 0.119565],
-                           [-0.47717, 0.16087],
-                           [-0.21622, 0.2],
-                           [-0.0841, 0.214493],
-                           [0.0013, 0.222464],
-                           [0.10593, 0.228986],
-                           [0.22578, 0.231884],
-                           [0.35702, 0.231159],
-                           [0.4381, 0.231159],
-                           [0.56522, 0.226087],
-                           [0.68084, 0.222464],
-                           [0.83905, 0.221014],
-                           [1.02812, 0.218841],
-                           [1.19024, 0.218116],
-                           [1.3524, 0.218116],
-                           [1.41418, 0.218116]
-                           ])
-    t_star = np.array([[-1.99602, 0.029288],
-                       [-1.76099, 0.038028],
-                       [-1.53813, 0.052065],
-                       [-1.33351, 0.070343],
-                       [-1.09651, 0.102372],
-                       [-0.86968, 0.147815],
-                       [-0.62669, 0.217954],
-                       [-0.48093, 0.271542],
-                       [-0.26232, 0.365333]
-                       ])
-    plt.plot(paper_data[:, 0], paper_data[:, 1],
-             label='results from published papers')
-    plt.plot(t_star[:, 0], t_star[:, 1], '--')
-
-
-class Para():
-    &quot;&quot;&quot; 指定一些数值计算中需要调的参数.
-    &quot;&quot;&quot;
-    def __init__(self, method: str, n_fluc2_up,
-                 n_fluc2_limit, n_fluc2_epsrel,
-                 n_fluc1_a, n_fluc1_b, n_fluc1_limit, n_fluc1_epsrel,
-                 fluc1_BCS):
-        &quot;&quot;&quot;
-        Parameters
-        method : the method to be used when calculate the density.
-                 There are three method can be use:
-                 'SinglePole_StrongBEC', 'SinglePole', 'NSR'
-        fluc1_BCS: bool
-                 如果在 BCS 极限下的的话, 连续激发边界的边界有比较重要的贡献.
-        &quot;&quot;&quot;
-        self.method = method
-
-        self.n_fluc2_up = n_fluc2_up
-        self.n_fluc2_limit = n_fluc2_limit
-        self.n_fluc2_epsrel = n_fluc2_epsrel
-
-        self.n_fluc1_a = n_fluc1_a
-        self.n_fluc1_b = n_fluc1_b
-        self.n_fluc1_limit = n_fluc1_limit
-        self.n_fluc1_epsrel = n_fluc1_epsrel
-
-        self.fluc1_BCS = fluc1_BCS
-
-
-def runscp():
-    # ============ Single pole 近似下, aT 取 1.5~4 (取 10 个点)是可以的. ==========
-    paraSinglePole = Para(method=&quot;SinglePole&quot;,
-                              n_fluc2_limit=10,
-                              n_fluc2_up=10,
-                              n_fluc2_epsrel=1e-2,
-                              n_fluc1_a=2e-2, n_fluc1_b=10,
-                              n_fluc1_limit=5, n_fluc1_epsrel=1e-3,
-                              fluc1_BCS=False)
-    plot_Tc(aT=[1.5, 2, 3, 4], para=paraSinglePole, debug=True)
-
-    paraNSR = Para(method=&quot;NSR&quot;,
-                   n_fluc2_limit=10,
-                   n_fluc2_up=10,
-                   n_fluc2_epsrel=1e-2,
-                   n_fluc1_a=2e-2, n_fluc1_b=10,
-                   n_fluc1_limit=5, n_fluc1_epsrel=1e-3,
-                   fluc1_BCS=False)
-    # plot_Tc(aT=[.1, .3, 0.5, 0.8, 1.0], para=paraNSR, debug=True)
-    plot_Tc(aT=[0.1, 0.3], para=paraNSR, debug=True)
-
-    paraNSR_BCS = Para(method=&quot;NSR&quot;,
-                       n_fluc2_limit=10,
-                       n_fluc2_up=10,
-                       n_fluc2_epsrel=1e-2,
-                       n_fluc1_a=2e-2, n_fluc1_b=10,
-                       n_fluc1_limit=10, n_fluc1_epsrel=1e-3,
-                       fluc1_BCS=True)
-    # plot_Tc(aT=[-5, -3, -1], para=paraNSR_BCS, debug=True)
-    plot_Tc(aT=[-.5, -.1], para=paraNSR_BCS, debug=True)
-    # plot_Tc(aT=[-5], para=paraNSR_BCS, debug=True)
-
-    plot_paper()
-    plt.xlabel(r'$1/(k_F a_s)$')
-    plt.ylabel(r'$T_C / \epsilon_F$')
-    plt.legend()
-    plt.show()
-
-
-runscp()
-
-</code></pre><pre>Calculating the results for point a_s*sqrt(T)= 1.5  START!
+<p><pre>In [2]</pre></p><div class="highlight"><pre><span></span><code><span class="c1"># Reference:</span>
+<span class="c1"># 博士学位论文： BEC-BCS 过渡体系的热力学性质与旋量 BEC 中的非阿贝尔约瑟夫森效应的研究 齐燃</span>
+<span class="c1"># 计算过程，全部以温度 T 做单位，进行无量纲化处理</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">integrate</span>
+<span class="kn">from</span> <span class="nn">scipy.special</span> <span class="kn">import</span> <span class="n">zeta</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">optimize</span>
+<span class="kn">from</span> <span class="nn">scipy.misc</span> <span class="kn">import</span> <span class="n">derivative</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">mpmath</span> <span class="kn">import</span> <span class="n">polylog</span>
+
+
+<span class="k">def</span> <span class="nf">bose</span><span class="p">(</span><span class="n">beta</span><span class="p">,</span> <span class="n">energy</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Bose 分布函数</span>
+<span class="sd">    有些计算中, energy 也可能是负的.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="n">beta</span> <span class="o">*</span> <span class="n">energy</span>
+    <span class="k">if</span> <span class="n">energy</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">fermi</span><span class="p">(</span><span class="n">beta</span><span class="p">,</span> <span class="n">energy</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Fermi distribution function</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="n">beta</span> <span class="o">*</span> <span class="n">energy</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+
+
+<span class="k">def</span> <span class="nf">free_fermion_density</span><span class="p">(</span><span class="n">mu</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Integrate[q^2/\[Pi]^2 1/(E^(q^2/2-\[Mu])+1),{q, 0, \[Infinity]}]</span>
+<span class="sd">    &gt;&gt;  -(PolyLog[3/2,-E^\[Mu]]/(Sqrt[2] \[Pi]^(3/2)))</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="o">-</span> <span class="n">polylog</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">z</span><span class="o">=-</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">mu</span><span class="p">))</span><span class="o">.</span><span class="n">real</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">**</span><span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+
+
+<span class="k">class</span> <span class="nc">PrincipalValueInt</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculate a 2nd order Cauchy integral:</span>
+<span class="sd">    int  dx    f(x) / (a*x^2 + b^x + i0^+)</span>
+<span class="sd">    latex:</span>
+<span class="sd">    \int \mathrm{d}x \frac{f(x)}{a x^2 + b x + \mathrm{i}0^+}</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    get_image : float</span>
+<span class="sd">                Calculate the imaginary part of the integral.</span>
+<span class="sd">    get_real : float</span>
+<span class="sd">        Calculate the real part of the integral.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">numerator</span><span class="p">,</span> <span class="n">coeff</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span>
+                 <span class="n">lower_lim</span><span class="p">,</span> <span class="n">upper_lim</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        numerator: function f(x)</span>
+<span class="sd">        coeff: [a, b, c] is the coefficients in the denominator.</span>
+<span class="sd">        lower_lim: lower limit of the integral</span>
+<span class="sd">        upper_lim: upper limit of the integral</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">debug</span> <span class="o">=</span> <span class="n">debug</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">numerator</span> <span class="o">=</span> <span class="n">numerator</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">numerator</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">)):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">numerator</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">numerator</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">numerator</span> <span class="o">=</span> <span class="n">numerator</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lower_lim</span> <span class="o">=</span> <span class="n">lower_lim</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">upper_lim</span> <span class="o">=</span> <span class="n">upper_lim</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">=</span> <span class="n">coeff</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;a should not be 0!&quot;</span><span class="p">)</span>  <span class="c1"># TODO: deal the a=0 case.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">coeff</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">c</span> <span class="o">=</span> <span class="n">coeff</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">delta</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">4</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">c</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">root_exist</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">delta</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">root_exist</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">root1</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">delta</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">root2</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">delta</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">root1</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">delta</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">root2</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">delta</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="p">)</span>
+            <span class="c1"># cherck if the roots in the integral interval</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">root1_in</span> <span class="o">=</span> <span class="n">lower_lim</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">root1</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">root1</span> <span class="o">&lt;</span> <span class="n">upper_lim</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">root2_in</span> <span class="o">=</span> <span class="n">lower_lim</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">root2</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">root2</span> <span class="o">&lt;</span> <span class="n">upper_lim</span>
+
+    <span class="k">def</span> <span class="nf">get_imag</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Imaginary part of the integral.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">root_exist</span><span class="p">:</span>
+            <span class="n">imag</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">root1_in</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">numerator</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">root1</span><span class="p">)</span>
+            <span class="n">imag</span> <span class="o">+=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">root2_in</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">numerator</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">root2</span><span class="p">)</span>
+            <span class="n">imag</span> <span class="o">*=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">root2</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">root1</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">imag</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">imag</span> <span class="o">*=</span> <span class="mi">1</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">a</span>
+        <span class="k">return</span> <span class="n">imag</span>
+
+    <span class="k">def</span> <span class="nf">get_real</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Real part of the integral.</span>
+
+<span class="sd">        Note(TODO):</span>
+<span class="sd">        When upper_lim is very larg, e.g. self.upper_lim &gt; 1e4,</span>
+<span class="sd">        if the function do not decay to 0, the result is wrong.</span>
+<span class="sd">        The same warning in Mathematica:</span>
+<span class="sd">        NIntegrate[1/(x-10^8)^2, {x, 1, 10^8+1}]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">root_exist</span><span class="p">:</span>
+            <span class="k">if</span> <span class="p">(</span><span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">root1_in</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">root2_in</span><span class="p">):</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No root in!!!!!!!!!&#39;</span><span class="p">)</span>
+                <span class="n">res</span> <span class="o">=</span> <span class="n">integrate</span><span class="o">.</span><span class="n">quad</span><span class="p">((</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">numerator</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+                                      <span class="o">/</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">c</span><span class="p">)),</span>
+                                     <span class="bp">self</span><span class="o">.</span><span class="n">lower_lim</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">upper_lim</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">inte_metheod</span> <span class="o">=</span> <span class="s1">&#39;no_root_in&#39;</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">root1_in</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">root2_in</span><span class="p">:</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;All root in~~~~~~~~~&#39;</span><span class="p">)</span>
+                <span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">root2</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">root1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+
+                <span class="n">real1</span> <span class="o">=</span> <span class="n">integrate</span><span class="o">.</span><span class="n">quad</span><span class="p">((</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">numerator</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+                                        <span class="o">/</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">root2</span><span class="p">))),</span>
+                                       <span class="bp">self</span><span class="o">.</span><span class="n">lower_lim</span><span class="p">,</span> <span class="n">mid</span><span class="p">,</span>
+                                       <span class="n">weight</span><span class="o">=</span><span class="s1">&#39;cauchy&#39;</span><span class="p">,</span> <span class="n">wvar</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">root1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+                <span class="n">right_range</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">root2</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">root1</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">upper_lim</span> <span class="o">&gt;</span> <span class="n">right_range</span><span class="p">:</span>
+                    <span class="c1"># 如果积分上限特别大, 就分段积, 要不然算法找不到 pole 的贡献.</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">:</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Big upbound, range has been split!&#39;</span><span class="p">)</span>
+                    <span class="n">real2</span> <span class="o">=</span> <span class="n">integrate</span><span class="o">.</span><span class="n">quad</span><span class="p">((</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">numerator</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+                                            <span class="o">/</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">root1</span><span class="p">))),</span>
+                                           <span class="n">mid</span><span class="p">,</span> <span class="n">right_range</span><span class="p">,</span>
+                                           <span class="n">weight</span><span class="o">=</span><span class="s1">&#39;cauchy&#39;</span><span class="p">,</span> <span class="n">wvar</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">root2</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="n">real2</span> <span class="o">+=</span> <span class="n">integrate</span><span class="o">.</span><span class="n">quad</span><span class="p">((</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">numerator</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+                                             <span class="o">/</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span>
+                                                <span class="bp">self</span><span class="o">.</span><span class="n">c</span><span class="p">)),</span>
+                                            <span class="n">right_range</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">upper_lim</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">real2</span> <span class="o">=</span> <span class="n">integrate</span><span class="o">.</span><span class="n">quad</span><span class="p">((</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">numerator</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+                                            <span class="o">/</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">root1</span><span class="p">))),</span>
+                                           <span class="n">mid</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">upper_lim</span><span class="p">,</span>
+                                           <span class="n">weight</span><span class="o">=</span><span class="s1">&#39;cauchy&#39;</span><span class="p">,</span> <span class="n">wvar</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">root2</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">res</span> <span class="o">=</span> <span class="n">real1</span> <span class="o">+</span> <span class="n">real2</span>
+                <span class="n">inte_metheod</span> <span class="o">=</span> <span class="s1">&#39;all_root_in&#39;</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">root1_in</span><span class="p">:</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;root1 in 111111111111111111111&#39;</span><span class="p">)</span>
+                <span class="n">res</span> <span class="o">=</span> <span class="n">integrate</span><span class="o">.</span><span class="n">quad</span><span class="p">((</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">numerator</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+                                      <span class="o">/</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">root2</span><span class="p">))),</span>
+                                     <span class="bp">self</span><span class="o">.</span><span class="n">lower_lim</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">upper_lim</span><span class="p">,</span>
+                                     <span class="n">weight</span><span class="o">=</span><span class="s1">&#39;cauchy&#39;</span><span class="p">,</span> <span class="n">wvar</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">root1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">inte_metheod</span> <span class="o">=</span> <span class="s1">&#39;root1_in&#39;</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;root2 in 2222222222222222&#39;</span><span class="p">)</span>
+
+                <span class="n">right_range</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">root2</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">root1</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">upper_lim</span> <span class="o">&gt;</span> <span class="n">right_range</span><span class="p">:</span>
+                    <span class="c1"># 如果积分上限特别大, 就分段积, 要不然算法找不到 pole 的贡献.</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">:</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Big upbound, range has been split!&#39;</span><span class="p">)</span>
+                    <span class="n">res</span> <span class="o">=</span> <span class="n">integrate</span><span class="o">.</span><span class="n">quad</span><span class="p">((</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">numerator</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+                                          <span class="o">/</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">root1</span><span class="p">))),</span>
+                                         <span class="bp">self</span><span class="o">.</span><span class="n">lower_lim</span><span class="p">,</span> <span class="n">right_range</span><span class="p">,</span>
+                                         <span class="n">weight</span><span class="o">=</span><span class="s1">&#39;cauchy&#39;</span><span class="p">,</span> <span class="n">wvar</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">root2</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="n">res</span> <span class="o">+=</span> <span class="n">integrate</span><span class="o">.</span><span class="n">quad</span><span class="p">((</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">numerator</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+                                           <span class="o">/</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span>
+                                              <span class="bp">self</span><span class="o">.</span><span class="n">c</span><span class="p">)),</span>
+                                          <span class="n">right_range</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">upper_lim</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">res</span> <span class="o">=</span> <span class="n">integrate</span><span class="o">.</span><span class="n">quad</span><span class="p">((</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">numerator</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+                                          <span class="o">/</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">root1</span><span class="p">))),</span>
+                                         <span class="bp">self</span><span class="o">.</span><span class="n">lower_lim</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">upper_lim</span><span class="p">,</span>
+                                         <span class="n">weight</span><span class="o">=</span><span class="s1">&#39;cauchy&#39;</span><span class="p">,</span> <span class="n">wvar</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">root2</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">inte_metheod</span> <span class="o">=</span> <span class="s1">&#39;root2_in&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a = 0 ! 000000000000&#39;</span><span class="p">)</span>
+                <span class="n">res</span> <span class="o">=</span> <span class="n">integrate</span><span class="o">.</span><span class="n">quad</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">numerator</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">,</span>
+                                     <span class="bp">self</span><span class="o">.</span><span class="n">lower_lim</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">upper_lim</span><span class="p">,</span>
+                                     <span class="n">weight</span><span class="o">=</span><span class="s1">&#39;cauchy&#39;</span><span class="p">,</span> <span class="n">wvar</span><span class="o">=-</span><span class="bp">self</span><span class="o">.</span><span class="n">c</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">inte_metheod</span> <span class="o">=</span> <span class="s1">&#39;trivial&#39;</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Root Not Exist!...................&#39;</span><span class="p">)</span>
+                <span class="n">res</span> <span class="o">=</span> <span class="n">integrate</span><span class="o">.</span><span class="n">quad</span><span class="p">((</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">numerator</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+                                      <span class="o">/</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">c</span><span class="p">)),</span>
+                                     <span class="bp">self</span><span class="o">.</span><span class="n">lower_lim</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">upper_lim</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">inte_metheod</span> <span class="o">=</span> <span class="s1">&#39;root_not_exist&#39;</span>
+        <span class="k">return</span> <span class="n">res</span><span class="p">,</span> <span class="n">inte_metheod</span>
+
+
+<span class="k">def</span> <span class="nf">_g</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">muT</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Qi PhD Eq.(3.48)</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    x : float</span>
+<span class="sd">        x</span>
+<span class="sd">    y : float</span>
+<span class="sd">        y</span>
+<span class="sd">    muT : float</span>
+<span class="sd">          μ / T</span>
+<span class="sd">    debug : bool</span>
+<span class="sd">            debug</span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    res : float</span>
+<span class="sd">          g</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">8</span> <span class="o">-</span> <span class="n">muT</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="k">if</span> <span class="n">debug</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;a = </span><span class="si">{</span><span class="n">a</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">, b = </span><span class="si">{</span><span class="n">b</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="c1"># g = 4/(1 + np.exp(a))</span>
+        <span class="n">g</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">g</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">b</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="p">)</span>
+        <span class="n">denominator</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">b</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">a</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">denominator</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">g</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">g</span> <span class="o">/=</span> <span class="n">denominator</span>
+        <span class="n">g</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+        <span class="n">g</span> <span class="o">*=</span> <span class="mi">2</span><span class="o">/</span><span class="n">b</span>
+    <span class="k">return</span> <span class="n">g</span>
+
+
+<span class="k">def</span> <span class="nf">_g_diff_a</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">muT</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;d g / d a&quot;&quot;&quot;</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">8</span> <span class="o">-</span> <span class="n">muT</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">dg</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="p">)</span>
+        <span class="n">dg</span> <span class="o">/=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">dg</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
+        <span class="n">dg</span> <span class="o">/=</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">)</span>
+        <span class="n">dg</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">2</span> <span class="o">/</span> <span class="n">b</span>
+    <span class="k">return</span> <span class="n">dg</span>
+
+
+<span class="k">def</span> <span class="nf">Gamma_0_re</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">omega</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; 以 T 作单位制下的 particle-partilce propagator</span>
+<span class="sd">    Eq.(3.47)</span>
+<span class="sd">    Real part of inverse BCS pair propagator.</span>
+
+<span class="sd">    a: a_s, s-wave scattering length, in unit of temperature</span>
+<span class="sd">    q: q / sqrt(T)</span>
+<span class="sd">    omega: omega / T</span>
+<span class="sd">    mu : mu / T</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">Omega</span> <span class="o">=</span> <span class="n">omega</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">mu</span> <span class="o">-</span> <span class="n">q</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">4</span>
+
+    <span class="n">re</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">pv</span> <span class="o">=</span> <span class="n">PrincipalValueInt</span><span class="p">(</span><span class="n">numerator</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">_g</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span> <span class="n">muT</span><span class="o">=</span><span class="n">mu</span><span class="p">),</span>
+                           <span class="n">coeff</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="n">Omega</span><span class="p">],</span>
+                           <span class="n">lower_lim</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">upper_lim</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">get_real</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">re</span> <span class="o">+=</span> <span class="n">pv</span> <span class="o">/</span> <span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">Omega</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">re</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="n">Omega</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">re</span>
+
+
+<span class="k">def</span> <span class="nf">Gamma_0_im</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">omega</span><span class="p">,</span> <span class="n">mu</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; 以 T 作单位制下的 particle-partilce propagator</span>
+<span class="sd">    (3.47)</span>
+<span class="sd">    Imaginary part of inverse BCS pair propagator.</span>
+<span class="sd">    虚部与散射长度无关!!!!!</span>
+
+<span class="sd">    a: a_s, s-wave scattering length, in unit of temperature</span>
+<span class="sd">    q: q / sqrt(T)</span>
+<span class="sd">    omega: omega / T</span>
+<span class="sd">    mu : mu / T</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">Omega</span> <span class="o">=</span> <span class="n">omega</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">mu</span> <span class="o">-</span> <span class="n">q</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">4</span>
+
+    <span class="k">if</span> <span class="n">Omega</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">im</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">Omega</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">8</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+        <span class="n">im</span> <span class="o">*=</span> <span class="n">_g</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">Omega</span><span class="p">),</span> <span class="n">q</span><span class="p">,</span> <span class="n">muT</span><span class="o">=</span><span class="n">mu</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">im</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="n">im</span>
+
+
+<span class="k">def</span> <span class="nf">find_muT_at_Tc</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Find Tc</span>
+
+<span class="sd">    use Re(0, 0, muT, aT) = 0, given a aT, return muT</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    a : scattering length (a_s * sqrt(T))</span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    muT : float</span>
+<span class="sd">          μ / T</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">optimize</span><span class="o">.</span><span class="n">root</span><span class="p">(</span><span class="k">lambda</span> <span class="n">muT</span><span class="p">:</span> <span class="n">Gamma_0_re</span><span class="p">(</span><span class="n">q</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">omega</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">mu</span><span class="o">=</span><span class="n">muT</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="n">a</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">res</span><span class="o">.</span><span class="n">success</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;IMPORTANT ERROR !!!!!!!!!! ROOT NOT FIND!!!!!!find muT!&#39;</span><span class="p">)</span>
+    <span class="n">muT</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">muT</span>
+
+
+<span class="k">def</span> <span class="nf">find_omegaT</span><span class="p">(</span><span class="n">qT</span><span class="p">,</span> <span class="n">muT</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Given aT, aT, find the dispersion curve ω_q</span>
+<span class="sd">    a: s-wave scattering length in unit of temperature</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">re_qT_omegaT</span><span class="p">(</span><span class="n">omegaT</span><span class="p">,</span> <span class="n">qT</span><span class="o">=</span><span class="n">qT</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">Gamma_0_re</span><span class="p">(</span><span class="n">q</span><span class="o">=</span><span class="n">qT</span><span class="p">,</span> <span class="n">omega</span><span class="o">=</span><span class="n">omegaT</span><span class="p">,</span> <span class="n">mu</span><span class="o">=</span><span class="n">muT</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="n">a</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">qT</span> <span class="o">&gt;</span> <span class="mf">1e-4</span><span class="p">:</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">optimize</span><span class="o">.</span><span class="n">root</span><span class="p">(</span><span class="n">re_qT_omegaT</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;xtol&#39;</span><span class="p">:</span> <span class="mf">1e-9</span><span class="p">})</span>
+        <span class="c1"># 如果比较低的精度就能满足要求, 可以用比较低的精度, 来避免返回 res.success=False.</span>
+        <span class="k">if</span> <span class="n">debug</span> <span class="ow">and</span> <span class="p">(</span><span class="ow">not</span> <span class="n">res</span><span class="o">.</span><span class="n">success</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Error infind omegaT, error message is:&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">message</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;error parameters is&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;qT=</span><span class="si">{</span><span class="n">qT</span><span class="si">:</span><span class="s1">.15f</span><span class="si">}</span><span class="s1">, muT=</span><span class="si">{</span><span class="n">muT</span><span class="si">:</span><span class="s1">.15f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;res para=</span><span class="si">{</span><span class="mi">1</span><span class="o">/</span><span class="n">a</span><span class="si">:</span><span class="s1">.15f</span><span class="si">}</span><span class="s1">, root=</span><span class="si">{</span><span class="n">res</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">omegaT</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>                       <span class="c1"># 线性近似</span>
+        <span class="c1"># TODO: 为了避免在 qT 很小时会剧烈抖动而找不到根, 采用了线性近似. 这个还是要改</span>
+        <span class="c1"># 的. 现在去除了乘了两次 fluc 的 bug 后应该就没有这个问题了.</span>
+        <span class="n">omegaT</span> <span class="o">=</span> <span class="n">qT</span> <span class="o">/</span> <span class="p">(</span><span class="mf">1e-4</span><span class="p">)</span> <span class="o">*</span> <span class="n">optimize</span><span class="o">.</span><span class="n">root</span><span class="p">((</span><span class="k">lambda</span> <span class="n">omegaT</span><span class="p">:</span>
+                                                <span class="n">re_qT_omegaT</span><span class="p">(</span><span class="n">omegaT</span><span class="p">,</span>
+                                                            <span class="n">qT</span><span class="o">=</span><span class="mf">1e-4</span><span class="p">)),</span>
+                                                <span class="mi">0</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;xtol&#39;</span><span class="p">:</span>
+                                                            <span class="mf">1e-13</span><span class="p">})</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">omegaT</span>
+
+
+<span class="k">class</span> <span class="nc">Density</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Density, in unit of Temperature</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        mu : chemical potential in unit of temperature, μ / T</span>
+<span class="sd">        a: s-wave scattering length in unit of temperature,</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mu</span> <span class="o">=</span> <span class="n">mu</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">=</span> <span class="n">a</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">debug</span> <span class="o">=</span> <span class="n">debug</span>
+
+    <span class="k">def</span> <span class="nf">_im_diff_mu_s</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qT</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">omegaT</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;d im / d μ, (delta part has no contribution)</span>
+<span class="sd">           验证过, 没有问题! s-wave</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">OT</span> <span class="o">=</span> <span class="n">omegaT</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">mu</span> <span class="o">-</span> <span class="n">qT</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">4</span>
+        <span class="k">if</span> <span class="n">OT</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">dim</span> <span class="o">=</span> <span class="p">(</span><span class="n">_g</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">OT</span><span class="p">),</span> <span class="n">qT</span><span class="p">,</span> <span class="n">muT</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mu</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">OT</span><span class="p">)</span>
+            <span class="n">dim</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">OT</span><span class="p">)</span> <span class="o">*</span> <span class="n">_g_diff_a</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">OT</span><span class="p">),</span> <span class="n">qT</span><span class="p">,</span> <span class="n">muT</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mu</span><span class="p">)</span>
+            <span class="n">dim</span> <span class="o">/=</span> <span class="mi">8</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+            <span class="n">dim</span> <span class="o">+=</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">OT</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">8</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span> <span class="o">*</span> <span class="n">_g_diff_a</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">OT</span><span class="p">),</span> <span class="n">qT</span><span class="p">,</span>
+                                                         <span class="n">muT</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mu</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">dim</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">return</span> <span class="n">dim</span>
+
+    <span class="k">def</span> <span class="nf">_fluc1_dense</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qT</span><span class="p">,</span> <span class="n">omegaT</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Eq. (3.49) and Eq. (3.49)&quot;&quot;&quot;</span>
+        <span class="n">real</span> <span class="o">=</span> <span class="n">Gamma_0_re</span><span class="p">(</span><span class="n">q</span><span class="o">=</span><span class="n">qT</span><span class="p">,</span> <span class="n">omega</span><span class="o">=</span><span class="n">omegaT</span><span class="p">,</span> <span class="n">mu</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mu</span><span class="p">,</span>
+                          <span class="n">a</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="p">)</span>
+        <span class="n">imag</span> <span class="o">=</span> <span class="n">Gamma_0_im</span><span class="p">(</span><span class="n">q</span><span class="o">=</span><span class="n">qT</span><span class="p">,</span> <span class="n">omega</span><span class="o">=</span><span class="n">omegaT</span><span class="p">,</span> <span class="n">mu</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mu</span><span class="p">)</span>
+
+        <span class="n">volume_elem</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+
+        <span class="n">diff_re</span> <span class="o">=</span> <span class="n">derivative</span><span class="p">((</span><span class="k">lambda</span> <span class="n">mu</span><span class="p">:</span> <span class="n">Gamma_0_re</span><span class="p">(</span><span class="n">q</span><span class="o">=</span><span class="n">qT</span><span class="p">,</span> <span class="n">omega</span><span class="o">=</span><span class="n">omegaT</span><span class="p">,</span> <span class="n">mu</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span>
+                                                    <span class="n">a</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="p">)),</span>
+                             <span class="bp">self</span><span class="o">.</span><span class="n">mu</span><span class="p">,</span> <span class="n">dx</span><span class="o">=</span><span class="mf">.1</span><span class="p">)</span>
+        <span class="n">diff_im</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_im_diff_mu_s</span><span class="p">(</span><span class="n">qT</span><span class="p">,</span> <span class="n">omegaT</span><span class="p">)</span>
+        <span class="n">fluctdens</span> <span class="o">=</span> <span class="n">qT</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">bose</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">omegaT</span><span class="p">)</span>
+        <span class="n">fluctdens</span> <span class="o">*=</span> <span class="p">(</span><span class="n">imag</span><span class="o">*</span><span class="n">diff_re</span> <span class="o">-</span> <span class="n">real</span><span class="o">*</span><span class="n">diff_im</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">imag</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">real</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">fluctdens</span> <span class="o">*</span> <span class="n">volume_elem</span>
+        <span class="k">return</span> <span class="n">res</span>
+
+    <span class="k">def</span> <span class="nf">_fluc1_s</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qT</span><span class="p">,</span> <span class="n">BCS</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; 计算 pair 涨落在连续激发区的贡献 &quot;&quot;&quot;</span>
+        <span class="c1"># 实部为 0 时对应的准粒子激发</span>
+        <span class="n">omega_p</span> <span class="o">=</span> <span class="n">find_omegaT</span><span class="p">(</span><span class="n">qT</span><span class="o">=</span><span class="n">qT</span><span class="p">,</span> <span class="n">muT</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mu</span><span class="p">,</span>
+                              <span class="n">a</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="p">)</span>
+        <span class="c1"># print(&#39;omega p is&#39;, omega_p)</span>
+
+        <span class="k">if</span> <span class="n">BCS</span><span class="p">:</span>
+            <span class="s2">&quot;如果在 BCS 极限下的的话, 连续激发边界的边界有比较重要的贡献&quot;</span>
+            <span class="n">boundary</span> <span class="o">=</span> <span class="n">qT</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">4</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">mu</span>  <span class="c1"># 连续激发的边界</span>
+            <span class="c1"># 从连续激发边界, 到准粒子激发处的贡献</span>
+            <span class="n">int1</span> <span class="o">=</span> <span class="n">integrate</span><span class="o">.</span><span class="n">quad</span><span class="p">((</span><span class="k">lambda</span> <span class="n">omega</span><span class="p">:</span>
+                                   <span class="bp">self</span><span class="o">.</span><span class="n">_fluc1_dense</span><span class="p">(</span><span class="n">qT</span><span class="o">=</span><span class="n">qT</span><span class="p">,</span> <span class="n">omegaT</span><span class="o">=</span><span class="n">omega</span><span class="p">)),</span>
+                                  <span class="n">boundary</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">omega_p</span><span class="p">,</span> <span class="n">epsrel</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">int1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="c1"># 准粒子激发的贡献</span>
+        <span class="n">int3</span> <span class="o">=</span> <span class="n">integrate</span><span class="o">.</span><span class="n">quad</span><span class="p">(</span><span class="k">lambda</span> <span class="n">omega</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fluc1_dense</span><span class="p">(</span><span class="n">qT</span><span class="o">=</span><span class="n">qT</span><span class="p">,</span>
+                                                              <span class="n">omegaT</span><span class="o">=</span><span class="n">omega</span><span class="p">),</span>
+                              <span class="o">-</span><span class="mi">10</span><span class="o">*</span><span class="n">omega_p</span><span class="p">,</span> <span class="mi">11</span><span class="o">*</span><span class="n">omega_p</span><span class="p">,</span> <span class="n">epsrel</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">int1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">int3</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">res</span>
+
+    <span class="k">def</span> <span class="nf">_fluc2_s</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qT</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; use Qi PhD Eq.(3.52) at Tc</span>
+<span class="sd">            pair 涨落的 single pole 部分.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">volume_elem</span> <span class="o">=</span> <span class="n">qT</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">omega_q</span><span class="p">(</span><span class="n">muT</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">find_omegaT</span><span class="p">(</span><span class="n">qT</span><span class="o">=</span><span class="n">qT</span><span class="p">,</span> <span class="n">muT</span><span class="o">=</span><span class="n">muT</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="p">)</span>
+
+        <span class="n">diff</span> <span class="o">=</span> <span class="n">derivative</span><span class="p">(</span><span class="n">omega_q</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">mu</span><span class="p">,</span> <span class="n">dx</span><span class="o">=</span><span class="mf">.1</span><span class="p">)</span>
+        <span class="n">energy</span> <span class="o">=</span> <span class="n">omega_q</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mu</span><span class="p">)</span>  <span class="c1"># qT**2/4  # - 2*muT - aT**2</span>
+        <span class="k">if</span> <span class="n">energy</span> <span class="o">&lt;</span> <span class="n">qT</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">4</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">mu</span><span class="p">:</span>
+            <span class="n">fluc</span> <span class="o">=</span> <span class="n">bose</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">energy</span><span class="p">)</span>
+            <span class="n">fluc</span> <span class="o">*=</span> <span class="o">-</span> <span class="n">diff</span>
+            <span class="n">fluc</span> <span class="o">*=</span> <span class="n">volume_elem</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">fluc</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">return</span> <span class="n">fluc</span>
+
+    <span class="k">def</span> <span class="nf">s_wave_density</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">para</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; n / (T)^(3/2)</span>
+<span class="sd">        Calculate the density.</span>
+
+<span class="sd">        According the interaction strength, we use three different method to</span>
+<span class="sd">        calculate the density.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        muT : float</span>
+<span class="sd">              μ / T</span>
+<span class="sd">        aT : folat</span>
+<span class="sd">             1 / (as * sqrt(T))</span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        n : float</span>
+<span class="sd">            density</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">para</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;SinglePole_StrongBEC&#39;</span><span class="p">:</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">            method [1]: SinglePole_StrongBEC.</span>
+<span class="sd">            In Strong BEC limit, the density are mainly contributed by the</span>
+<span class="sd">            dimers formed by two Fermion.</span>
+
+<span class="sd">            Mathematica code:</span>
+<span class="sd">            Integrate[q^2/(Exp[q^2/4]-1),{q,0,Infinity}]</span>
+<span class="sd">            &gt;&gt; 2 Sqrt[\[Pi]] Zeta[3/2]</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="n">n</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span><span class="o">*</span><span class="n">zeta</span><span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">para</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;SinglePole&#39;</span><span class="p">:</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">            method [2]: SinglePole.</span>
+<span class="sd">            准粒子激发在 q=0 时, ω(q)=0. 因此, 在 μ&lt;0 时, 准粒子激发完</span>
+<span class="sd">            全位于连续激发外, 是孤立的奇点. 此时, 考虑自由费米子(几乎可以忽略) 和 Single</span>
+<span class="sd">            Pole 的 pair 涨落的贡献.</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="n">n_fluc2</span> <span class="o">=</span> <span class="n">integrate</span><span class="o">.</span><span class="n">quad</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_fluc2_s</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">para</span><span class="o">.</span><span class="n">n_fluc2_up</span><span class="p">,</span>
+                                     <span class="n">epsrel</span><span class="o">=</span><span class="n">para</span><span class="o">.</span><span class="n">n_fluc2_epsrel</span><span class="p">)</span>
+            <span class="c1"># 此处也用较低的精度即可. 接近 0 时平滑地走近于一个常数. TODO: 动量积分的下限</span>
+            <span class="c1"># 做了近似, 0 处有bug</span>
+            <span class="n">n_fluc</span> <span class="o">=</span> <span class="n">n_fluc2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">n_free</span> <span class="o">=</span> <span class="n">free_fermion_density</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mu</span><span class="p">)</span>
+            <span class="n">n</span> <span class="o">=</span> <span class="n">n_free</span> <span class="o">+</span> <span class="n">n_fluc</span>
+            <span class="c1"># print(&#39;*************&#39;, n_fxluc, n_free)</span>
+        <span class="k">elif</span> <span class="n">para</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;NSR&#39;</span><span class="p">:</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">            method [3]: NSR.</span>
+<span class="sd">            在 μ&gt;0 时, 准粒子激发几乎位于连续激发内, 在低动量低频率区有尖锐的</span>
+<span class="sd">            准粒子峰贡献.</span>
+<span class="sd">            BEC Unitary侧, 考虑自由费米子 和 pair 涨落(连续激发).&quot;&quot;&quot;</span>
+            <span class="n">n_fluc1</span> <span class="o">=</span> <span class="n">integrate</span><span class="o">.</span><span class="n">quad</span><span class="p">((</span><span class="k">lambda</span> <span class="n">qT</span><span class="p">:</span>
+                                      <span class="bp">self</span><span class="o">.</span><span class="n">_fluc1_s</span><span class="p">(</span><span class="n">qT</span><span class="p">,</span> <span class="n">BCS</span><span class="o">=</span><span class="n">para</span><span class="o">.</span><span class="n">fluc1_BCS</span><span class="p">)),</span>
+                                     <span class="n">para</span><span class="o">.</span><span class="n">n_fluc1_a</span><span class="p">,</span> <span class="n">para</span><span class="o">.</span><span class="n">n_fluc1_b</span><span class="p">,</span>
+                                     <span class="n">epsrel</span><span class="o">=</span><span class="n">para</span><span class="o">.</span><span class="n">n_fluc1_epsrel</span><span class="p">,</span>
+                                     <span class="n">limit</span><span class="o">=</span><span class="n">para</span><span class="o">.</span><span class="n">n_fluc1_limit</span><span class="p">)</span>
+            <span class="n">n_fluc</span> <span class="o">=</span> <span class="n">n_fluc1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">n_free</span> <span class="o">=</span> <span class="n">free_fermion_density</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mu</span><span class="p">)</span>
+            <span class="n">n</span> <span class="o">=</span> <span class="n">n_free</span> <span class="o">+</span> <span class="n">n_fluc</span>
+        <span class="k">return</span> <span class="n">n</span>
+
+
+<span class="k">def</span> <span class="nf">plot_Tc</span><span class="p">(</span><span class="n">aT</span><span class="p">,</span> <span class="n">para</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    aT : scattering length in unit of temperature</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">muT</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">density_T</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">aTi</span> <span class="ow">in</span> <span class="n">aT</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Calculating the results for point a_s*sqrt(T)=&#39;</span><span class="p">,</span>
+              <span class="n">aTi</span><span class="p">,</span> <span class="s1">&#39; START!&#39;</span><span class="p">)</span>
+        <span class="n">muTi</span> <span class="o">=</span> <span class="n">find_muT_at_Tc</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="n">aTi</span><span class="p">)</span>
+        <span class="n">muT</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">muTi</span><span class="p">)</span>
+        <span class="n">density_T</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Density</span><span class="p">(</span><span class="n">mu</span><span class="o">=</span><span class="n">muTi</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="n">aTi</span><span class="p">)</span><span class="o">.</span><span class="n">s_wave_density</span><span class="p">(</span><span class="n">para</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Calculating the results for point a_s*sqrt(T)=&#39;</span><span class="p">,</span>
+              <span class="n">aTi</span><span class="p">,</span> <span class="s1">&#39; FINISH!&#39;</span><span class="p">)</span>
+
+    <span class="n">n_T</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">density_T</span><span class="p">)</span>  <span class="c1"># density in unit of temperature</span>
+    <span class="n">kF</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">n_T</span><span class="p">)</span> <span class="o">**</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># Fermi momentum in unit of temperature</span>
+    <span class="n">EF</span> <span class="o">=</span> <span class="n">kF</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="mi">2</span>  <span class="c1"># Fermi energy in unit of temperature</span>
+    <span class="n">kfas</span> <span class="o">=</span> <span class="n">aT</span> <span class="o">/</span> <span class="n">kF</span>  <span class="c1"># 1 / (k_F * a_s)</span>
+    <span class="n">Tc_EF</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">EF</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kfas</span><span class="p">,</span> <span class="n">Tc_EF</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;This numerical program&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">plot_paper</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The data from the published papers.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">paper_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mf">1.99903</span><span class="p">,</span> <span class="mf">0.016667</span><span class="p">],</span>
+                           <span class="p">[</span><span class="o">-</span><span class="mf">1.59262</span><span class="p">,</span> <span class="mf">0.034058</span><span class="p">],</span>
+                           <span class="p">[</span><span class="o">-</span><span class="mf">1.30582</span><span class="p">,</span> <span class="mf">0.052899</span><span class="p">],</span>
+                           <span class="p">[</span><span class="o">-</span><span class="mf">0.98741</span><span class="p">,</span> <span class="mf">0.084058</span><span class="p">],</span>
+                           <span class="p">[</span><span class="o">-</span><span class="mf">0.73053</span><span class="p">,</span> <span class="mf">0.119565</span><span class="p">],</span>
+                           <span class="p">[</span><span class="o">-</span><span class="mf">0.47717</span><span class="p">,</span> <span class="mf">0.16087</span><span class="p">],</span>
+                           <span class="p">[</span><span class="o">-</span><span class="mf">0.21622</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">],</span>
+                           <span class="p">[</span><span class="o">-</span><span class="mf">0.0841</span><span class="p">,</span> <span class="mf">0.214493</span><span class="p">],</span>
+                           <span class="p">[</span><span class="mf">0.0013</span><span class="p">,</span> <span class="mf">0.222464</span><span class="p">],</span>
+                           <span class="p">[</span><span class="mf">0.10593</span><span class="p">,</span> <span class="mf">0.228986</span><span class="p">],</span>
+                           <span class="p">[</span><span class="mf">0.22578</span><span class="p">,</span> <span class="mf">0.231884</span><span class="p">],</span>
+                           <span class="p">[</span><span class="mf">0.35702</span><span class="p">,</span> <span class="mf">0.231159</span><span class="p">],</span>
+                           <span class="p">[</span><span class="mf">0.4381</span><span class="p">,</span> <span class="mf">0.231159</span><span class="p">],</span>
+                           <span class="p">[</span><span class="mf">0.56522</span><span class="p">,</span> <span class="mf">0.226087</span><span class="p">],</span>
+                           <span class="p">[</span><span class="mf">0.68084</span><span class="p">,</span> <span class="mf">0.222464</span><span class="p">],</span>
+                           <span class="p">[</span><span class="mf">0.83905</span><span class="p">,</span> <span class="mf">0.221014</span><span class="p">],</span>
+                           <span class="p">[</span><span class="mf">1.02812</span><span class="p">,</span> <span class="mf">0.218841</span><span class="p">],</span>
+                           <span class="p">[</span><span class="mf">1.19024</span><span class="p">,</span> <span class="mf">0.218116</span><span class="p">],</span>
+                           <span class="p">[</span><span class="mf">1.3524</span><span class="p">,</span> <span class="mf">0.218116</span><span class="p">],</span>
+                           <span class="p">[</span><span class="mf">1.41418</span><span class="p">,</span> <span class="mf">0.218116</span><span class="p">]</span>
+                           <span class="p">])</span>
+    <span class="n">t_star</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mf">1.99602</span><span class="p">,</span> <span class="mf">0.029288</span><span class="p">],</span>
+                       <span class="p">[</span><span class="o">-</span><span class="mf">1.76099</span><span class="p">,</span> <span class="mf">0.038028</span><span class="p">],</span>
+                       <span class="p">[</span><span class="o">-</span><span class="mf">1.53813</span><span class="p">,</span> <span class="mf">0.052065</span><span class="p">],</span>
+                       <span class="p">[</span><span class="o">-</span><span class="mf">1.33351</span><span class="p">,</span> <span class="mf">0.070343</span><span class="p">],</span>
+                       <span class="p">[</span><span class="o">-</span><span class="mf">1.09651</span><span class="p">,</span> <span class="mf">0.102372</span><span class="p">],</span>
+                       <span class="p">[</span><span class="o">-</span><span class="mf">0.86968</span><span class="p">,</span> <span class="mf">0.147815</span><span class="p">],</span>
+                       <span class="p">[</span><span class="o">-</span><span class="mf">0.62669</span><span class="p">,</span> <span class="mf">0.217954</span><span class="p">],</span>
+                       <span class="p">[</span><span class="o">-</span><span class="mf">0.48093</span><span class="p">,</span> <span class="mf">0.271542</span><span class="p">],</span>
+                       <span class="p">[</span><span class="o">-</span><span class="mf">0.26232</span><span class="p">,</span> <span class="mf">0.365333</span><span class="p">]</span>
+                       <span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">paper_data</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">paper_data</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span>
+             <span class="n">label</span><span class="o">=</span><span class="s1">&#39;results from published papers&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_star</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">t_star</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;--&#39;</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">Para</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; 指定一些数值计算中需要调的参数.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">n_fluc2_up</span><span class="p">,</span>
+                 <span class="n">n_fluc2_limit</span><span class="p">,</span> <span class="n">n_fluc2_epsrel</span><span class="p">,</span>
+                 <span class="n">n_fluc1_a</span><span class="p">,</span> <span class="n">n_fluc1_b</span><span class="p">,</span> <span class="n">n_fluc1_limit</span><span class="p">,</span> <span class="n">n_fluc1_epsrel</span><span class="p">,</span>
+                 <span class="n">fluc1_BCS</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Parameters</span>
+<span class="sd">        method : the method to be used when calculate the density.</span>
+<span class="sd">                 There are three method can be use:</span>
+<span class="sd">                 &#39;SinglePole_StrongBEC&#39;, &#39;SinglePole&#39;, &#39;NSR&#39;</span>
+<span class="sd">        fluc1_BCS: bool</span>
+<span class="sd">                 如果在 BCS 极限下的的话, 连续激发边界的边界有比较重要的贡献.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">method</span> <span class="o">=</span> <span class="n">method</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_fluc2_up</span> <span class="o">=</span> <span class="n">n_fluc2_up</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_fluc2_limit</span> <span class="o">=</span> <span class="n">n_fluc2_limit</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_fluc2_epsrel</span> <span class="o">=</span> <span class="n">n_fluc2_epsrel</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_fluc1_a</span> <span class="o">=</span> <span class="n">n_fluc1_a</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_fluc1_b</span> <span class="o">=</span> <span class="n">n_fluc1_b</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_fluc1_limit</span> <span class="o">=</span> <span class="n">n_fluc1_limit</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_fluc1_epsrel</span> <span class="o">=</span> <span class="n">n_fluc1_epsrel</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">fluc1_BCS</span> <span class="o">=</span> <span class="n">fluc1_BCS</span>
+
+
+<span class="k">def</span> <span class="nf">runscp</span><span class="p">():</span>
+    <span class="c1"># ============ Single pole 近似下, aT 取 1.5~4 (取 10 个点)是可以的. ==========</span>
+    <span class="n">paraSinglePole</span> <span class="o">=</span> <span class="n">Para</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;SinglePole&quot;</span><span class="p">,</span>
+                              <span class="n">n_fluc2_limit</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+                              <span class="n">n_fluc2_up</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+                              <span class="n">n_fluc2_epsrel</span><span class="o">=</span><span class="mf">1e-2</span><span class="p">,</span>
+                              <span class="n">n_fluc1_a</span><span class="o">=</span><span class="mf">2e-2</span><span class="p">,</span> <span class="n">n_fluc1_b</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+                              <span class="n">n_fluc1_limit</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">n_fluc1_epsrel</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">,</span>
+                              <span class="n">fluc1_BCS</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">plot_Tc</span><span class="p">(</span><span class="n">aT</span><span class="o">=</span><span class="p">[</span><span class="mf">1.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="n">para</span><span class="o">=</span><span class="n">paraSinglePole</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">paraNSR</span> <span class="o">=</span> <span class="n">Para</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;NSR&quot;</span><span class="p">,</span>
+                   <span class="n">n_fluc2_limit</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+                   <span class="n">n_fluc2_up</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+                   <span class="n">n_fluc2_epsrel</span><span class="o">=</span><span class="mf">1e-2</span><span class="p">,</span>
+                   <span class="n">n_fluc1_a</span><span class="o">=</span><span class="mf">2e-2</span><span class="p">,</span> <span class="n">n_fluc1_b</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+                   <span class="n">n_fluc1_limit</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">n_fluc1_epsrel</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">,</span>
+                   <span class="n">fluc1_BCS</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="c1"># plot_Tc(aT=[.1, .3, 0.5, 0.8, 1.0], para=paraNSR, debug=True)</span>
+    <span class="n">plot_Tc</span><span class="p">(</span><span class="n">aT</span><span class="o">=</span><span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">],</span> <span class="n">para</span><span class="o">=</span><span class="n">paraNSR</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">paraNSR_BCS</span> <span class="o">=</span> <span class="n">Para</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;NSR&quot;</span><span class="p">,</span>
+                       <span class="n">n_fluc2_limit</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+                       <span class="n">n_fluc2_up</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+                       <span class="n">n_fluc2_epsrel</span><span class="o">=</span><span class="mf">1e-2</span><span class="p">,</span>
+                       <span class="n">n_fluc1_a</span><span class="o">=</span><span class="mf">2e-2</span><span class="p">,</span> <span class="n">n_fluc1_b</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+                       <span class="n">n_fluc1_limit</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">n_fluc1_epsrel</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">,</span>
+                       <span class="n">fluc1_BCS</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="c1"># plot_Tc(aT=[-5, -3, -1], para=paraNSR_BCS, debug=True)</span>
+    <span class="n">plot_Tc</span><span class="p">(</span><span class="n">aT</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mf">.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">.1</span><span class="p">],</span> <span class="n">para</span><span class="o">=</span><span class="n">paraNSR_BCS</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="c1"># plot_Tc(aT=[-5], para=paraNSR_BCS, debug=True)</span>
+
+    <span class="n">plot_paper</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$1/(k_F a_s)$&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$T_C / \epsilon_F$&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+
+<span class="n">runscp</span><span class="p">()</span>
+</code></pre></div><pre>Calculating the results for point a_s*sqrt(T)= 1.5  START!
 </pre>
 <pre>/var/folders/51/4rnfl9_93gv1fhpymn1lsz_r0000gn/T/ipykernel_37194/4289401143.py:419: DeprecationWarning: scipy.misc.derivative is deprecated in SciPy v1.10.0; and will be completely removed in SciPy v1.12.0. You may consider using findiff: https://github.com/maroba/findiff or numdifftools: https://github.com/pbrod/numdifftools
   diff = derivative(omega_q, self.mu, dx=.1)
@@ -808,10 +802,10 @@ Calculating the results for point a_s*sqrt(T)= -0.1  FINISH!
 </section>
 
 <section class="post-meta">
-    <p>标签:
-        <a class="post-link" href="https://zqw.ink/tag/nsr.html">NSR</a>
-        <a class="post-link" href="https://zqw.ink/tag/s-wave.html">s-wave</a>
-        <a class="post-link" href="https://zqw.ink/tag/bec-bcs-crossover.html">BEC-BCS crossover</a>
+    <p>
+        <a class="post-link" href="/tag/nsr.html">#NSR</a>
+        <a class="post-link" href="/tag/s-wave.html">#s-wave</a>
+        <a class="post-link" href="/tag/bec-bcs-crossover.html">#BEC-BCS crossover</a>
     </p>
 </section>
 

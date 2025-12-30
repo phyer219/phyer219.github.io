@@ -6,17 +6,12 @@
   <meta charset="utf-8" />
   <meta name="generator" content="Pelican" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link
-    href="https://zqw.ink/feeds/all.atom.xml"
-    type="application/atom+xml" rel="alternate" title="从冰上的水 Full Atom Feed" />
-  <link
-    href="https://zqw.ink/feeds/zhuan-ye-bi-ji.atom.xml"
-    type="application/atom+xml" rel="alternate" title="从冰上的水 Categories Atom Feed" />
-  <link rel="stylesheet" type="text/css" href="https://zqw.ink/theme/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="/theme/css/style.css" />
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Serif+SC&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.6.1/github-markdown.min.css" integrity="sha512-wpdV3v8V8vWajD1kH8rI1UO1H2q9TQ3s8o1mG7lH8fS1dZ+3q1B1p4lH2tF8rQm2u0n8oV6rN3tV4nQWmY4nTw==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <!--fonts end  -->
   <!-- highlight.js -->
@@ -83,17 +78,20 @@
       <nav>
         <ul>
             <li>
-              <a href="/">首页</a>
+              <a href="/">Home</a>
             </li>
             <li>
-              <a href="/categories.html">分类</a>
+              <a href="/category/physics">Physics</a>
             </li>
             <li>
-              <a href="/tags.html">标签</a>
+              <a href="/category/blog">Blog</a>
             </li>
-              <li>
-                <a href="https://zqw.ink/pages/about.html" >关于</a>
-              </li>
+            <li>
+              <a href="/category/coding">Coding</a>
+            </li>
+            <li>
+              <a href="/archives">All</a>
+            </li>
           </ul>
       </nav>
       <button id="theme-toggle" aria-label="切换到深色模式" title="切换主题">
@@ -101,9 +99,6 @@
         <i class="theme-icon icon-moon fa-solid fa-moon" aria-hidden="true"></i>
       </button>
       <div class="rss">
-          <a href="https://zqw.ink/feeds/all.atom.xml" aria-label="Atom 订阅">
-            <i class="fa-solid fa-rss" aria-hidden="true"></i>
-          </a>
       </div>
     </div>
   </header>
@@ -112,40 +107,40 @@
 <h1 class="post-title">Symmetry and Degeneration</h1>
 
 <section class="post-meta">
-    <p>发表于: 2024-11-08 ||</p>
-    <p>分类:<a class="post-link" href="https://zqw.ink/category/zhuan-ye-bi-ji.html">专业笔记</a> ||</p>
+    <p>2024-11-08</p>
+    <p>-<a class="post-link" href="/category/zhuan-ye-bi-ji.html">专业笔记</a></p>
 </section>
 
-<section class="post-content">
+<section class="markdown-body">
   <h2>群的不可约表示，哈密顿量，态矢</h2>
 <h3>系统(哈密顿量)的对称性</h3>
-<p>哈密顿量 \(\hat{H}\) 的所有对称性构成群 \(G\). \(H\) 在 \(G\) 中的任意一个群元 \(g\) 的变换下保持不变.
-群 \(G\) 中的任意群元 \(g\) 都满足</p>
-\[
+<p>哈密顿量 $\hat{H}$ 的所有对称性构成群 $G$. $H$ 在 $G$ 中的任意一个群元 $g$ 的变换下保持不变.
+群 $G$ 中的任意群元 $g$ 都满足
+$$
 g \hat{H} g^{-1} = \hat{H}, \quad\mathrm{or}\quad g \hat{H} = \hat{H} g
-\]
-<p>也就是说 \(g\) 和 \({H}\) 对易.</p>
-<p>哈密顿量 \(\hat{H}\) 也可以看成是一个变化操作, 它和群 \(G\) 作用在相同的空间, 但它不在群 \(G\) 中. 它的物理意义是系统的时间演化算符的生成元, 即薛定谔方程,</p>
-\[
+$$
+也就是说 $g$ 和 ${H}$ 对易.</p>
+<p>哈密顿量 $\hat{H}$ 也可以看成是一个变化操作, 它和群 $G$ 作用在相同的空间, 但它不在群 $G$ 中. 它的物理意义是系统的时间演化算符的生成元, 即薛定谔方程,
+$$
 \mathrm{i}\frac{\partial}{\partial t}|\psi(t)\rangle = \hat{H} |\psi(t)\rangle
-\]
+$$</p>
 <h3>群的表示与基底</h3>
 <p>有限群有幺正表示(finite groups have unitary representations (Zee, 2016, p. 96)).
 下面考虑的都群的幺正表示.</p>
-<p>选取 \(\hat{H}\) 的本征态作为一组基底,哈密顿量在这组基底下的表示矩阵 \(H\) (\(H\) 是矩阵, \(\hat{H}\) 是算符) 是对角的.
-同时这组基底也负载了群的表示, 群元 \(g\) 的表示矩阵 \(D(g)\).</p>
+<p>选取 $\hat{H}$ 的本征态作为一组基底,哈密顿量在这组基底下的表示矩阵 $H$ ($H$ 是矩阵, $\hat{H}$ 是算符) 是对角的.
+同时这组基底也负载了群的表示, 群元 $g$ 的表示矩阵 $D(g)$.</p>
 <h3>一维表示</h3>
-<p>一维的希尔伯特空间, 基底只有一个, 记为 \(|1 \rangle\) , 这个希尔伯特空间中所有的都是这个态处在不同的相位上,标记一个态只需要用相位 \(\theta\) 这一个参数</p>
-\[
+<p>一维的希尔伯特空间, 基底只有一个, 记为 $|1 \rangle$ , 这个希尔伯特空间中所有的都是这个态处在不同的相位上,标记一个态只需要用相位 $\theta$ 这一个参数
+$$
 |\theta\rangle = e^{\mathrm{i}\theta}|1\rangle
-\]
-<p>对于一维的希尔伯特空间, 哈密顿量只能是一个常数. 此时系统具有 \(U(1)\) 对称性. \(U(1)\) 是一个阿贝尔的群, 只有一维表示. 基底 \(\{|1 \rangle\}\) 负载这个以为表示, 群元 \(g(\theta)\) 在这个基底下的表示为</p>
-\[
+$$
+对于一维的希尔伯特空间, 哈密顿量只能是一个常数. 此时系统具有 $U(1)$ 对称性. $U(1)$ 是一个阿贝尔的群, 只有一维表示. 基底 ${|1 \rangle}$ 负载这个以为表示, 群元 $g(\theta)$ 在这个基底下的表示为
+$$
 D[g(\theta)]  = e^{\mathrm{i}\theta}
-\]
-<p>对于给定群元 \(g(\theta)\), 它是一个数.</p>
+$$
+对于给定群元 $g(\theta)$, 它是一个数.</p>
 <h2>二维表示</h2>
-<p>基底有两个, 记为 \(\{|\uparrow \rangle, |\downarrow\rangle\}\).</p>
+<p>基底有两个, 记为 ${|\uparrow \rangle, |\downarrow\rangle}$.</p>
 <h2>Reference</h2>
 <ul>
 <li>Zee, A. Group Theory in a Nutshell for Physicists. (Princeton University Press, Princeton, 2016).</li>
@@ -154,10 +149,10 @@ D[g(\theta)]  = e^{\mathrm{i}\theta}
 </section>
 
 <section class="post-meta">
-    <p>标签:
-        <a class="post-link" href="https://zqw.ink/tag/symmetry.html">symmetry</a>
-        <a class="post-link" href="https://zqw.ink/tag/degeneration.html">degeneration</a>
-        <a class="post-link" href="https://zqw.ink/tag/group-theory.html">group theory</a>
+    <p>
+        <a class="post-link" href="/tag/symmetry.html">#symmetry</a>
+        <a class="post-link" href="/tag/degeneration.html">#degeneration</a>
+        <a class="post-link" href="/tag/group-theory.html">#group theory</a>
     </p>
 </section>
 
