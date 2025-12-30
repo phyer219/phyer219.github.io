@@ -125,9 +125,30 @@ nav a {
   font-weight: bold;
 }
 
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 0.35rem 0.5rem;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.nav-toggle i {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
 nav a:hover,
 nav a:focus-visible {
   color: var(--primary);
+}
+
+.header-actions {
+  display: inline-flex;
+  align-items: center;
+  margin-left: auto;
 }
 
 #theme-toggle {
@@ -166,6 +187,51 @@ html[data-theme="light"] .icon-moon {
   display: none;
 }
 
+@media (max-width: 720px) {
+  #header-container {
+    justify-content: space-between;
+    padding: 0 0.75rem;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: var(--surface);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-6px);
+    pointer-events: none;
+    transition: max-height 0.25s ease, opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  nav.is-open {
+    max-height: 60vh;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 0.5rem 1rem 1rem;
+  }
+
+  nav li {
+    margin: 0.25rem 0;
+  }
+}
+
 .rss {
   margin-left: 0.75rem;
 }
@@ -186,6 +252,8 @@ main {
   margin: 8px;
   width: 100%;
   max-width: 50rem;
+  padding: 0 0.75rem;
+  box-sizing: border-box;
 
   display: flex;
   flex-direction: column;
@@ -295,10 +363,22 @@ section.post-content{
 
 .markdown-body {
   width: 100%;
+  margin: 0;
   padding: 1.25rem 1.5rem;
   border: 1px solid var(--border);
   border-radius: 0.8rem;
   background-color: var(--surface);
+  box-sizing: border-box;
+}
+
+@media (max-width: 720px) {
+  main {
+    padding: 0 0.9rem;
+  }
+
+  .markdown-body {
+    margin: 0;
+  }
 }
 
 .markdown-body h1,

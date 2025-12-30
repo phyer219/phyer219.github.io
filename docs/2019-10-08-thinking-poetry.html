@@ -78,7 +78,10 @@
 <body>
   <header>
     <div id="header-container">
-      <nav>
+      <button id="nav-toggle" class="nav-toggle" aria-label="打开菜单" aria-expanded="false">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+      <nav id="site-nav">
         <ul>
             <li>
               <a href="/">Home</a>
@@ -97,14 +100,16 @@
             </li>
           </ul>
       </nav>
-      <button id="theme-toggle" aria-label="切换到深色模式" title="切换主题">
-        <i class="theme-icon icon-sun fa-solid fa-sun" aria-hidden="true"></i>
-        <i class="theme-icon icon-moon fa-solid fa-moon" aria-hidden="true"></i>
-      </button>
-      <div class="rss">
-          <a href="https://zqw.ink/feeds/all.atom.xml" aria-label="Atom 订阅">
-            <i class="fa-solid fa-rss" aria-hidden="true"></i>
-          </a>
+      <div class="header-actions">
+        <button id="theme-toggle" aria-label="切换到深色模式" title="切换主题">
+          <i class="theme-icon icon-sun fa-solid fa-sun" aria-hidden="true"></i>
+          <i class="theme-icon icon-moon fa-solid fa-moon" aria-hidden="true"></i>
+        </button>
+        <div class="rss">
+            <a href="https://zqw.ink/feeds/all.atom.xml" aria-label="Atom 订阅">
+              <i class="fa-solid fa-rss" aria-hidden="true"></i>
+            </a>
+        </div>
       </div>
     </div>
   </header>
@@ -205,6 +210,45 @@
         }, 1500);
       });
       pre.appendChild(btn);
+    });
+  })();
+  </script>
+  <script>
+  (function() {
+    const toggle = document.getElementById('nav-toggle');
+    const nav = document.getElementById('site-nav');
+    if (!toggle || !nav) return;
+
+    function closeNav() {
+      nav.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', '打开菜单');
+    }
+
+    function openNav() {
+      nav.classList.add('is-open');
+      toggle.setAttribute('aria-expanded', 'true');
+      toggle.setAttribute('aria-label', '关闭菜单');
+    }
+
+    toggle.addEventListener('click', function (event) {
+      event.stopPropagation();
+      const isOpen = nav.classList.contains('is-open');
+      if (isOpen) {
+        closeNav();
+      } else {
+        openNav();
+      }
+    });
+
+    nav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', closeNav);
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!nav.classList.contains('is-open')) return;
+      if (nav.contains(event.target) || toggle.contains(event.target)) return;
+      closeNav();
     });
   })();
   </script>
