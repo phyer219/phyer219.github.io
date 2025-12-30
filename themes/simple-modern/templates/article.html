@@ -12,7 +12,11 @@
   {% endif %}
 
   {% if article.description %}
-    <meta name="description" content="{{article.description}}" />
+    <meta name="description" content="{{ article.description }}" />
+  {% elif article.summary %}
+    <meta name="description" content="{{ article.summary|striptags|truncate(160) }}" />
+  {% else %}
+    <meta name="description" content="{{ article.content|striptags|truncate(160) }}" />
   {% endif %}
 
   {% for tag in article.tags %}
