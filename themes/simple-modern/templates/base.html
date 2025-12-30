@@ -51,6 +51,15 @@
     type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} Tags RSS Feed" />
   {% endif %}
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/style.css" />
+  <!-- SEO: site-level structured data (WebSite) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "{{ SITENAME|striptags }}",
+    "url": "{{ SITEURL }}/"
+  }
+  </script>
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
