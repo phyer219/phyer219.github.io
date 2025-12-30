@@ -774,17 +774,9 @@ wp search-replace 'http://xxx.xxx' 'http://xxx.xxx.xxx.xxx:xxxx' --all-tables --
 
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;致谢&lt;/h2&gt;
-&lt;p&gt;所有为 ChatGPT 提供训练素材的人。&lt;/p&gt;</content><category term="coding"/><category term="SELinux"/><category term="RockyLinux"/></entry><entry><title>研六一年，延期一年，鹅城半载———从品园到百草园，再从百草园到龙光城（连载中……）</title><link href="https://zqw.ink/2025-04-06-thinking-baicaoyuan_huizhou.html" rel="alternate"/><published>2025-04-06T00:00:00+08:00</published><updated>2025-04-06T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-04-06:/2025-04-06-thinking-baicaoyuan_huizhou.html</id><summary type="html">&lt;!-- toc --&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h2&gt;序&lt;/h2&gt;
+&lt;p&gt;所有为 ChatGPT 提供训练素材的人。&lt;/p&gt;</content><category term="coding"/><category term="SELinux"/><category term="RockyLinux"/></entry><entry><title>研六一年，延期一年，鹅城半载———从品园到百草园，再从百草园到龙光城（连载中……）</title><link href="https://zqw.ink/2025-04-06-blog-baicaoyuan_huizhou.html" rel="alternate"/><published>2025-04-06T00:00:00+08:00</published><updated>2025-04-06T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-04-06:/2025-04-06-blog-baicaoyuan_huizhou.html</id><summary type="html">&lt;h2&gt;序&lt;/h2&gt;
 &lt;p&gt;从 2022 年 9 月 14 日的《研五下学期总结》，已经过去了两年半的时间。&lt;/p&gt;
-&lt;p&gt;遗憾的是，并没有如《研五下学期总结》中所说，能够按时毕 …&lt;/p&gt;</summary><content type="html">&lt;!-- toc --&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h2&gt;序&lt;/h2&gt;
+&lt;p&gt;遗憾的是，并没有如《研五下学期总结》中所说，能够按时毕 …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;序&lt;/h2&gt;
 &lt;p&gt;从 2022 年 9 月 14 日的《研五下学期总结》，已经过去了两年半的时间。&lt;/p&gt;
 &lt;p&gt;遗憾的是，并没有如《研五下学期总结》中所说，能够按时毕业。&lt;/p&gt;
 &lt;p&gt;令人满意的是，找到了一个心仪的博后。&lt;/p&gt;
@@ -852,7 +844,7 @@ wp search-replace 'http://xxx.xxx' 'http://xxx.xxx.xxx.xxx:xxxx' --all-tables --
 &lt;p&gt;毕业之后暑假去了重庆冷原子。吃重庆火锅，去重庆的各个景点玩，在街头演出的地方点歌，这也算是毕业旅行吧。&lt;/p&gt;
 &lt;p&gt;8月份的时候从北京回家，去济南找了老师口中的好学生刘老板。这也是毕业旅行的一部分的。&lt;/p&gt;
 &lt;h2&gt;鹅城 GAP&lt;/h2&gt;
-&lt;p&gt;8 月底回到百草园，在进行了一个月的告别之后，我和舒哥先行一步，在 9 月份准备南下。&lt;/p&gt;</content><category term="想说"/><category term="总结"/><category term="延期"/><category term="毕业"/><category term="鹅城"/><category term="惠州"/></entry><entry><title>NSR 计算 s-wave BEC-BCS crossover 的临界温度</title><link href="https://zqw.ink/2024-11-13-physics-nsr-tc-s-wave.html" rel="alternate"/><published>2024-11-13T00:00:00+08:00</published><updated>2024-11-13T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2024-11-13:/2024-11-13-physics-nsr-tc-s-wave.html</id><summary type="html">&lt;h2&gt;Sokhotski-Plemelj 积分&lt;/h2&gt;
+&lt;p&gt;8 月底回到百草园，在进行了一个月的告别之后，我和舒哥先行一步，在 9 月份准备南下。&lt;/p&gt;</content><category term="blog"/><category term="总结"/><category term="深圳"/><category term="延期"/><category term="毕业"/><category term="鹅城"/><category term="惠州"/></entry><entry><title>NSR 计算 s-wave BEC-BCS crossover 的临界温度</title><link href="https://zqw.ink/2024-11-13-physics-nsr-tc-s-wave.html" rel="alternate"/><published>2024-11-13T00:00:00+08:00</published><updated>2024-11-13T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2024-11-13:/2024-11-13-physics-nsr-tc-s-wave.html</id><summary type="html">&lt;h2&gt;Sokhotski-Plemelj 积分&lt;/h2&gt;
 &lt;p&gt;根据 Sokhotski-Plemelj 定理有
 \begin{align}
   \frac{1}{x + \mathrm{i}0^+}
@@ -14204,7 +14196,25 @@ v_{\mathrm{g}} =&amp; \left. \frac{\mathrm{d}\omega}{\mathrm{d}k} \right|_{k_0}
 &lt;h2&gt;总&lt;/h2&gt;
 
 &lt;p&gt;按时开学的愿望达成了. 没别的多说的, 希望多加把劲, 科研有所进展. 多么朴实的愿望.&lt;/p&gt;
-</content><category term="想说"/><category term="总结"/></entry><entry><title>欢迎来到 Emacs 主义至上教室(lisp note -_-)</title><link href="https://zqw.ink/2021-01-20-coding-lisp.html" rel="alternate"/><published>2021-01-20T00:00:00+08:00</published><updated>2021-01-20T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-01-20:/2021-01-20-coding-lisp.html</id><summary type="html">
+</content><category term="想说"/><category term="总结"/></entry><entry><title>穿网线</title><link href="https://zqw.ink/2021-02-09-blog-net_wire.html" rel="alternate"/><published>2021-02-09T00:00:00+08:00</published><updated>2021-02-09T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-02-09:/2021-02-09-blog-net_wire.html</id><summary type="html">&lt;h2&gt;2021-02-09 星期二&lt;/h2&gt;
+&lt;p&gt;天气: 睛 Entered on [2021-02-09 二 22:50]&lt;/p&gt;
+&lt;p&gt;今天去奶奶家了.&lt;/p&gt;
+&lt;p&gt;回老家玩了一下午, 看了看初中的物理课本.&lt;/p&gt;
+&lt;p&gt;下午在车里把盖侬打了.&lt;/p&gt;
+&lt;p&gt;晚上 …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;2021-02-09 星期二&lt;/h2&gt;
+&lt;p&gt;天气: 睛 Entered on [2021-02-09 二 22:50]&lt;/p&gt;
+&lt;p&gt;今天去奶奶家了.&lt;/p&gt;
+&lt;p&gt;回老家玩了一下午, 看了看初中的物理课本.&lt;/p&gt;
+&lt;p&gt;下午在车里把盖侬打了.&lt;/p&gt;
+&lt;p&gt;晚上穿网线, 穿了一晚上也没穿过来. 最后把红米路由器设成中继解决了(之前怎么没想到...)&lt;/p&gt;
+&lt;p&gt;放弃 openwrt 了, 学不到什么实质性的东西.&lt;/p&gt;</content><category term="blog"/><category term="日记"/><category term="org-mode 日记"/><category term="openwrt"/></entry><entry><title>搞 openwrt，失败</title><link href="https://zqw.ink/2021-02-08-blog-openwrt.html" rel="alternate"/><published>2021-02-08T00:00:00+08:00</published><updated>2021-02-08T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-02-08:/2021-02-08-blog-openwrt.html</id><content type="html">&lt;h2&gt;2021-02-08 星期一&lt;/h2&gt;
+&lt;p&gt;天气: 睛 Entered on [2021-02-08 一 23:26]&lt;/p&gt;
+&lt;p&gt;在 rasberry pi 4b 上搞 openwrt 没搞好, 头疼.&lt;/p&gt;
+&lt;p&gt;还看了一些编译原理.&lt;/p&gt;</content><category term="blog"/><category term="日记"/><category term="org-mode 日记"/><category term="openwrt"/><category term="编译原理"/></entry><entry><title>扛管子，学 org-mode</title><link href="https://zqw.ink/2021-02-07-blog-kang_guan_zi.html" rel="alternate"/><published>2021-02-07T00:00:00+08:00</published><updated>2021-02-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-02-07:/2021-02-07-blog-kang_guan_zi.html</id><content type="html">&lt;h2&gt;*** 2021-02-07 星期日&lt;/h2&gt;
+&lt;p&gt;天气: 睛 Entered on [2021-02-07 日 22:21]&lt;/p&gt;
+&lt;p&gt;今天第一天用 org-mode 写日记.&lt;/p&gt;
+&lt;p&gt;主要学习了 org-mode 的 capture.&lt;/p&gt;
+&lt;p&gt;回家扛架管干了一些活.&lt;/p&gt;</content><category term="blog"/><category term="日记"/><category term="org-mode 日记"/><category term="扛管子"/></entry><entry><title>欢迎来到 Emacs 主义至上教室(lisp note -_-)</title><link href="https://zqw.ink/2021-01-20-coding-lisp.html" rel="alternate"/><published>2021-01-20T00:00:00+08:00</published><updated>2021-01-20T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-01-20:/2021-01-20-coding-lisp.html</id><summary type="html">
 &lt;h2&gt;Intro&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class="language-lisp"&gt;  i i i i i i i       ooooo    o        ooooooo   ooooo   ooooo
@@ -15637,7 +15647,30 @@ S(t) = \int_{t_0}^t G(t, t') F(t') \mathrm{d}t'
 &lt;/ul&gt;
 &lt;h1&gt;知识背景&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;罗宾汉&lt;/strong&gt;（英語：&lt;strong&gt;Robin Hood&lt;/strong&gt;）是&lt;a href="https://zh.wikipedia.org/wiki/英國"&gt;英國&lt;/a&gt;民间传说中的&lt;a href="https://zh.wikipedia.org/wiki/俠盜"&gt;俠盜&lt;/a&gt;. 他武艺出众、机智勇敢, 仇视官吏和教士, 是一位劫富濟貧、行俠仗義的綠林&lt;a href="https://zh.wikipedia.org/wiki/英雄"&gt;英雄&lt;/a&gt;. 传说他住在&lt;a href="https://zh.wikipedia.org/wiki/诺丁汉"&gt;诺丁汉&lt;/a&gt;&lt;a href="https://zh.wikipedia.org/wiki/雪伍德森林"&gt;雪伍德森林&lt;/a&gt;（Sherwood Forest）. &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;主日學&lt;/strong&gt;（英語：Sunday school）是&lt;a href="https://zh.wikipedia.org/wiki/基督教"&gt;基督教&lt;/a&gt;&lt;a href="https://zh.wikipedia.org/wiki/教會"&gt;教會&lt;/a&gt;於&lt;a href="https://zh.wikipedia.org/wiki/主日"&gt;主日&lt;/a&gt;（通常即&lt;a href="https://zh.wikipedia.org/wiki/星期日"&gt;星期日&lt;/a&gt;，部分教派为安息日）早上在&lt;a href="https://zh.wikipedia.org/wiki/教堂"&gt;教堂&lt;/a&gt;或其他场所進行的宗教教育，一般在&lt;a href="https://zh.wikipedia.org/wiki/礼拜"&gt;主日敬拜&lt;/a&gt;之前或之後舉行。主日學的形式多樣化，因教會而異，內容多以查&lt;a href="https://zh.wikipedia.org/wiki/聖經"&gt;經&lt;/a&gt;、教授基本聖經內容為主，並由教會所指定的小組長、執事、傳道或&lt;a href="https://zh.wikipedia.org/wiki/牧師"&gt;牧師&lt;/a&gt;講道。&lt;/p&gt;</content><category term="专业笔记"/><category term="Green's function"/><category term="George Green"/></entry><entry><title>围道积分进阶</title><link href="https://zqw.ink/2020-12-07-physics-contourintegral.html" rel="alternate"/><published>2020-12-07T00:00:00+08:00</published><updated>2020-12-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-12-07:/2020-12-07-physics-contourintegral.html</id><summary type="html">
+&lt;p&gt;&lt;strong&gt;主日學&lt;/strong&gt;（英語：Sunday school）是&lt;a href="https://zh.wikipedia.org/wiki/基督教"&gt;基督教&lt;/a&gt;&lt;a href="https://zh.wikipedia.org/wiki/教會"&gt;教會&lt;/a&gt;於&lt;a href="https://zh.wikipedia.org/wiki/主日"&gt;主日&lt;/a&gt;（通常即&lt;a href="https://zh.wikipedia.org/wiki/星期日"&gt;星期日&lt;/a&gt;，部分教派为安息日）早上在&lt;a href="https://zh.wikipedia.org/wiki/教堂"&gt;教堂&lt;/a&gt;或其他场所進行的宗教教育，一般在&lt;a href="https://zh.wikipedia.org/wiki/礼拜"&gt;主日敬拜&lt;/a&gt;之前或之後舉行。主日學的形式多樣化，因教會而異，內容多以查&lt;a href="https://zh.wikipedia.org/wiki/聖經"&gt;經&lt;/a&gt;、教授基本聖經內容為主，並由教會所指定的小組長、執事、傳道或&lt;a href="https://zh.wikipedia.org/wiki/牧師"&gt;牧師&lt;/a&gt;講道。&lt;/p&gt;</content><category term="专业笔记"/><category term="Green's function"/><category term="George Green"/></entry><entry><title>和唯一知道星星为什么会发光的人一起散步</title><link href="https://zqw.ink/2020-12-20-blog-walk_with_why_star_shining.html" rel="alternate"/><published>2020-12-20T00:00:00+08:00</published><updated>2020-12-20T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-12-20:/2020-12-20-blog-walk_with_why_star_shining.html</id><summary type="html">&lt;p&gt;&lt;em&gt;《和唯一知道星星为什么会发光的人一起散步》, 蒋方舟, 中信出版集团, 2020&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;全局共有四篇小说, 外加一篇后记, 是蒋方舟的新书 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;em&gt;《和唯一知道星星为什么会发光的人一起散步》, 蒋方舟, 中信出版集团, 2020&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;全局共有四篇小说, 外加一篇后记, 是蒋方舟的新书, 买的签名版.&lt;/p&gt;
+&lt;p&gt;上周就读完了, 没有时间来写.&lt;/p&gt;
+&lt;p&gt;如果按喜欢程度排序的话, 是 边境来了陌生人 &amp;gt; 和唯一知道星星为什么会发光的人一起散
+步 &amp;gt; 在海边放了一颗巨大的蛋 &amp;gt; 在威尼斯重建时间&lt;/p&gt;
+&lt;p&gt;我觉得作者写的故事很好, 但是关于科幻, 或者说幻想的部分有些生硬, 奇怪.&lt;/p&gt;
+&lt;h2&gt;在海边放了一颗巨大的蛋&lt;/h2&gt;
+&lt;p&gt;有一天, 在海边的一个村子里, 突然多出了一块巨大的石头. 至于是从哪里来的, 每个人都
+有不同的看法. 有一个叫普修的人, 在石头里造了一个与世隔绝的世界. 大家后来搬了进去.
+原来这个巨大的石头是南十字星人的一颗棋子.&lt;/p&gt;
+&lt;h2&gt;和唯一知道星星为什么会发光的人一起散步&lt;/h2&gt;
+&lt;p&gt;"我" 经历了大瘟疫, 之后人们的心灵都留下了创伤. 之后嫁给了一位地理老师. 瘟疫在世
+界各国人们心里留下的创伤, 促使世界不断爆发战争. 战争中人们都疯狂了. 战争结束, 国
+家却完全自我封闭, 对国民, 新出生的小孩都教育他们没有外国这个概念的存在. "我" 的
+丈夫和他的一个学生, 也是情人出逃国外, 中途丧生.&lt;/p&gt;
+&lt;h2&gt;在威尼斯重建时间&lt;/h2&gt;
+&lt;p&gt;"我" 是一名物理物理学家, 双亲皆不在人世. 却被一位科学家朋友做了他新发明的手术,
+"我" 不再被时间束缚, 穿梭于不同的时间, 不同的世界. "我" 却同时也像是被关在时间的
+牢笼里.&lt;/p&gt;
+&lt;h2&gt;边境来了陌生人&lt;/h2&gt;
+&lt;p&gt;边境小镇来了一位陌生人, 小屋里有许多的人. 每个人都讲了一个美妙绝伦的故事.&lt;/p&gt;
+&lt;h2&gt;后记&lt;/h2&gt;
+&lt;p&gt;原来这四个故事都是对应于一个建筑.&lt;/p&gt;</content><category term="blog"/><category term="读书笔记"/><category term="蒋方舟"/></entry><entry><title>围道积分进阶</title><link href="https://zqw.ink/2020-12-07-physics-contourintegral.html" rel="alternate"/><published>2020-12-07T00:00:00+08:00</published><updated>2020-12-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-12-07:/2020-12-07-physics-contourintegral.html</id><summary type="html">
 &lt;h2&gt;准备&lt;/h2&gt;
 
 &lt;h3&gt;High Order Residue&lt;/h3&gt;
@@ -15930,13 +15963,13 @@ $$\begin{align}
 &lt;p&gt;是因为老乡吗?&lt;/p&gt;
 &lt;h2&gt;事件细节: 高一入学后的运动会&lt;/h2&gt;
 &lt;h3&gt;事件细节: 体教局的人找上门&lt;/h3&gt;
-&lt;h4&gt;事件细节: 初次选拔&lt;/h4&gt;
+&lt;h3&gt;事件细节: 初次选拔&lt;/h3&gt;
 &lt;h3&gt;事件细节: 与爸爸说跑鞋的事情&lt;/h3&gt;
-&lt;h3&gt;事件细节: 缀学&lt;/h3&gt;</content><category term="blog"/><category term="故事"/><category term="文学青年"/></entry><entry><title>羅生門（らしょうもん）</title><link href="https://zqw.ink/2020-11-07-blog-rashomon.html" rel="alternate"/><published>2020-11-07T00:00:00+08:00</published><updated>2020-11-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-11-07:/2020-11-07-blog-rashomon.html</id><summary type="html">&lt;p&gt;羅生門, 芥川龍之介, 译林出版社, 2005, 林少华译&lt;/p&gt;
+&lt;h3&gt;事件细节: 缀学&lt;/h3&gt;</content><category term="blog"/><category term="故事"/><category term="文学青年"/></entry><entry><title>羅生門（らしょうもん）</title><link href="https://zqw.ink/2020-11-07-blog-rashomon.html" rel="alternate"/><published>2020-11-07T00:00:00+08:00</published><updated>2020-11-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-11-07:/2020-11-07-blog-rashomon.html</id><summary type="html">&lt;p&gt;&lt;em&gt;《羅生門》, 芥川龍之介, 译林出版社, 2005, 林少华译&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;是一篇短篇集.&lt;/p&gt;
 &lt;p&gt;芥川龍之介（あくたがわ　りゅうのすけ）, 1892.3.1 - 1927.7.24 .&lt;/p&gt;
 &lt;h2&gt;罗生门&lt;/h2&gt;
-&lt;p&gt;年 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;羅生門, 芥川龍之介, 译林出版社, 2005, 林少华译&lt;/p&gt;
+&lt;p&gt;年 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;em&gt;《羅生門》, 芥川龍之介, 译林出版社, 2005, 林少华译&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;是一篇短篇集.&lt;/p&gt;
 &lt;p&gt;芥川龍之介（あくたがわ　りゅうのすけ）, 1892.3.1 - 1927.7.24 .&lt;/p&gt;
 &lt;h2&gt;罗生门&lt;/h2&gt;
@@ -16013,8 +16046,8 @@ Loti 的原名).&lt;/p&gt;
 一个电影演员单相思的故事, 而我的朋友认为她是编造的, 说不定她是对他们当中的某个人
 害单相思.&lt;/p&gt;
 &lt;h2&gt;侏儒警语&lt;/h2&gt;
-&lt;p&gt;占本书 40%, 是像微博一样的小句子.&lt;/p&gt;</content><category term="blog"/><category term="读书笔记"/><category term="羅生門"/><category term="芥川龍之介"/><category term="kindleunlimited"/></entry><entry><title>仿生人会梦见电子门羊吗</title><link href="https://zqw.ink/2020-11-06-blog-do_androids_dream_of_electric_eheep.html" rel="alternate"/><published>2020-11-06T00:00:00+08:00</published><updated>2020-11-06T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-11-06:/2020-11-06-blog-do_androids_dream_of_electric_eheep.html</id><summary type="html">&lt;p&gt;仿生人会梦见电子门羊吗? 译林出版社, 2017, Philip K. Dick, 许东华译.&lt;/p&gt;
-&lt;p&gt;cyberpunk 经典电影作品 &lt;em&gt;Blade Runner(译: 银翼杀手)&lt;/em&gt; 据此改编. 不过, 根据书中译后 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;仿生人会梦见电子门羊吗? 译林出版社, 2017, Philip K. Dick, 许东华译.&lt;/p&gt;
+&lt;p&gt;占本书 40%, 是像微博一样的小句子.&lt;/p&gt;</content><category term="blog"/><category term="读书笔记"/><category term="羅生門"/><category term="芥川龍之介"/><category term="kindleunlimited"/></entry><entry><title>仿生人会梦见电子门羊吗</title><link href="https://zqw.ink/2020-11-06-blog-do_androids_dream_of_electric_eheep.html" rel="alternate"/><published>2020-11-06T00:00:00+08:00</published><updated>2020-11-06T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-11-06:/2020-11-06-blog-do_androids_dream_of_electric_eheep.html</id><summary type="html">&lt;p&gt;&lt;em&gt;《仿生人会梦见电子门羊吗?》 译林出版社, 2017, Philip K. Dick, 许东华译.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;cyberpunk 经典电影作品 &lt;em&gt;Blade Runner(译: 银翼杀手)&lt;/em&gt; 据此改编. 不过, 根据书中译后 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;em&gt;《仿生人会梦见电子门羊吗?》 译林出版社, 2017, Philip K. Dick, 许东华译.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;cyberpunk 经典电影作品 &lt;em&gt;Blade Runner(译: 银翼杀手)&lt;/em&gt; 据此改编. 不过, 根据书中译后
 所言&lt;/p&gt;
 &lt;blockquote&gt;
@@ -16989,569 +17022,4 @@ $$\begin{align}
 
 
 
-</content><category term="专业笔记"/><category term="Carl Bender"/><category term="Mathematical Physics"/><category term="Shanks Transform"/></entry><entry><title>Carl Bender Mathematical Physics Lecture2 Note</title><link href="https://zqw.ink/2020-10-01-physics-carlbendermathematicalphysicslecture2.html" rel="alternate"/><published>2020-10-01T00:00:00+08:00</published><updated>2020-10-01T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-10-01:/2020-10-01-physics-carlbendermathematicalphysicslecture2.html</id><summary type="html">
-&lt;h2&gt;Information&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;原出处: https://www.perimeterinstitute.ca/video-library/collection/11/12-psi-mathematical-physics&lt;/li&gt;
-&lt;li&gt;可以看自动生成的字幕: &lt;a href='https://www.youtube.com/playlist?list=PLzcd6SoIscwjHuWRE38UXWG92uq0Sy4UF'&gt;https://www.youtube.com/playlist?list=PLzcd6SoIscwjHuWRE38UXWG92uq0Sy4UF&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Bilibili: https://www.bilibili.com/video/BV1w4411q7x6?from&lt;code&gt;search&amp;seid&lt;/code&gt;7852838902448285010&lt;/li&gt;
-&lt;li&gt;Book: Carl M. Bender, Steven A. Orszag, Advanced Mathematical Methods for …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
-&lt;h2&gt;Information&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;原出处: https://www.perimeterinstitute.ca/video-library/collection/11/12-psi-mathematical-physics&lt;/li&gt;
-&lt;li&gt;可以看自动生成的字幕: &lt;a href='https://www.youtube.com/playlist?list=PLzcd6SoIscwjHuWRE38UXWG92uq0Sy4UF'&gt;https://www.youtube.com/playlist?list=PLzcd6SoIscwjHuWRE38UXWG92uq0Sy4UF&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Bilibili: https://www.bilibili.com/video/BV1w4411q7x6?from&lt;code&gt;search&amp;seid&lt;/code&gt;7852838902448285010&lt;/li&gt;
-&lt;li&gt;Book: Carl M. Bender, Steven A. Orszag, Advanced Mathematical Methods for Scientists and Engineers I Asympotic Methods and Perturbation Theory, 1999&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Keywords&lt;/h2&gt;
-
-&lt;p&gt;The Schrodinger equation. Riccati equation. Initial value problem. Perturbation
-series approach to solving the Schrodinger equation. The eigenvalue problem &lt;/p&gt;
-
-&lt;h2&gt;Really Really Hard Probles&lt;/h2&gt;
-
-&lt;p&gt;任何形如&lt;/p&gt;
-
-$$\begin{align}
-\label{eq:2ndODE}
-  y'' + a(x)y' + b(x) y = 0
-\end{align}$$
-
-&lt;p&gt;的微分方程都可以化为&lt;/p&gt;
-
-$$\begin{align}
-\label{eq:SchEQ}
-  y'' + Q(x) y = 0
-\end{align}$$
-
-&lt;blockquote&gt;证明:
-
-令 $y = U(x)z(x)$ . 代入 (\ref{eq:2ndODE}) 得
-\begin{align}
-  U''z + U z'' + 2 U'z' + a U'z + aUz' + bUz = 0
-\end{align}
-find a $U$ 使得 $z'$ 的项消失, 也就是 $U$ 满足
-\begin{align}
-  \frac{U'}{U} + \frac{a}{2} = 0
-\end{align}
-这是一个一阶, separable 方程, 一定是可解的. 解得
-\begin{align}
-  U(x) = e^{-\int^x \frac{a(s)}{2}\mathrm{d}s}
-\end{align}
-可以加上一个常数, 但是是无所谓.&lt;/blockquote&gt;
-&lt;p&gt;而 (\ref{eq:SchEQ}) 是一个 very very hard problem. 为什么 very very hard?&lt;/p&gt;
-
-&lt;h2&gt;Why So Hard?&lt;/h2&gt;
-
-&lt;p&gt;first order linear equation $y' + a(x)y = b(x)$ 是一个 routine standard EASY
-problem, 因为它可以 用 integrating factor 来解. 下面说明, (\ref{eq:SchEQ})为什么
-它 so hard&lt;/p&gt;
-&lt;blockquote&gt;如果这个问题好解的话, 只有下面一种方法.
-
-采用简化的符号 $D\equiv \frac{\mathrm{d}}{\mathrm{d}x}$ .
-因此 $y' + a(x)y = b(x)$ 变为
-\begin{align}
-\label{eq:unfactored}
-[D^{2} + a(x)D +b(x) ] y(x) = 0
-\end{align}
-方括号中是一个线性微分算符. 分析因式(线性算符的分解不是唯一的)
-\begin{align}
-\label{eq:factor}
-[D + A(x)][D +B(x) ] y(x) = 0
-\end{align}
-如果上式可以做到, 就已经解决了这个问题, 因为它分解成了两个一阶的问题. 所以这个问
-题难的部分在于分析因式, 也就是寻找函数 $A(x)$ 和 $B(x)$.
-
-把 (\ref{eq:factor}) 展开
-\begin{align}
-  (D^2 +AD + AB + B' + BD)y = 0
-\end{align}
-并与 (\ref{eq:unfactored}) 比较, 会得到 $A(x)$ 和 $B(x)$ 需要满足的方程
-\begin{align}
-A + B =&amp; a \\
-AB + B' =&amp; b
-\end{align}
-通过消元解上述方程组
-\begin{align}
-  aB - B^2 + B' = b
-\end{align}
-变成了一阶方程, great progress! 但它有 $B^{2}$ , 不是线性的. 它是一个有名的方程:
-Riccati. 只有一种方法解 Riccati 方程
-\begin{align}
-  y' = \alpha y^2 + \beta y + \gamma
-\end{align}
-令 $y = Q \frac{W'}{W}$ (This is a very standard substitution for linearing
-nonlinear equations) , 那么
-\begin{align}
-  Q' \frac{W'}{W} + Q \frac{W''}{W} - Q \frac{W'^2}{W^2}
- = \alpha Q^2 \frac{W'^2}{W^2} - \beta Q \frac{W'}{W} + \gamma
-\end{align}
-其中的二次项可以取适当的 $Q$ 使其消掉
-\begin{align}
-  Q = -\frac{1}{\alpha}
-\end{align}
-然后两边乘上 $W$
-\begin{align}
-  Q' W' + Q W'' = \beta Q W' + \gamma W
-\end{align}
-它是 linear homogeneous 的. 它得形式可以在书上找到, 比如它是 Bessel 方程的形式.
-因此之前关于 $B$ 的 quadratic 的 Riccati 方程可以变为
-\begin{align}
-  -W'' = aW' +  bW 
-\end{align}
-也就是
-\begin{align}
-   W'' + aW' +  bW = 0
-\end{align}
-结果又回到了最初的形式. 因此这个问题 really really hard!
-
-用积分变换也没有办法, 因为它不会改变问题的难度, 只会改变问题的形式, principle of conservation of
-effort :)
-
-只有当你放弃等号的时候, 才会 reduce the problem!&lt;/blockquote&gt;
-&lt;p&gt;(Bender 在视频的 8:15 时说 I should take sort of 5 minutes and explain to you
-why it's diffcult, 然后在 26:43 时说完了 🤣 )&lt;/p&gt;
-
-&lt;h2&gt;Perturbation&lt;/h2&gt;
-
-&lt;p&gt;放弃等号, reduce the problem to powers! 来给 (\ref{eq:SchEQ}) 加上微扰&lt;/p&gt;
-
-$$\begin{align}
-\label{eq:SchEQPerturb}
-  y'' + \epsilon Q(x) y = 0
-\end{align}$$
-
-&lt;p&gt;(为什么加在这里? 因为 uperburbed problem 是可解的.) 考虑边界条件&lt;/p&gt;
-
-$$\begin{align}
-  y(0) =&amp; \alpha \\
-  y'(0) =&amp; \beta
-\end{align}$$
-
-&lt;p&gt;unpert: $y_0(x) = \alpha + \beta x$&lt;/p&gt;
-
-&lt;p&gt;Assuming $y(x) = \sum_{n=0}^{\infty} a_n(x)\epsilon^n$ 代加 (\ref{eq:SchEQPerturb})&lt;/p&gt;
-
-$$\begin{align}
-  \sum_{n=0}^{\infty} a_n''(x)\epsilon^n + \sum_{n=1}^{\infty} Q(x) a_{n-1}(x) \epsilon^n = 0
-\end{align}$$
-
-&lt;p&gt;比较 $\epsilon$ 的系数.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;$\epsilon^0$ : $a_0'' = 0$ , 这时无微扰时的解 $a_0(x) = \alpha + \beta x$&lt;/li&gt;
-&lt;li&gt;$\epsilon^n$ : $a_n'' = -Q(x)a_{n-1}$ 因为 $a_0$ 已经满足边界条件了, 所以更高阶的边界条件全部为 $0$ , 也就是 $a_n(0) = a_n'(x) = 0$ , 那么积分就可以得到全部的系数&lt;/li&gt;
-&lt;/ul&gt;
-
-$$\begin{align}
-  a_n'(x) =&amp; -\int_0^x \mathrm{d}s\cdot Q(s)a_{n-1}(s) \\
-  a_n(x) =&amp; -\int_0^x\mathrm{d}t \int_0^t \mathrm{d}s Q(s)a_{n-1}(s)
-\end{align}$$
-
-&lt;p&gt;那么得到 $a_n(x)$ 的通过&lt;/p&gt;
-
-$$\begin{align}
-  a_n(x) = (-1)^n \int \int Q\int \int Q \cdots \int \int Q (\alpha + \beta x)
-\end{align}$$
-
-&lt;p&gt;一共有 $2n$ 重积分. 下面证明这个积分是收敛的.&lt;/p&gt;
-&lt;blockquote&gt;证明: 
-
-有定理
-if $| f(x) | &lt; M$ when $M\in(a, b)$ , then $| \int_a^b f(x) \mathrm{d}x |\le | a - b |
-M$
-
-因此, 如果 $\mathrm{Max}|Q| = M, \mathrm{Max}|\alpha + \beta x| = m$ , 那么
-\begin{align}
-  |a_n(x)| \le M^n m\underbrace{\int_0^x \mathrm{d}t \int_0^t \mathrm{d}u\int_0^u \mathrm{d}v\cdots \int}_{2n}
-   = M^n m \frac{x^{2n}}{(2n)!}
-\end{align}
-因此这个 series converges faster than 
-\begin{align}
-  \sum \frac{k^n}{(2n)!}\epsilon^n
-\end{align}
-它的收敛半径 radius of convergence 是无穷大(忘了怎么求收敛半径了).&lt;/blockquote&gt;
-&lt;p&gt;讲到这里, Bender 假装很激动地说:&lt;/p&gt;
-&lt;blockquote&gt;Boys, we are powerful! We can do anything! :)&lt;/blockquote&gt;
-
-&lt;p&gt;但是, $x$ 不能是无穷大, 也就是 we can't solve the Schrodinger equation on an
-infinite domain.  We can only solve it on a finite domain for finite $x$ . 但实
-际求解时, 要求本征函数是归一的, 在全空间.&lt;/p&gt;
-
-&lt;p&gt;因此我们在 finite domain 里得到了 Schrodinger equation 的解!&lt;/p&gt;
-
-&lt;h2&gt;Eigenvalue Problem&lt;/h2&gt;
-
-&lt;p&gt;现在我们感觉自己很强大了, 让我们来解非常重要的问题: 本征值问题. 带有非简谐势的一
-个本征值问题, 用微扰&lt;/p&gt;
-
-$$\begin{align}
-  \left(-\frac{\mathrm{d}^2}{\mathrm{d}x^2} + \frac{x^2}{4} + \epsilon \frac{x^4}{4} \right)\psi
-   = E( \epsilon )\psi
-\end{align}$$
-
-&lt;p&gt;这节课没时间了, Bender 说 I don't want to spoil the climax by rushing it. 直接给
-了这个问题的结果&lt;/p&gt;
-
-$$\begin{align}
-  E_{\mathrm{ground state}} = \frac{1}{2} + \frac{3}{4}\epsilon 
-               - \frac{21}{8}\epsilon^2 - \frac{333}{16}\epsilon^3 + \cdots
-\end{align}$$
-
-&lt;p&gt;它(看似)不收敛. 是的, 它确实不收敛, 收敛半径是 $0$ . 之后用提到用费曼图作微扰和
-这个是一样的, 它不收敛&lt;/p&gt;
-&lt;blockquote&gt;You've been cheated! ... Everything you've been taught is garbage unless we can
-make sense out of this.&lt;/blockquote&gt;
-&lt;p&gt;它不收敛的原因是 $\epsilon=0$ 处有 singularity. $\epsilon$ 由正变负时, 会使阱原有的 bound
-states 消失(如图), 都 tunnels 出去了. We have Hawking radiation. Something abrupt.
-&lt;p&gt;&lt;img src='./2020-10-01-physics-CarlBenderMathematicalPhysicsLecture2/unharmonic.gif' alt='figalt' max-width:100%&gt;&lt;p&gt;&lt;/p&gt;
-
-&lt;h2&gt;What the Nature of the Singularity Is?&lt;/h2&gt;
-
-&lt;p&gt;考虑二能级系统&lt;/p&gt;
-
-$$\begin{align}
-  H = \left( 
-     \begin{array}{cc}
-             a &amp; 0 \\
-             0 &amp; b 
-     \end{array}
-   \right) 
-  + \epsilon\left( 
-     \begin{array}{cc}
-             0 &amp; c \\
-             c &amp; 0 
-     \end{array}
-   \right)
-\end{align}$$
-
-&lt;blockquote&gt;I look at this problem and I say 'oh, god! That's a hard problem to sovle! I
-think I'll use perturbation theory.'&lt;/blockquote&gt;
-
-$$\begin{align}
-  E_{\mp}(\epsilon) = \frac{a + b \pm\sqrt{(a - b)^2 + 4 \epsilon^2 c^2}}{2}
-\end{align}$$
-
-&lt;p&gt;它有两个 singularities $\epsilon = \pm \mathrm{i}\frac{a - b}{2c}$ ,由一条 branch cut
-连接. 当 $\epsilon$ 从 $1$ 出发, 经过一个 singularites, 跨越一次 branch cut 回到 $1$
-(如图),它就从一个本征能量到了另一个本征能量.
-&lt;p&gt;&lt;img src='./2020-10-01-physics-CarlBenderMathematicalPhysicsLecture2/singularities.png' alt='figalt' max-width:100%&gt;&lt;p&gt;&lt;/p&gt;
-&lt;blockquote&gt;Remember this: quantum mechanics is not quantized. Because if I'am allowed to
-vary $\epsilon$ into the complexs plane, you smoothly go from one energy level to the
-other energy level.&lt;/blockquote&gt;
-&lt;blockquote&gt;Quantizations comes from counting the sheets in a Riemann surface.&lt;/blockquote&gt;
-&lt;blockquote&gt;Different energy levels are not independent numbers like you know.&lt;/blockquote&gt;
-&lt;blockquote&gt;If we enlarge our way of thinking about problem by doing perturbation theory and
-by introducing this magnificient parameter because, it gives a whole new way of
-thinking about the world!&lt;/blockquote&gt;
-&lt;p&gt;不同的基本粒子(如电子, $\mu$ 子), 它们都是对同一微扰参数的 analytic continuation.&lt;/p&gt;
-
-&lt;h2&gt;Summary&lt;/h2&gt;
-&lt;p&gt; 
-任何形如&lt;/p&gt;
-
-$$\begin{align}
-  y'' + Q(x)y' + b(x) y = 0
-\end{align}$$
-
-&lt;p&gt;的微分方程都可以化为&lt;/p&gt;
-
-$$\begin{align}
-  y'' + Q(x) y = 0
-\end{align}$$
-
-&lt;p&gt;上式是 Schrodinger 方程的形式. 
-而上式在有限区间内限定边界条件时是可解的. 但量子力学考虑的都是边界条件在无穷远的
-情况, 一般无法求解. 因而需要用微扰来处理. 但会发现, 通过微扰得到的级数形式的解是
-发散的.&lt;/p&gt;
-
-&lt;p&gt;Quantizations comes from counting the sheets in a Riemann surface.&lt;/p&gt;
-
-&lt;p&gt;Different energy levels are not independent numbers like you know.&lt;/p&gt;
-
-&lt;h2&gt;Reference&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;很好的讲解 integrating factor 的视频 First Order Linear Differential Equation &amp; Integrating Factor (idea/strategy/example) by  blackpenredpen , 有时间可以整理一下 note: https://www.youtube.com/watch?v=DJsjZ5aYK_g&lt;/li&gt;
-&lt;/ul&gt;
-</content><category term="专业笔记"/><category term="Carl Bender"/><category term="Mathematical Physics"/></entry><entry><title>Stationary Phase Approx, Laplace's Method</title><link href="https://zqw.ink/2020-09-23-physics-stationaryphaseapprox.html" rel="alternate"/><published>2020-09-23T00:00:00+08:00</published><updated>2020-09-23T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-09-23:/2020-09-23-physics-stationaryphaseapprox.html</id><summary type="html">
-&lt;h2&gt;Laplace's Method&lt;/h2&gt;
-
-&lt;h3&gt;结论&lt;/h3&gt;
-
-&lt;p&gt;对于积分&lt;/p&gt;
-
-
-$$\begin{align}
-  \int_a^b  e^{Mf(x)} \cdot\mathrm{d} x 
-\end{align}$$
-
-
-&lt;p&gt;假设 $f(x)$ 只有一个全局最大值, 位于 $x = x_0 \in (a, b)$ 处. 那么当 $M\gg 0$ 时, 它 …&lt;/p&gt;</summary><content type="html">
-&lt;h2&gt;Laplace's Method&lt;/h2&gt;
-
-&lt;h3&gt;结论&lt;/h3&gt;
-
-&lt;p&gt;对于积分&lt;/p&gt;
-
-
-$$\begin{align}
-  \int_a^b  e^{Mf(x)} \cdot\mathrm{d} x 
-\end{align}$$
-
-
-&lt;p&gt;假设 $f(x)$ 只有一个全局最大值, 位于 $x = x_0 \in (a, b)$ 处. 那么当 $M\gg 0$ 时, 它
-可以做如下近似&lt;/p&gt;
-
-$$\begin{align}
-  \int_a^b  e^{Mf(x)} \cdot\mathrm{d} x \approx \sqrt{\frac{2\pi}{M|f''(x_0)|}} e^{Mf(x_0)}
-\end{align}$$
-
-
-&lt;h3&gt;证明&lt;/h3&gt;
-
-&lt;p&gt;将 $f(x)$ 在 $x = x_0$ 处 Taylor 展开&lt;/p&gt;
-
-$$\begin{align}
-  \int_a^b  e^{Mf(x)} \cdot\mathrm{d} x 
- = \int_a^b  e^{M\left[f(x_0) - \frac{|f''(x_0)|}{2}(x - x_0)^2 + \cdots \right]} \cdot\mathrm{d} x 
-\end{align}$$
-
-&lt;p&gt;其中利用了 $f'(x_0) = 0, f''(x_0) &lt; 0$ .&lt;/p&gt;
-
-&lt;p&gt;由于 $f(x_0)$ 是极大值, 且 $M$ 很大, 所以积分主要由 $x_0$ 附近贡献. 下图是
-$f(x)= -x^2$ 时的情况, 可以看出 $M$ 越大, 积分的贡献越集中于 $x_{0}$ 处
-&lt;p&gt;&lt;img src='./2020-09-23-physics-StationaryPhaseApprox/laplace.png' alt='figalt' max-width:100%&gt;&lt;p&gt;
-只保留到展开的二阶项, 略去更高阶, 因此积分近似为&lt;/p&gt;
-
-$$\begin{align}
-  \int_a^b  e^{Mf(x)} \cdot\mathrm{d} x 
- \approx e^{Mf(x_0)}\int_a^b  e^{- M\frac{|f''(x_0)|}{2}(x - x_0)^2 } \cdot\mathrm{d} x 
-\end{align}$$
-
-&lt;p&gt;由于远离 $x_0$ 的部分对积分贡献几乎为零, 所以可以将积分区间拓展到 $(-\infty, +\infty)$ ,
-这样就可以将高斯积分算出, 得到结果&lt;/p&gt;
-
-$$\begin{align}
-  \int_a^b  e^{Mf(x)} \cdot\mathrm{d} x \approx \sqrt{\frac{2\pi}{M|f''(x_0)|}} e^{Mf(x_0)}
-\end{align}$$
-
-
-&lt;h3&gt;例子: Stirling's Approx&lt;/h3&gt;
-
-&lt;p&gt;$\Gamma$ function 为&lt;/p&gt;
-
-$$\begin{align}
-  N! = \Gamma(N+1) = \int_0^{\infty} \mathrm{d}x\cdot x^N e^{-x}
-\end{align}$$
-
-&lt;p&gt;可以将上式变形&lt;/p&gt;
-
-$$\begin{align}
-  N! = \int_0^{\infty} \mathrm{d}x\cdot e^{-x +N\ln x} = \int_0^{\infty} \mathrm{d}x\cdot e^{N\left(-\frac{x}{N} +\ln x\right)}
-\end{align}$$
-
-&lt;p&gt;当 $N$ 很大的时候, 可以进行 Laplace's method 近似. 做变量代换 $x/N = t$ , 那么&lt;/p&gt;
-
-$$\begin{align}
-  N! = \int_0^{\infty} \mathrm{d}x\cdot e^{-x +N\ln x} = N^{N + 1}\int_0^{\infty} \mathrm{d}t\cdot e^{Nf(t)}
-\end{align}$$
-
-&lt;p&gt;其中 $f(t) = -t +\ln t$ 如下图
-&lt;p&gt;&lt;img src='./2020-09-23-physics-StationaryPhaseApprox/stirling.png' alt='figalt' max-width:100%&gt;&lt;p&gt;
-在 $t = 1$ 处有极大值. 因此可以用 Laplace's method 做近似为&lt;/p&gt;
-
-$$\begin{align}
-  N! \approx N^{N + 1} e^{-N} \sqrt{\frac{2\pi}{N\cdot 1}} = \sqrt{2\pi N} e^{N(\ln N -1)}
-\end{align}$$
-
-&lt;p&gt;取对数为&lt;/p&gt;
-
-$$\begin{align}
-  \ln N! \approx \frac{1}{2}\ln 2\pi + \frac{1}{2}\ln N + N(\ln N - 1) \approx N(\ln N - 1)
-\end{align}$$
-
-&lt;p&gt;最后一步省略了前两项, 因为相比较于后两项, 它们是可以忽略的. 这就是常用的
-Stirling 公式.&lt;/p&gt;
-
-&lt;h2&gt;Stationary Phase Approx&lt;/h2&gt;
-
-&lt;h3&gt;结论&lt;/h3&gt;
-
-&lt;p&gt;对于积分&lt;/p&gt;
-
-$$\begin{align}
-  I = \int_a^b g(t) e^{\mathrm{i}kf(t)} \cdot \mathrm{d}t
-\end{align}$$
-
-&lt;p&gt;称其中的 $f(t)$ 为 phase function. 假如 $f(t)$ 在 $(a, b)$ 内有 $n$ 个
-stationary points (也就是一阶导数为零的点) $s_j, 其中 j = 1, 2, \cdots ,n$ 那么当
-$k\to \infty$ 时, 有如下近似&lt;/p&gt;
-
-$$\begin{align}
-  I \approx \sum_{j=1}^n g(s_j) e^{\mathrm{i}k f(s_j) + \frac{\mathrm{i}\mathrm{sign}[f''(s_j)]\pi}{4}}
-       \sqrt{\frac{2\pi}{k|f''(s_j)|}}
-\end{align}$$
-
-
-&lt;h3&gt;Intuition (不做严格证明)&lt;/h3&gt;
-
-&lt;p&gt;假设 $f(t)$ 只有一个 stationary point $s_j \in(a, b)$ : $f'(s_j) = 0$ .&lt;/p&gt;
-
-&lt;p&gt;将 $f(t)$ 在 $t = s_j$ 处 Taylor 展开&lt;/p&gt;
-
-$$\begin{align}
-  I = \int_a^b g(t) e^{\mathrm{i}k\left[f(s_j) + \frac{f''(s_j)}{2}(t - s_j)^2 + \cdots \right]}
-       \cdot \mathrm{d}t
-\end{align}$$
-
-&lt;p&gt;其中利用了 $f'(s_j) = 0$&lt;/p&gt;
-
-&lt;p&gt;当 $k\to \infty$ 时, 剧烈振荡, 相互抵消(Coates-Euler formula), 积分主要由 stationary point 处贡献. 只保留到
-二阶项, 略去更高阶项, 并且将积分区间拓展到 $(-\infty, + \infty)$ , 就可以得到结论&lt;/p&gt;
-
-
-$$\begin{align}
-  I \approx &amp;\int_a^b g(s_j) e^{\mathrm{i}k\left[f(s_j) + \frac{f''(s_j)}{2}(t - s_j)^2 \right]}
-       \cdot \mathrm{d}t \\
-    =&amp; g(s_j)e^{\mathrm{i}kf(s_j)} \int_a^b e^{\mathrm{i}k\left[\frac{f''(s_j)}{2}(t - s_j)^2 \right]}
-       \cdot \mathrm{d}t \\
-    \approx &amp; g(s_j)e^{\mathrm{i}kf(s_j)} \int_{-\infty}^{\infty} e^{\mathrm{i}k\left[\frac{f''(s_j)}{2}(t - s_j)^2 \right]}
-       \cdot \mathrm{d}t \\
-    =&amp; g(s_j)e^{\mathrm{i}kf(s_j)}\sqrt{\frac{2\pi\mathrm{i}}{k f''(s_j)}} \\
-    =&amp; g(s_j)e^{\mathrm{i}kf(s_j)}\left[\mathrm{i} \cdot\mathrm{sign}[f''(s_j)]\right]^{1/2}
-        \sqrt{\frac{2\pi}{k |f''(s_j)|}} \\
-    =&amp; g(s_j)e^{\mathrm{i}kf(s_j) + \frac{\mathrm{i} \cdot\mathrm{sign}[f''(s_j)]\pi}{4}}
-        \sqrt{\frac{2\pi}{k |f''(s_j)|}}
-\end{align}$$
-
-&lt;p&gt;有多个 stationary points 时, 对它们求和即可.&lt;/p&gt;
-
-&lt;h3&gt;例: Bessel functions 的渐近形式&lt;/h3&gt;
-
-&lt;p&gt;Bessel functions 的积分表达形式为&lt;/p&gt;
-
-$$\begin{align}
-  J_n(x) = \frac{1}{\pi} \int_0^{\pi} \cos (x \sin \theta - n\theta) \mathrm{d}\theta
-\end{align}$$
-
-&lt;p&gt;将其写为指数形式&lt;/p&gt;
-
-$$\begin{align}
-  J_n(x) = \frac{1}{\pi} \mathrm{Re}\left[\int_0^{\pi} e^{\mathrm{i}(x \sin \theta - n\theta)}  \mathrm{d}\theta\right]
-\end{align}$$
-
-&lt;p&gt;当 $x\to\infty$ 时, 积分可以用 stationary phase approx&lt;/p&gt;
-
-$$\begin{align}
-  \int_0^{\pi} e^{\mathrm{i}(x \sin \theta - n\theta)}  \mathrm{d}\theta
-  = \int_0^{\pi}e^{-\mathrm{i} n\theta} e^{\mathrm{i}x \sin \theta }  \mathrm{d}\theta
-\end{align}$$
-
-&lt;p&gt;$\sin\theta$ 在积分区间 $(0, \pi)$ 内的 stationary points  为 $\theta = \frac{\pi}{2}$
-因此其近似结果为&lt;/p&gt;
-
-$$\begin{align}
-  \int_0^{\pi} e^{\mathrm{i}(x \sin \theta - n\theta)}  \mathrm{d}\theta
-  \approx&amp; e^{-\mathrm{i} n \frac{\pi}{2}} e^{\mathrm{i} x \sin \frac{\pi}{2} 
-    + \frac{\mathrm{i} \cdot (-1)\cdot \pi}{4}}\sqrt{\frac{2\pi}{x \cdot 1}} \\
-  =&amp; e^{-\mathrm{i}  \frac{n\pi}{2}} e^{\mathrm{i} (x  
-    - \frac{\mathrm{i} \cdot \pi}{4})}\sqrt{\frac{2\pi}{x}}
-\end{align}$$
-
-&lt;p&gt;代回 Bessel functions 取实部得到&lt;/p&gt;
-
-$$\begin{align}
- J_n(x) \approx&amp; \frac{1}{\pi} \mathrm{Re}\left[e^{-\mathrm{i}  \frac{n\pi}{2}} e^{\mathrm{i} (x  
-    - \frac{\mathrm{i} \cdot \pi}{4})}\sqrt{\frac{2\pi}{x}} \right] \\
-  = &amp;\sqrt{\frac{2}{\pi x}} \cos\left( x - \frac{n\pi}{2} - \frac{\pi}{4} \right) , \quad
-   \mathrm{as} \, x \to \infty
-\end{align}$$
-
-
-&lt;h2&gt;Reference&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;https://www.youtube.com/watch?v=7PuZQhqkWxk&lt;/li&gt;
-&lt;li&gt;https://www.youtube.com/watch?v=b7PZlmorEok&lt;/li&gt;
-&lt;li&gt;https://www.math.unl.edu/~scohn1/8423/intasym4.pdf&lt;/li&gt;
-&lt;li&gt;Altland Alexander, Simons Ben D., Condensed Matter Field Theory, Second Edition-Cambridge University Press (2010)&lt;/li&gt;
-&lt;/ul&gt;
-</content><category term="专业笔记"/><category term="物理"/><category term="数学"/><category term="Stationary Phase Approx"/><category term="Laplace's Method"/><category term="Stirling's approx"/></entry><entry><title>matplotlib.animation 制作动图</title><link href="https://zqw.ink/2020-09-18-coding-animation_plot.html" rel="alternate"/><published>2020-09-18T00:00:00+08:00</published><updated>2020-09-18T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-09-18:/2020-09-18-coding-animation_plot.html</id><summary type="html">
-&lt;pre&gt;&lt;code class="language-python"&gt;import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib.animation as ani
-
-fig, ax = plt.subplots()
-
-# 横坐标取值
-m, n = 100, 20
-x = np.linspace(0, 4*np.pi, n)
-
-y = np.zeros((m, n))
-for i in range(m):
-    y[i] = np.sin(x …&lt;/code&gt;&lt;/pre&gt;</summary><content type="html">
-&lt;pre&gt;&lt;code class="language-python"&gt;import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib.animation as ani
-
-fig, ax = plt.subplots()
-
-# 横坐标取值
-m, n = 100, 20
-x = np.linspace(0, 4*np.pi, n)
-
-y = np.zeros((m, n))
-for i in range(m):
-    y[i] = np.sin(x+2*np.pi*i/m)
-
-# 在画纸上画出零时刻第一条线 ln
-ln, = ax.plot(x, y[0], 'ro')
-
-def init():
-    """FuncAnimation 所需要的动画初始设置, 返回值为零时刻的线 ln"""
-    ax.set_xlim(0, 4*np.pi)
-    ax.set_ylim(-1, 1)
-    return ln,
-
-def update(i):
-    """
-    FuncAnimation 所需要的更新函数, 对于第 i 帧, 修改纵轴数据为 y 的第 i 行
-    返回值为更新后的第 i 帧对应的线
-    """
-    ln.set_data(x, y[i])
-    return ln,
-
-# 进行绘制. FuncAnimation 的函数文档: https://matplotlib.org/api/_as_gen/matplotlib.animation.FuncAnimation.html#matplotlib.animation.FuncAnimation
-my_ani = ani.FuncAnimation(fig=fig, func=update, frames=m, interval=1,
-                            init_func=init, blit=False)
-
-# Set up formatting for the movie files (3.7.3 报错, 3.8.5 可以)
-writer = ani.FFMpegFileWriter(fps=60, metadata=dict(artist='Me'), bitrate=180)
-# 保存图片
-# my_ani.save('Harmonic.gif',writer=writer)
-
-plt.show()&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;img src='./2020-09-18-coding-animation_plot/Harmonic.gif' alt='figalt' max-width:100%&gt;&lt;p&gt;&lt;/p&gt;
-</content><category term="软件使用"/><category term="python"/></entry><entry><title>I am back!</title><link href="https://zqw.ink/2020-09-09-thinking-iamback.html" rel="alternate"/><published>2020-09-09T00:00:00+08:00</published><updated>2020-09-09T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-09-09:/2020-09-09-thinking-iamback.html</id><summary type="html">
-&lt;p&gt;上次坐在 304 还是 2020 年 1 月 14 号晚上. 再来就是 2020 年 9 月 9 号了. 接近八个
-月了, 终于再回来了! I am back!&lt;/p&gt;
-
-&lt;p&gt;86 已满是灰尘!&lt;/p&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;img src='./2020-09-09-thinking-iamback/86.jpg' alt='figalt' max-width:100%&gt;&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;I am back …&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;</summary><content type="html">
-&lt;p&gt;上次坐在 304 还是 2020 年 1 月 14 号晚上. 再来就是 2020 年 9 月 9 号了. 接近八个
-月了, 终于再回来了! I am back!&lt;/p&gt;
-
-&lt;p&gt;86 已满是灰尘!&lt;/p&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;img src='./2020-09-09-thinking-iamback/86.jpg' alt='figalt' max-width:100%&gt;&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;I am back!&lt;/p&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;img src='./2020-09-09-thinking-iamback/kendama.jpg' alt='figalt' max-width:100%&gt;&lt;p&gt;&lt;/p&gt;
-</content><category term="想说"/></entry></feed>
+</content><category term="专业笔记"/><category term="Carl Bender"/><category term="Mathematical Physics"/><category term="Shanks Transform"/></entry></feed>

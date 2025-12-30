@@ -9,7 +9,7 @@ tags:
   - kindleunlimited
 ---
 
-仿生人会梦见电子门羊吗? 译林出版社, 2017, Philip K. Dick, 许东华译.
+*《仿生人会梦见电子门羊吗?》 译林出版社, 2017, Philip K. Dick, 许东华译.*
 
 cyberpunk 经典电影作品 *Blade Runner(译: 银翼杀手)* 据此改编. 不过, 根据书中译后
 所言

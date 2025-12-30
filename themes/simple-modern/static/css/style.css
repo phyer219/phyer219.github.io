@@ -455,8 +455,21 @@ table,th, td
     border: 3px solid var(--border);
 }
 blockquote{
-    color: var(--muted);
-    width: 100%;
+  margin: 1rem 0;
+  padding: 0.25rem 1rem;
+  border-left: 0.25rem solid var(--border);
+  color: var(--text-muted);
+  background-color: var(--surface-muted);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+blockquote > :first-child {
+  margin-top: 0;
+}
+
+blockquote > :last-child {
+  margin-bottom: 0;
 }
 
 .post-link{
