@@ -415,10 +415,13 @@ pre{
 pre > code,
 .hljs {
   display: block;
+  width: max-content;
+  min-width: 100%;
   padding: 1rem;
   border: 1px solid var(--border);
   border-radius: 0.6rem;
   background-color: var(--surface-muted);
+  box-sizing: border-box;
 }
 
 pre[data-lang]::before {
