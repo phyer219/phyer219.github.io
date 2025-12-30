@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水 - coding</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/coding.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2025-12-30T00:00:00+08:00</updated><entry><title>个人博客风格指南（备忘）</title><link href="https://zqw.ink/style_guide.html" rel="alternate"/><published>2025-12-30T00:00:00+08:00</published><updated>2025-12-30T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-12-30:/style_guide.html</id><summary type="html">&lt;h2&gt;博客文件名：&lt;code&gt;yyyy-mm-dd-category-blog_slug.md&lt;/code&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;日期（yyyy-mm-dd）&lt;/li&gt;
+&lt;li&gt;分类（category）：一篇博客只有一个分类，且为英文，全部小写&lt;/li&gt;
+&lt;li&gt;Blog slug（blog_slug）:一般全部小写，用下划线连接。如果有些 …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;h2&gt;博客文件名：&lt;code&gt;yyyy-mm-dd-category-blog_slug.md&lt;/code&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;日期（yyyy-mm-dd）&lt;/li&gt;
+&lt;li&gt;分类（category）：一篇博客只有一个分类，且为英文，全部小写&lt;/li&gt;
+&lt;li&gt;Blog slug（blog_slug）:一般全部小写，用下划线连接。如果有些词习惯大小，则可大写，例如：AMO_note&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;YAML metadata&lt;/h2&gt;
+&lt;p&gt;示例如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-yaml"&gt;---
+title: 个人博客风格指南
+date: yyyy-mm-dd
+category: category
+tags:
+  - 'first tag'
+  - 'second tag'
+  - tag3
+slug: blog_title
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;title：无要求。&lt;/li&gt;
+&lt;li&gt;date: yyyy-mm-dd 应与文件名一致。&lt;/li&gt;
+&lt;li&gt;category: 唯一，应与文件名一致。&lt;/li&gt;
+&lt;li&gt;tags:&lt;ul&gt;
+&lt;li&gt;中英文皆可。&lt;/li&gt;
+&lt;li&gt;写成 &lt;a href="https://zh.wikipedia.org/zh-cn/YAML"&gt;YAML&lt;/a&gt; 清单的形式。&lt;/li&gt;
+&lt;li&gt;空，一个，或多个。&lt;/li&gt;
+&lt;li&gt;用空格连接，不用下划线。如果有空格则加单引号引起来，没有空格不必加单引号。&lt;/li&gt;
+&lt;li&gt;一般全部小写，如果有些词习惯大小，则可大写。&lt;/li&gt;
+&lt;li&gt;一些形成系列的博客，可以用同一个 tag 组织，如“总结”系列。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;slug：&lt;ul&gt;
+&lt;li&gt;与文件名中的一致。&lt;/li&gt;
+&lt;li&gt;一般取 title 的英文意译。&lt;/li&gt;
+&lt;li&gt;用下划线连接。&lt;/li&gt;
+&lt;li&gt;一般全部小写，如果有些词习惯大小，则可大写。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;正文内容&lt;/h2&gt;
+&lt;p&gt;参考 &lt;a href="https://github.com/DavidAnson/markdownlint/tree/v0.40.0?tab=readme-ov-file"&gt;markdownlint&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;内容超过两页，可考虑生成目录。&lt;/p&gt;
+&lt;p&gt;中英混输且中文为主：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用中文标点。&lt;/li&gt;
+&lt;li&gt;英文或阿拉伯数字与汉字用空格隔开。&lt;/li&gt;
+&lt;li&gt;中文括号中为英文，不加空格。如：风格指南（Style guide）。&lt;/li&gt;
+&lt;li&gt;逗号，句号等后为英文，按英文的习惯，加一个空格。&lt;/li&gt;
+&lt;/ul&gt;</content><category term="coding"/><category term="style guide"/></entry><entry><title>用 certbot 手动获取受信任的 SSL证，并实现对 NextCloud 容器 80 端口的 SSL 访问</title><link href="https://zqw.ink/certbot.html" rel="alternate"/><published>2025-09-14T00:00:00+08:00</published><updated>2025-09-14T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-09-14:/certbot.html</id><summary type="html">&lt;h2&gt;SSL加密&lt;/h2&gt;
+&lt;p&gt;在使用自己搭建的服务，如 &lt;code&gt;emby&lt;/code&gt; ,&lt;code&gt;nextcloud&lt;/code&gt;, &lt;code&gt;immich&lt;/code&gt; 时，如果使用域名访问，当没有进行受信任的 SSL 加密时，对应的手机 app 会连不上，提醒，或 …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;SSL加密&lt;/h2&gt;
+&lt;p&gt;在使用自己搭建的服务，如 &lt;code&gt;emby&lt;/code&gt; ,&lt;code&gt;nextcloud&lt;/code&gt;, &lt;code&gt;immich&lt;/code&gt; 时，如果使用域名访问，当没有进行受信任的 SSL 加密时，对应的手机 app 会连不上，提醒，或报错。&lt;/p&gt;
+&lt;p&gt;最简单的方式是用 &lt;code&gt;certbot&lt;/code&gt; 获取一个 90 天期限的 SSL 证书，到期后再更新。此篇博客做一备忘。&lt;/p&gt;
+&lt;h2&gt;证书获取过程&lt;/h2&gt;
+&lt;p&gt;安装好certbot后，执行以下命令手动获取 SSL 证书，并用在域名上添加一条 txt 解析的方式进行域名验证：&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-bash"&gt;certbot certonly --manual --preferred-challenges dns -d xxx.xxx.com
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;按提示在域名提供商处添加记录：&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-bash"&gt;Saving debug log to /var/log/letsencrypt/letsencrypt.log
+Requesting a certificate for xxx.xxx.com
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Please deploy a DNS TXT record under the name:
+
+_acme-challenge.xxx.xxx.com.
+
+with the following value:
+
+GxxxxxxxxxxxxxQ
+
+Before continuing, verify the TXT record has been deployed. Depending on the DNS
+provider, this may take some time, from a few seconds to multiple minutes. You can
+check if it has finished deploying with aid of online tools, such as the Google
+Admin Toolbox: https://toolbox.googleapps.com/apps/dig/#TXT/_acme-challenge.xxx.xxx.com.
+Look for one or more bolded line(s) below the line ';ANSWER'. It should show the
+value(s) you've just added.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Press Enter to Continue
+
+Successfully received certificate.
+Certificate is saved at: /etc/letsencrypt/live/xxx.xxx.com/fullchain.pem
+Key is saved at:         /etc/letsencrypt/live/xxx.xxx.com/privkey.pem
+This certificate expires on 2025-12-13.
+These files will be updated when the certificate renews.
+
+NEXT STEPS:
+- This certificate will not be renewed automatically. Autorenewal of --manual certificates requires the use of an authentication hook script (--manual-auth-hook) but one was not provided. To renew this certificate, repeat this same certbot command before the certificate's expiry date.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+If you like Certbot, please consider supporting our work by:
+ * Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
+ * Donating to EFF:                    https://eff.org/donate-le
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;.pem&lt;/code&gt;、&lt;code&gt;.crt&lt;/code&gt;、&lt;code&gt;.key&lt;/code&gt; 本质上都是文本格式的证书/密钥文件，只是扩展名不同而已。可以直接需要复制或改名：&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-bash"&gt;fullchain.pem -&amp;gt;.crt
+privkey.pem -&amp;gt;.key
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;正确设置权限，参考如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-bash"&gt;-rw-r--r--. 1 zqw zqw 2.8K Sep 14 17:40 server.crt
+-rw-------. 1 zqw zqw  227 Sep 14 17:40 server.key
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;代理的 Podman 文件，代理容器的配置文件示例&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;nextcloud-proxy.container&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-bash"&gt;[Container]
+ContainerName=nextcloud-proxy
+Pod=nextcloud.pod
+Image=docker.io/library/httpd:2.4
+Volume=/xxx/extra-proxy.conf:/usr/local/apache2/conf/extra/proxy.conf:ro,Z
+Volume=/xxx/httpd.conf:/usr/local/apache2/conf/httpd.conf:ro,Z
+Volume=/xxx/server.crt:/usr/local/apache2/conf/server.crt:ro,Z
+Volume=/xxx/server.key:/usr/local/apache2/conf/server.key:ro,Z
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;httpd.conf&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-bash"&gt;# Real-time info on requests and configuration
+#Include conf/extra/httpd-info.conf
+
+# Virtual hosts
+#Include conf/extra/httpd-vhosts.conf
+
+# Local access to the Apache HTTP Server Manual
+#Include conf/extra/httpd-manual.conf
+
+# Distributed authoring and versioning (WebDAV)
+#Include conf/extra/httpd-dav.conf
+
+# Various default settings
+#Include conf/extra/httpd-default.conf
+
+# Configure mod_proxy_html to understand HTML4/XHTML1
+&amp;lt;IfModule proxy_html_module&amp;gt;
+Include conf/extra/proxy-html.conf
+&amp;lt;/IfModule&amp;gt;
+
+# Secure (SSL/TLS) connections
+#Include conf/extra/httpd-ssl.conf
+#
+# Note: The following must must be present to support
+#       starting without SSL on platforms with no /dev/random equivalent
+#       but a statically compiled-in mod_ssl.
+#
+&amp;lt;IfModule ssl_module&amp;gt;
+SSLRandomSeed startup builtin
+SSLRandomSeed connect builtin
+&amp;lt;/IfModule&amp;gt;
+
+Include conf/extra/proxy.conf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;反向代理容器和 nextcloud 容器在同个 pod 内，把nextcloud 默认的 80 代理到了 443:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-bash"&gt;LoadModule proxy_module modules/mod_proxy.so
+LoadModule proxy_http_module modules/mod_proxy_http.so
+
+&amp;lt;IfModule mod_proxy.c&amp;gt;
+    ProxyPreserveHost On
+    ProxyPass / http://localhost:80/
+    ProxyPassReverse / http://localhost:80/
+&amp;lt;/IfModule&amp;gt;
+
+LoadModule socache_shmcb_module modules/mod_socache_shmcb.so
+LoadModule ssl_module modules/mod_ssl.so
+Include conf/extra/httpd-ssl.conf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在 &lt;code&gt;~/.config/containers/systemd/nextcloud.pod&lt;/code&gt; 文件中，再把 443 映射到想要的端口（如9999），这样就可能在外网通过 SSL 访问 NextCloud 容器:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-bash"&gt;
+[Pod]
+PodName=nextcloud
+Network=bridge
+PublishPort=9999:443
+
+[Install]
+WantedBy=default.target
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;参考资料&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://wiki.archlinux.org/title/Certbot"&gt;ArchWiki: Certbot&lt;/a&gt;&lt;/p&gt;</content><category term="coding"/><category term="SSL"/><category term="certbot"/></entry><entry><title>Plotly 绘制动图</title><link href="https://zqw.ink/2025-06-18-coding-plotly_animation.html" rel="alternate"/><published>2025-06-18T00:00:00+08:00</published><updated>2025-06-18T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-06-18:/2025-06-18-coding-plotly_animation.html</id><summary type="html">&lt;h2&gt;基础版本&lt;/h2&gt;
+&lt;pre&gt;&lt;code class="language-python"&gt;import plotly.graph_objects as go
+import numpy as np
+
+x = np.linspace(0, 2*np.pi, 50)
+t = np.linspace(0, 2*np.pi, 500)
+yt = [np.sin(x + ti) for ti in t]
+frames = [go.Frame(data=[go.Scatter(x=x, y=y1i)]) for y1i …&lt;/code&gt;&lt;/pre&gt;</summary><content type="html">&lt;h2&gt;基础版本&lt;/h2&gt;
+&lt;pre&gt;&lt;code class="language-python"&gt;import plotly.graph_objects as go
+import numpy as np
+
+x = np.linspace(0, 2*np.pi, 50)
+t = np.linspace(0, 2*np.pi, 500)
+yt = [np.sin(x + ti) for ti in t]
+frames = [go.Frame(data=[go.Scatter(x=x, y=y1i)]) for y1i in yt]
+
+fig = go.Figure(data=frames[0].data, frames=frames)
+
+ani_opts = dict(frame={&amp;quot;duration&amp;quot;: 20, &amp;quot;redraw&amp;quot;: False})
+bt = go.layout.updatemenu.Button(label=&amp;quot;Play&amp;quot;, method=&amp;quot;animate&amp;quot;,
+                                 args=[None, ani_opts])
+
+fig.update_layout(updatemenus=[dict(type='buttons', buttons=[bt])])
+
+fig.write_html(file=&amp;quot;basic_ver.html&amp;quot;, include_mathjax='cdn', auto_play=False)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;a href="2025-06-18-coding-plotly_animation/basic_ver.py"&gt;basic_ver.py&lt;/a&gt;&lt;/p&gt;
+&lt;iframe src="2025-06-18-coding-plotly_animation/basic_ver.html" width="100%" height=600&gt;&lt;/iframe&gt;
+
+&lt;h2&gt;高级版本&lt;/h2&gt;
+&lt;pre&gt;&lt;code class="language-python"&gt;import plotly.graph_objects as go
+import numpy as np
+import plotly.io as pio
+
+pio.renderers.default = 'notebook_connected'
+
+x = np.linspace(0, 2*np.pi, 50)
+t = np.linspace(0, 2*np.pi, 500)
+y1t = [np.sin(x + ti) for ti in t]
+y2t = [np.cos(x + ti) for ti in t]
+frames = [go.Frame(data=[go.Scatter(x=x, y=y1i, name=r'$\sin(x+t)$'),
+                         go.Scatter(x=x, y=y2i, name=r'$\cos(x+t)$')],
+                   name=f'{ti:.2f}')
+          for y1i, y2i, ti in zip(y1t, y2t, t)]
+
+fig = go.Figure(data=frames[0].data, frames=frames)
+
+ani_opts = dict(frame={&amp;quot;duration&amp;quot;: 20, &amp;quot;redraw&amp;quot;: False})
+bt_play = go.layout.updatemenu.Button(label=&amp;quot;Play&amp;quot;, method=&amp;quot;animate&amp;quot;,
+                                      args=[None, ani_opts])
+
+ani_opts_stop = dict(mode='immediate')
+bt_stop = go.layout.updatemenu.Button(
+    label=&amp;quot;Stop&amp;quot;, method=&amp;quot;animate&amp;quot;,
+    args=[[fig.frames[0].name, fig.frames[1].name], ani_opts_stop])
+
+ani_opts_slider = dict(frame={&amp;quot;duration&amp;quot;: 20, &amp;quot;redraw&amp;quot;: True})
+slider_steps = [go.layout.slider.Step(args=[[f.name], ani_opts_slider],
+                                      label=f.name, method='animate')
+                for f in fig.frames]
+slider = go.layout.Slider(active=0, steps=slider_steps)
+
+
+fig.update_layout(updatemenus=[dict(type='buttons',
+                                    buttons=[bt_play, bt_stop])],
+                  sliders=[slider],
+                  xaxis_title=r'$x$',
+                  paper_bgcolor='rgba(0,0,0,0)',
+                  plot_bgcolor='rgba(0,0,0,0)')
+
+fig.write_html(file=&amp;quot;pro_ver.html&amp;quot;, include_mathjax='cdn', auto_play=False)
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;a href="2025-06-18-coding-plotly_animation/pro_ver.py"&gt;pro_ver.py&lt;/a&gt;&lt;/p&gt;
+&lt;iframe src="2025-06-18-coding-plotly_animation/pro_ver.html" width="100%" height=600&gt;&lt;/iframe&gt;
+
+&lt;h2&gt;参考&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://plotly.com/python/animations/"&gt;Plotly Animations&lt;/a&gt;&lt;/p&gt;</content><category term="coding"/><category term="plotly"/><category term="python"/></entry><entry><title>Linux 使用笔记（进阶）</title><link href="https://zqw.ink/2025-05-10-coding-rocklinux.html" rel="alternate"/><published>2025-05-10T00:00:00+08:00</published><updated>2025-05-10T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-05-10:/2025-05-10-coding-rocklinux.html</id><summary type="html">&lt;h2&gt;引言&lt;/h2&gt;
+&lt;p&gt;从 2018 年开始入门 Linux，已经 7 年了。
+从 Deepin 到 Manjaro，再到 Rocky Linux。
+中间也尝试过 ArchLinux, Debian, Ubuntu, CentOS等等。&lt;/p&gt;
+&lt;p&gt;一开始入门是能用就行，折腾桌面环境。
+到 …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;引言&lt;/h2&gt;
+&lt;p&gt;从 2018 年开始入门 Linux，已经 7 年了。
+从 Deepin 到 Manjaro，再到 Rocky Linux。
+中间也尝试过 ArchLinux, Debian, Ubuntu, CentOS等等。&lt;/p&gt;
+&lt;p&gt;一开始入门是能用就行，折腾桌面环境。
+到现在开始考虑一些安全性，长期的稳定性，不再为了图省事直接关闭防火墙和 SELinux。
+每一行代码都想要理解含义。
+理解配置的逻辑和哲学。&lt;/p&gt;
+&lt;h2&gt;&lt;code&gt;Rocky Linux&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;用 &lt;code&gt;Rocky Linux&lt;/code&gt; 用的还不多，在此写一些备忘。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Rocky Linux&lt;/code&gt; 是 CentOS 替代品，适用于服务器。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;默认使用 &lt;code&gt;SELinux&lt;/code&gt;，&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;使用&lt;code&gt;Cockpit&lt;/code&gt; 面版，&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 LVM 和 &lt;code&gt;xfs&lt;/code&gt;文件系统。
+&lt;code&gt;xfs&lt;/code&gt;文件系统，性能高，适合处理大文件，并行写入，可以不停机扩容，但是不支持缩容，跨平台兼容性差。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;LVM（逻辑卷管理）&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;层级&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;th&gt;类比&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;物理卷 PV&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;实际的硬盘或分区&lt;/td&gt;
+&lt;td&gt;地基&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;卷组 VG&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;若干物理卷组合的池子&lt;/td&gt;
+&lt;td&gt;水泥池&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;逻辑卷 LV&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;从卷组中划分出来的卷&lt;/td&gt;
+&lt;td&gt;建在池子里的房间&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;可以用 &lt;code&gt;pvdispaly&lt;/code&gt; 查看，或者简写为 &lt;code&gt;pvs&lt;/code&gt;。同理 &lt;code&gt;vgs&lt;/code&gt; 和 &lt;code&gt;lvs&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;示例&lt;/h3&gt;
+&lt;p&gt;先用 &lt;code&gt;lsblk&lt;/code&gt; 查看硬盘情况。只有 &lt;code&gt;nvme0n1p3&lt;/code&gt; 分区中有 3 个 lv：&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-shell"&gt;AMD-ZQW-srv ➜  ~ lsblk -f
+NAME        FSTYPE      FSVER    LABEL UUID                                   FSAVAIL FSUSE% MOUNTPOINTS
+sda
+└─sda1      ntfs                 Music 123419620B147062                         37.4G    98% /hdd7
+nvme0n1
+├─nvme0n1p1 vfat        FAT32          1234-B31A                               562.6M     6% /boot/efi
+├─nvme0n1p2 xfs                        1234d41c-4f32-4759-9d14-652ee9c5688f     64.6M    93% /boot
+└─nvme0n1p3 LVM2_member LVM2 001       1234Wo-pyLw-p278-rTFa-D4ix-7ob1-jEKxpp
+  ├─rl-root xfs                        12347aef-b5a5-4034-8b01-1449de8cc13f     21.7G    69% /
+  ├─rl-swap swap        1              1234c97d-5ec9-4720-84f2-30440f4269d3                  [SWAP]
+  └─rl-home xfs                        1234270f-41f8-4d69-bd4d-43e20c790d82    768.9G     9% /home
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;3个 lv 中，有一个是 swap，另外两个 lv 的文件格式都是 xfs。&lt;/p&gt;
+&lt;p&gt;再 &lt;code&gt;df&lt;/code&gt; 一下，作为参考：&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-shell"&gt;AMD-ZQW-srv ➜  ~ df -hT
+Filesystem          Type      Size  Used Avail Use% Mounted on
+devtmpfs            devtmpfs  4.0M     0  4.0M   0% /dev
+tmpfs               tmpfs      16G   84K   16G   1% /dev/shm
+tmpfs               tmpfs     6.1G   11M  6.1G   1% /run
+efivarfs            efivarfs  128K   36K   88K  30% /sys/firmware/efi/efivars
+/dev/mapper/rl-root xfs        70G   49G   22G  69% /
+/dev/mapper/rl-home xfs       845G   76G  769G   9% /home
+/dev/nvme0n1p2      xfs       960M  896M   65M  94% /boot
+/dev/nvme0n1p1      vfat      599M   37M  563M   7% /boot/efi
+/dev/sda1           fuseblk   1.9T  1.8T   38G  98% /hdd7
+tmpfs               tmpfs     3.1G  200K  3.1G   1% /run/user/1000
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;nvme0n1p3&lt;/code&gt; 分区是一个 pv：&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-shell"&gt;AMD-ZQW-srv ➜  ~ sudo pvs
+  PV             VG Fmt  Attr PSize   PFree
+  /dev/nvme0n1p3 rl lvm2 a--  929.92g    0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;/dev/nvme0n1p3&lt;/code&gt; pv 中的三个 lv 组成一个名为 &lt;code&gt;rl&lt;/code&gt; (Rocky Linux) 的 vg：&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-shell"&gt;AMD-ZQW-srv ➜  ~ sudo vgs
+  VG #PV #LV #SN Attr   VSize   VFree
+  rl   1   3   0 wz--n- 929.92g    0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;查看所有的 lv，3 个 lv 分别为 &lt;code&gt;home&lt;/code&gt; &lt;code&gt;root&lt;/code&gt; &lt;code&gt;swap&lt;/code&gt; ，全都属于 vg &lt;code&gt;rl&lt;/code&gt;：&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-shell"&gt;AMD-ZQW-srv ➜  ~ sudo lvs
+  LV   VG Attr       LSize    Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
+  home rl -wi-ao---- &amp;lt;844.63g
+  root rl -wi-ao----   70.00g
+  swap rl -wi-ao----   15.29g
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;sudo lvmdevices --adddev /dev/nvme1n1p3
+sudo pvscan
+sudo vgchange -ay
+sudo lvs
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;dnf 和 rpm&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;Rocky Linux&lt;/code&gt; 使用 &lt;code&gt;dnf&lt;/code&gt; 和 &lt;code&gt;rpm&lt;/code&gt; 管理软件包。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;功能&lt;/th&gt;
+&lt;th&gt;命令&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;查找软件包&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;dnf search &amp;lt;关键词&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;安装软件包&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;dnf install &amp;lt;软件包名&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;删除软件包&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;dnf remove &amp;lt;软件包名&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;更新所有包&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;dnf upgrade&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;查看包信息&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;dnf info &amp;lt;软件包名&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;清理缓存&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;dnf clean all&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;显示所有可更新包&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;dnf check-update&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;启用/禁用源&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;dnf config-manager --set-enabled &amp;lt;repo&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;查看软件源&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;dnf repolist&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;工具&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;rpm&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;管理单个 &lt;code&gt;.rpm&lt;/code&gt; 包（安装、查询、卸载等）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;dnf&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;依赖于 &lt;code&gt;rpm&lt;/code&gt;&lt;/strong&gt;，自动处理依赖，连接仓库&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;zsh&lt;/h2&gt;
+&lt;h2&gt;硬盘挂载&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;etc/systemd/system/hdd1.mount&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[Unit]
+Description=Mount hdd1
+# After=local-fs.target
+
+[Mount]
+What=/dev/sda1
+Where=/hdd1
+Type=ntfs
+Options=defaults,uid=1000,gid=1000
+
+[Install]
+WantedBy=multi-user.target
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;journalctl 查看日志&lt;/h2&gt;
+&lt;h2&gt;Podman(Docker)&lt;/h2&gt;
+&lt;p&gt;以 NextCloud为例&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-shell"&gt;~/.config/containers/systemd/nextcloud.pod
+[Pod]
+PodName=nextcloud
+Network=bridge
+PublishPort=xxxx:80
+
+[Install]
+WantedBy=default.target
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class="language-shell"&gt;~/.config/containers/systemd/nextcloud-app.container
+[Container]
+Image=docker.io/library/nextcloud:apache
+Pod=nextcloud.pod
+ContainerName=nextcloud-app
+Volume=/XXX/data:/var/www/html:Z
+Environment=MYSQL_PASSWORD=nextcloudpass
+Environment=MYSQL_DATABASE=nextcloud
+Environment=MYSQL_USER=nextcloud
+Environment=MYSQL_HOST=nextcloud-db
+#Environment=NEXTCLOUD_ADMIN_USER=admin
+#Environment=NEXTCLOUD_ADMIN_PASSWORD=adminpass
+Environment=&amp;quot;NEXTCLOUD_TRUSTED_DOMAINS=192.168.0.XX xx.xxx.com&amp;quot;
+#Exec=sleep infinity
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class="language-shell"&gt;~/.config/containers/systemd/nextcloud-db.container
+[Container]
+Image=docker.io/library/mariadb:10.6
+Pod=nextcloud.pod
+ContainerName=nextcloud-db
+Volume=/XXX/db:/var/lib/mysql:Z
+Environment=MYSQL_ROOT_PASSWORD=rootpass
+Environment=MYSQL_PASSWORD=nextcloudpass
+Environment=MYSQL_DATABASE=nextcloud
+Environment=MYSQL_USER=nextcloud
+#Exec=sleep infinity
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class="language-shell"&gt;loginctl enable-linger &amp;lt;user&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;quadlet&lt;/code&gt;是一次性读取所有的&lt;code&gt;.pod&lt;/code&gt; &lt;code&gt;.container&lt;/code&gt; 文件，所以只要有一个格式不对，就会导致所有的文件都不能生成相应的服务。可以用如下命令测试，看看是哪个文件格式有问题：&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-shell"&gt;/usr/lib/systemd/system-generators/podman-system-generator --user --dryrun
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;SELinux&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;部分&lt;/th&gt;
+&lt;th&gt;含义说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;sudo&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;以超级用户身份运行命令&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;semanage&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;SELinux 管理工具，用来配置策略（如端口、文件类型等）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;port&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;操作对象是“端口”&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;-a&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;添加一个新记录（a = add）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;-t ssh_port_t&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;设置这个端口的类型为 &lt;code&gt;ssh_port_t&lt;/code&gt;（也就是允许 &lt;code&gt;sshd&lt;/code&gt; 使用）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;-p tcp&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;协议类型为 TCP（SSH 是基于 TCP 的）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;2222&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;要添加的新端口号&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;添加端口&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-shell"&gt;sudo semanage port -a -t http_port_t -r 's0' -p tcp xxxx
+
+sudo semanage port -a -t http_port_t -p tcp 8096
+sudo semanage port -a -t http_port_t -p tcp 8920
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;允许访问目录，以及递归的子目录&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-shell"&gt;sudo semanage fcontext -a -f a -t container_file_t -r 's0' '/home/zqw(/.*)?'
+sudo restorecon -Rv /home/zqw/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;查看 SELinux 状态：
+&lt;code&gt;getenforce&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;关闭：
+&lt;code&gt;setenforce 0&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;开启：
+&lt;code&gt;setenforce 1&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;Firewall&lt;/h2&gt;
+&lt;pre&gt;&lt;code class="language-xml"&gt;&amp;lt;!-- /etc/firewalld/services/emby.xml --&amp;gt;
+&amp;lt;service&amp;gt;
+  &amp;lt;short&amp;gt;Emby&amp;lt;/short&amp;gt;
+  &amp;lt;description&amp;gt;Media server&amp;lt;/description&amp;gt;
+  &amp;lt;port protocol=&amp;quot;tcp&amp;quot; port=&amp;quot;8096&amp;quot;/&amp;gt;
+  &amp;lt;port protocol=&amp;quot;tcp&amp;quot; port=&amp;quot;8920&amp;quot;/&amp;gt;
+&amp;lt;/service&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class="language-shell"&gt;sudo firewall-cmd --permanent --add-service=emby
+sudo firewall-cmd --reload
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Rsync&lt;/h2&gt;
+&lt;p&gt;远程同步&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;rsync -av --delete --info=progress2 -e 'ssh -p ****' ./music/ ***@***.***:/hdd1/musiclib/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Systemctl&lt;/h2&gt;
+&lt;h2&gt;初始化与用户、权限管理&lt;/h2&gt;
+&lt;p&gt;出于安全考虑修改 &lt;code&gt;ssh&lt;/code&gt; 的默认端口。
+修改 &lt;code&gt;/etc/ssh/sshd_config&lt;/code&gt; 中的 &lt;code&gt;Port&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;semanage port -a -t ssh_port_t -p tcp #PORTNUMBER&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;firewall-cmd --permanent --add-port=2222/tcp&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;firewall-cmd --reload&lt;/code&gt;
+&lt;code&gt;systemctl restart sshd&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;chsh -s /usr/bin/zsh&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;引导&lt;/h2&gt;
+&lt;p&gt;ESP (EFI System Partition)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo efibootmgr --create \
+  --disk /dev/sdX \
+  --part Y \
+  --label &amp;quot;RockyLinux-GRUB&amp;quot; \
+  --loader &amp;quot;\EFI\rocky\grubx64.efi&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;/dev/sdX 是你的 EFI 分区所在的磁盘，比如 /dev/sda&lt;/p&gt;
+&lt;p&gt;Y 是该 EFI 分区在该盘上的分区号，比如是 /dev/sda1，那就是 --part 1&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo efibootmgr --bootorder 0005
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;sudo efibootmgr --bootnum 0002 --delete-bootnum
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Kdump&lt;/h2&gt;
+&lt;h2&gt;rsync&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;rsync -ah --info=progress2 ../home_old/zqw/immich-app ./immich-app
+&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;参数&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;-a&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;归档模式，保留权限、时间戳、符号链接等&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;-v&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;verbose，显示详细信息&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;-h&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;human-readable，以 KB/MB 显示文件大小&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;--progress&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;显示每个文件的复制进度&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/source/path/&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;结尾有 &lt;code&gt;/&lt;/code&gt; 表示复制&lt;strong&gt;目录内容&lt;/strong&gt;（而非目录本身）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/destination/path/&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;目标路径，需有写权限&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;--info=progress2&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;显示总进度&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;WordPress 迁移&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;wp-settings.php&lt;/code&gt; 中添加：&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-php"&gt;define('WP_HOME', 'http://your.new.domain');
+define('WP_SITEURL', 'http://your.new.domain');
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;用&lt;code&gt;wp-cli&lt;/code&gt;替换旧域名：&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-shell"&gt;curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+chmod +x wp-cli.phar
+mv wp-cli.phar /usr/local/bin/wp
+
+wp --info
+
+cd /var/www/html
+wp search-replace 'http://xxx.xxx' 'http://xxx.xxx.xxx.xxx:xxxx' --all-tables --allow-root
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;致谢&lt;/h2&gt;
+&lt;p&gt;所有为 ChatGPT 提供训练素材的人。&lt;/p&gt;</content><category term="coding"/><category term="SELinux"/><category term="RockyLinux"/></entry></feed>
