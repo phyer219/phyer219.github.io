@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh_cn">
+
+<head>
+    <title>从冰上的水 - 页面色彩搭配</title>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Pelican" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/theme/css/base.css" />
+  <link rel="stylesheet" type="text/css" href="/theme/css/layout.css" />
+  <link rel="stylesheet" type="text/css" href="/theme/css/components.css" />
+  <link rel="stylesheet" type="text/css" href="/theme/css/code.css" />
+  <!-- SEO: site-level structured data (WebSite) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "从冰上的水",
+    "url": "/"
+  }
+  </script>
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Serif+SC&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.6.1/github-markdown.min.css" integrity="sha512-wpdV3v8V8vWajD1kH8rI1UO1H2q9TQ3s8o1mG7lH8fS1dZ+3q1B1p4lH2tF8rQm2u0n8oV6rN3tV4nQWmY4nTw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!--fonts end  -->
+  <!-- highlight.js -->
+  <link id="hljs-light" rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" disabled>
+  <link id="hljs-dark" rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" disabled>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <script>
+    hljs.highlightAll();
+    (function () {
+      const light = document.getElementById('hljs-light');
+      const dark = document.getElementById('hljs-dark');
+      if (!light || !dark) return;
+
+      function resolveTheme() {
+        return document.documentElement.getAttribute('data-theme') || 'light';
+      }
+
+      function applyTheme(theme) {
+        const isDark = theme === 'dark';
+        light.disabled = isDark;
+        dark.disabled = !isDark;
+      }
+
+      const observer = new MutationObserver(function () {
+        applyTheme(resolveTheme());
+      });
+      observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+      applyTheme(resolveTheme());
+    })();
+  </script>
+  <!-- highlight.js end -->
+
+<script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        tags: 'ams'   // 自动给 AMS 环境/显示公式编号
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.1">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.1">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.1">
+
+
+
+  <!-- SEO: page description for search results -->
+    <meta name="description" content="红光和绿光“等比混合”得到黄光，本质上是视觉系统的加色混合：你的眼睛同时收到两束不同波长的光，L 锥体（偏长波）和 M …" />
+
+    <meta name="tags" content="webUI" />
+    <meta name="tags" content="颜色" />
+    <meta name="tags" content="css" />
+
+  <!-- SEO: structured data for articles (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "页面色彩搭配",
+    "datePublished": "2025-12-31T00:00:00+08:00",
+    "author": {
+      "@type": "Person",
+      "name": "ZQW"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "/2025-12-13-coding-webui_color.html"
+    }
+  }
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <div id="header-container">
+      <button id="nav-toggle" class="nav-toggle" aria-label="打开菜单" aria-expanded="false">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+      <nav id="site-nav">
+        <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/category/physics">Physics</a>
+            </li>
+            <li>
+              <a href="/category/blog">Blog</a>
+            </li>
+            <li>
+              <a href="/category/coding">Coding</a>
+            </li>
+            <li>
+              <a href="/archives">All</a>
+            </li>
+          </ul>
+      </nav>
+      <div class="header-actions">
+        <button id="theme-toggle" aria-label="切换到深色模式" title="切换主题">
+          <i class="theme-icon icon-sun fa-solid fa-sun" aria-hidden="true"></i>
+          <i class="theme-icon icon-moon fa-solid fa-moon" aria-hidden="true"></i>
+        </button>
+        <div class="rss">
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+
+<h1 class="post-title">页面色彩搭配</h1>
+
+<section class="post-meta">
+    <p>2025-12-31</p>
+    <p>-<a class="post-link" href="/category/coding.html">coding</a></p>
+</section>
+
+<section class="markdown-body">
+  
+<p>红光和绿光“等比混合”得到黄光，本质上是视觉系统的加色混合：你的眼睛同时收到两束不同波长的光，L 锥体（偏长波）和 M 锥体（偏中波）被激发的比例，和某些“单色黄光”激发比例相近，于是你感觉到“黄”。</p>
+<p>关键点是：混合后的光并没有一个唯一波长，所以“他们的波长是什么关系”这题，严格说答案是：</p>
+<p>混合光的光谱包含两条（或两段）谱线：一条在红光波长<br />
+λr<br />
+λ<br />
+r<br />
+​</p>
+<p>，一条在绿光波长<br />
+λg<br />
+λ<br />
+g<br />
+​</p>
+<p>。</p>
+<p>它不会变成某个<br />
+λy<br />
+λ<br />
+y<br />
+​</p>
+<p>的单色黄光，因此不存在类似</p>
+<p>λy=(λr+λg)/2<br />
+λ<br />
+y<br />
+​</p>
+<p>=(λ<br />
+r<br />
+​</p>
+<p>+λ<br />
+g<br />
+​</p>
+<p>)/2 这种简单关系（也不是频率/能量的平均）。</p>
+<p>如果你非要用“等效黄光”来描述（色度匹配意义下）：</p>
+<p>单色“黄”的典型波长大约在<br />
+570∼590 nm<br />
+570∼590nm（常取约<br />
+580 nm<br />
+580nm 一带），</p>
+<p>但这只是“看起来像黄”的等效，不是由<br />
+λr,λg<br />
+λ<br />
+r<br />
+​</p>
+<p>,λ<br />
+g<br />
+​</p>
+<p>唯一决定的物理结果。</p>
+<p>再补一句容易踩坑的：你说的“等比”若指等功率，未必看起来正好是“纯黄”，因为人眼对不同波长的亮度敏感度不同；做成“看起来等强”的黄，通常要按视觉亮度加权去配比，而不是简单功率 1:1。</p>
+<h2>色卡</h2>
+<table>
+  <tr>
+    <td style="color:#E04050;" bgcolor="#40E0D0" >松石绿（turquoise）</td>
+  </tr>
+</table>
+<h2>示例</h2>
+<pre><code class="language-css">:root{
+  --bg:#F7FAFA;
+  --surface:#FFFFFF;
+  --surface-2:#EEF6F6;
+  --text:#0B1220;
+  --text-muted:#475569;
+  --border:#D7E3E3;
+
+  --primary-50:#E8FCFA;
+  --primary-100:#D1F9F5;
+  --primary-200:#A3F2EA;
+  --primary-300:#76EADF;
+  --primary-400:#4EE2D3;
+  --primary-500:#40E0D0;
+  --primary-600:#2EC5B7;
+  --primary-700:#1FA89D;
+  --primary-800:#16857D;
+  --primary-900:#0F5E59;
+
+  --primary:var(--primary-500);
+  --primary-hover:var(--primary-700);
+  --primary-active:var(--primary-800);
+  --primary-soft:var(--primary-100);
+  --on-primary:#04201D;
+
+  --accent:#FF6B5A;
+  --accent-soft:#FFE3DF;
+
+  --success:#22C55E; --success-soft:#DCFCE7;
+  --warning:#F59E0B; --warning-soft:#FEF3C7;
+  --error:#EF4444;   --error-soft:#FEE2E2;
+  --info:#3B82F6;    --info-soft:#DBEAFE;
+}
+
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#071112;
+    --surface:#0B1A1C;
+    --surface-2:#102427;
+    --text:#E9FFFC;
+    --text-muted:#A6C7C3;
+    --border:#163236;
+
+    --primary-hover:var(--primary-300);
+    --primary-active:var(--primary-400);
+    --primary-soft:#0F2E2C;
+
+    --accent:#FF7A6B;
+    --accent-soft:#3A1E1A;
+  }
+}
+</code></pre>
+<table>
+  <tr>
+    <td>primary</td>
+    <td bgcolor="#40E0D0" width="100" height="20"></td>
+    <td>#40E0D0</td>
+    <td>松石绿（turquoise）</td>
+  <tr>
+    <td>primary-contrast</td>
+    <td bgcolor="#E04050" width="100" height="20"></td>
+    <td>#E04050</td>
+  </tr>
+  <tr>
+    <td>link</td>
+  </tr>
+  </tr>
+  <tr>
+    <td>background</td>
+  </tr>
+  <tr>
+    <td>surface</td>
+  </tr>
+  <tr>
+    <td>surface-muted</td>
+  </tr>
+  <tr>
+    <td>text</td>
+  </tr>
+  <tr>
+    <td>text-muted</td>
+  </tr>
+  <tr>
+    <td>border</td>
+  </tr>
+  <tr>
+    <td>success</td>
+  </tr>
+  <tr>
+    <td>warning</td>
+  </tr>
+  <tr>
+    <td>danger</td>
+  </tr>
+</table>
+<h2>色彩搭配网站</h2>
+<ul>
+<li><a href="https://m2.material.io/design/color/the-color-system.html?utm_source=chatgpt.com#tools-for-picking-colors">Material design tools for picking colors</a>：谷歌为 Material Design 提供的色彩搭配工具，选一个主题色，会自动给出相应的搭配色彩。同时也介绍了一些色彩搭配的基本概念。</li>
+<li><a href="https://www.happyhues.co/">happyhues</a>：提供了一些色彩搭配方案。作者 <a href="https://www.mackenziechild.me/">Mackenzie</a> 是一名前端工程师。</li>
+<li><a href="https://coolors.co/">coolors.co</a>：一个调色盘网站。</li>
+<li><a href="https://colorhunt.co">colorhunt.co</a>：提供了很多配色，每一套四种颜色。可以根据标签查找。</li>
+<li><a href="https://zhongguose.com">中国传统色</a>、<a href="https://nipponcolors.com">日本传统色</a>。</li>
+</ul>
+
+</section>
+
+<section class="post-meta">
+    <p>
+        <a class="post-link" href="/tag/webui.html">#webUI</a>
+        <a class="post-link" href="/tag/yan-se.html">#颜色</a>
+        <a class="post-link" href="/tag/css.html">#css</a>
+    </p>
+</section>
+
+  </main>
+  <footer role="contentinfo">
+    <p>Copyright &copy; 2018 - 2025 ZQW</p>
+  </footer>
+  <script>
+  (function() {
+    const key = 'theme';
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const saved = localStorage.getItem(key);
+    const init = saved ? saved : 'system';
+    const effective = init === 'system' ? (prefersDark ? 'dark' : 'light') : init;
+    document.documentElement.setAttribute('data-theme', effective);
+    updateThemeButton(effective);
+
+    document.getElementById('theme-toggle')?.addEventListener('click', function () {
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem(key, next);
+      updateThemeButton(next);
+    });
+
+    function updateThemeButton(theme) {
+      const btn = document.getElementById('theme-toggle');
+      if (btn) {
+        btn.setAttribute('aria-label', theme === 'dark' ? '切换到浅色模式' : '切换到深色模式');
+      }
+    }
+  })();
+  </script>
+  <script>
+  (function() {
+    const blocks = document.querySelectorAll('pre > code');
+    blocks.forEach((code) => {
+      const pre = code.parentElement;
+      if (!pre) return;
+
+      if (!pre.dataset.lang) {
+        const cls = Array.from(code.classList);
+        const langClass = cls.find((name) => name.startsWith('language-') || name.startsWith('lang-'));
+        if (langClass) {
+          const raw = langClass.replace(/^language-/, '').replace(/^lang-/, '');
+          pre.dataset.lang = raw.replace(/_/g, ' ').toUpperCase();
+        }
+      }
+
+      if (pre.querySelector('.copy-btn')) return;
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'copy-btn';
+      btn.setAttribute('aria-label', '复制代码');
+      btn.textContent = 'Copy';
+      btn.addEventListener('click', async function () {
+        try {
+          await navigator.clipboard.writeText(code.innerText);
+          btn.textContent = 'Copied';
+        } catch (err) {
+          const range = document.createRange();
+          range.selectNodeContents(code);
+          const selection = window.getSelection();
+          selection.removeAllRanges();
+          selection.addRange(range);
+          try {
+            document.execCommand('copy');
+            btn.textContent = 'Copied';
+          } finally {
+            selection.removeAllRanges();
+          }
+        }
+        setTimeout(() => {
+          btn.textContent = 'Copy';
+        }, 1500);
+      });
+      pre.appendChild(btn);
+    });
+  })();
+  </script>
+  <script>
+  (function() {
+    const toggle = document.getElementById('nav-toggle');
+    const nav = document.getElementById('site-nav');
+    if (!toggle || !nav) return;
+
+    function closeNav() {
+      nav.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', '打开菜单');
+    }
+
+    function openNav() {
+      nav.classList.add('is-open');
+      toggle.setAttribute('aria-expanded', 'true');
+      toggle.setAttribute('aria-label', '关闭菜单');
+    }
+
+    toggle.addEventListener('click', function (event) {
+      event.stopPropagation();
+      const isOpen = nav.classList.contains('is-open');
+      if (isOpen) {
+        closeNav();
+      } else {
+        openNav();
+      }
+    });
+
+    nav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', closeNav);
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!nav.classList.contains('is-open')) return;
+      if (nav.contains(event.target) || toggle.contains(event.target)) return;
+      closeNav();
+    });
+  })();
+  </script>
+</body>
+
+</html>

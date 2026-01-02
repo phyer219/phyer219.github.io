@@ -1,5 +1,204 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水 - coding</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/coding.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2025-12-30T00:00:00+08:00</updated><entry><title>个人博客风格指南（备忘）</title><link href="https://zqw.ink/2025-12-30-coding-style_guide.html" rel="alternate"/><published>2025-12-30T00:00:00+08:00</published><updated>2025-12-30T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-12-30:/2025-12-30-coding-style_guide.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水 - coding</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/coding.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2025-12-31T00:00:00+08:00</updated><entry><title>人类对颜色的感知</title><link href="https://zqw.ink/2025-12-31-coding-color.html" rel="alternate"/><published>2025-12-31T00:00:00+08:00</published><updated>2025-12-31T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-12-31:/2025-12-31-coding-color.html</id><summary type="html">
+&lt;p&gt;人为什么会感觉到不同的颜色？颜色为什么可以用三基色混合而成？让我们从光的质出发来理解这些问题。&lt;/p&gt;
+&lt;h2&gt;人眼对光的感 …&lt;/h2&gt;</summary><content type="html">
+&lt;p&gt;人为什么会感觉到不同的颜色？颜色为什么可以用三基色混合而成？让我们从光的质出发来理解这些问题。&lt;/p&gt;
+&lt;h2&gt;人眼对光的感知&lt;/h2&gt;
+&lt;p&gt;人眼中有&lt;a href="https://zh.wikipedia.org/zh-cn/%E8%A7%86%E9%94%A5%E7%BB%86%E8%83%9E"&gt;视锥细胞&lt;/a&gt;（&lt;a href="https://en.wikipedia.org/wiki/Cone_cell"&gt;cone cell&lt;/a&gt;）和&lt;a href="https://zh.wikipedia.org/zh-cn/%E8%A7%86%E6%9D%86%E7%BB%86%E8%83%9E"&gt;视杆细胞（rod cell）&lt;/a&gt;两种&lt;a href="https://zh.wikipedia.org/zh-cn/%E6%84%9F%E5%85%89%E7%BB%86%E8%83%9E"&gt;感光细胞（photoreceptor cell）&lt;/a&gt;。不同的感光细胞含有不同的&lt;a href="https://en.wikipedia.org/wiki/Opsin"&gt;视蛋白（opsins）&lt;/a&gt;，因此不同的感光细胞对不同波长的光敏感程度不同。&lt;/p&gt;
+&lt;p&gt;视杆细胞只对光比较敏感，但只有一种光敏色素。相比于视杆细胞对光，视锥细胞对光的敏感度比较低，但有三种类型，分别可以感受长波长（Long, L），中波长（Medium, M）和短波长（Short, S）的光（&lt;a href="https://en.wikipedia.org/wiki/Trichromacy"&gt;trichromacy&lt;/a&gt;）。&lt;sup class="footnote-ref"&gt;&lt;a href="#fn1" id="fnref1"&gt;[1]&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;table&gt;
+  &lt;th colspan=4&gt;
+  四种感光细胞对不同波长的光的敏感程度
+  &lt;/th&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Blue cones&lt;/td&gt;
+    &lt;td&gt;Rods&lt;/td&gt;
+    &lt;td&gt;Green cones&lt;/td&gt;
+    &lt;td&gt;Red cones&lt;/td&gt;
+  &lt;/tr&gt;
+    &lt;tr&gt;
+    &lt;td&gt;420 nm #6a00ff&lt;/td&gt;
+    &lt;td&gt;498 nm #00ffa9&lt;/td&gt;
+    &lt;td&gt;534 nm #6cff00&lt;/td&gt;
+    &lt;td&gt;564 nm #cfff00&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td bgcolor="#6a00ff" height="20"&gt;&lt;/td&gt;
+    &lt;td bgcolor="#00ffa9" height="20"&gt;&lt;/td&gt;
+    &lt;td bgcolor="#6cff00" height="20"&gt;&lt;/td&gt;
+    &lt;td bgcolor="#cfff00" height="20"&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+  &lt;td colspan=4&gt;
+  波长到RGB在线转换：&lt;a href="https://www.johndcook.com/wavelength_to_RGB.html"&gt;https://www.johndcook.com/wavelength_to_RGB.html&lt;/a&gt;
+  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+  &lt;td colspan=4&gt;
+  &lt;figure&gt;
+    &lt;img src="./2025-12-31-coding-color/1416_Color_Sensitivity.svg" atl="color sensitivity"&gt;
+    &lt;figcaption&gt;
+    图片来自 &lt;a href="https://zh.wikipedia.org/zh-cn/File:1416_Color_Sensitivity.svg"&gt;Wikipedia&lt;/a&gt;。
+    视杆细胞、视锥细胞能看到的各波长。纵轴是各自归一化过的&lt;a href="https://zh.wikipedia.org/zh-cn/%E5%90%B8%E5%85%89%E5%BA%A6"&gt;吸光度&lt;/a&gt;。
+    &lt;/figcaption&gt;
+  &lt;/figure&gt;
+  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+  &lt;td colspan=4&gt;
+  &lt;figure&gt;
+    &lt;img src="./2025-12-31-coding-color/Cone-fundamentals-with-srgb-spectrum.svg" atl="cone fundamentals with srgb spectrum"&gt;
+    &lt;figcaption&gt;
+    图片来自 &lt;a href="https://upload.wikimedia.org/wikipedia/commons/0/04/Cone-fundamentals-with-srgb-spectrum.svg"&gt;Wikipedia&lt;/a&gt;。
+    &lt;/figcaption&gt;
+  &lt;/figure&gt;
+  &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;h2&gt;色彩空间&lt;/h2&gt;
+&lt;p&gt;如何对不同的颜色定量地描述呢？最直接的描述就是人眼接收到光的光谱 $S(\lambda)$，其中 $\lambda$ 是光的波长。给定光谱 $S(\lambda)$，颜色也就确定了。本节提到的数学概念仅用于理解，不做严格定义。&lt;/p&gt;
+&lt;p&gt;但人眼感受到的同一种的颜色的光，光谱也可能不完全一样（&lt;a href="https://en.wikipedia.org/wiki/Metamerism_(color)"&gt;条件等色， Metamerism&lt;/a&gt;）。比如&lt;a href="https://en.wikipedia.org/wiki/Sunlight"&gt;太阳光&lt;/a&gt;的光谱非常丰富，人眼感受到的颜色是白色。但电子显示器上白色，却只有红绿蓝三种光。原因很简单，光谱 $S(\lambda)$ 的变量是连续变化的波长 $\lambda$ 是一个无穷维的空间，但是人眼只有三种对波长敏感的细胞，把光谱 $S(\lambda)$ 投影到了三维空间上。所有具有相同颜色的光谱 $S(\lambda)$ 可以理解成一个等价类，人眼就只有分辨不同的等价类，不能分辨不同的光谱 $S(\lambda)$ 。简而言之，$S(\lambda)\mapsto \mathrm{Color}$ 不是单射。&lt;/p&gt;
+&lt;p&gt;直接用光的波长描述颜色也不好，因为有些颜色没有单一波长的光的对应。比如品红（&lt;span style="color: #FF00FF;"&gt;#FF00FF&lt;/span&gt;，&lt;a href="https://en.wikipedia.org/wiki/Magenta"&gt;magenta&lt;/a&gt;），就没有单一波长的可见光与之对应。原因是，波长 $\lambda$ 是单一变量，一维空间，但人眼能感受的颜色是三种视锥细胞的响应，是一个三维空间。简而言之，$\lambda\mapsto \mathrm{Color}$ 是单射，但不是满射。&lt;/p&gt;
+&lt;p&gt;我们想要一个好的描述，它应该是把无穷维的光谱，映射到一个三维的空间（因为有三种视锥细胞）。这个三维空间到所有的颜色的映射，即是单射，又是满射，即双射。或者近似是单射也行。这个有限维的空间，就是&lt;a href="https://en.wikipedia.org/wiki/Color_space"&gt;色彩空间（color space）&lt;/a&gt;。&lt;a href="https://en.wikipedia.org/wiki/Grassmann%27s_laws_(color_science)"&gt;Grassmann 定律&lt;/a&gt;&lt;sup class="footnote-ref"&gt;&lt;a href="#fn2" id="fnref2"&gt;[2]&lt;/a&gt;&lt;/sup&gt;给出了一些色彩空间的性质，大致是说，色彩空间应该是一个“三维”，且“线性”的空间。&lt;/p&gt;
+&lt;p&gt;在 1931 年，国际照明委员会（&lt;a href="https://en.wikipedia.org/wiki/International_Commission_on_Illumination"&gt;International Commission on Illumination, CIE)&lt;/a&gt;）定义了人眼看到的一束光（光谱 $S(\lambda)$）的颜色，即，与色彩空间中的一个点的映射关系（&lt;a href="https://en.wikipedia.org/wiki/CIE_1931_color_space"&gt;CIE 1931 color space&lt;/a&gt;）。&lt;/p&gt;
+&lt;p&gt;色彩空间有好多种。下面简要介绍。&lt;/p&gt;
+&lt;h3&gt;LMS 色彩空间&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/LMS_color_space"&gt;LMS 色彩空间&lt;/a&gt;就是直接根据人眼的三种视锥细胞的响应函数定义的。它是一个三维的线性空间，有三个坐标 $L, M$ ，和 &lt;eq&gt;S&lt;/eq&gt;。由光谱 $S(\lambda)$ 到LMS 色彩空间的映射定义为&lt;/p&gt;
+$$
+
+\begin{align*}
+L =&amp; \int_{0}^{\infty}  S(\lambda) l(\lambda) \,\mathrm{d}\lambda, \\
+M =&amp; \int_{0}^{\infty}  S(\lambda) m(\lambda) \,\mathrm{d}\lambda, \\
+S =&amp; \int_{0}^{\infty}  S(\lambda) s(\lambda) \,\mathrm{d}\lambda,
+\end{align*}
+
+$$&lt;p&gt;其中响应函数 $l(\lambda), m(\lambda)$ 和 $ s(\lambda)$ 由实验测定。即使是不同的光谱 $S(\lambda)$ ，只要坐标 $L, M, S$ 相同，人眼感受的颜色就是相同的。响应函数 $l(\lambda), m(\lambda)$ 和 $ s(\lambda)$ 也已经把人眼看不见的颜色做了截断。所以，从 LMS 色彩空间到所有人眼能感觉到的颜色的映射 $\mathcal{C}_{LMS}\mapsto \{\mathrm{Colors}\}$ 这是一个双射。&lt;/p&gt;
+&lt;h3&gt;CIE RGB 色彩空间&lt;/h3&gt;
+&lt;p&gt;在 1931 年，国际照明委员会（&lt;a href="https://en.wikipedia.org/wiki/International_Commission_on_Illumination"&gt;International Commission on Illumination, CIE)&lt;/a&gt;）实验测定的色彩空间。&lt;/p&gt;
+&lt;p&gt;实验用波长为 435.8nm（蓝）， 546.1nm（绿）， 700nm（红） 三种光混合，调节比例，使被试者认为混合之后的颜色，与某个波长的单色光（从连续光谱的光源通过分光获得）颜色相同，记下比例。由此可以测出响应函数 $\bar{r}(\lambda), \bar{g}(\lambda)$ ，和 $\bar{b}(\lambda)$ ,&lt;/p&gt;
+$$
+
+\begin{align*}
+R =&amp; \int_{0}^{\infty}  S(\lambda) \bar{r}(\lambda) \,\mathrm{d}\lambda, \\
+G =&amp; \int_{0}^{\infty}  S(\lambda) \bar{g}(\lambda) \,\mathrm{d}\lambda, \\
+B =&amp; \int_{0}^{\infty}  S(\lambda) \bar{b}(\lambda) \,\mathrm{d}\lambda.
+\end{align*}
+
+$$&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style="text-align:center"&gt;&lt;img src="./2025-12-31-coding-color/CIE1931_RGBCMF2.png" alt="CIE1931_RGBCMF2" /&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="text-align:center"&gt;实验测得的 Color Matching Function。纵轴是归一化过的。给定一个横轴的值，三条曲线在此处的值，对应的就是合成此波长的单色光所需的三种颜色的光的比例。图片来自 &lt;a href="https://upload.wikimedia.org/wikipedia/commons/0/0c/CIE1931_RGBCMF2.png"&gt;Wikipedia&lt;/a&gt;。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;仔细观察可以发现，在 435.8nm（蓝）， 546.1nm（绿）， 700nm（红）三处，只有一种光有值，其它光为零就可以合成。比如 700nm（红）的单色光的颜色的坐标为，&lt;/p&gt;
+$$
+
+\begin{align*}
+R_{\mathrm{R}} = &amp; \int_{0}^{\infty}  \delta(\lambda - \lambda_{\mathrm{R}}) \bar{r}(\lambda) \,\mathrm{d}\lambda, \\
+G_{\mathrm{R}} = &amp; \int_{0}^{\infty}  \delta(\lambda - \lambda_{\mathrm{R}}) \bar{g}(\lambda) \,\mathrm{d}\lambda = 0, \\
+B_{\mathrm{R}} = &amp; \int_{0}^{\infty}  \delta(\lambda - \lambda_{\mathrm{R}}) \bar{b}(\lambda) \,\mathrm{d}\lambda = 0.
+\end{align*}
+
+$$&lt;p&gt;除了这三个点外，都由两个正值，一个负值合成。负值代表的意义是减去该颜色的光，实验上是用该颜色的光照到单色光源上，以此来等效实现。&lt;/p&gt;
+&lt;h3&gt;CIE XYZ 色彩空间&lt;/h3&gt;
+&lt;p&gt;CIE RGB 色彩空间会出现负值，这会很不方便。由此就从 CIE RGB 定义了一个新的色彩空间。三个坐标为 $X, Y$ ， 和 &lt;eq&gt;Z&lt;/eq&gt;。其中 &lt;eq&gt;Y&lt;/eq&gt; 选做 &lt;a href="https://en.wikipedia.org/wiki/Luminance"&gt;亮度（luminance）&lt;/a&gt;的响应函数。&lt;eq&gt;Z&lt;/eq&gt; 先择与 LMS 色彩空间的的 &lt;eq&gt;S&lt;/eq&gt; 相同。选适当的 &lt;eq&gt;X&lt;/eq&gt; 使得坐标在可见单色光谱内的所有颜色的坐标非负。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style="text-align:center"&gt;&lt;img src="./2025-12-31-coding-color/CIE_1931_XYZ_Color_Matching_Functions.svg" alt="CIE 1931 XYZ Color Matching Functions" /&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="text-align:center"&gt;CIE XYZ 色彩空间的 Color Matching Function。图片来自 &lt;a href="https://en.wikipedia.org/wiki/File:CIE_1931_XYZ_Color_Matching_Functions.svg"&gt;Wikipedia&lt;/a&gt;。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;CIE XYZ 色彩空间和 LMS 色彩空间之间的线性变换为，&lt;/p&gt;
+$$
+
+\begin{align*}
+  \begin{pmatrix}
+    X\\
+    Y\\
+    Z
+  \end{pmatrix} =
+    \begin{pmatrix}
+  1.91020 &amp; -1.11212 &amp; 0.20191\\
+  0.37095 &amp; 0.62905  &amp; 0\\
+  0       &amp; 0        &amp; 1
+  \end{pmatrix}
+  \begin{pmatrix}
+  L\\
+  M\\
+  S
+  \end{pmatrix}_{\mathrm{HPE}}
+\end{align*}
+
+$$&lt;h3&gt;CIE xyY 色彩空间&lt;/h3&gt;
+&lt;p&gt;由于 CIE XYZ 的 Y 选做亮度，所以定义&lt;/p&gt;
+$$
+
+\begin{align*}
+x =&amp; \frac{X}{X + Y + Z}\\
+y =&amp; \frac{Y}{X + Y + Z}
+\end{align*}
+
+$$&lt;p&gt;这样 $x, y$ 取值在 &lt;eq&gt;0&lt;/eq&gt; 和 &lt;eq&gt;1&lt;/eq&gt; 之间。在给定亮度下，在 $x-y$ 平面内就表示了所有的颜色。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style="text-align:center"&gt;&lt;img src="./2025-12-31-coding-color/CIE1931xy_CIERGB.svg" alt="CIE 1931 XYZ Color Matching Functions" /&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="text-align:center"&gt;CIE xyY 色彩空间。图片来自 &lt;a href="https://en.wikipedia.org/wiki/File:CIE1931xy_CIERGB.svg"&gt;Wikipedia&lt;/a&gt;。图中的光滑边缘是单色可见光谱。三角形由 CIE RGB 的三个从单色可见光谱中选取的围成。在三角形内, CIE RGB 坐标是非负的，而在外面，至少有一个值为负。同时也可以看出，在左上部分有较大部分在三角形外，对应的是 &lt;eq&gt;R&lt;/eq&gt; 坐标为负的那部分青光。同时值得注意，这里只是示意图，因为普通显示器不可能显示出这里的所有的颜色。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;其它 RGB 色彩空间&lt;/h3&gt;
+&lt;p&gt;除了 CIE RGB 色彩空间，还有许多其它的 RGB 色彩空间。比如，我们常用的用十六进制表示的 RGB 颜色（#RRGGBB）就是 &lt;a href="https://en.wikipedia.org/wiki/SRGB"&gt;sRGB&lt;/a&gt; 色彩空间中的坐示。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style="text-align:center"&gt;&lt;img src="./2025-12-31-coding-color/CIE1931xy%20gamut%20comparison.svg" alt="CIE 1931 xy gamut comparision" /&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="text-align:center"&gt;其它 RGB 色彩空间在 CIE xy 坐标中的色域（&lt;a href="https://en.wikipedia.org/wiki/Gamut"&gt;gamut&lt;/a&gt;）。图片来自 &lt;a href="https://en.wikipedia.org/wiki/File:CIE1931xy_gamut_comparison.svg"&gt;Wikipedia&lt;/a&gt;。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;其它色彩空间&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/CIELAB_color_space"&gt;CIELAB 色彩空间&lt;/a&gt;等。&lt;/p&gt;
+&lt;h2&gt;HSL 和 HSV 色彩空间&lt;/h2&gt;
+&lt;p&gt;设计和画画的时候，还经常用到 &lt;a href="https://en.wikipedia.org/wiki/HSL_and_HSV"&gt;HSL 和 HSV 色彩空间&lt;/a&gt;。他们是把 RGB 色彩空间做了简单的变换，使得人们可以更容易地调出想要的颜色。&lt;/p&gt;
+&lt;h2&gt;色彩搭配网站&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://m2.material.io/design/color/the-color-system.html?utm_source=chatgpt.com#tools-for-picking-colors"&gt;Material design tools for picking colors&lt;/a&gt;：谷歌为 Material Design 提供的色彩搭配工具，选一个主题色，会自动给出相应的搭配色彩。同时也介绍了一些色彩搭配的基本概念。&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.happyhues.co/"&gt;happyhues&lt;/a&gt;：提供了一些色彩搭配方案。作者 &lt;a href="https://www.mackenziechild.me/"&gt;Mackenzie&lt;/a&gt; 是一名前端工程师。&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://coolors.co/"&gt;coolors.co&lt;/a&gt;：一个调色盘网站。&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://colorhunt.co"&gt;colorhunt.co&lt;/a&gt;：提供了很多配色，每一套四种颜色。可以根据标签查找。&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://zhongguose.com"&gt;中国传统色&lt;/a&gt;、&lt;a href="https://nipponcolors.com"&gt;日本传统色&lt;/a&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr class="footnotes-sep" /&gt;
+&lt;section class="footnotes"&gt;
+&lt;ol class="footnotes-list"&gt;
+&lt;li id="fn1" class="footnote-item"&gt;&lt;p&gt;有一个把光谱转换成 RGB 色的 Python 包：&lt;a href="http://markkness.net/colorpy/ColorPy.html"&gt;ColorPy&lt;/a&gt;。 &lt;a href="#fnref1" class="footnote-backref"&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn2" class="footnote-item"&gt;&lt;p&gt;没错，就是&lt;a href="https://en.wikipedia.org/wiki/Grassmann_number"&gt;Grassmann 数&lt;/a&gt;的那个 &lt;a href="https://en.wikipedia.org/wiki/Hermann_Grassmann"&gt;Hermann Grassmann（1809-1877）&lt;/a&gt;。 &lt;a href="#fnref2" class="footnote-backref"&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</content><category term="coding"/><category term="颜色"/></entry><entry><title>个人博客风格指南（备忘）</title><link href="https://zqw.ink/2025-12-30-coding-style_guide.html" rel="alternate"/><published>2025-12-30T00:00:00+08:00</published><updated>2025-12-30T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-12-30:/2025-12-30-coding-style_guide.html</id><summary type="html">
 &lt;h2&gt;博客文件名：&lt;code&gt;yyyy-mm-dd-category-blog_slug.md&lt;/code&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;日期（yyyy-mm-dd）&lt;/li&gt;
