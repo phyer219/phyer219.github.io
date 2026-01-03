@@ -1,6 +1,4 @@
-# My Blog v3.0
-
-[zqw.ink](https://zqw.ink)
+# My Blog: [https://zqw.ink](https://zqw.ink)
 
 ## Introduction
 
@@ -14,9 +12,7 @@ Use package:
 
 - [jinja2](https://github.com/pallets/jinja/)
 
-- [Python-Markdown](https://python-markdown.github.io/)
-
-- [markdown_math_escape](https://github.com/sgryjp/markdown_math_escape)
+- [markdown-it-py](https://github.com/executablebooks/markdown-it-py)
 
 - [nbformat](https://github.com/jupyter/nbformat)
 
@@ -40,8 +36,6 @@ Publish with publish configure:
 pelican -s publishconf.py
 ```
 
-## Style Guide
+## TODO
 
-## Contact Information
-
-<zeqing6688@126.com>
+- [ ] Fix the bug that toc in html render by markdown will jump to a location that the title will under the nav.
