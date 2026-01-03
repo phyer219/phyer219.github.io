@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/all.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2026-01-03T00:00:00+08:00</updated><entry><title>博客第三次改版</title><link href="https://zqw.ink/2026-01-03-coding-blog_3rd_version.html" rel="alternate"/><published>2026-01-03T00:00:00+08:00</published><updated>2026-01-03T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2026-01-03:/2026-01-03-coding-blog_3rd_version.html</id><summary type="html">
-&lt;p&gt;目录：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="#%E6%9B%B4%E6%94%B9%E4%B8%BB%E9%A2%98"&gt;更改主题&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#%E5%A2%9E%E5%8A%A0%E9%A3%8E%E6%A0%BC%E6%8C%87%E5%8D%97"&gt;增加风格指南&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2%E5%86%85%E9%83%A8%E7%9A%84%E5%8D%9A%E6%96%87%E5%BC%95%E7%94%A8"&gt;优化博客内部的博文引用&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#%E6%94%B9%E7%94%A8-markdown-it-py-%E6%B8%B2%E6%9F%93-markdown"&gt;改用 markdown-it-py 渲染 markdown&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#%E6%9B%B4%E6%94%B9%E5%AF%BC%E5%90%91%E6%A0%8F"&gt;更改导向栏&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#%E5%A2%9E%E5%8A%A0-rss-%E8%AE%A2%E9%98%85"&gt;增加 RSS 订阅&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#%E6%8F%90%E9%AB%98%E6%A0%87%E7%AD%BE%E7%9A%84%E7%94%A8%E9%80%94"&gt;提高标签的用途&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#%E5%86%B3%E5%AE%9A%E6%94%BE%E5%BC%83-org-mode-%E6%A0%BC%E5%BC%8F"&gt;决定放弃 …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
+&lt;p&gt;本博客首版于 2018 年 9 月 7 日，用 &lt;a href="https://hexo.io"&gt;Hexo&lt;/a&gt; 从 markdown 生成静态页面，发表了第一篇文章：&lt;a href="./2018-09-07-coding-typora_note.html"&gt;Typora 使用笔记&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;2022 年 4 月 16 日进行了&lt;a href="./2022-04-16-thinking-blog_evolution.html"&gt;第一次改版&lt;/a&gt; 用 …&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;本博客首版于 2018 年 9 月 7 日，用 &lt;a href="https://hexo.io"&gt;Hexo&lt;/a&gt; 从 markdown 生成静态页面，发表了第一篇文章：&lt;a href="./2018-09-07-coding-typora_note.html"&gt;Typora 使用笔记&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;2022 年 4 月 16 日进行了&lt;a href="./2022-04-16-thinking-blog_evolution.html"&gt;第一次改版&lt;/a&gt; 用 python 重写生成引擎和主题。&lt;/p&gt;
+&lt;p&gt;2024 年 10 月 24 日进行了&lt;a href="./2024-10-24-pelican_blog.html"&gt;第二次改版&lt;/a&gt;后，采用了 Pelican 引擎。&lt;/p&gt;
+&lt;p&gt;在 2025 末，2026 初，这是对本博客进行了第三次改版。下面详细解释具体的更改。&lt;/p&gt;
 &lt;p&gt;目录：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="#%E6%9B%B4%E6%94%B9%E4%B8%BB%E9%A2%98"&gt;更改主题&lt;/a&gt;&lt;/li&gt;
@@ -22,10 +18,6 @@
 &lt;li&gt;&lt;a href="#%E5%86%B3%E5%AE%9A%E6%94%BE%E5%BC%83-org-mode-%E6%A0%BC%E5%BC%8F"&gt;决定放弃 Org Mode 格式&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr /&gt;
-&lt;p&gt;本博客首版于 2018 年 9 月 7 日，用 &lt;a href="https://hexo.io"&gt;Hexo&lt;/a&gt; 从 markdown 生成静态页面，发表了第一篇文章：&lt;a href="./2018-09-07-coding-typora_note.html"&gt;Typora 使用笔记&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;2022 年 4 月 16 日进行了&lt;a href="./2022-04-16-thinking-blog_evolution.html"&gt;第一次改版&lt;/a&gt; 用 python 重写生成引擎和主题。&lt;/p&gt;
-&lt;p&gt;2024 年 10 月 24 日进行了&lt;a href="./2024-10-24-pelican_blog.html"&gt;第二次改版&lt;/a&gt;后，采用了 Pelican 引擎。&lt;/p&gt;
-&lt;p&gt;在 2025 末，2026 初，这是对本博客进行了第三次改版。下面详细解释具体的更改。&lt;/p&gt;
 &lt;h2 id="更改主题"&gt;更改主题&lt;/h2&gt;
 &lt;p&gt;在 AI 的帮助下，利用 vibe coding，去掉了 banner，增加明暗两套本色。更改后，感观更加“平凡”，易于阅读。&lt;/p&gt;
 &lt;h2 id="增加风格指南"&gt;增加风格指南&lt;/h2&gt;
