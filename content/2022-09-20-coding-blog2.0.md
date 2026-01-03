@@ -1,5 +1,5 @@
 ---
-title: 博客2.0版本的介绍
+title: 博客2.0版本的介绍存档
 date: 2022-09-20
 categories: 软件使用
 tags:
