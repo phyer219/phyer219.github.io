@@ -1,8 +1,10 @@
 ---
 title: 博客2.0版本的介绍
-date: 2022/09/20
-categories: other
-tags: other
+date: 2022-09-20
+categories: 软件使用
+tags:
+  - blog
+  - archive
 ---
 
 # 关于我

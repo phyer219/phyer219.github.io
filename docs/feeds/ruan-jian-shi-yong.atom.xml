@@ -1020,7 +1020,56 @@ print("Elapsed time is ", toc-tic)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;&lt;a href='https://www.intel.com/content/www/us/en/developer/tools/oneapi/ai-analytics-toolkit.html#gs.w44gqo'&gt;Intel® AI Analytics Toolkit (AI Kit)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href='https://www.intel.com/content/www/us/en/developer/tools/oneapi/distribution-for-python.html#gs.w44b4p'&gt;Intel® Distribution for Python&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="软件使用"/><category term="python"/><category term="intel python"/></entry><entry><title>最简单的调用网站api的程序</title><link href="https://zqw.ink/2022-07-31-coding-py_api.html" rel="alternate"/><published>2022-07-31T00:00:00+08:00</published><updated>2022-07-31T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-07-31:/2022-07-31-coding-py_api.html</id><summary type="html">
+</content><category term="软件使用"/><category term="python"/><category term="intel python"/></entry><entry><title>博客2.0版本的介绍</title><link href="https://zqw.ink/2022-09-20-coding-blog20.html" rel="alternate"/><published>2022-09-20T00:00:00+08:00</published><updated>2022-09-20T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-09-20:/2022-09-20-coding-blog20.html</id><summary type="html">
+&lt;h1 id="关于我"&gt;关于我&lt;/h1&gt;
+&lt;p&gt;AMO PhD student&lt;/p&gt;
+&lt;p&gt;研究课题: RF spectrum of strongly interacting Bose gases across d-wave resonance&lt;/p&gt;
+&lt;p&gt;热爱生活, 热爱物理.&lt;/p&gt;
+&lt;p&gt;业余爱好列表, 排名不分先后:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;书法: 始于初中语文课本 …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
+&lt;h1 id="关于我"&gt;关于我&lt;/h1&gt;
+&lt;p&gt;AMO PhD student&lt;/p&gt;
+&lt;p&gt;研究课题: RF spectrum of strongly interacting Bose gases across d-wave resonance&lt;/p&gt;
+&lt;p&gt;热爱生活, 热爱物理.&lt;/p&gt;
+&lt;p&gt;业余爱好列表, 排名不分先后:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;书法: 始于初中语文课本最后一页的兰亭集序, 发展于本科时的书画协会.&lt;/li&gt;
+&lt;li&gt;口琴: 始于高中时, 发展比较平缓, 研三在家终于调琴超吹成功.&lt;/li&gt;
+&lt;li&gt;吉他: 始于高中同学拿到宿舍的一把蓝色破吉他. 研四暑假从零开始.&lt;/li&gt;
+&lt;li&gt;乒乓球: 始于小学水泥台子, 发展于本科时选修的乒乓球体育课&lt;/li&gt;
+&lt;li&gt;羽毛球: 始于研二时舒哥的指引, 在北园食堂上面打.&lt;/li&gt;
+&lt;li&gt;植物: 蓬勃的生命!&lt;/li&gt;
+&lt;li&gt;Linux: 始于研二的 deepin, 发展于 Manjaro.&lt;/li&gt;
+&lt;li&gt;写程序: 始于研二, python, c, html...&lt;/li&gt;
+&lt;li&gt;Latex: 必备技能.&lt;/li&gt;
+&lt;li&gt;折腾: 生命!&lt;/li&gt;
+&lt;li&gt;看动漫: 始于研一, 第一部是 《超时空要塞 $\Delta$ 》. 每天睡觉看一集, 研一支撑我过来的精神支柱. 睡前看的习惯持续至今, 不觉已有四年.&lt;/li&gt;
+&lt;li&gt;打邦邦: BanG Dream!  始于研三因疫情在家的那个夏天, 让我体会到音乐带来的快感!&lt;/li&gt;
+&lt;li&gt;跑跑卡丁车: 始于初中时时候家里刚给买了电脑, 从那就一直玩. 周五放学回家最开心的时光!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;联系请 E-mail: zeqing6688@126.com&lt;/p&gt;
+&lt;p&gt;本站内容为: 只对自己负责的学习笔记, 以及生活的牢骚.&lt;/p&gt;
+&lt;h1 id="关于本站"&gt;关于本站&lt;/h1&gt;
+&lt;p&gt;本站是由 python 生成的静态博客, 托管于&lt;br /&gt;
+&lt;a href="https://github.com/phyer219/phyer219.github.io.2.0"&gt;GithubPages&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;文章的源格式大多采用 org-mode 的格式, 由&lt;br /&gt;
+&lt;a href="https://github.com/phyer219/phyer219.github.io.2.0/tree/main/zqwblog/renderer"&gt;zqwblog/renderer&lt;/a&gt;&lt;br /&gt;
+渲染成 html . 由于是自己的写的包, 还有很多不完善的地方. 重复造轮子的目的是练习写&lt;br /&gt;
+程序.&lt;/p&gt;
+&lt;p&gt;还有一部分文章的源格式是 markdown, 由包&lt;br /&gt;
+&lt;a href="https://python-markdown.github.io/"&gt;python-markdown&lt;/a&gt; 渲染.&lt;/p&gt;
+&lt;p&gt;文章中的公式由 &lt;a href="https://www.mathjax.org/"&gt;MathJax&lt;/a&gt; 渲染.&lt;/p&gt;
+&lt;p&gt;文章中的代码块由 &lt;a href="https://highlightjs.org/"&gt;highlight.js&lt;/a&gt; 渲染.&lt;/p&gt;
+&lt;p&gt;有许多现有的静态博客生成器, 如 Hexo, Jekyll, Pelican 等, 都非常优秀. 但本站还是&lt;br /&gt;
+自己写了一个简陋的版本, 原因在于:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;本站的需求比较简单&lt;/li&gt;
+&lt;li&gt;想要练习写程序&lt;/li&gt;
+&lt;li&gt;Hexo 等, 更新之后有时会产生一些兼容问题&lt;/li&gt;
+&lt;li&gt;难以随心所欲的修改博客的样式, 添加一些新的页面, 组件&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="软件使用"/><category term="blog"/><category term="archive"/></entry><entry><title>最简单的调用网站api的程序</title><link href="https://zqw.ink/2022-07-31-coding-py_api.html" rel="alternate"/><published>2022-07-31T00:00:00+08:00</published><updated>2022-07-31T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-07-31:/2022-07-31-coding-py_api.html</id><summary type="html">
 &lt;p&gt;在 themoviedb 上注册账号，申请自己的应用，获得一个 api 。之后就可以利用网站的资源进行开发了。下面是一个最简短的例子。（如果长 …&lt;/p&gt;</summary><content type="html">
 &lt;p&gt;在 themoviedb 上注册账号，申请自己的应用，获得一个 api 。之后就可以利用网站的资源进行开发了。下面是一个最简短的例子。（如果长时间没有反应，那就是
 api.themoviedb.org 被污染了，可以手动找到 ip，然后修改 host 文件）&lt;/p&gt;

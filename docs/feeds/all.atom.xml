@@ -5986,7 +5986,7 @@ plt.savefig('eigenvalues.png', transparent=True)&lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href='https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.127.070402'&gt;Phys. Rev. Lett. 127, 070402 (2021) Liouvillian Skin Effect: Slowing Down of Relaxation Processes without Gap Closing&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="专业笔记"/><category term="物理"/><category term="Lindblad Master Equation"/><category term="FFT"/><category term="tight binding"/></entry><entry><title>博客2.0版本的介绍</title><link href="https://zqw.ink/2022-09-20-other-blog20.html" rel="alternate"/><published>2022-09-20T00:00:00+08:00</published><updated>2022-09-20T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-09-20:/2022-09-20-other-blog20.html</id><summary type="html">
+</content><category term="专业笔记"/><category term="物理"/><category term="Lindblad Master Equation"/><category term="FFT"/><category term="tight binding"/></entry><entry><title>博客2.0版本的介绍</title><link href="https://zqw.ink/2022-09-20-coding-blog20.html" rel="alternate"/><published>2022-09-20T00:00:00+08:00</published><updated>2022-09-20T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-09-20:/2022-09-20-coding-blog20.html</id><summary type="html">
 &lt;h1 id="关于我"&gt;关于我&lt;/h1&gt;
 &lt;p&gt;AMO PhD student&lt;/p&gt;
 &lt;p&gt;研究课题: RF spectrum of strongly interacting Bose gases across d-wave resonance&lt;/p&gt;
@@ -6035,7 +6035,7 @@ plt.savefig('eigenvalues.png', transparent=True)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;Hexo 等, 更新之后有时会产生一些兼容问题&lt;/li&gt;
 &lt;li&gt;难以随心所欲的修改博客的样式, 添加一些新的页面, 组件&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="other"/><category term="other"/></entry><entry><title>研五下学期总结</title><link href="https://zqw.ink/2022-09-14-thinking-summary_grade_5_2.html" rel="alternate"/><published>2022-09-14T00:00:00+08:00</published><updated>2022-09-14T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-09-14:/2022-09-14-thinking-summary_grade_5_2.html</id><summary type="html">
+</content><category term="软件使用"/><category term="blog"/><category term="archive"/></entry><entry><title>研五下学期总结</title><link href="https://zqw.ink/2022-09-14-thinking-summary_grade_5_2.html" rel="alternate"/><published>2022-09-14T00:00:00+08:00</published><updated>2022-09-14T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-09-14:/2022-09-14-thinking-summary_grade_5_2.html</id><summary type="html">
 &lt;h2&gt;序&lt;/h2&gt;
 
 &lt;p&gt;9.3 返校.&lt;/p&gt;
@@ -6431,13 +6431,11 @@ jz_spherical:
 &lt;p&gt;缺点在于一切动要自己写，就显得比较简陋。但这正体现了本博客极简实用的精神。&lt;/p&gt;
 &lt;p&gt;目前正在以非常慢的速度建设中，任何建议请直接 email 博主：&lt;a href="mailto:zeqing6688@126.com"&gt;zeqing6688@126.com&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://zqw.ink/hexo_ver/"&gt;旧版&lt;/a&gt;目前仍可访问。&lt;/p&gt;
-</content><category term="想说"/><category term="blog"/><category term="hexo"/></entry><entry><title>风沙 苹果 外星人 雨 开袋即食</title><link href="https://zqw.ink/2022-03-30-story-spring_march_2022.html" rel="alternate"/><published>2022-03-30T00:00:00+08:00</published><updated>2022-03-30T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-03-30:/2022-03-30-story-spring_march_2022.html</id><summary type="html">&lt;!-- toc --&gt;
-&lt;!-- more --&gt;
+</content><category term="想说"/><category term="blog"/><category term="hexo"/></entry><entry><title>风沙 苹果 外星人 雨 开袋即食</title><link href="https://zqw.ink/2022-03-30-story-spring_march_2022.html" rel="alternate"/><published>2022-03-30T00:00:00+08:00</published><updated>2022-03-30T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-03-30:/2022-03-30-story-spring_march_2022.html</id><summary type="html">
 &lt;p&gt;（一）&lt;/p&gt;
 &lt;p&gt;窗外是一片大风与黄沙，几天前，在这样的早晨醒来。明明昨天还是干净透明的蓝天。&lt;/p&gt;
 &lt;p&gt;回忆刚才的梦。&lt;/p&gt;
-&lt;p&gt;“你可以用‘陳’”，对着焦急 …&lt;/p&gt;</summary><content type="html">&lt;!-- toc --&gt;
-&lt;!-- more --&gt;
+&lt;p&gt;“你可以用‘陳’”，对着焦急 …&lt;/p&gt;</summary><content type="html">
 &lt;p&gt;（一）&lt;/p&gt;
 &lt;p&gt;窗外是一片大风与黄沙，几天前，在这样的早晨醒来。明明昨天还是干净透明的蓝天。&lt;/p&gt;
 &lt;p&gt;回忆刚才的梦。&lt;/p&gt;
@@ -6468,7 +6466,7 @@ jz_spherical:
 &lt;p&gt;还真是一切都像从前。急切地期盼一场雨，因为很久没有下雨了。&lt;/p&gt;
 &lt;p&gt;(五)&lt;/p&gt;
 &lt;p&gt;真空包装食品，写有食用方法。喜凉食，开袋即食。或者喜热食，可微波加热或水浴加热。我喜热食，可是没有微波炉或者热水，所以只能开袋即食。&lt;/p&gt;
-</content><category term="故事"/><category term="风沙"/><category term="苹果"/><category term="外星人"/><category term="雨"/><category term="开袋即食"/><category term="春天"/></entry><entry><title>Atomic and Optical Physics I, 08 Atoms IV: Hyperfine Structure (updage 17/Nov/2022)</title><link href="https://zqw.ink/2022-02-23-physics-mitamo08.html" rel="alternate"/><published>2022-02-23T00:00:00+08:00</published><updated>2022-02-23T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-02-23:/2022-02-23-physics-mitamo08.html</id><summary type="html">
+</content><category term="blog"/><category term="文学青年"/><category term="风沙"/><category term="苹果"/><category term="外星人"/><category term="雨"/><category term="开袋即食"/><category term="春天"/></entry><entry><title>Atomic and Optical Physics I, 08 Atoms IV: Hyperfine Structure (updage 17/Nov/2022)</title><link href="https://zqw.ink/2022-02-23-physics-mitamo08.html" rel="alternate"/><published>2022-02-23T00:00:00+08:00</published><updated>2022-02-23T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-02-23:/2022-02-23-physics-mitamo08.html</id><summary type="html">
 &lt;h2&gt;Information&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;官方介绍: https://ocw.mit.edu/courses/physics/8-421-atomic-and-optical-physics-i-spring-2014/&lt;/li&gt;
