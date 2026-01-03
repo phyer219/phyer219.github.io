@@ -14,7 +14,7 @@ I am interested in physics, music, and coding.
 Bingo! If your comes here from ORCiD or Google Scholar.
 (But there's no train from here to my ORCiD or Google Scholar page.)
 
-Most of content in this site is written in Chinese. If you are interested, you may use translators, such as [Google translator](https://translate.google.com), [DeepL](https://www.deepl.com)...
+Most of content in this site is written in Chinese. If you are interested, you can use translators, such as [Google translator](https://translate.google.com), [DeepL](https://www.deepl.com)...
 
 Have a nice day!
 
