@@ -7,6 +7,7 @@ from markdown_it import MarkdownIt
 from mdit_py_plugins.front_matter import front_matter_plugin
 from mdit_py_plugins.footnote import footnote_plugin
 from mdit_py_plugins.texmath import texmath_plugin
+from mdit_py_plugins.anchors import anchors_plugin
 import yaml
 
 
@@ -58,6 +59,7 @@ class MyMDReader(BaseReader):
         self._md.use(texmath_plugin, delimiters='brackets')
         self._md.use(front_matter_plugin)
         self._md.use(footnote_plugin)
+        self._md.use(anchors_plugin, max_level=4)
         self._md.enable('table')
 
         self._md.enable(["table", "strikethrough"])

@@ -26,17 +26,17 @@
 &lt;p&gt;2022 年 4 月 16 日进行了&lt;a href="./2022-04-16-thinking-blog_evolution.html"&gt;第一次改版&lt;/a&gt; 用 python 重写生成引擎和主题。&lt;/p&gt;
 &lt;p&gt;2024 年 10 月 24 日进行了&lt;a href="./2024-10-24-pelican_blog.html"&gt;第二次改版&lt;/a&gt;后，采用了 Pelican 引擎。&lt;/p&gt;
 &lt;p&gt;在 2025 末，2026 初，这是对本博客进行了第三次改版。下面详细解释具体的更改。&lt;/p&gt;
-&lt;h2&gt;更改主题&lt;/h2&gt;
+&lt;h2 id="更改主题"&gt;更改主题&lt;/h2&gt;
 &lt;p&gt;在 AI 的帮助下，利用 vibe coding，去掉了 banner，增加明暗两套本色。更改后，感观更加“平凡”，易于阅读。&lt;/p&gt;
-&lt;h2&gt;增加风格指南&lt;/h2&gt;
+&lt;h2 id="增加风格指南"&gt;增加风格指南&lt;/h2&gt;
 &lt;p&gt;为了格式统一，提升博客质量，便于迁移，增加了一系列&lt;a href="./2025-12-30-coding-style_guide.html"&gt;风格指南&lt;/a&gt;。&lt;/p&gt;
-&lt;h2&gt;优化博客内部的博文引用&lt;/h2&gt;
+&lt;h2 id="优化博客内部的博文引用"&gt;优化博客内部的博文引用&lt;/h2&gt;
 &lt;p&gt;之前的博客应该可用在不同博文之间引用，但没有统一的格式，我也没有用过。现在在 markdown 格式的博文中统一格式为 &lt;code&gt;[comment](./xxxx-xx-xx-xx-xxxx.html)&lt;/code&gt; 的格式。在渲染时用正则替换，将相对引用替换为网址绝对引用。这样能保证在本地的 markdown 编辑器中，能很好的预览和跳转，生成 html 后也能支持链接跳转。&lt;/p&gt;
 &lt;p&gt;此外，增加不同博文之间的引用，可以提升关联性，以此提升写作体验和读者体验，也利于搜索引擎的索引。&lt;/p&gt;
-&lt;h2&gt;改用 markdown-it-py 渲染 markdown&lt;/h2&gt;
+&lt;h2 id="改用-markdown-it-py-渲染-markdown"&gt;改用 markdown-it-py 渲染 markdown&lt;/h2&gt;
 &lt;p&gt;之前用的 &lt;a href="https://python-markdown.github.io/"&gt;Python-Markdown&lt;/a&gt;，并用 &lt;a href="https://github.com/sgryjp/markdown_math_escape"&gt;markdown_math_escape&lt;/a&gt; 处理数学公式。但是 Python-Markdown 与一些现代的 markdown 格式（&lt;a href="https://github.com/DavidAnson/markdownlint/blob/v0.40.0/doc/md007.md"&gt;比如用两个空格区分不同级别的列表&lt;/a&gt;）兼容性不好，因此换用支持更灵活的 &lt;a href="https://spec.commonmark.org/"&gt;CommonMark spec&lt;/a&gt; 的 &lt;a href="https://github.com/executablebooks/markdown-it-py"&gt;markdown-it-py&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;其实这些都无所谓，重要的是博客的内容。而目前 markdown-it-py 刚好实现了我的需要。&lt;/p&gt;
-&lt;h2&gt;更改导向栏&lt;/h2&gt;
+&lt;h2 id="更改导向栏"&gt;更改导向栏&lt;/h2&gt;
 &lt;p&gt;一些博客文章的质量一般，但是也不应该删除，至少做为记录。所以改版后的导航栏分成以下几部分&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Home：主页，显示本博客的引言。&lt;/li&gt;
@@ -45,17 +45,36 @@
 &lt;li&gt;Coding：编程相关的内容。是筛选过质量过后的列表。&lt;/li&gt;
 &lt;li&gt;All：所有的博客文章列表。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;增加 RSS 订阅&lt;/h2&gt;
+&lt;h2 id="增加-rss-订阅"&gt;增加 RSS 订阅&lt;/h2&gt;
 &lt;p&gt;受到 &lt;a href="https://wiwi.blog/blog/you-should-use-rss"&gt;Wiwi&lt;/a&gt; 的影响，我现在自己也重新用起了 RSS，所以本站也应该支持 RSS 订阅。&lt;/p&gt;
-&lt;h2&gt;提高标签的用途&lt;/h2&gt;
+&lt;h2 id="提高标签的用途"&gt;提高标签的用途&lt;/h2&gt;
 &lt;p&gt;一些成系列的内容，可以用一个标签连起来，放到首页展示。&lt;/p&gt;
-&lt;h2&gt;决定放弃 Org Mode 格式&lt;/h2&gt;
+&lt;h2 id="决定放弃-org-mode-格式"&gt;决定放弃 Org Mode 格式&lt;/h2&gt;
 &lt;p&gt;作为一名前 Emacs 用户，我曾经用 &lt;a href="https://orgmode.org/"&gt;Org Mode&lt;/a&gt; 记录和组织一些内容。但是它和可移植性显然没有 markdown 强。&lt;/p&gt;
 </content><category term="coding"/><category term="blog"/><category term="vibe coding"/></entry><entry><title>人类对颜色的感知</title><link href="https://zqw.ink/2025-12-31-coding-color.html" rel="alternate"/><published>2025-12-31T00:00:00+08:00</published><updated>2025-12-31T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-12-31:/2025-12-31-coding-color.html</id><summary type="html">
 &lt;p&gt;人为什么会感觉到不同的颜色？颜色为什么可以用三基色混合而成？让我们从光的质出发来理解这些问题。&lt;/p&gt;
-&lt;h2&gt;人眼对光的感 …&lt;/h2&gt;</summary><content type="html">
+&lt;p&gt;目录：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#%E4%BA%BA%E7%9C%BC%E5%AF%B9%E5%85%89%E7%9A%84%E6%84%9F%E7%9F%A5"&gt;人眼对光 …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
 &lt;p&gt;人为什么会感觉到不同的颜色？颜色为什么可以用三基色混合而成？让我们从光的质出发来理解这些问题。&lt;/p&gt;
-&lt;h2&gt;人眼对光的感知&lt;/h2&gt;
+&lt;p&gt;目录：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#%E4%BA%BA%E7%9C%BC%E5%AF%B9%E5%85%89%E7%9A%84%E6%84%9F%E7%9F%A5"&gt;人眼对光的感知&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E8%89%B2%E5%BD%A9%E7%A9%BA%E9%97%B4"&gt;色彩空间&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#lms-%E8%89%B2%E5%BD%A9%E7%A9%BA%E9%97%B4"&gt;LMS 色彩空间&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#cie-rgb-%E8%89%B2%E5%BD%A9%E7%A9%BA%E9%97%B4"&gt;CIE RGB 色彩空间&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#cie-xyz-%E8%89%B2%E5%BD%A9%E7%A9%BA%E9%97%B4"&gt;CIE XYZ 色彩空间&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#cie-xyy-%E8%89%B2%E5%BD%A9%E7%A9%BA%E9%97%B4"&gt;CIE xyY 色彩空间&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E5%85%B6%E5%AE%83-rgb-%E8%89%B2%E5%BD%A9%E7%A9%BA%E9%97%B4"&gt;其它 RGB 色彩空间&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E5%85%B6%E5%AE%83%E8%89%B2%E5%BD%A9%E7%A9%BA%E9%97%B4"&gt;其它色彩空间&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#hsl-%E5%92%8C-hsv-%E8%89%B2%E5%BD%A9%E7%A9%BA%E9%97%B4"&gt;HSL 和 HSV 色彩空间&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E8%89%B2%E5%BD%A9%E6%90%AD%E9%85%8D%E7%BD%91%E7%AB%99"&gt;色彩搭配网站&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2 id="人眼对光的感知"&gt;人眼对光的感知&lt;/h2&gt;
 &lt;p&gt;人眼中有&lt;a href="https://zh.wikipedia.org/zh-cn/%E8%A7%86%E9%94%A5%E7%BB%86%E8%83%9E"&gt;视锥细胞&lt;/a&gt;（&lt;a href="https://en.wikipedia.org/wiki/Cone_cell"&gt;cone cell&lt;/a&gt;）和&lt;a href="https://zh.wikipedia.org/zh-cn/%E8%A7%86%E6%9D%86%E7%BB%86%E8%83%9E"&gt;视杆细胞（rod cell）&lt;/a&gt;两种&lt;a href="https://zh.wikipedia.org/zh-cn/%E6%84%9F%E5%85%89%E7%BB%86%E8%83%9E"&gt;感光细胞（photoreceptor cell）&lt;/a&gt;。不同的感光细胞含有不同的&lt;a href="https://en.wikipedia.org/wiki/Opsin"&gt;视蛋白（opsins）&lt;/a&gt;，因此不同的感光细胞对不同波长的光敏感程度不同。&lt;/p&gt;
 &lt;p&gt;视杆细胞只对光比较敏感，但只有一种光敏色素。相比于视杆细胞对光，视锥细胞对光的敏感度比较低，但有三种类型，分别可以感受长波长（Long, L），中波长（Medium, M）和短波长（Short, S）的光（&lt;a href="https://en.wikipedia.org/wiki/Trichromacy"&gt;trichromacy&lt;/a&gt;）。&lt;sup class="footnote-ref"&gt;&lt;a href="#fn1" id="fnref1"&gt;[1]&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;table&gt;
@@ -107,14 +126,14 @@
   &lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;
-&lt;h2&gt;色彩空间&lt;/h2&gt;
+&lt;h2 id="色彩空间"&gt;色彩空间&lt;/h2&gt;
 &lt;p&gt;如何对不同的颜色定量地描述呢？最直接的描述就是人眼接收到光的光谱 $S(\lambda)$，其中 $\lambda$ 是光的波长。给定光谱 $S(\lambda)$，颜色也就确定了。本节提到的数学概念仅用于理解，不做严格定义。&lt;/p&gt;
 &lt;p&gt;但人眼感受到的同一种的颜色的光，光谱也可能不完全一样（&lt;a href="https://en.wikipedia.org/wiki/Metamerism_(color)"&gt;条件等色， Metamerism&lt;/a&gt;）。比如&lt;a href="https://en.wikipedia.org/wiki/Sunlight"&gt;太阳光&lt;/a&gt;的光谱非常丰富，人眼感受到的颜色是白色。但电子显示器上白色，却只有红绿蓝三种光。原因很简单，光谱 $S(\lambda)$ 的变量是连续变化的波长 $\lambda$ 是一个无穷维的空间，但是人眼只有三种对波长敏感的细胞，把光谱 $S(\lambda)$ 投影到了三维空间上。所有具有相同颜色的光谱 $S(\lambda)$ 可以理解成一个等价类，人眼就只有分辨不同的等价类，不能分辨不同的光谱 $S(\lambda)$ 。简而言之，$S(\lambda)\mapsto \mathrm{Color}$ 不是单射。&lt;/p&gt;
 &lt;p&gt;直接用光的波长描述颜色也不好，因为有些颜色没有单一波长的光的对应。比如品红（&lt;span style="color: #FF00FF;"&gt;#FF00FF&lt;/span&gt;，&lt;a href="https://en.wikipedia.org/wiki/Magenta"&gt;magenta&lt;/a&gt;），就没有单一波长的可见光与之对应。原因是，波长 $\lambda$ 是单一变量，一维空间，但人眼能感受的颜色是三种视锥细胞的响应，是一个三维空间。简而言之，$\lambda\mapsto \mathrm{Color}$ 是单射，但不是满射。&lt;/p&gt;
 &lt;p&gt;我们想要一个好的描述，它应该是把无穷维的光谱，映射到一个三维的空间（因为有三种视锥细胞）。这个三维空间到所有的颜色的映射，即是单射，又是满射，即双射。或者近似是单射也行。这个有限维的空间，就是&lt;a href="https://en.wikipedia.org/wiki/Color_space"&gt;色彩空间（color space）&lt;/a&gt;。&lt;a href="https://en.wikipedia.org/wiki/Grassmann%27s_laws_(color_science)"&gt;Grassmann 定律&lt;/a&gt;&lt;sup class="footnote-ref"&gt;&lt;a href="#fn2" id="fnref2"&gt;[2]&lt;/a&gt;&lt;/sup&gt;给出了一些色彩空间的性质，大致是说，色彩空间应该是一个“三维”，且“线性”的空间。&lt;/p&gt;
-&lt;p&gt;在 1931 年，国际照明委员会（&lt;a href="https://en.wikipedia.org/wiki/International_Commission_on_Illumination"&gt;International Commission on Illumination, CIE)&lt;/a&gt;）定义了人眼看到的一束光（光谱 $S(\lambda)$）的颜色，即，与色彩空间中的一个点的映射关系（&lt;a href="https://en.wikipedia.org/wiki/CIE_1931_color_space"&gt;CIE 1931 color space&lt;/a&gt;）。&lt;/p&gt;
+&lt;p&gt;在 1931 年，国际照明委员会（&lt;a href="https://en.wikipedia.org/wiki/International_Commission_on_Illumination"&gt;International Commission on Illumination, CIE&lt;/a&gt;）定义了人眼看到的一束光（光谱 $S(\lambda)$）的颜色，即，与色彩空间中的一个点的映射关系（&lt;a href="https://en.wikipedia.org/wiki/CIE_1931_color_space"&gt;CIE 1931 color space&lt;/a&gt;）。&lt;/p&gt;
 &lt;p&gt;色彩空间有好多种。下面简要介绍。&lt;/p&gt;
-&lt;h3&gt;LMS 色彩空间&lt;/h3&gt;
+&lt;h3 id="lms-色彩空间"&gt;LMS 色彩空间&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/LMS_color_space"&gt;LMS 色彩空间&lt;/a&gt;就是直接根据人眼的三种视锥细胞的响应函数定义的。它是一个三维的线性空间，有三个坐标 $L, M$ ，和 &lt;eq&gt;S&lt;/eq&gt;。由光谱 $S(\lambda)$ 到LMS 色彩空间的映射定义为&lt;/p&gt;
 $$
 
@@ -125,7 +144,7 @@ S =&amp; \int_{0}^{\infty}  S(\lambda) s(\lambda) \,\mathrm{d}\lambda,
 \end{align*}
 
 $$&lt;p&gt;其中响应函数 $l(\lambda), m(\lambda)$ 和 $ s(\lambda)$ 由实验测定。即使是不同的光谱 $S(\lambda)$ ，只要坐标 $L, M, S$ 相同，人眼感受的颜色就是相同的。响应函数 $l(\lambda), m(\lambda)$ 和 $ s(\lambda)$ 也已经把人眼看不见的颜色做了截断。所以，从 LMS 色彩空间到所有人眼能感觉到的颜色的映射 $\mathcal{C}_{LMS}\mapsto \{\mathrm{Colors}\}$ 这是一个双射。&lt;/p&gt;
-&lt;h3&gt;CIE RGB 色彩空间&lt;/h3&gt;
+&lt;h3 id="cie-rgb-色彩空间"&gt;CIE RGB 色彩空间&lt;/h3&gt;
 &lt;p&gt;在 1931 年，国际照明委员会（&lt;a href="https://en.wikipedia.org/wiki/International_Commission_on_Illumination"&gt;International Commission on Illumination, CIE)&lt;/a&gt;）实验测定的色彩空间。&lt;/p&gt;
 &lt;p&gt;实验用波长为 435.8nm（蓝）， 546.1nm（绿）， 700nm（红） 三种光混合，调节比例，使被试者认为混合之后的颜色，与某个波长的单色光（从连续光谱的光源通过分光获得）颜色相同，记下比例。由此可以测出响应函数 $\bar{r}(\lambda), \bar{g}(\lambda)$ ，和 $\bar{b}(\lambda)$ ,&lt;/p&gt;
 $$
@@ -158,7 +177,7 @@ B_{\mathrm{R}} = &amp; \int_{0}^{\infty}  \delta(\lambda - \lambda_{\mathrm{R}})
 \end{align*}
 
 $$&lt;p&gt;除了这三个点外，都由两个正值，一个负值合成。负值代表的意义是减去该颜色的光，实验上是用该颜色的光照到单色光源上，以此来等效实现。&lt;/p&gt;
-&lt;h3&gt;CIE XYZ 色彩空间&lt;/h3&gt;
+&lt;h3 id="cie-xyz-色彩空间"&gt;CIE XYZ 色彩空间&lt;/h3&gt;
 &lt;p&gt;CIE RGB 色彩空间会出现负值，这会很不方便。由此就从 CIE RGB 定义了一个新的色彩空间。三个坐标为 $X, Y$ ， 和 &lt;eq&gt;Z&lt;/eq&gt;。其中 &lt;eq&gt;Y&lt;/eq&gt; 选做 &lt;a href="https://en.wikipedia.org/wiki/Luminance"&gt;亮度（luminance）&lt;/a&gt;的响应函数。&lt;eq&gt;Z&lt;/eq&gt; 先择与 LMS 色彩空间的的 &lt;eq&gt;S&lt;/eq&gt; 相同。选适当的 &lt;eq&gt;X&lt;/eq&gt; 使得坐标在可见单色光谱内的所有颜色的坐标非负。&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -193,7 +212,7 @@ $$
   \end{pmatrix}_{\mathrm{HPE}}
 \end{align*}
 
-$$&lt;h3&gt;CIE xyY 色彩空间&lt;/h3&gt;
+$$&lt;h3 id="cie-xyy-色彩空间"&gt;CIE xyY 色彩空间&lt;/h3&gt;
 &lt;p&gt;由于 CIE XYZ 的 Y 选做亮度，所以定义&lt;/p&gt;
 $$
 
@@ -215,7 +234,7 @@ $$&lt;p&gt;这样 $x, y$ 取值在 &lt;eq&gt;0&lt;/eq&gt; 和 &lt;eq&gt;1&lt;/eq
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3&gt;其它 RGB 色彩空间&lt;/h3&gt;
+&lt;h3 id="其它-rgb-色彩空间"&gt;其它 RGB 色彩空间&lt;/h3&gt;
 &lt;p&gt;除了 CIE RGB 色彩空间，还有许多其它的 RGB 色彩空间。比如，我们常用的用十六进制表示的 RGB 颜色（#RRGGBB）就是 &lt;a href="https://en.wikipedia.org/wiki/SRGB"&gt;sRGB&lt;/a&gt; 色彩空间中的坐示。&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -229,11 +248,11 @@ $$&lt;p&gt;这样 $x, y$ 取值在 &lt;eq&gt;0&lt;/eq&gt; 和 &lt;eq&gt;1&lt;/eq
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3&gt;其它色彩空间&lt;/h3&gt;
+&lt;h3 id="其它色彩空间"&gt;其它色彩空间&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/CIELAB_color_space"&gt;CIELAB 色彩空间&lt;/a&gt;等。&lt;/p&gt;
-&lt;h2&gt;HSL 和 HSV 色彩空间&lt;/h2&gt;
+&lt;h2 id="hsl-和-hsv-色彩空间"&gt;HSL 和 HSV 色彩空间&lt;/h2&gt;
 &lt;p&gt;设计和画画的时候，还经常用到 &lt;a href="https://en.wikipedia.org/wiki/HSL_and_HSV"&gt;HSL 和 HSV 色彩空间&lt;/a&gt;。他们是把 RGB 色彩空间做了简单的变换，使得人们可以更容易地调出想要的颜色。&lt;/p&gt;
-&lt;h2&gt;色彩搭配网站&lt;/h2&gt;
+&lt;h2 id="色彩搭配网站"&gt;色彩搭配网站&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://m2.material.io/design/color/the-color-system.html?utm_source=chatgpt.com#tools-for-picking-colors"&gt;Material design tools for picking colors&lt;/a&gt;：谷歌为 Material Design 提供的色彩搭配工具，选一个主题色，会自动给出相应的搭配色彩。同时也介绍了一些色彩搭配的基本概念。&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.happyhues.co/"&gt;happyhues&lt;/a&gt;：提供了一些色彩搭配方案。作者 &lt;a href="https://www.mackenziechild.me/"&gt;Mackenzie&lt;/a&gt; 是一名前端工程师。&lt;/li&gt;
@@ -251,18 +270,18 @@ $$&lt;p&gt;这样 $x, y$ 取值在 &lt;eq&gt;0&lt;/eq&gt; 和 &lt;eq&gt;1&lt;/eq
 &lt;/ol&gt;
 &lt;/section&gt;
 </content><category term="coding"/><category term="颜色"/></entry><entry><title>个人博客风格指南（备忘）</title><link href="https://zqw.ink/2025-12-30-coding-style_guide.html" rel="alternate"/><published>2025-12-30T00:00:00+08:00</published><updated>2025-12-30T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-12-30:/2025-12-30-coding-style_guide.html</id><summary type="html">
-&lt;h2&gt;博客文件名：&lt;code&gt;yyyy-mm-dd-category-blog_slug.md&lt;/code&gt;&lt;/h2&gt;
+&lt;h2 id="博客文件名yyyy-mm-dd-category-blog_slugmd"&gt;博客文件名：&lt;code&gt;yyyy-mm-dd-category-blog_slug.md&lt;/code&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;日期（yyyy-mm-dd）&lt;/li&gt;
 &lt;li&gt;分类（category）：一篇博客只有一个分类，且为英文，全部小写&lt;/li&gt;
 &lt;li&gt;Blog slug（blog_slug）:一般全部小写，用下划线连接。如果有些 …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
-&lt;h2&gt;博客文件名：&lt;code&gt;yyyy-mm-dd-category-blog_slug.md&lt;/code&gt;&lt;/h2&gt;
+&lt;h2 id="博客文件名yyyy-mm-dd-category-blog_slugmd"&gt;博客文件名：&lt;code&gt;yyyy-mm-dd-category-blog_slug.md&lt;/code&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;日期（yyyy-mm-dd）&lt;/li&gt;
 &lt;li&gt;分类（category）：一篇博客只有一个分类，且为英文，全部小写&lt;/li&gt;
 &lt;li&gt;Blog slug（blog_slug）:一般全部小写，用下划线连接。如果有些词习惯大小，则可大写，例如：AMO_note&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;YAML metadata&lt;/h2&gt;
+&lt;h2 id="yaml-metadata"&gt;YAML metadata&lt;/h2&gt;
 &lt;p&gt;示例如下：&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-yaml"&gt;---
 title: 个人博客风格指南
@@ -289,7 +308,7 @@ tags:
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;正文内容&lt;/h2&gt;
+&lt;h2 id="正文内容"&gt;正文内容&lt;/h2&gt;
 &lt;p&gt;参考 &lt;a href="https://github.com/DavidAnson/markdownlint/tree/v0.40.0?tab=readme-ov-file"&gt;markdownlint&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;内容超过两页，可考虑生成目录。&lt;/p&gt;
 &lt;p&gt;中英混输且中文为主：&lt;/p&gt;
@@ -300,12 +319,12 @@ tags:
 &lt;li&gt;逗号，句号等后为英文，按英文的习惯，加一个空格。&lt;/li&gt;
 &lt;/ul&gt;
 </content><category term="coding"/><category term="style guide"/></entry><entry><title>用 certbot 手动获取受信任的 SSL证，并实现对 NextCloud 容器 80 端口的 SSL 访问</title><link href="https://zqw.ink/2025-09-14-coding-certbot.html" rel="alternate"/><published>2025-09-14T00:00:00+08:00</published><updated>2025-09-14T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-09-14:/2025-09-14-coding-certbot.html</id><summary type="html">
-&lt;h2&gt;SSL加密&lt;/h2&gt;
+&lt;h2 id="ssl加密"&gt;SSL加密&lt;/h2&gt;
 &lt;p&gt;在使用自己搭建的服务，如 &lt;code&gt;emby&lt;/code&gt; ,&lt;code&gt;nextcloud&lt;/code&gt;, &lt;code&gt;immich&lt;/code&gt; 时，如果使用域名访问，当没有进行受信任的 SSL 加密时，对应的手机 app 会连不上，提醒，或 …&lt;/p&gt;</summary><content type="html">
-&lt;h2&gt;SSL加密&lt;/h2&gt;
+&lt;h2 id="ssl加密"&gt;SSL加密&lt;/h2&gt;
 &lt;p&gt;在使用自己搭建的服务，如 &lt;code&gt;emby&lt;/code&gt; ,&lt;code&gt;nextcloud&lt;/code&gt;, &lt;code&gt;immich&lt;/code&gt; 时，如果使用域名访问，当没有进行受信任的 SSL 加密时，对应的手机 app 会连不上，提醒，或报错。&lt;/p&gt;
 &lt;p&gt;最简单的方式是用 &lt;code&gt;certbot&lt;/code&gt; 获取一个 90 天期限的 SSL 证书，到期后再更新。此篇博客做一备忘。&lt;/p&gt;
-&lt;h2&gt;证书获取过程&lt;/h2&gt;
+&lt;h2 id="证书获取过程"&gt;证书获取过程&lt;/h2&gt;
 &lt;p&gt;安装好certbot后，执行以下命令手动获取 SSL 证书，并用在域名上添加一条 txt 解析的方式进行域名验证：&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-bash"&gt;certbot certonly --manual --preferred-challenges dns -d xxx.xxx.com
 &lt;/code&gt;&lt;/pre&gt;
@@ -355,7 +374,7 @@ privkey.pem -&amp;gt;.key
 &lt;pre&gt;&lt;code class="language-bash"&gt;-rw-r--r--. 1 zqw zqw 2.8K Sep 14 17:40 server.crt
 -rw-------. 1 zqw zqw  227 Sep 14 17:40 server.key
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;代理的 Podman 文件，代理容器的配置文件示例&lt;/h2&gt;
+&lt;h2 id="代理的-podman-文件代理容器的配置文件示例"&gt;代理的 Podman 文件，代理容器的配置文件示例&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;nextcloud-proxy.container&lt;/code&gt;:&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-bash"&gt;[Container]
 ContainerName=nextcloud-proxy
@@ -425,10 +444,10 @@ PublishPort=9999:443
 [Install]
 WantedBy=default.target
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;参考资料&lt;/h2&gt;
+&lt;h2 id="参考资料"&gt;参考资料&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://wiki.archlinux.org/title/Certbot"&gt;ArchWiki: Certbot&lt;/a&gt;&lt;/p&gt;
 </content><category term="coding"/><category term="SSL"/><category term="certbot"/></entry><entry><title>Plotly 绘制动图</title><link href="https://zqw.ink/2025-06-18-coding-plotly_animation.html" rel="alternate"/><published>2025-06-18T00:00:00+08:00</published><updated>2025-06-18T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-06-18:/2025-06-18-coding-plotly_animation.html</id><summary type="html">
-&lt;h2&gt;基础版本&lt;/h2&gt;
+&lt;h2 id="基础版本"&gt;基础版本&lt;/h2&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;import plotly.graph_objects as go
 import numpy as np
 
@@ -436,7 +455,7 @@ x = np.linspace(0, 2*np.pi, 50)
 t = np.linspace(0, 2*np.pi, 500)
 yt = [np.sin(x + ti) for ti in t]
 frames = [go.Frame(data=[go.Scatter(x=x, y=y1i)]) for y1i …&lt;/code&gt;&lt;/pre&gt;</summary><content type="html">
-&lt;h2&gt;基础版本&lt;/h2&gt;
+&lt;h2 id="基础版本"&gt;基础版本&lt;/h2&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;import plotly.graph_objects as go
 import numpy as np
 
@@ -457,7 +476,7 @@ fig.write_html(file=&amp;quot;basic_ver.html&amp;quot;, include_mathjax='cdn', a
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;a href="2025-06-18-coding-plotly_animation/basic_ver.py"&gt;basic_ver.py&lt;/a&gt;&lt;/p&gt;
 &lt;iframe src="2025-06-18-coding-plotly_animation/basic_ver.html" width="100%" height=600&gt;&lt;/iframe&gt;
-&lt;h2&gt;高级版本&lt;/h2&gt;
+&lt;h2 id="高级版本"&gt;高级版本&lt;/h2&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;import plotly.graph_objects as go
 import numpy as np
 import plotly.io as pio
@@ -503,16 +522,16 @@ fig.write_html(file=&amp;quot;pro_ver.html&amp;quot;, include_mathjax='cdn', aut
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;a href="2025-06-18-coding-plotly_animation/pro_ver.py"&gt;pro_ver.py&lt;/a&gt;&lt;/p&gt;
 &lt;iframe src="2025-06-18-coding-plotly_animation/pro_ver.html" width="100%" height=600&gt;&lt;/iframe&gt;
-&lt;h2&gt;参考&lt;/h2&gt;
+&lt;h2 id="参考"&gt;参考&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://plotly.com/python/animations/"&gt;Plotly Animations&lt;/a&gt;&lt;/p&gt;
 </content><category term="coding"/><category term="plotly"/><category term="python"/></entry><entry><title>Linux 使用笔记（进阶）</title><link href="https://zqw.ink/2025-05-10-coding-rocklinux.html" rel="alternate"/><published>2025-05-10T00:00:00+08:00</published><updated>2025-05-10T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-05-10:/2025-05-10-coding-rocklinux.html</id><summary type="html">
-&lt;h2&gt;引言&lt;/h2&gt;
+&lt;h2 id="引言"&gt;引言&lt;/h2&gt;
 &lt;p&gt;从 2018 年开始入门 Linux，已经 7 年了。&lt;br /&gt;
 从 Deepin 到 Manjaro，再到 Rocky Linux。&lt;br /&gt;
 中间也尝试过 ArchLinux, Debian, Ubuntu, CentOS等等。&lt;/p&gt;
 &lt;p&gt;一开始入门是能用就行，折腾桌面环境。&lt;br /&gt;
 到 …&lt;/p&gt;</summary><content type="html">
-&lt;h2&gt;引言&lt;/h2&gt;
+&lt;h2 id="引言"&gt;引言&lt;/h2&gt;
 &lt;p&gt;从 2018 年开始入门 Linux，已经 7 年了。&lt;br /&gt;
 从 Deepin 到 Manjaro，再到 Rocky Linux。&lt;br /&gt;
 中间也尝试过 ArchLinux, Debian, Ubuntu, CentOS等等。&lt;/p&gt;
@@ -520,7 +539,7 @@ fig.write_html(file=&amp;quot;pro_ver.html&amp;quot;, include_mathjax='cdn', aut
 到现在开始考虑一些安全性，长期的稳定性，不再为了图省事直接关闭防火墙和 SELinux。&lt;br /&gt;
 每一行代码都想要理解含义。&lt;br /&gt;
 理解配置的逻辑和哲学。&lt;/p&gt;
-&lt;h2&gt;&lt;code&gt;Rocky Linux&lt;/code&gt;&lt;/h2&gt;
+&lt;h2 id="rocky-linux"&gt;&lt;code&gt;Rocky Linux&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;用 &lt;code&gt;Rocky Linux&lt;/code&gt; 用的还不多，在此写一些备忘。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Rocky Linux&lt;/code&gt; 是 CentOS 替代品，适用于服务器。&lt;/p&gt;
 &lt;ul&gt;
@@ -535,7 +554,7 @@ fig.write_html(file=&amp;quot;pro_ver.html&amp;quot;, include_mathjax='cdn', aut
 &lt;code&gt;xfs&lt;/code&gt;文件系统，性能高，适合处理大文件，并行写入，可以不停机扩容，但是不支持缩容，跨平台兼容性差。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;LVM（逻辑卷管理）&lt;/h2&gt;
+&lt;h2 id="lvm逻辑卷管理"&gt;LVM（逻辑卷管理）&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -563,7 +582,7 @@ fig.write_html(file=&amp;quot;pro_ver.html&amp;quot;, include_mathjax='cdn', aut
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;可以用 &lt;code&gt;pvdispaly&lt;/code&gt; 查看，或者简写为 &lt;code&gt;pvs&lt;/code&gt;。同理 &lt;code&gt;vgs&lt;/code&gt; 和 &lt;code&gt;lvs&lt;/code&gt;&lt;/p&gt;
-&lt;h3&gt;示例&lt;/h3&gt;
+&lt;h3 id="示例"&gt;示例&lt;/h3&gt;
 &lt;p&gt;先用 &lt;code&gt;lsblk&lt;/code&gt; 查看硬盘情况。只有 &lt;code&gt;nvme0n1p3&lt;/code&gt; 分区中有 3 个 lv：&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;AMD-ZQW-srv ➜  ~ lsblk -f
 NAME        FSTYPE      FSVER    LABEL UUID                                   FSAVAIL FSUSE% MOUNTPOINTS
@@ -616,7 +635,7 @@ sudo vgchange -ay
 sudo lvs
 
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;dnf 和 rpm&lt;/h2&gt;
+&lt;h2 id="dnf-和-rpm"&gt;dnf 和 rpm&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;Rocky Linux&lt;/code&gt; 使用 &lt;code&gt;dnf&lt;/code&gt; 和 &lt;code&gt;rpm&lt;/code&gt; 管理软件包。&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -682,8 +701,8 @@ sudo lvs
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2&gt;zsh&lt;/h2&gt;
-&lt;h2&gt;硬盘挂载&lt;/h2&gt;
+&lt;h2 id="zsh"&gt;zsh&lt;/h2&gt;
+&lt;h2 id="硬盘挂载"&gt;硬盘挂载&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;etc/systemd/system/hdd1.mount &lt;/code&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;[Unit]
 Description=Mount hdd1
@@ -698,8 +717,8 @@ Options=defaults,uid=1000,gid=1000
 [Install]
 WantedBy=multi-user.target
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;journalctl 查看日志&lt;/h2&gt;
-&lt;h2&gt;Podman(Docker)&lt;/h2&gt;
+&lt;h2 id="journalctl-查看日志"&gt;journalctl 查看日志&lt;/h2&gt;
+&lt;h2 id="podmandocker"&gt;Podman(Docker)&lt;/h2&gt;
 &lt;p&gt;以 NextCloud为例&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;~/.config/containers/systemd/nextcloud.pod
 [Pod]
@@ -743,7 +762,7 @@ Environment=MYSQL_USER=nextcloud
 &lt;p&gt;&lt;code&gt;quadlet&lt;/code&gt;是一次性读取所有的&lt;code&gt;.pod&lt;/code&gt; &lt;code&gt;.container&lt;/code&gt; 文件，所以只要有一个格式不对，就会导致所有的文件都不能生成相应的服务。可以用如下命令测试，看看是哪个文件格式有问题：&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;/usr/lib/systemd/system-generators/podman-system-generator --user --dryrun
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;SELinux&lt;/h2&gt;
+&lt;h2 id="selinux"&gt;SELinux&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -798,7 +817,7 @@ sudo restorecon -Rv /home/zqw/
 &lt;code&gt;setenforce 0&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;开启：&lt;br /&gt;
 &lt;code&gt;setenforce 1&lt;/code&gt;&lt;/p&gt;
-&lt;h2&gt;Firewall&lt;/h2&gt;
+&lt;h2 id="firewall"&gt;Firewall&lt;/h2&gt;
 &lt;pre&gt;&lt;code class="language-xml"&gt;&amp;lt;!-- /etc/firewalld/services/emby.xml --&amp;gt;
 &amp;lt;service&amp;gt;
   &amp;lt;short&amp;gt;Emby&amp;lt;/short&amp;gt;
@@ -810,12 +829,12 @@ sudo restorecon -Rv /home/zqw/
 &lt;pre&gt;&lt;code class="language-shell"&gt;sudo firewall-cmd --permanent --add-service=emby
 sudo firewall-cmd --reload
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;Rsync&lt;/h2&gt;
+&lt;h2 id="rsync"&gt;Rsync&lt;/h2&gt;
 &lt;p&gt;远程同步&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;rsync -av --delete --info=progress2 -e 'ssh -p ****' ./music/ ***@***.***:/hdd1/musiclib/
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;Systemctl&lt;/h2&gt;
-&lt;h2&gt;初始化与用户、权限管理&lt;/h2&gt;
+&lt;h2 id="systemctl"&gt;Systemctl&lt;/h2&gt;
+&lt;h2 id="初始化与用户权限管理"&gt;初始化与用户、权限管理&lt;/h2&gt;
 &lt;p&gt;出于安全考虑修改 &lt;code&gt;ssh&lt;/code&gt; 的默认端口。&lt;br /&gt;
 修改 &lt;code&gt;/etc/ssh/sshd_config&lt;/code&gt; 中的 &lt;code&gt;Port&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;semanage port -a -t ssh_port_t -p tcp #PORTNUMBER&lt;/code&gt;&lt;/p&gt;
@@ -823,7 +842,7 @@ sudo firewall-cmd --reload
 &lt;p&gt;&lt;code&gt;firewall-cmd --reload&lt;/code&gt;&lt;br /&gt;
 &lt;code&gt;systemctl restart sshd&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;chsh -s /usr/bin/zsh&lt;/code&gt;&lt;/p&gt;
-&lt;h2&gt;引导&lt;/h2&gt;
+&lt;h2 id="引导"&gt;引导&lt;/h2&gt;
 &lt;p&gt;ESP (EFI System Partition)&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;sudo efibootmgr --create \
   --disk /dev/sdX \
@@ -837,8 +856,8 @@ sudo firewall-cmd --reload
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;sudo efibootmgr --bootnum 0002 --delete-bootnum
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;Kdump&lt;/h2&gt;
-&lt;h2&gt;rsync&lt;/h2&gt;
+&lt;h2 id="kdump"&gt;Kdump&lt;/h2&gt;
+&lt;h2 id="rsync-1"&gt;rsync&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;rsync -ah --info=progress2 ../home_old/zqw/immich-app ./immich-app
 &lt;/code&gt;&lt;/pre&gt;
 &lt;table&gt;
@@ -879,7 +898,7 @@ sudo firewall-cmd --reload
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2&gt;WordPress 迁移&lt;/h2&gt;
+&lt;h2 id="wordpress-迁移"&gt;WordPress 迁移&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;wp-settings.php&lt;/code&gt; 中添加：&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-php"&gt;define('WP_HOME', 'http://your.new.domain');
 define('WP_SITEURL', 'http://your.new.domain');
@@ -895,6 +914,6 @@ cd /var/www/html
 wp search-replace 'http://xxx.xxx' 'http://xxx.xxx.xxx.xxx:xxxx' --all-tables --allow-root
 
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;致谢&lt;/h2&gt;
+&lt;h2 id="致谢"&gt;致谢&lt;/h2&gt;
 &lt;p&gt;所有为 ChatGPT 提供训练素材的人。&lt;/p&gt;
 </content><category term="coding"/><category term="SELinux"/><category term="RockyLinux"/></entry></feed>

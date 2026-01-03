@@ -158,9 +158,9 @@
 <section class="markdown-body">
   <!-- toc -->
 <!-- more -->
-<h1>利用虚时传播子求解定态散射问题</h1>
+<h1 id="利用虚时传播子求解定态散射问题">利用虚时传播子求解定态散射问题</h1>
 <p>本文考虑一维问题</p>
-<h2>传播子(propagator)</h2>
+<h2 id="传播子propagator">传播子(propagator)</h2>
 <p>如果 $\hat{H}$ 不含时，虚时传播子为<br />
 $$
 \begin{align}
@@ -174,7 +174,7 @@ $$
   \hat H | n\rangle = E_n | n\rangle
 \end{align}
 $$</p>
-<h2>散射问题</h2>
+<h2 id="散射问题">散射问题</h2>
 $$
 
 \begin{align}
@@ -223,7 +223,7 @@ $$
    \langle x'|V|\phi\rangle K(x, \tau; x', 0)
 \end{align}
 $$</p>
-<h2>例: 一维简谐势中接触吸引的两粒子</h2>
+<h2 id="例-一维简谐势中接触吸引的两粒子">例: 一维简谐势中接触吸引的两粒子</h2>
 <p>通过质心相对坐标分离后，相对运动部分的哈密顿量为<br />
 $$
 \begin{align}
@@ -248,7 +248,7 @@ $$
 \end{align}
 $$<br />
 其中的传播子即为一维谐振子的传播子: <a href="https://en.wikipedia.org/wiki/Mehler_kernel">Mehler kernel</a>。</p>
-<h2>数值验证传播子</h2>
+<h2 id="数值验证传播子">数值验证传播子</h2>
 <pre><code class="language-python">import numpy as np
 import matplotlib.pyplot as plt
 import scipy.integrate as integrate
@@ -317,7 +317,7 @@ plt.savefig('HO_propagator.svg', transparent=True)
 
 </code></pre>
 <p><img src="./2024-04-24-physics-propagator_scattering/HO_propagator.svg" alt="HO_propagator" /></p>
-<h2>Reference</h2>
+<h2 id="reference">Reference</h2>
 <ul>
 <li>Shina Tan 的 lecture note.</li>
 <li><a href="https://en.wikipedia.org/wiki/Propagator">Wikipedia: Propagator</a></li>

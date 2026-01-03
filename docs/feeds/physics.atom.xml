@@ -98,14 +98,14 @@ fig.write_html('check2.html', include_mathjax=&amp;quot;cdn&amp;quot;)
 &lt;p&gt;&lt;a href="2025-06-16-physics-rwa_check/check.py"&gt;check.py&lt;/a&gt;&lt;/p&gt;
 &lt;iframe src="2025-06-16-physics-rwa_check/check1.html" width="100%" height="600"&gt;&lt;/iframe&gt;
 &lt;iframe src="2025-06-16-physics-rwa_check/check2.html" width="100%" height="600"&gt;&lt;/iframe&gt;</content><category term="physics"/><category term="rotating wave approximation"/><category term="ploly"/></entry><entry><title>二次量子化笔记 (update 06/Dec/2019)</title><link href="https://zqw.ink/2018-09-27-physics-er-ci-liang-zi-hua.html" rel="alternate"/><published>2018-09-27T00:00:00+08:00</published><updated>2018-09-27T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-27:/2018-09-27-physics-er-ci-liang-zi-hua.html</id><summary type="html">
-&lt;h2&gt;单体力学量&lt;/h2&gt;
-&lt;h3&gt;本征表象&lt;/h3&gt;
+&lt;h2 id="单体力学量"&gt;单体力学量&lt;/h2&gt;
+&lt;h3 id="本征表象"&gt;本征表象&lt;/h3&gt;
 &lt;p&gt;&lt;eq&gt;N&lt;/eq&gt; 个粒子组成的系统，对于单个粒子的力学量 $\hat{f}$ ，其第 &lt;eq&gt;i&lt;/eq&gt; 个本征值为 $f_i$ ，本征态为 $\mid i \rangle$ ，即&lt;br /&gt;
 $$
 \begin{align}
 \hat …&lt;/p&gt;</summary><content type="html">
-&lt;h2&gt;单体力学量&lt;/h2&gt;
-&lt;h3&gt;本征表象&lt;/h3&gt;
+&lt;h2 id="单体力学量"&gt;单体力学量&lt;/h2&gt;
+&lt;h3 id="本征表象"&gt;本征表象&lt;/h3&gt;
 &lt;p&gt;&lt;eq&gt;N&lt;/eq&gt; 个粒子组成的系统，对于单个粒子的力学量 $\hat{f}$ ，其第 &lt;eq&gt;i&lt;/eq&gt; 个本征值为 $f_i$ ，本征态为 $\mid i \rangle$ ，即&lt;br /&gt;
 $$
 \begin{align}
@@ -119,7 +119,7 @@ $$
 \end{align*}
 $$&lt;br /&gt;
 $a_i^{\dagger}$ 是 &lt;eq&gt;f&lt;/eq&gt; 的本征表象中的产生算符。&lt;/p&gt;
-&lt;h3&gt;非本征表象&lt;/h3&gt;
+&lt;h3 id="非本征表象"&gt;非本征表象&lt;/h3&gt;
 &lt;p&gt;若要写出非本征表象下的形式，则应对 $a_i^{\dagger}$ 做表象变换。 $a_i^{\dagger}$ 的表象变换可让 $a_i^{\dagger}$ 作用在真空态上如下导出：&lt;br /&gt;
 $$
 \begin{align*}
@@ -151,8 +151,8 @@ $$
 \end{align*}
 $$&lt;br /&gt;
 为什么是这样, 我也不知道.&lt;/p&gt;
-&lt;h2&gt;二体力学量&lt;/h2&gt;
-&lt;h3&gt;本征表象中的二体力学量&lt;/h3&gt;
+&lt;h2 id="二体力学量"&gt;二体力学量&lt;/h2&gt;
+&lt;h3 id="本征表象中的二体力学量"&gt;本征表象中的二体力学量&lt;/h3&gt;
 &lt;p&gt;同样的, &lt;eq&gt;N&lt;/eq&gt; 个粒子组成的系统, 于单个粒子的力学量 $\hat{f}$ ，其第 &lt;eq&gt;i&lt;/eq&gt; 个本征值为 $f_i$ ，本征态为 $\mid i \rangle$ ，即&lt;br /&gt;
 $$
 \begin{align*}
@@ -209,7 +209,7 @@ $$
 \hat{U} = \frac{1}{2} \sum_{i j} u_{ij} a_i^{\dagger} a_j^{\dagger}  a_j a_i
 \end{align*}
 $$&lt;/p&gt;
-&lt;h3&gt;非本征表象的二体力学量&lt;/h3&gt;
+&lt;h3 id="非本征表象的二体力学量"&gt;非本征表象的二体力学量&lt;/h3&gt;
 &lt;p&gt;与单体力学量类似的, 直接对本征表象的结果做表象变换:&lt;br /&gt;
 $$
 \begin{align*}
@@ -228,8 +228,8 @@ $$
 = \frac{1}{2}  \sum_{\alpha \beta \gamma \delta} \mid\alpha , \beta \rangle \langle \gamma ,\delta\mid\cdot \langle \alpha, \beta\mid \hat{u}\mid\gamma , \delta \rangle
 \end{align*}
 $$&lt;/p&gt;
-&lt;h2&gt;例: 场算符&lt;/h2&gt;
-&lt;h3&gt;引言&lt;/h3&gt;
+&lt;h2 id="例-场算符"&gt;例: 场算符&lt;/h2&gt;
+&lt;h3 id="引言"&gt;引言&lt;/h3&gt;
 &lt;p&gt;考虑坐标表象中两体相互作用势为 $u(\vec{r}_1, \vec{r}_2)$ 的多体 Hamiltonian 的二&lt;br /&gt;
 次量子化形式为&lt;br /&gt;
 $$
@@ -247,7 +247,7 @@ $$&lt;br /&gt;
 &lt;p&gt;问题在于第一项的动能项. 只有一重求和, 按之前总结的应该是在本征表象中的表示, 但是&lt;br /&gt;
 中间夹的不是本征值, 而是一个 $\nabla^2$ 算符. 那它是对谁作用呢? 是对它后面的场算&lt;br /&gt;
 符作用吗? 对场算符求梯度? 是什么意义?&lt;/p&gt;
-&lt;h3&gt;动能算符&lt;/h3&gt;
+&lt;h3 id="动能算符"&gt;动能算符&lt;/h3&gt;
 &lt;p&gt;真相是: 动能的本征表象不是坐标表象, 而是动量表象, 在动量表象下它的本征值是&lt;br /&gt;
 $\vec{p}^2/(2m)$ 是一个数. 在坐标表象下, 它不是本征表象! 所以动能 $\hat{T}$&lt;br /&gt;
 在坐标表象下的二次量子化形式(也就是用场算符表示动能项)应该是&lt;br /&gt;
@@ -318,7 +318,7 @@ $$
 $$&lt;br /&gt;
 这样的话就可以具体计算 $\nabla^2$ 对 $\delta$ 函数的作用结果. 其本质还是把它变换到了动能的&lt;br /&gt;
 本征表象, 也就是动量表象.&lt;/p&gt;
-&lt;h3&gt;动能算符的另一种形式&lt;/h3&gt;
+&lt;h3 id="动能算符的另一种形式"&gt;动能算符的另一种形式&lt;/h3&gt;
 &lt;p&gt;动能算符有时也写为&lt;br /&gt;
 $$
 \begin{align}
@@ -340,7 +340,7 @@ $$
   \hat{T} = \sum_{\vec{k}} \frac{\hbar^2k^2}{2m} \hat{a}^{\dagger}_{\vec{k}} \hat{a}_{\vec{k}}
 \end{align}
 $$&lt;/p&gt;
-&lt;h3&gt;用场算符表示波函数&lt;/h3&gt;
+&lt;h3 id="用场算符表示波函数"&gt;用场算符表示波函数&lt;/h3&gt;
 &lt;p&gt;任意一个态用场算符表示为&lt;br /&gt;
 $$
 \begin{align}
@@ -364,7 +364,7 @@ $$
 \end{align}
 $$&lt;br /&gt;
 物理意义也很明确, 就是不同位置上产生一个粒子, 然后按波函数叠加.&lt;/p&gt;
-&lt;h3&gt;&lt;s&gt;动能算符作用在态上(之前不恰当的理解)&lt;/s&gt;&lt;/h3&gt;
+&lt;h3 id="动能算符作用在态上之前不恰当的理解"&gt;&lt;s&gt;动能算符作用在态上(之前不恰当的理解)&lt;/s&gt;&lt;/h3&gt;
 &lt;del&gt;
 动能算符在坐标空间中应该有
 $$
@@ -426,8 +426,8 @@ $$
 $$
 与我们期待的 $\eqref{eq:kinCoor}$ 式相同. 说明二次量子化的表达形式是自洽的.
 &lt;/del&gt;
-&lt;h2&gt;例: 费米子接触势&lt;/h2&gt;
-&lt;h3&gt;坐标表象&lt;/h3&gt;
+&lt;h2 id="例-费米子接触势"&gt;例: 费米子接触势&lt;/h2&gt;
+&lt;h3 id="坐标表象"&gt;坐标表象&lt;/h3&gt;
 &lt;p&gt;考虑两分量 $(\uparrow, \downarrow)$ 的费米子接触势, 其在坐标表象的二次量子化形式为&lt;br /&gt;
 $$
 \begin{align}
@@ -489,7 +489,7 @@ $$
 \end{align}
 $$&lt;br /&gt;
 所以就得到了我们想要的结果.&lt;/p&gt;
-&lt;h3&gt;动量表象&lt;/h3&gt;
+&lt;h3 id="动量表象"&gt;动量表象&lt;/h3&gt;
 &lt;p&gt;动量表象是动能的本征表象, 所以&lt;br /&gt;
 $$
 \begin{align}
@@ -544,7 +544,7 @@ $$
 $$&lt;br /&gt;
 势能中, 本来是对四个动量求和, 但由于前面得到的动量守恒的条件, 只剩下三个求和. 将&lt;br /&gt;
 求和指标换一下, 即为上式.&lt;/p&gt;
-&lt;h2&gt;致谢&lt;/h2&gt;
+&lt;h2 id="致谢"&gt;致谢&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Qiang Han 老师的课件提供的主要思路.&lt;/li&gt;
 &lt;li&gt;J. J. Sakurai &amp;amp; Jim Napolitano 的 Modern Quantum Mechanics 一书提供的二体力学&lt;br /&gt;
@@ -687,7 +687,7 @@ $$\begin{align*}
 \end{align*}$$
 
 </content><category term="physics"/><category term="Fourier"/><category term="数学"/></entry><entry><title>特殊二阶矩阵的本征值求解</title><link href="https://zqw.ink/2018-09-07-physics-te-shu-er-jie-ju-zhen-de-ben-zheng-zhi-qiu-jie.html" rel="alternate"/><published>2018-09-07T00:00:00+08:00</published><updated>2018-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-07:/2018-09-07-physics-te-shu-er-jie-ju-zhen-de-ben-zheng-zhi-qiu-jie.html</id><summary type="html">
-&lt;h2&gt;对角矩阵元相等&lt;/h2&gt;
+&lt;h2 id="对角矩阵元相等"&gt;对角矩阵元相等&lt;/h2&gt;
 &lt;p&gt;形如&lt;br /&gt;
 $$
 H = \left( \begin{array}{cc}
@@ -697,7 +697,7 @@ H = \left( \begin{array}{cc}
 $$&lt;br /&gt;
 与以下自旋问题类比：&lt;/p&gt;
 &lt;p&gt;在 $x-z$ 平面内任意方向加磁场 $\vec{a} = (a_1, 0, a_3)$ 求解能 …&lt;/p&gt;</summary><content type="html">
-&lt;h2&gt;对角矩阵元相等&lt;/h2&gt;
+&lt;h2 id="对角矩阵元相等"&gt;对角矩阵元相等&lt;/h2&gt;
 &lt;p&gt;形如&lt;br /&gt;
 $$
 H = \left( \begin{array}{cc}

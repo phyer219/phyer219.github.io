@@ -158,7 +158,7 @@
   <!-- toc -->
 <!-- more -->
 <p>结合近几年的经验，把<code>matplotlib</code>作图常用的脚本集合在此。这包含了之前一些关于<code>matplotlib</code>作图的博文。</p>
-<h1>作图风格</h1>
+<h1 id="作图风格">作图风格</h1>
 <pre><code class="language-python">from matplotlib import rc
 def prettify_plot():
     &quot;&quot;&quot;
@@ -176,7 +176,7 @@ def prettify_plot():
     rc('ytick', direction='in')
 </code></pre>
 <p>用于调整作图的字体，风格。</p>
-<h1>作图尺寸，布局</h1>
+<h1 id="作图尺寸布局">作图尺寸，布局</h1>
 <pre><code class="language-python">import matplotlib.pyplot as plt
 fig = plt.figure(figsize=(3.375, 3.5))# 单栏图宽度固定3.375， 双栏图宽度固定 6.75
 
@@ -189,7 +189,7 @@ ax_a = fig.add_subplot(gs[0, 0])
 ax_b = fig.add_subplot(gs[0, 1])
 ax_c = fig.add_subplot(gs[1, :])
 </code></pre>
-<h1>彩图及colorbar</h1>
+<h1 id="彩图及colorbar">彩图及colorbar</h1>
 <pre><code class="language-python">gs = fig.add_gridspec(nrows=2, ncols=2,
                       left=.08, bottom=.1, right=.99, top=.94,
                       wspace=1, hspace=1,
@@ -201,7 +201,7 @@ ax_c = fig.add_subplot(gs[1, :])
 ima = ax_a.imshow(np.random.randn(20, 20))
 fig.colorbar(ima, cax=ax_c, orientation='horizontal')
 </code></pre>
-<h2>自定义color map</h2>
+<h2 id="自定义color-map">自定义color map</h2>
 <pre><code class="language-python">import numpy as np
 from matplotlib.colors import ListedColormap
 import matplotlib.pyplot as plt
@@ -224,7 +224,7 @@ plt.savefig('newcmap.png', transparent=True)
 </code></pre>
 <p><img src="2023-10-12-coding-matplotlib/newcmap.png" alt="image-newcamp" /></p>
 <p><a href="2023-10-12-coding-matplotlib/newcmap.py">newcmap.py</a></p>
-<h2>在每个子图插入 colorbar</h2>
+<h2 id="在每个子图插入-colorbar">在每个子图插入 colorbar</h2>
 <pre><code class="language-python">import matplotlib.pyplot as plt
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 import numpy as np
@@ -250,7 +250,7 @@ fig.savefig('divider.png', transparent=True)
 </code></pre>
 <p><a href="2023-10-12-coding-matplotlib/divider.py">divider.py</a></p>
 <p><img src="2023-10-12-coding-matplotlib/divider.png" alt="divider" /></p>
-<h1>双重坐标轴</h1>
+<h1 id="双重坐标轴">双重坐标轴</h1>
 <pre><code class="language-python">import numpy as np
 import matplotlib.pyplot as plt
 fig = plt.figure()
@@ -272,7 +272,7 @@ fig.savefig('double_ax.png', transparent=True)
 </code></pre>
 <p><img src="2023-10-12-coding-matplotlib/double_ax.png" alt="image-double_ax" /></p>
 <p><a href="2023-10-12-coding-matplotlib/double_ax.py">double_ax.py</a></p>
-<h1>示例 Phys. Rev. B 108, 054313 (2023) fig1</h1>
+<h1 id="示例-phys-rev-b-108-054313-2023-fig1">示例 Phys. Rev. B 108, 054313 (2023) fig1</h1>
 <pre><code class="language-python">import matplotlib.pyplot as plt
 from matplotlib import rc
 import numpy as np
@@ -501,7 +501,7 @@ fig.savefig(get_file_name(__file__)[:-4] + '.png', dpi=200, transparent=True)
 </code></pre>
 <p>画图数据：<a href="2023-10-12-coding-matplotlib/fig2/fig2.json">fig2.json</a></p>
 <p><img src="2023-10-12-coding-matplotlib/fig2/fig2.png" alt="image-fig2" /></p>
-<h1>参考资料</h1>
+<h1 id="参考资料">参考资料</h1>
 <ol>
 <li><a href="https://matplotlib.org/stable/">https://matplotlib.org/stable/</a></li>
 </ol>

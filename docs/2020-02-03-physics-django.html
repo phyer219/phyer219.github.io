@@ -160,10 +160,10 @@
 <section class="markdown-body">
   <!-- toc -->
 <!-- more -->
-<h1>写在前面的声明</h1>
+<h1 id="写在前面的声明">写在前面的声明</h1>
 <p>本人非专业人士，对于写程序只是业余爱好。以下内容仅供参考，我一个业余人士也不能保证内容的准确性，对一些命令的解释也只是为了便于记忆和理解，更加专业准确的知识还请查询如官方文档这样的资料。</p>
-<h1>引言</h1>
-<h2>思路</h2>
+<h1 id="引言">引言</h1>
+<h2 id="思路">思路</h2>
 <p>寒假在家，又不能出门，闲来无事，又不太想学习，就尝试了用在华为云上买的学生价服务器，在 CentOS 上用 Apache+Mariadb+Django 来搭建一个网站，目标是能够显示内容即可，而对安全性，实用性，美观性不做要求。</p>
 <p>网站内容是显示《诗经》的所有内容。数据来自于 github 上的诗词数据库 https://github.com/chinese-poetry/chinese-poetry ，在此感谢此项目中的贡献者表示感谢！</p>
 <p>大体思路是：</p>
@@ -175,10 +175,10 @@
 <li>编写 Django 中的文件，使其从数据库中读取诗经的数据，并在网页上展示。</li>
 </ol>
 <p>写这篇笔记的目的，首先是记录过程为自己作备忘。其次，是想将一些过程的目的说出来，便于和我一样在尝试搭建的人理解为什么要这样做。</p>
-<h2>云服务器的对比</h2>
+<h2 id="云服务器的对比">云服务器的对比</h2>
 <p>我先后买过腾讯云，阿里云，华为云提供的学生价服务器，最便宜的配置大概都在10元／月不到。真的很棒，感谢他们！</p>
 <p>这三家的配置大致差不多，不过三家中只有阿里云，在学生期间可以，不限次数不限期限地以学生价续费。其它两家都对期限以及续费的次数有所限制。目前我在腾讯云买的已经到期了，华为云上刚刚买的，阿里云上的可以一直用。</p>
-<h1>系统环境</h1>
+<h1 id="系统环境">系统环境</h1>
 <ul>
 <li>操作系统：CentOS Linux release 7.7.1908 (Core)</li>
 <li>Mariadb 版本：mysql  Ver 15.1 Distrib 5.5.64-MariaDB, for Linux (x86_64) using readline 5.1</li>
@@ -186,7 +186,7 @@
 <li>Python 版本：Python 3.7.3</li>
 <li>确保端口开放</li>
 </ul>
-<h1>记号说明</h1>
+<h1 id="记号说明">记号说明</h1>
 <pre><code class="language-shell">$
 </code></pre>
 <p>表示在本地运行的命令。</p>
@@ -196,7 +196,7 @@
 <pre><code class="language-shell">(.sabafun)[root@cloud]$
 </code></pre>
 <p>表示在在云服务器的虚拟环境 .sabafun 中以 root 用户运行命令。</p>
-<h1>安装 Apache, Mariadb, Python3</h1>
+<h1 id="安装-apache-mariadb-python3">安装 Apache, Mariadb, Python3</h1>
 <p>升级软件包，安装 apache（在 yum 库中名字叫 httpd）, mariadb, emacs(文本编辑器，个人偏好，可选)，并开启，然后设置开机自启。</p>
 <pre><code class="language-shell">[root@cloud]$ yum upgrade
 
@@ -215,13 +215,13 @@
 <pre><code class="language-shell">[root@cloud]$ bash ./Anaconda3-2019.07-Linux-x86_64.sh 
 </code></pre>
 <p>./ 表示当前路径。</p>
-<h1>安装虚拟环境 virtualenv</h1>
+<h1 id="安装虚拟环境-virtualenv">安装虚拟环境 virtualenv</h1>
 <p>安装完 Anaconda 后，并没有自动将 python3.7 添加到环境变量中，因此直接把路径完整地打出来，来运行 pip</p>
 <pre><code class="language-shell">[root@cloud]$ /root/anaconda3/bin/pip install virtualenv
 </code></pre>
 <p>pip 是 Python 的包管理工具，安装一些 Python 包都可以用 pip install 来安装。</p>
 <p>安装 virtualenv 是为了给 Django 建立一个独立的 Python 环境，下面可以看出这样做的好处。</p>
-<h1>创建虚拟环境</h1>
+<h1 id="创建虚拟环境">创建虚拟环境</h1>
 <p>安装好 virtualenv 后，进入到想要进行工作的目录，通过 virtualenv 创建一个虚拟环境，用来进行后续的活动</p>
 <pre><code class="language-shell">[root@cloud]$ virtualenv .sabafun --python=/root/anaconda3/bin/python3
 </code></pre>
@@ -240,13 +240,13 @@ pip 20.0.2 from /root/sabafun/.sabafun/lib/python3.7/site-packages/pip (python 3
 [root@cloud]$ 
 </code></pre>
 <p>执行后，前面的 (.sabafun) 就消失了，表示退出了虚拟环境。如果想要删除虚拟环境，直接将保存虚拟环境的文件夹删除就行。</p>
-<h1>安装 Django，创建项目</h1>
+<h1 id="安装-django创建项目">安装 Django，创建项目</h1>
 <p>在虚拟环境中，用 pip 安装 Django，然后新建一个项目，名字叫作 sabafun</p>
 <pre><code class="language-shell">(.sabafun)[root@cloud]$ pip install django
 (.sabafun)[root@cloud]$ django-admin startproject sabafun .
 </code></pre>
 <p>注意不要漏掉最后的点'.'。这个命令末尾的句点让新项目使用合适的目录结构。如果漏了，就把这个项目的文件夹删除，再重新创建一次。</p>
-<h1>启动用于开发的 web 服务器</h1>
+<h1 id="启动用于开发的-web-服务器">启动用于开发的 web 服务器</h1>
 <p>在启动 web 服务器测试之前，需要做一些准备工作。</p>
 <p>首先，将服务器的 IP 加到项目的设置文件 sabafun/settings.py 中，即将 ALLOWED_HOSTS 项修改为</p>
 <pre><code class="language-python">ALLOWED_HOSTS = [‘服务器IP地址’]
@@ -258,10 +258,10 @@ pip 20.0.2 from /root/sabafun/.sabafun/lib/python3.7/site-packages/pip (python 3
 <p>此时从本地访问 http://你的服务器IP:8000 ，出现如下小火箭界面，表示成功</p>
 <p><img src="./2020-02-03-physics-Django/image-20200204125926942.png" alt="image-20200204125926942" /></p>
 <p>如果无法访问，可以查看一下服务器的 8000 端口是否开放。一般都可以从云服务器的管理页面中找到安全组设置。</p>
-<h1>Django 的大致工作流程</h1>
+<h1 id="django-的大致工作流程">Django 的大致工作流程</h1>
 <p>比较业余的理解，Django 是一个用 Python 写网站的框架。我们可以用 Python 语言写一些函数来实现想要的功能。web 服务器，如 Apache，负责将我们设计好的功能提供给浏览器。而 mod_wsgi 负责将我们用 Python 写的功能翻译给 Apache。网站的数据，如我们用于展示的《诗经》就存储在 Mariadb 数据库中。</p>
 <p>所以我们通过网址访问网站，Apache 接收到我们的请求，wsgi 将请求翻译给 Django，Django 从数据库中读取到数据，然后再通过 wsgi 这位翻译发送给 Apache，Apache 将数据发送给我们的浏览器，我们就看到了我们想要的东西。</p>
-<h1>通过 mod_wsgi 连接 Apache</h1>
+<h1 id="通过-mod_wsgi-连接-apache">通过 mod_wsgi 连接 Apache</h1>
 <p>我们上面看到的小火箭的页面，所用的 web 服务器不是 Apache ，而是 Django 自带的用于开发测试的 web 服务器，真正运行网站时，就要连接像 Apache, Nginx 这样的 web服务器。</p>
 <p>下面就设置一下，让 Apache 作为 web 服务器。</p>
 <p>首先安装负责 Apache 和 Python3 之间进行通信的 mod_wsgi 模块</p>
@@ -300,7 +300,7 @@ Require all granted
 <pre><code class="language-shell">(.sabafun)[root@cloud]$ systemctl restart httpd
 </code></pre>
 <p>直接访问 IP ，出现了小火箭，这时的小火箭是通过 Apache 给我们的，说明 Django 能够和 Apache 交流了。</p>
-<h1>设置 Mariadb 数据库</h1>
+<h1 id="设置-mariadb-数据库">设置 Mariadb 数据库</h1>
 <p>首先初始化数据库</p>
 <pre><code class="language-shell">(.sabafun)[root@cloud]$ mysql_secure_installation
 </code></pre>
@@ -322,7 +322,7 @@ MariaDB [(none)]&gt; exit
 <pre><code>MariaDB [(none)]&gt; show databases;
 </code></pre>
 <p>当然也可以不创建新用户，而是让 Django 直接用 root 用户。创建新用户是出于便于管理和考虑安全性。</p>
-<h1>连接 Mariadb</h1>
+<h1 id="连接-mariadb">连接 Mariadb</h1>
 <p>首先安装 pymysql</p>
 <pre><code class="language-shell">(.sabafun)[root@cloud]$ pip install pymysql
 </code></pre>
@@ -353,7 +353,7 @@ pymysql.install_as_MySQLdb()
 
 </code></pre>
 <p>里面都如字面意思，告诉 Django 怎么访问数据库。让它用 django 用户名访问我们创建好的 sabafun 数据库。</p>
-<h1>创建超级用户</h1>
+<h1 id="创建超级用户">创建超级用户</h1>
 <p>接下来为项目创建一个超级用户，它能够方便地查看和修改项目的一些信息。</p>
 <pre><code class="language-shell">(.sabafun)[root@cloud]$ python manage.py createsuperuser
 </code></pre>
@@ -371,12 +371,12 @@ No changes detected
 <p>会自动重新加载的服务器 <a href="https://docs.djangoproject.com/zh-hans/3.0/ref/django-admin/#django-admin-runserver"><code>runserver</code></a></p>
 <p>用于开发的服务器在需要的情况下会对每一次的访问请求重新载入一遍 Python 代码。所以你不需要为了让修改的代码生效而频繁的重新启动服务器。然而，一些动作，比如添加新文件，将不会触发自动重新加载，这时你得自己手动重启服务器。</p>
 </blockquote>
-<h1>创建 poetry 应用</h1>
+<h1 id="创建-poetry-应用">创建 poetry 应用</h1>
 <p>Django项目由一系列应用程序组成，它们协同工作，让项目成为一个整体。我们创建一个 poetry 应用，来实现网站展示一些古诗词的功能</p>
 <pre><code class="language-shell">(.sabafun)[root@cloud]$ python manage.py startapp poetry
 </code></pre>
 <p>创建应用后，在项目文件夹中会出现相应的文件夹。</p>
-<h1>创建 poetry/urls.py　文件</h1>
+<h1 id="创建-poetryurlspy文件">创建 poetry/urls.py　文件</h1>
 <p>这个文件用来说明 poetry 应用对应的网址是什么样的</p>
 <pre><code class="language-python">from django.urls import path
 
@@ -386,7 +386,7 @@ urlpatterns = [
     path('', views.poetry, name='poetry'),
 ]
 </code></pre>
-<h1>修改 sabafun/urls.py 文件</h1>
+<h1 id="修改-sabafunurlspy-文件">修改 sabafun/urls.py 文件</h1>
 <p>这个文件是整个项目的网址管理</p>
 <pre><code class="language-python">(.sabafun)[root@cloud]$ emacs sabafun/urls.py 
 
@@ -398,7 +398,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 </code></pre>
-<h1>创建 Shijing Models</h1>
+<h1 id="创建-shijing-models">创建 Shijing Models</h1>
 <p>修改文件 poetry/models.py</p>
 <pre><code class="language-python">from django.db import models
 
@@ -417,7 +417,7 @@ class Shijing(models.Model):
         return self.title
 </code></pre>
 <p>这个 Shijing 类就对应于数据库中的一个表，一个实例就对应于表中的一条记录，也就是一行。fixed_id, title, chapter... 这些对应于一条记录包含的属性。</p>
-<h1>注册 poetry 应用</h1>
+<h1 id="注册-poetry-应用">注册 poetry 应用</h1>
 <p>修改 sabafun/settings.py 文件，告诉 Django ，我们创建了一个新的应用</p>
 <pre><code class="language-python">INSTALLED_APPS = [
     'django.contrib.admin',
@@ -431,7 +431,7 @@ class Shijing(models.Model):
     'poetry'，
 ]
 </code></pre>
-<h1>迁移数据库</h1>
+<h1 id="迁移数据库">迁移数据库</h1>
 <p>修改 poetry/admin.py ，将创建的 Shijing 添加到管理页面中</p>
 <pre><code class="language-python">from django.contrib import admin
 
@@ -451,7 +451,7 @@ admin.site.register(Shijing)
 </code></pre>
 <p>在本地通过浏览器访问 IP::8000/admin/ 就会看到 Shijing</p>
 <p><img src="./2020-02-03-physics-Django/image-20200204153009618.png" alt="image-20200204153009618" /></p>
-<h1>迁入 json 数据</h1>
+<h1 id="迁入-json-数据">迁入 json 数据</h1>
 <p>然后将 github 上的诗词数据库 https://github.com/chinese-poetry/chinese-poetry 中的 shijing.json 传到服务器上，并在同一目录下编写文件 json_to_database.py</p>
 <pre><code class="language-python">(.sabafun)[root@cloud]$ emacs json_to_database.py
 
@@ -518,7 +518,7 @@ poetry.commit()                                      # 提交更改
 <p>进入管理界面，看到 305 个导入的数据</p>
 <p><img src="./2020-02-03-physics-Django/image-20200204165427906.png" alt="image-20200204165427906" /></p>
 <p>成功！</p>
-<h1>修改 poetry/views.py 文件</h1>
+<h1 id="修改-poetryviewspy-文件">修改 poetry/views.py 文件</h1>
 <p>至此为止，我们只能够在管理页面中看到诗经，下面让它在网页上显示。</p>
 <pre><code class="language-python">from django.shortcuts import render
 
@@ -533,7 +533,7 @@ def poetry(request):
     return render(request, 'poetry/poetry.html', context)
 </code></pre>
 <p>poetry 函数将一个字典 context 传递给渲染函数 render()</p>
-<h1>编写网页模板</h1>
+<h1 id="编写网页模板">编写网页模板</h1>
 <p>新建一个用于存放 html 模板的地方</p>
 <pre><code class="language-shell">(.sabafun)[root@cloud sabafun]# cd poetry/
 (.sabafun)[root@cloud poetry]# mkdir templates
@@ -557,7 +557,7 @@ poetry
 </code></pre>
 <p>shijing_list 就是通过 render() 函数传递过来的字典的键。重启 httpd 从本地访问 IP/poetry，就看到如下界面了！</p>
 <p><img src="./2020-02-03-physics-Django/image-20200204210647475.png" alt="image-20200204210647475" /></p>
-<h1>后续操作</h1>
+<h1 id="后续操作">后续操作</h1>
 <p>Apache 配置</p>
 <pre><code># 连接 Django                                                                 
 LoadModule wsgi_module &quot;/root/sabafun/.sabafun/lib/python3.7/site-packages/mo\
@@ -614,8 +614,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 </code></pre>
-<h1>具体操作过程（仅供参考）</h1>
-<h2>配置 ssh 登陆</h2>
+<h1 id="具体操作过程仅供参考">具体操作过程（仅供参考）</h1>
+<h2 id="配置-ssh-登陆">配置 ssh 登陆</h2>
 <p>在本地连接云端</p>
 <pre><code class="language-shell">$ ssh root@h.saba.fun
 </code></pre>
@@ -641,7 +641,7 @@ xps13.pub                                   100%  744     6.8KB/s   00:00
 <pre><code class="language-shell">[root@cloud]$ cat .ssh/xps13.pub &gt;&gt; .ssh/authorized_keys 
 </code></pre>
 <p>此时从本地登陆云端就不需要输入密码了。</p>
-<h2>配置环境</h2>
+<h2 id="配置环境">配置环境</h2>
 <p>在云端进行升级</p>
 <pre><code class="language-shell">[root@cloud]$ yum upgrade
 </code></pre>
@@ -673,7 +673,7 @@ pip 9.0.3 from /usr/lib/python3.6/site-packages (python 3.6)
 <pre><code class="language-shell">[root@cloud]$ yum install mariadb
 [root@cloud]$ yum install mariadb-server
 </code></pre>
-<h2>配置并测试 Django</h2>
+<h2 id="配置并测试-django">配置并测试 Django</h2>
 <p>新建一个存放项目的文件夹并进入</p>
 <pre><code class="language-shell">[root@cloud]$ mkdir saba
 [root@cloud]$ cd saba
@@ -861,7 +861,7 @@ Quit the server with CONTROL-C.
 <p>此时从本地访问 8000 端口，终于出现了小火箭界面</p>
 <p><img src="./2020-02-03-physics-Django/image-20200204125926942.png" alt="image-20200204125926942" /></p>
 <p>参考官方文档连接 Apache https://docs.djangoproject.com/zh-hans/3.0/howto/deployment/wsgi/modwsgi/</p>
-<h2>连接 mod_wsgi</h2>
+<h2 id="连接-mod_wsgi">连接 mod_wsgi</h2>
 <p>首先安装 mod_wsgi</p>
 <pre><code class="language-shell">(.sabafun)[root@cloud]$ pip install mod_wsgi
 </code></pre>
@@ -920,7 +920,7 @@ Current thread 0x00007fca65324880 (most recent call first):
 <pre><code class="language-shell">(.sabafun)[root@cloud]$ chmod 755 -R /root/
 </code></pre>
 <p>再重启 httpd 。直接访问 IP ，出现了小火箭。</p>
-<h2>配置 Mariadb</h2>
+<h2 id="配置-mariadb">配置 Mariadb</h2>
 <p>启动服务（之前忘记安装 mariadb-server，就找不到服务）</p>
 <pre><code class="language-shell">(.sabafun)[root@cloud]$ systemctl start mariadb
 </code></pre>
@@ -956,7 +956,7 @@ MariaDB [sabafun]&gt; exit
 
 Bye
 </code></pre>
-<h2>连接　mariadb</h2>
+<h2 id="连接mariadb">连接　mariadb</h2>
 <p>修改项目中的　settings.py 中关于数据库的设置 https://docs.djangoproject.com/zh-hans/3.0/ref/settings/#std:setting-DATABASES</p>
 <pre><code class="language-mysql">MariaDB [(none)]&gt; show variables like 'port';
 +---------------+-------+
@@ -1026,7 +1026,7 @@ Running migrations:
   Applying sessions.0001_initial... OK
 </code></pre>
 <p>没有报错，连接成功！</p>
-<h2>开始写 Django 页面</h2>
+<h2 id="开始写-django-页面">开始写 Django 页面</h2>
 <p>创建管理页面</p>
 <pre><code class="language-shell">(.sabafun)[root@cloud]$ python manage.py createsuperuser
 </code></pre>
@@ -1049,7 +1049,7 @@ Django version 3.0.3, using settings 'sabafun.settings'
 Starting development server at http://0.0.0.0:8000/
 Quit the server with CONTROL-C.
 </code></pre>
-<h2>创建 poetry 应用</h2>
+<h2 id="创建-poetry-应用-1">创建 poetry 应用</h2>
 <pre><code class="language-shell">(.sabafun)[root@cloud]$ python manage.py startapp poetry
 </code></pre>
 <pre><code class="language-python">(.sabafun)[root@cloud]$ emacs poetry/views.py 
@@ -1087,7 +1087,7 @@ urlpatterns = [
 <p>查看　IP:8000/poetry/</p>
 <p>出现　Hello, poetry!</p>
 <p>成功！</p>
-<h2>创建 Shijing Models</h2>
+<h2 id="创建-shijing-models-1">创建 Shijing Models</h2>
 <pre><code class="language-python">(.sabafun)[root@cloud]$ emacs poetry/models.py 
 
 
@@ -1152,7 +1152,7 @@ admin.site.register(Shijing)
 </code></pre>
 <p>这时 IP::8000/admin/　就会看到 Shijing</p>
 <p><img src="./2020-02-03-physics-Django/image-20200204153009618.png" alt="image-20200204153009618" /></p>
-<h2>迁入 json 数据</h2>
+<h2 id="迁入-json-数据-1">迁入 json 数据</h2>
 <pre><code class="language-mysql">删除表中所有条目
 truncate table poetry_shijing;
 </code></pre>
@@ -1225,7 +1225,7 @@ poetry.commit()                                      # 提交更改
 <p>进入管理界面，看到 305 个导入的数据</p>
 <p><img src="./2020-02-03-physics-Django/image-20200204165427906.png" alt="image-20200204165427906" /></p>
 <p>成功！</p>
-<h2>编写网页，来显示</h2>
+<h2 id="编写网页来显示">编写网页，来显示</h2>
 <pre><code class="language-shell">(.sabafun)[root@cloud sabafun]# cd poetry/
 (.sabafun)[root@cloud poetry]# mkdir templates
 (.sabafun)[root@cloud poetry]# cd templates/
@@ -1268,7 +1268,7 @@ def poetry(request):
 </code></pre>
 <p>重启 httpd 从本地访问 IP/poetry，就看到界面了</p>
 <p><img src="./2020-02-03-physics-Django/image-20200204210647475.png" alt="image-20200204210647475" /></p>
-<h1>参考资料</h1>
+<h1 id="参考资料">参考资料</h1>
 <ol>
 <li>Eric Matthes 著，袁国忠 译, Python 编程从入门到实践，中国工信出版集团，2016，人民邮电出版社</li>
 <li>https://docs.djangoproject.com/zh-hans/3.0/intro/tutorial01/</li>

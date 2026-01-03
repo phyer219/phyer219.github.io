@@ -156,7 +156,7 @@
 
 <section class="markdown-body">
   
-<h2>引言</h2>
+<h2 id="引言">引言</h2>
 <p>从 2018 年开始入门 Linux，已经 7 年了。<br />
 从 Deepin 到 Manjaro，再到 Rocky Linux。<br />
 中间也尝试过 ArchLinux, Debian, Ubuntu, CentOS等等。</p>
@@ -164,7 +164,7 @@
 到现在开始考虑一些安全性，长期的稳定性，不再为了图省事直接关闭防火墙和 SELinux。<br />
 每一行代码都想要理解含义。<br />
 理解配置的逻辑和哲学。</p>
-<h2><code>Rocky Linux</code></h2>
+<h2 id="rocky-linux"><code>Rocky Linux</code></h2>
 <p>用 <code>Rocky Linux</code> 用的还不多，在此写一些备忘。</p>
 <p><code>Rocky Linux</code> 是 CentOS 替代品，适用于服务器。</p>
 <ul>
@@ -179,7 +179,7 @@
 <code>xfs</code>文件系统，性能高，适合处理大文件，并行写入，可以不停机扩容，但是不支持缩容，跨平台兼容性差。</p>
 </li>
 </ul>
-<h2>LVM（逻辑卷管理）</h2>
+<h2 id="lvm逻辑卷管理">LVM（逻辑卷管理）</h2>
 <table>
 <thead>
 <tr>
@@ -207,7 +207,7 @@
 </tbody>
 </table>
 <p>可以用 <code>pvdispaly</code> 查看，或者简写为 <code>pvs</code>。同理 <code>vgs</code> 和 <code>lvs</code></p>
-<h3>示例</h3>
+<h3 id="示例">示例</h3>
 <p>先用 <code>lsblk</code> 查看硬盘情况。只有 <code>nvme0n1p3</code> 分区中有 3 个 lv：</p>
 <pre><code class="language-shell">AMD-ZQW-srv ➜  ~ lsblk -f
 NAME        FSTYPE      FSVER    LABEL UUID                                   FSAVAIL FSUSE% MOUNTPOINTS
@@ -260,7 +260,7 @@ sudo vgchange -ay
 sudo lvs
 
 </code></pre>
-<h2>dnf 和 rpm</h2>
+<h2 id="dnf-和-rpm">dnf 和 rpm</h2>
 <p><code>Rocky Linux</code> 使用 <code>dnf</code> 和 <code>rpm</code> 管理软件包。</p>
 <table>
 <thead>
@@ -326,8 +326,8 @@ sudo lvs
 </tr>
 </tbody>
 </table>
-<h2>zsh</h2>
-<h2>硬盘挂载</h2>
+<h2 id="zsh">zsh</h2>
+<h2 id="硬盘挂载">硬盘挂载</h2>
 <p><code>etc/systemd/system/hdd1.mount </code></p>
 <pre><code>[Unit]
 Description=Mount hdd1
@@ -342,8 +342,8 @@ Options=defaults,uid=1000,gid=1000
 [Install]
 WantedBy=multi-user.target
 </code></pre>
-<h2>journalctl 查看日志</h2>
-<h2>Podman(Docker)</h2>
+<h2 id="journalctl-查看日志">journalctl 查看日志</h2>
+<h2 id="podmandocker">Podman(Docker)</h2>
 <p>以 NextCloud为例</p>
 <pre><code class="language-shell">~/.config/containers/systemd/nextcloud.pod
 [Pod]
@@ -387,7 +387,7 @@ Environment=MYSQL_USER=nextcloud
 <p><code>quadlet</code>是一次性读取所有的<code>.pod</code> <code>.container</code> 文件，所以只要有一个格式不对，就会导致所有的文件都不能生成相应的服务。可以用如下命令测试，看看是哪个文件格式有问题：</p>
 <pre><code class="language-shell">/usr/lib/systemd/system-generators/podman-system-generator --user --dryrun
 </code></pre>
-<h2>SELinux</h2>
+<h2 id="selinux">SELinux</h2>
 <table>
 <thead>
 <tr>
@@ -442,7 +442,7 @@ sudo restorecon -Rv /home/zqw/
 <code>setenforce 0</code></p>
 <p>开启：<br />
 <code>setenforce 1</code></p>
-<h2>Firewall</h2>
+<h2 id="firewall">Firewall</h2>
 <pre><code class="language-xml">&lt;!-- /etc/firewalld/services/emby.xml --&gt;
 &lt;service&gt;
   &lt;short&gt;Emby&lt;/short&gt;
@@ -454,12 +454,12 @@ sudo restorecon -Rv /home/zqw/
 <pre><code class="language-shell">sudo firewall-cmd --permanent --add-service=emby
 sudo firewall-cmd --reload
 </code></pre>
-<h2>Rsync</h2>
+<h2 id="rsync">Rsync</h2>
 <p>远程同步</p>
 <pre><code>rsync -av --delete --info=progress2 -e 'ssh -p ****' ./music/ ***@***.***:/hdd1/musiclib/
 </code></pre>
-<h2>Systemctl</h2>
-<h2>初始化与用户、权限管理</h2>
+<h2 id="systemctl">Systemctl</h2>
+<h2 id="初始化与用户权限管理">初始化与用户、权限管理</h2>
 <p>出于安全考虑修改 <code>ssh</code> 的默认端口。<br />
 修改 <code>/etc/ssh/sshd_config</code> 中的 <code>Port</code></p>
 <p><code>semanage port -a -t ssh_port_t -p tcp #PORTNUMBER</code></p>
@@ -467,7 +467,7 @@ sudo firewall-cmd --reload
 <p><code>firewall-cmd --reload</code><br />
 <code>systemctl restart sshd</code></p>
 <p><code>chsh -s /usr/bin/zsh</code></p>
-<h2>引导</h2>
+<h2 id="引导">引导</h2>
 <p>ESP (EFI System Partition)</p>
 <pre><code>sudo efibootmgr --create \
   --disk /dev/sdX \
@@ -481,8 +481,8 @@ sudo firewall-cmd --reload
 </code></pre>
 <pre><code>sudo efibootmgr --bootnum 0002 --delete-bootnum
 </code></pre>
-<h2>Kdump</h2>
-<h2>rsync</h2>
+<h2 id="kdump">Kdump</h2>
+<h2 id="rsync-1">rsync</h2>
 <pre><code>rsync -ah --info=progress2 ../home_old/zqw/immich-app ./immich-app
 </code></pre>
 <table>
@@ -523,7 +523,7 @@ sudo firewall-cmd --reload
 </tr>
 </tbody>
 </table>
-<h2>WordPress 迁移</h2>
+<h2 id="wordpress-迁移">WordPress 迁移</h2>
 <p><code>wp-settings.php</code> 中添加：</p>
 <pre><code class="language-php">define('WP_HOME', 'http://your.new.domain');
 define('WP_SITEURL', 'http://your.new.domain');
@@ -539,7 +539,7 @@ cd /var/www/html
 wp search-replace 'http://xxx.xxx' 'http://xxx.xxx.xxx.xxx:xxxx' --all-tables --allow-root
 
 </code></pre>
-<h2>致谢</h2>
+<h2 id="致谢">致谢</h2>
 <p>所有为 ChatGPT 提供训练素材的人。</p>
 
 </section>

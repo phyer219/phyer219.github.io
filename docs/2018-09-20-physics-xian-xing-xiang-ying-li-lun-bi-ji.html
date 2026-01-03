@@ -157,7 +157,7 @@
 <section class="markdown-body">
   <!-- toc -->
 <!-- more -->
-<h2>问题</h2>
+<h2 id="问题">问题</h2>
 <p>已知 $H=H_0 +V_t$，其中 $V_t = \hat{B} F_t$ ，为一外场 $F_t$ 对原有系统造成的微扰，$\hat{B}$ 是系统中与外场  $F_t$ 相耦合的力学量。求某力学量 $\hat{A}$ 在 <eq>t</eq> 时刻系综平均值 $\langle A \rangle_t$ 与 <eq>0</eq> 时刻的系综平均值 $\langle A \rangle_0$ 系综平均值 $\langle A \rangle_t -\langle A \rangle_0 $ 差的近似结果。</p>
 <p>现取一特例，假设外场 $F_t$ 就是磁场 $\vec{B_t}$ ，那么系统中与外场 $\vec{B_t}$ 相耦合的力学量就是系统的总磁矩 $\vec{m}$ ，总磁矩 $\vec{m}$ 对应的微观量是系统中单个电子的自旋 $\vec{S_i}$ ，下标 <eq>i</eq> 代表第 <eq>i</eq> 个电子。其关系为：<br />
 $$
@@ -176,13 +176,13 @@ $$$$
 
 \hat{A} \longleftrightarrow \vec{M}
 
-$$<h2>初步路线</h2>
+$$<h2 id="初步路线">初步路线</h2>
 <p>写出详细表达式进行具体计算：<br />
 $$
 \langle \vec{M} \rangle_t -\langle\vec{ M} \rangle_0  = \mathrm{Tr} [(\rho_t - \rho_0)\hat{M}] = \frac{1}{V}\cdot \frac{g_J \mu_B}{\hbar}\sum_i \mathrm{Tr} [(\rho_t - \rho_0)\vec{S_i}]
 $$<br />
 接下来求 $\rho_t - \rho_0$ 。</p>
-<h3>求 <eq>t</eq> 时刻密度矩阵的近似值</h3>
+<h3 id="求--时刻密度矩阵的近似值">求 <eq>t</eq> 时刻密度矩阵的近似值</h3>
 <p>Dirac表象中密度矩阵的运动方程：<br />
 $$
 \dot{\rho_t^D} = \frac{1}{i\hbar} [V_t^D, \rho_t^D]
@@ -204,7 +204,7 @@ $$<br />
 $$
 \rho_t \approx \rho_0 +\frac{1}{i\hbar} \int_{-\infty}^t \mathrm{d}t'  U(t)[V_{t'}^D, \rho_0]U^{\dagger}(t)
 $$</p>
-<h2>求解结果</h2>
+<h2 id="求解结果">求解结果</h2>
 <p>将 <eq>t</eq> 时刻密度矩阵的近似结果<br />
 $$
 \rho_t - \rho_0 \approx \frac{1}{i\hbar} \int_{-\infty}^t \mathrm{d}t'  U(t)[V_{t'}^D, \rho_0]U^{\dagger}(t)
@@ -233,9 +233,9 @@ $$
 
 \langle M \rangle_t -\langle M \rangle_0  = \mathrm{Tr} [(\rho_t - \rho_0)\hat{M}] = -\frac{1}{V}\cdot \frac{g_J \mu_B}{\hbar}\sum_{\alpha = x,y,z} \sum_i \frac{g_J\mu_B}{\hbar} \sum_i  \frac{1}{i\hbar} \int_{-\infty}^t \mathrm{d}t'  B_{t'}^{\alpha}\langle  [\vec{S_i}(t),S_i^{\alpha}(t')]\rangle_0
 
-$$<h2>注</h2>
+$$<h2 id="注">注</h2>
 <p>Wolfgang Nolting, Fundamentals of Many-body Physics, 3.1节笔记</p>
-<h4>易混淆的量</h4>
+<h4 id="易混淆的量">易混淆的量</h4>
 <ul>
 <li>magnetetic susceptibility 磁化率： $\chi$</li>
 <li>magnetic moment 总磁矩：$\vec{m}$</li>

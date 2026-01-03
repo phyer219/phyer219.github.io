@@ -162,7 +162,7 @@ $$
 \lim_{\rho\to 0} \frac{\partial}{\partial\rho}\left[\rho
 \int_{-\infty}^{+\infty} \frac{F(\rho, z)}{\rho^2 + z^2}\mathrm{d}z\right]
 $$</p>
-<h1>其中的积分<br />
+<h1 id="其中的积分可以在--处展开其中第一项代回原式后得也就是说我们想要的就是-但这在数值上如何计算呢我们可以把发散的部分lim_rhoto-0int_-inftyinfty-fracfrho-zrho2--z2mathrmdz">其中的积分<br />
 $$
 \int_{-\infty}^{+\infty} \frac{F(\rho, z)}{\rho^2 + z^2}\mathrm{d}z
 $$<br />
@@ -187,7 +187,7 @@ $$<br />
 也就是说，我们想要的就是 $C_0$。但这在数值上如何计算呢？我们可以把发散的部分<br />
 $$<br />
 \lim_{\rho\to 0}\int_{-\infty}^{+\infty} \frac{F(\rho, z)}{\rho^2 + z^2}\mathrm{d}z</h1>
-<h1>\int_{-\infty}^{+\infty} \frac{F(0, z)}{ z^2}\mathrm{d}z<br />
+<h1 id="int_-inftyinfty-fracf0-z-z2mathrmdz-fracpirhof0-0lim_rhoto-0-fracpartialpartialrholeftrhoint_-inftyinfty-fracfrho-zrho2--z2mathrmdzright">\int_{-\infty}^{+\infty} \frac{F(0, z)}{ z^2}\mathrm{d}z<br />
 = \frac{\pi}{\rho}F(0, 0)<br />
 $$
 减去，就得到
@@ -198,7 +198,7 @@ $$<br />
 \frac{F(0, z)}{z^2} - \frac{F(0, 0)}{z^2}\right]\mathrm{d}z<br />
 $$<br />
 这样我们就可以做数值计算了。</p>
-<h1>例</h1>
+<h1 id="例">例</h1>
 <p>比如$F(\rho, z) = 1/(z^2 + 1)$时，<br />
 $$
 \int_{-\infty}^{\infty}\left[
@@ -272,7 +272,7 @@ analytic: 314.1592653589793
 <p><img src="2023-10-23-physics-Hadamard/first-term.png" alt="first-term" /></p>
 <p><img src="2023-10-23-physics-Hadamard/finite-part.png" alt="finite-part" /></p>
 <p><a href="2023-10-23-physics-Hadamard/Hadamard.py">Hadamard.py</a></p>
-<h1>致谢</h1>
+<h1 id="致谢">致谢</h1>
 <ol>
 <li>F Yang and R Qi</li>
 </ol>

@@ -82,7 +82,7 @@
 
 
   <!-- SEO: page description for search results -->
-    <meta name="description" content="人为什么会感觉到不同的颜色？颜色为什么可以用三基色混合而成？让我们从光的质出发来理解这些问题。 人眼对光的感 …" />
+    <meta name="description" content="人为什么会感觉到不同的颜色？颜色为什么可以用三基色混合而成？让我们从光的质出发来理解这些问题。 目录： 人眼对光 …" />
 
     <meta name="tags" content="颜色" />
 
@@ -156,7 +156,24 @@
 <section class="markdown-body">
   
 <p>人为什么会感觉到不同的颜色？颜色为什么可以用三基色混合而成？让我们从光的质出发来理解这些问题。</p>
-<h2>人眼对光的感知</h2>
+<p>目录：</p>
+<ul>
+<li><a href="#%E4%BA%BA%E7%9C%BC%E5%AF%B9%E5%85%89%E7%9A%84%E6%84%9F%E7%9F%A5">人眼对光的感知</a></li>
+<li><a href="#%E8%89%B2%E5%BD%A9%E7%A9%BA%E9%97%B4">色彩空间</a>
+<ul>
+<li><a href="#lms-%E8%89%B2%E5%BD%A9%E7%A9%BA%E9%97%B4">LMS 色彩空间</a></li>
+<li><a href="#cie-rgb-%E8%89%B2%E5%BD%A9%E7%A9%BA%E9%97%B4">CIE RGB 色彩空间</a></li>
+<li><a href="#cie-xyz-%E8%89%B2%E5%BD%A9%E7%A9%BA%E9%97%B4">CIE XYZ 色彩空间</a></li>
+<li><a href="#cie-xyy-%E8%89%B2%E5%BD%A9%E7%A9%BA%E9%97%B4">CIE xyY 色彩空间</a></li>
+<li><a href="#%E5%85%B6%E5%AE%83-rgb-%E8%89%B2%E5%BD%A9%E7%A9%BA%E9%97%B4">其它 RGB 色彩空间</a></li>
+<li><a href="#%E5%85%B6%E5%AE%83%E8%89%B2%E5%BD%A9%E7%A9%BA%E9%97%B4">其它色彩空间</a></li>
+</ul>
+</li>
+<li><a href="#hsl-%E5%92%8C-hsv-%E8%89%B2%E5%BD%A9%E7%A9%BA%E9%97%B4">HSL 和 HSV 色彩空间</a></li>
+<li><a href="#%E8%89%B2%E5%BD%A9%E6%90%AD%E9%85%8D%E7%BD%91%E7%AB%99">色彩搭配网站</a></li>
+</ul>
+<hr />
+<h2 id="人眼对光的感知">人眼对光的感知</h2>
 <p>人眼中有<a href="https://zh.wikipedia.org/zh-cn/%E8%A7%86%E9%94%A5%E7%BB%86%E8%83%9E">视锥细胞</a>（<a href="https://en.wikipedia.org/wiki/Cone_cell">cone cell</a>）和<a href="https://zh.wikipedia.org/zh-cn/%E8%A7%86%E6%9D%86%E7%BB%86%E8%83%9E">视杆细胞（rod cell）</a>两种<a href="https://zh.wikipedia.org/zh-cn/%E6%84%9F%E5%85%89%E7%BB%86%E8%83%9E">感光细胞（photoreceptor cell）</a>。不同的感光细胞含有不同的<a href="https://en.wikipedia.org/wiki/Opsin">视蛋白（opsins）</a>，因此不同的感光细胞对不同波长的光敏感程度不同。</p>
 <p>视杆细胞只对光比较敏感，但只有一种光敏色素。相比于视杆细胞对光，视锥细胞对光的敏感度比较低，但有三种类型，分别可以感受长波长（Long, L），中波长（Medium, M）和短波长（Short, S）的光（<a href="https://en.wikipedia.org/wiki/Trichromacy">trichromacy</a>）。<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
 <table>
@@ -208,14 +225,14 @@
   </td>
   </tr>
 </table>
-<h2>色彩空间</h2>
+<h2 id="色彩空间">色彩空间</h2>
 <p>如何对不同的颜色定量地描述呢？最直接的描述就是人眼接收到光的光谱 $S(\lambda)$，其中 $\lambda$ 是光的波长。给定光谱 $S(\lambda)$，颜色也就确定了。本节提到的数学概念仅用于理解，不做严格定义。</p>
 <p>但人眼感受到的同一种的颜色的光，光谱也可能不完全一样（<a href="https://en.wikipedia.org/wiki/Metamerism_(color)">条件等色， Metamerism</a>）。比如<a href="https://en.wikipedia.org/wiki/Sunlight">太阳光</a>的光谱非常丰富，人眼感受到的颜色是白色。但电子显示器上白色，却只有红绿蓝三种光。原因很简单，光谱 $S(\lambda)$ 的变量是连续变化的波长 $\lambda$ 是一个无穷维的空间，但是人眼只有三种对波长敏感的细胞，把光谱 $S(\lambda)$ 投影到了三维空间上。所有具有相同颜色的光谱 $S(\lambda)$ 可以理解成一个等价类，人眼就只有分辨不同的等价类，不能分辨不同的光谱 $S(\lambda)$ 。简而言之，$S(\lambda)\mapsto \mathrm{Color}$ 不是单射。</p>
 <p>直接用光的波长描述颜色也不好，因为有些颜色没有单一波长的光的对应。比如品红（<span style="color: #FF00FF;">#FF00FF</span>，<a href="https://en.wikipedia.org/wiki/Magenta">magenta</a>），就没有单一波长的可见光与之对应。原因是，波长 $\lambda$ 是单一变量，一维空间，但人眼能感受的颜色是三种视锥细胞的响应，是一个三维空间。简而言之，$\lambda\mapsto \mathrm{Color}$ 是单射，但不是满射。</p>
 <p>我们想要一个好的描述，它应该是把无穷维的光谱，映射到一个三维的空间（因为有三种视锥细胞）。这个三维空间到所有的颜色的映射，即是单射，又是满射，即双射。或者近似是单射也行。这个有限维的空间，就是<a href="https://en.wikipedia.org/wiki/Color_space">色彩空间（color space）</a>。<a href="https://en.wikipedia.org/wiki/Grassmann%27s_laws_(color_science)">Grassmann 定律</a><sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>给出了一些色彩空间的性质，大致是说，色彩空间应该是一个“三维”，且“线性”的空间。</p>
-<p>在 1931 年，国际照明委员会（<a href="https://en.wikipedia.org/wiki/International_Commission_on_Illumination">International Commission on Illumination, CIE)</a>）定义了人眼看到的一束光（光谱 $S(\lambda)$）的颜色，即，与色彩空间中的一个点的映射关系（<a href="https://en.wikipedia.org/wiki/CIE_1931_color_space">CIE 1931 color space</a>）。</p>
+<p>在 1931 年，国际照明委员会（<a href="https://en.wikipedia.org/wiki/International_Commission_on_Illumination">International Commission on Illumination, CIE</a>）定义了人眼看到的一束光（光谱 $S(\lambda)$）的颜色，即，与色彩空间中的一个点的映射关系（<a href="https://en.wikipedia.org/wiki/CIE_1931_color_space">CIE 1931 color space</a>）。</p>
 <p>色彩空间有好多种。下面简要介绍。</p>
-<h3>LMS 色彩空间</h3>
+<h3 id="lms-色彩空间">LMS 色彩空间</h3>
 <p><a href="https://en.wikipedia.org/wiki/LMS_color_space">LMS 色彩空间</a>就是直接根据人眼的三种视锥细胞的响应函数定义的。它是一个三维的线性空间，有三个坐标 $L, M$ ，和 <eq>S</eq>。由光谱 $S(\lambda)$ 到LMS 色彩空间的映射定义为</p>
 $$
 
@@ -226,7 +243,7 @@ S =& \int_{0}^{\infty}  S(\lambda) s(\lambda) \,\mathrm{d}\lambda,
 \end{align*}
 
 $$<p>其中响应函数 $l(\lambda), m(\lambda)$ 和 $ s(\lambda)$ 由实验测定。即使是不同的光谱 $S(\lambda)$ ，只要坐标 $L, M, S$ 相同，人眼感受的颜色就是相同的。响应函数 $l(\lambda), m(\lambda)$ 和 $ s(\lambda)$ 也已经把人眼看不见的颜色做了截断。所以，从 LMS 色彩空间到所有人眼能感觉到的颜色的映射 $\mathcal{C}_{LMS}\mapsto \{\mathrm{Colors}\}$ 这是一个双射。</p>
-<h3>CIE RGB 色彩空间</h3>
+<h3 id="cie-rgb-色彩空间">CIE RGB 色彩空间</h3>
 <p>在 1931 年，国际照明委员会（<a href="https://en.wikipedia.org/wiki/International_Commission_on_Illumination">International Commission on Illumination, CIE)</a>）实验测定的色彩空间。</p>
 <p>实验用波长为 435.8nm（蓝）， 546.1nm（绿）， 700nm（红） 三种光混合，调节比例，使被试者认为混合之后的颜色，与某个波长的单色光（从连续光谱的光源通过分光获得）颜色相同，记下比例。由此可以测出响应函数 $\bar{r}(\lambda), \bar{g}(\lambda)$ ，和 $\bar{b}(\lambda)$ ,</p>
 $$
@@ -259,7 +276,7 @@ B_{\mathrm{R}} = & \int_{0}^{\infty}  \delta(\lambda - \lambda_{\mathrm{R}}) \ba
 \end{align*}
 
 $$<p>除了这三个点外，都由两个正值，一个负值合成。负值代表的意义是减去该颜色的光，实验上是用该颜色的光照到单色光源上，以此来等效实现。</p>
-<h3>CIE XYZ 色彩空间</h3>
+<h3 id="cie-xyz-色彩空间">CIE XYZ 色彩空间</h3>
 <p>CIE RGB 色彩空间会出现负值，这会很不方便。由此就从 CIE RGB 定义了一个新的色彩空间。三个坐标为 $X, Y$ ， 和 <eq>Z</eq>。其中 <eq>Y</eq> 选做 <a href="https://en.wikipedia.org/wiki/Luminance">亮度（luminance）</a>的响应函数。<eq>Z</eq> 先择与 LMS 色彩空间的的 <eq>S</eq> 相同。选适当的 <eq>X</eq> 使得坐标在可见单色光谱内的所有颜色的坐标非负。</p>
 <table>
 <thead>
@@ -294,7 +311,7 @@ $$
   \end{pmatrix}_{\mathrm{HPE}}
 \end{align*}
 
-$$<h3>CIE xyY 色彩空间</h3>
+$$<h3 id="cie-xyy-色彩空间">CIE xyY 色彩空间</h3>
 <p>由于 CIE XYZ 的 Y 选做亮度，所以定义</p>
 $$
 
@@ -316,7 +333,7 @@ $$<p>这样 $x, y$ 取值在 <eq>0</eq> 和 <eq>1</eq> 之间。在给定亮度�
 </tr>
 </tbody>
 </table>
-<h3>其它 RGB 色彩空间</h3>
+<h3 id="其它-rgb-色彩空间">其它 RGB 色彩空间</h3>
 <p>除了 CIE RGB 色彩空间，还有许多其它的 RGB 色彩空间。比如，我们常用的用十六进制表示的 RGB 颜色（#RRGGBB）就是 <a href="https://en.wikipedia.org/wiki/SRGB">sRGB</a> 色彩空间中的坐示。</p>
 <table>
 <thead>
@@ -330,11 +347,11 @@ $$<p>这样 $x, y$ 取值在 <eq>0</eq> 和 <eq>1</eq> 之间。在给定亮度�
 </tr>
 </tbody>
 </table>
-<h3>其它色彩空间</h3>
+<h3 id="其它色彩空间">其它色彩空间</h3>
 <p><a href="https://en.wikipedia.org/wiki/CIELAB_color_space">CIELAB 色彩空间</a>等。</p>
-<h2>HSL 和 HSV 色彩空间</h2>
+<h2 id="hsl-和-hsv-色彩空间">HSL 和 HSV 色彩空间</h2>
 <p>设计和画画的时候，还经常用到 <a href="https://en.wikipedia.org/wiki/HSL_and_HSV">HSL 和 HSV 色彩空间</a>。他们是把 RGB 色彩空间做了简单的变换，使得人们可以更容易地调出想要的颜色。</p>
-<h2>色彩搭配网站</h2>
+<h2 id="色彩搭配网站">色彩搭配网站</h2>
 <ul>
 <li><a href="https://m2.material.io/design/color/the-color-system.html?utm_source=chatgpt.com#tools-for-picking-colors">Material design tools for picking colors</a>：谷歌为 Material Design 提供的色彩搭配工具，选一个主题色，会自动给出相应的搭配色彩。同时也介绍了一些色彩搭配的基本概念。</li>
 <li><a href="https://www.happyhues.co/">happyhues</a>：提供了一些色彩搭配方案。作者 <a href="https://www.mackenziechild.me/">Mackenzie</a> 是一名前端工程师。</li>

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水 - blog</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/blog.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2025-12-28T00:00:00+08:00</updated><entry><title>个人数据管理策略与感想</title><link href="https://zqw.ink/2025-12-28-blog-data_manage_backup.html" rel="alternate"/><published>2025-12-28T00:00:00+08:00</published><updated>2025-12-28T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-12-28:/2025-12-28-blog-data_manage_backup.html</id><summary type="html">
 &lt;p&gt;有时引入数据库会使数据看起来很漂亮，但如无必要，应尽量避免引入数据库。&lt;/p&gt;
-&lt;h2&gt;照片的确需要数据库&lt;/h2&gt;
+&lt;h2 id="照片的确需要数据库"&gt;照片的确需要数据库&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;照片很多。&lt;/li&gt;
 &lt;li&gt;我们经常需 …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
 &lt;p&gt;有时引入数据库会使数据看起来很漂亮，但如无必要，应尽量避免引入数据库。&lt;/p&gt;
-&lt;h2&gt;照片的确需要数据库&lt;/h2&gt;
+&lt;h2 id="照片的确需要数据库"&gt;照片的确需要数据库&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;照片很多。&lt;/li&gt;
 &lt;li&gt;我们经常需要按时间、地点、人物等进行预览。&lt;/li&gt;
 &lt;li&gt;数据库只做缓存/索引，不做唯一真相。数据库中的数据应大部分为能够从文件自动生成的数据，不在数据库中写入过多信息，减少数据库丢失导致的信息损失。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;不引入没有必要的数据库&lt;/h2&gt;
+&lt;h2 id="不引入没有必要的数据库"&gt;不引入没有必要的数据库&lt;/h2&gt;
 &lt;p&gt;引入不必的数据库，会导致：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;数据依赖某个软件。这会导致：
@@ -28,7 +28,7 @@
 &lt;/li&gt;
 &lt;li&gt;由于引入了数据库，导入文件时往往会不经过自己的大脑，看起来数据井井有条，但实际上自己对数据库的掌控变低了。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;现行方案&lt;/h2&gt;
+&lt;h2 id="现行方案"&gt;现行方案&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;照片： immich 用 3-2-1 备份原则&lt;sup class="footnote-ref"&gt;&lt;a href="#fn1" id="fnref1"&gt;[1]&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
 &lt;li&gt;其它全直接存文件，用 nextcloud 同步：
@@ -47,24 +47,24 @@
 &lt;/ol&gt;
 &lt;/section&gt;
 </content><category term="blog"/><category term="immich"/><category term="zotero"/></entry><entry><title>研六一年，延期一年，鹅城半载———从品园到百草园，再从百草园到龙光城（连载中……）</title><link href="https://zqw.ink/2025-04-06-blog-baicaoyuan_huizhou.html" rel="alternate"/><published>2025-04-06T00:00:00+08:00</published><updated>2025-04-06T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-04-06:/2025-04-06-blog-baicaoyuan_huizhou.html</id><summary type="html">
-&lt;h2&gt;序&lt;/h2&gt;
+&lt;h2 id="序"&gt;序&lt;/h2&gt;
 &lt;p&gt;从 2022 年 9 月 14 日的《研五下学期总结》，已经过去了两年半的时间。&lt;/p&gt;
 &lt;p&gt;遗憾的是，并没有如《研五下学期总结》中所说，能够按时毕 …&lt;/p&gt;</summary><content type="html">
-&lt;h2&gt;序&lt;/h2&gt;
+&lt;h2 id="序"&gt;序&lt;/h2&gt;
 &lt;p&gt;从 2022 年 9 月 14 日的《研五下学期总结》，已经过去了两年半的时间。&lt;/p&gt;
 &lt;p&gt;遗憾的是，并没有如《研五下学期总结》中所说，能够按时毕业。&lt;/p&gt;
 &lt;p&gt;令人满意的是，找到了一个心仪的博后。&lt;/p&gt;
-&lt;h2&gt;研六上&lt;/h2&gt;
-&lt;h3&gt;学业上&lt;/h3&gt;
+&lt;h2 id="研六上"&gt;研六上&lt;/h2&gt;
+&lt;h3 id="学业上"&gt;学业上&lt;/h3&gt;
 &lt;p&gt;2022年秋冬，研六上学期，主要在为毕业准备两个事情。&lt;/p&gt;
 &lt;p&gt;一是准备同步阻塞的文章，准备用来毕业。但是，此时合作老师建议重新调整一下，投 PRL。&lt;br /&gt;
 所以又重新画图。此时，这个工作能在 2023 年 3 月份前接收，这个念头从我脑中消失，不再抱有希望。&lt;br /&gt;
 这个工作在研六上学期结束后的寒假，春节过后，才投出去。&lt;/p&gt;
 &lt;p&gt;这个学期的另一个事情，是写 rf 谱的文章，这成了我可能按时毕业的一线希望。如果能够尽快写好，投 CTP，然后一个月被接收，就有按时毕业的希望。然而，几乎没有进展。&lt;/p&gt;
 &lt;p&gt;同时，这个学期也联系了香港大学的一个老师，他也有空位，欢迎到时再联系。&lt;/p&gt;
-&lt;h3&gt;生活&lt;/h3&gt;
+&lt;h3 id="生活"&gt;生活&lt;/h3&gt;
 &lt;p&gt;这是从深圳回来后的第一个学期，组里的人员发生了变化，舒哥和 cy 毕业了，xc 加入到了组里。组里也产生了新的大师姐，大师兄。人员变化，大家之间的关系也有变化。之前不怎么熟悉的成员变得更加熟悉。&lt;/p&gt;
-&lt;h3&gt;疫情&lt;/h3&gt;
+&lt;h3 id="疫情"&gt;疫情&lt;/h3&gt;
 &lt;p&gt;也是在这个学期，大家几乎都阳了，清零政策再也执行不下去。&lt;/p&gt;
 &lt;p&gt;全面解封的前几天，学校里出现阳的，哪个宿舍楼里有阳的，就当天早上封楼。&lt;br /&gt;
 我也总是想，早上早点出宿舍，就不至于在宿舍荒废一天。去不了北园，就在明德楼找教室上自习。&lt;/p&gt;
@@ -76,7 +76,7 @@
 &lt;p&gt;18 日，去校医院领了一盒《菊蓝抗流感片》，一盒《止咳宝片》，学校还发了中药包。不过，最救命了还是那两粒布洛芬胶囊。&lt;/p&gt;
 &lt;p&gt;19 日，转阴了。之后就是长达一个月的咳嗽。&lt;/p&gt;
 &lt;p&gt;问了问家里的人也都阳了，回家过年了。疫情就这么过去了。&lt;/p&gt;
-&lt;h2&gt;研六下&lt;/h2&gt;
+&lt;h2 id="研六下"&gt;研六下&lt;/h2&gt;
 &lt;p&gt;2023年，春节过后，返校。疫情也结束了。也确定延期了。&lt;/p&gt;
 &lt;p&gt;这三年对所有中国人来说，都是不同的。其中一大部分人，像是失去的三年。&lt;/p&gt;
 &lt;p&gt;如果你这三年是高中生。&lt;/p&gt;
@@ -94,7 +94,7 @@
 &lt;p&gt;2023年的夏天，暑假去郑州开了冷原子会。很意思，但是没有写一篇博客记录一下。唱ktv，吃生蚝自助，玩柏青哥，买盲盒。&lt;/p&gt;
 &lt;p&gt;暑假的时候，也终于要着手写 rf 谱的文章了。&lt;/p&gt;
 &lt;p&gt;仿佛，这个学期，才是2020年春天的，博一。&lt;/p&gt;
-&lt;h2&gt;研七上&lt;/h2&gt;
+&lt;h2 id="研七上"&gt;研七上&lt;/h2&gt;
 &lt;p&gt;研七上，延期上。2023年9月。开学没几天，就决定了再延期半年。&lt;/p&gt;
 &lt;p&gt;这学期是在百草园度过的第一个学期。在百草园和学校之前通勤。坐二层公交。果真人对时间的感觉是对数的，现在的我，明明每一个小学同学的名字都记得很清楚，却不记得两年前坐了一年的公交是几路。如果记忆从5岁算起，小学的有效时候长度是 $\ln(13-5) \ln(7-5) \approx 1.386$ ，而百草园的通勤时光不过是 $\ln(29-5) \ln(28-5) \approx 0.043$。&lt;/p&gt;
 &lt;p&gt;9月26，大家一起去了深圳，第一次去深技大。晚上一起去堕落街吃饭，去海滩玩滑沙，第一次出境，去香港玩到很晚才回，去澳门更是战到凌晨，在车上过夜。&lt;/p&gt;
@@ -105,7 +105,7 @@
 &lt;p&gt;11月20号，我收到了全球限量1份的延期帆布包。&lt;/p&gt;
 &lt;p&gt;11月21号的时候，我又买了XBOX，也许是用购物发泄延期的压力，也许是单纯想玩。&lt;/p&gt;
 &lt;p&gt;12月份的时候，终于把rf谱的文章投了出去。&lt;/p&gt;
-&lt;h2&gt;研七下&lt;/h2&gt;
+&lt;h2 id="研七下"&gt;研七下&lt;/h2&gt;
 &lt;p&gt;终于要在这个学期毕业了。在29岁生日这天，我的RF谱的被接收了！&lt;/p&gt;
 &lt;p&gt;写毕业论文。送匿名评审。改毕业论文。答辩。&lt;/p&gt;
 &lt;p&gt;学生生涯的最后一个学期。&lt;/p&gt;
@@ -117,7 +117,7 @@
 &lt;p&gt;在毕业的事情基本完成之后，去杭州找了坤哥，去上海找了建国。算是毕业旅行。这是第一次以旅行为目的的独自远行。&lt;/p&gt;
 &lt;p&gt;毕业之后暑假去了重庆冷原子。吃重庆火锅，去重庆的各个景点玩，在街头演出的地方点歌，这也算是毕业旅行吧。&lt;/p&gt;
 &lt;p&gt;8月份的时候从北京回家，去济南找了老师口中的好学生刘老板。这也是毕业旅行的一部分的。&lt;/p&gt;
-&lt;h2&gt;鹅城 GAP&lt;/h2&gt;
+&lt;h2 id="鹅城-gap"&gt;鹅城 GAP&lt;/h2&gt;
 &lt;p&gt;8 月底回到百草园，在进行了一个月的告别之后，我和舒哥先行一步，在 9 月份准备南下。&lt;/p&gt;
 </content><category term="blog"/><category term="总结"/><category term="深圳"/><category term="延期"/><category term="毕业"/><category term="鹅城"/><category term="惠州"/></entry><entry><title>青岛青年冷原子</title><link href="https://zqw.ink/2021-08-31-thinking-tsingtao.html" rel="alternate"/><published>2021-08-31T00:00:00+08:00</published><updated>2021-08-31T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-08-31:/2021-08-31-thinking-tsingtao.html</id><summary type="html">
 &lt;h2&gt;还是最喜欢 poster 环节&lt;/h2&gt;
@@ -267,13 +267,13 @@
 &lt;p&gt;还有勇气和力气吗?&lt;/p&gt;
 &lt;hr /&gt;
 </content><category term="blog"/><category term="夏天"/><category term="文学青年"/></entry><entry><title>穿网线</title><link href="https://zqw.ink/2021-02-09-blog-net_wire.html" rel="alternate"/><published>2021-02-09T00:00:00+08:00</published><updated>2021-02-09T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-02-09:/2021-02-09-blog-net_wire.html</id><summary type="html">
-&lt;h2&gt;2021-02-09 星期二&lt;/h2&gt;
+&lt;h2 id="2021-02-09-星期二"&gt;2021-02-09 星期二&lt;/h2&gt;
 &lt;p&gt;天气: 睛 Entered on [2021-02-09 二 22:50]&lt;/p&gt;
 &lt;p&gt;今天去奶奶家了.&lt;/p&gt;
 &lt;p&gt;回老家玩了一下午, 看了看初中的物理课本.&lt;/p&gt;
 &lt;p&gt;下午在车里把盖侬打了.&lt;/p&gt;
 &lt;p&gt;晚上 …&lt;/p&gt;</summary><content type="html">
-&lt;h2&gt;2021-02-09 星期二&lt;/h2&gt;
+&lt;h2 id="2021-02-09-星期二"&gt;2021-02-09 星期二&lt;/h2&gt;
 &lt;p&gt;天气: 睛 Entered on [2021-02-09 二 22:50]&lt;/p&gt;
 &lt;p&gt;今天去奶奶家了.&lt;/p&gt;
 &lt;p&gt;回老家玩了一下午, 看了看初中的物理课本.&lt;/p&gt;
@@ -281,12 +281,12 @@
 &lt;p&gt;晚上穿网线, 穿了一晚上也没穿过来. 最后把红米路由器设成中继解决了(之前怎么没想到...)&lt;/p&gt;
 &lt;p&gt;放弃 openwrt 了, 学不到什么实质性的东西.&lt;/p&gt;
 </content><category term="blog"/><category term="日记"/><category term="org-mode 日记"/><category term="openwrt"/></entry><entry><title>搞 openwrt，失败</title><link href="https://zqw.ink/2021-02-08-blog-openwrt.html" rel="alternate"/><published>2021-02-08T00:00:00+08:00</published><updated>2021-02-08T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-02-08:/2021-02-08-blog-openwrt.html</id><content type="html">
-&lt;h2&gt;2021-02-08 星期一&lt;/h2&gt;
+&lt;h2 id="2021-02-08-星期一"&gt;2021-02-08 星期一&lt;/h2&gt;
 &lt;p&gt;天气: 睛 Entered on [2021-02-08 一 23:26]&lt;/p&gt;
 &lt;p&gt;在 rasberry pi 4b 上搞 openwrt 没搞好, 头疼.&lt;/p&gt;
 &lt;p&gt;还看了一些编译原理.&lt;/p&gt;
 </content><category term="blog"/><category term="日记"/><category term="org-mode 日记"/><category term="openwrt"/><category term="编译原理"/></entry><entry><title>扛管子，学 org-mode</title><link href="https://zqw.ink/2021-02-07-blog-kang_guan_zi.html" rel="alternate"/><published>2021-02-07T00:00:00+08:00</published><updated>2021-02-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-02-07:/2021-02-07-blog-kang_guan_zi.html</id><content type="html">
-&lt;h2&gt;*** 2021-02-07 星期日&lt;/h2&gt;
+&lt;h2 id="-2021-02-07-星期日"&gt;*** 2021-02-07 星期日&lt;/h2&gt;
 &lt;p&gt;天气: 睛 Entered on [2021-02-07 日 22:21]&lt;/p&gt;
 &lt;p&gt;今天第一天用 org-mode 写日记.&lt;/p&gt;
 &lt;p&gt;主要学习了 org-mode 的 capture.&lt;/p&gt;
@@ -300,29 +300,29 @@
 &lt;p&gt;如果按喜欢程度排序的话, 是 边境来了陌生人 &amp;gt; 和唯一知道星星为什么会发光的人一起散&lt;br /&gt;
 步 &amp;gt; 在海边放了一颗巨大的蛋 &amp;gt; 在威尼斯重建时间&lt;/p&gt;
 &lt;p&gt;我觉得作者写的故事很好, 但是关于科幻, 或者说幻想的部分有些生硬, 奇怪.&lt;/p&gt;
-&lt;h2&gt;在海边放了一颗巨大的蛋&lt;/h2&gt;
+&lt;h2 id="在海边放了一颗巨大的蛋"&gt;在海边放了一颗巨大的蛋&lt;/h2&gt;
 &lt;p&gt;有一天, 在海边的一个村子里, 突然多出了一块巨大的石头. 至于是从哪里来的, 每个人都&lt;br /&gt;
 有不同的看法. 有一个叫普修的人, 在石头里造了一个与世隔绝的世界. 大家后来搬了进去.&lt;br /&gt;
 原来这个巨大的石头是南十字星人的一颗棋子.&lt;/p&gt;
-&lt;h2&gt;和唯一知道星星为什么会发光的人一起散步&lt;/h2&gt;
+&lt;h2 id="和唯一知道星星为什么会发光的人一起散步"&gt;和唯一知道星星为什么会发光的人一起散步&lt;/h2&gt;
 &lt;p&gt;&amp;quot;我&amp;quot; 经历了大瘟疫, 之后人们的心灵都留下了创伤. 之后嫁给了一位地理老师. 瘟疫在世&lt;br /&gt;
 界各国人们心里留下的创伤, 促使世界不断爆发战争. 战争中人们都疯狂了. 战争结束, 国&lt;br /&gt;
 家却完全自我封闭, 对国民, 新出生的小孩都教育他们没有外国这个概念的存在. &amp;quot;我&amp;quot; 的&lt;br /&gt;
 丈夫和他的一个学生, 也是情人出逃国外, 中途丧生.&lt;/p&gt;
-&lt;h2&gt;在威尼斯重建时间&lt;/h2&gt;
+&lt;h2 id="在威尼斯重建时间"&gt;在威尼斯重建时间&lt;/h2&gt;
 &lt;p&gt;&amp;quot;我&amp;quot; 是一名物理物理学家, 双亲皆不在人世. 却被一位科学家朋友做了他新发明的手术,&lt;br /&gt;
 &amp;quot;我&amp;quot; 不再被时间束缚, 穿梭于不同的时间, 不同的世界. &amp;quot;我&amp;quot; 却同时也像是被关在时间的&lt;br /&gt;
 牢笼里.&lt;/p&gt;
-&lt;h2&gt;边境来了陌生人&lt;/h2&gt;
+&lt;h2 id="边境来了陌生人"&gt;边境来了陌生人&lt;/h2&gt;
 &lt;p&gt;边境小镇来了一位陌生人, 小屋里有许多的人. 每个人都讲了一个美妙绝伦的故事.&lt;/p&gt;
-&lt;h2&gt;后记&lt;/h2&gt;
+&lt;h2 id="后记"&gt;后记&lt;/h2&gt;
 &lt;p&gt;原来这四个故事都是对应于一个建筑.&lt;/p&gt;
 </content><category term="blog"/><category term="读书笔记"/><category term="蒋方舟"/></entry><entry><title>跑鞋</title><link href="https://zqw.ink/2020-11-08-blog-shoes.html" rel="alternate"/><published>2020-11-08T00:00:00+08:00</published><updated>2020-11-08T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-11-08:/2020-11-08-blog-shoes.html</id><summary type="html">
-&lt;h2&gt;主线故事框架&lt;/h2&gt;
+&lt;h2 id="主线故事框架"&gt;主线故事框架&lt;/h2&gt;
 &lt;p&gt;我想要一双跑鞋.&lt;/p&gt;
 &lt;p&gt;我喜欢跑步, 也擅长跑步. 无论短跑还是长跑. 学校每年秋天举办的运动会中, 我总会得冠&lt;br /&gt;
 军 …&lt;/p&gt;</summary><content type="html">
-&lt;h2&gt;主线故事框架&lt;/h2&gt;
+&lt;h2 id="主线故事框架"&gt;主线故事框架&lt;/h2&gt;
 &lt;p&gt;我想要一双跑鞋.&lt;/p&gt;
 &lt;p&gt;我喜欢跑步, 也擅长跑步. 无论短跑还是长跑. 学校每年秋天举办的运动会中, 我总会得冠&lt;br /&gt;
 军.&lt;/p&gt;
@@ -373,54 +373,54 @@
 村里的观念就是这样.&lt;/p&gt;
 &lt;p&gt;我也没有怪罪我自己, 当时怄气, 放弃选拔. 成为职业运动员不见得比现在当程序员好很多.&lt;br /&gt;
 但是, 我那几年的青春就在小南屋里度过了. 那最美好的青春!&lt;/p&gt;
-&lt;h2&gt;支线故事&lt;/h2&gt;
+&lt;h2 id="支线故事"&gt;支线故事&lt;/h2&gt;
 &lt;p&gt;开学第一次上体育课的时候, 站在我前面的女生问我:&amp;quot;你也是桃墟镇的吗?&amp;quot; 她似乎还略微&lt;br /&gt;
 带点鼻涕.&lt;/p&gt;
 &lt;p&gt;经过一番交谈, 得知她从小就在县城. 她爸爸那一代就已经考上大学, 是佼佼者.&lt;/p&gt;
 &lt;p&gt;是因为老乡吗?&lt;/p&gt;
-&lt;h2&gt;事件细节: 高一入学后的运动会&lt;/h2&gt;
-&lt;h3&gt;事件细节: 体教局的人找上门&lt;/h3&gt;
-&lt;h3&gt;事件细节: 初次选拔&lt;/h3&gt;
-&lt;h3&gt;事件细节: 与爸爸说跑鞋的事情&lt;/h3&gt;
-&lt;h3&gt;事件细节: 缀学&lt;/h3&gt;
+&lt;h2 id="事件细节-高一入学后的运动会"&gt;事件细节: 高一入学后的运动会&lt;/h2&gt;
+&lt;h3 id="事件细节-体教局的人找上门"&gt;事件细节: 体教局的人找上门&lt;/h3&gt;
+&lt;h3 id="事件细节-初次选拔"&gt;事件细节: 初次选拔&lt;/h3&gt;
+&lt;h3 id="事件细节-与爸爸说跑鞋的事情"&gt;事件细节: 与爸爸说跑鞋的事情&lt;/h3&gt;
+&lt;h3 id="事件细节-缀学"&gt;事件细节: 缀学&lt;/h3&gt;
 </content><category term="blog"/><category term="故事"/><category term="文学青年"/></entry><entry><title>羅生門（らしょうもん）</title><link href="https://zqw.ink/2020-11-07-blog-rashomon.html" rel="alternate"/><published>2020-11-07T00:00:00+08:00</published><updated>2020-11-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-11-07:/2020-11-07-blog-rashomon.html</id><summary type="html">
 &lt;p&gt;&lt;em&gt;《羅生門》, 芥川龍之介, 译林出版社, 2005, 林少华译&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;是一篇短篇集.&lt;/p&gt;
 &lt;p&gt;芥川龍之介（あくたがわ　りゅうのすけ）, 1892.3.1 - 1927.7.24 .&lt;/p&gt;
-&lt;h2&gt;罗生门&lt;/h2&gt;
+&lt;h2 id="罗生门"&gt;罗生门&lt;/h2&gt;
 &lt;p&gt;年 …&lt;/p&gt;</summary><content type="html">
 &lt;p&gt;&lt;em&gt;《羅生門》, 芥川龍之介, 译林出版社, 2005, 林少华译&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;是一篇短篇集.&lt;/p&gt;
 &lt;p&gt;芥川龍之介（あくたがわ　りゅうのすけ）, 1892.3.1 - 1927.7.24 .&lt;/p&gt;
-&lt;h2&gt;罗生门&lt;/h2&gt;
+&lt;h2 id="罗生门"&gt;罗生门&lt;/h2&gt;
 &lt;p&gt;年景惨, 一位仆人被打发出门. 在满是死尸的罗生门前思考是要饿死, 还是成为一名强盗.&lt;/p&gt;
 &lt;p&gt;突然发现一个老太太在拔一个尸体上的头发. 仆人冲上去审问. 经过一番对话后. 仆人做出&lt;br /&gt;
 了他的决定.&lt;/p&gt;
-&lt;h2&gt;鼻&lt;/h2&gt;
+&lt;h2 id="鼻"&gt;鼻&lt;/h2&gt;
 &lt;p&gt;禅智内供有一个长长的鼻子, 为此非常苦恼. 终有一日鼻子变短, 去失去了别人的同情. 最&lt;br /&gt;
 后又变了回来, 往日如初.&lt;/p&gt;
-&lt;h2&gt;手帕&lt;/h2&gt;
+&lt;h2 id="手帕"&gt;手帕&lt;/h2&gt;
 &lt;p&gt;教授的学生病逝. 学生的母亲来到教授的家中. 母亲的表现却不像有丧子之痛的人. 教授不&lt;br /&gt;
 经意间发现, 原来母亲的痛苦都隐藏在了桌下那双拿着手帕的剧烈颤抖的手上, 这让教授联&lt;br /&gt;
 想到了武士道.&lt;/p&gt;
-&lt;h2&gt;地狱变&lt;/h2&gt;
+&lt;h2 id="地狱变"&gt;地狱变&lt;/h2&gt;
 &lt;p&gt;技艺高超, 沉迷绘画, 却又自大自满的画师良秀应老殿下画一幅地狱变. 画师没有见过的东&lt;br /&gt;
 西不会画, 请求殿下将一名少女在槟榔车中烈火焚烧. 结果车中的少女却是良秀最疼爱的女&lt;br /&gt;
 儿. 最终画成杰作, 良秀也悬梁自缢.&lt;/p&gt;
-&lt;h2&gt;蛛丝&lt;/h2&gt;
+&lt;h2 id="蛛丝"&gt;蛛丝&lt;/h2&gt;
 &lt;p&gt;佛祖念地狱中的大盗犍陀多生前怜悯一只蜘蛛的性命, 放下条蛛丝让他从地狱爬出. 犍陀多&lt;br /&gt;
 却发现身后有许多罪人也跟着爬来. 最终, 所有人又一同坠回地狱.&lt;/p&gt;
-&lt;h2&gt;橘&lt;/h2&gt;
+&lt;h2 id="橘"&gt;橘&lt;/h2&gt;
 &lt;p&gt;烦闷的我在列车上遇到一位令我厌恶的乡下小姑娘. 看到她将几个橘子扔给窗外前来送行的&lt;br /&gt;
 弟弟们后, 我暂时忘却了烦闷的心情.&lt;/p&gt;
-&lt;h2&gt;舞会&lt;/h2&gt;
+&lt;h2 id="舞会"&gt;舞会&lt;/h2&gt;
 &lt;p&gt;1886 年, 十七岁的明子小姐在一个舞会上与一位法兰西海军军官邂逅. 1918(32 年后), 已&lt;br /&gt;
 经成为 H 老夫人的明子在车上与一位青年小说家提及此事, 原来那位海军军官就是写了 *&lt;br /&gt;
 菊花夫人* 的 &lt;a href="https://zh.wikipedia.org/wiki/%E7%9A%AE%E5%9F%83%E7%88%BE%C2%B7%E6%B4%9B%E8%92%82"&gt;Pierre&lt;br /&gt;
 Loti&lt;/a&gt;&lt;br /&gt;
 . 但夫人坚持说那位海军军官叫朱利安·韦奥(Pierre&lt;br /&gt;
 Loti 的原名).&lt;/p&gt;
-&lt;h2&gt;密林中&lt;/h2&gt;
+&lt;h2 id="密林中"&gt;密林中&lt;/h2&gt;
 &lt;p&gt;从六个人的视角讲述一个人死亡的过程&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -449,25 +449,25 @@ Loti 的原名).&lt;/p&gt;
 却问自己如何处理妻子. 自己从心理上原谅了强盗. 之后在昏迷中自杀.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;矿车&lt;/h2&gt;
+&lt;h2 id="矿车"&gt;矿车&lt;/h2&gt;
 &lt;p&gt;良平八岁时非常憧憬村外修筑铁路的(轨道)矿车. 偷玩一次却被发现. 后来跟着新来的两个&lt;br /&gt;
 人推矿车到很远的地方. 天都快黑了才开始回家. 路上的良平焦急并害怕, 到家里天已大黑.&lt;br /&gt;
 良平二十六岁时在东京还时常想起小时候的这件事情.&lt;/p&gt;
-&lt;h2&gt;阿富的贞操&lt;/h2&gt;
+&lt;h2 id="阿富的贞操"&gt;阿富的贞操&lt;/h2&gt;
 &lt;p&gt;马上就要开战. 大家都已经撤离. 阿富被安排回来找夫人非常重视的猫, 却碰见了乞丐新公.&lt;br /&gt;
 新公用猫做威胁, 要阿富委身于他. 阿富同意. 但阿富脱光衣服躺在那里里, 新公却说是开&lt;br /&gt;
 玩笑的. 二十三年后, 阿富早已成家, 一家人在路上又遇见了新公, 此时的新公在马车上名&lt;br /&gt;
 誉满身.&lt;/p&gt;
-&lt;h2&gt;一篇爱情小说&lt;/h2&gt;
+&lt;h2 id="一篇爱情小说"&gt;一篇爱情小说&lt;/h2&gt;
 &lt;p&gt;妇女杂志主编邀请保吉为他们写一篇严肃的爱情小说. 保吉与主编讨论了小说的主要情节:&lt;br /&gt;
 新婚的外交官夫人误将音乐家对钢琴的爱当成对自己的爱, 爱上了钢琴家. 外交官与夫人因&lt;br /&gt;
 工作远离钢琴家, 夫人却对钢琴家念念不忘. 念念不忘的同时, 夫人也有了许多孩子, 身材&lt;br /&gt;
 也渐渐发胖, 但沉浸在对钢琴家爱的幻想中幸福地生活.&lt;/p&gt;
-&lt;h2&gt;单相思&lt;/h2&gt;
+&lt;h2 id="单相思"&gt;单相思&lt;/h2&gt;
 &lt;p&gt;在电车上, 我的朋友给我讲述了他在宴会上听阿德, 一个他的朋友迷恋的女招待, 吐露她对&lt;br /&gt;
 一个电影演员单相思的故事, 而我的朋友认为她是编造的, 说不定她是对他们当中的某个人&lt;br /&gt;
 害单相思.&lt;/p&gt;
-&lt;h2&gt;侏儒警语&lt;/h2&gt;
+&lt;h2 id="侏儒警语"&gt;侏儒警语&lt;/h2&gt;
 &lt;p&gt;占本书 40%, 是像微博一样的小句子.&lt;/p&gt;
 </content><category term="blog"/><category term="读书笔记"/><category term="羅生門"/><category term="芥川龍之介"/><category term="kindleunlimited"/></entry><entry><title>仿生人会梦见电子门羊吗</title><link href="https://zqw.ink/2020-11-06-blog-do_androids_dream_of_electric_eheep.html" rel="alternate"/><published>2020-11-06T00:00:00+08:00</published><updated>2020-11-06T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-11-06:/2020-11-06-blog-do_androids_dream_of_electric_eheep.html</id><summary type="html">
 &lt;p&gt;&lt;em&gt;《仿生人会梦见电子门羊吗?》 译林出版社, 2017, Philip K. Dick, 许东华译.&lt;/em&gt;&lt;/p&gt;
@@ -618,10 +618,10 @@ Loti 的原名).&lt;/p&gt;
 &lt;p&gt;爸妈让他看店。可这种地方的打印店实在没有什么人，就玩起了CS。来了这么个打印的客人，他就成了店里的主人，大人模样的对话，大人模样的客气，大人模样的吐槽电脑卡。&lt;/p&gt;
 &lt;p&gt;可他还是一名初中生，再怎么大人模样也不失失天真可爱！&lt;/p&gt;
 </content><category term="blog"/><category term="小胖子"/><category term="打印员"/><category term="电脑"/><category term="故事"/><category term="文学青年"/></entry><entry><title>西安青年冷原子</title><link href="https://zqw.ink/2019-08-01-thinking-xian.html" rel="alternate"/><published>2019-08-01T00:00:00+08:00</published><updated>2019-08-01T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2019-08-01:/2019-08-01-thinking-xian.html</id><summary type="html">
-&lt;h2&gt;最喜欢的 poster 环节&lt;/h2&gt;
+&lt;h2 id="最喜欢的-poster-环节"&gt;最喜欢的 poster 环节&lt;/h2&gt;
 &lt;p&gt;第一次参加青年冷原子. 今天刚刚结束了 poster 环节.&lt;/p&gt;
 &lt;p&gt;这是第一次做 poster. 严格来说这次也不算. 因为我还什么也 …&lt;/p&gt;</summary><content type="html">
-&lt;h2&gt;最喜欢的 poster 环节&lt;/h2&gt;
+&lt;h2 id="最喜欢的-poster-环节"&gt;最喜欢的 poster 环节&lt;/h2&gt;
 &lt;p&gt;第一次参加青年冷原子. 今天刚刚结束了 poster 环节.&lt;/p&gt;
 &lt;p&gt;这是第一次做 poster. 严格来说这次也不算. 因为我还什么也没有做出来, 全&lt;br /&gt;
 篇都是 Introduction. 不过, poster 展示的环节很有感染力. poster 环节可&lt;br /&gt;
@@ -645,13 +645,13 @@ poster 环节是我这次参会最喜欢的环节, 也是收获最多的环节. 
 inkscape 画得, 它和左边的人大校徽上的三个人相呼应. 感谢 B 站up主 疯王子&lt;br /&gt;
 录制的 inkscape 教学视频:&lt;br /&gt;
 &lt;a href="https://space.bilibili.com/5884683/channel/detail?cid=39695"&gt;https://space.bilibili.com/5884683/channel/detail?cid=39695&lt;/a&gt;)&lt;/p&gt;
-&lt;h2&gt;大唐不夜城&lt;/h2&gt;
+&lt;h2 id="大唐不夜城"&gt;大唐不夜城&lt;/h2&gt;
 &lt;p&gt;三次到大唐不夜城. 喜欢这大唐的大气, 色彩明亮, 不喜欢大清的风格. 不管如&lt;br /&gt;
 何地商业化, 它还是让我心情好了一些, 忘记一些烦恼, 还拍了几张好看的照片.&lt;/p&gt;
 &lt;p&gt;&lt;img src="./2019-08-01-thinking-xian/IMG_20190730_200413.jpg" alt="大唐不夜城" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src="./2019-08-01-thinking-xian/IMG_20190730_201903.jpg" alt="西安景色" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src="./2019-08-01-thinking-xian/IMG_20190730_202146.jpg" alt="夜树" /&gt;&lt;/p&gt;
-&lt;h2&gt;生活中总有东西对你微笑&lt;/h2&gt;
+&lt;h2 id="生活中总有东西对你微笑"&gt;生活中总有东西对你微笑&lt;/h2&gt;
 &lt;p&gt;从某个报告的 PPT 上发现了一张笑脸.&lt;/p&gt;
 &lt;p&gt;&lt;img src="./2019-08-01-thinking-xian/IMG_20190730_110744.jpg" alt="PPT 上的笑脸" /&gt;&lt;/p&gt;
 </content><category term="blog"/><category term="西安"/><category term="青年冷原子"/></entry><entry><title>拔果子，打 DNF，写考研真题</title><link href="https://zqw.ink/2017-08-27-blog-dnf_nuts.html" rel="alternate"/><published>2017-08-27T00:00:00+08:00</published><updated>2017-08-27T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2017-08-27:/2017-08-27-blog-dnf_nuts.html</id><content type="html">

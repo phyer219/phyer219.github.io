@@ -156,10 +156,10 @@
 
 <section class="markdown-body">
   
-<h2>SSL加密</h2>
+<h2 id="ssl加密">SSL加密</h2>
 <p>在使用自己搭建的服务，如 <code>emby</code> ,<code>nextcloud</code>, <code>immich</code> 时，如果使用域名访问，当没有进行受信任的 SSL 加密时，对应的手机 app 会连不上，提醒，或报错。</p>
 <p>最简单的方式是用 <code>certbot</code> 获取一个 90 天期限的 SSL 证书，到期后再更新。此篇博客做一备忘。</p>
-<h2>证书获取过程</h2>
+<h2 id="证书获取过程">证书获取过程</h2>
 <p>安装好certbot后，执行以下命令手动获取 SSL 证书，并用在域名上添加一条 txt 解析的方式进行域名验证：</p>
 <pre><code class="language-bash">certbot certonly --manual --preferred-challenges dns -d xxx.xxx.com
 </code></pre>
@@ -209,7 +209,7 @@ privkey.pem -&gt;.key
 <pre><code class="language-bash">-rw-r--r--. 1 zqw zqw 2.8K Sep 14 17:40 server.crt
 -rw-------. 1 zqw zqw  227 Sep 14 17:40 server.key
 </code></pre>
-<h2>代理的 Podman 文件，代理容器的配置文件示例</h2>
+<h2 id="代理的-podman-文件代理容器的配置文件示例">代理的 Podman 文件，代理容器的配置文件示例</h2>
 <p><code>nextcloud-proxy.container</code>:</p>
 <pre><code class="language-bash">[Container]
 ContainerName=nextcloud-proxy
@@ -279,7 +279,7 @@ PublishPort=9999:443
 [Install]
 WantedBy=default.target
 </code></pre>
-<h2>参考资料</h2>
+<h2 id="参考资料">参考资料</h2>
 <p><a href="https://wiki.archlinux.org/title/Certbot">ArchWiki: Certbot</a></p>
 
 </section>

@@ -91,7 +91,7 @@ document.getElementById('form').onsubmit = function (event) {
     draw("plot")
 };
 &lt;/script&gt;
-&lt;h2&gt;JavaScript Code&lt;/h2&gt;
+&lt;h2 id="javascript-code"&gt;JavaScript Code&lt;/h2&gt;
 &lt;pre&gt;&lt;code class="language-javascript"&gt;
         window.MathJax.loader = { load: ['output/svg'] };
         window.MathJax.startup = {
@@ -150,7 +150,7 @@ document.getElementById('form').onsubmit = function (event) {
     draw(&amp;quot;plot&amp;quot;)
 };
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;Reference&lt;/h2&gt;
+&lt;h2 id="reference"&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://mathjs.org/examples/browser/plot.html.html"&gt;https://mathjs.org/examples/browser/plot.html.html&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/plotly/plotly.js/pull/6073"&gt;https://github.com/plotly/plotly.js/pull/6073&lt;/a&gt;&lt;/li&gt;
@@ -191,7 +191,7 @@ document.getElementById('form').onsubmit = function (event) {
 &lt;/li&gt;
 &lt;li&gt;&lt;a href="#acknowledge"&gt;Acknowledge&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;升级说明&lt;/h2&gt;
+&lt;h2 id="升级说明"&gt;升级说明&lt;/h2&gt;
 &lt;p&gt;最近终于能抽出一些时间, 打算把博客升级一下, 修复之前的一些 bug.&lt;br /&gt;
 但是发现之前写的程序很乱. 而且当时水平不如现在, 程序思路很乱.&lt;br /&gt;
 这次过了两年多, 决定使用 &lt;a href="https://getpelican.com/"&gt;&lt;code&gt;Pelican&lt;/code&gt;&lt;/a&gt; 生成, 然后再使用一些插件, 自己写一些插件, 把原来的主题移植过来. 就成为了现在呈现的版本.&lt;/p&gt;
@@ -208,12 +208,12 @@ document.getElementById('form').onsubmit = function (event) {
 &lt;li&gt;由于现在会自己写插件, 所以兼容行问题可以自己解决了. 同时也学会了自己写主题, 可以随心所欲的修改博客的样式.&lt;/li&gt;
 &lt;li&gt;之前的需求都实现了,同时还可用获得 &lt;a href="https://getpelican.com/"&gt;&lt;code&gt;Pelican&lt;/code&gt;&lt;/a&gt; 的好处. 比如: 许许多多的主题, 丰富的插件(自己写也很方便).&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;升级博客过程中的笔记(由 ChatGPT 生成)&lt;/h2&gt;
-&lt;h3&gt;类型注解&lt;/h3&gt;
+&lt;h2 id="升级博客过程中的笔记由-chatgpt-生成"&gt;升级博客过程中的笔记(由 ChatGPT 生成)&lt;/h2&gt;
+&lt;h3 id="类型注解"&gt;类型注解&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;Tuple[str, ...]：&lt;/code&gt; 这是类型注解，表示 &lt;code&gt;mandatory_properties&lt;/code&gt; 的类型是一个字符串元组（tuple），并且元组中的元素类型是字符串（str）。... 表示元组的长度是可变的，可以包含任意数量的字符串。&lt;/p&gt;
-&lt;h3&gt;&lt;code&gt;itertools.chain&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id="itertoolschain"&gt;&lt;code&gt;itertools.chain&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;itertools.chain&lt;/code&gt; 是 🐍 &lt;code&gt;Python&lt;/code&gt; 标准库 &lt;code&gt;itertools&lt;/code&gt; 模块中的一个函数，用于将多个可迭代对象🔗连接在一起，生成一个连续的单个迭代器。它可以接受任意数量的可迭代对象，并依次迭代每个可迭代对象的元素，就像将它们“链接”成一个整体。&lt;/p&gt;
-&lt;h3&gt;示例代码：使用 🛠️ multiprocessing.Queue 实现生产者-消费&lt;/h3&gt;
+&lt;h3 id="示例代码使用--multiprocessingqueue-实现生产者-消费"&gt;示例代码：使用 🛠️ multiprocessing.Queue 实现生产者-消费&lt;/h3&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;import multiprocessing  # 🛠️ 导入多进程模块
 import time  # ⏳ 导入时间模块
 
@@ -252,9 +252,9 @@ if __name__ == &amp;quot;__main__&amp;quot;:
 
     print(&amp;quot;Main process is finishing.&amp;quot;)  # 🎬 主进程结束
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;示例代码：使用 🔄 while True 实现无限循环的应用&lt;/h3&gt;
+&lt;h3 id="示例代码使用--while-true-实现无限循环的应用"&gt;示例代码：使用 🔄 while True 实现无限循环的应用&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;while True:&lt;/code&gt; 是一个常见的无限循环结构，广泛应用于需要持续运行、持续监听或者重复执行某项任务的场景中。以下是几个使用 &lt;code&gt;while True:&lt;/code&gt; 的实际例子：&lt;/p&gt;
-&lt;h4&gt;1. 实现用户输入验证&lt;/h4&gt;
+&lt;h4 id="1-实现用户输入验证"&gt;1. 实现用户输入验证&lt;/h4&gt;
 &lt;p&gt;在用户输入中，我们可以用 &lt;code&gt;while True:&lt;/code&gt; 来不断请求用户输入，直到输入满足条件为止：&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;while True:  # 🔄 无限循环请求用户输入
     user_input = input(&amp;quot;Enter a number (q to quit): &amp;quot;)  # 📥 用户输入
@@ -267,7 +267,7 @@ if __name__ == &amp;quot;__main__&amp;quot;:
     except ValueError:
         print(&amp;quot;Invalid input, please enter a number.&amp;quot;)  # ⚠️ 输入无效
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4&gt;2. 服务器监听 🖥️&lt;/h4&gt;
+&lt;h4 id="2-服务器监听-"&gt;2. 服务器监听 🖥️&lt;/h4&gt;
 &lt;p&gt;在服务器应用程序中，我们可以用 &lt;code&gt;while True:&lt;/code&gt; 来持续监听请求，例如一个简单的 TCP 服务器：&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;import socket  # 🌐 导入套接字模块
 
@@ -282,7 +282,7 @@ while True:  # 🔄 持续监听客户端连接
     client_socket.send(bytes(&amp;quot;Welcome to the server!&amp;quot;, &amp;quot;utf-8&amp;quot;))  # 发送欢迎消息
     client_socket.close()  # 关闭客户端连接
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4&gt;3. 多进程的任务分配 👥🔄&lt;/h4&gt;
+&lt;h4 id="3-多进程的任务分配-"&gt;3. 多进程的任务分配 👥🔄&lt;/h4&gt;
 &lt;p&gt;在某些场景下，可以使用 &lt;code&gt;while True:&lt;/code&gt; 来持续从队列中取任务并进行处理，如生产者-消费者模型：&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;import multiprocessing
 import time
@@ -314,7 +314,7 @@ if __name__ == &amp;quot;__main__&amp;quot;:
 
     print(&amp;quot;All tasks are completed.&amp;quot;)  # 🎬 所有任务完成
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;动态导入的使用场景&lt;/h3&gt;
+&lt;h3 id="动态导入的使用场景"&gt;动态导入的使用场景&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;__import__()&lt;/code&gt; 是 Python 中用于动态导入模块的内置函数，通常用于模块名在运行时才确定的情况，提供了一种灵活的导入机制。它在以下场景中非常有用：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -331,9 +331,9 @@ module = __import__(module_name)  # 动态导入模块
 # 使用导入的模块
 print(module.sqrt(16))  # 输出: 4.0
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;&lt;code&gt;getattr()&lt;/code&gt; 的用法&lt;/h3&gt;
+&lt;h3 id="getattr-的用法"&gt;&lt;code&gt;getattr()&lt;/code&gt; 的用法&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;cls = getattr(module, cls_name)&lt;/code&gt; 是 Python 中一种动态获取属性的方式，用于从模块或对象中获取名称为 &lt;code&gt;cls_name&lt;/code&gt; 的属性。这里 &lt;code&gt;getattr()&lt;/code&gt; 函数被用来从 &lt;code&gt;module&lt;/code&gt; 中获取名为 &lt;code&gt;cls_name&lt;/code&gt; 的类，变量 &lt;code&gt;cls&lt;/code&gt; 最终会指向该类。&lt;/p&gt;
-&lt;h4&gt;示例代码&lt;/h4&gt;
+&lt;h4 id="示例代码"&gt;示例代码&lt;/h4&gt;
 &lt;p&gt;假设你有一个模块 &lt;code&gt;shapes&lt;/code&gt;，其中定义了两个类 &lt;code&gt;Circle&lt;/code&gt; 和 &lt;code&gt;Square&lt;/code&gt;。你可以通过字符串名称动态地从模块中获取类。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;shapes.py&lt;/code&gt; 模块：&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;# shapes.py
@@ -356,7 +356,7 @@ cls = getattr(shapes, cls_name)
 shape = cls()
 shape.draw()  # 输出: Drawing a Circle
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4&gt;注意事项&lt;/h4&gt;
+&lt;h4 id="注意事项"&gt;注意事项&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;属性不存在时引发异常&lt;/strong&gt;：如果 &lt;code&gt;name&lt;/code&gt; 不存在且未提供 &lt;code&gt;default&lt;/code&gt; 参数，&lt;code&gt;getattr()&lt;/code&gt; 会引发 &lt;code&gt;AttributeError&lt;/code&gt;。为避免异常，可以传递一个默认值。&lt;pre&gt;&lt;code class="language-python"&gt;cls = getattr(module, &amp;quot;NonExistentClass&amp;quot;, None)
 if cls is None:
@@ -365,27 +365,27 @@ if cls is None:
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;安全性问题&lt;/strong&gt;：使用 &lt;code&gt;getattr()&lt;/code&gt; 获取属性需要特别小心，因为它可以动态地访问任意属性或方法，可能会带来安全性风险。如果用户能够控制传递给 &lt;code&gt;getattr()&lt;/code&gt; 的字符串，他们可以试图访问不应暴露的内部类或方法。因此，在使用时要确保输入是可信的或经过适当的验证。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;使用注意事项 ⚠️&lt;/h3&gt;
+&lt;h3 id="使用注意事项-"&gt;使用注意事项 ⚠️&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;&lt;code&gt;break&lt;/code&gt; 退出&lt;/strong&gt;：&lt;code&gt;while True:&lt;/code&gt; 是无限循环，所以为了避免程序一直运行下去，通常需要使用 &lt;code&gt;break&lt;/code&gt; 来在合适的条件下跳出循环。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;性能问题 🖥️&lt;/strong&gt;：在某些情况下，使用 &lt;code&gt;while True:&lt;/code&gt; 可能会导致程序占用大量 CPU 资源，因此在循环中应该使用适当的延时（如 &lt;code&gt;time.sleep()&lt;/code&gt; ⏱️) 或等待机制来减少 CPU 的占用。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;结束条件 🚪&lt;/strong&gt;：务必为循环设置合理的结束条件，避免程序进入死循环导致资源浪费。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;code&gt;while True:&lt;/code&gt; 是一种简单但非常强大的循环结构，广泛应用于需要不断重复某些操作的场景，如输入验证、监听服务器、生产者-消费者模型等。它可以确保程序不断运行，直到某个条件触发 &lt;code&gt;break&lt;/code&gt; 退出循环，从而灵活地控制程序的执行流程。&lt;/p&gt;
-&lt;h2&gt;Acknowledge&lt;/h2&gt;
+&lt;h2 id="acknowledge"&gt;Acknowledge&lt;/h2&gt;
 &lt;p&gt;ChatGPT&lt;/p&gt;
 </content><category term="软件使用"/><category term="blog"/><category term="python"/><category term="pelican"/></entry><entry><title>旧版“关于”存档（存档于2026-01-03）</title><link href="https://zqw.ink/2024-10-23-coding-about_page_archive.html" rel="alternate"/><published>2024-10-23T00:00:00+08:00</published><updated>2024-10-23T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2024-10-23:/2024-10-23-coding-about_page_archive.html</id><summary type="html">
 &lt;p&gt;本博客于 2025-12-31 进行第三次升级升级。此为升级前的一些存档。&lt;/p&gt;
-&lt;h2&gt;关于我&lt;/h2&gt;
-&lt;h3&gt;联系&lt;/h3&gt;
+&lt;h2 id="关于我"&gt;关于我&lt;/h2&gt;
+&lt;h3 id="联系"&gt;联系&lt;/h3&gt;
 &lt;p&gt;请 E-mail: zeqing6688@126.com&lt;/p&gt;
-&lt;h2&gt;关于本站&lt;/h2&gt;
+&lt;h2 id="关于本站"&gt;关于本站&lt;/h2&gt;
 &lt;p&gt;本站内容为: 只对自己负责的 …&lt;/p&gt;</summary><content type="html">
 &lt;p&gt;本博客于 2025-12-31 进行第三次升级升级。此为升级前的一些存档。&lt;/p&gt;
-&lt;h2&gt;关于我&lt;/h2&gt;
-&lt;h3&gt;联系&lt;/h3&gt;
+&lt;h2 id="关于我"&gt;关于我&lt;/h2&gt;
+&lt;h3 id="联系"&gt;联系&lt;/h3&gt;
 &lt;p&gt;请 E-mail: zeqing6688@126.com&lt;/p&gt;
-&lt;h2&gt;关于本站&lt;/h2&gt;
+&lt;h2 id="关于本站"&gt;关于本站&lt;/h2&gt;
 &lt;p&gt;本站内容为: 只对自己负责的学习笔记, 以及生活的牢骚.&lt;/p&gt;
 &lt;p&gt;本站是由 &lt;a href="https://getpelican.com/"&gt;Pelican&lt;/a&gt; 生成的静态博客, 托管于&lt;br /&gt;
 &lt;a href="https://github.com/phyer219/phyer219.github.io"&gt;GithubPages&lt;/a&gt;.&lt;/p&gt;
@@ -400,7 +400,7 @@ if cls is None:
 &lt;/ul&gt;
 &lt;p&gt;文章中的公式由 &lt;a href="https://www.mathjax.org/"&gt;MathJax&lt;/a&gt; 渲染.&lt;/p&gt;
 &lt;p&gt;文章中的代码块由 &lt;a href="https://highlightjs.org/"&gt;highlight.js&lt;/a&gt; 渲染.&lt;/p&gt;
-&lt;h2&gt;README 存档&lt;/h2&gt;
+&lt;h2 id="readme-存档"&gt;README 存档&lt;/h2&gt;
 &lt;p&gt;Generate by &lt;a href="https://getpelican.com/"&gt;Pelican&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Use Plugins:&lt;/p&gt;
 &lt;ul&gt;
@@ -429,7 +429,7 @@ if cls is None:
 &lt;li&gt;&lt;a href="#%E6%89%93%E5%8C%85%E6%B5%81%E7%A8%8B%E4%B8%80%E4%B8%AA%E4%B8%8D-trivial-%E7%9A%84%E6%B5%8B%E8%AF%95"&gt;打包流程（一个不 trivial 的测试）&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#deb-%E5%8C%85%E7%A4%BA%E4%BE%8Bwps-office"&gt;deb 包示例：wps-office&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;前言&lt;/h2&gt;
+&lt;h2 id="前言"&gt;前言&lt;/h2&gt;
 &lt;p&gt;使用 Arch, 或者基于 Arch 的 Manjaro 时，有些软件官方仓 …&lt;/p&gt;</summary><content type="html">
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="#%E5%89%8D%E8%A8%80"&gt;前言&lt;/a&gt;&lt;/li&gt;
@@ -438,12 +438,12 @@ if cls is None:
 &lt;li&gt;&lt;a href="#%E6%89%93%E5%8C%85%E6%B5%81%E7%A8%8B%E4%B8%80%E4%B8%AA%E4%B8%8D-trivial-%E7%9A%84%E6%B5%8B%E8%AF%95"&gt;打包流程（一个不 trivial 的测试）&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#deb-%E5%8C%85%E7%A4%BA%E4%BE%8Bwps-office"&gt;deb 包示例：wps-office&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;前言&lt;/h2&gt;
+&lt;h2 id="前言"&gt;前言&lt;/h2&gt;
 &lt;p&gt;使用 Arch, 或者基于 Arch 的 Manjaro 时，有些软件官方仓库里没有，而网上又可以下载到编译好的二进制文件，deb包，或者rpm包。二进制文件可以直接运行，deb或者rpm包解压后，找到对应的二进制文件，也可以直接运行。&lt;/p&gt;
 &lt;p&gt;但时，它们不被 &lt;code&gt;pacman&lt;/code&gt; 包管理器管理，也不能从 app lancher 里面便捷的运行。&lt;/p&gt;
 &lt;p&gt;对于 deb 包，AUR库里有一个 &lt;code&gt;debtap&lt;/code&gt; 脚本，可以将 deb 包转换成 &lt;code&gt;pacman -U&lt;/code&gt; 可以直接安装的 &lt;code&gt;.pkg.tar.zst&lt;/code&gt; 格式。这个脚本非常方便，但是由于这个脚本考虑非常全面，注意普适性，这就导致有时候转换后的 &lt;code&gt;.pkg.tar.zst&lt;/code&gt; 包会出现一些问题，安装不上。&lt;/p&gt;
 &lt;p&gt;用 &lt;code&gt;makepkg&lt;/code&gt; 打包软件是非常简单的事情，只是如果一点也不了解的话，会生怵。但是只要知道了它的运行机理，就会觉得非常简单，而且很多问题也就不存在了。&lt;/p&gt;
-&lt;h2&gt;&lt;code&gt;makepkg&lt;/code&gt; 简介&lt;/h2&gt;
+&lt;h2 id="makepkg-简介"&gt;&lt;code&gt;makepkg&lt;/code&gt; 简介&lt;/h2&gt;
 &lt;p&gt;详细地介绍在 ArchWiki 里面都有介绍。在此按我的理解梳理一下。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;makepkg&lt;/code&gt; 是 Arch 系统中的一个软件，它的作用是将写好的程序源代码编译好，并且打包成 &lt;code&gt;.pkg.tar.zst&lt;/code&gt; 格式，然后发布。大家就可以下载打包好的 &lt;code&gt;.pkg.tar.zst&lt;/code&gt; 文件在 Arch 上直接安装。&lt;/p&gt;
 &lt;p&gt;要想用 &lt;code&gt;makepkg&lt;/code&gt; 打包一个程序，必须先写一个 &lt;code&gt;PKGBUILD&lt;/code&gt; 文件。系统中有一些示例文件，比如 &lt;code&gt;/usr/share/pacman/PKGBUILD.proto&lt;/code&gt; 。&lt;/p&gt;
@@ -451,7 +451,7 @@ if cls is None:
 &lt;pre&gt;&lt;code class="language-shell"&gt;makepkg
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;然后就生成了 &lt;code&gt;.pkg.tar.zst&lt;/code&gt; 格式的软件包，然后 &lt;code&gt;pacman -U&lt;/code&gt; 安装就可以了。&lt;/p&gt;
-&lt;h2&gt;一个最简单的 &lt;code&gt;PKGBUILD&lt;/code&gt; 文件&lt;/h2&gt;
+&lt;h2 id="一个最简单的-pkgbuild-文件"&gt;一个最简单的 &lt;code&gt;PKGBUILD&lt;/code&gt; 文件&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;PKGBUILD&lt;/code&gt; 文件使用的是 &lt;code&gt;shell&lt;/code&gt; 语言。最简单的 &lt;code&gt;PKGBUILD&lt;/code&gt; 文件如下&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;pkgname=hello-makepkg
 pkgver=1.0
@@ -465,7 +465,7 @@ package() {
 &lt;p&gt;前四行定义了四个变量，是软件的名字，版本，以及运行架构。最后三行定义了一个函数，输出一行字 packaging...。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;pkgname&lt;/code&gt; 、 &lt;code&gt;pkgver&lt;/code&gt; 、 &lt;code&gt;pkgrel&lt;/code&gt; 、 &lt;code&gt;arch&lt;/code&gt; 四个变量必须定义。名为 &lt;code&gt;package()&lt;/code&gt; 的函数会被 &lt;code&gt;makepkg&lt;/code&gt; 自动执行。&lt;/p&gt;
 &lt;p&gt;这个最简单的 &lt;code&gt;PKGBUILD&lt;/code&gt; 文件是 trivial 的，因为它什么也没干，只是走了个过场。&lt;/p&gt;
-&lt;h2&gt;打包流程（一个不 trivial 的测试）&lt;/h2&gt;
+&lt;h2 id="打包流程一个不-trivial-的测试"&gt;打包流程（一个不 trivial 的测试）&lt;/h2&gt;
 &lt;p&gt;下面写一个不 trivial 的 &lt;code&gt;PKGBUILD&lt;/code&gt; 文件。如下：&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;# This is an example PKGBUILD file. Use this as a start to creating your own,
 # and remove these comments. For more information, see 'man PKGBUILD'.
@@ -544,7 +544,7 @@ package() {
 └── zqw
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;更加多的例子可以去 AUR 仓库里随便找一些看。比如 &lt;a href="https://aur.archlinux.org/packages/quickapp-ide"&gt;quickapp-ide&lt;/a&gt; ，可以直接 clone 下来学习。&lt;/p&gt;
-&lt;h2&gt;deb 包示例：wps-office&lt;/h2&gt;
+&lt;h2 id="deb-包示例wps-office"&gt;deb 包示例：wps-office&lt;/h2&gt;
 &lt;p&gt;我们提前准备好 wps-office 的 deb 格式安装包，并和 &lt;code&gt;PKGBUILD&lt;/code&gt; 文件放在一起：&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;.
 ├── PKGBUILD
@@ -582,14 +582,14 @@ package() {
 </content><category term="软件使用"/><category term="Arch"/><category term="manjaro"/><category term="makepkg"/><category term="PKGBUILD"/></entry><entry><title>matplotlib 科研作图总结</title><link href="https://zqw.ink/2023-10-12-coding-matplotlib.html" rel="alternate"/><published>2023-10-12T00:00:00+08:00</published><updated>2023-10-12T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2023-10-12:/2023-10-12-coding-matplotlib.html</id><summary type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
 &lt;p&gt;结合近几年的经验，把&lt;code&gt;matplotlib&lt;/code&gt;作图常用的脚本集合在此。这包含了之前一些关于&lt;code&gt;matplotlib&lt;/code&gt;作图的博文。&lt;/p&gt;
-&lt;h1&gt;作图风格&lt;/h1&gt;
+&lt;h1 id="作图风格"&gt;作图风格&lt;/h1&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;from matplotlib import rc
 def prettify_plot():
     &amp;quot;&amp;quot;&amp;quot;
     change the plot …&lt;/code&gt;&lt;/pre&gt;</summary><content type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
 &lt;p&gt;结合近几年的经验，把&lt;code&gt;matplotlib&lt;/code&gt;作图常用的脚本集合在此。这包含了之前一些关于&lt;code&gt;matplotlib&lt;/code&gt;作图的博文。&lt;/p&gt;
-&lt;h1&gt;作图风格&lt;/h1&gt;
+&lt;h1 id="作图风格"&gt;作图风格&lt;/h1&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;from matplotlib import rc
 def prettify_plot():
     &amp;quot;&amp;quot;&amp;quot;
@@ -607,7 +607,7 @@ def prettify_plot():
     rc('ytick', direction='in')
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;用于调整作图的字体，风格。&lt;/p&gt;
-&lt;h1&gt;作图尺寸，布局&lt;/h1&gt;
+&lt;h1 id="作图尺寸布局"&gt;作图尺寸，布局&lt;/h1&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;import matplotlib.pyplot as plt
 fig = plt.figure(figsize=(3.375, 3.5))# 单栏图宽度固定3.375， 双栏图宽度固定 6.75
 
@@ -620,7 +620,7 @@ ax_a = fig.add_subplot(gs[0, 0])
 ax_b = fig.add_subplot(gs[0, 1])
 ax_c = fig.add_subplot(gs[1, :])
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1&gt;彩图及colorbar&lt;/h1&gt;
+&lt;h1 id="彩图及colorbar"&gt;彩图及colorbar&lt;/h1&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;gs = fig.add_gridspec(nrows=2, ncols=2,
                       left=.08, bottom=.1, right=.99, top=.94,
                       wspace=1, hspace=1,
@@ -632,7 +632,7 @@ ax_c = fig.add_subplot(gs[1, :])
 ima = ax_a.imshow(np.random.randn(20, 20))
 fig.colorbar(ima, cax=ax_c, orientation='horizontal')
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;自定义color map&lt;/h2&gt;
+&lt;h2 id="自定义color-map"&gt;自定义color map&lt;/h2&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;import numpy as np
 from matplotlib.colors import ListedColormap
 import matplotlib.pyplot as plt
@@ -655,7 +655,7 @@ plt.savefig('newcmap.png', transparent=True)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src="2023-10-12-coding-matplotlib/newcmap.png" alt="image-newcamp" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="2023-10-12-coding-matplotlib/newcmap.py"&gt;newcmap.py&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;在每个子图插入 colorbar&lt;/h2&gt;
+&lt;h2 id="在每个子图插入-colorbar"&gt;在每个子图插入 colorbar&lt;/h2&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;import matplotlib.pyplot as plt
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 import numpy as np
@@ -681,7 +681,7 @@ fig.savefig('divider.png', transparent=True)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;a href="2023-10-12-coding-matplotlib/divider.py"&gt;divider.py&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src="2023-10-12-coding-matplotlib/divider.png" alt="divider" /&gt;&lt;/p&gt;
-&lt;h1&gt;双重坐标轴&lt;/h1&gt;
+&lt;h1 id="双重坐标轴"&gt;双重坐标轴&lt;/h1&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;import numpy as np
 import matplotlib.pyplot as plt
 fig = plt.figure()
@@ -703,7 +703,7 @@ fig.savefig('double_ax.png', transparent=True)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src="2023-10-12-coding-matplotlib/double_ax.png" alt="image-double_ax" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="2023-10-12-coding-matplotlib/double_ax.py"&gt;double_ax.py&lt;/a&gt;&lt;/p&gt;
-&lt;h1&gt;示例 Phys. Rev. B 108, 054313 (2023) fig1&lt;/h1&gt;
+&lt;h1 id="示例-phys-rev-b-108-054313-2023-fig1"&gt;示例 Phys. Rev. B 108, 054313 (2023) fig1&lt;/h1&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;import matplotlib.pyplot as plt
 from matplotlib import rc
 import numpy as np
@@ -932,7 +932,7 @@ fig.savefig(get_file_name(__file__)[:-4] + '.png', dpi=200, transparent=True)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;画图数据：&lt;a href="2023-10-12-coding-matplotlib/fig2/fig2.json"&gt;fig2.json&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src="2023-10-12-coding-matplotlib/fig2/fig2.png" alt="image-fig2" /&gt;&lt;/p&gt;
-&lt;h1&gt;参考资料&lt;/h1&gt;
+&lt;h1 id="参考资料"&gt;参考资料&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://matplotlib.org/stable/"&gt;https://matplotlib.org/stable/&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
@@ -3053,25 +3053,25 @@ class PrincipalValueInt():
 &lt;p&gt;包中的另一些函数.&lt;/p&gt;
 </content><category term="软件使用"/><category term="python"/></entry><entry><title>SSD 备忘与趣事</title><link href="https://zqw.ink/2020-11-29-coding-newssd.html" rel="alternate"/><published>2020-11-29T00:00:00+08:00</published><updated>2020-11-29T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-11-29:/2020-11-29-coding-newssd.html</id><summary type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
-&lt;h1&gt;引言&lt;/h1&gt;
+&lt;h1 id="引言"&gt;引言&lt;/h1&gt;
 &lt;p&gt;办公室电脑原来的机械硬盘实在有点不行了, 换了一块新的 SSD.&lt;/p&gt;
 &lt;p&gt;本来想买个再好一点的, 但是主板有只有 sata 接口. 虽说 …&lt;/p&gt;</summary><content type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
-&lt;h1&gt;引言&lt;/h1&gt;
+&lt;h1 id="引言"&gt;引言&lt;/h1&gt;
 &lt;p&gt;办公室电脑原来的机械硬盘实在有点不行了, 换了一块新的 SSD.&lt;/p&gt;
 &lt;p&gt;本来想买个再好一点的, 但是主板有只有 sata 接口. 虽说再折腾一下也可以换更高级的 SSD, 但是也没(有)那(点)么(懒)多(啊)时(啊)间.&lt;/p&gt;
 &lt;p&gt;我发现 11 月份没有写新的博客. 就这样水?一篇吧! 其实这个可以合在之前那篇 manjaro 装机 note 里的的.&lt;/p&gt;
-&lt;h1&gt;买 SSD&lt;/h1&gt;
+&lt;h1 id="买-ssd"&gt;买 SSD&lt;/h1&gt;
 &lt;p&gt;我之前只知道 SSD 分好几种, 具体也没怎么研究过. 要自己买当然要拆开看看主板上有什么接口. 哎, 自己看了半天也不知道哪个是 SSD接口. 把图片发给店家, 立马知道要买什么样的了!&lt;/p&gt;
 &lt;p&gt;原来主板上有空的 sata 接口, 而且之前我也没有意识到 SSD 是用线与主板相连的, 还以为是像内存一样直接插上的, 怪不得没有找到插口.&lt;/p&gt;
 &lt;p&gt;在卖家的帮忙下(吐嘈一下, 东芝改名叫铠侠, 觉得不如原来好听) , 买了 SSD 和 sata 线.&lt;/p&gt;
-&lt;h1&gt;装 SSD&lt;/h1&gt;
+&lt;h1 id="装-ssd"&gt;装 SSD&lt;/h1&gt;
 &lt;p&gt;很快啊, 新的 SSD 第二天就来了. 一拿的感觉是: 轻!&lt;/p&gt;
 &lt;p&gt;直接插上 sata 线连上, 开机! 竟然没有识别. 思考为什么会这样的时候, 瞟了一眼说明说: SSD 还需要接电源的! 看来&amp;quot;不用读系列&amp;quot;有时候还是要看的. 我说这硬盘上怎么有两块呲出来的.&lt;/p&gt;
 &lt;p&gt;可是我并没有买电源线. 就在我一边责怪卖家没有告诉我, 一边又想又得再等一天快递了, 一边又想从哪个废旧电脑上拆一根时, 突然又想到光驱也是 sata 线连到主板上的, 应该也有电源线. 机智如我, 直接拔下来接到了 SSD 上. 开机, 开不了机了, 原来那里接的是机械硬盘. 又一次偶然发现, 这根电源线中间还伸出一个头. 不错, 接上, 完美解决!&lt;/p&gt;
-&lt;h1&gt;安装 SSD manjaro&lt;/h1&gt;
+&lt;h1 id="安装-ssd-manjaro"&gt;安装 SSD manjaro&lt;/h1&gt;
 &lt;p&gt;记录一下注意的点. Bootloader 选到 KIOXIA (新 SSD ) 上, BIOS select device 也先 KIOXIA.&lt;/p&gt;
-&lt;h1&gt;幽灵般的网络&lt;/h1&gt;
+&lt;h1 id="幽灵般的网络"&gt;幽灵般的网络&lt;/h1&gt;
 &lt;p&gt;在 SSD 上装 win10 和 manjaro 很顺利. 但接下来有一件事我至今不明白是为什么.&lt;/p&gt;
 &lt;p&gt;win10 是有网的. 然后装 manjaro, 打开之后没网. 心想是网络配置不对. 然后打开机械硬盘上的 manjaro 对一下配置. 再重启进 SSD manjaro, 突然有网了. 虽然奇怪, 但问题自己好了.&lt;/p&gt;
 &lt;p&gt;在 SSD manjaro 上进行了一些设置后, 重启, 又没网了, 啊! 再重启进机械硬盘 manjaro, 啊, 机械 manjaro 也没网了, 很奇怪啊, 之前 机械 manjaro 用了很久, 也没有出现连不上网的情况. 怀疑是办公室的网络出问题了, 进 SSD win10, 也没网, 更加断定我的判断.&lt;/p&gt;
@@ -3093,21 +3093,21 @@ class PrincipalValueInt():
 &lt;p&gt;但是!!! 之前四个系统都连不上的原因我依然不知道, 我能想到的就只能是... 想不到是为什么 . 太奇怪了!&lt;/p&gt;
 &lt;p&gt;附网上安装: 右键安装&lt;/p&gt;
 &lt;p&gt;&lt;img src="./2020-11-29-coding-newSSD/image-20201128212856147.png" alt="fig" /&gt;&lt;/p&gt;
-&lt;h1&gt;wayland 换 xorg&lt;/h1&gt;
+&lt;h1 id="wayland-换-xorg"&gt;wayland 换 xorg&lt;/h1&gt;
 &lt;p&gt;奇怪的网络问题让我对了机械和 SSD 的 gnome 版本, 发现新的 manjaro 包默认是 wayland. 我突然意识到之前给 cy 的机械硬盘装 manjaro 后闪屏的问题, 很有可能也是用了 wayland.&lt;/p&gt;
 &lt;p&gt;换回 Xorg 直接安装 Xorg 包就好了&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;sudo pacman -S xorg 
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;登陆选 xorg 的 gnome 即可.&lt;/p&gt;
-&lt;h1&gt;输入法&lt;/h1&gt;
+&lt;h1 id="输入法"&gt;输入法&lt;/h1&gt;
 &lt;p&gt;arch wiki 关于中文输入法的部分升级了, 存放环境变量的文件有了变化, 详见: https://wiki.archlinux.org/index.php/Fcitx_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#.E5.AE.89.E8.A3.85&lt;/p&gt;
 &lt;p&gt;还是比较习惯之前的快捷键设置, 截图记录.&lt;/p&gt;
 &lt;p&gt;&lt;img src="./2020-11-29-coding-newSSD/image-20201128215138108.png" alt="image-20201128215138108" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src="./2020-11-29-coding-newSSD/image-20201128215200197.png" alt="image-20201128215200197" /&gt;&lt;/p&gt;
-&lt;h1&gt;evince 中文问题&lt;/h1&gt;
+&lt;h1 id="evince-中文问题"&gt;evince 中文问题&lt;/h1&gt;
 &lt;p&gt;之前装 xpdf 就好了, 可这次不好使了. 这样, 也促使我找到了问题的原因: https://blog.csdn.net/nevasun/article/details/7303529 okular, epdfview, evince的pdf功能均由xpdf的分支poppler提供，poppler从fontconfig的配置文件中读取字体取代pdf里的字体。&lt;/p&gt;
 &lt;p&gt;这次安装 &lt;code&gt;poppler-data&lt;/code&gt; 就好了&lt;/p&gt;
-&lt;h1&gt;emacs 开启卡顿&lt;/h1&gt;
+&lt;h1 id="emacs-开启卡顿"&gt;emacs 开启卡顿&lt;/h1&gt;
 &lt;p&gt;看卡顿的时间, 卡顿完字体变大, 推测是 cnfonts 的问题, 注释掉就好了&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-lisp"&gt;;; 字体设置
 ;;(require 'cnfonts)
@@ -3116,20 +3116,20 @@ class PrincipalValueInt():
 ;; 让 spacemacs mode-line 中的 Unicode 图标正确显示。
 ;;(cnfonts-set-spacemacs-fallback-fonts)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1&gt;修改默认 shell&lt;/h1&gt;
+&lt;h1 id="修改默认-shell"&gt;修改默认 shell&lt;/h1&gt;
 &lt;p&gt;新的 manjaro 包默认的 shell 也改成了 zsh. 不过我还是习惯原来的 bash. 改下面的文件就可以:&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;sudo emacs /etc/passwd 
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1&gt;GRUB theme&lt;/h1&gt;
+&lt;h1 id="grub-theme"&gt;GRUB theme&lt;/h1&gt;
 &lt;p&gt;新的 manjaro 包里也没有了 GRUB theme, 有点不好看, 可以直接 &lt;code&gt;yaourt grub theme&lt;/code&gt; 找到 manjaro 的 grub theme 安装就好.&lt;/p&gt;
-&lt;h1&gt;开机挂载&lt;/h1&gt;
+&lt;h1 id="开机挂载"&gt;开机挂载&lt;/h1&gt;
 &lt;p&gt;旧的机械硬盘可以设置开机自动挂到某个目录, 方法是修改 &lt;code&gt;/etc/fstab&lt;/code&gt; , 比如增加记录&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;/dev/sda5				  /docu		 ntfs	 defaults		    0 0
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1&gt;对 manjaro 版本时用到的命令&lt;/h1&gt;
+&lt;h1 id="对-manjaro-版本时用到的命令"&gt;对 manjaro 版本时用到的命令&lt;/h1&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;lsb_release -a
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1&gt;对 hexo&lt;/h1&gt;
+&lt;h1 id="对-hexo"&gt;对 hexo&lt;/h1&gt;
 &lt;p&gt;hexo 貌似对新版的 node 支持不友好, 需要将 node 进行版本回退才可以正常 deploy.&lt;/p&gt;
 &lt;p&gt;用 &lt;code&gt;n&lt;/code&gt; 来管理和切换 node 版本.&lt;/p&gt;
 &lt;p&gt;查看 node 版本&lt;/p&gt;
@@ -3143,7 +3143,7 @@ class PrincipalValueInt():
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;切换版本是与上面相同的命令&lt;/p&gt;
 &lt;p&gt;或许有一天, 我该把 blog 换到 pelican 上面, 毕竟比较熟悉语言.&lt;/p&gt;
-&lt;h1&gt;VirtualBox&lt;/h1&gt;
+&lt;h1 id="virtualbox"&gt;VirtualBox&lt;/h1&gt;
 &lt;p&gt;不仅需要安装 virtualbox, 还需要安装宿主机对应内核的 host modules. &lt;code&gt;umane -a&lt;/code&gt; 查看 Linux 内核版本, 比如我的结果是 5.8.18, 所以还要安装 &lt;code&gt;linux58-virtualbox-host-modules&lt;/code&gt; .&lt;/p&gt;
 &lt;p&gt;两个安装好之后, 还要激活模块(这个在安装 virtualbox 时有过一行提示)&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;sudo modprobe vboxdrv
@@ -3299,13 +3299,13 @@ wakatime-mode.elc , 定位到 Error 104 对应的语句&lt;/p&gt;
 &lt;p&gt;对我来说是解决了, 如果有能力的话, 还是把这个 bug 报给开发都比较好. 我还是算了...&lt;/p&gt;
 </content><category term="软件使用"/><category term="emacs"/><category term="wakatime"/></entry><entry><title>Django 笔记：CentOS+Apache+Mariadb+mod_wsgi+Django</title><link href="https://zqw.ink/2020-02-03-physics-django.html" rel="alternate"/><published>2020-02-03T00:00:00+08:00</published><updated>2020-02-03T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-02-03:/2020-02-03-physics-django.html</id><summary type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
-&lt;h1&gt;写在前面的声明&lt;/h1&gt;
+&lt;h1 id="写在前面的声明"&gt;写在前面的声明&lt;/h1&gt;
 &lt;p&gt;本人非专业人士，对于写程序只是业余爱好。以下内容仅供参考，我一个业余人士也不能保证内容的准确 …&lt;/p&gt;</summary><content type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
-&lt;h1&gt;写在前面的声明&lt;/h1&gt;
+&lt;h1 id="写在前面的声明"&gt;写在前面的声明&lt;/h1&gt;
 &lt;p&gt;本人非专业人士，对于写程序只是业余爱好。以下内容仅供参考，我一个业余人士也不能保证内容的准确性，对一些命令的解释也只是为了便于记忆和理解，更加专业准确的知识还请查询如官方文档这样的资料。&lt;/p&gt;
-&lt;h1&gt;引言&lt;/h1&gt;
-&lt;h2&gt;思路&lt;/h2&gt;
+&lt;h1 id="引言"&gt;引言&lt;/h1&gt;
+&lt;h2 id="思路"&gt;思路&lt;/h2&gt;
 &lt;p&gt;寒假在家，又不能出门，闲来无事，又不太想学习，就尝试了用在华为云上买的学生价服务器，在 CentOS 上用 Apache+Mariadb+Django 来搭建一个网站，目标是能够显示内容即可，而对安全性，实用性，美观性不做要求。&lt;/p&gt;
 &lt;p&gt;网站内容是显示《诗经》的所有内容。数据来自于 github 上的诗词数据库 https://github.com/chinese-poetry/chinese-poetry ，在此感谢此项目中的贡献者表示感谢！&lt;/p&gt;
 &lt;p&gt;大体思路是：&lt;/p&gt;
@@ -3317,10 +3317,10 @@ wakatime-mode.elc , 定位到 Error 104 对应的语句&lt;/p&gt;
 &lt;li&gt;编写 Django 中的文件，使其从数据库中读取诗经的数据，并在网页上展示。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;写这篇笔记的目的，首先是记录过程为自己作备忘。其次，是想将一些过程的目的说出来，便于和我一样在尝试搭建的人理解为什么要这样做。&lt;/p&gt;
-&lt;h2&gt;云服务器的对比&lt;/h2&gt;
+&lt;h2 id="云服务器的对比"&gt;云服务器的对比&lt;/h2&gt;
 &lt;p&gt;我先后买过腾讯云，阿里云，华为云提供的学生价服务器，最便宜的配置大概都在10元／月不到。真的很棒，感谢他们！&lt;/p&gt;
 &lt;p&gt;这三家的配置大致差不多，不过三家中只有阿里云，在学生期间可以，不限次数不限期限地以学生价续费。其它两家都对期限以及续费的次数有所限制。目前我在腾讯云买的已经到期了，华为云上刚刚买的，阿里云上的可以一直用。&lt;/p&gt;
-&lt;h1&gt;系统环境&lt;/h1&gt;
+&lt;h1 id="系统环境"&gt;系统环境&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;操作系统：CentOS Linux release 7.7.1908 (Core)&lt;/li&gt;
 &lt;li&gt;Mariadb 版本：mysql  Ver 15.1 Distrib 5.5.64-MariaDB, for Linux (x86_64) using readline 5.1&lt;/li&gt;
@@ -3328,7 +3328,7 @@ wakatime-mode.elc , 定位到 Error 104 对应的语句&lt;/p&gt;
 &lt;li&gt;Python 版本：Python 3.7.3&lt;/li&gt;
 &lt;li&gt;确保端口开放&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1&gt;记号说明&lt;/h1&gt;
+&lt;h1 id="记号说明"&gt;记号说明&lt;/h1&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;$
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;表示在本地运行的命令。&lt;/p&gt;
@@ -3338,7 +3338,7 @@ wakatime-mode.elc , 定位到 Error 104 对应的语句&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;(.sabafun)[root@cloud]$
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;表示在在云服务器的虚拟环境 .sabafun 中以 root 用户运行命令。&lt;/p&gt;
-&lt;h1&gt;安装 Apache, Mariadb, Python3&lt;/h1&gt;
+&lt;h1 id="安装-apache-mariadb-python3"&gt;安装 Apache, Mariadb, Python3&lt;/h1&gt;
 &lt;p&gt;升级软件包，安装 apache（在 yum 库中名字叫 httpd）, mariadb, emacs(文本编辑器，个人偏好，可选)，并开启，然后设置开机自启。&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;[root@cloud]$ yum upgrade
 
@@ -3357,13 +3357,13 @@ wakatime-mode.elc , 定位到 Error 104 对应的语句&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;[root@cloud]$ bash ./Anaconda3-2019.07-Linux-x86_64.sh 
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;./ 表示当前路径。&lt;/p&gt;
-&lt;h1&gt;安装虚拟环境 virtualenv&lt;/h1&gt;
+&lt;h1 id="安装虚拟环境-virtualenv"&gt;安装虚拟环境 virtualenv&lt;/h1&gt;
 &lt;p&gt;安装完 Anaconda 后，并没有自动将 python3.7 添加到环境变量中，因此直接把路径完整地打出来，来运行 pip&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;[root@cloud]$ /root/anaconda3/bin/pip install virtualenv
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;pip 是 Python 的包管理工具，安装一些 Python 包都可以用 pip install 来安装。&lt;/p&gt;
 &lt;p&gt;安装 virtualenv 是为了给 Django 建立一个独立的 Python 环境，下面可以看出这样做的好处。&lt;/p&gt;
-&lt;h1&gt;创建虚拟环境&lt;/h1&gt;
+&lt;h1 id="创建虚拟环境"&gt;创建虚拟环境&lt;/h1&gt;
 &lt;p&gt;安装好 virtualenv 后，进入到想要进行工作的目录，通过 virtualenv 创建一个虚拟环境，用来进行后续的活动&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;[root@cloud]$ virtualenv .sabafun --python=/root/anaconda3/bin/python3
 &lt;/code&gt;&lt;/pre&gt;
@@ -3382,13 +3382,13 @@ pip 20.0.2 from /root/sabafun/.sabafun/lib/python3.7/site-packages/pip (python 3
 [root@cloud]$ 
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;执行后，前面的 (.sabafun) 就消失了，表示退出了虚拟环境。如果想要删除虚拟环境，直接将保存虚拟环境的文件夹删除就行。&lt;/p&gt;
-&lt;h1&gt;安装 Django，创建项目&lt;/h1&gt;
+&lt;h1 id="安装-django创建项目"&gt;安装 Django，创建项目&lt;/h1&gt;
 &lt;p&gt;在虚拟环境中，用 pip 安装 Django，然后新建一个项目，名字叫作 sabafun&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;(.sabafun)[root@cloud]$ pip install django
 (.sabafun)[root@cloud]$ django-admin startproject sabafun .
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;注意不要漏掉最后的点'.'。这个命令末尾的句点让新项目使用合适的目录结构。如果漏了，就把这个项目的文件夹删除，再重新创建一次。&lt;/p&gt;
-&lt;h1&gt;启动用于开发的 web 服务器&lt;/h1&gt;
+&lt;h1 id="启动用于开发的-web-服务器"&gt;启动用于开发的 web 服务器&lt;/h1&gt;
 &lt;p&gt;在启动 web 服务器测试之前，需要做一些准备工作。&lt;/p&gt;
 &lt;p&gt;首先，将服务器的 IP 加到项目的设置文件 sabafun/settings.py 中，即将 ALLOWED_HOSTS 项修改为&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;ALLOWED_HOSTS = [‘服务器IP地址’]
@@ -3400,10 +3400,10 @@ pip 20.0.2 from /root/sabafun/.sabafun/lib/python3.7/site-packages/pip (python 3
 &lt;p&gt;此时从本地访问 http://你的服务器IP:8000 ，出现如下小火箭界面，表示成功&lt;/p&gt;
 &lt;p&gt;&lt;img src="./2020-02-03-physics-Django/image-20200204125926942.png" alt="image-20200204125926942" /&gt;&lt;/p&gt;
 &lt;p&gt;如果无法访问，可以查看一下服务器的 8000 端口是否开放。一般都可以从云服务器的管理页面中找到安全组设置。&lt;/p&gt;
-&lt;h1&gt;Django 的大致工作流程&lt;/h1&gt;
+&lt;h1 id="django-的大致工作流程"&gt;Django 的大致工作流程&lt;/h1&gt;
 &lt;p&gt;比较业余的理解，Django 是一个用 Python 写网站的框架。我们可以用 Python 语言写一些函数来实现想要的功能。web 服务器，如 Apache，负责将我们设计好的功能提供给浏览器。而 mod_wsgi 负责将我们用 Python 写的功能翻译给 Apache。网站的数据，如我们用于展示的《诗经》就存储在 Mariadb 数据库中。&lt;/p&gt;
 &lt;p&gt;所以我们通过网址访问网站，Apache 接收到我们的请求，wsgi 将请求翻译给 Django，Django 从数据库中读取到数据，然后再通过 wsgi 这位翻译发送给 Apache，Apache 将数据发送给我们的浏览器，我们就看到了我们想要的东西。&lt;/p&gt;
-&lt;h1&gt;通过 mod_wsgi 连接 Apache&lt;/h1&gt;
+&lt;h1 id="通过-mod_wsgi-连接-apache"&gt;通过 mod_wsgi 连接 Apache&lt;/h1&gt;
 &lt;p&gt;我们上面看到的小火箭的页面，所用的 web 服务器不是 Apache ，而是 Django 自带的用于开发测试的 web 服务器，真正运行网站时，就要连接像 Apache, Nginx 这样的 web服务器。&lt;/p&gt;
 &lt;p&gt;下面就设置一下，让 Apache 作为 web 服务器。&lt;/p&gt;
 &lt;p&gt;首先安装负责 Apache 和 Python3 之间进行通信的 mod_wsgi 模块&lt;/p&gt;
@@ -3442,7 +3442,7 @@ Require all granted
 &lt;pre&gt;&lt;code class="language-shell"&gt;(.sabafun)[root@cloud]$ systemctl restart httpd
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;直接访问 IP ，出现了小火箭，这时的小火箭是通过 Apache 给我们的，说明 Django 能够和 Apache 交流了。&lt;/p&gt;
-&lt;h1&gt;设置 Mariadb 数据库&lt;/h1&gt;
+&lt;h1 id="设置-mariadb-数据库"&gt;设置 Mariadb 数据库&lt;/h1&gt;
 &lt;p&gt;首先初始化数据库&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;(.sabafun)[root@cloud]$ mysql_secure_installation
 &lt;/code&gt;&lt;/pre&gt;
@@ -3464,7 +3464,7 @@ MariaDB [(none)]&amp;gt; exit
 &lt;pre&gt;&lt;code&gt;MariaDB [(none)]&amp;gt; show databases;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;当然也可以不创建新用户，而是让 Django 直接用 root 用户。创建新用户是出于便于管理和考虑安全性。&lt;/p&gt;
-&lt;h1&gt;连接 Mariadb&lt;/h1&gt;
+&lt;h1 id="连接-mariadb"&gt;连接 Mariadb&lt;/h1&gt;
 &lt;p&gt;首先安装 pymysql&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;(.sabafun)[root@cloud]$ pip install pymysql
 &lt;/code&gt;&lt;/pre&gt;
@@ -3495,7 +3495,7 @@ pymysql.install_as_MySQLdb()
 
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;里面都如字面意思，告诉 Django 怎么访问数据库。让它用 django 用户名访问我们创建好的 sabafun 数据库。&lt;/p&gt;
-&lt;h1&gt;创建超级用户&lt;/h1&gt;
+&lt;h1 id="创建超级用户"&gt;创建超级用户&lt;/h1&gt;
 &lt;p&gt;接下来为项目创建一个超级用户，它能够方便地查看和修改项目的一些信息。&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;(.sabafun)[root@cloud]$ python manage.py createsuperuser
 &lt;/code&gt;&lt;/pre&gt;
@@ -3513,12 +3513,12 @@ No changes detected
 &lt;p&gt;会自动重新加载的服务器 &lt;a href="https://docs.djangoproject.com/zh-hans/3.0/ref/django-admin/#django-admin-runserver"&gt;&lt;code&gt;runserver&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;用于开发的服务器在需要的情况下会对每一次的访问请求重新载入一遍 Python 代码。所以你不需要为了让修改的代码生效而频繁的重新启动服务器。然而，一些动作，比如添加新文件，将不会触发自动重新加载，这时你得自己手动重启服务器。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h1&gt;创建 poetry 应用&lt;/h1&gt;
+&lt;h1 id="创建-poetry-应用"&gt;创建 poetry 应用&lt;/h1&gt;
 &lt;p&gt;Django项目由一系列应用程序组成，它们协同工作，让项目成为一个整体。我们创建一个 poetry 应用，来实现网站展示一些古诗词的功能&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;(.sabafun)[root@cloud]$ python manage.py startapp poetry
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;创建应用后，在项目文件夹中会出现相应的文件夹。&lt;/p&gt;
-&lt;h1&gt;创建 poetry/urls.py　文件&lt;/h1&gt;
+&lt;h1 id="创建-poetryurlspy文件"&gt;创建 poetry/urls.py　文件&lt;/h1&gt;
 &lt;p&gt;这个文件用来说明 poetry 应用对应的网址是什么样的&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;from django.urls import path
 
@@ -3528,7 +3528,7 @@ urlpatterns = [
     path('', views.poetry, name='poetry'),
 ]
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1&gt;修改 sabafun/urls.py 文件&lt;/h1&gt;
+&lt;h1 id="修改-sabafunurlspy-文件"&gt;修改 sabafun/urls.py 文件&lt;/h1&gt;
 &lt;p&gt;这个文件是整个项目的网址管理&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;(.sabafun)[root@cloud]$ emacs sabafun/urls.py 
 
@@ -3540,7 +3540,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1&gt;创建 Shijing Models&lt;/h1&gt;
+&lt;h1 id="创建-shijing-models"&gt;创建 Shijing Models&lt;/h1&gt;
 &lt;p&gt;修改文件 poetry/models.py&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;from django.db import models
 
@@ -3559,7 +3559,7 @@ class Shijing(models.Model):
         return self.title
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;这个 Shijing 类就对应于数据库中的一个表，一个实例就对应于表中的一条记录，也就是一行。fixed_id, title, chapter... 这些对应于一条记录包含的属性。&lt;/p&gt;
-&lt;h1&gt;注册 poetry 应用&lt;/h1&gt;
+&lt;h1 id="注册-poetry-应用"&gt;注册 poetry 应用&lt;/h1&gt;
 &lt;p&gt;修改 sabafun/settings.py 文件，告诉 Django ，我们创建了一个新的应用&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;INSTALLED_APPS = [
     'django.contrib.admin',
@@ -3573,7 +3573,7 @@ class Shijing(models.Model):
     'poetry'，
 ]
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1&gt;迁移数据库&lt;/h1&gt;
+&lt;h1 id="迁移数据库"&gt;迁移数据库&lt;/h1&gt;
 &lt;p&gt;修改 poetry/admin.py ，将创建的 Shijing 添加到管理页面中&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;from django.contrib import admin
 
@@ -3593,7 +3593,7 @@ admin.site.register(Shijing)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;在本地通过浏览器访问 IP::8000/admin/ 就会看到 Shijing&lt;/p&gt;
 &lt;p&gt;&lt;img src="./2020-02-03-physics-Django/image-20200204153009618.png" alt="image-20200204153009618" /&gt;&lt;/p&gt;
-&lt;h1&gt;迁入 json 数据&lt;/h1&gt;
+&lt;h1 id="迁入-json-数据"&gt;迁入 json 数据&lt;/h1&gt;
 &lt;p&gt;然后将 github 上的诗词数据库 https://github.com/chinese-poetry/chinese-poetry 中的 shijing.json 传到服务器上，并在同一目录下编写文件 json_to_database.py&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;(.sabafun)[root@cloud]$ emacs json_to_database.py
 
@@ -3660,7 +3660,7 @@ poetry.commit()                                      # 提交更改
 &lt;p&gt;进入管理界面，看到 305 个导入的数据&lt;/p&gt;
 &lt;p&gt;&lt;img src="./2020-02-03-physics-Django/image-20200204165427906.png" alt="image-20200204165427906" /&gt;&lt;/p&gt;
 &lt;p&gt;成功！&lt;/p&gt;
-&lt;h1&gt;修改 poetry/views.py 文件&lt;/h1&gt;
+&lt;h1 id="修改-poetryviewspy-文件"&gt;修改 poetry/views.py 文件&lt;/h1&gt;
 &lt;p&gt;至此为止，我们只能够在管理页面中看到诗经，下面让它在网页上显示。&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;from django.shortcuts import render
 
@@ -3675,7 +3675,7 @@ def poetry(request):
     return render(request, 'poetry/poetry.html', context)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;poetry 函数将一个字典 context 传递给渲染函数 render()&lt;/p&gt;
-&lt;h1&gt;编写网页模板&lt;/h1&gt;
+&lt;h1 id="编写网页模板"&gt;编写网页模板&lt;/h1&gt;
 &lt;p&gt;新建一个用于存放 html 模板的地方&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;(.sabafun)[root@cloud sabafun]# cd poetry/
 (.sabafun)[root@cloud poetry]# mkdir templates
@@ -3699,7 +3699,7 @@ poetry
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;shijing_list 就是通过 render() 函数传递过来的字典的键。重启 httpd 从本地访问 IP/poetry，就看到如下界面了！&lt;/p&gt;
 &lt;p&gt;&lt;img src="./2020-02-03-physics-Django/image-20200204210647475.png" alt="image-20200204210647475" /&gt;&lt;/p&gt;
-&lt;h1&gt;后续操作&lt;/h1&gt;
+&lt;h1 id="后续操作"&gt;后续操作&lt;/h1&gt;
 &lt;p&gt;Apache 配置&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;# 连接 Django                                                                 
 LoadModule wsgi_module &amp;quot;/root/sabafun/.sabafun/lib/python3.7/site-packages/mo\
@@ -3756,8 +3756,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1&gt;具体操作过程（仅供参考）&lt;/h1&gt;
-&lt;h2&gt;配置 ssh 登陆&lt;/h2&gt;
+&lt;h1 id="具体操作过程仅供参考"&gt;具体操作过程（仅供参考）&lt;/h1&gt;
+&lt;h2 id="配置-ssh-登陆"&gt;配置 ssh 登陆&lt;/h2&gt;
 &lt;p&gt;在本地连接云端&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;$ ssh root@h.saba.fun
 &lt;/code&gt;&lt;/pre&gt;
@@ -3783,7 +3783,7 @@ xps13.pub                                   100%  744     6.8KB/s   00:00
 &lt;pre&gt;&lt;code class="language-shell"&gt;[root@cloud]$ cat .ssh/xps13.pub &amp;gt;&amp;gt; .ssh/authorized_keys 
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;此时从本地登陆云端就不需要输入密码了。&lt;/p&gt;
-&lt;h2&gt;配置环境&lt;/h2&gt;
+&lt;h2 id="配置环境"&gt;配置环境&lt;/h2&gt;
 &lt;p&gt;在云端进行升级&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;[root@cloud]$ yum upgrade
 &lt;/code&gt;&lt;/pre&gt;
@@ -3815,7 +3815,7 @@ pip 9.0.3 from /usr/lib/python3.6/site-packages (python 3.6)
 &lt;pre&gt;&lt;code class="language-shell"&gt;[root@cloud]$ yum install mariadb
 [root@cloud]$ yum install mariadb-server
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;配置并测试 Django&lt;/h2&gt;
+&lt;h2 id="配置并测试-django"&gt;配置并测试 Django&lt;/h2&gt;
 &lt;p&gt;新建一个存放项目的文件夹并进入&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;[root@cloud]$ mkdir saba
 [root@cloud]$ cd saba
@@ -4003,7 +4003,7 @@ Quit the server with CONTROL-C.
 &lt;p&gt;此时从本地访问 8000 端口，终于出现了小火箭界面&lt;/p&gt;
 &lt;p&gt;&lt;img src="./2020-02-03-physics-Django/image-20200204125926942.png" alt="image-20200204125926942" /&gt;&lt;/p&gt;
 &lt;p&gt;参考官方文档连接 Apache https://docs.djangoproject.com/zh-hans/3.0/howto/deployment/wsgi/modwsgi/&lt;/p&gt;
-&lt;h2&gt;连接 mod_wsgi&lt;/h2&gt;
+&lt;h2 id="连接-mod_wsgi"&gt;连接 mod_wsgi&lt;/h2&gt;
 &lt;p&gt;首先安装 mod_wsgi&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;(.sabafun)[root@cloud]$ pip install mod_wsgi
 &lt;/code&gt;&lt;/pre&gt;
@@ -4062,7 +4062,7 @@ Current thread 0x00007fca65324880 (most recent call first):
 &lt;pre&gt;&lt;code class="language-shell"&gt;(.sabafun)[root@cloud]$ chmod 755 -R /root/
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;再重启 httpd 。直接访问 IP ，出现了小火箭。&lt;/p&gt;
-&lt;h2&gt;配置 Mariadb&lt;/h2&gt;
+&lt;h2 id="配置-mariadb"&gt;配置 Mariadb&lt;/h2&gt;
 &lt;p&gt;启动服务（之前忘记安装 mariadb-server，就找不到服务）&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;(.sabafun)[root@cloud]$ systemctl start mariadb
 &lt;/code&gt;&lt;/pre&gt;
@@ -4098,7 +4098,7 @@ MariaDB [sabafun]&amp;gt; exit
 
 Bye
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;连接　mariadb&lt;/h2&gt;
+&lt;h2 id="连接mariadb"&gt;连接　mariadb&lt;/h2&gt;
 &lt;p&gt;修改项目中的　settings.py 中关于数据库的设置 https://docs.djangoproject.com/zh-hans/3.0/ref/settings/#std:setting-DATABASES&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-mysql"&gt;MariaDB [(none)]&amp;gt; show variables like 'port';
 +---------------+-------+
@@ -4168,7 +4168,7 @@ Running migrations:
   Applying sessions.0001_initial... OK
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;没有报错，连接成功！&lt;/p&gt;
-&lt;h2&gt;开始写 Django 页面&lt;/h2&gt;
+&lt;h2 id="开始写-django-页面"&gt;开始写 Django 页面&lt;/h2&gt;
 &lt;p&gt;创建管理页面&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;(.sabafun)[root@cloud]$ python manage.py createsuperuser
 &lt;/code&gt;&lt;/pre&gt;
@@ -4191,7 +4191,7 @@ Django version 3.0.3, using settings 'sabafun.settings'
 Starting development server at http://0.0.0.0:8000/
 Quit the server with CONTROL-C.
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;创建 poetry 应用&lt;/h2&gt;
+&lt;h2 id="创建-poetry-应用-1"&gt;创建 poetry 应用&lt;/h2&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;(.sabafun)[root@cloud]$ python manage.py startapp poetry
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;(.sabafun)[root@cloud]$ emacs poetry/views.py 
@@ -4229,7 +4229,7 @@ urlpatterns = [
 &lt;p&gt;查看　IP:8000/poetry/&lt;/p&gt;
 &lt;p&gt;出现　Hello, poetry!&lt;/p&gt;
 &lt;p&gt;成功！&lt;/p&gt;
-&lt;h2&gt;创建 Shijing Models&lt;/h2&gt;
+&lt;h2 id="创建-shijing-models-1"&gt;创建 Shijing Models&lt;/h2&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;(.sabafun)[root@cloud]$ emacs poetry/models.py 
 
 
@@ -4294,7 +4294,7 @@ admin.site.register(Shijing)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;这时 IP::8000/admin/　就会看到 Shijing&lt;/p&gt;
 &lt;p&gt;&lt;img src="./2020-02-03-physics-Django/image-20200204153009618.png" alt="image-20200204153009618" /&gt;&lt;/p&gt;
-&lt;h2&gt;迁入 json 数据&lt;/h2&gt;
+&lt;h2 id="迁入-json-数据-1"&gt;迁入 json 数据&lt;/h2&gt;
 &lt;pre&gt;&lt;code class="language-mysql"&gt;删除表中所有条目
 truncate table poetry_shijing;
 &lt;/code&gt;&lt;/pre&gt;
@@ -4367,7 +4367,7 @@ poetry.commit()                                      # 提交更改
 &lt;p&gt;进入管理界面，看到 305 个导入的数据&lt;/p&gt;
 &lt;p&gt;&lt;img src="./2020-02-03-physics-Django/image-20200204165427906.png" alt="image-20200204165427906" /&gt;&lt;/p&gt;
 &lt;p&gt;成功！&lt;/p&gt;
-&lt;h2&gt;编写网页，来显示&lt;/h2&gt;
+&lt;h2 id="编写网页来显示"&gt;编写网页，来显示&lt;/h2&gt;
 &lt;pre&gt;&lt;code class="language-shell"&gt;(.sabafun)[root@cloud sabafun]# cd poetry/
 (.sabafun)[root@cloud poetry]# mkdir templates
 (.sabafun)[root@cloud poetry]# cd templates/
@@ -4410,7 +4410,7 @@ def poetry(request):
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;重启 httpd 从本地访问 IP/poetry，就看到界面了&lt;/p&gt;
 &lt;p&gt;&lt;img src="./2020-02-03-physics-Django/image-20200204210647475.png" alt="image-20200204210647475" /&gt;&lt;/p&gt;
-&lt;h1&gt;参考资料&lt;/h1&gt;
+&lt;h1 id="参考资料"&gt;参考资料&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;Eric Matthes 著，袁国忠 译, Python 编程从入门到实践，中国工信出版集团，2016，人民邮电出版社&lt;/li&gt;
 &lt;li&gt;https://docs.djangoproject.com/zh-hans/3.0/intro/tutorial01/&lt;/li&gt;
@@ -5169,7 +5169,7 @@ Tammy Mark Karl Lisa Don
 
 </content><category term="软件使用"/><category term="emacs"/><category term="org-mode"/></entry><entry><title>Emacs使用笔记</title><link href="https://zqw.ink/2018-09-07-coding-emacs_note.html" rel="alternate"/><published>2018-09-07T00:00:00+08:00</published><updated>2018-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-07:/2018-09-07-coding-emacs_note.html</id><summary type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
-&lt;h3&gt;修改配色&lt;/h3&gt;
+&lt;h3 id="修改配色"&gt;修改配色&lt;/h3&gt;
 &lt;p&gt;打开Emacs的配置文件。配置文件在~/.emacs。增加：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;(set-background-color &amp;quot;black&amp;quot;) ;; 使用黑色背景&lt;br /&gt;
@@ -5177,7 +5177,7 @@ Tammy Mark Karl Lisa Don
 (set-face-foreground 'region &amp;quot;green&amp;quot;)  ;; 区域前景颜色设为绿色&lt;br /&gt;
 (set-face-background 'region &amp;quot;blue&amp;quot;) ;; 区域背 …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
-&lt;h3&gt;修改配色&lt;/h3&gt;
+&lt;h3 id="修改配色"&gt;修改配色&lt;/h3&gt;
 &lt;p&gt;打开Emacs的配置文件。配置文件在~/.emacs。增加：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;(set-background-color &amp;quot;black&amp;quot;) ;; 使用黑色背景&lt;br /&gt;
@@ -5186,7 +5186,7 @@ Tammy Mark Karl Lisa Don
 (set-face-background 'region &amp;quot;blue&amp;quot;) ;; 区域背景色设为蓝色&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;尽管可以重启Emacs使配置生效，但更快捷的方式是在打开~/.emacs的时候执行命令M-x eval-buffer，就可以使配置文件立即生效。&lt;/p&gt;
-&lt;h3&gt;快捷键&lt;/h3&gt;
+&lt;h3 id="快捷键"&gt;快捷键&lt;/h3&gt;
 &lt;p&gt;中文帮助：&lt;code&gt;C-h t&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;撤消：&lt;code&gt;C-x u&lt;/code&gt; &lt;code&gt;C-/&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;启动自动折行模式：&lt;code&gt;M-x auto-fill-mode &amp;lt;Return&amp;gt;&lt;/code&gt;&lt;/p&gt;
@@ -5197,9 +5197,9 @@ Tammy Mark Karl Lisa Don
 &lt;p&gt;复制：&lt;code&gt;M-w&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;把当前进程放到后台（之后可用''fg''命令回到前台）： &lt;code&gt;Ctrl Z&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;清屏：&lt;code&gt;ctrl L&lt;/code&gt;&lt;/p&gt;
-&lt;h3&gt;打开&lt;/h3&gt;
+&lt;h3 id="打开"&gt;打开&lt;/h3&gt;
 &lt;p&gt;终端模式：&lt;code&gt;emacs -nw&lt;/code&gt;&lt;/p&gt;
-&lt;h3&gt;配置备份&lt;/h3&gt;
+&lt;h3 id="配置备份"&gt;配置备份&lt;/h3&gt;
 &lt;pre&gt;&lt;code class="language-lisp"&gt;;;用xetex编译,以支持中文
 (setq-default TeX-engine 'xetex)
 ;;默认输出pdf
@@ -5880,33 +5880,33 @@ username@servername:/var/www/remote\_dir/（远程目录）
 &lt;/ul&gt;
 </content><category term="软件使用"/><category term="Linux"/></entry><entry><title>Typora使用笔记</title><link href="https://zqw.ink/2018-09-07-coding-typora_note.html" rel="alternate"/><published>2018-09-07T00:00:00+08:00</published><updated>2018-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-07:/2018-09-07-coding-typora_note.html</id><summary type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
-&lt;h2&gt;标题&lt;/h2&gt;
+&lt;h2 id="标题"&gt;标题&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;“#” 一级标题&lt;/li&gt;
 &lt;li&gt;“##” 二级标题&lt;/li&gt;
 &lt;li&gt;以此类推直至“######” 表示六级标题&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;列表&lt;/h2&gt;
+&lt;h2 id="列表"&gt;列表&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;无序号列表：“- ”列表内容。注意&amp;quot;- &amp;quot;后有空格&lt;/li&gt;
 &lt;li&gt;有序号列表：“1. ”列表内容&lt;/li&gt;
 &lt;li&gt;任 …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
-&lt;h2&gt;标题&lt;/h2&gt;
+&lt;h2 id="标题"&gt;标题&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;“#” 一级标题&lt;/li&gt;
 &lt;li&gt;“##” 二级标题&lt;/li&gt;
 &lt;li&gt;以此类推直至“######” 表示六级标题&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;列表&lt;/h2&gt;
+&lt;h2 id="列表"&gt;列表&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;无序号列表：“- ”列表内容。注意&amp;quot;- &amp;quot;后有空格&lt;/li&gt;
 &lt;li&gt;有序号列表：“1. ”列表内容&lt;/li&gt;
 &lt;li&gt;任务列表：“- [ ]”列表内容&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;居中&lt;/h2&gt;
+&lt;h2 id="居中"&gt;居中&lt;/h2&gt;
 &lt;p&gt;&amp;quot;&amp;lt;center&amp;gt;&amp;quot;跟居中的内容&lt;/p&gt;
-&lt;h2&gt;引用与代码&lt;/h2&gt;
+&lt;h2 id="引用与代码"&gt;引用与代码&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;引用文字：“&amp;gt; ”引用内容&lt;/li&gt;
 &lt;li&gt;引用网址：&amp;quot;&amp;lt;&amp;quot;网址&amp;quot;&amp;gt;&amp;quot;&lt;/li&gt;
@@ -5915,18 +5915,18 @@ username@servername:/var/www/remote\_dir/（远程目录）
 &lt;li&gt;注释：“[^注释内容]”&lt;/li&gt;
 &lt;li&gt;&lt;a href="./2018-09-07-coding-emacs_note.html"&gt;引用博客&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;字体设置&lt;/h2&gt;
+&lt;h2 id="字体设置"&gt;字体设置&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;斜体：&amp;quot;*&amp;quot;斜体内容&amp;quot;*&amp;quot;&lt;/li&gt;
 &lt;li&gt;加粗：&amp;quot;**&amp;quot;加粗内容&amp;quot;**&amp;quot;&lt;/li&gt;
 &lt;li&gt;下划线：&amp;quot;&amp;lt;u&amp;gt;&amp;quot;下划线内容“&amp;lt;/u&amp;gt;”&lt;/li&gt;
 &lt;li&gt;删除线：&amp;quot;~~&amp;quot;删除内容&amp;quot;~~&amp;quot;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;分割线&lt;/h2&gt;
+&lt;h2 id="分割线"&gt;分割线&lt;/h2&gt;
 &lt;p&gt;&amp;quot;---&amp;quot;&lt;/p&gt;
-&lt;h2&gt;转义&lt;/h2&gt;
+&lt;h2 id="转义"&gt;转义&lt;/h2&gt;
 &lt;p&gt;\ 转义符号&lt;/p&gt;
-&lt;h2&gt;插入&lt;/h2&gt;
+&lt;h2 id="插入"&gt;插入&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;图片：直接拖入&lt;/p&gt;
@@ -5949,13 +5949,13 @@ username@servername:/var/www/remote\_dir/（远程目录）
 &lt;p&gt;目录：&amp;quot;[toc]&amp;quot;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;附录：表情列表&lt;/h2&gt;
-&lt;h3&gt;Symbols&lt;/h3&gt;
+&lt;h2 id="附录表情列表"&gt;附录：表情列表&lt;/h2&gt;
+&lt;h3 id="symbols"&gt;Symbols&lt;/h3&gt;
 &lt;p&gt;2️⃣ 3️⃣ 4️⃣ 5️⃣ 6️⃣ 7️⃣ 8️⃣ 9️⃣ 🔟 🔢 0️⃣ #️⃣ 🔣 ◀️ ⬇️ ▶️ ⬅️ 🔠 🔡 🔤 ↙️ ↘️ ➡️ ⬆️ ↖️ ↗️ ⏬ ⏫ 🔽 ⤵️ ⤴️ ↩️ ↪️ ↔️ ↕️ 🔼 🔃 🔄 ⏪ ⏩ ℹ️ 🆗 🔀 🔁 🔂 🆕 🔝 🆙 🆒 🆓 🆖 🎦 🈁 📶 :u5272: :u5408: :u55b6: :u6307: :u6708: :u6709: 🈵 :u7121: :u7533: :u7a7a: :u7981: 🈂️ 🚻 🚹 🚺 🚼 🚭 🅿️ ♿️ 🚇 🛄 🉑 🚾 🚰 🚮 ㊙️ ㊗️ Ⓜ️ 🛂 🛅 🛃 🉐 🆑 🆘 🆔 🚫 🔞 📵 🚯 🚱 🚳 🚷 🚸 ⛔️ ✳️ ❇️ ✴️ 💟 🆚 📳 📴 💹 💱 ♈️ ♉️ ♊️ ♋️ ♌️ ♍️ ♎️ ♏️ ♐️ ♑️ ♒️ ♓️ ⛎ 🔯 ❎ 🅰️ 🅱️ 🆎 🅾️ 💠 ♻️ 🔚 🔙 🔛 🔜 🕐 🕜 🕙 🕥 🕚 🕦 🕛 🕧 🕑 🕝 🕒 🕞 🕓 🕟 🕔 🕠 🕕 🕡 🕖 🕢 🕗 🕣 🕘 🕤 💲 ©️ ®️ ™️ ❌ ❗️ ‼️ ⁉️ ⭕️ ✖️ ➕ ➖ ➗ 💮 💯 ✔️ ☑️ 🔘 🔗 ➰ 〰️ 〽️ 🔱 ▪️ ▫️ ◾️ ◽️ ◼️ ◻️ ⬛️ ⬜️ ✅ 🔲 🔳 ⚫️ ⚪️ 🔴 🔵 🔷 🔶 🔹 🔸 🔺 🔻 :shipit:&lt;/p&gt;
-&lt;h3&gt;Places&lt;/h3&gt;
+&lt;h3 id="places"&gt;Places&lt;/h3&gt;
 &lt;p&gt;🏠 🏡 🏫 🏢 🏣 🏥 🏦 🏪 🏩 🏨 💒 ⛪️ 🏬 🏤 🌇 🌆 🏯 🏰 ⛺️ 🏭 🗼 🗾 🗻 🌄 🌅 🌠 🗽 🌉 🎠 🌈 🎡 ⛲️ 🎢 🚢 🚤 ⛵️ ⛵️ 🚣 ⚓️ 🚀 ✈️ 🚁 🚂 🚊 🚞 🚲 🚡 🚟 🚠 🚜 🚙 🚘 🚗 🚗 🚕 🚖 🚛 🚌 🚍 🚨 🚓 🚔 🚒 🚑 🚐 🚚 🚋 🚉 🚆 🚅 🚄 🚈 🚝 🚃 🚎 🎫 ⛽️ 🚦 🚥 ⚠️ 🚧 🔰 🏧 🎰 🚏 💈 ♨️ 🏁 🎌 🏮 🗿 🎪 🎭 📍 🚩 🇯🇵 🇰🇷 🇨🇳 🇺🇸 🇫🇷 🇪🇸 🇮🇹 🇷🇺 🇬🇧 🇬🇧 🇩🇪&lt;/p&gt;
-&lt;h3&gt;People&lt;/h3&gt;
+&lt;h3 id="people"&gt;People&lt;/h3&gt;
 &lt;p&gt;:bowtie: 😄 :simple_smile: 😆 😊 😃 ☺️ 😏 😍 😘 😚 😳 😌 😆 😁 😉 😜 😝 😀 😗 😙 😛 😴 😟 😦 😧 😮 😬 😕 😯 😑 😒 😅 😓 😥 😩 😔 😞 😖 😨 😰 😣 😢 😭 😂 😲 😱 :neckbeard: 😫 😠 😡 😤 😪 😋 😷 😎 😵 👿 😈 😐 😶 😇 👽 💛 💙 💜 ❤️ 💚 💔 💓 💗 💕 💞 💘 💖 ✨ ⭐️ 🌟 💫 💥 💥 💢 ❗️ ❓ ❕ ❔ 💤 💨 💦 🎶 🎵 🔥 💩 💩 💩 👍 👍 👎 👎 👌 👊 👊 ✊ ✌️ 👋 ✋ ✋ 👐 ☝️ 👇 👈 👉 🙌 🙏 👆 👏 💪 🤘 🖕 🏃 🏃 👫 👪 👬 👭 💃 👯 🙆 🙅 💁 🙋 👰 🙎 🙍 🙇 :couplekiss: 💑 💆 💇 💅 👦 👧 👩 👨 👶 👵 👴 👱 👲 👳 👷 👮 👼 👸 😺 😸 😻 😽 😼 🙀 😿 😹 😾 👹 👺 🙈 🙉 🙊 💂 💀 🐾 👄 💋 💧 👂 👀 👃 👅 💌 👤 👥 💬 💭 :feelsgood: :finnadie: :goberserk: :godmode: :hurtrealbad: :rage1: :rage2: :rage3: :rage4: :suspect: :trollface:&lt;/p&gt;
-&lt;h3&gt;Nature&lt;/h3&gt;
+&lt;h3 id="nature"&gt;Nature&lt;/h3&gt;
 &lt;p&gt;☀️ ☔️ ☁️ ❄️ ⛄️ ⚡️ 🌀 🌁 🌊 🐱 🐶 🐭 🐹 🐰 🐺 🐸 🐯 🐨 🐻 🐷 🐽 🐮 🐗 🐵 🐒 🐴 🐎 🐫 🐑 🐘 🐼 🐍 🐦 🐤 🐥 🐣 🐔 🐧 🐢 🐛 🐝 🐜 🐞 🐌 🐙 🐠 🐟 🐳 🐋 🐬 🐄 🐏 🐀 🐃 🐅 🐇 🐉 🐐 🐓 🐕 🐖 🐁 🐂 🐲 🐡 🐊 🐪 🐆 🐈 🐩 🐾 💐 🌸 🌷 🍀 🌹 🌻 🌺 🍁 🍃 🍂 🌿 🍄 🌵 🌴 🌲 🌳 🌰 🌱 🌼 🌾 🐚 🌐 🌞 🌝 🌚 🌑 🌒 🌓 🌔 🌕 🌖 🌗 🌘 🌜 🌛 🌙 🌍 🌎 🌏 🌋 🌌 ⛅️ :octocat: :squirrel: Objects 🎍 💝 🎎 🎒 🎓 🎏 🎆 🎇 🎐 🎑 🎃 👻 🎅 🎄 🎁 🔔 🔕 🎋 🎉 🎊 🎈 🔮 💿 📀 💾 📷 📹 🎥 💻 📺 📱 ☎️ ☎️ 📞 📟 📠 💽 📼 🔉 🔈 🔇 📢 📣 ⌛️ ⏳ ⏰ ⌚️ 📻 📡 ➿ 🔍 🔎 🔓 🔒 🔏 🔐 🔑 💡 🔦 🔆 🔅 🔌 🔋 📲 ✉️ 📫 📮 🛀 🛁 🚿 🚽 🔧 🔩 🔨 💺 💰 💴 💵 💷 💶 💳 💸 📧 📥 📤 ✉️ 📨 📯 📪 📬 📭 📦 🚪 🚬 💣 🔫 🔪 💊 💉 📄 📃 📑 📊 📈 📉 📜 📋 📆 📅 📇 📁 📂 ✂️ 📌 📎 ✒️ ✏️ 📏 📐 📕 📗 📘 📙 📓 📔 📒 📚 🔖 📛 🔬 🔭 📰 🏈 🏀 ⚽️ ⚾️ 🎾 🎱 🏉 🎳 ⛳️ 🚵 🚴 🏇 🏂 🏊 🏄 🎿 ♠️ ♥️ ♣️ ♦️ 💎 💍 🏆 🎼 🎹 🎻 👾 🎮 🃏 🎴 🎲 🎯 🀄️ 🎬 📝 📝 📖 🎨 🎤 🎧 🎺 🎷 🎸 👞 👡 👠 💄 👢 👕 👕 👔 👚 👗 🎽 👖 👘 👙 🎀 🎩 👑 👒 👞 🌂 💼 👜 👝 👛 👓 🎣 ☕️ 🍵 🍶 🍼 🍺 🍻 🍸 🍹 🍷 🍴 🍕 🍔 🍟 🍗 🍖 🍝 🍛 🍤 🍱 🍣 🍥 🍙 🍘 🍚 🍜 🍲 🍢 🍡 🥚 🍞 🍩 🍮 🍦 🍨 🍧 🎂 🍰 🍪 🍫 🍬 🍭 🍯 🍎 🍏 🍊 🍋 🍒 🍇 🍉 🍓 🍑 🍈 🍌 🍐 🍍 🍠 🍆 🍅 🌽&lt;/p&gt;
 </content><category term="软件使用"/><category term="Typora"/></entry></feed>

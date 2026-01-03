@@ -8,6 +8,21 @@ tags:
 
 人为什么会感觉到不同的颜色？颜色为什么可以用三基色混合而成？让我们从光的质出发来理解这些问题。
 
+目录：
+
+- [人眼对光的感知](#人眼对光的感知)
+- [色彩空间](#色彩空间)
+  - [LMS 色彩空间](#lms-色彩空间)
+  - [CIE RGB 色彩空间](#cie-rgb-色彩空间)
+  - [CIE XYZ 色彩空间](#cie-xyz-色彩空间)
+  - [CIE xyY 色彩空间](#cie-xyy-色彩空间)
+  - [其它 RGB 色彩空间](#其它-rgb-色彩空间)
+  - [其它色彩空间](#其它色彩空间)
+- [HSL 和 HSV 色彩空间](#hsl-和-hsv-色彩空间)
+- [色彩搭配网站](#色彩搭配网站)
+
+-------------------------------------------------------------------------------
+
 ## 人眼对光的感知
 
 人眼中有[视锥细胞](https://zh.wikipedia.org/zh-cn/%E8%A7%86%E9%94%A5%E7%BB%86%E8%83%9E)（[cone cell](https://en.wikipedia.org/wiki/Cone_cell)）和[视杆细胞（rod cell）](https://zh.wikipedia.org/zh-cn/%E8%A7%86%E6%9D%86%E7%BB%86%E8%83%9E)两种[感光细胞（photoreceptor cell）](https://zh.wikipedia.org/zh-cn/%E6%84%9F%E5%85%89%E7%BB%86%E8%83%9E)。不同的感光细胞含有不同的[视蛋白（opsins）](https://en.wikipedia.org/wiki/Opsin)，因此不同的感光细胞对不同波长的光敏感程度不同。
@@ -74,7 +89,7 @@ tags:
 
 我们想要一个好的描述，它应该是把无穷维的光谱，映射到一个三维的空间（因为有三种视锥细胞）。这个三维空间到所有的颜色的映射，即是单射，又是满射，即双射。或者近似是单射也行。这个有限维的空间，就是[色彩空间（color space）](https://en.wikipedia.org/wiki/Color_space)。[Grassmann 定律](https://en.wikipedia.org/wiki/Grassmann%27s_laws_(color_science))[^2]给出了一些色彩空间的性质，大致是说，色彩空间应该是一个“三维”，且“线性”的空间。
 
-在 1931 年，国际照明委员会（[International Commission on Illumination, CIE)](https://en.wikipedia.org/wiki/International_Commission_on_Illumination)）定义了人眼看到的一束光（光谱 $S(\lambda)$）的颜色，即，与色彩空间中的一个点的映射关系（[CIE 1931 color space](https://en.wikipedia.org/wiki/CIE_1931_color_space)）。
+在 1931 年，国际照明委员会（[International Commission on Illumination, CIE](https://en.wikipedia.org/wiki/International_Commission_on_Illumination)）定义了人眼看到的一束光（光谱 $S(\lambda)$）的颜色，即，与色彩空间中的一个点的映射关系（[CIE 1931 color space](https://en.wikipedia.org/wiki/CIE_1931_color_space)）。
 
 色彩空间有好多种。下面简要介绍。
 

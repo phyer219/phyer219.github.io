@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水 - other</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/other.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2022-09-20T00:00:00+08:00</updated><entry><title>博客2.0版本的介绍</title><link href="https://zqw.ink/2022-09-20-other-blog20.html" rel="alternate"/><published>2022-09-20T00:00:00+08:00</published><updated>2022-09-20T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-09-20:/2022-09-20-other-blog20.html</id><summary type="html">
-&lt;h1&gt;关于我&lt;/h1&gt;
+&lt;h1 id="关于我"&gt;关于我&lt;/h1&gt;
 &lt;p&gt;AMO PhD student&lt;/p&gt;
 &lt;p&gt;研究课题: RF spectrum of strongly interacting Bose gases across d-wave resonance&lt;/p&gt;
 &lt;p&gt;热爱生活, 热爱物理.&lt;/p&gt;
 &lt;p&gt;业余爱好列表, 排名不分先后:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;书法: 始于初中语文课本 …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
-&lt;h1&gt;关于我&lt;/h1&gt;
+&lt;h1 id="关于我"&gt;关于我&lt;/h1&gt;
 &lt;p&gt;AMO PhD student&lt;/p&gt;
 &lt;p&gt;研究课题: RF spectrum of strongly interacting Bose gases across d-wave resonance&lt;/p&gt;
 &lt;p&gt;热爱生活, 热爱物理.&lt;/p&gt;
@@ -29,7 +29,7 @@
 &lt;/ul&gt;
 &lt;p&gt;联系请 E-mail: zeqing6688@126.com&lt;/p&gt;
 &lt;p&gt;本站内容为: 只对自己负责的学习笔记, 以及生活的牢骚.&lt;/p&gt;
-&lt;h1&gt;关于本站&lt;/h1&gt;
+&lt;h1 id="关于本站"&gt;关于本站&lt;/h1&gt;
 &lt;p&gt;本站是由 python 生成的静态博客, 托管于&lt;br /&gt;
 &lt;a href="https://github.com/phyer219/phyer219.github.io.2.0"&gt;GithubPages&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;文章的源格式大多采用 org-mode 的格式, 由&lt;br /&gt;
