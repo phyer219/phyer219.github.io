@@ -2,7 +2,11 @@
 title: 博客第二次改版的说明及一些笔记
 date: 2024/10/24
 categories: 软件使用
-tags: [python, pelican, blog]
+tags:
+  - blog
+  - python
+  - pelican
+
 ---
 
 - [升级说明](#升级说明)

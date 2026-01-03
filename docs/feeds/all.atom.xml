@@ -1,5 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/all.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2025-12-31T00:00:00+08:00</updated><entry><title>人类对颜色的感知</title><link href="https://zqw.ink/2025-12-31-coding-color.html" rel="alternate"/><published>2025-12-31T00:00:00+08:00</published><updated>2025-12-31T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-12-31:/2025-12-31-coding-color.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/all.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2026-01-03T00:00:00+08:00</updated><entry><title>博客第三次改版</title><link href="https://zqw.ink/2026-01-03-coding-blog_3rd_version.html" rel="alternate"/><published>2026-01-03T00:00:00+08:00</published><updated>2026-01-03T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2026-01-03:/2026-01-03-coding-blog_3rd_version.html</id><summary type="html">
+&lt;p&gt;目录：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#%E6%9B%B4%E6%94%B9%E4%B8%BB%E9%A2%98"&gt;更改主题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E5%A2%9E%E5%8A%A0%E9%A3%8E%E6%A0%BC%E6%8C%87%E5%8D%97"&gt;增加风格指南&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2%E5%86%85%E9%83%A8%E7%9A%84%E5%8D%9A%E6%96%87%E5%BC%95%E7%94%A8"&gt;优化博客内部的博文引用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E6%94%B9%E7%94%A8-markdown-it-py-%E6%B8%B2%E6%9F%93-markdown"&gt;改用 markdown-it-py 渲染 markdown&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E6%9B%B4%E6%94%B9%E5%AF%BC%E5%90%91%E6%A0%8F"&gt;更改导向栏&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E5%A2%9E%E5%8A%A0-rss-%E8%AE%A2%E9%98%85"&gt;增加 RSS 订阅&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E6%8F%90%E9%AB%98%E6%A0%87%E7%AD%BE%E7%9A%84%E7%94%A8%E9%80%94"&gt;提高标签的用途&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E5%86%B3%E5%AE%9A%E6%94%BE%E5%BC%83-org-mode-%E6%A0%BC%E5%BC%8F"&gt;决定放弃 …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
+&lt;p&gt;目录：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#%E6%9B%B4%E6%94%B9%E4%B8%BB%E9%A2%98"&gt;更改主题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E5%A2%9E%E5%8A%A0%E9%A3%8E%E6%A0%BC%E6%8C%87%E5%8D%97"&gt;增加风格指南&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2%E5%86%85%E9%83%A8%E7%9A%84%E5%8D%9A%E6%96%87%E5%BC%95%E7%94%A8"&gt;优化博客内部的博文引用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E6%94%B9%E7%94%A8-markdown-it-py-%E6%B8%B2%E6%9F%93-markdown"&gt;改用 markdown-it-py 渲染 markdown&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E6%9B%B4%E6%94%B9%E5%AF%BC%E5%90%91%E6%A0%8F"&gt;更改导向栏&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E5%A2%9E%E5%8A%A0-rss-%E8%AE%A2%E9%98%85"&gt;增加 RSS 订阅&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E6%8F%90%E9%AB%98%E6%A0%87%E7%AD%BE%E7%9A%84%E7%94%A8%E9%80%94"&gt;提高标签的用途&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E5%86%B3%E5%AE%9A%E6%94%BE%E5%BC%83-org-mode-%E6%A0%BC%E5%BC%8F"&gt;决定放弃 Org Mode 格式&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;本博客首版于 2018 年 9 月 7 日，用 &lt;a href="https://hexo.io"&gt;Hexo&lt;/a&gt; 从 markdown 生成静态页面，发表了第一篇文章：&lt;a href="./2018-09-07-coding-typora_note.html"&gt;Typora 使用笔记&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;2022 年 4 月 16 日进行了&lt;a href="./2022-04-16-thinking-blog_evolution.html"&gt;第一次改版&lt;/a&gt; 用 python 重写生成引擎和主题。&lt;/p&gt;
+&lt;p&gt;2024 年 10 月 24 日进行了&lt;a href="./2024-10-24-pelican_blog.html"&gt;第二次改版&lt;/a&gt;后，采用了 Pelican 引擎。&lt;/p&gt;
+&lt;p&gt;在 2025 末，2026 初，这是对本博客进行了第三次改版。下面详细解释具体的更改。&lt;/p&gt;
+&lt;h2&gt;更改主题&lt;/h2&gt;
+&lt;p&gt;在 AI 的帮助下，利用 vibe coding，去掉了 banner，增加明暗两套本色。更改后，感观更加“平凡”，易于阅读。&lt;/p&gt;
+&lt;h2&gt;增加风格指南&lt;/h2&gt;
+&lt;p&gt;为了格式统一，提升博客质量，便于迁移，增加了一系列&lt;a href="./2025-12-30-coding-style_guide.html"&gt;风格指南&lt;/a&gt;。&lt;/p&gt;
+&lt;h2&gt;优化博客内部的博文引用&lt;/h2&gt;
+&lt;p&gt;之前的博客应该可用在不同博文之间引用，但没有统一的格式，我也没有用过。现在在 markdown 格式的博文中统一格式为 &lt;code&gt;[comment](./xxxx-xx-xx-xx-xxxx.html)&lt;/code&gt; 的格式。在渲染时用正则替换，将相对引用替换为网址绝对引用。这样能保证在本地的 markdown 编辑器中，能很好的预览和跳转，生成 html 后也能支持链接跳转。&lt;/p&gt;
+&lt;p&gt;此外，增加不同博文之间的引用，可以提升关联性，以此提升写作体验和读者体验，也利于搜索引擎的索引。&lt;/p&gt;
+&lt;h2&gt;改用 markdown-it-py 渲染 markdown&lt;/h2&gt;
+&lt;p&gt;之前用的 &lt;a href="https://python-markdown.github.io/"&gt;Python-Markdown&lt;/a&gt;，并用 &lt;a href="https://github.com/sgryjp/markdown_math_escape"&gt;markdown_math_escape&lt;/a&gt; 处理数学公式。但是 Python-Markdown 与一些现代的 markdown 格式（&lt;a href="https://github.com/DavidAnson/markdownlint/blob/v0.40.0/doc/md007.md"&gt;比如用两个空格区分不同级别的列表&lt;/a&gt;）兼容性不好，因此换用支持更灵活的 &lt;a href="https://spec.commonmark.org/"&gt;CommonMark spec&lt;/a&gt; 的 &lt;a href="https://github.com/executablebooks/markdown-it-py"&gt;markdown-it-py&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;其实这些都无所谓，重要的是博客的内容。而目前 markdown-it-py 刚好实现了我的需要。&lt;/p&gt;
+&lt;h2&gt;更改导向栏&lt;/h2&gt;
+&lt;p&gt;一些博客文章的质量一般，但是也不应该删除，至少做为记录。所以改版后的导航栏分成以下几部分&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Home：主页，显示本博客的引言。&lt;/li&gt;
+&lt;li&gt;Physics：物理，或者科研相关的内容。是筛选过质量过后的列表。&lt;/li&gt;
+&lt;li&gt;Blog：生活相关的内容。是筛选过质量过后的列表。&lt;/li&gt;
+&lt;li&gt;Coding：编程相关的内容。是筛选过质量过后的列表。&lt;/li&gt;
+&lt;li&gt;All：所有的博客文章列表。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;增加 RSS 订阅&lt;/h2&gt;
+&lt;p&gt;受到 &lt;a href="https://wiwi.blog/blog/you-should-use-rss"&gt;Wiwi&lt;/a&gt; 的影响，我现在自己也重新用起了 RSS，所以本站也应该支持 RSS 订阅。&lt;/p&gt;
+&lt;h2&gt;提高标签的用途&lt;/h2&gt;
+&lt;p&gt;一些成系列的内容，可以用一个标签连起来，放到首页展示。&lt;/p&gt;
+&lt;h2&gt;决定放弃 Org Mode 格式&lt;/h2&gt;
+&lt;p&gt;作为一名前 Emacs 用户，我曾经用 &lt;a href="https://orgmode.org/"&gt;Org Mode&lt;/a&gt; 记录和组织一些内容。但是它和可移植性显然没有 markdown 强。&lt;/p&gt;
+</content><category term="coding"/><category term="blog"/><category term="vibe coding"/></entry><entry><title>人类对颜色的感知</title><link href="https://zqw.ink/2025-12-31-coding-color.html" rel="alternate"/><published>2025-12-31T00:00:00+08:00</published><updated>2025-12-31T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-12-31:/2025-12-31-coding-color.html</id><summary type="html">
 &lt;p&gt;人为什么会感觉到不同的颜色？颜色为什么可以用三基色混合而成？让我们从光的质出发来理解这些问题。&lt;/p&gt;
 &lt;h2&gt;人眼对光的感 …&lt;/h2&gt;</summary><content type="html">
 &lt;p&gt;人为什么会感觉到不同的颜色？颜色为什么可以用三基色混合而成？让我们从光的质出发来理解这些问题。&lt;/p&gt;
@@ -2299,7 +2351,54 @@ if cls is None:
 &lt;p&gt;&lt;code&gt;while True:&lt;/code&gt; 是一种简单但非常强大的循环结构，广泛应用于需要不断重复某些操作的场景，如输入验证、监听服务器、生产者-消费者模型等。它可以确保程序不断运行，直到某个条件触发 &lt;code&gt;break&lt;/code&gt; 退出循环，从而灵活地控制程序的执行流程。&lt;/p&gt;
 &lt;h2&gt;Acknowledge&lt;/h2&gt;
 &lt;p&gt;ChatGPT&lt;/p&gt;
-</content><category term="软件使用"/><category term="python"/><category term="pelican"/><category term="blog"/></entry><entry><title>利用虚时传播子求解定态散射问题</title><link href="https://zqw.ink/2024-04-24-physics-propagator_scattering.html" rel="alternate"/><published>2024-04-24T00:00:00+08:00</published><updated>2024-04-24T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2024-04-24:/2024-04-24-physics-propagator_scattering.html</id><summary type="html">&lt;!-- toc --&gt;
+</content><category term="软件使用"/><category term="blog"/><category term="python"/><category term="pelican"/></entry><entry><title>旧版“关于”存档（存档于2026-01-03）</title><link href="https://zqw.ink/2024-10-23-coding-about_page_archive.html" rel="alternate"/><published>2024-10-23T00:00:00+08:00</published><updated>2024-10-23T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2024-10-23:/2024-10-23-coding-about_page_archive.html</id><summary type="html">
+&lt;p&gt;本博客于 2025-12-31 进行第三次升级升级。此为升级前的一些存档。&lt;/p&gt;
+&lt;h2&gt;关于我&lt;/h2&gt;
+&lt;h3&gt;联系&lt;/h3&gt;
+&lt;p&gt;请 E-mail: zeqing6688@126.com&lt;/p&gt;
+&lt;h2&gt;关于本站&lt;/h2&gt;
+&lt;p&gt;本站内容为: 只对自己负责的 …&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;本博客于 2025-12-31 进行第三次升级升级。此为升级前的一些存档。&lt;/p&gt;
+&lt;h2&gt;关于我&lt;/h2&gt;
+&lt;h3&gt;联系&lt;/h3&gt;
+&lt;p&gt;请 E-mail: zeqing6688@126.com&lt;/p&gt;
+&lt;h2&gt;关于本站&lt;/h2&gt;
+&lt;p&gt;本站内容为: 只对自己负责的学习笔记, 以及生活的牢骚.&lt;/p&gt;
+&lt;p&gt;本站是由 &lt;a href="https://getpelican.com/"&gt;Pelican&lt;/a&gt; 生成的静态博客, 托管于&lt;br /&gt;
+&lt;a href="https://github.com/phyer219/phyer219.github.io"&gt;GithubPages&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;文章的源格式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;org-mode 的格式, 由 &lt;a href="https://github.com/phyer219/phyer219.github.io.2.0/tree/main/zqwblog/renderer"&gt;zqwblog/renderer&lt;/a&gt; 渲染成 html. 由于是自己的写的包, 还有很多不完善的地方. 重复造轮子的目的是练习写程序.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;markdown, 由包 &lt;a href="https://python-markdown.github.io/"&gt;python-markdown&lt;/a&gt; 渲染.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;文章中的公式由 &lt;a href="https://www.mathjax.org/"&gt;MathJax&lt;/a&gt; 渲染.&lt;/p&gt;
+&lt;p&gt;文章中的代码块由 &lt;a href="https://highlightjs.org/"&gt;highlight.js&lt;/a&gt; 渲染.&lt;/p&gt;
+&lt;h2&gt;README 存档&lt;/h2&gt;
+&lt;p&gt;Generate by &lt;a href="https://getpelican.com/"&gt;Pelican&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Use Plugins:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/pelican-plugins/sitemap"&gt;sitemap&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Use package:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://github.com/pallets/jinja/"&gt;jinja2&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://python-markdown.github.io/"&gt;Python-Markdown&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://github.com/sgryjp/markdown_math_escape"&gt;markdown_math_escape&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://github.com/jupyter/nbformat"&gt;nbformat&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="软件使用"/><category term="blog"/><category term="about"/><category term="archive"/></entry><entry><title>利用虚时传播子求解定态散射问题</title><link href="https://zqw.ink/2024-04-24-physics-propagator_scattering.html" rel="alternate"/><published>2024-04-24T00:00:00+08:00</published><updated>2024-04-24T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2024-04-24:/2024-04-24-physics-propagator_scattering.html</id><summary type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
 &lt;h1&gt;利用虚时传播子求解定态散射问题&lt;/h1&gt;
 &lt;p&gt;本文考虑一维问题&lt;/p&gt;
@@ -6304,40 +6403,24 @@ jz_spherical:
 &lt;li&gt;&lt;a href='https://www.physicsforums.com/threads/representation-of-angular-momentum-matrix-in-cartesian-and-spherical-basis.418710/'&gt;https://www.physicsforums.com/threads/representation-of-angular-momentum-matrix-in-cartesian-and-spherical-basis.418710/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content><category term="专业笔记"/><category term="SO(3)"/><category term="group theory"/></entry><entry><title>博客改版</title><link href="https://zqw.ink/2022-04-16-thinking-blog_evolution.html" rel="alternate"/><published>2022-04-16T00:00:00+08:00</published><updated>2022-04-16T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-04-16:/2022-04-16-thinking-blog_evolution.html</id><summary type="html">
-
-&lt;p&gt;这几天离开304,新版的 hexo 渲染 org-mode 有问题。也就是说只能用 304 上的电脑用老
+&lt;p&gt;这几天离开304,新版的 hexo 渲染 org-mode 有问题。也就是说只能用 304 上的电脑用老&lt;br /&gt;
 版的 hexo 写。&lt;/p&gt;
-
 &lt;p&gt;于是今天花了一天的时间，从早上 7 半 …&lt;/p&gt;</summary><content type="html">
-
-&lt;p&gt;这几天离开304,新版的 hexo 渲染 org-mode 有问题。也就是说只能用 304 上的电脑用老
+&lt;p&gt;这几天离开304,新版的 hexo 渲染 org-mode 有问题。也就是说只能用 304 上的电脑用老&lt;br /&gt;
 版的 hexo 写。&lt;/p&gt;
-
-&lt;p&gt;于是今天花了一天的时间，从早上 7 半一直到晚上 11 点版，写了这个不到 200 行的自用
+&lt;p&gt;于是今天花了一天的时间，从早上 7 半一直到晚上 11 点版，写了这个不到 200 行的自用&lt;br /&gt;
 的静态博客生成器。&lt;/p&gt;
-
 &lt;p&gt;虽然还有很多问题，不过勉强能用。&lt;/p&gt;
-
 &lt;p&gt;时间紧迫，下一次修复这些问题就不知道是什么时候了。&lt;/p&gt;
-
 &lt;h2&gt;附:之前放在首页的说明&lt;/h2&gt;
-
 &lt;p&gt;改版说明&lt;/p&gt;
-
 &lt;p&gt;由于 Hexo 升级带来各种兼容性问题，org-mode 也无法正常渲染。因此弃用 Hexo。&lt;/p&gt;
-
 &lt;p&gt;之后本博客将采用100 行左右的 python 脚本(链接到s.py) 直接生成 html。&lt;/p&gt;
-
 &lt;p&gt;因此不依赖于任何其他静态博客生成程序，可以说是从根本上杜绝了一切兼容性问题。&lt;/p&gt;
-
 &lt;p&gt;缺点在于一切动要自己写，就显得比较简陋。但这正体现了本博客极简实用的精神。&lt;/p&gt;
-
-&lt;p&gt;目前正在以非常慢的速度建设中，任何建议请直接 email 博主：zeqing6688@126.com&lt;/p&gt;
-
-&lt;p&gt;&lt;a href='https://zqw.ink/hexo_ver/'&gt;旧版&lt;/a&gt;目前仍可访问。&lt;/p&gt;
-
-
-</content><category term="想说"/><category term="hexo"/></entry><entry><title>风沙 苹果 外星人 雨 开袋即食</title><link href="https://zqw.ink/2022-03-30-story-spring_march_2022.html" rel="alternate"/><published>2022-03-30T00:00:00+08:00</published><updated>2022-03-30T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-03-30:/2022-03-30-story-spring_march_2022.html</id><summary type="html">&lt;!-- toc --&gt;
+&lt;p&gt;目前正在以非常慢的速度建设中，任何建议请直接 email 博主：&lt;a href="mailto:zeqing6688@126.com"&gt;zeqing6688@126.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://zqw.ink/hexo_ver/"&gt;旧版&lt;/a&gt;目前仍可访问。&lt;/p&gt;
+</content><category term="想说"/><category term="blog"/><category term="hexo"/></entry><entry><title>风沙 苹果 外星人 雨 开袋即食</title><link href="https://zqw.ink/2022-03-30-story-spring_march_2022.html" rel="alternate"/><published>2022-03-30T00:00:00+08:00</published><updated>2022-03-30T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-03-30:/2022-03-30-story-spring_march_2022.html</id><summary type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
 &lt;p&gt;（一）&lt;/p&gt;
 &lt;p&gt;窗外是一片大风与黄沙，几天前，在这样的早晨醒来。明明昨天还是干净透明的蓝天。&lt;/p&gt;
@@ -16473,466 +16556,4 @@ $$\begin{align}
 &lt;li&gt;PhysRevA.86.012711, Renormalization in the three-body problem with resonant p-wave interactions&lt;/li&gt;
 &lt;li&gt;PhysRevA.99.012701, Three-body problem of bosons near a d-wave resonance&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="专业笔记"/><category term="p-wave"/><category term="Renormalization"/><category term="Scattering"/></entry><entry><title>Carl Bender Mathematical Physics Lecture6 Note</title><link href="https://zqw.ink/2020-10-10-physics-carlbendermathematicalphysicslecture6.html" rel="alternate"/><published>2020-10-10T00:00:00+08:00</published><updated>2020-10-10T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-10-10:/2020-10-10-physics-carlbendermathematicalphysicslecture6.html</id><summary type="html">
-&lt;h2&gt;Information&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;原出处: https://www.perimeterinstitute.ca/video-library/collection/11/12-psi-mathematical-physics&lt;/li&gt;
-&lt;li&gt;可以看自动生成的字幕: &lt;a href='https://www.youtube.com/playlist?list=PLzcd6SoIscwjHuWRE38UXWG92uq0Sy4UF'&gt;https://www.youtube.com/playlist?list=PLzcd6SoIscwjHuWRE38UXWG92uq0Sy4UF&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Bilibili: https://www.bilibili.com/video/BV1w4411q7x6?from&lt;code&gt;search&amp;seid&lt;/code&gt;7852838902448285010&lt;/li&gt;
-&lt;li&gt;Book: Carl M. Bender, Steven A. Orszag, Advanced Mathematical Methods for …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
-&lt;h2&gt;Information&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;原出处: https://www.perimeterinstitute.ca/video-library/collection/11/12-psi-mathematical-physics&lt;/li&gt;
-&lt;li&gt;可以看自动生成的字幕: &lt;a href='https://www.youtube.com/playlist?list=PLzcd6SoIscwjHuWRE38UXWG92uq0Sy4UF'&gt;https://www.youtube.com/playlist?list=PLzcd6SoIscwjHuWRE38UXWG92uq0Sy4UF&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Bilibili: https://www.bilibili.com/video/BV1w4411q7x6?from&lt;code&gt;search&amp;seid&lt;/code&gt;7852838902448285010&lt;/li&gt;
-&lt;li&gt;Book: Carl M. Bender, Steven A. Orszag, Advanced Mathematical Methods for Scientists and Engineers I Asympotic Methods and Perturbation Theory, 1999&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Keywords&lt;/h2&gt;
-
-&lt;p&gt;Continued fractions.  Pade sequence. Shear magic. Stieltjes series&lt;/p&gt;
-
-&lt;h2&gt;Continued Factions&lt;/h2&gt;
-
-&lt;p&gt;有一个 $HP(\epsilon)$ 微扰得到一个 asympotic series 形式的结果 $ANS(\epsilon) \sim \sum a_n \epsilon^n$
-, 但是一般只有前几项, 而且收敛半径是 $0$ . 思路上将其转化成 continued
-functions, a sequence of "approximants" , 而这个 sequence 的收敛性比那个
-asympotic series 的收敛性好的多. 之前讲 $e^{ze^{ze^{z\cdots}}}$ 的例子只因为 Bender
-love 这个例子, 因为它太 weird, 它 glorious, 并且鲜为人知. 之后并不会再讨论
-continued exponential. &lt;/p&gt;
-
-&lt;p&gt;下面考虑 continued fractions&lt;/p&gt;
-
-$$\begin{align}
-  \label{eq:cf}
-  \sum a_n x^n \to \frac{b_0}{1 - \frac{b_1x}{1 - \frac{ b_2x}{1 - b_3 x \cdots}}}
-\end{align}$$
-
-&lt;p&gt;idea 是, 我们求得了 (\ref{eq:cf}) 的左边, 但它是发散的. 如果把它转换成
-(\ref{eq:cf}) 右边的 continued fractions 的形式, the sequence of approximants
-you get from the continued fractions might well converge. the sequence of
-approximants 指的是(假设收敛到 $L$ )&lt;/p&gt;
-
-$$\begin{align}
-  b_0, \frac{b_0}{1 - b_1x}, \frac{b_0}{1 - \frac{b_1x}{ 1 - b_2x}}, \cdots, \to L
-\end{align}$$
-
-&lt;p&gt;也就是说, 我们从一个发散的, 但是包含我们所需要的信息的级数, 转化成一个收敛的级数,
-因此我们从其中提取所需要的信息.&lt;/p&gt;
-
-&lt;h2&gt;IQ Test&lt;/h2&gt;
-
-&lt;p&gt;用一个特别的方式来说明这个.&lt;/p&gt;
-
-&lt;p&gt;像 IQ 测试一样, 下面数例的下一个数是什么&lt;/p&gt;
-
-$$\begin{align}
-  1, 5, 61, ??
-\end{align}$$
-
-&lt;p&gt;这太难了, 你之前知道就会, 之前不知道就不会. 它们是 Euler numbers. 下面讲一种方法
-来计算它.
-将上面的数列记为(手动加上 $a_0 = 1$ )&lt;/p&gt;
-
-$$\begin{align}
-  a_0 = 1, a_1= 1, a_2 = 5, a_3 = 61, \cdots
-\end{align}$$
-
-&lt;p&gt;我们想将它 transform 成一个更明显, 更好猜的数例 $b_n$&lt;/p&gt;
-
-$$\begin{align}
-  b_0, b_1, b_2, b_3, \cdots
-\end{align}$$
-
-&lt;p&gt;下面分三个步骤进行&lt;/p&gt;
-
-&lt;h3&gt;step1&lt;/h3&gt;
-&lt;blockquote&gt;Given $\{a_n\}$, imagine that (moment problems)
-\begin{align}
-  a_n = \int_{-L}^L \mathrm{d}x\cdot w(x) x^{2n}
-\end{align}&lt;/blockquote&gt;
-
-&lt;h3&gt;step2&lt;/h3&gt;
-
-&lt;blockquote&gt;If you have $\{b_n\}$ 
-\begin{align}
-  P_0 (x) =&amp; 1 \\
-  P_1(x) \equiv&amp; x \\
-   P_{n + 1}(x) =&amp; x P_n - b_n P_{n - 1}(x)
-\end{align}
-so (monic)
-\begin{align}
-  P_2(x) =&amp; x^2 - b_1 \\
-  P_3(x) =&amp; x^{3} - (b_1 + b_2) x \\
-  P_4(x) =&amp; x^4 - (b_1 + b_2 + b_3) x^2 + b_3 b_1
-\end{align}&lt;/blockquote&gt;
-
-&lt;h3&gt;step3&lt;/h3&gt;
-
-&lt;blockquote&gt;Let's require these polynomials are orthogonal with respect to $w$
-\begin{align}
-  \int_{-L} ^L \mathrm{d}x \cdot w(x) P_n(x) P_m(x) = 0 , \quad n\neq m
-\end{align}
-so
-\begin{align}
-  P_0 \bot P_2 :&amp; a_1 - b_1 = 0 \Rightarrow a_1 = b_1 \\
-  P_1 \bot P_3 :&amp; a_2 - (b_1 + b_2 ) b_1 = 0 \Rightarrow a_2 = b_1(b_1 + b_2) \\
-  P_4 \bot P_o :&amp; a_2 = b_1(b_1 + b_2) \\
-  P_4 \bot P_2 :&amp; a_3 = b_1(b_1 + b_2)^2 + b_1 b_2 b_3
-\end{align}
-
-$\mathscr{P}$&lt;/blockquote&gt;
-
-&lt;h2&gt;&lt;/h2&gt;
-
-&lt;p&gt;发现结果恰好是之前的数例&lt;/p&gt;
-
-$$\begin{align}
-  a_1 = 1 \to&amp; b_1 = 1 \\
-  a_2 = 5 \to&amp; b_2 = 4 \\
-  a_3 = 61\to&amp; b_3 = 9 \\
-  a_4 = 1385 \to&amp; b_4 = 16
-\end{align}$$
-
-&lt;p&gt;If $a_n\sim n!$ , then $b_n \sim n$ . If $a_n \sim (2n)!$ , then $b_n\sim n^2$ . 这里的 $a_n,
-b_n$ 的关系, 就是前面的级数和 continued fractions 的关系. 比如&lt;/p&gt;
-
-$$\begin{align}
-  E_n(1, 5, 61, 1385, \cdots) \sim (2n)! C^n,\quad \mathrm{as}\, n\to \infty
-\end{align}$$
-
-
-&lt;h2&gt;Pade Sequence&lt;/h2&gt;
-
-&lt;p&gt;There is very deep connetction between continued fractions and orthogonal
-polynomials. 当然, 最简单的方法是直接 Taylor 展开, 如&lt;/p&gt;
-
-$$\begin{align}
-  \frac{1}{1 - x} =&amp; 1 + x + \mathcal{O}(x^2) \\
-  \frac{1}{1 - \frac{x}{1 - 4x}} =&amp; 1 + x + 5 x^2 + \mathcal{O}(x^2) \\
-  \frac{1}{1 - \frac{x}{1 - \frac{4x}{1 - 9 x}}} =&amp; 1 + x + 5 x^2 + 61 x^3 + \cdots \\
-  \vdots &amp;
-\end{align}$$
-
-&lt;p&gt;如果把 continued fractions 有理化, 那么&lt;/p&gt;
-
-$$\begin{align}
-  b_0 \to&amp; \frac{\mathscr{P}_0}{\mathscr{P}_0} \label{eq:padeStart}\\
-   \frac{b_0}{1 - b_1x}\to&amp; \frac{\mathscr{P}_0}{\mathscr{P}_{1}} \\
-  \frac{b_0}{1 - \frac{b_1 x}{ 1 - b_2x}} \to&amp; \frac{\mathscr{P}_1}{\mathscr{P}_1}\\
-  \frac{b_0}{1 - \frac{b_1 x}{ 1 - \frac{b_2x}{1 - b_3x}}} 
-                   \to&amp; \frac{\mathscr{P}_1}{\mathscr{P}_2} \\
-         \vdots \to&amp; \frac{\mathscr{P}_2}{\mathscr{P}_2} \\
-         \vdots \to&amp; \frac{\mathscr{P}_2}{\mathscr{P}_3} \label{eq:padeEnd}\\
-         \vdots &amp;
-\end{align}$$
-
-&lt;p&gt;其中 $\mathscr{P}_n$ 代表 $n$ 阶多项式. 右边叫做 Pade sequence. 更 general 的&lt;/p&gt;
-
-$$\begin{align}
-  \sum_0^{p+q} a_n x^n = \frac{\mathscr{P}_p}{\mathscr{P}_q} = \mathcal{P}^p_q
-\end{align}$$
-
-&lt;p&gt;两边的系数相等. 被称作  Pade approximates. 对于一个级数, 可以写一个 Pade table
-(Bender 在黑板上笔误了上下标标反了)
-而前面的 (\ref{eq:padeStart}) ~ (\ref{eq:padeEnd}) 是 Pade table 中(副)对角的部&lt;/p&gt;
-&lt;table&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;       &lt;/td&gt;
-&lt;td&gt; $q=1$           &lt;/td&gt;
-&lt;td&gt; $q=2$           &lt;/td&gt;
-&lt;td&gt; $q=3$           &lt;/td&gt;
-&lt;td&gt; $\cdots$ &lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt; $p=1$ &lt;/td&gt;
-&lt;td&gt; $\mathcal{P}^1_1$ &lt;/td&gt;
-&lt;td&gt; $\mathcal{P}^1_2$ &lt;/td&gt;
-&lt;td&gt; $\mathcal{P}^1_3$ &lt;/td&gt;
-&lt;td&gt; $\cdots$ &lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt; $p=2$ &lt;/td&gt;
-&lt;td&gt; $\mathcal{P}^2_1$ &lt;/td&gt;
-&lt;td&gt; $\mathcal{P}^2_2$ &lt;/td&gt;
-&lt;td&gt; $\mathcal{P}^2_3$ &lt;/td&gt;
-&lt;td&gt; $\cdots$ &lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt; $p=3$ &lt;/td&gt;
-&lt;td&gt; $\mathcal{P}^3_1$ &lt;/td&gt;
-&lt;td&gt; $\mathcal{P}^3_2$ &lt;/td&gt;
-&lt;td&gt; $\mathcal{P}^3_3$ &lt;/td&gt;
-&lt;td&gt; $\cdots$ &lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt; $\vdots$   &lt;/td&gt;
-&lt;td&gt; $\vdots$             &lt;/td&gt;
-&lt;td&gt; $\vdots$             &lt;/td&gt;
-&lt;td&gt; $\vdots$             &lt;/td&gt;
-&lt;td&gt; $\ddots$ &lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;
-&lt;p&gt;分, 称为 main/diagonal Pade sequence. &lt;/p&gt;
-
-&lt;p&gt;总的来说, 我们将一个不收敛的级数, 写成了 Pade sequence 的形式, 而这通常收敛非常
-快, really really rapidly. &lt;/p&gt;
-
-&lt;p&gt;接下来是精辟的评论&lt;/p&gt;
-&lt;blockquote&gt;It's the antidote to what they teach you in calsses on quantum field theory and
-on quantum mechanics. Because in a class on quantum mechanics or quantum field
-theory they teach you perturbation theory and without teaching you this. It's
-junk! Because you can't do anything with what you've learned. You calculate a
-bunch of Feynman diagrams, big deal, but you convert that to Pade, and you can
-sum it up. &lt;/blockquote&gt;
-
-&lt;p&gt;Pade 不仅收敛地快, 而且 $\mathcal{P}^n_n$ 和 $\mathcal{P}^n_{n + 1}$ 分别从 $L$ 的
-上边和下边逼近, 因此还可以做 Shanks transform, 会收敛地更快. &lt;/p&gt;
-
-&lt;p&gt;之后举了几个例子, 来说明 Pade sequence 比 Taylor series 收敛地更快.&lt;/p&gt;
-
-&lt;h2&gt;An Intuitive Explanation &lt;/h2&gt;
-
-&lt;p&gt;Pade 是多项式, 它的分母可以有零点. 比如 $\Gamma$ function 有许多 pole, Taylor series
-没有 pole, 但 Pade 可以有. Pade 可以 mock up (模拟) poles. 因此 Pade 是一个 very
-flexible 的表示. &lt;/p&gt;
-
-&lt;p&gt;同时, Taylor series 的收敛区域是一个圆, 它要求圆内所有的点都收敛. 这就限制了它的
-收敛的区域. 而 Pade 就不必, 它的收敛区域可以是整个复平切去割线. Pade 所要求的更
-少, 它的收敛区域不必是一个圆, 因此, 它可以给我们的更多.&lt;/p&gt;
-
-&lt;blockquote&gt;Taylor series hate you, because you force them to converge in a full circle. It
-just say 'go away, I'm not working for you today.'
-
-Whereas Pade, you don't force it to converge here, you're not requiring it and
-it doesn't converge, and therefore where it does converge it converges much
-better and much faster than a Taylor series. It's wonderful!  &lt;/blockquote&gt;
-
-&lt;h2&gt;Summary&lt;/h2&gt;
-
-&lt;p&gt;讲了如何将发散的级数求和, 给出的方法是将原来发散的级数转化成 Pade sequence. &lt;/p&gt;
-
-&lt;h2&gt;Reference&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;https://en.wikipedia.org/wiki/Pad%C3%A9_table&lt;/li&gt;
-&lt;/ul&gt;
-</content><category term="专业笔记"/><category term="Carl Bender"/><category term="Mathematical Physics"/><category term="Pade Sequence"/><category term="Pade Table"/><category term="Shear Magic"/></entry><entry><title>Carl Bender Mathematical Physics Lecture5 Note</title><link href="https://zqw.ink/2020-10-08-physics-carlbendermathematicalphysicslecture5.html" rel="alternate"/><published>2020-10-08T00:00:00+08:00</published><updated>2020-10-08T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-10-08:/2020-10-08-physics-carlbendermathematicalphysicslecture5.html</id><summary type="html">
-&lt;h2&gt;Information&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;原出处: https://www.perimeterinstitute.ca/video-library/collection/11/12-psi-mathematical-physics&lt;/li&gt;
-&lt;li&gt;可以看自动生成的字幕: &lt;a href='https://www.youtube.com/playlist?list=PLzcd6SoIscwjHuWRE38UXWG92uq0Sy4UF'&gt;https://www.youtube.com/playlist?list=PLzcd6SoIscwjHuWRE38UXWG92uq0Sy4UF&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Bilibili: https://www.bilibili.com/video/BV1w4411q7x6?from&lt;code&gt;search&amp;seid&lt;/code&gt;7852838902448285010&lt;/li&gt;
-&lt;li&gt;Book: Carl M. Bender, Steven A. Orszag, Advanced Mathematical Methods for …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
-&lt;h2&gt;Information&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;原出处: https://www.perimeterinstitute.ca/video-library/collection/11/12-psi-mathematical-physics&lt;/li&gt;
-&lt;li&gt;可以看自动生成的字幕: &lt;a href='https://www.youtube.com/playlist?list=PLzcd6SoIscwjHuWRE38UXWG92uq0Sy4UF'&gt;https://www.youtube.com/playlist?list=PLzcd6SoIscwjHuWRE38UXWG92uq0Sy4UF&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Bilibili: https://www.bilibili.com/video/BV1w4411q7x6?from&lt;code&gt;search&amp;seid&lt;/code&gt;7852838902448285010&lt;/li&gt;
-&lt;li&gt;Book: Carl M. Bender, Steven A. Orszag, Advanced Mathematical Methods for Scientists and Engineers I Asympotic Methods and Perturbation Theory, 1999&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Keywords&lt;/h2&gt;
-
-&lt;p&gt;Summation of divergent series continued.  Analytic continuation of zeta and
-gamma functions.  The anharmonic oscillator. &lt;/p&gt;
-
-&lt;h2&gt;Divergent Series Are Not Bad&lt;/h2&gt;
-
-&lt;p&gt;不收敛的级数比收敛的级数更容易提取信息.&lt;/p&gt;
-
-&lt;p&gt;接着上节课的讲. 继续算一些发散的级数求和&lt;/p&gt;
-
-$$\begin{align}
-  S = &amp; \mathcal{S} ( 1+ 2 + 4 + 8 + \cdots) \label{eq:2n}\\
-    = &amp; 1 + \mathcal{S} ( 2 + 4 + 8 + 16 \cdots)\\
-    = &amp; 1 + 2\mathcal{S} ( 1 + 2 + 4 + 8 + \cdots)
-\end{align}$$
-
-&lt;p&gt;求得 $S = -1$ . 一些正数相加竟然得到了一个负数. 实际上这些求和 really working in
-the complex plane, 而在复平面上, 没有比较数的大小一说, we give up symbol " $\, &lt;
-\,$ ". 可以用下面的方式理解这个结果. 将轴上的点投影到复平面的一个圆上
-&lt;p&gt;&lt;img src='./2020-10-08-physics-CarlBenderMathematicalPhysicsLecture5/projection.png' alt='figalt' max-width:100%&gt;&lt;p&gt;
-如图, 将 $G$ 投影到 $K$ , 将 $D$ 投影到 $J$ , 将无穷远点投影到 $C$ (在复数中, 无
-穷远点是一个点, 不像实数一样有 $+ \infty, - \infty$ 之分) . 求和所做的类似于将 $K, J, I,
-H$ 求和, 然后再将结果投影回实轴上.&lt;/p&gt;
-&lt;blockquote&gt;题外话, 将地球做成平面的地图, 也需要将球上的每一点投影到一个平面上. 这有许多投影
-方法. 其中现在许多地图采用的是 Mercator projection, 比如 Google maps 就是采取这
-种方式, 它的优点在于地图上的方向和实际方向是一致的, 国家的形状也一致, 但是面积会
-很不同. 有一个网站可以比较不同国家的真实面积: https://www.thetruesize.com/ &lt;/blockquote&gt;
-&lt;p&gt;再来求另一个 series&lt;/p&gt;
-
-$$\begin{align}
-  S =&amp; \mathcal{S}(1 + 1 + 1 + 1 + 1 + \cdots) \label{eq:sum1}\\
-    =&amp; 1 + \mathcal{S}(1 + 1 + 1 + 1 + \cdots) \\
-    =&amp; 1 + S
-\end{align}$$
-
-&lt;p&gt;因此 $S = \infty$ . 比较 (\ref{eq:2n}) 和 (\ref{eq:sum1}) 会发现一个有意思的结果,
-(\ref{eq:2n}) 的每一项都大于或等于 (\ref{eq:sum1}) , 但结果却是 $-1$ 和 $\infty$
-. 原因还是在于复数中没有大于这种说法.&lt;/p&gt;
-
-&lt;h2&gt;Meaning of What We Are Doing?&lt;/h2&gt;
-&lt;p&gt;$\zeta$ function 定义为&lt;/p&gt;
-
-$$\begin{align}
-  \zeta(z) = \sum_{n = 1}^{\infty} \frac{1}{n^z}
-\end{align}$$
-
-&lt;p&gt;其中 $z$ 是一个复数.
-$z$ 取偶数时它与 $\pi$ 有关&lt;/p&gt;
-
-$$\begin{align}
-  \zeta(2) =&amp; 1 + \frac{1}{2^2} + \frac{1}{3^2} + \cdots = \frac{\pi^2}{6} \\
-  \zeta(4) =&amp; 1 + \frac{1}{2^4} + \frac{1}{3^4} + \cdots = \frac{\pi^4}{90} \\
-  \zeta(6) =&amp; 1 + \frac{1}{2^6} + \frac{1}{3^6} + \cdots = \frac{\pi^6}{945} 
-\end{align}$$
-
-&lt;p&gt;但是奇数都无法准确的写出来. 如&lt;/p&gt;
-
-$$\begin{align}
-  \zeta(3) \approx 1.202\cdots
-\end{align}$$
-
-&lt;p&gt;叫做 Apéry's constant. $\zeta(z)$ 函数在 $z = 1$ 处有一个 singularity, $\zeta(1) =
-\infty$. 如果计算 $\zeta(0)$ , 会发现 $\zeta(0) = 1 + 1 + 1 + \cdots -\frac{1}{2}$ , 而不是前面
-用 generic machine 得出的 $\infty$  , 因为 $\zeta$ function 不满足之前提出的那两个性质.
-$\zeta$ summation 是另外一种 summation machine. 用这种求和, 会发现&lt;/p&gt;
-
-$$\begin{align}
-  \zeta(-1) = 1 + 2 + 3 + 4 + \cdots = - \frac{1}{12}
-\end{align}$$
-
-&lt;p&gt;计算 $\zeta$ function 的方法是 analytic continuation. analytic continuation 的结果
-是唯一的. function 是一个抽象的概念, 它可以有不同的 representation, 比如&lt;/p&gt;
-
-$$\begin{align}
-  f(x) = \frac{1}{1 - x} , \quad x\neq 1
-\end{align}$$
-
-&lt;p&gt;也可以有另外的表示&lt;/p&gt;
-
-$$\begin{align}
-  f(x) = \sum_{n=1}^{\infty} x^n , \quad | x | &lt; 1
-\end{align}$$
-
-&lt;p&gt;这两种表示各自有不同的适用区间. 以 $\Gamma$ function 为例, 它本身是抽象的, 它的
-Euler representation &lt;/p&gt;
-
-$$\begin{align}
-  \Gamma(x) = \int_0^{\infty} \mathrm{d}t \cdot e^{-t} t^{x-1}
-\end{align}$$
-
-&lt;p&gt;但它只在 $\mathrm{Re} x &gt; 0$ 时有效, 否则它就发散了. 但 $\Gamma$ function 在其它区域
-也是存在的, 只是需要另一个表示. $\zeta$ function 也是类似的, 那个表示在 $\zeta(0)$ 处
-doesn't work, 但是可以找到一个积分表示, 它在 $\zeta(0)$ 处是可以算出的. 回到
-$\Gamma(x)$ function , 可以用另一种表示研究它在 $\mathrm{Re}x &lt; 0$ 时的行为 &lt;/p&gt;
-
-$$\begin{align}
-  \Gamma(x) =&amp; \int_1^{\infty}\mathrm{d}t\cdot e^{-t} t^{x-1} + \int_0^1 \mathrm{d}t \cdot e^{-t} t^{x-1} 
-\end{align}$$
-
-&lt;p&gt;第一项对于任意 $x$ , 它都有良好的定义, 而第二项 $0 &lt; t &lt; 1$ ,可以做 Taylor 展开,
-$e^{-t} = \sum_{n=0}^{\infty} \frac{(-1)^n}{n!}t^n$ , 它是一致收敛, 绝对收敛的, 可以交换
-积分与求和的顺序, 因此&lt;/p&gt;
-
-$$\begin{align}
-  \int_0^1 \mathrm{d}t \cdot e^{-t} t^{x-1} 
-  = \sum_{n=0}^{\infty}\frac{(-1)^n}{n!} \int_0^1 \mathrm{d}t \cdot t^{n + x - 1}
-  = \sum_{n=0}^{\infty}\frac{(-1)^n}{n!(n + x)}
-\end{align}$$
-
-&lt;p&gt;最后的求和对 $\mathrm{Re}x &lt; 0$ 且不是整数时也可以求. 现在可以考虑 $x\to 0$ 时
-$\Gamma(x)$ 的行为. 会发现相比于求和的第一项, 所有其它项都是可以忽略的&lt;/p&gt;
-
-$$\begin{align}
-   \frac{1}{1(0 + x)} \sim \frac{1}{x} \quad \mathrm{as} \, x \to 0
-\end{align}$$
-
-&lt;p&gt;因此 $\Gamma(0) = \infty$ $\zeta$ 函数比这更加复杂, 但也是类似的操作. 对于 $\zeta(z)$ 函数来说,
-当 $z \to 1$ 时, 它是 log 发散的.&lt;/p&gt;
-
-&lt;p&gt;后面 Bender 又提到了 Casimir force 什么的. 两条平等的接近的船相互吸引 ...&lt;/p&gt;
-
-&lt;p&gt;$\Gamma$ function 并不能由 $n!$ 的表示延拓出来, 因为我们可以给它加上一个在整数上都为
-零的函数, 比如 $\sin(n\pi)$ . 所以它不是唯一的. 而 stirling 表示是可以的.&lt;/p&gt;
-
-&lt;p&gt;之后和上节课类似地, 解释了发散求和与微扰的关系.&lt;/p&gt;
-
-&lt;h2&gt;What If We Don't Know All The Terms In The Series?? WE USE CONTINUED FUNCTIONS!&lt;/h2&gt;
-
-&lt;p&gt;实际物理问题中计算微扰是很麻烦的, 所以并不能很容易地得到很多项, 往往只得到前几项.&lt;/p&gt;
-
-&lt;p&gt;Taylor 级数只在收敛半径内收敛, 但是物理上, 我想要的是收敛半径以外的结果. 有一种
-方法是把 Talyor 级数的函数表示转化成 continued functions 的表示形式.&lt;/p&gt;
-
-&lt;p&gt;如 continued exponential function. &lt;/p&gt;
-
-$$\begin{align}
-  f(x) =&amp; \sum_{n=0}^{\infty} a_n x^n \\
-       =&amp; b_0e^{b_1x e^{b_2x e^{b_3x \cdots}}}
-\end{align} $$
-
-&lt;p&gt;已知 $a_n$ 的前 $N$ 项, 可以求出 $b_n$ 的前 $N$ 项, 反之亦然. 如果所有 $b_n = 1$
-它们之间的确切关系为&lt;/p&gt;
-
-$$\begin{align}
-  \label{eq:contiExp}
-  e^{x e^{x e^{x \cdots}}} = \sum_{n=0}^{\infty} \frac{(n + 1)^{(n - 1)}}{n!}x^n
-\end{align}$$
-
-&lt;p&gt;假设通过艰难的微扰计算, 我们得到了上式的右边, 我们将它转换成上式左边的形式. 左边
-比右边的表示要好, 下面进行解释. &lt;/p&gt;
-
-&lt;p&gt;先来求一下右边的收敛半径. &lt;/p&gt;
-
-&lt;p&gt;在 $n$ 很大的时候 (stirling approximation)&lt;/p&gt;
-
-$$\begin{align}
-  n! \sim n^{n + \frac{1}{2}} e^{- n} \sqrt{2\pi},\quad \mathrm{as} \, n\to \infty
-\end{align}$$
-
-&lt;p&gt;所以(忽略可以忽略的 $1, \frac{1}{2}, \pi\cdots$ 这样可以忽略的量)&lt;/p&gt;
-
-$$\begin{align}
-  \frac{(n + 1)^{(n - 1)}}{n!} \sim \frac{n^n}{n^ne-^n} \sim e^n ,\quad \mathrm{as} \, n\to \infty
-\end{align}$$
-
-&lt;p&gt;所以 (\ref{eq:contiExp}) 右边的求和只在 $| x | &lt; \frac{1}{e}$ 内收敛.&lt;/p&gt;
-
-&lt;p&gt;接下来考虑如何计算  (\ref{eq:contiExp}) 左边. 分别计算如下 $A_n$&lt;/p&gt;
-
-$$\begin{align}
-  A_1 =&amp; e^x \\
-  A_2 =&amp; e^{x e^x} \\
-  A_3 =&amp; e^{x e^{x e^x}} \\
-    \vdots &amp;
-\end{align}$$
-
-&lt;p&gt;事实证明 sequence $\{A_n\}$ 会在一个比 (\ref{eq:contiExp}) 右边的求和更大的范围内
-收敛到一个唯一的值. 它的收敛区间的形状是一个心脏线 (Cardioid)&lt;/p&gt;
-
-&lt;p&gt;之后 Bender show 出了一张它想让同学们在周末会梦到的图片.&lt;/p&gt;
-
-&lt;h2&gt;Summary&lt;/h2&gt;
-&lt;p&gt; 
-本节的主题还是发散级数求和.&lt;/p&gt;
-
-&lt;h2&gt;Reference&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;https://en.wikipedia.org/wiki/Riemann_zeta_function&lt;/li&gt;
-&lt;/ul&gt;
-</content><category term="专业笔记"/><category term="Carl Bender"/><category term="Mathematical Physics"/><category term="Gamma Function"/><category term="Zeta Function"/></entry></feed>
+</content><category term="专业笔记"/><category term="p-wave"/><category term="Renormalization"/><category term="Scattering"/></entry></feed>

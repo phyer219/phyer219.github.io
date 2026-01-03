@@ -92,40 +92,24 @@ effect 用时较短, 做了解析推导的部分. 第二个是主要工作, 量�
 &lt;h1&gt;结尾&lt;/h1&gt;
 &lt;p&gt;有让人留恋的东西，却没有留下的勇气。&lt;/p&gt;
 </content><category term="想说"/><category term="深圳"/><category term="肠粉"/><category term="城中村"/><category term="电吉他"/></entry><entry><title>博客改版</title><link href="https://zqw.ink/2022-04-16-thinking-blog_evolution.html" rel="alternate"/><published>2022-04-16T00:00:00+08:00</published><updated>2022-04-16T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-04-16:/2022-04-16-thinking-blog_evolution.html</id><summary type="html">
-
-&lt;p&gt;这几天离开304,新版的 hexo 渲染 org-mode 有问题。也就是说只能用 304 上的电脑用老
+&lt;p&gt;这几天离开304,新版的 hexo 渲染 org-mode 有问题。也就是说只能用 304 上的电脑用老&lt;br /&gt;
 版的 hexo 写。&lt;/p&gt;
-
 &lt;p&gt;于是今天花了一天的时间，从早上 7 半 …&lt;/p&gt;</summary><content type="html">
-
-&lt;p&gt;这几天离开304,新版的 hexo 渲染 org-mode 有问题。也就是说只能用 304 上的电脑用老
+&lt;p&gt;这几天离开304,新版的 hexo 渲染 org-mode 有问题。也就是说只能用 304 上的电脑用老&lt;br /&gt;
 版的 hexo 写。&lt;/p&gt;
-
-&lt;p&gt;于是今天花了一天的时间，从早上 7 半一直到晚上 11 点版，写了这个不到 200 行的自用
+&lt;p&gt;于是今天花了一天的时间，从早上 7 半一直到晚上 11 点版，写了这个不到 200 行的自用&lt;br /&gt;
 的静态博客生成器。&lt;/p&gt;
-
 &lt;p&gt;虽然还有很多问题，不过勉强能用。&lt;/p&gt;
-
 &lt;p&gt;时间紧迫，下一次修复这些问题就不知道是什么时候了。&lt;/p&gt;
-
 &lt;h2&gt;附:之前放在首页的说明&lt;/h2&gt;
-
 &lt;p&gt;改版说明&lt;/p&gt;
-
 &lt;p&gt;由于 Hexo 升级带来各种兼容性问题，org-mode 也无法正常渲染。因此弃用 Hexo。&lt;/p&gt;
-
 &lt;p&gt;之后本博客将采用100 行左右的 python 脚本(链接到s.py) 直接生成 html。&lt;/p&gt;
-
 &lt;p&gt;因此不依赖于任何其他静态博客生成程序，可以说是从根本上杜绝了一切兼容性问题。&lt;/p&gt;
-
 &lt;p&gt;缺点在于一切动要自己写，就显得比较简陋。但这正体现了本博客极简实用的精神。&lt;/p&gt;
-
-&lt;p&gt;目前正在以非常慢的速度建设中，任何建议请直接 email 博主：zeqing6688@126.com&lt;/p&gt;
-
-&lt;p&gt;&lt;a href='https://zqw.ink/hexo_ver/'&gt;旧版&lt;/a&gt;目前仍可访问。&lt;/p&gt;
-
-
-</content><category term="想说"/><category term="hexo"/></entry><entry><title>研五上学期总结</title><link href="https://zqw.ink/2022-02-18-thinking-summary_grade_5_1.html" rel="alternate"/><published>2022-02-18T00:00:00+08:00</published><updated>2022-02-18T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-02-18:/2022-02-18-thinking-summary_grade_5_1.html</id><summary type="html">
+&lt;p&gt;目前正在以非常慢的速度建设中，任何建议请直接 email 博主：&lt;a href="mailto:zeqing6688@126.com"&gt;zeqing6688@126.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://zqw.ink/hexo_ver/"&gt;旧版&lt;/a&gt;目前仍可访问。&lt;/p&gt;
+</content><category term="想说"/><category term="blog"/><category term="hexo"/></entry><entry><title>研五上学期总结</title><link href="https://zqw.ink/2022-02-18-thinking-summary_grade_5_1.html" rel="alternate"/><published>2022-02-18T00:00:00+08:00</published><updated>2022-02-18T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-02-18:/2022-02-18-thinking-summary_grade_5_1.html</id><summary type="html">
 &lt;h2&gt;序&lt;/h2&gt;
 
 &lt;p&gt;今日返校.&lt;/p&gt;

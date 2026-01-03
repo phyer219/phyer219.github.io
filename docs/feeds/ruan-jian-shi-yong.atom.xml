@@ -374,7 +374,54 @@ if cls is None:
 &lt;p&gt;&lt;code&gt;while True:&lt;/code&gt; 是一种简单但非常强大的循环结构，广泛应用于需要不断重复某些操作的场景，如输入验证、监听服务器、生产者-消费者模型等。它可以确保程序不断运行，直到某个条件触发 &lt;code&gt;break&lt;/code&gt; 退出循环，从而灵活地控制程序的执行流程。&lt;/p&gt;
 &lt;h2&gt;Acknowledge&lt;/h2&gt;
 &lt;p&gt;ChatGPT&lt;/p&gt;
-</content><category term="软件使用"/><category term="python"/><category term="pelican"/><category term="blog"/></entry><entry><title>Arch安装deb包：为 deb 包编写 PKGBUILD 文件</title><link href="https://zqw.ink/2023-11-16-coding-makepkg-copy.html" rel="alternate"/><published>2023-11-16T00:00:00+08:00</published><updated>2023-11-16T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2023-11-16:/2023-11-16-coding-makepkg-copy.html</id><summary type="html">
+</content><category term="软件使用"/><category term="blog"/><category term="python"/><category term="pelican"/></entry><entry><title>旧版“关于”存档（存档于2026-01-03）</title><link href="https://zqw.ink/2024-10-23-coding-about_page_archive.html" rel="alternate"/><published>2024-10-23T00:00:00+08:00</published><updated>2024-10-23T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2024-10-23:/2024-10-23-coding-about_page_archive.html</id><summary type="html">
+&lt;p&gt;本博客于 2025-12-31 进行第三次升级升级。此为升级前的一些存档。&lt;/p&gt;
+&lt;h2&gt;关于我&lt;/h2&gt;
+&lt;h3&gt;联系&lt;/h3&gt;
+&lt;p&gt;请 E-mail: zeqing6688@126.com&lt;/p&gt;
+&lt;h2&gt;关于本站&lt;/h2&gt;
+&lt;p&gt;本站内容为: 只对自己负责的 …&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;本博客于 2025-12-31 进行第三次升级升级。此为升级前的一些存档。&lt;/p&gt;
+&lt;h2&gt;关于我&lt;/h2&gt;
+&lt;h3&gt;联系&lt;/h3&gt;
+&lt;p&gt;请 E-mail: zeqing6688@126.com&lt;/p&gt;
+&lt;h2&gt;关于本站&lt;/h2&gt;
+&lt;p&gt;本站内容为: 只对自己负责的学习笔记, 以及生活的牢骚.&lt;/p&gt;
+&lt;p&gt;本站是由 &lt;a href="https://getpelican.com/"&gt;Pelican&lt;/a&gt; 生成的静态博客, 托管于&lt;br /&gt;
+&lt;a href="https://github.com/phyer219/phyer219.github.io"&gt;GithubPages&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;文章的源格式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;org-mode 的格式, 由 &lt;a href="https://github.com/phyer219/phyer219.github.io.2.0/tree/main/zqwblog/renderer"&gt;zqwblog/renderer&lt;/a&gt; 渲染成 html. 由于是自己的写的包, 还有很多不完善的地方. 重复造轮子的目的是练习写程序.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;markdown, 由包 &lt;a href="https://python-markdown.github.io/"&gt;python-markdown&lt;/a&gt; 渲染.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;文章中的公式由 &lt;a href="https://www.mathjax.org/"&gt;MathJax&lt;/a&gt; 渲染.&lt;/p&gt;
+&lt;p&gt;文章中的代码块由 &lt;a href="https://highlightjs.org/"&gt;highlight.js&lt;/a&gt; 渲染.&lt;/p&gt;
+&lt;h2&gt;README 存档&lt;/h2&gt;
+&lt;p&gt;Generate by &lt;a href="https://getpelican.com/"&gt;Pelican&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Use Plugins:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/pelican-plugins/sitemap"&gt;sitemap&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Use package:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://github.com/pallets/jinja/"&gt;jinja2&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://python-markdown.github.io/"&gt;Python-Markdown&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://github.com/sgryjp/markdown_math_escape"&gt;markdown_math_escape&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://github.com/jupyter/nbformat"&gt;nbformat&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="软件使用"/><category term="blog"/><category term="about"/><category term="archive"/></entry><entry><title>Arch安装deb包：为 deb 包编写 PKGBUILD 文件</title><link href="https://zqw.ink/2023-11-16-coding-makepkg-copy.html" rel="alternate"/><published>2023-11-16T00:00:00+08:00</published><updated>2023-11-16T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2023-11-16:/2023-11-16-coding-makepkg-copy.html</id><summary type="html">
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="#%E5%89%8D%E8%A8%80"&gt;前言&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#makepkg-%E7%AE%80%E4%BB%8B"&gt;&lt;code&gt;makepkg&lt;/code&gt; 简介&lt;/a&gt;&lt;/li&gt;

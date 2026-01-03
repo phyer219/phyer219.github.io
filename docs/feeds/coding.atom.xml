@@ -1,5 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水 - coding</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/coding.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2025-12-31T00:00:00+08:00</updated><entry><title>人类对颜色的感知</title><link href="https://zqw.ink/2025-12-31-coding-color.html" rel="alternate"/><published>2025-12-31T00:00:00+08:00</published><updated>2025-12-31T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-12-31:/2025-12-31-coding-color.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水 - coding</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/coding.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2026-01-03T00:00:00+08:00</updated><entry><title>博客第三次改版</title><link href="https://zqw.ink/2026-01-03-coding-blog_3rd_version.html" rel="alternate"/><published>2026-01-03T00:00:00+08:00</published><updated>2026-01-03T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2026-01-03:/2026-01-03-coding-blog_3rd_version.html</id><summary type="html">
+&lt;p&gt;目录：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#%E6%9B%B4%E6%94%B9%E4%B8%BB%E9%A2%98"&gt;更改主题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E5%A2%9E%E5%8A%A0%E9%A3%8E%E6%A0%BC%E6%8C%87%E5%8D%97"&gt;增加风格指南&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2%E5%86%85%E9%83%A8%E7%9A%84%E5%8D%9A%E6%96%87%E5%BC%95%E7%94%A8"&gt;优化博客内部的博文引用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E6%94%B9%E7%94%A8-markdown-it-py-%E6%B8%B2%E6%9F%93-markdown"&gt;改用 markdown-it-py 渲染 markdown&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E6%9B%B4%E6%94%B9%E5%AF%BC%E5%90%91%E6%A0%8F"&gt;更改导向栏&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E5%A2%9E%E5%8A%A0-rss-%E8%AE%A2%E9%98%85"&gt;增加 RSS 订阅&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E6%8F%90%E9%AB%98%E6%A0%87%E7%AD%BE%E7%9A%84%E7%94%A8%E9%80%94"&gt;提高标签的用途&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E5%86%B3%E5%AE%9A%E6%94%BE%E5%BC%83-org-mode-%E6%A0%BC%E5%BC%8F"&gt;决定放弃 …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
+&lt;p&gt;目录：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#%E6%9B%B4%E6%94%B9%E4%B8%BB%E9%A2%98"&gt;更改主题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E5%A2%9E%E5%8A%A0%E9%A3%8E%E6%A0%BC%E6%8C%87%E5%8D%97"&gt;增加风格指南&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2%E5%86%85%E9%83%A8%E7%9A%84%E5%8D%9A%E6%96%87%E5%BC%95%E7%94%A8"&gt;优化博客内部的博文引用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E6%94%B9%E7%94%A8-markdown-it-py-%E6%B8%B2%E6%9F%93-markdown"&gt;改用 markdown-it-py 渲染 markdown&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E6%9B%B4%E6%94%B9%E5%AF%BC%E5%90%91%E6%A0%8F"&gt;更改导向栏&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E5%A2%9E%E5%8A%A0-rss-%E8%AE%A2%E9%98%85"&gt;增加 RSS 订阅&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E6%8F%90%E9%AB%98%E6%A0%87%E7%AD%BE%E7%9A%84%E7%94%A8%E9%80%94"&gt;提高标签的用途&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E5%86%B3%E5%AE%9A%E6%94%BE%E5%BC%83-org-mode-%E6%A0%BC%E5%BC%8F"&gt;决定放弃 Org Mode 格式&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;本博客首版于 2018 年 9 月 7 日，用 &lt;a href="https://hexo.io"&gt;Hexo&lt;/a&gt; 从 markdown 生成静态页面，发表了第一篇文章：&lt;a href="./2018-09-07-coding-typora_note.html"&gt;Typora 使用笔记&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;2022 年 4 月 16 日进行了&lt;a href="./2022-04-16-thinking-blog_evolution.html"&gt;第一次改版&lt;/a&gt; 用 python 重写生成引擎和主题。&lt;/p&gt;
+&lt;p&gt;2024 年 10 月 24 日进行了&lt;a href="./2024-10-24-pelican_blog.html"&gt;第二次改版&lt;/a&gt;后，采用了 Pelican 引擎。&lt;/p&gt;
+&lt;p&gt;在 2025 末，2026 初，这是对本博客进行了第三次改版。下面详细解释具体的更改。&lt;/p&gt;
+&lt;h2&gt;更改主题&lt;/h2&gt;
+&lt;p&gt;在 AI 的帮助下，利用 vibe coding，去掉了 banner，增加明暗两套本色。更改后，感观更加“平凡”，易于阅读。&lt;/p&gt;
+&lt;h2&gt;增加风格指南&lt;/h2&gt;
+&lt;p&gt;为了格式统一，提升博客质量，便于迁移，增加了一系列&lt;a href="./2025-12-30-coding-style_guide.html"&gt;风格指南&lt;/a&gt;。&lt;/p&gt;
+&lt;h2&gt;优化博客内部的博文引用&lt;/h2&gt;
+&lt;p&gt;之前的博客应该可用在不同博文之间引用，但没有统一的格式，我也没有用过。现在在 markdown 格式的博文中统一格式为 &lt;code&gt;[comment](./xxxx-xx-xx-xx-xxxx.html)&lt;/code&gt; 的格式。在渲染时用正则替换，将相对引用替换为网址绝对引用。这样能保证在本地的 markdown 编辑器中，能很好的预览和跳转，生成 html 后也能支持链接跳转。&lt;/p&gt;
+&lt;p&gt;此外，增加不同博文之间的引用，可以提升关联性，以此提升写作体验和读者体验，也利于搜索引擎的索引。&lt;/p&gt;
+&lt;h2&gt;改用 markdown-it-py 渲染 markdown&lt;/h2&gt;
+&lt;p&gt;之前用的 &lt;a href="https://python-markdown.github.io/"&gt;Python-Markdown&lt;/a&gt;，并用 &lt;a href="https://github.com/sgryjp/markdown_math_escape"&gt;markdown_math_escape&lt;/a&gt; 处理数学公式。但是 Python-Markdown 与一些现代的 markdown 格式（&lt;a href="https://github.com/DavidAnson/markdownlint/blob/v0.40.0/doc/md007.md"&gt;比如用两个空格区分不同级别的列表&lt;/a&gt;）兼容性不好，因此换用支持更灵活的 &lt;a href="https://spec.commonmark.org/"&gt;CommonMark spec&lt;/a&gt; 的 &lt;a href="https://github.com/executablebooks/markdown-it-py"&gt;markdown-it-py&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;其实这些都无所谓，重要的是博客的内容。而目前 markdown-it-py 刚好实现了我的需要。&lt;/p&gt;
+&lt;h2&gt;更改导向栏&lt;/h2&gt;
+&lt;p&gt;一些博客文章的质量一般，但是也不应该删除，至少做为记录。所以改版后的导航栏分成以下几部分&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Home：主页，显示本博客的引言。&lt;/li&gt;
+&lt;li&gt;Physics：物理，或者科研相关的内容。是筛选过质量过后的列表。&lt;/li&gt;
+&lt;li&gt;Blog：生活相关的内容。是筛选过质量过后的列表。&lt;/li&gt;
+&lt;li&gt;Coding：编程相关的内容。是筛选过质量过后的列表。&lt;/li&gt;
+&lt;li&gt;All：所有的博客文章列表。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;增加 RSS 订阅&lt;/h2&gt;
+&lt;p&gt;受到 &lt;a href="https://wiwi.blog/blog/you-should-use-rss"&gt;Wiwi&lt;/a&gt; 的影响，我现在自己也重新用起了 RSS，所以本站也应该支持 RSS 订阅。&lt;/p&gt;
+&lt;h2&gt;提高标签的用途&lt;/h2&gt;
+&lt;p&gt;一些成系列的内容，可以用一个标签连起来，放到首页展示。&lt;/p&gt;
+&lt;h2&gt;决定放弃 Org Mode 格式&lt;/h2&gt;
+&lt;p&gt;作为一名前 Emacs 用户，我曾经用 &lt;a href="https://orgmode.org/"&gt;Org Mode&lt;/a&gt; 记录和组织一些内容。但是它和可移植性显然没有 markdown 强。&lt;/p&gt;
+</content><category term="coding"/><category term="blog"/><category term="vibe coding"/></entry><entry><title>人类对颜色的感知</title><link href="https://zqw.ink/2025-12-31-coding-color.html" rel="alternate"/><published>2025-12-31T00:00:00+08:00</published><updated>2025-12-31T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-12-31:/2025-12-31-coding-color.html</id><summary type="html">
 &lt;p&gt;人为什么会感觉到不同的颜色？颜色为什么可以用三基色混合而成？让我们从光的质出发来理解这些问题。&lt;/p&gt;
 &lt;h2&gt;人眼对光的感 …&lt;/h2&gt;</summary><content type="html">
 &lt;p&gt;人为什么会感觉到不同的颜色？颜色为什么可以用三基色混合而成？让我们从光的质出发来理解这些问题。&lt;/p&gt;
