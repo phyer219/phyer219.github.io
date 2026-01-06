@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水 - coding</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/coding.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2026-01-03T00:00:00+08:00</updated><entry><title>博客第三次改版</title><link href="https://zqw.ink/2026-01-03-coding-blog_3rd_version.html" rel="alternate"/><published>2026-01-03T00:00:00+08:00</published><updated>2026-01-03T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2026-01-03:/2026-01-03-coding-blog_3rd_version.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水 - coding</title><link href="https://zqw.ink/" rel="alternate"></link><link href="https://zqw.ink/feeds/coding.atom.xml" rel="self"></link><id>https://zqw.ink/</id><updated>2026-01-03T00:00:00+08:00</updated><entry><title>博客第三次改版</title><link href="https://zqw.ink/2026-01-03-coding-blog_3rd_version.html" rel="alternate"></link><published>2026-01-03T00:00:00+08:00</published><updated>2026-01-03T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2026-01-03:/2026-01-03-coding-blog_3rd_version.html</id><summary type="html">
 &lt;p&gt;本博客首版于 2018 年 9 月 7 日，用 &lt;a href="https://hexo.io"&gt;Hexo&lt;/a&gt; 从 markdown 生成静态页面，发表了第一篇文章：&lt;a href="./2018-09-07-coding-typora_note.html"&gt;Typora 使用笔记&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;2022 年 4 月 16 日进行了&lt;a href="./2022-04-16-thinking-blog_evolution.html"&gt;第一次改版&lt;/a&gt; 用 …&lt;/p&gt;</summary><content type="html">
 &lt;p&gt;本博客首版于 2018 年 9 月 7 日，用 &lt;a href="https://hexo.io"&gt;Hexo&lt;/a&gt; 从 markdown 生成静态页面，发表了第一篇文章：&lt;a href="./2018-09-07-coding-typora_note.html"&gt;Typora 使用笔记&lt;/a&gt;。&lt;/p&gt;
@@ -43,7 +43,7 @@
 &lt;p&gt;一些成系列的内容，可以用一个标签连起来，放到首页展示。&lt;/p&gt;
 &lt;h2 id="决定放弃-org-mode-格式"&gt;决定放弃 Org Mode 格式&lt;/h2&gt;
 &lt;p&gt;作为一名前 Emacs 用户，我曾经用 &lt;a href="https://orgmode.org/"&gt;Org Mode&lt;/a&gt; 记录和组织一些内容。但是它和可移植性显然没有 markdown 强。&lt;/p&gt;
-</content><category term="coding"/><category term="blog"/><category term="vibe coding"/></entry><entry><title>人类对颜色的感知</title><link href="https://zqw.ink/2025-12-31-coding-color.html" rel="alternate"/><published>2025-12-31T00:00:00+08:00</published><updated>2025-12-31T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-12-31:/2025-12-31-coding-color.html</id><summary type="html">
+</content><category term="coding"></category><category term="blog"></category><category term="vibe coding"></category></entry><entry><title>人类对颜色的感知</title><link href="https://zqw.ink/2025-12-31-coding-color.html" rel="alternate"></link><published>2025-12-31T00:00:00+08:00</published><updated>2025-12-31T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-12-31:/2025-12-31-coding-color.html</id><summary type="html">
 &lt;p&gt;人为什么会感觉到不同的颜色？颜色为什么可以用三基色混合而成？让我们从光的质出发来理解这些问题。&lt;/p&gt;
 &lt;p&gt;目录：&lt;/p&gt;
 &lt;ul&gt;
@@ -261,7 +261,7 @@ $$&lt;p&gt;这样 $x, y$ 取值在 &lt;eq&gt;0&lt;/eq&gt; 和 &lt;eq&gt;1&lt;/eq
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/section&gt;
-</content><category term="coding"/><category term="颜色"/></entry><entry><title>个人博客风格指南（备忘）</title><link href="https://zqw.ink/2025-12-30-coding-style_guide.html" rel="alternate"/><published>2025-12-30T00:00:00+08:00</published><updated>2025-12-30T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-12-30:/2025-12-30-coding-style_guide.html</id><summary type="html">
+</content><category term="coding"></category><category term="颜色"></category></entry><entry><title>个人博客风格指南（备忘）</title><link href="https://zqw.ink/2025-12-30-coding-style_guide.html" rel="alternate"></link><published>2025-12-30T00:00:00+08:00</published><updated>2025-12-30T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-12-30:/2025-12-30-coding-style_guide.html</id><summary type="html">
 &lt;h2 id="博客文件名yyyy-mm-dd-category-blog_slugmd"&gt;博客文件名：&lt;code&gt;yyyy-mm-dd-category-blog_slug.md&lt;/code&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;日期（yyyy-mm-dd）&lt;/li&gt;
@@ -310,7 +310,7 @@ tags:
 &lt;li&gt;中文括号中为英文，不加空格。如：风格指南（Style guide）。&lt;/li&gt;
 &lt;li&gt;逗号，句号等后为英文，按英文的习惯，加一个空格。&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="coding"/><category term="style guide"/></entry><entry><title>用 certbot 手动获取受信任的 SSL证，并实现对 NextCloud 容器 80 端口的 SSL 访问</title><link href="https://zqw.ink/2025-09-14-coding-certbot.html" rel="alternate"/><published>2025-09-14T00:00:00+08:00</published><updated>2025-09-14T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-09-14:/2025-09-14-coding-certbot.html</id><summary type="html">
+</content><category term="coding"></category><category term="style guide"></category></entry><entry><title>用 certbot 手动获取受信任的 SSL证，并实现对 NextCloud 容器 80 端口的 SSL 访问</title><link href="https://zqw.ink/2025-09-14-coding-certbot.html" rel="alternate"></link><published>2025-09-14T00:00:00+08:00</published><updated>2025-09-14T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-09-14:/2025-09-14-coding-certbot.html</id><summary type="html">
 &lt;h2 id="ssl加密"&gt;SSL加密&lt;/h2&gt;
 &lt;p&gt;在使用自己搭建的服务，如 &lt;code&gt;emby&lt;/code&gt; ,&lt;code&gt;nextcloud&lt;/code&gt;, &lt;code&gt;immich&lt;/code&gt; 时，如果使用域名访问，当没有进行受信任的 SSL 加密时，对应的手机 app 会连不上，提醒，或 …&lt;/p&gt;</summary><content type="html">
 &lt;h2 id="ssl加密"&gt;SSL加密&lt;/h2&gt;
@@ -438,7 +438,7 @@ WantedBy=default.target
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id="参考资料"&gt;参考资料&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://wiki.archlinux.org/title/Certbot"&gt;ArchWiki: Certbot&lt;/a&gt;&lt;/p&gt;
-</content><category term="coding"/><category term="SSL"/><category term="certbot"/></entry><entry><title>Plotly 绘制动图</title><link href="https://zqw.ink/2025-06-18-coding-plotly_animation.html" rel="alternate"/><published>2025-06-18T00:00:00+08:00</published><updated>2025-06-18T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-06-18:/2025-06-18-coding-plotly_animation.html</id><summary type="html">
+</content><category term="coding"></category><category term="SSL"></category><category term="certbot"></category></entry><entry><title>Plotly 绘制动图</title><link href="https://zqw.ink/2025-06-18-coding-plotly_animation.html" rel="alternate"></link><published>2025-06-18T00:00:00+08:00</published><updated>2025-06-18T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-06-18:/2025-06-18-coding-plotly_animation.html</id><summary type="html">
 &lt;h2 id="基础版本"&gt;基础版本&lt;/h2&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;import plotly.graph_objects as go
 import numpy as np
@@ -516,7 +516,7 @@ fig.write_html(file=&amp;quot;pro_ver.html&amp;quot;, include_mathjax='cdn', aut
 &lt;iframe src="2025-06-18-coding-plotly_animation/pro_ver.html" width="100%" height=600&gt;&lt;/iframe&gt;
 &lt;h2 id="参考"&gt;参考&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://plotly.com/python/animations/"&gt;Plotly Animations&lt;/a&gt;&lt;/p&gt;
-</content><category term="coding"/><category term="plotly"/><category term="python"/></entry><entry><title>Linux 使用笔记（进阶）</title><link href="https://zqw.ink/2025-05-10-coding-rocklinux.html" rel="alternate"/><published>2025-05-10T00:00:00+08:00</published><updated>2025-05-10T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-05-10:/2025-05-10-coding-rocklinux.html</id><summary type="html">
+</content><category term="coding"></category><category term="plotly"></category><category term="python"></category></entry><entry><title>Linux 使用笔记（进阶）</title><link href="https://zqw.ink/2025-05-10-coding-rocklinux.html" rel="alternate"></link><published>2025-05-10T00:00:00+08:00</published><updated>2025-05-10T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-05-10:/2025-05-10-coding-rocklinux.html</id><summary type="html">
 &lt;h2 id="引言"&gt;引言&lt;/h2&gt;
 &lt;p&gt;从 2018 年开始入门 Linux，已经 7 年了。&lt;br /&gt;
 从 Deepin 到 Manjaro，再到 Rocky Linux。&lt;br /&gt;
@@ -908,4 +908,4 @@ wp search-replace 'http://xxx.xxx' 'http://xxx.xxx.xxx.xxx:xxxx' --all-tables --
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id="致谢"&gt;致谢&lt;/h2&gt;
 &lt;p&gt;所有为 ChatGPT 提供训练素材的人。&lt;/p&gt;
-</content><category term="coding"/><category term="SELinux"/><category term="RockyLinux"/></entry></feed>
+</content><category term="coding"></category><category term="SELinux"></category><category term="RockyLinux"></category></entry></feed>

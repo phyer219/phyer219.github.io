@@ -10,7 +10,7 @@
     href="https://zqw.ink/feeds/all.atom.xml"
     type="application/atom+xml" rel="alternate" title="从冰上的水 Full Atom Feed" />
   <link
-    href="https://zqw.ink/feeds/zhuan-ye-bi-ji.atom.xml"
+    href="https://zqw.ink/feeds/physics.atom.xml"
     type="application/atom+xml" rel="alternate" title="从冰上的水 Categories Atom Feed" />
   <link rel="stylesheet" type="text/css" href="https://zqw.ink/theme/css/style.css" />
   <!-- SEO: site-level structured data (WebSite) -->
@@ -82,7 +82,7 @@
 
 
   <!-- SEO: page description for search results -->
-    <meta name="description" content="准备 High Order Residue Cauchy Integral Formula $$\begin{align} f(z) = \frac{1}{2\pi \mathrm{i}} \oint_C \frac{f(\xi)}{\xi - z} \mathrm{d}\xi \end{align}$$ 求..." />
+    <meta name="description" content="准备 High Order Residue Cauchy Integral Formula $$ \begin{align} f(z) = \frac{1}{2\pi \mathrm{i}} \oint_C \frac{f(\xi)}{\xi - z} \mathrm{d}\xi \end{align} $$求..." />
 
     <meta name="tags" content="数学" />
     <meta name="tags" content="留数定理" />
@@ -153,123 +153,120 @@
 
 <section class="post-meta">
     <p>2020-12-07</p>
-    <p>-<a class="post-link" href="https://zqw.ink/category/zhuan-ye-bi-ji.html">专业笔记</a></p>
+    <p>-<a class="post-link" href="https://zqw.ink/category/physics.html">physics</a></p>
 </section>
 
 <section class="markdown-body">
   
-<h2>准备</h2>
-
-<h3>High Order Residue</h3>
-
+<h2 id="准备">准备</h2>
+<h3 id="high-order-residue">High Order Residue</h3>
 <p>Cauchy Integral Formula</p>
+$$
 
-$$\begin{align}
+\begin{align}
   f(z) = \frac{1}{2\pi \mathrm{i}} \oint_C \frac{f(\xi)}{\xi - z} \mathrm{d}\xi
-\end{align}$$
+\end{align}
 
-<p>求 $n$ 阶导数</p>
+$$<p>求 <eq>n</eq> 阶导数</p>
+$$
 
-$$\begin{align}
-  f^{(n)}(z) = \frac{\mathrm{d}^n f}{\mathrm{d} z^n} 
+\begin{align}
+  f^{(n)}(z) = \frac{\mathrm{d}^n f}{\mathrm{d} z^n}
   = \frac{n!}{2\pi \mathrm{i}} \oint_C \frac{f(\xi)}{(\xi - z)^{n+1}} \mathrm{d}\xi
-\end{align}$$
+\end{align}
 
-
-<h3>复数的方根</h3>
-
+$$<h3 id="复数的方根">复数的方根</h3>
 <p>对于 $z = re^{\mathrm{i}\phi}$</p>
+$$
 
-$$\begin{align}
+\begin{align}
   z^{ \frac{1}{n} } = r^{\frac{1}{n}} e^{\mathrm{i} \left(\frac{\theta_0}{n} + k \frac{2\pi}{n}\right)}
-\end{align}$$
+\end{align}
 
-<p>也就是有 $n$ 个方根, $k = 0, 1, \cdots , n-1$</p>
+$$<p>也就是有 <eq>n</eq> 个方根, $k = 0, 1, \cdots , n-1$</p>
+<h2 id="contour-integral-i">Contour Integral I</h2>
+$$
 
-<h2>Contour Integral I</h2>
-
-
-$$\begin{align}
+\begin{align}
   I_1 =&\int \frac{\mathrm{d}^3q}{(2 \pi)^3} \frac{1}{(q^2 - p^2 - \mathrm{i}\epsilon)^2} \\
   = & \frac{4\pi}{(2\pi)^3}\int_0^{\infty} \mathrm{d}q \frac{q^2}{(q^2 - p^2 - \mathrm{i}\epsilon)^2}
-\end{align}$$
+\end{align}
 
-<p>它有两个二阶奇点 $R$ 和 $-R$ , 并且是偶函数.
-<p><img src='./2020-12-07-physics-ContourIntegral/I1.png' alt='figalt' max-width:100%><p>
-它在远处是 $\frac{1}{q^2} \to 0$ , 所以采用图中的围道. 只要计算 $z = R$ 处的留数即
+$$<p>它有两个二阶奇点 <eq>R</eq> 和 $-R$ , 并且是偶函数.<br />
+<img src="./2020-12-07-physics-ContourIntegral/I1.png" alt="I1" /><br />
+它在远处是 $\frac{1}{q^2} \to 0$ , 所以采用图中的围道. 只要计算 $z = R$ 处的留数即<br />
 可.</p>
+$$
 
-$$\begin{align}
+\begin{align}
   I_1 =& \frac{1}{2} \frac{4\pi}{(2\pi)^3}\int_{-\infty}^{\infty} \mathrm{d}q \frac{q^2}{(q^2 - p^2 - \mathrm{i}\epsilon)^2} \\
      =& \frac{1}{2} \frac{4\pi}{(2\pi)^3}\oint_C \mathrm{d}q \frac{q^2}{(q^2 - p^2 - \mathrm{i}\epsilon)^2} \\
      =& \frac{1}{2} \frac{4\pi}{(2\pi)^3} 2\pi \mathrm{i} \lim_{q\to R} \left\{
         \frac{\mathrm{d}}{\mathrm{d}q} \left[\frac{q^2(q - R)^2}{(q - R)^2(q + R)^2}\right] \right\} \\
      =& \frac{1}{2} \frac{4\pi}{(2\pi)^3} 2\pi \mathrm{i} \frac{1}{4R} \\
      =& \frac{\mathrm{i}}{8\pi p}
-\end{align}$$
+\end{align}
 
-<p>最后一个等号取了 $\epsilon \to 0$ .</p>
+$$<p>最后一个等号取了 $\epsilon \to 0$ .</p>
+<h2 id="contour-integral-ii">Contour Integral II</h2>
+$$
 
-<h2>Contour Integral II</h2>
-
-
-$$\begin{align}
-  I_2 =& \int \frac{\mathrm{d}^3q}{(2\pi)^3} 
+\begin{align}
+  I_2 =& \int \frac{\mathrm{d}^3q}{(2\pi)^3}
          \frac{e^{\mathrm{i}\vec{q}\cdot \vec{r}}}{(q^2 - p^2 - \mathrm{i}\epsilon)^2} \\
      =& \frac{2\pi}{(2\pi)^3}\frac{1}{\mathrm{i}r} \int_0^{\infty}\mathrm{d}q
       \frac{q (e^{\mathrm{i}qr} - e^{-\mathrm{i}qr})}{(q^2 - p^2 - \mathrm{i}\epsilon)^2}
-\end{align}$$
+\end{align}
 
-<p>与 $I_1$ 类似, 也是一个偶函数, 有两个二阶 pole. 不同之处在于, 它在无穷远处的积分
+$$<p>与 $I_1$ 类似, 也是一个偶函数, 有两个二阶 pole. 不同之处在于, 它在无穷远处的积分<br />
 为零需要由 Jordan's Lemma 来判定.</p>
+$$
 
-$$\begin{align}
-  I_2 =& \frac{2\pi}{(2\pi)^3}\frac{1}{\mathrm{i}r} \frac{1}{2} 
+\begin{align}
+  I_2 =& \frac{2\pi}{(2\pi)^3}\frac{1}{\mathrm{i}r} \frac{1}{2}
          \left[\int_{-\infty}^{\infty}\mathrm{d}q \frac{q e^{\mathrm{i}qr} }{(q^2 - p^2 - \mathrm{i}\epsilon)^2}
             + \int_{-\infty}^{\infty}\mathrm{d}q \frac{-q e^{\mathrm{-i}qr} }{(q^2 - p^2 - \mathrm{i}\epsilon)^2}
         \right]
-\end{align}$$
+\end{align}
 
-
-<p><p><img src='./2020-12-07-physics-ContourIntegral/I2.png' alt='figalt' max-width:100%><p>
-根据 Jordan's Lemma, 第一项在上半平面无穷远的圆弧上积分为为, 第二项是下半平面,
-因此取不同的围道计算两个积分. </p>
-
+$$<p><img src="./2020-12-07-physics-ContourIntegral/I2.png" alt="I2" /><br />
+根据 Jordan's Lemma, 第一项在上半平面无穷远的圆弧上积分为为, 第二项是下半平面,<br />
+因此取不同的围道计算两个积分.</p>
 <p>第一项</p>
+$$
 
-$$\begin{align}
+\begin{align}
    &\int_{-\infty}^{\infty}\mathrm{d}q \frac{q e^{\mathrm{i}qr} }{(q^2 - p^2 - \mathrm{i}\epsilon)^2} \\
     = &\oint_{C_+}\mathrm{d}q \frac{q e^{\mathrm{i}qr} }{(q^2 - p^2 - \mathrm{i}\epsilon)^2} \\
     = &2\pi \mathrm{i} \lim_{q\to R}\left\{ \frac{\mathrm{d}}{\mathrm{d}q}\left[
                \frac{q e^{\mathrm{i}qr }(q - R)^2 }{(q - R)^2(q + R)^2} \right]
              \right\}   \\
    = & 2\pi \mathrm{i} \frac{i r e^{\mathrm{i}Rr}}{4R}
-\end{align}$$
+\end{align}
 
+$$<p>第二项 (注意此围道绕向为顺时针)</p>
+$$
 
-<p>第二项 (注意此围道绕向为顺时针)</p>
-
-$$\begin{align}
+\begin{align}
    &\int_{-\infty}^{\infty}\mathrm{d}q \frac{- q e^{-\mathrm{i}qr} }{(q^2 - p^2 - \mathrm{i}\epsilon)^2} \\
     = &-\oint_{C_-}\mathrm{d}q \frac{-q e^{-\mathrm{i}qr} }{(q^2 - p^2 - \mathrm{i}\epsilon)^2} \\
     = &2\pi \mathrm{i} \lim_{q\to -R}\left\{ \frac{\mathrm{d}}{\mathrm{d}q}\left[
                \frac{ q e^{-\mathrm{i}qr }(q + R)^2 }{(q - R)^2(q + R)^2} \right]
              \right\}   \\
    = & 2\pi \mathrm{i} \frac{i r e^{\mathrm{i}Rr}}{4R}
-\end{align}$$
+\end{align}
 
-<p>取 $\epsilon \to 0, \Rightarrow R \to p$ , 得</p>
+$$<p>取 $\epsilon \to 0, \Rightarrow R \to p$ , 得</p>
+$$
 
-$$\begin{align}
-  I_2 =& \frac{2\pi}{(2\pi)^3}\frac{1}{\mathrm{i}r} \frac{1}{2} 
+\begin{align}
+  I_2 =& \frac{2\pi}{(2\pi)^3}\frac{1}{\mathrm{i}r} \frac{1}{2}
            \times \left(2\pi \mathrm{i} \frac{i r e^{\mathrm{i}Rr}}{4R}
               + 2\pi \mathrm{i} \frac{i r e^{\mathrm{i}Rr}}{4R} \right) \\
      =& \frac{\mathrm{i} e^{\mathrm{i} p r}}{8\pi p}
-\end{align}$$
+\end{align}
 
-
-<h2>Reference</h2>
-
+$$<h2 id="reference">Reference</h2>
 <ul>
 <li>PhysRevA.78.053606, Eqn A13(b), A14(b)</li>
 </ul>
