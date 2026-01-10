@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水 - physics</title><link href="https://zqw.ink/" rel="alternate"></link><link href="https://zqw.ink/feeds/physics.atom.xml" rel="self"></link><id>https://zqw.ink/</id><updated>2025-06-16T00:00:00+08:00</updated><entry><title>Rotating Wave Approximation Numerical Check</title><link href="https://zqw.ink/2025-06-16-physics-rwa_check.html" rel="alternate"></link><published>2025-06-16T00:00:00+08:00</published><updated>2025-06-16T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-06-16:/2025-06-16-physics-rwa_check.html</id><summary type="html">&lt;pre&gt;&lt;code class="language-python"&gt;import numpy as np
+<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水 - physics</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/physics.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2025-06-16T00:00:00+08:00</updated><entry><title>Rotating Wave Approximation Numerical Check</title><link href="https://zqw.ink/2025-06-16-physics-rwa_check.html" rel="alternate"/><published>2025-06-16T00:00:00+08:00</published><updated>2025-06-16T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-06-16:/2025-06-16-physics-rwa_check.html</id><summary type="html">&lt;pre&gt;&lt;code class="language-python"&gt;import numpy as np
 import qutip as qtp
 import plotly.graph_objects as go
 import plotly.io as pio
@@ -97,7 +97,7 @@ fig.write_html('check2.html', include_mathjax=&amp;quot;cdn&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;a href="2025-06-16-physics-rwa_check/check.py"&gt;check.py&lt;/a&gt;&lt;/p&gt;
 &lt;iframe src="2025-06-16-physics-rwa_check/check1.html" width="100%" height="600"&gt;&lt;/iframe&gt;
-&lt;iframe src="2025-06-16-physics-rwa_check/check2.html" width="100%" height="600"&gt;&lt;/iframe&gt;</content><category term="physics"></category><category term="rotating wave approximation"></category><category term="ploly"></category></entry><entry><title>围道积分进阶</title><link href="https://zqw.ink/2020-12-07-physics-contourintegral.html" rel="alternate"></link><published>2020-12-07T00:00:00+08:00</published><updated>2020-12-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-12-07:/2020-12-07-physics-contourintegral.html</id><summary type="html">
+&lt;iframe src="2025-06-16-physics-rwa_check/check2.html" width="100%" height="600"&gt;&lt;/iframe&gt;</content><category term="physics"/><category term="rotating wave approximation"/><category term="ploly"/></entry><entry><title>围道积分进阶</title><link href="https://zqw.ink/2020-12-07-physics-contourintegral.html" rel="alternate"/><published>2020-12-07T00:00:00+08:00</published><updated>2020-12-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-12-07:/2020-12-07-physics-contourintegral.html</id><summary type="html">
 &lt;h2 id="准备"&gt;准备&lt;/h2&gt;
 &lt;h3 id="high-order-residue"&gt;High Order Residue&lt;/h3&gt;
 &lt;p&gt;Cauchy Integral Formula&lt;/p&gt;
@@ -225,7 +225,7 @@ $$&lt;h2 id="reference"&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;PhysRevA.78.053606, Eqn A13(b), A14(b)&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="physics"></category><category term="数学"></category><category term="留数定理"></category><category term="复变函数"></category><category term="contour integral"></category></entry><entry><title>二次量子化笔记 (update 06/Dec/2019)</title><link href="https://zqw.ink/2018-09-27-physics-er-ci-liang-zi-hua.html" rel="alternate"></link><published>2018-09-27T00:00:00+08:00</published><updated>2018-09-27T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-27:/2018-09-27-physics-er-ci-liang-zi-hua.html</id><summary type="html">
+</content><category term="physics"/><category term="数学"/><category term="留数定理"/><category term="复变函数"/><category term="contour integral"/></entry><entry><title>二次量子化笔记 (update 06/Dec/2019)</title><link href="https://zqw.ink/2018-09-27-physics-er-ci-liang-zi-hua.html" rel="alternate"/><published>2018-09-27T00:00:00+08:00</published><updated>2018-09-27T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-27:/2018-09-27-physics-er-ci-liang-zi-hua.html</id><summary type="html">
 &lt;h2 id="单体力学量"&gt;单体力学量&lt;/h2&gt;
 &lt;h3 id="本征表象"&gt;本征表象&lt;/h3&gt;
 &lt;p&gt;&lt;eq&gt;N&lt;/eq&gt; 个粒子组成的系统，对于单个粒子的力学量 $\hat{f}$ ，其第 &lt;eq&gt;i&lt;/eq&gt; 个本征值为 $f_i$ ，本征态为 $\mid i \rangle$ ，即&lt;br /&gt;
@@ -682,7 +682,7 @@ $$&lt;br /&gt;
 &lt;li&gt;&lt;a href="http://www.phys.ens.fr/~mora/lecture-second-quanti.pdf"&gt;http://www.phys.ens.fr/~mora/lecture-second-quanti.pdf&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;06/Dec/2019 update 时 F. Y. 的讨论&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="physics"></category><category term="物理"></category><category term="量子力学"></category><category term="二次量子化"></category></entry><entry><title>Fourier transform 总结</title><link href="https://zqw.ink/2018-09-07-physics-fourier-transform-zong-jie.html" rel="alternate"></link><published>2018-09-07T00:00:00+08:00</published><updated>2018-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-07:/2018-09-07-physics-fourier-transform-zong-jie.html</id><summary type="html">&lt;h2&gt;总的分类&lt;/h2&gt;
+</content><category term="physics"/><category term="物理"/><category term="量子力学"/><category term="二次量子化"/></entry><entry><title>Fourier transform 总结</title><link href="https://zqw.ink/2018-09-07-physics-fourier-transform-zong-jie.html" rel="alternate"/><published>2018-09-07T00:00:00+08:00</published><updated>2018-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-07:/2018-09-07-physics-fourier-transform-zong-jie.html</id><summary type="html">&lt;h2&gt;总的分类&lt;/h2&gt;
 
 &lt;p&gt;根据变量的连续与否，F.T.总共有三种。&lt;/p&gt;
 
@@ -814,7 +814,7 @@ $$\begin{align*}
 \sum_l e^{-i\frac{2\pi}{N}k'l} e^{i\frac{2\pi}{N}kl}=N\delta_{kk'}
 \end{align*}$$
 
-</content><category term="physics"></category><category term="Fourier"></category><category term="数学"></category></entry><entry><title>特殊二阶矩阵的本征值求解</title><link href="https://zqw.ink/2018-09-07-physics-te-shu-er-jie-ju-zhen-de-ben-zheng-zhi-qiu-jie.html" rel="alternate"></link><published>2018-09-07T00:00:00+08:00</published><updated>2018-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-07:/2018-09-07-physics-te-shu-er-jie-ju-zhen-de-ben-zheng-zhi-qiu-jie.html</id><summary type="html">
+</content><category term="physics"/><category term="Fourier"/><category term="数学"/></entry><entry><title>特殊二阶矩阵的本征值求解</title><link href="https://zqw.ink/2018-09-07-physics-te-shu-er-jie-ju-zhen-de-ben-zheng-zhi-qiu-jie.html" rel="alternate"/><published>2018-09-07T00:00:00+08:00</published><updated>2018-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-07:/2018-09-07-physics-te-shu-er-jie-ju-zhen-de-ben-zheng-zhi-qiu-jie.html</id><summary type="html">
 &lt;h2 id="对角矩阵元相等"&gt;对角矩阵元相等&lt;/h2&gt;
 &lt;p&gt;形如&lt;br /&gt;
 $$
@@ -849,4 +849,4 @@ $$&lt;/p&gt;
 $$
 \lambda = \frac{a+c}{2} \pm \sqrt{b^2 +\frac{(a - c)^2}{4}}
 $$&lt;/p&gt;
-</content><category term="physics"></category><category term="数学"></category><category term="矩阵"></category></entry></feed>
+</content><category term="physics"/><category term="数学"/><category term="矩阵"/></entry></feed>

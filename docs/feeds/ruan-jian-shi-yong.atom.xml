@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水 - 软件使用</title><link href="https://zqw.ink/" rel="alternate"></link><link href="https://zqw.ink/feeds/ruan-jian-shi-yong.atom.xml" rel="self"></link><id>https://zqw.ink/</id><updated>2024-10-26T00:00:00+08:00</updated><entry><title>在博客中嵌入 JavaScript 之 Plotly.js</title><link href="https://zqw.ink/2024-10-26-coding-plotlyjs.html" rel="alternate"></link><published>2024-10-26T00:00:00+08:00</published><updated>2024-10-26T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2024-10-26:/2024-10-26-coding-plotlyjs.html</id><summary type="html">&lt;script src="https://unpkg.com/mathjs@13.2.0/lib/browser/math.js"&gt;&lt;/script&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水 - 软件使用</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/ruan-jian-shi-yong.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2024-10-26T00:00:00+08:00</updated><entry><title>在博客中嵌入 JavaScript 之 Plotly.js</title><link href="https://zqw.ink/2024-10-26-coding-plotlyjs.html" rel="alternate"/><published>2024-10-26T00:00:00+08:00</published><updated>2024-10-26T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2024-10-26:/2024-10-26-coding-plotlyjs.html</id><summary type="html">&lt;script src="https://unpkg.com/mathjs@13.2.0/lib/browser/math.js"&gt;&lt;/script&gt;
 &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.35.0/plotly.min.js"&gt;&lt;/script&gt;
 &lt;form id="form", class="img-like"&gt;
   &lt;label for="eq"&gt;Enter an equation: f(x)=&lt;/label&gt;
@@ -156,7 +156,7 @@ document.getElementById('form').onsubmit = function (event) {
 &lt;li&gt;&lt;a href="https://github.com/plotly/plotly.js/pull/6073"&gt;https://github.com/plotly/plotly.js/pull/6073&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;ChatGPT 4o&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="软件使用"></category><category term="javascript"></category><category term="plotly"></category></entry><entry><title>博客第二次改版的说明及一些笔记</title><link href="https://zqw.ink/2024-10-24-pelican_blog.html" rel="alternate"></link><published>2024-10-24T00:00:00+08:00</published><updated>2024-10-24T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2024-10-24:/2024-10-24-pelican_blog.html</id><summary type="html">
+</content><category term="软件使用"/><category term="javascript"/><category term="plotly"/></entry><entry><title>博客第二次改版的说明及一些笔记</title><link href="https://zqw.ink/2024-10-24-pelican_blog.html" rel="alternate"/><published>2024-10-24T00:00:00+08:00</published><updated>2024-10-24T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2024-10-24:/2024-10-24-pelican_blog.html</id><summary type="html">
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="#%E5%8D%87%E7%BA%A7%E8%AF%B4%E6%98%8E"&gt;升级说明&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#%E5%8D%87%E7%BA%A7%E5%8D%9A%E5%AE%A2%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E7%AC%94%E8%AE%B0%E7%94%B1-chatgpt-%E7%94%9F%E6%88%90"&gt;升级博客过程中的笔记(由 ChatGPT 生成)&lt;/a&gt;
@@ -374,7 +374,7 @@ if cls is None:
 &lt;p&gt;&lt;code&gt;while True:&lt;/code&gt; 是一种简单但非常强大的循环结构，广泛应用于需要不断重复某些操作的场景，如输入验证、监听服务器、生产者-消费者模型等。它可以确保程序不断运行，直到某个条件触发 &lt;code&gt;break&lt;/code&gt; 退出循环，从而灵活地控制程序的执行流程。&lt;/p&gt;
 &lt;h2 id="acknowledge"&gt;Acknowledge&lt;/h2&gt;
 &lt;p&gt;ChatGPT&lt;/p&gt;
-</content><category term="软件使用"></category><category term="blog"></category><category term="python"></category><category term="pelican"></category></entry><entry><title>旧版“关于”存档（存档于2026-01-03）</title><link href="https://zqw.ink/2024-10-23-coding-about_page_archive.html" rel="alternate"></link><published>2024-10-23T00:00:00+08:00</published><updated>2024-10-23T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2024-10-23:/2024-10-23-coding-about_page_archive.html</id><summary type="html">
+</content><category term="软件使用"/><category term="blog"/><category term="python"/><category term="pelican"/></entry><entry><title>旧版“关于”存档（存档于2026-01-03）</title><link href="https://zqw.ink/2024-10-23-coding-about_page_archive.html" rel="alternate"/><published>2024-10-23T00:00:00+08:00</published><updated>2024-10-23T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2024-10-23:/2024-10-23-coding-about_page_archive.html</id><summary type="html">
 &lt;p&gt;本博客于 2025-12-31 进行第三次升级升级。此为升级前的一些存档。&lt;/p&gt;
 &lt;h2 id="关于我"&gt;关于我&lt;/h2&gt;
 &lt;h3 id="联系"&gt;联系&lt;/h3&gt;
@@ -421,7 +421,7 @@ if cls is None:
 &lt;p&gt;&lt;a href="https://github.com/jupyter/nbformat"&gt;nbformat&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="软件使用"></category><category term="blog"></category><category term="about"></category><category term="archive"></category></entry><entry><title>Arch安装deb包：为 deb 包编写 PKGBUILD 文件</title><link href="https://zqw.ink/2023-11-16-coding-makepkg-copy.html" rel="alternate"></link><published>2023-11-16T00:00:00+08:00</published><updated>2023-11-16T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2023-11-16:/2023-11-16-coding-makepkg-copy.html</id><summary type="html">
+</content><category term="软件使用"/><category term="blog"/><category term="about"/><category term="archive"/></entry><entry><title>Arch安装deb包：为 deb 包编写 PKGBUILD 文件</title><link href="https://zqw.ink/2023-11-16-coding-makepkg-copy.html" rel="alternate"/><published>2023-11-16T00:00:00+08:00</published><updated>2023-11-16T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2023-11-16:/2023-11-16-coding-makepkg-copy.html</id><summary type="html">
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="#%E5%89%8D%E8%A8%80"&gt;前言&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#makepkg-%E7%AE%80%E4%BB%8B"&gt;&lt;code&gt;makepkg&lt;/code&gt; 简介&lt;/a&gt;&lt;/li&gt;
@@ -579,7 +579,7 @@ package() {
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;这里说明一下， &lt;code&gt;deb&lt;/code&gt; 包全部解压后会有两个文件夹，&lt;code&gt;control&lt;/code&gt; 和 &lt;code&gt;data&lt;/code&gt; 。&lt;code&gt;control&lt;/code&gt; 类似于我们的  &lt;code&gt;PKGBUILD&lt;/code&gt; ，包含了软件的信息和安装过程中进行的一些操作。 &lt;code&gt;data&lt;/code&gt; 类似于 &lt;code&gt;{pkgdir}&lt;/code&gt; ，包含了需要安装的所有文件。因此我们要做的就是把 &lt;code&gt;deb&lt;/code&gt; 全部解压，然后将 &lt;code&gt;data&lt;/code&gt; 目录打包。&lt;/p&gt;
-</content><category term="软件使用"></category><category term="Arch"></category><category term="manjaro"></category><category term="makepkg"></category><category term="PKGBUILD"></category></entry><entry><title>matplotlib 科研作图总结</title><link href="https://zqw.ink/2023-10-12-coding-matplotlib.html" rel="alternate"></link><published>2023-10-12T00:00:00+08:00</published><updated>2023-10-12T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2023-10-12:/2023-10-12-coding-matplotlib.html</id><summary type="html">&lt;!-- toc --&gt;
+</content><category term="软件使用"/><category term="Arch"/><category term="manjaro"/><category term="makepkg"/><category term="PKGBUILD"/></entry><entry><title>matplotlib 科研作图总结</title><link href="https://zqw.ink/2023-10-12-coding-matplotlib.html" rel="alternate"/><published>2023-10-12T00:00:00+08:00</published><updated>2023-10-12T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2023-10-12:/2023-10-12-coding-matplotlib.html</id><summary type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
 &lt;p&gt;结合近几年的经验，把&lt;code&gt;matplotlib&lt;/code&gt;作图常用的脚本集合在此。这包含了之前一些关于&lt;code&gt;matplotlib&lt;/code&gt;作图的博文。&lt;/p&gt;
 &lt;h1 id="作图风格"&gt;作图风格&lt;/h1&gt;
@@ -936,7 +936,7 @@ fig.savefig(get_file_name(__file__)[:-4] + '.png', dpi=200, transparent=True)
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://matplotlib.org/stable/"&gt;https://matplotlib.org/stable/&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
-</content><category term="软件使用"></category><category term="python"></category><category term="matplotlib"></category></entry><entry><title>Intel AI Analytics Toolkit 加速 numpy, scipy</title><link href="https://zqw.ink/2023-04-23-coding-intel_python.html" rel="alternate"></link><published>2023-04-23T00:00:00+08:00</published><updated>2023-04-23T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2023-04-23:/2023-04-23-coding-intel_python.html</id><summary type="html">
+</content><category term="软件使用"/><category term="python"/><category term="matplotlib"/></entry><entry><title>Intel AI Analytics Toolkit 加速 numpy, scipy</title><link href="https://zqw.ink/2023-04-23-coding-intel_python.html" rel="alternate"/><published>2023-04-23T00:00:00+08:00</published><updated>2023-04-23T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2023-04-23:/2023-04-23-coding-intel_python.html</id><summary type="html">
 &lt;h2&gt;MATLAB&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class="language-matlab"&gt;clear all;
@@ -1020,7 +1020,7 @@ print("Elapsed time is ", toc-tic)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;&lt;a href='https://www.intel.com/content/www/us/en/developer/tools/oneapi/ai-analytics-toolkit.html#gs.w44gqo'&gt;Intel® AI Analytics Toolkit (AI Kit)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href='https://www.intel.com/content/www/us/en/developer/tools/oneapi/distribution-for-python.html#gs.w44b4p'&gt;Intel® Distribution for Python&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="软件使用"></category><category term="python"></category><category term="intel python"></category></entry><entry><title>博客2.0版本的介绍存档</title><link href="https://zqw.ink/2022-09-20-coding-blog20.html" rel="alternate"></link><published>2022-09-20T00:00:00+08:00</published><updated>2022-09-20T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-09-20:/2022-09-20-coding-blog20.html</id><summary type="html">
+</content><category term="软件使用"/><category term="python"/><category term="intel python"/></entry><entry><title>博客2.0版本的介绍存档</title><link href="https://zqw.ink/2022-09-20-coding-blog20.html" rel="alternate"/><published>2022-09-20T00:00:00+08:00</published><updated>2022-09-20T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-09-20:/2022-09-20-coding-blog20.html</id><summary type="html">
 &lt;h1 id="关于我"&gt;关于我&lt;/h1&gt;
 &lt;p&gt;AMO PhD student&lt;/p&gt;
 &lt;p&gt;研究课题: RF spectrum of strongly interacting Bose gases across d-wave resonance&lt;/p&gt;
@@ -1069,7 +1069,7 @@ print("Elapsed time is ", toc-tic)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;Hexo 等, 更新之后有时会产生一些兼容问题&lt;/li&gt;
 &lt;li&gt;难以随心所欲的修改博客的样式, 添加一些新的页面, 组件&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="软件使用"></category><category term="blog"></category><category term="archive"></category></entry><entry><title>最简单的调用网站api的程序</title><link href="https://zqw.ink/2022-07-31-coding-py_api.html" rel="alternate"></link><published>2022-07-31T00:00:00+08:00</published><updated>2022-07-31T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-07-31:/2022-07-31-coding-py_api.html</id><summary type="html">
+</content><category term="软件使用"/><category term="blog"/><category term="archive"/></entry><entry><title>最简单的调用网站api的程序</title><link href="https://zqw.ink/2022-07-31-coding-py_api.html" rel="alternate"/><published>2022-07-31T00:00:00+08:00</published><updated>2022-07-31T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-07-31:/2022-07-31-coding-py_api.html</id><summary type="html">
 &lt;p&gt;在 themoviedb 上注册账号，申请自己的应用，获得一个 api 。之后就可以利用网站的资源进行开发了。下面是一个最简短的例子。（如果长 …&lt;/p&gt;</summary><content type="html">
 &lt;p&gt;在 themoviedb 上注册账号，申请自己的应用，获得一个 api 。之后就可以利用网站的资源进行开发了。下面是一个最简短的例子。（如果长时间没有反应，那就是
 api.themoviedb.org 被污染了，可以手动找到 ip，然后修改 host 文件）&lt;/p&gt;
@@ -1084,7 +1084,7 @@ for i in r.json()['results']:
 &lt;p&gt;返回结果如下：&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;200
 {'backdrop_path': '/cPqA1G5odxY7uVJ0i81z5E2tSSW.jpg', 'first_air_date': '2022-07-02', 'genre_ids': [16, 10759, 35], 'id': 154494, 'name': 'Lycoris Recoil', 'origin_country': ['JP'], 'original_language': 'ja', 'original_name': 'リコリス・リコイル', 'overview': "For these peaceful days――there’s a secret behind it all. A secret organization that prevents crimes: “DA - Direct Attack”. And their group of all-girl agents: “Lycoris”. This peaceful everyday life is all thanks to these young girls. The elite Chisato Nishikigi is the strongest Lycoris agent of all time. Alongside is Takina Inoue, the talented but mysterious Lycoris. They work together at one of its branches–Café LycoReco. Here, the orders this café takes range from coffee and sweets to childcare, shopping, teaching Japanese to foreign students, etc. It's mostly tasks unbefitting of Lycoris. The free-spirited and optimistic pacifist, Chisato. And the cool-headed and efficient Takina. The chaotic everyday lives of this mismatched duo begin!", 'popularity': 112.401, 'poster_path': '/dfGf0Ti3BEKpBpVCVtEXKTjQjNR.jpg', 'vote_average': 7.7, 'vote_count': 10}&lt;/code&gt;&lt;/pre&gt;
-</content><category term="软件使用"></category><category term="python"></category><category term="api"></category></entry><entry><title>scipy 数值求解微分方程, 方程组, 复微分方程组</title><link href="https://zqw.ink/2021-12-09-coding-py_ode.html" rel="alternate"></link><published>2021-12-09T00:00:00+08:00</published><updated>2021-12-09T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-12-09:/2021-12-09-coding-py_ode.html</id><summary type="html">
+</content><category term="软件使用"/><category term="python"/><category term="api"/></entry><entry><title>scipy 数值求解微分方程, 方程组, 复微分方程组</title><link href="https://zqw.ink/2021-12-09-coding-py_ode.html" rel="alternate"/><published>2021-12-09T00:00:00+08:00</published><updated>2021-12-09T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-12-09:/2021-12-09-coding-py_ode.html</id><summary type="html">
 &lt;p&gt;Some examples&lt;/p&gt;
 
 &lt;h2&gt;1D Real&lt;/h2&gt;
@@ -1366,7 +1366,7 @@ plt.savefig('2d-complex.png')&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;&lt;a href='https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.odeint.html'&gt;scipy.integrate.odeint&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href='https://en.wikipedia.org/wiki/Van_der_Pol_oscillator'&gt;wikipedia: Van der Pol oscillator&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="软件使用"></category><category term="python"></category><category term="ode"></category><category term="Rabi"></category><category term="Van der Pol oscillator"></category></entry><entry><title>python matplotlib 画图小技巧: 自定义字体</title><link href="https://zqw.ink/2021-11-10-coding-matplot_fonts.html" rel="alternate"></link><published>2021-11-10T00:00:00+08:00</published><updated>2021-11-10T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-11-10:/2021-11-10-coding-matplot_fonts.html</id><summary type="html">
+</content><category term="软件使用"/><category term="python"/><category term="ode"/><category term="Rabi"/><category term="Van der Pol oscillator"/></entry><entry><title>python matplotlib 画图小技巧: 自定义字体</title><link href="https://zqw.ink/2021-11-10-coding-matplot_fonts.html" rel="alternate"/><published>2021-11-10T00:00:00+08:00</published><updated>2021-11-10T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-11-10:/2021-11-10-coding-matplot_fonts.html</id><summary type="html">
 &lt;h2&gt;问题&lt;/h2&gt;
 
 &lt;p&gt;在用 &lt;code&gt;matplotlib&lt;/code&gt; 画图时, 使用自定义字体. 比如从一个下载好的 &lt;code&gt;.ttf&lt;/code&gt; 字体文件加载,
@@ -1431,7 +1431,7 @@ plt.savefig('method2.png')&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;&lt;a href='https://matplotlib.org/stable/tutorials/introductory/customizing.html#customizing-with-matplotlibrc-files'&gt;Matplotlib Documentation: A sample matplotlibrc file&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href='https://matplotlib.org/stable/users/dflt_style_changes.html?highlight=math%20font#math-text'&gt;Matplotlib Documentation: Math text&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="软件使用"></category><category term="python"></category><category term="matplotlib"></category><category term="font_manager"></category><category term="mathtext"></category></entry><entry><title>python matplotlib 画图小技巧: 虚线的圆与虚线的五角星</title><link href="https://zqw.ink/2021-10-21-coding-dash_circle.html" rel="alternate"></link><published>2021-10-21T00:00:00+08:00</published><updated>2021-10-21T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-10-21:/2021-10-21-coding-dash_circle.html</id><summary type="html">
+</content><category term="软件使用"/><category term="python"/><category term="matplotlib"/><category term="font_manager"/><category term="mathtext"/></entry><entry><title>python matplotlib 画图小技巧: 虚线的圆与虚线的五角星</title><link href="https://zqw.ink/2021-10-21-coding-dash_circle.html" rel="alternate"/><published>2021-10-21T00:00:00+08:00</published><updated>2021-10-21T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-10-21:/2021-10-21-coding-dash_circle.html</id><summary type="html">
 &lt;h2&gt;问题一:&lt;/h2&gt;
 
 &lt;p&gt;在散点图上, 用一个虚线的圆圈标出某个数据点&lt;/p&gt;
@@ -1490,7 +1490,7 @@ plt.savefig('fig2.png')&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;&lt;a href='https://stackoverflow.com/questions/38316746/how-to-draw-a-marker-with-dashed-dotted-edge-in-matplotlib/69658923#69658923'&gt;https://stackoverflow.com/questions/38316746/how-to-draw-a-marker-with-dashed-dotted-edge-in-matplotlib/69658923#69658923&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href='https://matplotlib.org/stable/gallery/shapes_and_collections/marker_path.html'&gt;Marker Path&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="软件使用"></category><category term="python"></category><category term="matplotlib"></category><category term="marker"></category><category term="dashed"></category></entry><entry><title>scipy.integrate.quad 是如何取点的, 以及记录所计算的点(update 4/April/2023)</title><link href="https://zqw.ink/2021-09-16-physics-scipy_integrate.html" rel="alternate"></link><published>2021-09-16T00:00:00+08:00</published><updated>2021-09-16T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-09-16:/2021-09-16-physics-scipy_integrate.html</id><summary type="html">
+</content><category term="软件使用"/><category term="python"/><category term="matplotlib"/><category term="marker"/><category term="dashed"/></entry><entry><title>scipy.integrate.quad 是如何取点的, 以及记录所计算的点(update 4/April/2023)</title><link href="https://zqw.ink/2021-09-16-physics-scipy_integrate.html" rel="alternate"/><published>2021-09-16T00:00:00+08:00</published><updated>2021-09-16T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-09-16:/2021-09-16-physics-scipy_integrate.html</id><summary type="html">
 &lt;h2&gt;探究 &lt;code&gt;scipy.integrate.quad&lt;/code&gt; 取点的方式&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href='2021-09-16-physics-scipy_integrate/code.py'&gt;code.py&lt;/a&gt;&lt;/p&gt;
@@ -1594,10 +1594,10 @@ plt.savefig('quad_recorded.png', transparent=True)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;&lt;a href='https://en.wikipedia.org/wiki/QUADPACK'&gt;wikipedia: QUADPACK&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href='https://en.wikipedia.org/wiki/Adaptive_quadrature'&gt;wikipedia: Adaptive quadrature&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="软件使用"></category><category term="python"></category><category term="quadrature"></category></entry><entry><title>beamer 笔记</title><link href="https://zqw.ink/2021-06-24-coding-beamer_note.html" rel="alternate"></link><published>2021-06-24T00:00:00+08:00</published><updated>2021-06-24T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-06-24:/2021-06-24-coding-beamer_note.html</id><content type="html">
+</content><category term="软件使用"/><category term="python"/><category term="quadrature"/></entry><entry><title>beamer 笔记</title><link href="https://zqw.ink/2021-06-24-coding-beamer_note.html" rel="alternate"/><published>2021-06-24T00:00:00+08:00</published><updated>2021-06-24T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-06-24:/2021-06-24-coding-beamer_note.html</id><content type="html">
 &lt;p&gt;[[file:./2021-06-24-coding-beamer_note/beamer_note.pdf][PDF version]]
 [[file:./2021-06-24-coding-beamer_note/beamer_note.tex][source file]]&lt;/p&gt;
-</content><category term="软件使用"></category><category term="latex"></category><category term="beamer"></category></entry><entry><title>round-off error, unstable method, mpmath(update 15/Mar/2022)</title><link href="https://zqw.ink/2021-05-15-coding-unstable_method.html" rel="alternate"></link><published>2021-05-15T00:00:00+08:00</published><updated>2021-05-15T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-05-15:/2021-05-15-coding-unstable_method.html</id><summary type="html">
+</content><category term="软件使用"/><category term="latex"/><category term="beamer"/></entry><entry><title>round-off error, unstable method, mpmath(update 15/Mar/2022)</title><link href="https://zqw.ink/2021-05-15-coding-unstable_method.html" rel="alternate"/><published>2021-05-15T00:00:00+08:00</published><updated>2021-05-15T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-05-15:/2021-05-15-coding-unstable_method.html</id><summary type="html">
 
 &lt;h2&gt;Round-off error&lt;/h2&gt;
 
@@ -1829,7 +1829,7 @@ result of mpmath mpf type: (2.472099451021771, 7.496323446432029e-07)&lt;/code&g
 &lt;li&gt;&lt;a href='https://scicomp.stackexchange.com/questions/21483/how-to-avoid-the-round-off-errors-in-the-larger-calculations'&gt;https://scicomp.stackexchange.com/questions/21483/how-to-avoid-the-round-off-errors-in-the-larger-calculations&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Fan Yang 的讨论&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="软件使用"></category><category term="numerical stability"></category><category term="unstable method"></category><category term="round-off error"></category><category term="mpmath"></category><category term="integral"></category></entry><entry><title>C 中的指针与动态内存分配</title><link href="https://zqw.ink/2021-05-14-coding-c_pointer_malloc.html" rel="alternate"></link><published>2021-05-14T00:00:00+08:00</published><updated>2021-05-14T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-05-14:/2021-05-14-coding-c_pointer_malloc.html</id><summary type="html">
+</content><category term="软件使用"/><category term="numerical stability"/><category term="unstable method"/><category term="round-off error"/><category term="mpmath"/><category term="integral"/></entry><entry><title>C 中的指针与动态内存分配</title><link href="https://zqw.ink/2021-05-14-coding-c_pointer_malloc.html" rel="alternate"/><published>2021-05-14T00:00:00+08:00</published><updated>2021-05-14T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-05-14:/2021-05-14-coding-c_pointer_malloc.html</id><summary type="html">
 &lt;p&gt;主要是为 Reference 存个书签.&lt;/p&gt;
 
 &lt;h2&gt;Pointers&lt;/h2&gt;
@@ -2143,7 +2143,7 @@ int main()
 &lt;li&gt;&lt;a href='https://zh.wikipedia.org/zh-cn/%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F'&gt;wikipedia: 内存泄漏&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href='https://en.wikipedia.org/wiki/Dereference_operator'&gt;wikipeida: Dereference operator&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="软件使用"></category><category term="C"></category><category term="array"></category><category term="malloc"></category><category term="memory leak"></category></entry><entry><title>记一次折腾上头经历: lsp-pyright vs. flycheck &amp; flake8</title><link href="https://zqw.ink/2021-03-19-coding-lsp_flycheck.html" rel="alternate"></link><published>2021-03-19T00:00:00+08:00</published><updated>2021-03-19T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-03-19:/2021-03-19-coding-lsp_flycheck.html</id><summary type="html">
+</content><category term="软件使用"/><category term="C"/><category term="array"/><category term="malloc"/><category term="memory leak"/></entry><entry><title>记一次折腾上头经历: lsp-pyright vs. flycheck &amp; flake8</title><link href="https://zqw.ink/2021-03-19-coding-lsp_flycheck.html" rel="alternate"/><published>2021-03-19T00:00:00+08:00</published><updated>2021-03-19T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-03-19:/2021-03-19-coding-lsp_flycheck.html</id><summary type="html">
 &lt;p&gt;起因于昨天下午.&lt;/p&gt;
 
 &lt;p&gt;在科研课题久久没有进展之后, 突然有了一些想法. 遂写程序.&lt;/p&gt;
@@ -2198,7 +2198,7 @@ int main()
 
 &lt;p&gt;这一切都不是因为问题有多复杂, 只是看问题缺乏知识, 流于表面. 或许科研也是这样, 大
 家都这样, 就习以为常了.&lt;/p&gt;
-</content><category term="软件使用"></category><category term="emacs"></category><category term="lsp"></category><category term="pyright"></category><category term="flycheck"></category><category term="flake8"></category></entry><entry><title>欢迎来到 Emacs 主义至上教室(lisp note -_-)</title><link href="https://zqw.ink/2021-01-20-coding-lisp.html" rel="alternate"></link><published>2021-01-20T00:00:00+08:00</published><updated>2021-01-20T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-01-20:/2021-01-20-coding-lisp.html</id><summary type="html">
+</content><category term="软件使用"/><category term="emacs"/><category term="lsp"/><category term="pyright"/><category term="flycheck"/><category term="flake8"/></entry><entry><title>欢迎来到 Emacs 主义至上教室(lisp note -_-)</title><link href="https://zqw.ink/2021-01-20-coding-lisp.html" rel="alternate"/><published>2021-01-20T00:00:00+08:00</published><updated>2021-01-20T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-01-20:/2021-01-20-coding-lisp.html</id><summary type="html">
 &lt;h2&gt;Intro&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class="language-lisp"&gt;  i i i i i i i       ooooo    o        ooooooo   ooooo   ooooo
@@ -2826,7 +2826,7 @@ foo&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;http://smacs.github.io/elisp/01-hello-world.html&lt;/li&gt;
 &lt;li&gt;https://www.emacswiki.org/emacs/&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="软件使用"></category><category term="lisp"></category><category term="emacs"></category></entry><entry><title>python 并行的简单例子</title><link href="https://zqw.ink/2021-01-13-coding-multiprocessor.html" rel="alternate"></link><published>2021-01-13T00:00:00+08:00</published><updated>2021-01-13T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-01-13:/2021-01-13-coding-multiprocessor.html</id><summary type="html">
+</content><category term="软件使用"/><category term="lisp"/><category term="emacs"/></entry><entry><title>python 并行的简单例子</title><link href="https://zqw.ink/2021-01-13-coding-multiprocessor.html" rel="alternate"/><published>2021-01-13T00:00:00+08:00</published><updated>2021-01-13T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-01-13:/2021-01-13-coding-multiprocessor.html</id><summary type="html">
 
 &lt;pre&gt;&lt;code class="language-python"&gt;import multiprocessing as mp
 import time
@@ -2914,7 +2914,7 @@ Finished 'loop_multi_processing' in 3.00595757691190 secs&lt;/code&gt;&lt;/pre&g
 
 &lt;p&gt;从结果上看, 串行与并行当然给出相同的结果. 电脑上有 8 核, 但速度只提升了约 3 倍,
 而不是 8 倍, 是核之间的任务分配与数据交换耗时还是我的程序有问题, 目前并不清楚.&lt;/p&gt;
-</content><category term="软件使用"></category><category term="python"></category></entry><entry><title>如何将 python 程序打包成一个 package</title><link href="https://zqw.ink/2021-01-13-coding-setup_tools.html" rel="alternate"></link><published>2021-01-13T00:00:00+08:00</published><updated>2021-01-13T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-01-13:/2021-01-13-coding-setup_tools.html</id><summary type="html">
+</content><category term="软件使用"/><category term="python"/></entry><entry><title>如何将 python 程序打包成一个 package</title><link href="https://zqw.ink/2021-01-13-coding-setup_tools.html" rel="alternate"/><published>2021-01-13T00:00:00+08:00</published><updated>2021-01-13T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-01-13:/2021-01-13-coding-setup_tools.html</id><summary type="html">
 &lt;h2&gt;示例&lt;/h2&gt;
 &lt;p&gt;一个简单的示例. 比如写了一个名为 saudade 的包. 目录结构为(用 tree 生成, 不错的程
 序, 之前没用过)&lt;/p&gt;
@@ -3100,7 +3100,7 @@ class PrincipalValueInt():
         imag *= 1/self.coeff[0] # bug No.2 分子要除以 a 才行.
         return imag&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;包中的另一些函数.&lt;/p&gt;
-</content><category term="软件使用"></category><category term="python"></category></entry><entry><title>SSD 备忘与趣事</title><link href="https://zqw.ink/2020-11-29-coding-newssd.html" rel="alternate"></link><published>2020-11-29T00:00:00+08:00</published><updated>2020-11-29T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-11-29:/2020-11-29-coding-newssd.html</id><summary type="html">&lt;!-- toc --&gt;
+</content><category term="软件使用"/><category term="python"/></entry><entry><title>SSD 备忘与趣事</title><link href="https://zqw.ink/2020-11-29-coding-newssd.html" rel="alternate"/><published>2020-11-29T00:00:00+08:00</published><updated>2020-11-29T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-11-29:/2020-11-29-coding-newssd.html</id><summary type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
 &lt;h1 id="引言"&gt;引言&lt;/h1&gt;
 &lt;p&gt;办公室电脑原来的机械硬盘实在有点不行了, 换了一块新的 SSD.&lt;/p&gt;
@@ -3198,7 +3198,7 @@ class PrincipalValueInt():
 &lt;pre&gt;&lt;code class="language-shell"&gt;sudo modprobe vboxdrv
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;之后即可正常使用&lt;/p&gt;
-</content><category term="软件使用"></category><category term="SSD"></category><category term="manjaro"></category></entry><entry><title>matplotlib.animation 制作动图</title><link href="https://zqw.ink/2020-09-18-coding-animation_plot.html" rel="alternate"></link><published>2020-09-18T00:00:00+08:00</published><updated>2020-09-18T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-09-18:/2020-09-18-coding-animation_plot.html</id><summary type="html">
+</content><category term="软件使用"/><category term="SSD"/><category term="manjaro"/></entry><entry><title>matplotlib.animation 制作动图</title><link href="https://zqw.ink/2020-09-18-coding-animation_plot.html" rel="alternate"/><published>2020-09-18T00:00:00+08:00</published><updated>2020-09-18T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-09-18:/2020-09-18-coding-animation_plot.html</id><summary type="html">
 &lt;pre&gt;&lt;code class="language-python"&gt;import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as ani
@@ -3255,7 +3255,7 @@ writer = ani.FFMpegFileWriter(fps=60, metadata=dict(artist='Me'), bitrate=180)
 plt.show()&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;p&gt;&lt;img src='./2020-09-18-coding-animation_plot/Harmonic.gif' alt='figalt' max-width:100%&gt;&lt;p&gt;&lt;/p&gt;
-</content><category term="软件使用"></category><category term="python"></category></entry><entry><title>坎坷的 wakatime-mode</title><link href="https://zqw.ink/2020-07-28-coding-wakatime.html" rel="alternate"></link><published>2020-07-28T00:00:00+08:00</published><updated>2020-07-28T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-07-28:/2020-07-28-coding-wakatime.html</id><summary type="html">
+</content><category term="软件使用"/><category term="python"/></entry><entry><title>坎坷的 wakatime-mode</title><link href="https://zqw.ink/2020-07-28-coding-wakatime.html" rel="alternate"/><published>2020-07-28T00:00:00+08:00</published><updated>2020-07-28T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-07-28:/2020-07-28-coding-wakatime.html</id><summary type="html">
 &lt;p&gt;(许久没有更新折腾类的了.)&lt;/p&gt;
 
 &lt;h2&gt;ailien invasion&lt;/h2&gt;
@@ -3346,7 +3346,7 @@ wakatime-mode.elc , 定位到 Error 104 对应的语句&lt;/p&gt;
 完美解决.&lt;/p&gt;
 
 &lt;p&gt;对我来说是解决了, 如果有能力的话, 还是把这个 bug 报给开发都比较好. 我还是算了...&lt;/p&gt;
-</content><category term="软件使用"></category><category term="emacs"></category><category term="wakatime"></category></entry><entry><title>Django 笔记：CentOS+Apache+Mariadb+mod_wsgi+Django</title><link href="https://zqw.ink/2020-02-03-physics-django.html" rel="alternate"></link><published>2020-02-03T00:00:00+08:00</published><updated>2020-02-03T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-02-03:/2020-02-03-physics-django.html</id><summary type="html">&lt;!-- toc --&gt;
+</content><category term="软件使用"/><category term="emacs"/><category term="wakatime"/></entry><entry><title>Django 笔记：CentOS+Apache+Mariadb+mod_wsgi+Django</title><link href="https://zqw.ink/2020-02-03-physics-django.html" rel="alternate"/><published>2020-02-03T00:00:00+08:00</published><updated>2020-02-03T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-02-03:/2020-02-03-physics-django.html</id><summary type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
 &lt;h1 id="写在前面的声明"&gt;写在前面的声明&lt;/h1&gt;
 &lt;p&gt;本人非专业人士，对于写程序只是业余爱好。以下内容仅供参考，我一个业余人士也不能保证内容的准确 …&lt;/p&gt;</summary><content type="html">&lt;!-- toc --&gt;
@@ -4465,7 +4465,7 @@ def poetry(request):
 &lt;li&gt;https://docs.djangoproject.com/zh-hans/3.0/intro/tutorial01/&lt;/li&gt;
 &lt;li&gt;www.google.com&lt;/li&gt;
 &lt;/ol&gt;
-</content><category term="软件使用"></category><category term="Django"></category><category term="Mariadb"></category><category term="Python"></category><category term="mod_wsgi"></category><category term="Apache"></category></entry><entry><title>面向对象, 花式作图</title><link href="https://zqw.ink/2019-10-25-coding-objectplot.html" rel="alternate"></link><published>2019-10-25T00:00:00+08:00</published><updated>2019-10-25T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2019-10-25:/2019-10-25-coding-objectplot.html</id><summary type="html">
+</content><category term="软件使用"/><category term="Django"/><category term="Mariadb"/><category term="Python"/><category term="mod_wsgi"/><category term="Apache"/></entry><entry><title>面向对象, 花式作图</title><link href="https://zqw.ink/2019-10-25-coding-objectplot.html" rel="alternate"/><published>2019-10-25T00:00:00+08:00</published><updated>2019-10-25T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2019-10-25:/2019-10-25-coding-objectplot.html</id><summary type="html">
 &lt;h2&gt;面向对象&lt;/h2&gt;
 
 &lt;p&gt;面向对象写程序, 是一直在对一些对象作一些操作.&lt;/p&gt;
@@ -4589,7 +4589,7 @@ myFigure.savefig('myFigure.jpg', bbox_inches = 'tight', facecolor='pink')&lt;/co
 &lt;p&gt;https://www.zhihu.com/question/51745620&lt;/p&gt;
 
 &lt;p&gt;https://zhuanlan.zhihu.com/p/35983270&lt;/p&gt;
-</content><category term="软件使用"></category><category term="python"></category><category term="matplotlib"></category></entry><entry><title>Git 使用备忘</title><link href="https://zqw.ink/2019-04-18-coding-git-shi-yong-bei-wang.html" rel="alternate"></link><published>2019-04-18T00:00:00+08:00</published><updated>2019-04-18T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2019-04-18:/2019-04-18-coding-git-shi-yong-bei-wang.html</id><summary type="html">
+</content><category term="软件使用"/><category term="python"/><category term="matplotlib"/></entry><entry><title>Git 使用备忘</title><link href="https://zqw.ink/2019-04-18-coding-git-shi-yong-bei-wang.html" rel="alternate"/><published>2019-04-18T00:00:00+08:00</published><updated>2019-04-18T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2019-04-18:/2019-04-18-coding-git-shi-yong-bei-wang.html</id><summary type="html">
 &lt;h2&gt;基本命令&lt;/h2&gt;
 
 &lt;h3&gt;本地&lt;/h3&gt;
@@ -4751,7 +4751,7 @@ clone 下来 backup 分支&lt;/p&gt;
 &lt;h2&gt;Reference&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href='https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000'&gt;https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000&lt;/a&gt;&lt;/p&gt;
-</content><category term="软件使用"></category><category term="hexo"></category><category term="git"></category></entry><entry><title>Manjaro-18-Gnome 装机备忘</title><link href="https://zqw.ink/2018-11-11-coding-manjaro-18-gnome-zhuang-ji-bei-wang.html" rel="alternate"></link><published>2018-11-11T00:00:00+08:00</published><updated>2018-11-11T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-11-11:/2018-11-11-coding-manjaro-18-gnome-zhuang-ji-bei-wang.html</id><summary type="html">
+</content><category term="软件使用"/><category term="hexo"/><category term="git"/></entry><entry><title>Manjaro-18-Gnome 装机备忘</title><link href="https://zqw.ink/2018-11-11-coding-manjaro-18-gnome-zhuang-ji-bei-wang.html" rel="alternate"/><published>2018-11-11T00:00:00+08:00</published><updated>2018-11-11T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-11-11:/2018-11-11-coding-manjaro-18-gnome-zhuang-ji-bei-wang.html</id><summary type="html">
 &lt;h2&gt;基本安装&lt;/h2&gt;
 
 &lt;h3&gt;刻盘&lt;/h3&gt;
@@ -4915,7 +4915,7 @@ teamviewer&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2&gt;注&lt;/h2&gt;
 &lt;p&gt;善用 arch 的 wiki , 一般问题都可以得到解决.&lt;/p&gt;
-</content><category term="软件使用"></category><category term="manjaro"></category><category term="linux"></category></entry><entry><title>Hello org-mode</title><link href="https://zqw.ink/2018-10-18-coding-hello-org-mode.html" rel="alternate"></link><published>2018-10-18T00:00:00+08:00</published><updated>2018-10-18T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-10-18:/2018-10-18-coding-hello-org-mode.html</id><summary type="html">
+</content><category term="软件使用"/><category term="manjaro"/><category term="linux"/></entry><entry><title>Hello org-mode</title><link href="https://zqw.ink/2018-10-18-coding-hello-org-mode.html" rel="alternate"/><published>2018-10-18T00:00:00+08:00</published><updated>2018-10-18T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-10-18:/2018-10-18-coding-hello-org-mode.html</id><summary type="html">
 
 
 &lt;h2&gt;符号说明&lt;/h2&gt;
@@ -5216,7 +5216,7 @@ Tammy Mark Karl Lisa Don
 
 
 
-</content><category term="软件使用"></category><category term="emacs"></category><category term="org-mode"></category></entry><entry><title>Emacs使用笔记</title><link href="https://zqw.ink/2018-09-07-coding-emacs_note.html" rel="alternate"></link><published>2018-09-07T00:00:00+08:00</published><updated>2018-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-07:/2018-09-07-coding-emacs_note.html</id><summary type="html">&lt;!-- toc --&gt;
+</content><category term="软件使用"/><category term="emacs"/><category term="org-mode"/></entry><entry><title>Emacs使用笔记</title><link href="https://zqw.ink/2018-09-07-coding-emacs_note.html" rel="alternate"/><published>2018-09-07T00:00:00+08:00</published><updated>2018-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-07:/2018-09-07-coding-emacs_note.html</id><summary type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
 &lt;h3 id="修改配色"&gt;修改配色&lt;/h3&gt;
 &lt;p&gt;打开Emacs的配置文件。配置文件在~/.emacs。增加：&lt;/p&gt;
@@ -5346,7 +5346,7 @@ Tammy Mark Karl Lisa Don
 (require 'sr-speedbar)
 
 &lt;/code&gt;&lt;/pre&gt;
-</content><category term="软件使用"></category><category term="Emacs"></category><category term="快捷键"></category></entry><entry><title>Linux使用笔记(update 28/Jan/2021)</title><link href="https://zqw.ink/2018-09-07-coding-linuxshi-yong-bi-ji.html" rel="alternate"></link><published>2018-09-07T00:00:00+08:00</published><updated>2018-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-07:/2018-09-07-coding-linuxshi-yong-bi-ji.html</id><summary type="html">
+</content><category term="软件使用"/><category term="Emacs"/><category term="快捷键"/></entry><entry><title>Linux使用笔记(update 28/Jan/2021)</title><link href="https://zqw.ink/2018-09-07-coding-linuxshi-yong-bi-ji.html" rel="alternate"/><published>2018-09-07T00:00:00+08:00</published><updated>2018-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-07:/2018-09-07-coding-linuxshi-yong-bi-ji.html</id><summary type="html">
 &lt;h2&gt;常用命令&lt;/h2&gt;
 
 &lt;p&gt;1. 显示已安装的软件包列表：&lt;code&gt;dpkg -l&lt;/code&gt;
@@ -5927,7 +5927,7 @@ username@servername:/var/www/remote\_dir/（远程目录）
 &lt;li&gt;Linux Command Line and Shell Scripting&lt;/li&gt;
 &lt;li&gt;&lt;a href='https://www.runoob.com/linux/linux-user-manage.html'&gt;鸟哥&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="软件使用"></category><category term="Linux"></category></entry><entry><title>Typora使用笔记</title><link href="https://zqw.ink/2018-09-07-coding-typora_note.html" rel="alternate"></link><published>2018-09-07T00:00:00+08:00</published><updated>2018-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-07:/2018-09-07-coding-typora_note.html</id><summary type="html">&lt;!-- toc --&gt;
+</content><category term="软件使用"/><category term="Linux"/></entry><entry><title>Typora使用笔记</title><link href="https://zqw.ink/2018-09-07-coding-typora_note.html" rel="alternate"/><published>2018-09-07T00:00:00+08:00</published><updated>2018-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-07:/2018-09-07-coding-typora_note.html</id><summary type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
 &lt;h2 id="标题"&gt;标题&lt;/h2&gt;
 &lt;ul&gt;
@@ -6007,4 +6007,4 @@ username@servername:/var/www/remote\_dir/（远程目录）
 &lt;p&gt;:bowtie: 😄 :simple_smile: 😆 😊 😃 ☺️ 😏 😍 😘 😚 😳 😌 😆 😁 😉 😜 😝 😀 😗 😙 😛 😴 😟 😦 😧 😮 😬 😕 😯 😑 😒 😅 😓 😥 😩 😔 😞 😖 😨 😰 😣 😢 😭 😂 😲 😱 :neckbeard: 😫 😠 😡 😤 😪 😋 😷 😎 😵 👿 😈 😐 😶 😇 👽 💛 💙 💜 ❤️ 💚 💔 💓 💗 💕 💞 💘 💖 ✨ ⭐️ 🌟 💫 💥 💥 💢 ❗️ ❓ ❕ ❔ 💤 💨 💦 🎶 🎵 🔥 💩 💩 💩 👍 👍 👎 👎 👌 👊 👊 ✊ ✌️ 👋 ✋ ✋ 👐 ☝️ 👇 👈 👉 🙌 🙏 👆 👏 💪 🤘 🖕 🏃 🏃 👫 👪 👬 👭 💃 👯 🙆 🙅 💁 🙋 👰 🙎 🙍 🙇 :couplekiss: 💑 💆 💇 💅 👦 👧 👩 👨 👶 👵 👴 👱 👲 👳 👷 👮 👼 👸 😺 😸 😻 😽 😼 🙀 😿 😹 😾 👹 👺 🙈 🙉 🙊 💂 💀 🐾 👄 💋 💧 👂 👀 👃 👅 💌 👤 👥 💬 💭 :feelsgood: :finnadie: :goberserk: :godmode: :hurtrealbad: :rage1: :rage2: :rage3: :rage4: :suspect: :trollface:&lt;/p&gt;
 &lt;h3 id="nature"&gt;Nature&lt;/h3&gt;
 &lt;p&gt;☀️ ☔️ ☁️ ❄️ ⛄️ ⚡️ 🌀 🌁 🌊 🐱 🐶 🐭 🐹 🐰 🐺 🐸 🐯 🐨 🐻 🐷 🐽 🐮 🐗 🐵 🐒 🐴 🐎 🐫 🐑 🐘 🐼 🐍 🐦 🐤 🐥 🐣 🐔 🐧 🐢 🐛 🐝 🐜 🐞 🐌 🐙 🐠 🐟 🐳 🐋 🐬 🐄 🐏 🐀 🐃 🐅 🐇 🐉 🐐 🐓 🐕 🐖 🐁 🐂 🐲 🐡 🐊 🐪 🐆 🐈 🐩 🐾 💐 🌸 🌷 🍀 🌹 🌻 🌺 🍁 🍃 🍂 🌿 🍄 🌵 🌴 🌲 🌳 🌰 🌱 🌼 🌾 🐚 🌐 🌞 🌝 🌚 🌑 🌒 🌓 🌔 🌕 🌖 🌗 🌘 🌜 🌛 🌙 🌍 🌎 🌏 🌋 🌌 ⛅️ :octocat: :squirrel: Objects 🎍 💝 🎎 🎒 🎓 🎏 🎆 🎇 🎐 🎑 🎃 👻 🎅 🎄 🎁 🔔 🔕 🎋 🎉 🎊 🎈 🔮 💿 📀 💾 📷 📹 🎥 💻 📺 📱 ☎️ ☎️ 📞 📟 📠 💽 📼 🔉 🔈 🔇 📢 📣 ⌛️ ⏳ ⏰ ⌚️ 📻 📡 ➿ 🔍 🔎 🔓 🔒 🔏 🔐 🔑 💡 🔦 🔆 🔅 🔌 🔋 📲 ✉️ 📫 📮 🛀 🛁 🚿 🚽 🔧 🔩 🔨 💺 💰 💴 💵 💷 💶 💳 💸 📧 📥 📤 ✉️ 📨 📯 📪 📬 📭 📦 🚪 🚬 💣 🔫 🔪 💊 💉 📄 📃 📑 📊 📈 📉 📜 📋 📆 📅 📇 📁 📂 ✂️ 📌 📎 ✒️ ✏️ 📏 📐 📕 📗 📘 📙 📓 📔 📒 📚 🔖 📛 🔬 🔭 📰 🏈 🏀 ⚽️ ⚾️ 🎾 🎱 🏉 🎳 ⛳️ 🚵 🚴 🏇 🏂 🏊 🏄 🎿 ♠️ ♥️ ♣️ ♦️ 💎 💍 🏆 🎼 🎹 🎻 👾 🎮 🃏 🎴 🎲 🎯 🀄️ 🎬 📝 📝 📖 🎨 🎤 🎧 🎺 🎷 🎸 👞 👡 👠 💄 👢 👕 👕 👔 👚 👗 🎽 👖 👘 👙 🎀 🎩 👑 👒 👞 🌂 💼 👜 👝 👛 👓 🎣 ☕️ 🍵 🍶 🍼 🍺 🍻 🍸 🍹 🍷 🍴 🍕 🍔 🍟 🍗 🍖 🍝 🍛 🍤 🍱 🍣 🍥 🍙 🍘 🍚 🍜 🍲 🍢 🍡 🥚 🍞 🍩 🍮 🍦 🍨 🍧 🎂 🍰 🍪 🍫 🍬 🍭 🍯 🍎 🍏 🍊 🍋 🍒 🍇 🍉 🍓 🍑 🍈 🍌 🍐 🍍 🍠 🍆 🍅 🌽&lt;/p&gt;
-</content><category term="软件使用"></category><category term="Typora"></category></entry></feed>
+</content><category term="软件使用"/><category term="Typora"/></entry></feed>

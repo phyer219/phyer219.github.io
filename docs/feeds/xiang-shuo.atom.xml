@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水 - 想说</title><link href="https://zqw.ink/" rel="alternate"></link><link href="https://zqw.ink/feeds/xiang-shuo.atom.xml" rel="self"></link><id>https://zqw.ink/</id><updated>2022-09-14T00:00:00+08:00</updated><entry><title>研五下学期总结</title><link href="https://zqw.ink/2022-09-14-thinking-summary_grade_5_2.html" rel="alternate"></link><published>2022-09-14T00:00:00+08:00</published><updated>2022-09-14T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-09-14:/2022-09-14-thinking-summary_grade_5_2.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水 - 想说</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/xiang-shuo.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2022-09-14T00:00:00+08:00</updated><entry><title>研五下学期总结</title><link href="https://zqw.ink/2022-09-14-thinking-summary_grade_5_2.html" rel="alternate"/><published>2022-09-14T00:00:00+08:00</published><updated>2022-09-14T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-09-14:/2022-09-14-thinking-summary_grade_5_2.html</id><summary type="html">
 &lt;h2&gt;序&lt;/h2&gt;
 
 &lt;p&gt;9.3 返校.&lt;/p&gt;
@@ -50,7 +50,7 @@ effect 用时较短, 做了解析推导的部分. 第二个是主要工作, 量�
 &lt;p&gt;研五上的末尾也有很多难忘的回忆! 希望明年我能按时毕业! 找到一个新的好去处!&lt;/p&gt;
 
 &lt;p&gt;&lt;p&gt;&lt;img src='2022-09-14-thinking-summary_grade_5_2/20220820_145108.jpg' alt='figalt' max-width:100%&gt;&lt;p&gt;&lt;/p&gt;
-</content><category term="想说"></category><category term="总结"></category></entry><entry><title>深圳小记</title><link href="https://zqw.ink/2022-08-31-thinking-shenzhen.html" rel="alternate"></link><published>2022-08-31T00:00:00+08:00</published><updated>2022-08-31T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-08-31:/2022-08-31-thinking-shenzhen.html</id><summary type="html">&lt;!-- toc --&gt;
+</content><category term="想说"/><category term="总结"/></entry><entry><title>深圳小记</title><link href="https://zqw.ink/2022-08-31-thinking-shenzhen.html" rel="alternate"/><published>2022-08-31T00:00:00+08:00</published><updated>2022-08-31T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-08-31:/2022-08-31-thinking-shenzhen.html</id><summary type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
 &lt;p&gt;4月9日晚上到深圳。8月21日早上离开。&lt;/p&gt;
 &lt;h1 id="干净的空气"&gt;干净的空气&lt;/h1&gt;
@@ -91,7 +91,7 @@ effect 用时较短, 做了解析推导的部分. 第二个是主要工作, 量�
 &lt;p&gt;和朋友相聚的时光总是难忘的！吃肠粉便是一个人时最棒的时刻。&lt;/p&gt;
 &lt;h1 id="结尾"&gt;结尾&lt;/h1&gt;
 &lt;p&gt;有让人留恋的东西，却没有留下的勇气。&lt;/p&gt;
-</content><category term="想说"></category><category term="深圳"></category><category term="肠粉"></category><category term="城中村"></category><category term="电吉他"></category></entry><entry><title>博客改版</title><link href="https://zqw.ink/2022-04-16-thinking-blog_evolution.html" rel="alternate"></link><published>2022-04-16T00:00:00+08:00</published><updated>2022-04-16T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-04-16:/2022-04-16-thinking-blog_evolution.html</id><summary type="html">
+</content><category term="想说"/><category term="深圳"/><category term="肠粉"/><category term="城中村"/><category term="电吉他"/></entry><entry><title>博客改版</title><link href="https://zqw.ink/2022-04-16-thinking-blog_evolution.html" rel="alternate"/><published>2022-04-16T00:00:00+08:00</published><updated>2022-04-16T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-04-16:/2022-04-16-thinking-blog_evolution.html</id><summary type="html">
 &lt;p&gt;这几天离开304,新版的 hexo 渲染 org-mode 有问题。也就是说只能用 304 上的电脑用老&lt;br /&gt;
 版的 hexo 写。&lt;/p&gt;
 &lt;p&gt;于是今天花了一天的时间，从早上 7 半 …&lt;/p&gt;</summary><content type="html">
@@ -109,7 +109,7 @@ effect 用时较短, 做了解析推导的部分. 第二个是主要工作, 量�
 &lt;p&gt;缺点在于一切动要自己写，就显得比较简陋。但这正体现了本博客极简实用的精神。&lt;/p&gt;
 &lt;p&gt;目前正在以非常慢的速度建设中，任何建议请直接 email 博主：&lt;a href="mailto:zeqing6688@126.com"&gt;zeqing6688@126.com&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://zqw.ink/hexo_ver/"&gt;旧版&lt;/a&gt;目前仍可访问。&lt;/p&gt;
-</content><category term="想说"></category><category term="blog"></category><category term="hexo"></category></entry><entry><title>研五上学期总结</title><link href="https://zqw.ink/2022-02-18-thinking-summary_grade_5_1.html" rel="alternate"></link><published>2022-02-18T00:00:00+08:00</published><updated>2022-02-18T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-02-18:/2022-02-18-thinking-summary_grade_5_1.html</id><summary type="html">
+</content><category term="想说"/><category term="blog"/><category term="hexo"/></entry><entry><title>研五上学期总结</title><link href="https://zqw.ink/2022-02-18-thinking-summary_grade_5_1.html" rel="alternate"/><published>2022-02-18T00:00:00+08:00</published><updated>2022-02-18T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-02-18:/2022-02-18-thinking-summary_grade_5_1.html</id><summary type="html">
 &lt;h2&gt;序&lt;/h2&gt;
 
 &lt;p&gt;今日返校.&lt;/p&gt;
@@ -174,7 +174,7 @@ effect 用时较短, 做了解析推导的部分. 第二个是主要工作, 量�
 &lt;p&gt;研五上有很多难忘的回忆! 希望明年我能按时毕业!&lt;/p&gt;
 
 &lt;p&gt;&lt;p&gt;&lt;img src='2022-02-18-thinking-summary_grade_5_1/Screenshot_20220202-115428_BanG Dream!.jpg' alt='figalt' max-width:100%&gt;&lt;p&gt;&lt;/p&gt;
-</content><category term="想说"></category><category term="总结"></category></entry><entry><title>研四下学期总结</title><link href="https://zqw.ink/2021-09-07-thinking-summary_grade_4_2.html" rel="alternate"></link><published>2021-09-07T00:00:00+08:00</published><updated>2021-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-09-07:/2021-09-07-thinking-summary_grade_4_2.html</id><summary type="html">
+</content><category term="想说"/><category term="总结"/></entry><entry><title>研四下学期总结</title><link href="https://zqw.ink/2021-09-07-thinking-summary_grade_4_2.html" rel="alternate"/><published>2021-09-07T00:00:00+08:00</published><updated>2021-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-09-07:/2021-09-07-thinking-summary_grade_4_2.html</id><summary type="html">
 &lt;h2&gt;序&lt;/h2&gt;
 
 &lt;p&gt;前天返校, 昨天看了 Susskind 的三节视频.&lt;/p&gt;
@@ -257,7 +257,7 @@ II.&lt;/p&gt;
 学一下.&lt;/p&gt;
 
 &lt;p&gt;last but not least, 我都五年级了, 课题, 抓紧!&lt;/p&gt;
-</content><category term="想说"></category><category term="总结"></category></entry><entry><title>ipad2018 换屏</title><link href="https://zqw.ink/2021-07-24-thinking-ipad_sereen.html" rel="alternate"></link><published>2021-07-24T00:00:00+08:00</published><updated>2021-07-24T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-07-24:/2021-07-24-thinking-ipad_sereen.html</id><summary type="html">
+</content><category term="想说"/><category term="总结"/></entry><entry><title>ipad2018 换屏</title><link href="https://zqw.ink/2021-07-24-thinking-ipad_sereen.html" rel="alternate"/><published>2021-07-24T00:00:00+08:00</published><updated>2021-07-24T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-07-24:/2021-07-24-thinking-ipad_sereen.html</id><summary type="html">
 &lt;h2&gt;引言&lt;/h2&gt;
 
 &lt;p&gt;事情发生两次第三方维修失败之后.&lt;/p&gt;
@@ -581,11 +581,11 @@ xps13 去年在家屏幕有问题, 由于还在保, 售后派人从市里坐大�
 
 &lt;p&gt;而这两次修 ipad 的经历, 我终于又回想起了曾经被修车支配的恐惧, 以及一次次被修车大
 爷指出新问题的耻辱...&lt;/p&gt;
-</content><category term="想说"></category><category term="ipad"></category></entry><entry><title>Second Order Rubik's Cube Fun</title><link href="https://zqw.ink/2021-03-13-thinking-2nd_rubiks_cube.html" rel="alternate"></link><published>2021-03-13T00:00:00+08:00</published><updated>2021-03-13T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-03-13:/2021-03-13-thinking-2nd_rubiks_cube.html</id><content type="html">
+</content><category term="想说"/><category term="ipad"/></entry><entry><title>Second Order Rubik's Cube Fun</title><link href="https://zqw.ink/2021-03-13-thinking-2nd_rubiks_cube.html" rel="alternate"/><published>2021-03-13T00:00:00+08:00</published><updated>2021-03-13T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-03-13:/2021-03-13-thinking-2nd_rubiks_cube.html</id><content type="html">
 &lt;p&gt;&lt;p&gt;&lt;img src='2021-03-13-thinking-2nd_rubiks_cube/2nd_cube.png' alt='figalt' max-width:100%&gt;&lt;p&gt;&lt;/p&gt;
 
 &lt;p&gt;Draw by &lt;a href='https://www.geogebra.org/'&gt;Geogebra&lt;/a&gt; : [[file:2021-03-13-thinking-2nd_rubiks_cube/2nd_cube.ggb]]&lt;/p&gt;
-</content><category term="想说"></category><category term="Rubik's Cube"></category></entry><entry><title>研四上学期总结</title><link href="https://zqw.ink/2021-02-28-thinking-summary_grade_4_1.html" rel="alternate"></link><published>2021-02-28T00:00:00+08:00</published><updated>2021-02-28T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-02-28:/2021-02-28-thinking-summary_grade_4_1.html</id><summary type="html">
+</content><category term="想说"/><category term="Rubik's Cube"/></entry><entry><title>研四上学期总结</title><link href="https://zqw.ink/2021-02-28-thinking-summary_grade_4_1.html" rel="alternate"/><published>2021-02-28T00:00:00+08:00</published><updated>2021-02-28T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-02-28:/2021-02-28-thinking-summary_grade_4_1.html</id><summary type="html">
 &lt;h2&gt;序&lt;/h2&gt;
 
 &lt;p&gt;昨天返校了.&lt;/p&gt;
@@ -629,7 +629,7 @@ xps13 去年在家屏幕有问题, 由于还在保, 售后派人从市里坐大�
 &lt;h2&gt;总&lt;/h2&gt;
 
 &lt;p&gt;按时开学的愿望达成了. 没别的多说的, 希望多加把劲, 科研有所进展. 多么朴实的愿望.&lt;/p&gt;
-</content><category term="想说"></category><category term="总结"></category></entry><entry><title>I am back!</title><link href="https://zqw.ink/2020-09-09-thinking-iamback.html" rel="alternate"></link><published>2020-09-09T00:00:00+08:00</published><updated>2020-09-09T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-09-09:/2020-09-09-thinking-iamback.html</id><summary type="html">
+</content><category term="想说"/><category term="总结"/></entry><entry><title>I am back!</title><link href="https://zqw.ink/2020-09-09-thinking-iamback.html" rel="alternate"/><published>2020-09-09T00:00:00+08:00</published><updated>2020-09-09T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-09-09:/2020-09-09-thinking-iamback.html</id><summary type="html">
 &lt;p&gt;上次坐在 304 还是 2020 年 1 月 14 号晚上. 再来就是 2020 年 9 月 9 号了. 接近八个
 月了, 终于再回来了! I am back!&lt;/p&gt;
 
@@ -648,7 +648,7 @@ xps13 去年在家屏幕有问题, 由于还在保, 售后派人从市里坐大�
 &lt;p&gt;I am back!&lt;/p&gt;
 
 &lt;p&gt;&lt;p&gt;&lt;img src='./2020-09-09-thinking-iamback/kendama.jpg' alt='figalt' max-width:100%&gt;&lt;p&gt;&lt;/p&gt;
-</content><category term="想说"></category></entry><entry><title>研三下学期总结</title><link href="https://zqw.ink/2020-09-07-thinking-summary_grade_3_2.html" rel="alternate"></link><published>2020-09-07T00:00:00+08:00</published><updated>2020-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-09-07:/2020-09-07-thinking-summary_grade_3_2.html</id><summary type="html">
+</content><category term="想说"/></entry><entry><title>研三下学期总结</title><link href="https://zqw.ink/2020-09-07-thinking-summary_grade_3_2.html" rel="alternate"/><published>2020-09-07T00:00:00+08:00</published><updated>2020-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-09-07:/2020-09-07-thinking-summary_grade_3_2.html</id><summary type="html">
 &lt;h2&gt;序&lt;/h2&gt;
 
 &lt;p&gt;在家里过了一个学期. 现在虽然开学了, 但是还是去不了北园.&lt;/p&gt;
@@ -740,7 +740,7 @@ B 站的吃灰收藏夹里了. 同时貌似我也多了一个兴趣爱好: 看�
 悉了, 许多以前我没有了解他们的一些方面. &lt;/p&gt;
 
 &lt;p&gt;不知疫情何时结束, 能够回到 2019 年冬天之前的那个世界.&lt;/p&gt;
-</content><category term="想说"></category><category term="总结"></category></entry><entry><title>研三上学期总结</title><link href="https://zqw.ink/2020-01-27-thinking-summary_grade_3_1.html" rel="alternate"></link><published>2020-01-27T00:00:00+08:00</published><updated>2020-01-27T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-01-27:/2020-01-27-thinking-summary_grade_3_1.html</id><summary type="html">
+</content><category term="想说"/><category term="总结"/></entry><entry><title>研三上学期总结</title><link href="https://zqw.ink/2020-01-27-thinking-summary_grade_3_1.html" rel="alternate"/><published>2020-01-27T00:00:00+08:00</published><updated>2020-01-27T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-01-27:/2020-01-27-thinking-summary_grade_3_1.html</id><summary type="html">
 &lt;h2&gt;序&lt;/h2&gt;
 
 &lt;p&gt;吐嘈一下。这个网也不知道是怎么回事，笔记本上 clone 备份的博客一直卡，直到今天才
@@ -788,12 +788,12 @@ B 站的吃灰收藏夹里了. 同时貌似我也多了一个兴趣爱好: 看�
 的实战做完了，还是很开心的。&lt;/p&gt;
 
 &lt;p&gt;又买了十年的域名。。。 saba.fun  还挺便宜的。目前备案正在审核。&lt;/p&gt;
-</content><category term="想说"></category><category term="总结"></category></entry><entry><title>诗句</title><link href="https://zqw.ink/2019-10-08-thinking-poetry.html" rel="alternate"></link><published>2019-10-08T00:00:00+08:00</published><updated>2019-10-08T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2019-10-08:/2019-10-08-thinking-poetry.html</id><content type="html">
+</content><category term="想说"/><category term="总结"/></entry><entry><title>诗句</title><link href="https://zqw.ink/2019-10-08-thinking-poetry.html" rel="alternate"/><published>2019-10-08T00:00:00+08:00</published><updated>2019-10-08T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2019-10-08:/2019-10-08-thinking-poetry.html</id><content type="html">
 &lt;blockquote&gt;云天收夏色，
 木叶动秋声。&lt;/blockquote&gt;
 
 &lt;blockquote&gt;晓来寒露滴疏桐。&lt;/blockquote&gt;
-</content><category term="想说"></category></entry><entry><title>佛系</title><link href="https://zqw.ink/2019-02-28-thinking-fo-xi.html" rel="alternate"></link><published>2019-02-28T00:00:00+08:00</published><updated>2019-02-28T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2019-02-28:/2019-02-28-thinking-fo-xi.html</id><summary type="html">
+</content><category term="想说"/></entry><entry><title>佛系</title><link href="https://zqw.ink/2019-02-28-thinking-fo-xi.html" rel="alternate"/><published>2019-02-28T00:00:00+08:00</published><updated>2019-02-28T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2019-02-28:/2019-02-28-thinking-fo-xi.html</id><summary type="html">
 &lt;p&gt;-----------------------------------------------------------
 ---------------------------------------------------------
 -------------------------------------------------------
@@ -831,7 +831,7 @@ To github.com:phyer219/phyer219.github.io.git
 -------------------------------------------------------
 ---------------------------------------------------------
 -----------------------------------------------------------&lt;/p&gt;
-</content><category term="想说"></category><category term="感慨"></category><category term="佛系"></category></entry><entry><title>句子</title><link href="https://zqw.ink/2019-01-12-thinking-ju-zi.html" rel="alternate"></link><published>2019-01-12T00:00:00+08:00</published><updated>2019-01-12T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2019-01-12:/2019-01-12-thinking-ju-zi.html</id><summary type="html">
+</content><category term="想说"/><category term="感慨"/><category term="佛系"/></entry><entry><title>句子</title><link href="https://zqw.ink/2019-01-12-thinking-ju-zi.html" rel="alternate"/><published>2019-01-12T00:00:00+08:00</published><updated>2019-01-12T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2019-01-12:/2019-01-12-thinking-ju-zi.html</id><summary type="html">
 &lt;p&gt;----------------------------------------------------&lt;/p&gt;
 
 &lt;p&gt;Apart from the trivial constant functions then, singularities
@@ -863,7 +863,7 @@ To github.com:phyer219/phyer219.github.io.git
  Shell Scripting Bible 3rd ed, page 114&lt;/p&gt;
 
 &lt;p&gt;-----------------------------------------------------&lt;/p&gt;
-</content><category term="想说"></category><category term="句子"></category></entry><entry><title>暗号</title><link href="https://zqw.ink/2018-12-26-thinking-an-hao.html" rel="alternate"></link><published>2018-12-26T00:00:00+08:00</published><updated>2018-12-26T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-12-26:/2018-12-26-thinking-an-hao.html</id><content type="html">
+</content><category term="想说"/><category term="句子"/></entry><entry><title>暗号</title><link href="https://zqw.ink/2018-12-26-thinking-an-hao.html" rel="alternate"/><published>2018-12-26T00:00:00+08:00</published><updated>2018-12-26T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-12-26:/2018-12-26-thinking-an-hao.html</id><content type="html">
 &lt;p&gt;------------------------------------------------&lt;/p&gt;
 
 &lt;p&gt;橡树的绿叶啊&lt;/p&gt;
@@ -885,11 +885,11 @@ To github.com:phyer219/phyer219.github.io.git
 &lt;p&gt;《园游会》&lt;/p&gt;
 
 &lt;p&gt;------------------------------------------------&lt;/p&gt;
-</content><category term="想说"></category><category term="暗号"></category></entry><entry><title>Goldstein的理论力学书</title><link href="https://zqw.ink/2018-09-21-thinking-goldsteinde-li-lun-li-xue-shu.html" rel="alternate"></link><published>2018-09-21T00:00:00+08:00</published><updated>2018-09-21T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-21:/2018-09-21-thinking-goldsteinde-li-lun-li-xue-shu.html</id><summary type="html">&lt;!-- toc --&gt;
+</content><category term="想说"/><category term="暗号"/></entry><entry><title>Goldstein的理论力学书</title><link href="https://zqw.ink/2018-09-21-thinking-goldsteinde-li-lun-li-xue-shu.html" rel="alternate"/><published>2018-09-21T00:00:00+08:00</published><updated>2018-09-21T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-21:/2018-09-21-thinking-goldsteinde-li-lun-li-xue-shu.html</id><summary type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
 &lt;p&gt;Gloldstein生于1922年，在28岁的时候写了Classical Mechanics。在58岁的时候出了第二版。在70岁的时候出了第三版，这时曾经在1953年和1960年用他的书学理论力学的两个学生参与了第三版的编写。在他82岁时去逝。他去逝的同年，大陆影印了他的书出版。又时隔16年，在今年的8月份这本书第六次重印，到了我的手里。&lt;/p&gt;
 &lt;p&gt;一生 …&lt;/p&gt;</summary><content type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
 &lt;p&gt;Gloldstein生于1922年，在28岁的时候写了Classical Mechanics。在58岁的时候出了第二版。在70岁的时候出了第三版，这时曾经在1953年和1960年用他的书学理论力学的两个学生参与了第三版的编写。在他82岁时去逝。他去逝的同年，大陆影印了他的书出版。又时隔16年，在今年的8月份这本书第六次重印，到了我的手里。&lt;/p&gt;
 &lt;p&gt;一生都在完善这本书！&lt;/p&gt;
-</content><category term="想说"></category><category term="物理"></category><category term="理论力学"></category><category term="人物"></category></entry></feed>
+</content><category term="想说"/><category term="物理"/><category term="理论力学"/><category term="人物"/></entry></feed>

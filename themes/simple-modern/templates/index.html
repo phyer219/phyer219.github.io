@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block title %}{{ SITENAME|striptags }} - Homepage{% endblock %}
 {% block content %}
-{% set about_page = pages | selectattr('slug', 'equalto', 'home') | first %}
+{% set about_page = articles | selectattr('slug', 'equalto', 'home') | first %}
 
 {% if about_page %}
   <section class="post-content markdown-body">
