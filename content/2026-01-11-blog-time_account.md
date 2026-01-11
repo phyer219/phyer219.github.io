@@ -11,8 +11,8 @@ tags:
 最近看了几篇博客：
 
 - [时间账户](https://yufree.cn/cn/2025/11/08/time-account/)
-- [https://alexhsu.com/cant-finish](https://alexhsu.com/cant-finish)
-- [wiwi.blog:想活久一點嗎？](https://wiwi.blog/blog/live-longer)
+- [一輩子也看不完的內容 ](https://alexhsu.com/cant-finish)
+- [想活久一點嗎？](https://wiwi.blog/blog/live-longer)
 
 颇有感想。
 
