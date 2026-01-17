@@ -225,7 +225,7 @@ $$&lt;h2 id="reference"&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;PhysRevA.78.053606, Eqn A13(b), A14(b)&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="physics"/><category term="数学"/><category term="留数定理"/><category term="复变函数"/><category term="contour integral"/></entry><entry><title>二次量子化笔记 (update 06/Dec/2019)</title><link href="https://zqw.ink/2018-09-27-physics-er-ci-liang-zi-hua.html" rel="alternate"/><published>2018-09-27T00:00:00+08:00</published><updated>2018-09-27T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-27:/2018-09-27-physics-er-ci-liang-zi-hua.html</id><summary type="html">
+</content><category term="physics"/><category term="数学"/><category term="留数定理"/><category term="复变函数"/><category term="contour integral"/></entry><entry><title>二次量子化笔记 (update 06/Dec/2019)</title><link href="https://zqw.ink/2018-09-27-physics-second_quant.html" rel="alternate"/><published>2018-09-27T00:00:00+08:00</published><updated>2018-09-27T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-27:/2018-09-27-physics-second_quant.html</id><summary type="html">
 &lt;h2 id="单体力学量"&gt;单体力学量&lt;/h2&gt;
 &lt;h3 id="本征表象"&gt;本征表象&lt;/h3&gt;
 &lt;p&gt;&lt;eq&gt;N&lt;/eq&gt; 个粒子组成的系统，对于单个粒子的力学量 $\hat{f}$ ，其第 &lt;eq&gt;i&lt;/eq&gt; 个本征值为 $f_i$ ，本征态为 $\mid i \rangle$ ，即&lt;br /&gt;
@@ -682,7 +682,1014 @@ $$&lt;br /&gt;
 &lt;li&gt;&lt;a href="http://www.phys.ens.fr/~mora/lecture-second-quanti.pdf"&gt;http://www.phys.ens.fr/~mora/lecture-second-quanti.pdf&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;06/Dec/2019 update 时 F. Y. 的讨论&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="physics"/><category term="物理"/><category term="量子力学"/><category term="二次量子化"/></entry><entry><title>Fourier transform 总结</title><link href="https://zqw.ink/2018-09-07-physics-fourier-transform-zong-jie.html" rel="alternate"/><published>2018-09-07T00:00:00+08:00</published><updated>2018-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-07:/2018-09-07-physics-fourier-transform-zong-jie.html</id><summary type="html">&lt;h2&gt;总的分类&lt;/h2&gt;
+</content><category term="physics"/><category term="物理"/><category term="量子力学"/><category term="二次量子化"/></entry><entry><title>对易与反对易公式(update 09/July/2020)</title><link href="https://zqw.ink/2018-09-26-physics-commu_mem.html" rel="alternate"/><published>2018-09-26T00:00:00+08:00</published><updated>2018-09-26T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-26:/2018-09-26-physics-commu_mem.html</id><summary type="html">&lt;!-- toc --&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;在运动方程中, 经常要计算各种产生湮灭算符之间的对易关系. 而对于 Fermion 来说, 它满足的是反对易关系, 因此在最后一步中 …&lt;/p&gt;</summary><content type="html">&lt;!-- toc --&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;在运动方程中, 经常要计算各种产生湮灭算符之间的对易关系. 而对于 Fermion 来说, 它满足的是反对易关系, 因此在最后一步中, 需要用下述关系, 写成反对易子的形式&lt;br /&gt;
+$$
+\begin{split}
+[AB, C] =&amp; A\{B, C\} - \{A,C\}B\\
+[A,BC] =&amp;\{A, B\} C -B\{A,C\}
+\end{split}
+$$&lt;/p&gt;
+&lt;h1 id="boson"&gt;Boson&lt;/h1&gt;
+&lt;p&gt;Boson 满足对易关系&lt;br /&gt;
+$$
+[a_k, a^{\dagger}_{k'}] = \delta_{kk'}
+$$&lt;/p&gt;
+$$
+
+\sum_{k'}[a^{\dagger}_{k3}a_{k3},a^{\dagger}_{k'2}a_{k'3}]
+    = -a^{\dagger}_{k2}a_{k3}
+
+$$$$
+
+\sum_{k'}[a^{\dagger}_{k3}a_{k3},a^{\dagger}_{k'3}a_{k'2}]
+    =  a^{\dagger}_{k3}a_{k2}
+
+$$&lt;h1 id="fermion"&gt;Fermion&lt;/h1&gt;
+&lt;p&gt;Fermion 满足反对易关系&lt;br /&gt;
+$$
+\{a_k, a^{\dagger}_{k'}\} = \delta_{kk'}
+$$&lt;/p&gt;
+$$
+
+\sum_{k'}[a^{\dagger}_{k3}a_{k3},a^{\dagger}_{k'2}a_{k'3}]
+    = -a^{\dagger}_{k2}a_{k3}
+
+$$$$
+
+\sum_{k'}[a^{\dagger}_{k3}a_{k3},a^{\dagger}_{k'3}a_{k'2}]
+    =  a^{\dagger}_{k3}a_{k2}
+
+$$</content><category term="physics"/><category term="物理"/><category term="量子力学"/><category term="对易"/><category term="反对易"/></entry><entry><title>球坐标系速度和加速度的推导</title><link href="https://zqw.ink/2018-09-25-physics-sphere_coor_accelerate_derive.html" rel="alternate"/><published>2018-09-25T00:00:00+08:00</published><updated>2018-09-25T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-25:/2018-09-25-physics-sphere_coor_accelerate_derive.html</id><summary type="html">&lt;!-- toc --&gt;
+&lt;!-- more --&gt;
+&lt;h2 id="做法之一"&gt;做法之一&lt;/h2&gt;
+&lt;p&gt;球坐标基矢按直角坐标展开：&lt;/p&gt;
+$$
+
+\begin{cases}
+\hat{r} &amp;= \sin\theta\cos\varphi \hat{x} +\sin\theta\sin\varphi \hat{y} +\cos\theta \hat{z}\\\\
+\hat{\theta} &amp;= \cos\theta\cos\varphi \hat{x} +\cos\theta\sin\varphi \hat{y …</summary><content type="html">&lt;!-- toc --&gt;
+&lt;!-- more --&gt;
+&lt;h2 id="做法之一"&gt;做法之一&lt;/h2&gt;
+&lt;p&gt;球坐标基矢按直角坐标展开：&lt;/p&gt;
+$$
+
+\begin{cases}
+\hat{r} &amp;= \sin\theta\cos\varphi \hat{x} +\sin\theta\sin\varphi \hat{y} +\cos\theta \hat{z}\\\\
+\hat{\theta} &amp;= \cos\theta\cos\varphi \hat{x} +\cos\theta\sin\varphi \hat{y} -\sin\theta \hat{z}\\\\
+\hat{\varphi} &amp;= -\sin\varphi \hat{x} +\cos \varphi \hat{y}
+\end{cases}
+
+$$&lt;p&gt;球坐标系的基矢不像直角坐标的基矢一样是固定的，而是随坐标的改变而改变：&lt;/p&gt;
+$$
+
+\begin{cases}
+\hat{r} &amp;= \hat{r}(\theta,\varphi) \\\\
+\hat{\theta} &amp;=  \hat{r}(\theta,\varphi) \\\\
+\hat{\varphi} &amp;=  \hat{r}(\varphi)
+\end{cases}
+
+$$&lt;p&gt;所球坐标系中的坐标的表达式为：&lt;/p&gt;
+$$
+
+\vec{r} = r \hat{r}
+
+$$&lt;p&gt;速度的表达式为：&lt;/p&gt;
+$$
+
+\dot{\vec{r}} = \dot{r}\hat{r} + r \dot{\hat{r}}
+
+$$&lt;p&gt;而：&lt;/p&gt;
+$$
+
+\begin{split}
+\dot{\hat{r}} =&amp; \dot{\theta}(\cos\theta\cos\varphi \hat{x} +\cos\theta\sin\varphi \hat{y} -\sin\theta \hat{z}) \\\\
+&amp;+\dot{\varphi}(-\sin\theta\sin\varphi \hat{x} +\sin\theta\cos \varphi \hat{y}) \\\\
+=&amp; \dot{\theta}\hat{\theta} + \dot{\varphi}\sin\theta \hat{\varphi}
+\end{split}
+
+$$&lt;p&gt;所以：&lt;/p&gt;
+$$
+
+\dot{\vec{r}} = \dot{r}\hat{r} + r \dot{\hat{r}} =  \dot{r}\hat{r} +r\dot{\theta}\hat{\theta} + r\dot{\varphi}\sin\theta \hat{\varphi}
+
+$$&lt;p&gt;加速度的表达式为：&lt;/p&gt;
+$$
+
+\ddot{\vec{r}} = \ddot{r}\hat{r}+\dot{r}\dot{\hat{r}}+\dot{r}\dot{\hat{r}}+ r \ddot{\hat{r}} =  \ddot{r}\hat{r}+2\dot{r}\dot{\hat{r}}++ r \ddot{\hat{r}}
+
+$$&lt;p&gt;而：&lt;/p&gt;
+$$
+
+\ddot{\hat{r}} = \ddot{\theta}\hat{\theta}+\dot{\theta}\dot{\hat{\theta}} + \ddot{\varphi}\sin\theta\hat{\varphi} +\dot{\theta}\dot{\varphi}\cos\theta\hat{\varphi} + \dot{\varphi}\sin\theta \dot{\hat{\varphi}}
+
+$$&lt;p&gt;其中 $\dot{\hat{\theta}}$ 和 $\dot{\hat{\varphi}}$ 为：&lt;/p&gt;
+$$
+
+\begin{split}
+\dot{\hat{\theta}} =&amp; \dot{\theta}(-\sin\theta\cos\varphi \hat{x} -\sin\theta\sin\varphi \hat{y} -\cos\theta \hat{z}) \\\\
+&amp;+\dot{\varphi}(-\cos\theta\sin\varphi \hat{x} +\cos\theta\cos \varphi \hat{y}) \\\\
+=&amp; -\dot{\theta}\hat{r} + \dot{\varphi}\cos\theta\hat{\varphi}
+\end{split}
+
+$$$$
+
+\begin{split}
+\dot{\hat{\varphi}} =&amp;\dot{\varphi}(-\cos\varphi \hat{x}-\sin\varphi\hat{y}) = \dot\varphi (-\sin\theta\hat{r}-\cos\theta\hat{\theta})
+\end{split}
+
+$$&lt;p&gt;则：&lt;/p&gt;
+$$
+
+\begin{split}
+\ddot{\hat{r}} =&amp; -\dot{\theta}^2\hat{r}+\dot{\theta}\dot{\varphi}\cos\theta\hat{\varphi}+ \ddot{\theta}\hat{\theta}+ \ddot{\varphi}\sin\theta\hat{\varphi} +\dot{\theta}\dot{\varphi}\cos\theta\hat{\varphi} -\dot{\varphi}^2\sin^2\theta\hat{r}-\dot{\varphi}^2\sin\theta\cos\theta\hat{\theta} \\\\
+=&amp; (-\dot{\theta}^2-\dot{\varphi}^2\sin^2\theta)\hat{r} +(\ddot{\theta}-\dot{\varphi}^2\sin\theta\cos\theta)\hat\theta +(2\dot{\theta}\dot{\varphi}\cos\theta+\ddot{\varphi}\sin\theta)\hat{\varphi}
+\end{split}
+
+$$&lt;p&gt;最终得加速度的表达式为：&lt;/p&gt;
+$$
+
+\begin{split}
+\ddot{\vec{r}} = &amp; \ddot{r}\hat{r}+2\dot{r}\dot{\theta}\hat{\theta}+2\dot{r}\dot{\varphi}\sin\theta\hat{\varphi}+ r \ddot{\hat{r}}  \\\\
+=&amp;(\ddot{r}-r\dot{\theta}^2-r\dot{\varphi}^2\sin^2\theta)\hat{r} \\\\
+&amp;+(2\dot{r}\dot{\theta}+r\ddot{\theta}-r\dot{\varphi}^2\sin\theta\cos\theta)\hat{\theta} \\\\
+&amp;+(2\dot{r}\dot{\varphi}\sin\theta+2r\dot{\theta}\dot{\varphi}\cos\theta+r\ddot{\varphi}\sin\theta)\hat{\varphi}
+\end{split}
+
+$$&lt;h2 id="做法之二"&gt;做法之二&lt;/h2&gt;
+&lt;p&gt;坐标基矢之间的变换：&lt;/p&gt;
+$$
+
+\left(\begin{matrix}
+\hat{e}_r\\
+\hat{e}_{\theta}\\
+\hat{e}_{\phi}\\
+\end{matrix}\right)
+= \left(\begin{matrix}
+\sin\theta\cos\phi	&amp;\sin\theta\sin\phi	&amp;\cos\theta \\
+\cos\theta\cos\phi		&amp;\cos\theta\sin\phi		&amp;-\sin\theta \\
+-\sin\phi 			&amp;\cos\phi		&amp; 0
+\end{matrix}\right)
+\left(\begin{matrix}
+\hat{e}_x\\
+\hat{e}_y\\
+\hat{e}_z\\
+\end{matrix}\right)
+
+$$&lt;p&gt;坐标基矢之间的逆变换：&lt;/p&gt;
+$$
+
+\left(\begin{matrix}
+\hat{e}_x\\
+\hat{e}_y\\
+\hat{e}_z\\
+\end{matrix}\right) =
+\left(\begin{matrix}
+\sin\theta\cos\phi	&amp;\cos\theta\cos\phi	&amp;-\sin\phi \\
+\sin\theta\sin\phi		&amp;\cos\theta\sin\phi		&amp;\cos\phi \\
+\cos\theta 			&amp;-\sin\theta		&amp; 0
+\end{matrix}\right)
+\left(\begin{matrix}
+\hat{e}_r\\
+\hat{e}_{\theta}\\
+\hat{e}_{\phi}\\
+\end{matrix}\right)
+
+$$&lt;p&gt;坐标之间的变换：&lt;/p&gt;
+$$
+
+\begin{cases}
+r = \sqrt{x^2+y^2+z^2}\\
+\theta = \arccos\frac{z}{ \sqrt{x^2+y^2+z^2}} \\
+\phi = \arctan\frac{y}{x}
+\end{cases}
+
+$$&lt;p&gt;坐标之间的逆变换：&lt;/p&gt;
+$$
+
+\begin{cases}
+x &amp;= r\sin\theta\cos\phi \\
+y &amp;=r\sin\theta\sin\phi\\
+z &amp;= r\cos\theta
+\end{cases}
+
+$$&lt;p&gt;质点位置的表达式：&lt;/p&gt;
+$$
+
+\vec{r} = x \hat{e}_x +y\hat{e}_y + z\hat{e}_z
+
+$$&lt;p&gt;将坐标的变换和基矢的变换代入可得：&lt;/p&gt;
+$$
+
+\vec{r} = r \hat{e}_r
+
+$$&lt;p&gt;速度的表达式为：&lt;/p&gt;
+$$
+
+\vec{v} = \dot{x} \hat{e}_x +  \dot{y} \hat{e}_y + \dot{z} \hat{e}_z
+
+$$&lt;p&gt;其中&lt;/p&gt;
+$$
+
+\begin{cases}
+\dot{x} &amp;= \dot{r}\sin\theta\cos\phi +r\dot{\theta}\cos\theta\cos\phi-r\dot{\phi}\sin\theta\sin\phi \\
+\dot{y} &amp;=\dot{r}\sin\theta\sin\phi+r\dot{\theta}\cos\theta\sin\phi+r\dot{\phi}\sin\theta\cos\phi \\
+\dot{z} &amp;= \dot{r}\cos\theta-r\dot{\theta}\sin\theta
+\end{cases}
+
+$$&lt;p&gt;代入变换关系可得：&lt;/p&gt;
+$$
+
+\vec{v} = \dot{r}\hat{e}_r + r\dot{\theta}\hat{e}_{\theta} + r\dot{\phi}\sin\theta \hat{e}_{\phi}
+
+$$&lt;p&gt;加速度表达式为：&lt;/p&gt;
+$$
+
+\vec{a} =  \ddot{x} \hat{e}_x +  \ddot{y} \hat{e}_y + \ddot{z} \hat{e}_z
+
+$$&lt;p&gt;代入变换关系可得&lt;/p&gt;
+$$
+
+\vec{a}=(\ddot{r}-r\dot{\theta}^2-r\dot{\phi}^2\sin^2\theta)\hat{e}_{r} \\\\
++(2\dot{r}\dot{\theta}+r\ddot{\theta}-r\dot{\phi}^2\sin\theta\cos\theta)\hat{e}_{\theta} \\\\
++(2\dot{r}\dot{\phi}\sin\theta+2r\dot{\theta}\dot{\phi}\cos\theta+r\ddot{\phi}\sin\theta)\hat{e}_{\varphi}
+
+$$</content><category term="physics"/><category term="数学"/><category term="物理"/><category term="理论力学"/><category term="球坐标"/></entry><entry><title>库仑势的Fourier transform(update 16/Nov/2020)</title><link href="https://zqw.ink/2018-09-24-physics-coulomb_potential_fourier_transform.html" rel="alternate"/><published>2018-09-24T00:00:00+08:00</published><updated>2018-09-24T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-24:/2018-09-24-physics-coulomb_potential_fourier_transform.html</id><summary type="html">&lt;!-- toc --&gt;
+&lt;!-- more --&gt;
+&lt;h2 id="问题"&gt;问题&lt;/h2&gt;
+&lt;p&gt;三维库仑势的形式为：&lt;br /&gt;
+$$
+V(\vec{r}) = \frac{1}{r}
+$$&lt;br /&gt;
+按动量Fourier展开：&lt;br /&gt;
+$$
+V(\vec{r}) = \frac{1}{(2\pi)^3} \int_{-\infty}^{+\infty} \mathrm{d}^3\vec{k} \cdot V(\vec{k})\cdot e^{i\vec{k}\cdot\vec{r}}
+$$&lt;br /&gt;
+求 …&lt;/p&gt;</summary><content type="html">&lt;!-- toc --&gt;
+&lt;!-- more --&gt;
+&lt;h2 id="问题"&gt;问题&lt;/h2&gt;
+&lt;p&gt;三维库仑势的形式为：&lt;br /&gt;
+$$
+V(\vec{r}) = \frac{1}{r}
+$$&lt;br /&gt;
+按动量Fourier展开：&lt;br /&gt;
+$$
+V(\vec{r}) = \frac{1}{(2\pi)^3} \int_{-\infty}^{+\infty} \mathrm{d}^3\vec{k} \cdot V(\vec{k})\cdot e^{i\vec{k}\cdot\vec{r}}
+$$&lt;br /&gt;
+求 $V(\vec{k})$ 。&lt;/p&gt;
+&lt;h2 id="求解"&gt;求解&lt;/h2&gt;
+$$
+
+V{(\vec{k})} = \int_{-\infty}^{+\infty} \mathrm{d}^3\vec{r}\cdot V(\vec{r})\cdot e^{-i\vec{k}\cdot \vec{r}} = \int_0^{2\pi}\mathrm{d}\varphi \int_0^{+\infty}\mathrm{d}r\int_0^{\pi}\mathrm{d}\theta\cdot \frac{1}{r}e^{-ikr\cos\theta}r^2\sin\theta \\\\
+=2\pi\int_0^{+\infty}\mathrm{d}r\int_0^{\pi}\mathrm{d}\theta\cdot e^{-ikr\cos\theta}r\sin\theta  = -2\pi\int_0^{+\infty}\mathrm{d}r\int_1^{-1}\mathrm{d}\cos\theta\cdot e^{-ikr\cos\theta}r \\\\
+=-2\pi\int_0^{+\infty}\mathrm{d}r\cdot \left[e^{-ikr\cos\theta}r\frac{1}{-ikr}\right]_{\cos\theta = 1}^{\cos\theta =-1} = 2\pi\int_0^{+\infty}\mathrm{d}r\cdot \left[(e^{ikr}-e^{-ikr})\frac{1}{ik}\right] \\\\
+=\frac{2\pi}{ik}\left[\frac{e^{ikr}}{ik}-\frac{e^{-ikr}}{-ik}\right] _0^{+\infty}
+
+$$&lt;p&gt;但 $e^{-ikr}$ 与 $e^{-ikr}$ 在 $+\infty$ 处发散。&lt;/p&gt;
+&lt;h2 id="使其收敛"&gt;使其收敛&lt;/h2&gt;
+&lt;p&gt;为了解决发散问题，可在一开始令&lt;br /&gt;
+$$
+V(\vec{r}) = \frac{1}{r} = \lim_{\mu\rightarrow 0} \frac{e^{-\mu r}}{r}
+$$&lt;br /&gt;
+所以&lt;br /&gt;
+$$
+V{(\vec{k})}  = \lim_{\mu\rightarrow 0} 2\pi\int_0^{+\infty}\mathrm{d}r\cdot \left[(e^{(ik-\mu)r}-e^{(-ik-\mu)r})\frac{1}{ik}\right] \\\\
+= \lim_{\mu\rightarrow 0}\frac{2\pi}{ik}\left[\frac{e^{(ik-\mu)r}}{ik-\mu r}-\frac{e^{(-ik-\mu)r}}{-ik-\mu r}\right] _0^{+\infty} \\\\
+$$&lt;/p&gt;
+$$
+
+= \lim_{\mu\rightarrow 0}\frac{2\pi}{ik}\left[\frac{-1}{ik-\mu }-\frac{-1}{-ik-\mu }\right] \\\\
+=\lim_{\mu\rightarrow 0}\frac{2\pi}{ik}\frac{2ik}{k^2 + \mu ^2} =\lim_{\mu\rightarrow 0}\frac{4\pi}{k^2 + \mu ^2} \\\\
+=\frac{4\pi}{k^2}
+
+$$&lt;h3 id="注"&gt;注&lt;/h3&gt;
+&lt;p&gt;函数满足一致收敛，积分与极限才可交换顺序。&lt;/p&gt;
+&lt;h2 id="类似的变换"&gt;类似的变换&lt;/h2&gt;
+&lt;p&gt;用同样的方法, 可以得到&lt;br /&gt;
+$$
+\lim_{\eta \to 0^+}\int \mathrm{d}^3\vec{r} . e^{\mathrm{i}\vec{k}\cdot\vec{r}} r e^{-r\eta}
+ = \frac{8 \pi}{k^4}
+$$&lt;br /&gt;
+$$
+\lim_{\eta \to 0^+}\int \mathrm{d}^3\vec{r} . e^{\mathrm{i}\vec{k}\cdot\vec{r}} e^{-r\eta}
+ = 0
+$$&lt;/p&gt;
+&lt;p&gt;用 Mathematica 可以验证.&lt;/p&gt;
+&lt;h2 id="reference"&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;关于使其收敛的说明, 分别从物理的角度, 数学的角度阐述这样做的合理性和必要性: https://physics.stackexchange.com/questions/7462/fourier-transform-of-the-coulomb-potential&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="physics"/><category term="数学"/><category term="物理"/><category term="库仑势"/><category term="Fourier"/></entry><entry><title>Lagrange乘子法求带有约束的极植</title><link href="https://zqw.ink/2018-09-22-physics-lagrange_multiply_optim.html" rel="alternate"/><published>2018-09-22T00:00:00+08:00</published><updated>2018-09-22T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-22:/2018-09-22-physics-lagrange_multiply_optim.html</id><summary type="html">&lt;!-- toc --&gt;
+&lt;!-- more --&gt;
+&lt;h2 id="问题"&gt;问题&lt;/h2&gt;
+&lt;p&gt;圆柱体积恒定，求表面积最大值。&lt;/p&gt;
+&lt;p&gt;也就是说，在 $V = \pi r^2h$ 的约束下，求函数 $A = 2\pi r^2 + 2\pi rh$ 的最小值。&lt;/p&gt;
+&lt;h2 id="求解"&gt;求解&lt;/h2&gt;
+&lt;p&gt;约束 $V = \pi r …&lt;/p&gt;</summary><content type="html">&lt;!-- toc --&gt;
+&lt;!-- more --&gt;
+&lt;h2 id="问题"&gt;问题&lt;/h2&gt;
+&lt;p&gt;圆柱体积恒定，求表面积最大值。&lt;/p&gt;
+&lt;p&gt;也就是说，在 $V = \pi r^2h$ 的约束下，求函数 $A = 2\pi r^2 + 2\pi rh$ 的最小值。&lt;/p&gt;
+&lt;h2 id="求解"&gt;求解&lt;/h2&gt;
+&lt;p&gt;约束 $V = \pi r^2h$ 在变量 $r-h$ 构成的直角坐标下，是一条线。&lt;/p&gt;
+&lt;p&gt;所求的量  $A = 2\pi r^2 + 2\pi rh$ 在$r-h$ 构成的平面内，当 &lt;eq&gt;A&lt;/eq&gt; 取不同的值时，对应不同的线，所以它就对应一簇线，每一条线上的所有的点都对应 &lt;eq&gt;A&lt;/eq&gt; 取相同的值。&lt;/p&gt;
+&lt;p&gt;线 $V = \pi r^2h$ 与很多条 $A = 2\pi r^2 + 2\pi rh$ 相交&lt;/p&gt;
+&lt;p&gt;要做的就是在 $V = \pi r^2h$ 这条线上找一个点，这个点是和某一条 $A = 2\pi r^2 + 2\pi rh$ 的交点，而且再也找不到另一个点与另一条更大的  $A = 2\pi r^2 + 2\pi rh$ 相交。&lt;/p&gt;
+&lt;p&gt;所以这时两条线应该相切，也就是它们的垂线是平行的，也就是&lt;br /&gt;
+$$
+\frac{\partial}{\partial r}（2\pi r^2 +2\pi r h） =\lambda \frac{\partial}{\partial r}（ \pi r^2h）
+$$&lt;/p&gt;
+$$
+
+\frac{\partial}{\partial h}（2\pi r^2 +2\pi r h） =\lambda \frac{\partial}{\partial h}（ \pi r^2h）
+
+$$&lt;p&gt;可得&lt;br /&gt;
+$$
+\lambda = 2r
+$$&lt;/p&gt;
+$$
+
+h =2r
+
+$$&lt;h1 id="一般形式"&gt;一般形式&lt;/h1&gt;
+&lt;p&gt;求二维函数 $f(x,y)=0$ 在约束 $g(x,y)=0$ 下的极值. 那么, $f(x,y)$ 的等高线与约束相切的点就是极值. 如图&lt;/p&gt;
+&lt;p&gt;&lt;img src="./2018-09-22-physics-Lagrange%E4%B9%98%E5%AD%90%E6%B3%95%E6%B1%82%E5%B8%A6%E6%9C%89%E7%BA%A6%E6%9D%9F%E7%9A%84%E6%9E%81%E6%A4%8D/fig.jpg" alt="fig" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="./2018-09-22-physics-Lagrange%E4%B9%98%E5%AD%90%E6%B3%95%E6%B1%82%E5%B8%A6%E6%9C%89%E7%BA%A6%E6%9D%9F%E7%9A%84%E6%9E%81%E6%A4%8D/fig.py"&gt;picture code&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;高维可以做类似的推广.&lt;/p&gt;
+&lt;h2 id="后续补充"&gt;后续补充&lt;/h2&gt;
+&lt;p&gt;画图&lt;/p&gt;
+&lt;p&gt;例题&lt;/p&gt;
+&lt;p&gt;一般形式&lt;/p&gt;
+</content><category term="physics"/><category term="数学"/><category term="极值"/></entry><entry><title>线性响应理论笔记</title><link href="https://zqw.ink/2018-09-20-physics-linear_response_theory.html" rel="alternate"/><published>2018-09-20T00:00:00+08:00</published><updated>2018-09-20T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-20:/2018-09-20-physics-linear_response_theory.html</id><summary type="html">&lt;!-- toc --&gt;
+&lt;!-- more --&gt;
+&lt;h2 id="问题"&gt;问题&lt;/h2&gt;
+&lt;p&gt;已知 $H=H_0 +V_t$，其中 $V_t = \hat{B} F_t$ ，为一外场 $F_t$ 对原有系统造成的微扰，$\hat{B}$ 是系统中与外场  $F_t$ 相耦合的力学量。求某力学量 …&lt;/p&gt;</summary><content type="html">&lt;!-- toc --&gt;
+&lt;!-- more --&gt;
+&lt;h2 id="问题"&gt;问题&lt;/h2&gt;
+&lt;p&gt;已知 $H=H_0 +V_t$，其中 $V_t = \hat{B} F_t$ ，为一外场 $F_t$ 对原有系统造成的微扰，$\hat{B}$ 是系统中与外场  $F_t$ 相耦合的力学量。求某力学量 $\hat{A}$ 在 &lt;eq&gt;t&lt;/eq&gt; 时刻系综平均值 $\langle A \rangle_t$ 与 &lt;eq&gt;0&lt;/eq&gt; 时刻的系综平均值 $\langle A \rangle_0$ 系综平均值 $\langle A \rangle_t -\langle A \rangle_0 $ 差的近似结果。&lt;/p&gt;
+&lt;p&gt;现取一特例，假设外场 $F_t$ 就是磁场 $\vec{B_t}$ ，那么系统中与外场 $\vec{B_t}$ 相耦合的力学量就是系统的总磁矩 $\vec{m}$ ，总磁矩 $\vec{m}$ 对应的微观量是系统中单个电子的自旋 $\vec{S_i}$ ，下标 &lt;eq&gt;i&lt;/eq&gt; 代表第 &lt;eq&gt;i&lt;/eq&gt; 个电子。其关系为：&lt;br /&gt;
+$$
+\vec{m} = \sum_i \vec{m_i} = \frac{g_J \mu_B}{\hbar} \sum_i \vec{S_i}
+$$&lt;br /&gt;
+假设测量量为磁化强度 $\vec{M} = \vec{m}/V$&lt;/p&gt;
+&lt;p&gt;所以对应关系为：&lt;br /&gt;
+$$
+\hat{B} \longleftrightarrow \vec{m}
+$$&lt;/p&gt;
+$$
+
+F_t \longleftrightarrow \vec{B}
+
+$$$$
+
+\hat{A} \longleftrightarrow \vec{M}
+
+$$&lt;h2 id="初步路线"&gt;初步路线&lt;/h2&gt;
+&lt;p&gt;写出详细表达式进行具体计算：&lt;br /&gt;
+$$
+\langle \vec{M} \rangle_t -\langle\vec{ M} \rangle_0  = \mathrm{Tr} [(\rho_t - \rho_0)\hat{M}] = \frac{1}{V}\cdot \frac{g_J \mu_B}{\hbar}\sum_i \mathrm{Tr} [(\rho_t - \rho_0)\vec{S_i}]
+$$&lt;br /&gt;
+接下来求 $\rho_t - \rho_0$ 。&lt;/p&gt;
+&lt;h3 id="求--时刻密度矩阵的近似值"&gt;求 &lt;eq&gt;t&lt;/eq&gt; 时刻密度矩阵的近似值&lt;/h3&gt;
+&lt;p&gt;Dirac表象中密度矩阵的运动方程：&lt;br /&gt;
+$$
+\dot{\rho_t^D} = \frac{1}{i\hbar} [V_t^D, \rho_t^D]
+$$&lt;br /&gt;
+假设初值条件为：&lt;br /&gt;
+$$
+\lim_{t\rightarrow -\infty}\rho_t^D(t) =\lim_{t\rightarrow -\infty}\rho_t = \rho_0 = \frac{e^{-\beta H_0}}{\mathrm{Tr}(e^{-\beta H_0})}
+$$&lt;br /&gt;
+Dirac表象选取 $t_0=0$ 为时间基点，也就是 $U(t,t_0)=e^{\frac{1}{i\hbar}(t-t_0)H_0}=e^{\frac{1}{i\hbar}H_0 t} = U(t)$&lt;/p&gt;
+&lt;p&gt;所以 &lt;eq&gt;t&lt;/eq&gt; 时刻密度矩阵可迭代求解：&lt;br /&gt;
+$$
+\rho_t^D = \rho_0 +\frac{1}{i\hbar} \int_{-\infty}^t \mathrm{d}t' [V_{t'}^D, \rho_{t'}^D] =\rho_0 +\frac{1}{i\hbar} \int_{-\infty}^t \mathrm{d}t' [V_{t'}^D, \rho_0] +\cdots
+$$&lt;br /&gt;
+做近似，只取线性项得：&lt;br /&gt;
+$$
+\rho_t^D \approx \rho_0 +\frac{1}{i\hbar} \int_{-\infty}^t \mathrm{d}t' [V_{t'}^D, \rho_0]
+$$&lt;br /&gt;
+换到薛定谔表象：&lt;br /&gt;
+$$
+\rho_t \approx \rho_0 +\frac{1}{i\hbar} \int_{-\infty}^t \mathrm{d}t'  U(t)[V_{t'}^D, \rho_0]U^{\dagger}(t)
+$$&lt;/p&gt;
+&lt;h2 id="求解结果"&gt;求解结果&lt;/h2&gt;
+&lt;p&gt;将 &lt;eq&gt;t&lt;/eq&gt; 时刻密度矩阵的近似结果&lt;br /&gt;
+$$
+\rho_t - \rho_0 \approx \frac{1}{i\hbar} \int_{-\infty}^t \mathrm{d}t'  U(t)[V_{t'}^D, \rho_0]U^{\dagger}(t)
+$$&lt;br /&gt;
+代入到详细表达式进行具体计算：&lt;br /&gt;
+$$
+\mathrm{Tr} [(\rho_t - \rho_0)\vec{S_i}] =   \frac{1}{i\hbar} \int_{-\infty}^t \mathrm{d}t'  \mathrm{Tr}  \left( U(t)[V_{t'}^D, \rho_0]U^{\dagger}(t) \vec{S_i}\right)
+$$&lt;br /&gt;
+而&lt;br /&gt;
+$$
+V_{t'} = -\vec{m}\cdot \vec{B_{t'}} = -\sum_{\alpha = x,y,z} m^{\alpha} B_{t'}^{\alpha} = -\sum_{\alpha = x,y,z} \sum_i \frac{g_J\mu_B}{\hbar} S_i^{\alpha} B_{t'}^{\alpha}
+$$&lt;br /&gt;
+所以&lt;br /&gt;
+$$
+\mathrm{Tr}  \left( U(t)[V_{t'}^D, \rho_0]U^{\dagger}(t) \vec{S_i}\right) =  \mathrm{Tr}  \left( [V_{t'}^D, \rho_0] \vec{S_i}(t)\right) = -\sum_{\alpha = x,y,z} \sum_i \frac{g_J\mu_B}{\hbar} \mathrm{Tr}\left( [S_i^{\alpha}(t'),\rho_0] \vec{S_i}(t) \right)B_{t'}^{\alpha}
+$$&lt;br /&gt;
+而&lt;br /&gt;
+$$
+\mathrm{Tr}\left( [S_i^{\alpha}(t'),\rho_0] \vec{S_i}(t) \right) = \mathrm{Tr}\left( \rho_0 [\vec{S_i}(t),S_i^{\alpha}(t')] \right) = \langle  [\vec{S_i}(t),S_i^{\alpha}(t')]\rangle_0
+$$&lt;br /&gt;
+所以&lt;br /&gt;
+$$
+\mathrm{Tr} [(\rho_t - \rho_0)\vec{S_i}] =   -\sum_{\alpha = x,y,z} \sum_i \frac{g_J\mu_B}{\hbar}  \frac{1}{i\hbar} \int_{-\infty}^t \mathrm{d}t' B_{t'}^{\alpha} \langle  [\vec{S_i}(t),S_i^{\alpha}(t')]\rangle_0
+$$&lt;/p&gt;
+$$
+
+\langle M \rangle_t -\langle M \rangle_0  = \mathrm{Tr} [(\rho_t - \rho_0)\hat{M}] = -\frac{1}{V}\cdot \frac{g_J \mu_B}{\hbar}\sum_{\alpha = x,y,z} \sum_i \frac{g_J\mu_B}{\hbar} \sum_i  \frac{1}{i\hbar} \int_{-\infty}^t \mathrm{d}t'  B_{t'}^{\alpha}\langle  [\vec{S_i}(t),S_i^{\alpha}(t')]\rangle_0
+
+$$&lt;h2 id="注"&gt;注&lt;/h2&gt;
+&lt;p&gt;Wolfgang Nolting, Fundamentals of Many-body Physics, 3.1节笔记&lt;/p&gt;
+&lt;h4 id="易混淆的量"&gt;易混淆的量&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;magnetetic susceptibility 磁化率： $\chi$&lt;/li&gt;
+&lt;li&gt;magnetic moment 总磁矩：$\vec{m}$&lt;/li&gt;
+&lt;li&gt;magnetisation 磁化强度：$\vec{M}$&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="physics"/><category term="物理"/><category term="线性响应理论"/></entry><entry><title>定态微扰论总结 (update 18/Apr/2020)</title><link href="https://zqw.ink/2018-09-09-physics-time_independent_perturbation.html" rel="alternate"/><published>2018-09-09T00:00:00+08:00</published><updated>2018-09-09T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-09:/2018-09-09-physics-time_independent_perturbation.html</id><summary type="html">
+&lt;h2&gt;Statement of the Problem&lt;/h2&gt;
+
+&lt;p&gt;已知 $H_0$ 的精确解：&lt;/p&gt;
+
+$$\begin{align}
+H_0 \mid n^{(0)} \rangle = E_n^{(0)} \mid n^{(0)} \rangle
+\end{align}$$
+
+
+&lt;p&gt;$\{ \mid n^{(0)} \rangle\}$ 是一组完备基，也就是 $1 = \sum_n \mid n^{(0)} \rangle \langle n^{(0)} \mid$ ；&lt;/p&gt;
+
+&lt;p&gt;求 …&lt;/p&gt;</summary><content type="html">
+&lt;h2&gt;Statement of the Problem&lt;/h2&gt;
+
+&lt;p&gt;已知 $H_0$ 的精确解：&lt;/p&gt;
+
+$$\begin{align}
+H_0 \mid n^{(0)} \rangle = E_n^{(0)} \mid n^{(0)} \rangle
+\end{align}$$
+
+
+&lt;p&gt;$\{ \mid n^{(0)} \rangle\}$ 是一组完备基，也就是 $1 = \sum_n \mid n^{(0)} \rangle \langle n^{(0)} \mid$ ；&lt;/p&gt;
+
+&lt;p&gt;求解：&lt;/p&gt;
+
+$$\begin{align}
+(H_0 + \lambda V) \mid n \rangle = E_n \mid n \rangle \tag{1}
+\end{align}$$
+
+
+&lt;p&gt;$\mid n \rangle$ 和 $E_n$ 都是 $\lambda$ 的连续函数。&lt;/p&gt;
+
+&lt;h2&gt;核心思路&lt;/h2&gt;
+
+&lt;p&gt;微扰的核心，把本征态和本征能量按 $\lambda$ 级数展开：&lt;/p&gt;
+
+$$\begin{align}
+\mid n \rangle = \mid n^{(0)} \rangle + \lambda \mid n^{(1)} \rangle + \lambda^2 \mid n^{(2)} \rangle+\cdots
+\end{align}$$
+
+
+
+$$\begin{align}
+E_n = E_n^{(0)} +\lambda E_n^{(1)} +\lambda^2 E_n^{(2)} + \cdots
+\end{align}$$
+
+
+&lt;h2&gt;本征能量修正&lt;/h2&gt;
+
+&lt;p&gt;从薛定谔方程入手考虑&lt;/p&gt;
+
+$$\begin{align}
+(H_0 + \lambda V) \mid n \rangle = E_n \mid n \rangle
+\tag{1}
+\end{align}$$
+
+&lt;p&gt;基本思是把 $E_n$ 直接展开成 $\lambda$ 的级数，同时把薛定谔方程也展开成 $\lambda$ 的级数，然后二者对应相等，即可得出 $\lambda$ 的系数。
+先把方程 $(1)$ 从一个关于态矢的方程变成一个关于数的方程，可以考虑左乘一个左矢。由于 $\langle n^{(0)} \mid$ 是 $H_0$ 的本征矢，所以
+就左乘  $\langle n^{(0)} \mid$ 。由于不知道算符 $V$ 的本征态，而态矢 $\mid n \rangle$ 是最终要求得的量，只能保留。左乘  $\langle n^{(0)} \mid$ 后得到以下方程：&lt;/p&gt;
+
+$$\begin{align}
+  \langle n^{(0)} \mid  (H_0 + \lambda V) \mid n \rangle =&amp; \langle n^{(0)} \mid  E_n \mid n \rangle \\
+  \Downarrow &amp;\\
+  \langle n^{(0)} \mid  \lambda V \mid n \rangle =&amp; \langle n^{(0)} \mid  (E_n- E_n^{(0)}) \mid n \rangle \\
+\end{align}$$
+
+&lt;p&gt;记&lt;/p&gt;
+
+$$\begin{align}
+\Delta_n \equiv E_n - E_n^{(0)}
+\end{align}$$
+
+&lt;p&gt;求得 $\Delta_n$ 也就求得了 $E_n$ 。如果将新的波函数归一化到 $\langle n^{(0)} \mid$ ，而不是 $\langle n \mid$ ：&lt;/p&gt;
+
+$$\begin{align}
+\langle n^{(0)} \mid n \rangle = 1
+\end{align}$$
+
+&lt;p&gt;能量修正就为：&lt;/p&gt;
+
+$$\begin{align}
+\Delta_n = \lambda\langle n^{(0)} \mid V \mid n \rangle
+\end{align}$$
+
+
+&lt;p&gt;也就是 $V$ 在微扰前后的本征态之间的跃迁矩阵元。展开成 $\lambda$ 的级数：&lt;/p&gt;
+
+$$\begin{align}
+\Delta_n = \Delta_n^{(0)} + \lambda\Delta_n^{(1)}+\lambda^2\Delta_n^{(2)}+\cdots
+= \lambda \langle n^{(0)}\mid V(\mid n^{(0)}\rangle + \lambda \mid n^{(1)}\rangle + \lambda^2\mid n^{(2)}\rangle+\cdots)\\\\
+=\lambda\langle n^{(0)}\mid V\mid n^{(0)}\rangle + \lambda^2\langle n^{(0)}\mid V\mid n^{(1)}\rangle+\cdots
+\end{align}$$
+
+&lt;p&gt;对应系数相等得 ：&lt;/p&gt;
+
+$$\begin{align}
+\Delta_n^{(0)} = 0
+\end{align}$$
+
+&lt;p&gt;$\Delta$ 的零阶当然为 $0$ ，微扰不存在时能级没有移动；&lt;/p&gt;
+
+$$\begin{align}
+\Delta_n^{(1)} = \langle n^{(0)}\mid V\mid n^{(0)}\rangle
+\end{align}$$
+
+&lt;p&gt;一阶修正是 $V$ 在无微扰的本征态之间的跃迁；&lt;/p&gt;
+
+$$\begin{align}
+\Delta_n^{(2)} = \langle n^{(0)}\mid V\mid n^{(1)}\rangle
+\end{align}$$
+
+&lt;p&gt;二阶修正是 $V$ 在本征态的一阶微扰和无微本征态之间的跃迁；&lt;/p&gt;
+
+$$\begin{align}
+\Delta_n^{(3)} = \langle n^{(0)}\mid V\mid n^{(2)}\rangle\\
+\vdots
+\end{align}$$
+
+&lt;p&gt;某一阶能量修正对 $V$ 在应某一阶本征态修正和无微扰本征态之间的跃迁矩阵元。各阶求和的结果就是$V$ 在微扰前后的本征态之间的跃迁矩阵元。&lt;/p&gt;
+
+&lt;p&gt;其中有未知的 $\mid n \rangle$ ，是另外一个最终要求得的量。接下来求 $\mid n \rangle$ 。&lt;/p&gt;
+
+&lt;h2&gt;本征态修正&lt;/h2&gt;
+
+&lt;p&gt;从薛定谔方程入手考虑&lt;/p&gt;
+
+$$\begin{align}
+(H_0 + \lambda V) \mid n \rangle = E_n \mid n \rangle
+\tag{1}
+\end{align}$$
+
+
+&lt;p&gt;将 $(1)$ 式化为&lt;/p&gt;
+
+$$\begin{align}
+(H_0 + \lambda V) \mid n \rangle = (E_n^{(0)} + \Delta_n) \mid n \rangle
+\end{align}$$
+
+&lt;p&gt;移项得&lt;/p&gt;
+
+$$\begin{align}
+(E_n^{(0)}-H_0)\mid n \rangle = (\lambda V -\Delta_n)\mid n \rangle
+\tag{2}
+\end{align}$$
+
+&lt;p&gt;思路也是把 $\mid n \rangle$ 直接展开成 $\lambda$ 的级数&lt;/p&gt;
+
+$$\begin{align}
+\mid n \rangle = \mid n^{(0)} \rangle + \lambda \mid n^{(1)} \rangle + \lambda^2 \mid n^{(2)} \rangle + \cdots
+\end{align}$$
+
+&lt;p&gt;同时把薛定谔方程也展开成 $\lambda$ 的级数，然后二者对应相
+等，即可得出 $\lambda$ 的系数。同样， $H_0$ 的所有信息都是
+已知的，不想让它作为算符存在，而是以它的本征值的形式存在。最终将要
+求得的 $\mid n^{(1)} \rangle$ ， $\mid n^{(2)} \rangle$ ……应该是
+在基底 $\{\mid n^{(0)}\rangle\}$ 下的表示形式，所以只要求得它在这组基底下的系数 $\langle n'^{(0)}\mid n \rangle$ 即可。故
+将方程 $(2)$ 左乘 $\langle n'^{(0)} \mid$ 是最佳选择：&lt;/p&gt;
+
+$$\begin{align}
+  \langle n'^{(0)} \mid (E_n^{(0)}-H_0)\mid n \rangle =&amp;\langle n'^{(0)} \mid  (\lambda V -\Delta_n)\mid n \rangle \\
+  \Downarrow &amp; \\
+  (E_n^{(0)}-E_{n'}^{(0)})\langle n'^{(0)} \mid n \rangle =&amp;\langle n'^{(0)} \mid  (\lambda V -\Delta_n)\mid n \rangle
+\tag{3}
+\end{align}$$
+
+
+&lt;p&gt;只要把 $(E_n^{(0)}-E_{n'}^{(0)})​$ 移到右边，就得到想要的表达式。但是移项之前应该考虑要是否为 $0​$ 。以下两种情况满足$E_n^{(0)}\neq E_{n'}^{(0)}​$ ：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;非体系没有简并，且 $n\neq n'$ ；&lt;/li&gt;
+&lt;li&gt;体系有简并，但是并非 $n$ 和 $n'$ 都在简并空间&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;下面分开讨论。&lt;/p&gt;
+
+&lt;h2&gt;非简并&lt;/h2&gt;
+
+&lt;p&gt;非简并，且 $n\neq n'$ 时，可以把 $(E_n^{(0)}-E_{n'}^{(0)})$ 移到右边：&lt;/p&gt;
+
+$$\begin{align}
+\langle n'^{(0)} \mid n \rangle =\frac{1}{E_n^{(0)}-E_{n'}^{(0)}}\langle n'^{(0)} \mid  (\lambda V -\Delta_n)\mid n \rangle
+\end{align}$$
+
+&lt;p&gt;把上述方程展开成 $\lambda$ 的级数：&lt;/p&gt;
+
+$$\begin{align}
+\langle n'^{(0)} \mid( \mid n^{(0)} \rangle +\lambda \mid n^{(1)} \rangle +\cdots)\\\\
+=\frac{1}{E_n^{(0)}-E_{n'}^{(0)}}\langle n'^{(0)} \mid  (\lambda V -\lambda\Delta_n^{(1)}-\cdots)( \mid n^{(0)} \rangle +\lambda \mid n^{(1)} \rangle +\cdots)
+\end{align}$$
+
+&lt;p&gt;对应 $\lambda$ 的系数相等得：&lt;/p&gt;
+
+$$\begin{align}
+\langle n'^{(0)}\mid n^{(1)} \rangle
+=\frac{1}{E_n^{(0)}-E_{n'}^{(0)}}\langle n'^{(0)} \mid  (V -\Delta_n^{(1)}) \mid n^{(0)} \rangle
+\end{align}$$
+
+&lt;p&gt;由于 $n\neq n'$ ，所以 $\langle n'^{(0)} \mid  \lambda\Delta_n^{(1)}\mid n^{(0)} \rangle=\lambda\Delta_n^{(1)}\langle
+n'^{(0)} \mid n^{(0)} \rangle=0$
+，故：&lt;/p&gt;
+
+$$\begin{align}
+\langle n'^{(0)}\mid n^{(1)} \rangle
+=\frac{1}{E_n^{(0)}-E_{n'}^{(0)}}\langle n'^{(0)} \mid  V \mid n^{(0)} \rangle
+\end{align}$$
+
+&lt;p&gt;那么 $\mid n^{(1)} \rangle$ 就是（将 $ n=n'$ 的系数 $\langle n^{(0)}\mid n^{(1)} \rangle$ 全都放到 $\mid n^{(0)} \rangle$ 里面）：&lt;/p&gt;
+
+$$\begin{align}
+\mid n^{(1)}\rangle=\sum_{n'\neq n}\mid n'^{(0)}\rangle\langle n'^{(0)}\mid n^{(1)} \rangle
+=\sum_{n'\neq n}\frac{1}{E_n^{(0)}-E_{n'}^{(0)}}\mid n'^{(0)}\rangle\langle n'^{(0)} \mid  V \mid n^{(0)} \rangle
+\end{align}$$
+
+&lt;p&gt;同样也可以对应 $\lambda^2$ ， $\lambda^3$ ……的系数相等。&lt;/p&gt;
+
+&lt;h2&gt;简并&lt;/h2&gt;
+&lt;h3&gt;并非 $n$ 和 $n'$ 都在简并空间&lt;/h3&gt;
+
+&lt;p&gt;体系有简并，但是并非 $n$ 和 $n'$ 都在简并空间时， $(E_n^{(0)}-E_{n'}^{(0)})$ 也可以移到右边，情况与非简并的情况完全一样。&lt;/p&gt;
+
+&lt;h3&gt;$n$ 和 $n'$ 都在简并空间&lt;/h3&gt;
+
+&lt;p&gt;为了便于区分，将简并空间中的本征态用 $m$ 标记， $E_m^{(0)} = E_D^{(0)}$ ，假设简并空间记为 $D$ ，是 $g$ 重简并的，投影
+到简并空间的投影算符记为 $P_D$ ，投影到非简并空间的投影算符记为 $P_N = 1 - P_D$ 。 $\mid m_0 \rangle$ 是只在简
+并空间的，但是微扰变成 $\mid m \rangle$ 后掺入了非简并空间的分量。所以 $\mid m \rangle$ 可以分成两部分：&lt;/p&gt;
+
+$$\begin{align}
+\mid m \rangle   = P_D \mid m \rangle  + P_N \mid m \rangle
+\end{align}$$
+
+&lt;p&gt;回到薛定谔方程 $(3)$ ：&lt;/p&gt;
+
+$$\begin{align}
+\langle m'^{(0)} \mid (E_D^{(0)}-H_0)\mid m \rangle =&amp; \langle m'^{(0)} \mid  (\lambda V -\Delta_m)\mid m \rangle\\
+\Downarrow&amp; \\
+\langle m'^{(0)} \mid (E_D^{(0)}-E_D^{(0)})\mid m \rangle= 0 =&amp;\langle m'^{(0)} \mid  (\lambda V -\Delta_m)\mid m \rangle\\
+\Downarrow&amp; \\
+\langle m'^{(0)} \mid  (\lambda V -\Delta_m)\mid m \rangle =&amp; 0 \tag{4}
+\end{align}$$
+
+&lt;p&gt;这是唯一的出路，所以将 $(4)​$ 式展开成 $\lambda​$ 的级数：&lt;/p&gt;
+
+$$\begin{align}
+\langle m'^{(0)} \mid  (\lambda V -\lambda \Delta_m^{(1)}-\lambda^2 \Delta_m^{(2)}-\cdots)(\mid m^{(0)}\rangle+\lambda \mid m^{(1)}\rangle+\cdots ) =0
+\end{align}$$
+
+&lt;p&gt;对应 $\lambda​$ 的系数相等得：&lt;/p&gt;
+
+$$\begin{align}
+\langle m'^{(0)} \mid  ( V -\Delta_m)\mid m^{(0)} \rangle =0
+\end{align}$$
+
+&lt;p&gt;这是一个本征值问题，算符 $V$ 在简并空间 $D$ 中的本征值问题。也就是说加入微扰以后的零级本
+征态应该满足上式，而不是简并空间中任意的一组基底都可以作为零级本征态进行微扰计算。记满足上述方程的基底为 $\{\mid l^{0)}\rangle\}$ ，即&lt;/p&gt;
+
+$$\begin{align}
+\langle l'^{(0)} \mid V \mid l^{(0)}\rangle = v_i\delta_{l,l'}
+\end{align}$$
+
+&lt;p&gt;其中 $v_i$ 为 $V$ 在简并空间中解得的本征值。再看 $\lambda ^2$ 对应的系数相等得（这时已经换到新的基底了）：&lt;/p&gt;
+
+$$\begin{align}
+\langle l'^{(0)}\mid(V - \Delta_l^{(1)}) \mid l^{(1)}\rangle -\langle l'^{(0)}\mid\Delta_l^{(2)} \mid l^{(0)}\rangle=0
+\end{align}$$
+
+&lt;p&gt;而 $\langle l'^{(0)}\mid\Delta_D^{(2)}\mid l^{(0)}\rangle = \Delta_D^{(2)}\langle l'^{(0)}\mid l^{(0)}\rangle = 0$ ，所以&lt;/p&gt;
+
+$$\begin{align}
+\langle l'^{(0)}\mid(V - \Delta_l^{(1)}) \mid l^{(1)}\rangle = 0
+\end{align}$$
+
+&lt;p&gt;$l^{(1)}$ 中在非简并空间中的分量已经知道了，所以将 $\mid l^{(1)} \rangle$ 分成两部分：&lt;/p&gt;
+
+$$\begin{align}
+\mid l^{(1)} \rangle   = P_D \mid l^{(1)} \rangle  + P_N \mid l^{(1)} \rangle
+\end{align}$$
+
+&lt;p&gt;所以&lt;/p&gt;
+
+$$\begin{align}
+\langle l'^{(0)}\mid(V - \Delta_l^{(1)}) P_D\mid l^{(1)}\rangle + \langle l'^{(0)}\mid(V - \Delta_l^{(1)}) P_N\mid l^{(1)}\rangle =0
+\end{align}$$
+
+&lt;p&gt;其中 $P_N \mid l^{(1)} \rangle$ 为情况“并非 $n$ 和 $n'$ 都在简并空间”中已知的结果。而&lt;/p&gt;
+
+$$\begin{align}
+\langle l'^{(0)}\mid V  P_D\mid l^{(1)}\rangle = \langle l'^{(0)}\mid V  \sum_l \mid l^{(0)}\rangle\langle l^{(0)}\mid
+l^{(1)}\rangle=  v_{l'}\langle l'^{(0)}\mid  \sum_{l''} \mid l''^{(0)}\rangle\langle l''^{(0)}\mid l^{(1)}\rangle
+= v_{l'}\langle l'^{(0)}\mid l^{(1)}\rangle
+\end{align}$$
+
+
+
+$$\begin{align}
+\langle l'^{(0)}\mid \Delta_l^{(1)} P_N\mid l^{(1)}\rangle = \Delta_l^{(1)} \langle l'^{(0)}\mid P_N\mid
+l^{(1)}\rangle = 0
+\end{align}$$
+
+&lt;p&gt;所以可以求得&lt;/p&gt;
+
+$$\begin{align}
+(v_{l'}-\Delta_l^{(1)})\langle l'^{(0)}\mid l^{(1)}\rangle =&amp; \langle l'^{(0)}\mid V  P_N\mid l^{(1)}\rangle \\
+\Downarrow&amp;\\
+\langle l'^{(0)}\mid l^{(1)}\rangle =&amp; \frac{1}{v_{l'}-\Delta_l^{(1)}}\langle l'^{(0)}\mid V  P_N\mid l^{(1)}\rangle
+\end{align}$$
+
+&lt;p&gt;其中 $P_N \mid l^{(1)} \rangle$ 为：&lt;/p&gt;
+
+$$\begin{align}
+P_N \mid l^{(1)} \rangle = \sum_{n\notin D} \mid n^{(0)} \rangle\langle n^{(0)}\mid l^{(1)}\rangle =\sum_{n\notin D} \mid n^{(0)} \rangle \frac{1}{E_D^{(0)}-E_{n}^{(0)}}\langle n^{(0)} \mid  V \mid l^{(0)} \rangle
+\end{align}$$
+
+&lt;p&gt;由于 $\Delta_l^{(1)} = v_l$ ，最终可求得&lt;/p&gt;
+
+$$\begin{align}
+\langle l'^{(0)}\mid l^{(1)}\rangle =\frac{1}{v_{l'}-v_l}\langle l'^{(0)}\mid V  \sum_{n\notin D} \mid n^{(0)} \rangle \frac{1}{E_D^{(0)}-E_{n}^{(0)}}\langle n^{(0)} \mid  V \mid l^{(0)} \rangle
+\end{align}$$
+
+
+&lt;h2&gt;总结&lt;/h2&gt;
+
+&lt;p&gt;已知 $H_0$ 的精确解：&lt;/p&gt;
+
+$$\begin{align}
+H_0 \mid n^{(0)} \rangle = E_n^{(0)} \mid n^{(0)} \rangle
+\end{align}$$
+
+&lt;p&gt;求解：&lt;/p&gt;
+
+$$\begin{align}
+(H_0 + V) \mid n \rangle = E_n \mid n \rangle
+\end{align}$$
+
+
+&lt;h3&gt;对于非简并或 $\mid n \rangle$ 不在简并空间时&lt;/h3&gt;
+
+&lt;p&gt;新的本征能量为：&lt;/p&gt;
+
+$$\begin{align}
+E_n = E_n^{(0)} + \langle n^{(0)}\mid V\mid n^{(0)}\rangle + \langle n^{(0)}\mid V\mid n^{(1)}\rangle +\cdots
+\end{align}$$
+
+&lt;p&gt;新的本征态为：&lt;/p&gt;
+
+$$\begin{align}
+\mid n \rangle = \mid n^{(0)}\rangle + \mid n^{(1)}\rangle +\cdots
+\end{align}$$
+
+&lt;p&gt;其中：&lt;/p&gt;
+
+$$\begin{align}
+\mid n^{(1)}\rangle=\sum_{n'\neq n}\frac{1}{E_n^{(0)}-E_{n'}^{(0)}}\mid n'^{(0)}\rangle\langle n'^{(0)} \mid  V \mid n^{(0)} \rangle
+\end{align}$$
+
+
+&lt;h3&gt;对于 $\mid n \rangle$ 在简并空间中时&lt;/h3&gt;
+
+&lt;p&gt;新的本征能量为：&lt;/p&gt;
+
+$$\begin{align}
+E_l = E_D +v_l  + \langle l^{(0)}\mid V\mid l^{(1)}\rangle +\cdots
+\end{align}$$
+
+&lt;p&gt;其中 $E_D$ 为简并的本征能量， $\mid l^{(0)}\rangle$ 为：&lt;/p&gt;
+
+$$\begin{align}
+\langle m'^{(0)} \mid  ( V -\Delta_m)\mid m^{(0)} \rangle =0
+\end{align}$$
+
+&lt;p&gt;的本征态，其中$\mid m^{(0)} \rangle, \mid m'^{(0)} \rangle$ 为简并空间中的的未经微扰的本征态，且记其本征值为 $v_l$ 。&lt;/p&gt;
+
+&lt;p&gt;新的本征态为：&lt;/p&gt;
+
+$$\begin{align}
+\mid n \rangle = \mid l^{(0)}\rangle + \mid l^{(1)}\rangle +\cdots
+\end{align}$$
+
+
+&lt;p&gt; $\mid l^{(1)}\rangle$ 为&lt;/p&gt;
+
+$$\begin{align}
+\mid l^{(1)}\rangle=\sum_{n\notin D}\frac{1}{E_D^{(0)}-E_{n}^{(0)}}\mid n^{(0)}\rangle\langle n^{(0)} \mid  V \mid l^{(0)} \rangle
+\\\\+ \sum_{l'^{(0)}}\mid l'^{(0)}\rangle\frac{1}{v_{l'}-v_l}\langle l'^{(0)}\mid V  \sum_{n\notin D} \mid n^{(0)} \rangle \frac{1}{E_D^{(0)}-E_{n}^{(0)}}\langle n^{(0)} \mid  V \mid l^{(0)} \rangle
+\end{align}$$
+
+
+
+&lt;h2&gt;例子&lt;/h2&gt;
+
+&lt;h3&gt;二能级系统&lt;/h3&gt;
+
+&lt;p&gt;假设一个系统的 Hamiltonian 为&lt;/p&gt;
+
+$$\begin{align}
+  \hat{H} = \hat{H}_0 + \hat{V}
+\end{align}$$
+
+&lt;p&gt;它在 $H_0$ 的本征表象中&lt;/p&gt;
+
+$$\begin{align}
+  H = H_0+V = \left(
+  \begin{array}{cc}
+   E^{(0)}_1 &amp; 0 \\
+   0 &amp; E^{(0)}_2
+  \end{array}
+ \right) +
+\left(
+  \begin{array}{cc}
+   0 &amp; V \\
+   V &amp; 0
+  \end{array}
+ \right)
+\end{align}$$
+
+&lt;p&gt;如果用微扰论计算, 它的能量一阶修正是零, 因为微扰的对角元为零. 二阶修正为&lt;/p&gt;
+
+$$\begin{align}
+E_1^{(2)} = \frac{V^2}{E_1-E_2} \\
+E_2^{(2)} = \frac{V^2}{E_2-E_1}
+\end{align}$$
+
+&lt;p&gt;同时它可以精确求解&lt;/p&gt;
+
+$$\begin{align}
+  E^{\pm} = \frac{E_1^{(0)} + E^{(0)}_2}{2}
+  \pm \sqrt{\left( \frac{E^{(0)}_1 - E^{(0)}_2}{2} \right)^2 + V^2}
+\end{align}$$
+
+&lt;p&gt;如果把 $V$ 做为小量, 将精确解展开(假设 $E_1&gt;E_2$ )&lt;/p&gt;
+
+$$\begin{align}
+  E^{\pm} =&amp; \frac{E_1^{(0)} + E^{(0)}_2}{2}
+  \pm \sqrt{\left( \frac{E^{(0)}_1 - E^{(0)}_2}{2} \right)^2 + V^2} \\
+  =&amp; \left\{
+  \begin{array}{cc}
+  E_1 + \frac{V^2}{E_1 - E_{2}} + \mathcal{O}(V^{4}) ,&amp;+\\
+  E_2 - \frac{V^2}{E_1 - E_{2}} + \mathcal{O}(V^{4}) ,&amp;-
+  \end{array}
+ \right.
+\end{align}$$
+
+&lt;p&gt;正好与微扰论相符.&lt;/p&gt;
+
+&lt;h3&gt;三能级系统&lt;/h3&gt;
+&lt;p&gt;假设一个系统的 Hamiltonian 为&lt;/p&gt;
+
+$$\begin{align}
+  \hat{H} = \hat{H}_0 + \hat{V}
+\end{align}$$
+
+&lt;p&gt;它在 $H_0$ 的本征表象中&lt;/p&gt;
+
+$$\begin{align}
+  H = H_0+V = \left(
+  \begin{array}{ccc}
+   E^{(0)}_1 &amp; 0 &amp;0\\
+   0 &amp; E^{(0)}_2 &amp; 0 \\
+   0 &amp; 0 &amp; E^{(0)}_e
+  \end{array}
+ \right) +
+\left(
+  \begin{array}{ccc}
+   0 &amp; V_{12} &amp; V_{13}\\
+   V_{12} &amp; 0 &amp; V_{23} \\
+   V_{13} &amp; V_{23} &amp; 0
+  \end{array}
+ \right)
+\end{align}$$
+
+&lt;p&gt;假设它们具体数值, 并用数值精确求解&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-python"&gt;import numpy as np
+e1 = 100
+e2 = 300
+e3 = 500
+v12 = 10
+v13 = 20
+v23 = 30
+a = np.array([[e1,   v12,   v13],
+              [v12,   e2,   v23],
+              [v13,  v23,    e3]])
+w, v = np.linalg.eig(a)
+print(w)
+print(v)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;结果为&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-python"&gt;[ 98.64010314 505.51622055 295.84367631]
+[[-0.99800619  0.0523362  -0.03527831]
+ [ 0.04262872  0.14673809 -0.98825641]
+ [ 0.04654492  0.98778988  0.14867655]]&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;用微扰论求解 $E_1$ , 一阶修正是零. 二阶修正为&lt;/p&gt;
+
+$$\begin{align}
+  E_1^{(2)} =&amp; V_{12}\frac{1}{E_1 - E_2}V_{12} + V_{13}\frac{1}{E_1 - E_3}V_{13} \\
+  =&amp; 10\cdot\frac{1}{100-300}\cdot 10 + 20\cdot\frac{1}{100-500}\cdot 20 \\
+  =&amp; -1.5
+\end{align}$$
+
+&lt;p&gt;三阶修正为(如果微扰对角元不为零, 此公式还有一项)&lt;/p&gt;
+
+$$\begin{align}
+  E_1^{(3)} =&amp; V_{12}\frac{1}{E_1 - E_2}V_{23}\frac{1}{E_1 - E_3}V_{31} \\
+  +&amp; V_{13}\frac{1}{E_1 - E_3}V_{32}\frac{1}{E_1 - E_2}V_{21}\\
+  =&amp; 2\times 0.075 = 0.15
+\end{align}$$
+
+&lt;p&gt;所以微扰论给出二阶修正结果为 $100-1.5=98.5$ , 三阶修正给出的结果为
+$100-1.5+0.15 = 98.65$ , 而数值求解的结果为 $98.64010314$ . $E_{2}, E_3$ 的微扰修正
+可作为练习.&lt;/p&gt;
+
+&lt;h2&gt;Appendix&lt;/h2&gt;
+&lt;h3&gt;算符出现在分母上&lt;/h3&gt;
+
+&lt;p&gt;意为逆算符. 即&lt;/p&gt;
+
+$$\begin{align}
+  A^{-1} \equiv \frac{1}{A}
+\end{align}$$
+
+&lt;p&gt;和它本身有共同本征值. 其本征值为自身本征值的倒数.&lt;/p&gt;
+
+&lt;p&gt;证明如下:&lt;/p&gt;
+
+&lt;blockquote&gt;假设 $A$ 对应态 $|n\rangle$ 的本征值为 $a_n$ ,即
+\begin{align}
+  A |n \rangle = a_n |n\rangle
+\end{align}
+那么两边左乘 $A^{-1}$ 有
+\begin{align}
+  | n \rangle =&amp; a_n A^{-1} | n \rangle \\
+  \Downarrow&amp; \\
+  \frac{1}{a_n} | n \rangle =&amp; A^{-1} | n \rangle
+\end{align}
+用分数的记法即
+\begin{align}
+  \frac{1}{A}| n \rangle = \frac{1}{a_n} |n \rangle
+\end{align}&lt;/blockquote&gt;
+
+&lt;h2&gt;Reference&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;J. J. Sakurai, Jim Napolitano, Modern Quantum Mechanics 2nd&lt;/li&gt;
+&lt;li&gt;高阶修正的公式: &lt;a href='https://en.wikipedia.org/wiki/Perturbation_theory_(quantum_mechanics)'&gt;Wikipedia:Perturbation theory (quantum mechanics)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="physics"/><category term="物理"/><category term="高等量子力学"/><category term="微扰"/></entry><entry><title>特殊二阶矩阵的本征值求解</title><link href="https://zqw.ink/2018-09-07-physics-2by2matrix_eigen.html" rel="alternate"/><published>2018-09-07T00:00:00+08:00</published><updated>2018-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-07:/2018-09-07-physics-2by2matrix_eigen.html</id><summary type="html">
+&lt;h2 id="对角矩阵元相等"&gt;对角矩阵元相等&lt;/h2&gt;
+&lt;p&gt;形如&lt;br /&gt;
+$$
+H = \left( \begin{array}{cc}
+		a	&amp;	b\\\\
+		b	&amp;	c
+		\end{array}\right)
+$$&lt;br /&gt;
+与以下自旋问题类比：&lt;/p&gt;
+&lt;p&gt;在 $x-z$ 平面内任意方向加磁场 $\vec{a} = (a_1, 0, a_3)$ 求解能 …&lt;/p&gt;</summary><content type="html">
+&lt;h2 id="对角矩阵元相等"&gt;对角矩阵元相等&lt;/h2&gt;
+&lt;p&gt;形如&lt;br /&gt;
+$$
+H = \left( \begin{array}{cc}
+		a	&amp;	b\\\\
+		b	&amp;	c
+		\end{array}\right)
+$$&lt;br /&gt;
+与以下自旋问题类比：&lt;/p&gt;
+&lt;p&gt;在 $x-z$ 平面内任意方向加磁场 $\vec{a} = (a_1, 0, a_3)$ 求解能量本征值，Hamiltonian写为&lt;br /&gt;
+$$
+H = a_0 + \vec{\sigma}\cdot\vec{a} = \left(\begin{array}{cc}
+								a_0+a_3	&amp;	a_1\\\\
+								a_1		&amp;	a_0-a_3
+							\end{array}\right)
+$$&lt;br /&gt;
+沿 &lt;eq&gt;y&lt;/eq&gt; 轴转动坐标系，将 &lt;eq&gt;z&lt;/eq&gt; 轴转到磁场的方向，由物理意义直接解得能量本征值为&lt;br /&gt;
+$$
+E = a_0 \pm \sqrt{a_1^2 +a_3^2}
+$$&lt;/p&gt;
+&lt;p&gt;所以原问题的本征值可直接写出为&lt;br /&gt;
+$$
+\lambda = \frac{a+c}{2} \pm \sqrt{b^2 +\frac{(a - c)^2}{4}}
+$$&lt;/p&gt;
+</content><category term="physics"/><category term="数学"/><category term="矩阵"/></entry><entry><title>Fourier transform 总结</title><link href="https://zqw.ink/2018-09-07-physics-fourier-transform-zong-jie.html" rel="alternate"/><published>2018-09-07T00:00:00+08:00</published><updated>2018-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-07:/2018-09-07-physics-fourier-transform-zong-jie.html</id><summary type="html">&lt;h2&gt;总的分类&lt;/h2&gt;
 
 &lt;p&gt;根据变量的连续与否，F.T.总共有三种。&lt;/p&gt;
 
@@ -814,39 +1821,4 @@ $$\begin{align*}
 \sum_l e^{-i\frac{2\pi}{N}k'l} e^{i\frac{2\pi}{N}kl}=N\delta_{kk'}
 \end{align*}$$
 
-</content><category term="physics"/><category term="Fourier"/><category term="数学"/></entry><entry><title>特殊二阶矩阵的本征值求解</title><link href="https://zqw.ink/2018-09-07-physics-te-shu-er-jie-ju-zhen-de-ben-zheng-zhi-qiu-jie.html" rel="alternate"/><published>2018-09-07T00:00:00+08:00</published><updated>2018-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-07:/2018-09-07-physics-te-shu-er-jie-ju-zhen-de-ben-zheng-zhi-qiu-jie.html</id><summary type="html">
-&lt;h2 id="对角矩阵元相等"&gt;对角矩阵元相等&lt;/h2&gt;
-&lt;p&gt;形如&lt;br /&gt;
-$$
-H = \left( \begin{array}{cc}
-		a	&amp;	b\\\\
-		b	&amp;	c
-		\end{array}\right)
-$$&lt;br /&gt;
-与以下自旋问题类比：&lt;/p&gt;
-&lt;p&gt;在 $x-z$ 平面内任意方向加磁场 $\vec{a} = (a_1, 0, a_3)$ 求解能 …&lt;/p&gt;</summary><content type="html">
-&lt;h2 id="对角矩阵元相等"&gt;对角矩阵元相等&lt;/h2&gt;
-&lt;p&gt;形如&lt;br /&gt;
-$$
-H = \left( \begin{array}{cc}
-		a	&amp;	b\\\\
-		b	&amp;	c
-		\end{array}\right)
-$$&lt;br /&gt;
-与以下自旋问题类比：&lt;/p&gt;
-&lt;p&gt;在 $x-z$ 平面内任意方向加磁场 $\vec{a} = (a_1, 0, a_3)$ 求解能量本征值，Hamiltonian写为&lt;br /&gt;
-$$
-H = a_0 + \vec{\sigma}\cdot\vec{a} = \left(\begin{array}{cc}
-								a_0+a_3	&amp;	a_1\\\\
-								a_1		&amp;	a_0-a_3
-							\end{array}\right)
-$$&lt;br /&gt;
-沿 &lt;eq&gt;y&lt;/eq&gt; 轴转动坐标系，将 &lt;eq&gt;z&lt;/eq&gt; 轴转到磁场的方向，由物理意义直接解得能量本征值为&lt;br /&gt;
-$$
-E = a_0 \pm \sqrt{a_1^2 +a_3^2}
-$$&lt;/p&gt;
-&lt;p&gt;所以原问题的本征值可直接写出为&lt;br /&gt;
-$$
-\lambda = \frac{a+c}{2} \pm \sqrt{b^2 +\frac{(a - c)^2}{4}}
-$$&lt;/p&gt;
-</content><category term="physics"/><category term="数学"/><category term="矩阵"/></entry></feed>
+</content><category term="physics"/><category term="Fourier"/><category term="数学"/></entry></feed>

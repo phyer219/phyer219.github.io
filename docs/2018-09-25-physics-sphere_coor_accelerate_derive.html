@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="zh_cn">
+
+<head>
+    <title>从冰上的水 - 球坐标系速度和加速度的推导</title>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Pelican" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://zqw.ink/feeds/all.atom.xml"
+    type="application/atom+xml" rel="alternate" title="从冰上的水 Full Atom Feed" />
+  <link
+    href="https://zqw.ink/feeds/physics.atom.xml"
+    type="application/atom+xml" rel="alternate" title="从冰上的水 Categories Atom Feed" />
+  <link rel="stylesheet" type="text/css" href="https://zqw.ink/theme/css/style.css" />
+  <!-- SEO: site-level structured data (WebSite) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "从冰上的水",
+    "url": "https://zqw.ink/"
+  }
+  </script>
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Serif+SC&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.6.1/github-markdown.min.css" integrity="sha512-wpdV3v8V8vWajD1kH8rI1UO1H2q9TQ3s8o1mG7lH8fS1dZ+3q1B1p4lH2tF8rQm2u0n8oV6rN3tV4nQWmY4nTw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!--fonts end  -->
+  <!-- highlight.js -->
+  <link id="hljs-light" rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" disabled>
+  <link id="hljs-dark" rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" disabled>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <script>
+    hljs.highlightAll();
+    (function () {
+      const light = document.getElementById('hljs-light');
+      const dark = document.getElementById('hljs-dark');
+      if (!light || !dark) return;
+
+      function resolveTheme() {
+        return document.documentElement.getAttribute('data-theme') || 'light';
+      }
+
+      function applyTheme(theme) {
+        const isDark = theme === 'dark';
+        light.disabled = isDark;
+        dark.disabled = !isDark;
+      }
+
+      const observer = new MutationObserver(function () {
+        applyTheme(resolveTheme());
+      });
+      observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+      applyTheme(resolveTheme());
+    })();
+  </script>
+  <!-- highlight.js end -->
+
+<script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        tags: 'ams'   // 自动给 AMS 环境/显示公式编号
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.1">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.1">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.1">
+
+
+
+  <!-- SEO: page description for search results -->
+    <meta name="description" content="做法之一 球坐标基矢按直角坐标展开： $$ \begin{cases} \hat{r} &= \sin\theta\cos\varphi \hat{x} +\sin\theta\sin\varphi \hat{y} +\cos\theta \hat{z}\\\\ \hat{\theta} &=..." />
+
+    <meta name="tags" content="数学" />
+    <meta name="tags" content="物理" />
+    <meta name="tags" content="理论力学" />
+    <meta name="tags" content="球坐标" />
+
+  <!-- SEO: structured data for articles (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "球坐标系速度和加速度的推导",
+    "datePublished": "2018-09-25T00:00:00+08:00",
+    "author": {
+      "@type": "Person",
+      "name": "ZQW"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://zqw.ink/2018-09-25-physics-sphere_coor_accelerate_derive.html"
+    }
+  }
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <div id="header-container">
+      <button id="nav-toggle" class="nav-toggle" aria-label="打开菜单" aria-expanded="false">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+      <nav id="site-nav">
+        <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/category/physics">Physics</a>
+            </li>
+            <li>
+              <a href="/category/blog">Blog</a>
+            </li>
+            <li>
+              <a href="/category/coding">Coding</a>
+            </li>
+            <li>
+              <a href="/archives">All</a>
+            </li>
+          </ul>
+      </nav>
+      <div class="header-actions">
+        <button id="theme-toggle" aria-label="切换到深色模式" title="切换主题">
+          <i class="theme-icon icon-sun fa-solid fa-sun" aria-hidden="true"></i>
+          <i class="theme-icon icon-moon fa-solid fa-moon" aria-hidden="true"></i>
+        </button>
+        <div class="rss">
+            <a href="https://zqw.ink/feeds/all.atom.xml" aria-label="Atom 订阅">
+              <i class="fa-solid fa-rss" aria-hidden="true"></i>
+            </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+
+<h1 class="post-title">球坐标系速度和加速度的推导</h1>
+
+<section class="post-meta">
+    <p>2018-09-25</p>
+    <p>-<a class="post-link" href="https://zqw.ink/category/physics.html">physics</a></p>
+</section>
+
+<section class="markdown-body">
+  <!-- toc -->
+<!-- more -->
+<h2 id="做法之一">做法之一</h2>
+<p>球坐标基矢按直角坐标展开：</p>
+$$
+
+\begin{cases}
+\hat{r} &= \sin\theta\cos\varphi \hat{x} +\sin\theta\sin\varphi \hat{y} +\cos\theta \hat{z}\\\\
+\hat{\theta} &= \cos\theta\cos\varphi \hat{x} +\cos\theta\sin\varphi \hat{y} -\sin\theta \hat{z}\\\\
+\hat{\varphi} &= -\sin\varphi \hat{x} +\cos \varphi \hat{y}
+\end{cases}
+
+$$<p>球坐标系的基矢不像直角坐标的基矢一样是固定的，而是随坐标的改变而改变：</p>
+$$
+
+\begin{cases}
+\hat{r} &= \hat{r}(\theta,\varphi) \\\\
+\hat{\theta} &=  \hat{r}(\theta,\varphi) \\\\
+\hat{\varphi} &=  \hat{r}(\varphi)
+\end{cases}
+
+$$<p>所球坐标系中的坐标的表达式为：</p>
+$$
+
+\vec{r} = r \hat{r}
+
+$$<p>速度的表达式为：</p>
+$$
+
+\dot{\vec{r}} = \dot{r}\hat{r} + r \dot{\hat{r}}
+
+$$<p>而：</p>
+$$
+
+\begin{split}
+\dot{\hat{r}} =& \dot{\theta}(\cos\theta\cos\varphi \hat{x} +\cos\theta\sin\varphi \hat{y} -\sin\theta \hat{z}) \\\\
+&+\dot{\varphi}(-\sin\theta\sin\varphi \hat{x} +\sin\theta\cos \varphi \hat{y}) \\\\
+=& \dot{\theta}\hat{\theta} + \dot{\varphi}\sin\theta \hat{\varphi}
+\end{split}
+
+$$<p>所以：</p>
+$$
+
+\dot{\vec{r}} = \dot{r}\hat{r} + r \dot{\hat{r}} =  \dot{r}\hat{r} +r\dot{\theta}\hat{\theta} + r\dot{\varphi}\sin\theta \hat{\varphi}
+
+$$<p>加速度的表达式为：</p>
+$$
+
+\ddot{\vec{r}} = \ddot{r}\hat{r}+\dot{r}\dot{\hat{r}}+\dot{r}\dot{\hat{r}}+ r \ddot{\hat{r}} =  \ddot{r}\hat{r}+2\dot{r}\dot{\hat{r}}++ r \ddot{\hat{r}}
+
+$$<p>而：</p>
+$$
+
+\ddot{\hat{r}} = \ddot{\theta}\hat{\theta}+\dot{\theta}\dot{\hat{\theta}} + \ddot{\varphi}\sin\theta\hat{\varphi} +\dot{\theta}\dot{\varphi}\cos\theta\hat{\varphi} + \dot{\varphi}\sin\theta \dot{\hat{\varphi}}
+
+$$<p>其中 $\dot{\hat{\theta}}$ 和 $\dot{\hat{\varphi}}$ 为：</p>
+$$
+
+\begin{split}
+\dot{\hat{\theta}} =& \dot{\theta}(-\sin\theta\cos\varphi \hat{x} -\sin\theta\sin\varphi \hat{y} -\cos\theta \hat{z}) \\\\
+&+\dot{\varphi}(-\cos\theta\sin\varphi \hat{x} +\cos\theta\cos \varphi \hat{y}) \\\\
+=& -\dot{\theta}\hat{r} + \dot{\varphi}\cos\theta\hat{\varphi}
+\end{split}
+
+$$$$
+
+\begin{split}
+\dot{\hat{\varphi}} =&\dot{\varphi}(-\cos\varphi \hat{x}-\sin\varphi\hat{y}) = \dot\varphi (-\sin\theta\hat{r}-\cos\theta\hat{\theta})
+\end{split}
+
+$$<p>则：</p>
+$$
+
+\begin{split}
+\ddot{\hat{r}} =& -\dot{\theta}^2\hat{r}+\dot{\theta}\dot{\varphi}\cos\theta\hat{\varphi}+ \ddot{\theta}\hat{\theta}+ \ddot{\varphi}\sin\theta\hat{\varphi} +\dot{\theta}\dot{\varphi}\cos\theta\hat{\varphi} -\dot{\varphi}^2\sin^2\theta\hat{r}-\dot{\varphi}^2\sin\theta\cos\theta\hat{\theta} \\\\
+=& (-\dot{\theta}^2-\dot{\varphi}^2\sin^2\theta)\hat{r} +(\ddot{\theta}-\dot{\varphi}^2\sin\theta\cos\theta)\hat\theta +(2\dot{\theta}\dot{\varphi}\cos\theta+\ddot{\varphi}\sin\theta)\hat{\varphi}
+\end{split}
+
+$$<p>最终得加速度的表达式为：</p>
+$$
+
+\begin{split}
+\ddot{\vec{r}} = & \ddot{r}\hat{r}+2\dot{r}\dot{\theta}\hat{\theta}+2\dot{r}\dot{\varphi}\sin\theta\hat{\varphi}+ r \ddot{\hat{r}}  \\\\
+=&(\ddot{r}-r\dot{\theta}^2-r\dot{\varphi}^2\sin^2\theta)\hat{r} \\\\
+&+(2\dot{r}\dot{\theta}+r\ddot{\theta}-r\dot{\varphi}^2\sin\theta\cos\theta)\hat{\theta} \\\\
+&+(2\dot{r}\dot{\varphi}\sin\theta+2r\dot{\theta}\dot{\varphi}\cos\theta+r\ddot{\varphi}\sin\theta)\hat{\varphi}
+\end{split}
+
+$$<h2 id="做法之二">做法之二</h2>
+<p>坐标基矢之间的变换：</p>
+$$
+
+\left(\begin{matrix}
+\hat{e}_r\\
+\hat{e}_{\theta}\\
+\hat{e}_{\phi}\\
+\end{matrix}\right)
+= \left(\begin{matrix}
+\sin\theta\cos\phi	&\sin\theta\sin\phi	&\cos\theta \\
+\cos\theta\cos\phi		&\cos\theta\sin\phi		&-\sin\theta \\
+-\sin\phi 			&\cos\phi		& 0
+\end{matrix}\right)
+\left(\begin{matrix}
+\hat{e}_x\\
+\hat{e}_y\\
+\hat{e}_z\\
+\end{matrix}\right)
+
+$$<p>坐标基矢之间的逆变换：</p>
+$$
+
+\left(\begin{matrix}
+\hat{e}_x\\
+\hat{e}_y\\
+\hat{e}_z\\
+\end{matrix}\right) =
+\left(\begin{matrix}
+\sin\theta\cos\phi	&\cos\theta\cos\phi	&-\sin\phi \\
+\sin\theta\sin\phi		&\cos\theta\sin\phi		&\cos\phi \\
+\cos\theta 			&-\sin\theta		& 0
+\end{matrix}\right)
+\left(\begin{matrix}
+\hat{e}_r\\
+\hat{e}_{\theta}\\
+\hat{e}_{\phi}\\
+\end{matrix}\right)
+
+$$<p>坐标之间的变换：</p>
+$$
+
+\begin{cases}
+r = \sqrt{x^2+y^2+z^2}\\
+\theta = \arccos\frac{z}{ \sqrt{x^2+y^2+z^2}} \\
+\phi = \arctan\frac{y}{x}
+\end{cases}
+
+$$<p>坐标之间的逆变换：</p>
+$$
+
+\begin{cases}
+x &= r\sin\theta\cos\phi \\
+y &=r\sin\theta\sin\phi\\
+z &= r\cos\theta
+\end{cases}
+
+$$<p>质点位置的表达式：</p>
+$$
+
+\vec{r} = x \hat{e}_x +y\hat{e}_y + z\hat{e}_z
+
+$$<p>将坐标的变换和基矢的变换代入可得：</p>
+$$
+
+\vec{r} = r \hat{e}_r
+
+$$<p>速度的表达式为：</p>
+$$
+
+\vec{v} = \dot{x} \hat{e}_x +  \dot{y} \hat{e}_y + \dot{z} \hat{e}_z
+
+$$<p>其中</p>
+$$
+
+\begin{cases}
+\dot{x} &= \dot{r}\sin\theta\cos\phi +r\dot{\theta}\cos\theta\cos\phi-r\dot{\phi}\sin\theta\sin\phi \\
+\dot{y} &=\dot{r}\sin\theta\sin\phi+r\dot{\theta}\cos\theta\sin\phi+r\dot{\phi}\sin\theta\cos\phi \\
+\dot{z} &= \dot{r}\cos\theta-r\dot{\theta}\sin\theta
+\end{cases}
+
+$$<p>代入变换关系可得：</p>
+$$
+
+\vec{v} = \dot{r}\hat{e}_r + r\dot{\theta}\hat{e}_{\theta} + r\dot{\phi}\sin\theta \hat{e}_{\phi}
+
+$$<p>加速度表达式为：</p>
+$$
+
+\vec{a} =  \ddot{x} \hat{e}_x +  \ddot{y} \hat{e}_y + \ddot{z} \hat{e}_z
+
+$$<p>代入变换关系可得</p>
+$$
+
+\vec{a}=(\ddot{r}-r\dot{\theta}^2-r\dot{\phi}^2\sin^2\theta)\hat{e}_{r} \\\\
++(2\dot{r}\dot{\theta}+r\ddot{\theta}-r\dot{\phi}^2\sin\theta\cos\theta)\hat{e}_{\theta} \\\\
++(2\dot{r}\dot{\phi}\sin\theta+2r\dot{\theta}\dot{\phi}\cos\theta+r\ddot{\phi}\sin\theta)\hat{e}_{\varphi}
+
+$$
+</section>
+
+<section class="post-meta">
+    <p>
+        <a class="post-link" href="https://zqw.ink/tag/shu-xue.html">#数学</a>
+        <a class="post-link" href="https://zqw.ink/tag/wu-li.html">#物理</a>
+        <a class="post-link" href="https://zqw.ink/tag/li-lun-li-xue.html">#理论力学</a>
+        <a class="post-link" href="https://zqw.ink/tag/qiu-zuo-biao.html">#球坐标</a>
+    </p>
+</section>
+
+  </main>
+  <footer role="contentinfo">
+    <p>Copyright &copy; 2018 - 2026 ZQW</p>
+  </footer>
+  <script>
+  (function() {
+    const key = 'theme';
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const saved = localStorage.getItem(key);
+    const init = saved ? saved : 'system';
+    const effective = init === 'system' ? (prefersDark ? 'dark' : 'light') : init;
+    document.documentElement.setAttribute('data-theme', effective);
+    updateThemeButton(effective);
+
+    document.getElementById('theme-toggle')?.addEventListener('click', function () {
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem(key, next);
+      updateThemeButton(next);
+    });
+
+    function updateThemeButton(theme) {
+      const btn = document.getElementById('theme-toggle');
+      if (btn) {
+        btn.setAttribute('aria-label', theme === 'dark' ? '切换到浅色模式' : '切换到深色模式');
+      }
+    }
+  })();
+  </script>
+  <script>
+  (function() {
+    const blocks = document.querySelectorAll('pre > code');
+    blocks.forEach((code) => {
+      const pre = code.parentElement;
+      if (!pre) return;
+
+      if (!pre.dataset.lang) {
+        const cls = Array.from(code.classList);
+        const langClass = cls.find((name) => name.startsWith('language-') || name.startsWith('lang-'));
+        if (langClass) {
+          const raw = langClass.replace(/^language-/, '').replace(/^lang-/, '');
+          pre.dataset.lang = raw.replace(/_/g, ' ').toUpperCase();
+        }
+      }
+
+      if (pre.querySelector('.copy-btn')) return;
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'copy-btn';
+      btn.setAttribute('aria-label', '复制代码');
+      btn.textContent = 'Copy';
+      btn.addEventListener('click', async function () {
+        try {
+          await navigator.clipboard.writeText(code.innerText);
+          btn.textContent = 'Copied';
+        } catch (err) {
+          const range = document.createRange();
+          range.selectNodeContents(code);
+          const selection = window.getSelection();
+          selection.removeAllRanges();
+          selection.addRange(range);
+          try {
+            document.execCommand('copy');
+            btn.textContent = 'Copied';
+          } finally {
+            selection.removeAllRanges();
+          }
+        }
+        setTimeout(() => {
+          btn.textContent = 'Copy';
+        }, 1500);
+      });
+      pre.appendChild(btn);
+    });
+  })();
+  </script>
+  <script>
+  (function() {
+    const toggle = document.getElementById('nav-toggle');
+    const nav = document.getElementById('site-nav');
+    if (!toggle || !nav) return;
+
+    function closeNav() {
+      nav.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', '打开菜单');
+    }
+
+    function openNav() {
+      nav.classList.add('is-open');
+      toggle.setAttribute('aria-expanded', 'true');
+      toggle.setAttribute('aria-label', '关闭菜单');
+    }
+
+    toggle.addEventListener('click', function (event) {
+      event.stopPropagation();
+      const isOpen = nav.classList.contains('is-open');
+      if (isOpen) {
+        closeNav();
+      } else {
+        openNav();
+      }
+    });
+
+    nav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', closeNav);
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!nav.classList.contains('is-open')) return;
+      if (nav.contains(event.target) || toggle.contains(event.target)) return;
+      closeNav();
+    });
+  })();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh_cn">
+
+<head>
+    <title>从冰上的水 - 对易与反对易公式(update 09/July/2020)</title>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Pelican" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://zqw.ink/feeds/all.atom.xml"
+    type="application/atom+xml" rel="alternate" title="从冰上的水 Full Atom Feed" />
+  <link
+    href="https://zqw.ink/feeds/physics.atom.xml"
+    type="application/atom+xml" rel="alternate" title="从冰上的水 Categories Atom Feed" />
+  <link rel="stylesheet" type="text/css" href="https://zqw.ink/theme/css/style.css" />
+  <!-- SEO: site-level structured data (WebSite) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "从冰上的水",
+    "url": "https://zqw.ink/"
+  }
+  </script>
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Serif+SC&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.6.1/github-markdown.min.css" integrity="sha512-wpdV3v8V8vWajD1kH8rI1UO1H2q9TQ3s8o1mG7lH8fS1dZ+3q1B1p4lH2tF8rQm2u0n8oV6rN3tV4nQWmY4nTw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!--fonts end  -->
+  <!-- highlight.js -->
+  <link id="hljs-light" rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" disabled>
+  <link id="hljs-dark" rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" disabled>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <script>
+    hljs.highlightAll();
+    (function () {
+      const light = document.getElementById('hljs-light');
+      const dark = document.getElementById('hljs-dark');
+      if (!light || !dark) return;
+
+      function resolveTheme() {
+        return document.documentElement.getAttribute('data-theme') || 'light';
+      }
+
+      function applyTheme(theme) {
+        const isDark = theme === 'dark';
+        light.disabled = isDark;
+        dark.disabled = !isDark;
+      }
+
+      const observer = new MutationObserver(function () {
+        applyTheme(resolveTheme());
+      });
+      observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+      applyTheme(resolveTheme());
+    })();
+  </script>
+  <!-- highlight.js end -->
+
+<script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        tags: 'ams'   // 自动给 AMS 环境/显示公式编号
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.1">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.1">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.1">
+
+
+
+  <!-- SEO: page description for search results -->
+    <meta name="description" content="在运动方程中, 经常要计算各种产生湮灭算符之间的对易关系. 而对于 Fermion 来说, 它满足的是反对易关系, 因此在最后一步中 …" />
+
+    <meta name="tags" content="物理" />
+    <meta name="tags" content="量子力学" />
+    <meta name="tags" content="对易" />
+    <meta name="tags" content="反对易" />
+
+  <!-- SEO: structured data for articles (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "对易与反对易公式(update 09/July/2020)",
+    "datePublished": "2018-09-26T00:00:00+08:00",
+    "author": {
+      "@type": "Person",
+      "name": "ZQW"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://zqw.ink/2018-09-26-physics-commu_mem.html"
+    }
+  }
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <div id="header-container">
+      <button id="nav-toggle" class="nav-toggle" aria-label="打开菜单" aria-expanded="false">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+      <nav id="site-nav">
+        <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/category/physics">Physics</a>
+            </li>
+            <li>
+              <a href="/category/blog">Blog</a>
+            </li>
+            <li>
+              <a href="/category/coding">Coding</a>
+            </li>
+            <li>
+              <a href="/archives">All</a>
+            </li>
+          </ul>
+      </nav>
+      <div class="header-actions">
+        <button id="theme-toggle" aria-label="切换到深色模式" title="切换主题">
+          <i class="theme-icon icon-sun fa-solid fa-sun" aria-hidden="true"></i>
+          <i class="theme-icon icon-moon fa-solid fa-moon" aria-hidden="true"></i>
+        </button>
+        <div class="rss">
+            <a href="https://zqw.ink/feeds/all.atom.xml" aria-label="Atom 订阅">
+              <i class="fa-solid fa-rss" aria-hidden="true"></i>
+            </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+
+<h1 class="post-title">对易与反对易公式(update 09/July/2020)</h1>
+
+<section class="post-meta">
+    <p>2018-09-26</p>
+    <p>-<a class="post-link" href="https://zqw.ink/category/physics.html">physics</a></p>
+</section>
+
+<section class="markdown-body">
+  <!-- toc -->
+<!-- more -->
+<p>在运动方程中, 经常要计算各种产生湮灭算符之间的对易关系. 而对于 Fermion 来说, 它满足的是反对易关系, 因此在最后一步中, 需要用下述关系, 写成反对易子的形式<br />
+$$
+\begin{split}
+[AB, C] =& A\{B, C\} - \{A,C\}B\\
+[A,BC] =&\{A, B\} C -B\{A,C\}
+\end{split}
+$$</p>
+<h1 id="boson">Boson</h1>
+<p>Boson 满足对易关系<br />
+$$
+[a_k, a^{\dagger}_{k'}] = \delta_{kk'}
+$$</p>
+$$
+
+\sum_{k'}[a^{\dagger}_{k3}a_{k3},a^{\dagger}_{k'2}a_{k'3}]
+    = -a^{\dagger}_{k2}a_{k3}
+
+$$$$
+
+\sum_{k'}[a^{\dagger}_{k3}a_{k3},a^{\dagger}_{k'3}a_{k'2}]
+    =  a^{\dagger}_{k3}a_{k2}
+
+$$<h1 id="fermion">Fermion</h1>
+<p>Fermion 满足反对易关系<br />
+$$
+\{a_k, a^{\dagger}_{k'}\} = \delta_{kk'}
+$$</p>
+$$
+
+\sum_{k'}[a^{\dagger}_{k3}a_{k3},a^{\dagger}_{k'2}a_{k'3}]
+    = -a^{\dagger}_{k2}a_{k3}
+
+$$$$
+
+\sum_{k'}[a^{\dagger}_{k3}a_{k3},a^{\dagger}_{k'3}a_{k'2}]
+    =  a^{\dagger}_{k3}a_{k2}
+
+$$
+</section>
+
+<section class="post-meta">
+    <p>
+        <a class="post-link" href="https://zqw.ink/tag/wu-li.html">#物理</a>
+        <a class="post-link" href="https://zqw.ink/tag/liang-zi-li-xue.html">#量子力学</a>
+        <a class="post-link" href="https://zqw.ink/tag/dui-yi.html">#对易</a>
+        <a class="post-link" href="https://zqw.ink/tag/fan-dui-yi.html">#反对易</a>
+    </p>
+</section>
+
+  </main>
+  <footer role="contentinfo">
+    <p>Copyright &copy; 2018 - 2026 ZQW</p>
+  </footer>
+  <script>
+  (function() {
+    const key = 'theme';
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const saved = localStorage.getItem(key);
+    const init = saved ? saved : 'system';
+    const effective = init === 'system' ? (prefersDark ? 'dark' : 'light') : init;
+    document.documentElement.setAttribute('data-theme', effective);
+    updateThemeButton(effective);
+
+    document.getElementById('theme-toggle')?.addEventListener('click', function () {
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem(key, next);
+      updateThemeButton(next);
+    });
+
+    function updateThemeButton(theme) {
+      const btn = document.getElementById('theme-toggle');
+      if (btn) {
+        btn.setAttribute('aria-label', theme === 'dark' ? '切换到浅色模式' : '切换到深色模式');
+      }
+    }
+  })();
+  </script>
+  <script>
+  (function() {
+    const blocks = document.querySelectorAll('pre > code');
+    blocks.forEach((code) => {
+      const pre = code.parentElement;
+      if (!pre) return;
+
+      if (!pre.dataset.lang) {
+        const cls = Array.from(code.classList);
+        const langClass = cls.find((name) => name.startsWith('language-') || name.startsWith('lang-'));
+        if (langClass) {
+          const raw = langClass.replace(/^language-/, '').replace(/^lang-/, '');
+          pre.dataset.lang = raw.replace(/_/g, ' ').toUpperCase();
+        }
+      }
+
+      if (pre.querySelector('.copy-btn')) return;
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'copy-btn';
+      btn.setAttribute('aria-label', '复制代码');
+      btn.textContent = 'Copy';
+      btn.addEventListener('click', async function () {
+        try {
+          await navigator.clipboard.writeText(code.innerText);
+          btn.textContent = 'Copied';
+        } catch (err) {
+          const range = document.createRange();
+          range.selectNodeContents(code);
+          const selection = window.getSelection();
+          selection.removeAllRanges();
+          selection.addRange(range);
+          try {
+            document.execCommand('copy');
+            btn.textContent = 'Copied';
+          } finally {
+            selection.removeAllRanges();
+          }
+        }
+        setTimeout(() => {
+          btn.textContent = 'Copy';
+        }, 1500);
+      });
+      pre.appendChild(btn);
+    });
+  })();
+  </script>
+  <script>
+  (function() {
+    const toggle = document.getElementById('nav-toggle');
+    const nav = document.getElementById('site-nav');
+    if (!toggle || !nav) return;
+
+    function closeNav() {
+      nav.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', '打开菜单');
+    }
+
+    function openNav() {
+      nav.classList.add('is-open');
+      toggle.setAttribute('aria-expanded', 'true');
+      toggle.setAttribute('aria-label', '关闭菜单');
+    }
+
+    toggle.addEventListener('click', function (event) {
+      event.stopPropagation();
+      const isOpen = nav.classList.contains('is-open');
+      if (isOpen) {
+        closeNav();
+      } else {
+        openNav();
+      }
+    });
+
+    nav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', closeNav);
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!nav.classList.contains('is-open')) return;
+      if (nav.contains(event.target) || toggle.contains(event.target)) return;
+      closeNav();
+    });
+  })();
+  </script>
+</body>
+
+</html>
