@@ -1,5 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/all.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2026-01-21T00:00:00+08:00</updated><entry><title>三只黑猫</title><link href="https://zqw.ink/2026-01-21-blog-3_black_cat.html" rel="alternate"/><published>2026-01-21T00:00:00+08:00</published><updated>2026-01-21T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2026-01-21:/2026-01-21-blog-3_black_cat.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/all.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2026-01-25T00:00:00+08:00</updated><entry><title>Interested talk on SCA/HPCAsia2026</title><link href="https://zqw.ink/2026-01-25-physics-sca_hpcasia2026.html" rel="alternate"/><published>2026-01-25T00:00:00+08:00</published><updated>2026-01-25T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2026-01-25:/2026-01-25-physics-sca_hpcasia2026.html</id><summary type="html">
+&lt;p&gt;This is a note for the interested talks: &lt;a href="https://www.sca-hpcasia2026.jp/index.html"&gt;https://www.sca-hpcasia2026.jp/index.html&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#monday-january-26"&gt;Monday, January 26&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#tutorial-0930---1230-room-1008"&gt;Tutorial 09:30 - 12:30 Room 1008&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#1330---1630--tutorial"&gt;13:30 - 16:30 • Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#thursday-january-29"&gt;Thursday, January 29&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#1130---1230-room-802"&gt;11:30 - 12:30 Room 802&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#1230---1330-12f-conference-hall"&gt;12:30 - 13:30 12F Conference Hall&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#1330---1700-room-1009"&gt;13:30 - 17:00 Room …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
+&lt;p&gt;This is a note for the interested talks: &lt;a href="https://www.sca-hpcasia2026.jp/index.html"&gt;https://www.sca-hpcasia2026.jp/index.html&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#monday-january-26"&gt;Monday, January 26&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#tutorial-0930---1230-room-1008"&gt;Tutorial 09:30 - 12:30 Room 1008&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#1330---1630--tutorial"&gt;13:30 - 16:30 • Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#thursday-january-29"&gt;Thursday, January 29&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#1130---1230-room-802"&gt;11:30 - 12:30 Room 802&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#1230---1330-12f-conference-hall"&gt;12:30 - 13:30 12F Conference Hall&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#1330---1700-room-1009"&gt;13:30 - 17:00 Room 1009&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="monday-january-26"&gt;Monday, January 26&lt;/h2&gt;
+&lt;h3 id="tutorial-0930---1230-room-1008"&gt;Tutorial 09:30 - 12:30 Room 1008&lt;/h3&gt;
+&lt;p&gt;Integrating distributed classical and quantum computing resources for hybrid workflows in the&lt;/p&gt;
+&lt;p&gt;Contributors: Sebastian Stern, Tyler Takeshita, and Benchen Huang&lt;/p&gt;
+&lt;p&gt;Abstract: Classical Quantum Monte Carlo (QMC) methods leverage high-performance computing (HPC) resources to simulate complex quantum many-body systems. Recently, these methods have been extended to quantum computers (QC) in hopes to achieve better accuracy. At the same time, architectures are being developed that enable such hybrid workflows by integrating quantum and HPC resources often hosted at different locations.&lt;/p&gt;
+&lt;p&gt;In this tutorial, we demonstrate a solution to an exemplary quantum many-body problem integrating distributed classical and quantum computing systems in the cloud. Specifically, we build an end-to-end workflow to execute the subroutines of a QMC algorithm on cloud-based batch and quantum computing resources and estimate the ground state energy of the example problem Hamiltonian.&lt;/p&gt;
+&lt;p&gt;The tutorial introduces QMC and QC basics to the participants and enables them to utilize cloud-native HPC and QC technologies for hybrid workloads. During the tutorial, participants will get free access to temporary AWS accounts and can follow along the guided steps in the QMC workflow. All attendees leave with code examples they can use as a foundation for their own projects.&lt;/p&gt;
+&lt;h3 id="1330---1630--tutorial"&gt;13:30 - 16:30 • Tutorial&lt;/h3&gt;
+&lt;p&gt;Workload and workflow management in quantum-classical HPC Room 1007&lt;/p&gt;
+&lt;p&gt;Mon, January 26, 2026 13:30 - 16:30 Room 1007&lt;/p&gt;
+&lt;p&gt;Contributors: Munetaka Ohtani, Shweta Salaria, and Yoonho Park&lt;/p&gt;
+&lt;p&gt;Abstract: Quantum computing has the potential to elevate heterogeneous high-performance computers to tackle&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;problems that are intractable for purely classical supercomputers. Integrating quantum processing units (QPUs) into a heterogeneous compute infrastructure, referred to as the quantum-centric supercomputing (QCSC) model, involves CPUs, GPUs, and other specialized accelerators (AlUs, etc.). Achieving this requires collaboration across multiple industries to align efforts in integrating hardware and software.&lt;/p&gt;
+&lt;p&gt;IBM and our HPC/Quantum partners have developed software components to enable the handling of QPU workloads within the Slurm workload manager in HPC environments. This tutorial session will provide a comprehensive overview of the architecture, demonstrate how to create Slurm jobs for executing quantum workloads, and discuss the execution of Quantum-Classical hybrid workloads. Participants will gain hands-on experience though live demonstrations, exploring the integration of quantum workloads into existing HPC systems.&lt;/p&gt;
+&lt;p&gt;Efficient scheduling is only part of the solution. In the second half of the session, we will address the orchestration challenges unique to hybrid Quantum-Classical workloads-such as iterative execution, hyperparameter tuning, and backend instability. Participants will learn how to build scalable, fault-tolerant pipelines using Python-based workflow tools like Prefect. Key features such as checkpointing, automatic retries, and real-time observability will be demonstrated live, equipping attendees with the skills to manage complex quantum workloads and prepare for future challenges in scalability and reproducibility.&lt;/p&gt;
+&lt;h2 id="thursday-january-29"&gt;Thursday, January 29&lt;/h2&gt;
+&lt;h3 id="1130---1230-room-802"&gt;11:30 - 12:30 Room 802&lt;/h3&gt;
+&lt;p&gt;Birds of a Feather&lt;/p&gt;
+&lt;p&gt;New Software Ecosystem of Al for Science - Challenges and Opportunities&lt;/p&gt;
+&lt;p&gt;Contributors: Keita Teranishi, Brian van Essen&lt;/p&gt;
+&lt;h3 id="1230---1330-12f-conference-hall"&gt;12:30 - 13:30 12F Conference Hall&lt;/h3&gt;
+&lt;p&gt;• Lunch Speaker Session by Google Cloud Japan G.K.&lt;/p&gt;
+&lt;p&gt;Title: Accelerating Research and Discovery with Google Cloud GPUs: Featuring SyntheticGestalt's AI Workloads&lt;/p&gt;
+&lt;p&gt;Speaker 1: Kei Hoshino, Google Cloud, Customer Engineer&lt;/p&gt;
+&lt;p&gt;Speaker 2: Kotaro Kamiya, SyntheticGestalt, CTO&lt;/p&gt;
+&lt;h3 id="1330---1700-room-1009"&gt;13:30 - 17:00 Room 1009&lt;/h3&gt;
+&lt;p&gt;Tutorial&lt;/p&gt;
+&lt;p&gt;Performant and scalable simulation of open quantum systems&lt;/p&gt;
+&lt;p&gt;Contributors: Tyler Takeshita, Sebastian Stern, Benchen Huang, and Jin-Sung Kim&lt;/p&gt;
+&lt;p&gt;Abstract: Real-world quantum systems are subject to external interactions, no matter these interactions being intentional or unintentional. Efficient and accurate numerical simulation of open quantum systems (OQS), therefore, provide valuable insights into fundamental quantum processes responsible for experimental observations. Accurate simulations of OQSs are a crucial tool in designing higher performance quantum processors, enabling researchers to explore and optimize the vast parameter space of quantum hardware, uncover fundamental physics enabling higher performance qubits, and design higher fidelity control and readout methods. However, the computational demand of these simulations grows rapidly due to the exponentially increasing dimensionality of the Hilbert space and can require the use of high-performance compute (HPC) environments. In this tutorial, we demonstrate how to develop, test, and scale the simulations of OQS on AWS using CUDA-Q Dynamics and QuTiP, both accelerated by cuQuantum. The tutorial introduces open quantum dynamics basics and their computational considerations, independent of the underlying cloud architecture. During hands-on labs, we then architect cloud-native HPC solutions capable of leveraging accelerated compute resources, like Amazon EC2 P6 instances powered by NVIDIA Blackwell GPUs. Participants will get free access to temporary AWS accounts so they can provision their own HPC cluster during the tutorial. All attendees leave with code examples they can use as a foundation for their own projects.&lt;/p&gt;
+</content><category term="physics"/><category term="conference"/></entry><entry><title>三只黑猫</title><link href="https://zqw.ink/2026-01-21-blog-3_black_cat.html" rel="alternate"/><published>2026-01-21T00:00:00+08:00</published><updated>2026-01-21T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2026-01-21:/2026-01-21-blog-3_black_cat.html</id><summary type="html">
 &lt;p&gt;在五号步道桥和南公园喷泉之间，常看见三只黑猫。&lt;/p&gt;
 &lt;p&gt;每天上班的时候，如果是晴天，它们就会出来晒太阳。阴天的时候就躲在 …&lt;/p&gt;</summary><content type="html">
 &lt;p&gt;在五号步道桥和南公园喷泉之间，常看见三只黑猫。&lt;/p&gt;
@@ -16297,132 +16360,4 @@ $$&lt;br /&gt;
 &lt;p&gt;边境小镇来了一位陌生人, 小屋里有许多的人. 每个人都讲了一个美妙绝伦的故事.&lt;/p&gt;
 &lt;h2 id="后记"&gt;后记&lt;/h2&gt;
 &lt;p&gt;原来这四个故事都是对应于一个建筑.&lt;/p&gt;
-</content><category term="blog"/><category term="读书笔记"/><category term="蒋方舟"/></entry><entry><title>围道积分进阶</title><link href="https://zqw.ink/2020-12-07-physics-contourintegral.html" rel="alternate"/><published>2020-12-07T00:00:00+08:00</published><updated>2020-12-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-12-07:/2020-12-07-physics-contourintegral.html</id><summary type="html">
-&lt;h2 id="准备"&gt;准备&lt;/h2&gt;
-&lt;h3 id="high-order-residue"&gt;High Order Residue&lt;/h3&gt;
-&lt;p&gt;Cauchy Integral Formula&lt;/p&gt;
-$$
-
-\begin{align}
-  f(z) = \frac{1}{2\pi \mathrm{i}} \oint_C \frac{f(\xi)}{\xi - z} \mathrm{d}\xi
-\end{align}
-
-$$&lt;p&gt;求 &lt;eq&gt;n&lt;/eq&gt; 阶导数&lt;/p&gt;
-$$
-
-\begin{align}
-  f^{(n)}(z) = \frac{\mathrm{d}^n f}{\mathrm{d} z^n}
-  = \frac{n …</summary><content type="html">
-&lt;h2 id="准备"&gt;准备&lt;/h2&gt;
-&lt;h3 id="high-order-residue"&gt;High Order Residue&lt;/h3&gt;
-&lt;p&gt;Cauchy Integral Formula&lt;/p&gt;
-$$
-
-\begin{align}
-  f(z) = \frac{1}{2\pi \mathrm{i}} \oint_C \frac{f(\xi)}{\xi - z} \mathrm{d}\xi
-\end{align}
-
-$$&lt;p&gt;求 &lt;eq&gt;n&lt;/eq&gt; 阶导数&lt;/p&gt;
-$$
-
-\begin{align}
-  f^{(n)}(z) = \frac{\mathrm{d}^n f}{\mathrm{d} z^n}
-  = \frac{n!}{2\pi \mathrm{i}} \oint_C \frac{f(\xi)}{(\xi - z)^{n+1}} \mathrm{d}\xi
-\end{align}
-
-$$&lt;h3 id="复数的方根"&gt;复数的方根&lt;/h3&gt;
-&lt;p&gt;对于 $z = re^{\mathrm{i}\phi}$&lt;/p&gt;
-$$
-
-\begin{align}
-  z^{ \frac{1}{n} } = r^{\frac{1}{n}} e^{\mathrm{i} \left(\frac{\theta_0}{n} + k \frac{2\pi}{n}\right)}
-\end{align}
-
-$$&lt;p&gt;也就是有 &lt;eq&gt;n&lt;/eq&gt; 个方根, $k = 0, 1, \cdots , n-1$&lt;/p&gt;
-&lt;h2 id="contour-integral-i"&gt;Contour Integral I&lt;/h2&gt;
-$$
-
-\begin{align}
-  I_1 =&amp;\int \frac{\mathrm{d}^3q}{(2 \pi)^3} \frac{1}{(q^2 - p^2 - \mathrm{i}\epsilon)^2} \\
-  = &amp; \frac{4\pi}{(2\pi)^3}\int_0^{\infty} \mathrm{d}q \frac{q^2}{(q^2 - p^2 - \mathrm{i}\epsilon)^2}
-\end{align}
-
-$$&lt;p&gt;它有两个二阶奇点 &lt;eq&gt;R&lt;/eq&gt; 和 $-R$ , 并且是偶函数.&lt;br /&gt;
-&lt;img src="./2020-12-07-physics-ContourIntegral/I1.png" alt="I1" /&gt;&lt;br /&gt;
-它在远处是 $\frac{1}{q^2} \to 0$ , 所以采用图中的围道. 只要计算 $z = R$ 处的留数即&lt;br /&gt;
-可.&lt;/p&gt;
-$$
-
-\begin{align}
-  I_1 =&amp; \frac{1}{2} \frac{4\pi}{(2\pi)^3}\int_{-\infty}^{\infty} \mathrm{d}q \frac{q^2}{(q^2 - p^2 - \mathrm{i}\epsilon)^2} \\
-     =&amp; \frac{1}{2} \frac{4\pi}{(2\pi)^3}\oint_C \mathrm{d}q \frac{q^2}{(q^2 - p^2 - \mathrm{i}\epsilon)^2} \\
-     =&amp; \frac{1}{2} \frac{4\pi}{(2\pi)^3} 2\pi \mathrm{i} \lim_{q\to R} \left\{
-        \frac{\mathrm{d}}{\mathrm{d}q} \left[\frac{q^2(q - R)^2}{(q - R)^2(q + R)^2}\right] \right\} \\
-     =&amp; \frac{1}{2} \frac{4\pi}{(2\pi)^3} 2\pi \mathrm{i} \frac{1}{4R} \\
-     =&amp; \frac{\mathrm{i}}{8\pi p}
-\end{align}
-
-$$&lt;p&gt;最后一个等号取了 $\epsilon \to 0$ .&lt;/p&gt;
-&lt;h2 id="contour-integral-ii"&gt;Contour Integral II&lt;/h2&gt;
-$$
-
-\begin{align}
-  I_2 =&amp; \int \frac{\mathrm{d}^3q}{(2\pi)^3}
-         \frac{e^{\mathrm{i}\vec{q}\cdot \vec{r}}}{(q^2 - p^2 - \mathrm{i}\epsilon)^2} \\
-     =&amp; \frac{2\pi}{(2\pi)^3}\frac{1}{\mathrm{i}r} \int_0^{\infty}\mathrm{d}q
-      \frac{q (e^{\mathrm{i}qr} - e^{-\mathrm{i}qr})}{(q^2 - p^2 - \mathrm{i}\epsilon)^2}
-\end{align}
-
-$$&lt;p&gt;与 $I_1$ 类似, 也是一个偶函数, 有两个二阶 pole. 不同之处在于, 它在无穷远处的积分&lt;br /&gt;
-为零需要由 Jordan's Lemma 来判定.&lt;/p&gt;
-$$
-
-\begin{align}
-  I_2 =&amp; \frac{2\pi}{(2\pi)^3}\frac{1}{\mathrm{i}r} \frac{1}{2}
-         \left[\int_{-\infty}^{\infty}\mathrm{d}q \frac{q e^{\mathrm{i}qr} }{(q^2 - p^2 - \mathrm{i}\epsilon)^2}
-            + \int_{-\infty}^{\infty}\mathrm{d}q \frac{-q e^{\mathrm{-i}qr} }{(q^2 - p^2 - \mathrm{i}\epsilon)^2}
-        \right]
-\end{align}
-
-$$&lt;p&gt;&lt;img src="./2020-12-07-physics-ContourIntegral/I2.png" alt="I2" /&gt;&lt;br /&gt;
-根据 Jordan's Lemma, 第一项在上半平面无穷远的圆弧上积分为为, 第二项是下半平面,&lt;br /&gt;
-因此取不同的围道计算两个积分.&lt;/p&gt;
-&lt;p&gt;第一项&lt;/p&gt;
-$$
-
-\begin{align}
-   &amp;\int_{-\infty}^{\infty}\mathrm{d}q \frac{q e^{\mathrm{i}qr} }{(q^2 - p^2 - \mathrm{i}\epsilon)^2} \\
-    = &amp;\oint_{C_+}\mathrm{d}q \frac{q e^{\mathrm{i}qr} }{(q^2 - p^2 - \mathrm{i}\epsilon)^2} \\
-    = &amp;2\pi \mathrm{i} \lim_{q\to R}\left\{ \frac{\mathrm{d}}{\mathrm{d}q}\left[
-               \frac{q e^{\mathrm{i}qr }(q - R)^2 }{(q - R)^2(q + R)^2} \right]
-             \right\}   \\
-   = &amp; 2\pi \mathrm{i} \frac{i r e^{\mathrm{i}Rr}}{4R}
-\end{align}
-
-$$&lt;p&gt;第二项 (注意此围道绕向为顺时针)&lt;/p&gt;
-$$
-
-\begin{align}
-   &amp;\int_{-\infty}^{\infty}\mathrm{d}q \frac{- q e^{-\mathrm{i}qr} }{(q^2 - p^2 - \mathrm{i}\epsilon)^2} \\
-    = &amp;-\oint_{C_-}\mathrm{d}q \frac{-q e^{-\mathrm{i}qr} }{(q^2 - p^2 - \mathrm{i}\epsilon)^2} \\
-    = &amp;2\pi \mathrm{i} \lim_{q\to -R}\left\{ \frac{\mathrm{d}}{\mathrm{d}q}\left[
-               \frac{ q e^{-\mathrm{i}qr }(q + R)^2 }{(q - R)^2(q + R)^2} \right]
-             \right\}   \\
-   = &amp; 2\pi \mathrm{i} \frac{i r e^{\mathrm{i}Rr}}{4R}
-\end{align}
-
-$$&lt;p&gt;取 $\epsilon \to 0, \Rightarrow R \to p$ , 得&lt;/p&gt;
-$$
-
-\begin{align}
-  I_2 =&amp; \frac{2\pi}{(2\pi)^3}\frac{1}{\mathrm{i}r} \frac{1}{2}
-           \times \left(2\pi \mathrm{i} \frac{i r e^{\mathrm{i}Rr}}{4R}
-              + 2\pi \mathrm{i} \frac{i r e^{\mathrm{i}Rr}}{4R} \right) \\
-     =&amp; \frac{\mathrm{i} e^{\mathrm{i} p r}}{8\pi p}
-\end{align}
-
-$$&lt;h2 id="reference"&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;PhysRevA.78.053606, Eqn A13(b), A14(b)&lt;/li&gt;
-&lt;/ul&gt;
-</content><category term="physics"/><category term="数学"/><category term="留数定理"/><category term="复变函数"/><category term="contour integral"/></entry></feed>
+</content><category term="blog"/><category term="读书笔记"/><category term="蒋方舟"/></entry></feed>
