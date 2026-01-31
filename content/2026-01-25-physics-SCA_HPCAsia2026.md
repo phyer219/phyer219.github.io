@@ -6,74 +6,62 @@ tags:
   - conference
 ---
 
-This is a note for the interested talks: <https://www.sca-hpcasia2026.jp/index.html>
+会议日记 <https://www.sca-hpcasia2026.jp/index.html>
 
 - [Monday, January 26](#monday-january-26)
   - [Tutorial 09:30 - 12:30 Room 1008](#tutorial-0930---1230-room-1008)
-  - [13:30 - 16:30 • Tutorial](#1330---1630--tutorial)
+  - [Tutorial 13:30 - 16:30 Room 1002](#tutorial-1330---1630-room-1002)
+- [Tuesday, January 27](#tuesday-january-27)
+- [Wednesday, January 28](#wednesday-january-28)
 - [Thursday, January 29](#thursday-january-29)
-  - [11:30 - 12:30 Room 802](#1130---1230-room-802)
-  - [12:30 - 13:30 12F Conference Hall](#1230---1330-12f-conference-hall)
-  - [13:30 - 17:00 Room 1009](#1330---1700-room-1009)
+- [结语](#结语)
 
 ## Monday, January 26
 
 ### Tutorial 09:30 - 12:30 Room 1008
 
-Integrating distributed classical and quantum computing resources for hybrid workflows in the
+Integrating distributed classical and quantum computing resources for hybrid workflows in the cloud
 
 Contributors: Sebastian Stern, Tyler Takeshita, and Benchen Huang
 
-Abstract: Classical Quantum Monte Carlo (QMC) methods leverage high-performance computing (HPC) resources to simulate complex quantum many-body systems. Recently, these methods have been extended to quantum computers (QC) in hopes to achieve better accuracy. At the same time, architectures are being developed that enable such hybrid workflows by integrating quantum and HPC resources often hosted at different locations.
+介绍了 quantum Monte Carlo 算法。然后给了一个 24 小时的 AWS 试用账号。账号上已经搭好了环境，和一些示例的 jupyter notebook。
 
-In this tutorial, we demonstrate a solution to an exemplary quantum many-body problem integrating distributed classical and quantum computing systems in the cloud. Specifically, we build an end-to-end workflow to execute the subroutines of a QMC algorithm on cloud-based batch and quantum computing resources and estimate the ground state energy of the example problem Hamiltonian.
+AWS 上有一些与其它公司合作的 QPU 可以调用。可以通过 Batch 和 Braket 两个 AWS 上的应用，使得 QPU 和 AWS 的经典集群协同工作。但这是云端软件层面的协同工作，与 RIKEN 的 Quantum-HPC Hybrid 的硬件上的协同工作还是有区别的。
 
-The tutorial introduces QMC and QC basics to the participants and enables them to utilize cloud-native HPC and QC technologies for hybrid workloads. During the tutorial, participants will get free access to temporary AWS accounts and can follow along the guided steps in the QMC workflow. All attendees leave with code examples they can use as a foundation for their own projects.
+结束时，提供了 T 恤。
 
-### 13:30 - 16:30 • Tutorial
+### Tutorial 13:30 - 16:30 Room 1002
 
-Workload and workflow management in quantum-classical HPC Room 1007
+Building Portable HPC Environments: The Virtual Fugaku Strategy
 
-Mon, January 26, 2026 13:30 - 16:30 Room 1007
+Contributors: Yuji Iguchi, Hitoshi Murai, Todd Churchward, Kei Sasaki, and Shun Utsui
 
-Contributors: Munetaka Ohtani, Shweta Salaria, and Yoonho Park
+做完简单介绍后，AWS 提供了一个三天的试用账号。之后的时间就是在上面按照教程进行尝试。有问题可以提问。
 
-Abstract: Quantum computing has the potential to elevate heterogeneous high-performance computers to tackle
+AWS 上可以快速搭建出一个虚拟的 HPC。Fugaku 提供了一个镜像，可以在 AWS 快速搭建一个 virtual Fugaku。这样的话，可以实现针对 Fugaku 编译，优化过和程序，可以直接在 AWS 上进行运行测试。
 
-+
+最后进行了知识竞赛，前三名留下邮箱领取奖品。
 
-problems that are intractable for purely classical supercomputers. Integrating quantum processing units (QPUs) into a heterogeneous compute infrastructure, referred to as the quantum-centric supercomputing (QCSC) model, involves CPUs, GPUs, and other specialized accelerators (AlUs, etc.). Achieving this requires collaboration across multiple industries to align efforts in integrating hardware and software.
+## Tuesday, January 27
 
-IBM and our HPC/Quantum partners have developed software components to enable the handling of QPU workloads within the Slurm workload manager in HPC environments. This tutorial session will provide a comprehensive overview of the architecture, demonstrate how to create Slurm jobs for executing quantum workloads, and discuss the execution of Quantum-Classical hybrid workloads. Participants will gain hands-on experience though live demonstrations, exploring the integration of quantum workloads into existing HPC systems.
+上午听了题为 Toward High Performance Quantum Computing: From NISQ to FTQC 的 keynote 演讲。在 5F main hall 举行的，听众多，内容较宽泛，收获不大。
 
-Efficient scheduling is only part of the solution. In the second half of the session, we will address the orchestration challenges unique to hybrid Quantum-Classical workloads-such as iterative execution, hyperparameter tuning, and backend instability. Participants will learn how to build scalable, fault-tolerant pipelines using Python-based workflow tools like Prefect. Key features such as checkpointing, automatic retries, and real-time observability will be demonstrated live, equipping attendees with the skills to manage complex quantum workloads and prepare for future challenges in scalability and reproducibility.
+中午听的 IBM 的 launch speaker，吃的盒饭。
+
+下午整理碰撞模型的程序，等三点半的报告。Research session 有三个半小时的报告。第二个报告用一个辅助比特，在已知旋转次数的情况下，使得 Grover 算法可以把态完全转到好态上。
+
+之后是 banquet。我愿称之为垃圾到家。没有座位，站了半个多少时，终于等到六点半。结果还得等领导讲话。又等了 20 多分钟。终于开饭了，但是人多饭少，根本抢不到。于是我们提前退场，回三宫吃了拉面。
+
+## Wednesday, January 28
+
+老板有报告，而且有 R-CCS 的论坛。上午有家整理程序。赶在午饭前到。三楼的午餐自助。评价是不如盒饭。然后逛 exhibition。领了一些纪念品，和几家做量子计算的公司交流了一下。下午听了老板的报告，参加了论坛，晚上去论坛的 Reception 稍微吃了点喝了点，晚上在车站附近大家一起吃的烧鸟。晚上到家就不早了。
 
 ## Thursday, January 29
 
-### 11:30 - 12:30 Room 802
+午饭前到的，听懂了 Google Cloud 的 launch speaker。盒饭还是比自助好多了。下午参加了 cudaq 加速 qutip 的 tutorial。但是可能是由于参加的人不多 speaker 讲得非常快。原定于五点结束的，四点多就讲完了。收获就是把相应的 notebook 下载了下来。
 
-Birds of a Feather
+晚上回家吃饭和 AS 煮的火锅。吃得有点多了。
 
-New Software Ecosystem of Al for Science - Challenges and Opportunities
+## 结语
 
-Contributors: Keita Teranishi, Brian van Essen
-
-### 12:30 - 13:30 12F Conference Hall
-
-• Lunch Speaker Session by Google Cloud Japan G.K.
-
-Title: Accelerating Research and Discovery with Google Cloud GPUs: Featuring SyntheticGestalt's AI Workloads
-
-Speaker 1: Kei Hoshino, Google Cloud, Customer Engineer
-
-Speaker 2: Kotaro Kamiya, SyntheticGestalt, CTO
-
-### 13:30 - 17:00 Room 1009
-
-Tutorial
-
-Performant and scalable simulation of open quantum systems
-
-Contributors: Tyler Takeshita, Sebastian Stern, Benchen Huang, and Jin-Sung Kim
-
-Abstract: Real-world quantum systems are subject to external interactions, no matter these interactions being intentional or unintentional. Efficient and accurate numerical simulation of open quantum systems (OQS), therefore, provide valuable insights into fundamental quantum processes responsible for experimental observations. Accurate simulations of OQSs are a crucial tool in designing higher performance quantum processors, enabling researchers to explore and optimize the vast parameter space of quantum hardware, uncover fundamental physics enabling higher performance qubits, and design higher fidelity control and readout methods. However, the computational demand of these simulations grows rapidly due to the exponentially increasing dimensionality of the Hilbert space and can require the use of high-performance compute (HPC) environments. In this tutorial, we demonstrate how to develop, test, and scale the simulations of OQS on AWS using CUDA-Q Dynamics and QuTiP, both accelerated by cuQuantum. The tutorial introduces open quantum dynamics basics and their computational considerations, independent of the underlying cloud architecture. During hands-on labs, we then architect cloud-native HPC solutions capable of leveraging accelerated compute resources, like Amazon EC2 P6 instances powered by NVIDIA Blackwell GPUs. Participants will get free access to temporary AWS accounts so they can provision their own HPC cluster during the tutorial. All attendees leave with code examples they can use as a foundation for their own projects.
+开会还是有点累。不过收获也很多。
