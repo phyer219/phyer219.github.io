@@ -1,7 +1,7 @@
 ---
 title: Interested talk on SCA/HPCAsia2026
 date: 2026-01-25
-category: physics
+category: blog
 tags:
   - conference
 ---
