@@ -240,10 +240,10 @@ $$
 \hat{f} \mid i \rangle = f_i \mid i \rangle
 \end{align}
 $$&lt;br /&gt;
-那么这 &lt;eq&gt;N&lt;/eq&gt; 个粒子就是：&lt;br /&gt;
+那么这 $N = \sum_i n_i$ 个粒子就是：&lt;br /&gt;
 $$
 \begin{align*}
-\hat{F} = \sum_i f_i \hat{n_i} = \sum_i f_i a_i^{\dagger}a_i
+\hat{F} = \sum_i f_i \hat{n}_i = \sum_i f_i a_i^{\dagger}a_i
 \end{align*}
 $$&lt;br /&gt;
 $a_i^{\dagger}$ 是 &lt;eq&gt;f&lt;/eq&gt; 的本征表象中的产生算符。&lt;/p&gt;
@@ -277,8 +277,7 @@ $$
 \begin{align*}
 \hat{F} \sim \sum_{\alpha \beta}  \langle \alpha \mid \hat{f} \mid \beta \rangle \cdot \mid \alpha \rangle \langle \beta \mid
 \end{align*}
-$$&lt;br /&gt;
-为什么是这样, 我也不知道.&lt;/p&gt;
+$$&lt;/p&gt;
 &lt;h2 id="二体力学量"&gt;二体力学量&lt;/h2&gt;
 &lt;h3 id="本征表象中的二体力学量"&gt;本征表象中的二体力学量&lt;/h3&gt;
 &lt;p&gt;同样的, &lt;eq&gt;N&lt;/eq&gt; 个粒子组成的系统, 于单个粒子的力学量 $\hat{f}$ ，其第 &lt;eq&gt;i&lt;/eq&gt; 个本征值为 $f_i$ ，本征态为 $\mid i \rangle$ ，即&lt;br /&gt;
@@ -306,13 +305,13 @@ $$
 \end{align*}
 $$&lt;br /&gt;
 表示态 $\mid i \rangle$  和 态 $\mid j \rangle$ 上各有一个粒子.&lt;/p&gt;
-&lt;p&gt;那么这 &lt;eq&gt;N&lt;/eq&gt; 个粒子之间所有的两两相互作用就是：&lt;br /&gt;
+&lt;p&gt;那么这 $N = \sum_i n_i$ 个粒子之间所有的两两相互作用就是：&lt;br /&gt;
 $$
 \begin{align*}
 \hat{U} = \frac{1}{2} \sum_{i\ne j} u_{ij} \hat{n}_i \hat{n}_j + \frac{1}{2}\sum_i u_{ii} \hat{n}_i(\hat{n}_i - 1)
 \end{align*}
 $$&lt;br /&gt;
-第一项表示单粒子态 $\mid i \rangle$ 上有 $n_i$ 个粒子, 单粒子态 $\mid j \rangle$ 上有 $n_j$ 个粒子,  $n_i$ 个粒子和 $n_j$ 个粒子之间的两两相互作用一共是 $u_{ij} n_i n_j$, 然后就是对所有的态求和. 第二项是第一项中没有考虑的相同的态上不同粒子之间的相互作用. 每对粒子之间的相互作用都算了两次, 所以要除以二.&lt;/p&gt;
+第一项表示单粒子态 $\mid i \rangle$ 上有 $n_i$ 个粒子, 单粒子态 $\mid j \rangle$ 上有 $n_j$ 个粒子,  $n_i$ 个粒子和 $n_j$ 个粒子之间的两两相互作用一共是 $u_{ij} n_i n_j$, 然后就是对所有的态求和. 第二项是第一项中没有考虑的相同的态上不同粒子之间的相互作用. 每对粒子之间的相互作用都算了两次, 所以要除以 &lt;eq&gt;2&lt;/eq&gt; .&lt;/p&gt;
 &lt;p&gt;还可以写成另一种形式.&lt;br /&gt;
 $$
 \begin{align*}
@@ -681,6 +680,10 @@ $$&lt;br /&gt;
 &lt;li&gt;&lt;a href="https://physics.stackexchange.com/questions/223138/kinetic-energy-operator-in-second-quantization-formalism"&gt;https://physics.stackexchange.com/questions/223138/kinetic-energy-operator-in-second-quantization-formalism&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.phys.ens.fr/~mora/lecture-second-quanti.pdf"&gt;http://www.phys.ens.fr/~mora/lecture-second-quanti.pdf&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;06/Dec/2019 update 时 F. Y. 的讨论&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="log"&gt;Log&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;28/Apr/2026 update 修改 BUG&lt;/li&gt;
 &lt;/ul&gt;
 </content><category term="physics"/><category term="物理"/><category term="量子力学"/><category term="二次量子化"/></entry><entry><title>对易与反对易公式(update 09/July/2020)</title><link href="https://zqw.ink/2018-09-26-physics-commu_mem.html" rel="alternate"/><published>2018-09-26T00:00:00+08:00</published><updated>2018-09-26T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-26:/2018-09-26-physics-commu_mem.html</id><summary type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;

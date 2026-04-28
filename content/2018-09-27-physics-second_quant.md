@@ -18,10 +18,10 @@ $$
 \hat{f} \mid i \rangle = f_i \mid i \rangle
 \end{align}
 $$
-那么这 $N$ 个粒子就是：
+那么这 $N = \sum_i n_i$ 个粒子就是：
 $$
 \begin{align*}
-\hat{F} = \sum_i f_i \hat{n_i} = \sum_i f_i a_i^{\dagger}a_i
+\hat{F} = \sum_i f_i \hat{n}_i = \sum_i f_i a_i^{\dagger}a_i
 \end{align*}
 $$
 $a_i^{\dagger}$ 是 $f$ 的本征表象中的产生算符。
@@ -59,7 +59,6 @@ $$
 \hat{F} \sim \sum_{\alpha \beta}  \langle \alpha \mid \hat{f} \mid \beta \rangle \cdot \mid \alpha \rangle \langle \beta \mid
 \end{align*}
 $$
-为什么是这样, 我也不知道.
 
 ## 二体力学量
 
@@ -91,13 +90,13 @@ $$
 $$
 表示态 $\mid i \rangle$  和 态 $\mid j \rangle$ 上各有一个粒子.
 
-那么这 $N$ 个粒子之间所有的两两相互作用就是：
+那么这 $N = \sum_i n_i$ 个粒子之间所有的两两相互作用就是：
 $$
 \begin{align*}
 \hat{U} = \frac{1}{2} \sum_{i\ne j} u_{ij} \hat{n}_i \hat{n}_j + \frac{1}{2}\sum_i u_{ii} \hat{n}_i(\hat{n}_i - 1)
 \end{align*}
 $$
-第一项表示单粒子态 $\mid i \rangle$ 上有 $n_i$ 个粒子, 单粒子态 $\mid j \rangle$ 上有 $n_j$ 个粒子,  $n_i$ 个粒子和 $n_j$ 个粒子之间的两两相互作用一共是 $u_{ij} n_i n_j$, 然后就是对所有的态求和. 第二项是第一项中没有考虑的相同的态上不同粒子之间的相互作用. 每对粒子之间的相互作用都算了两次, 所以要除以二.
+第一项表示单粒子态 $\mid i \rangle$ 上有 $n_i$ 个粒子, 单粒子态 $\mid j \rangle$ 上有 $n_j$ 个粒子,  $n_i$ 个粒子和 $n_j$ 个粒子之间的两两相互作用一共是 $u_{ij} n_i n_j$, 然后就是对所有的态求和. 第二项是第一项中没有考虑的相同的态上不同粒子之间的相互作用. 每对粒子之间的相互作用都算了两次, 所以要除以 $2$ .
 
 还可以写成另一种形式.
 $$
@@ -491,3 +490,7 @@ $$
 - <https://physics.stackexchange.com/questions/223138/kinetic-energy-operator-in-second-quantization-formalism>
 - <http://www.phys.ens.fr/~mora/lecture-second-quanti.pdf>
 - 06/Dec/2019 update 时 F. Y. 的讨论
+
+## Log
+
+- 28/Apr/2026 update 修改 BUG
