@@ -157,12 +157,12 @@
 <section class="markdown-body">
   
 <h2 id="引言">引言</h2>
-<p>从 2018 年开始入门 Linux，已经 7 年了。<br />
-从 Deepin 到 Manjaro，再到 Rocky Linux。<br />
+<p>从 2018 年开始入门 Linux，已经 7 年了。
+从 Deepin 到 Manjaro，再到 Rocky Linux。
 中间也尝试过 ArchLinux, Debian, Ubuntu, CentOS等等。</p>
-<p>一开始入门是能用就行，折腾桌面环境。<br />
-到现在开始考虑一些安全性，长期的稳定性，不再为了图省事直接关闭防火墙和 SELinux。<br />
-每一行代码都想要理解含义。<br />
+<p>一开始入门是能用就行，折腾桌面环境。
+到现在开始考虑一些安全性，长期的稳定性，不再为了图省事直接关闭防火墙和 SELinux。
+每一行代码都想要理解含义。
 理解配置的逻辑和哲学。</p>
 <h2 id="rocky-linux"><code>Rocky Linux</code></h2>
 <p>用 <code>Rocky Linux</code> 用的还不多，在此写一些备忘。</p>
@@ -175,7 +175,7 @@
 <p>使用<code>Cockpit</code> 面版，</p>
 </li>
 <li>
-<p>使用 LVM 和 <code>xfs</code>文件系统。<br />
+<p>使用 LVM 和 <code>xfs</code>文件系统。
 <code>xfs</code>文件系统，性能高，适合处理大文件，并行写入，可以不停机扩容，但是不支持缩容，跨平台兼容性差。</p>
 </li>
 </ul>
@@ -436,11 +436,11 @@ sudo semanage port -a -t http_port_t -p tcp 8920
 <pre><code class="language-shell">sudo semanage fcontext -a -f a -t container_file_t -r 's0' '/home/zqw(/.*)?'
 sudo restorecon -Rv /home/zqw/
 </code></pre>
-<p>查看 SELinux 状态：<br />
+<p>查看 SELinux 状态：
 <code>getenforce</code></p>
-<p>关闭：<br />
+<p>关闭：
 <code>setenforce 0</code></p>
-<p>开启：<br />
+<p>开启：
 <code>setenforce 1</code></p>
 <h2 id="firewall">Firewall</h2>
 <pre><code class="language-xml">&lt;!-- /etc/firewalld/services/emby.xml --&gt;
@@ -460,11 +460,11 @@ sudo firewall-cmd --reload
 </code></pre>
 <h2 id="systemctl">Systemctl</h2>
 <h2 id="初始化与用户权限管理">初始化与用户、权限管理</h2>
-<p>出于安全考虑修改 <code>ssh</code> 的默认端口。<br />
+<p>出于安全考虑修改 <code>ssh</code> 的默认端口。
 修改 <code>/etc/ssh/sshd_config</code> 中的 <code>Port</code></p>
 <p><code>semanage port -a -t ssh_port_t -p tcp #PORTNUMBER</code></p>
 <p><code>firewall-cmd --permanent --add-port=2222/tcp</code></p>
-<p><code>firewall-cmd --reload</code><br />
+<p><code>firewall-cmd --reload</code>
 <code>systemctl restart sshd</code></p>
 <p><code>chsh -s /usr/bin/zsh</code></p>
 <h2 id="引导">引导</h2>

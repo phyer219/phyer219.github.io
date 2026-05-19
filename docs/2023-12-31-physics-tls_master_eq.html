@@ -194,36 +194,36 @@ $$<ul>
 <li>$H_R$ : 系统所处的热库 (Reservoir) <eq>R</eq> 的哈密顿量，比如真空电磁场 (Radiation)</li>
 <li>$V = -AR$ : 系统与热库的耦合。<eq>A</eq> 系统子空间的算符。<eq>R</eq> 热库子空间的算符。</li>
 </ul>
-<p>对于二能级原子与真空电磁场的耦合：<br />
+<p>对于二能级原子与真空电磁场的耦合：
 $$
 \begin{align}
 H_A = \frac{\hbar}{2}\left(\omega_{ba}|b\rangle\langle b|
            - \omega_{ba}|a\rangle\langle a|\right)
 \end{align}
-$$<br />
-真空电磁场：<br />
+$$
+真空电磁场：
 $$
 \begin{align}
 H_R = \sum_i \hbar \omega_i a_i^{\dagger} a_i
 \end{align}
-$$<br />
-偶极近似下，算符 <eq>A</eq> 是原子偶极跃迁的矩阵元，算符 <eq>R</eq> 是量子化的电场强度。具体来讲:<br />
+$$
+偶极近似下，算符 <eq>A</eq> 是原子偶极跃迁的矩阵元，算符 <eq>R</eq> 是量子化的电场强度。具体来讲:
 $$
 \begin{align}
 A =& D (|a\rangle\langle b| + |b\rangle\langle a|) \\
 R =& \sum_i \epsilon_i (a_i - a_i^\dagger)
 \end{align}
-$$<br />
+$$
 其中 $D, \epsilon_i$ 都是系数。</p>
 <h2 id="粗粒化的时间演化-coarse-grained-rate-of-variation">粗粒化的时间演化 (coarse-grained rate of variation)</h2>
-<p>有两个重要的时间尺度。第一个是热库的关联时间 $\tau_c$ 。第二个是系统 <eq>A</eq> 演化的时间尺度 $T_R$。他们应当满足 $\tau_c\ll T_R$<br />
-主方程的时间尺度 $\Delta t$ 的量级为<br />
+<p>有两个重要的时间尺度。第一个是热库的关联时间 $\tau_c$ 。第二个是系统 <eq>A</eq> 演化的时间尺度 $T_R$。他们应当满足 $\tau_c\ll T_R$
+主方程的时间尺度 $\Delta t$ 的量级为
 $$
 \begin{align}
 \tau_c \ll \Delta t \ll T_R
 \end{align}
-$$<br />
-以下考虑相互作用绘景，任意算符 <eq>O</eq> 在相互作用绘景中记为 $\tilde{O}(t) = e^{-\frac{1}{i\hbar} (H_A + H_R)}Oe^{\frac{1}{i\hbar} (H_A + H_R)}$ 。系统加热库的密度矩阵记为 $\rho(t)$ 。在相互作用绘景中<br />
+$$
+以下考虑相互作用绘景，任意算符 <eq>O</eq> 在相互作用绘景中记为 $\tilde{O}(t) = e^{-\frac{1}{i\hbar} (H_A + H_R)}Oe^{\frac{1}{i\hbar} (H_A + H_R)}$ 。系统加热库的密度矩阵记为 $\rho(t)$ 。在相互作用绘景中
 $$
 \begin{align}
 \tilde{\rho}(t) =& e^{-\frac{1}{i\hbar} (H_A + H_R)}\rho(t)e^{\frac{1}{i\hbar} (H_A + H_R)}\\
@@ -231,15 +231,15 @@ $$
 \tilde{A}(t) =& e^{-\frac{1}{i\hbar} H_A}Ae^{\frac{1}{i\hbar} H_A}\\
 \tilde{R}(t) =& e^{-\frac{1}{i\hbar} H_R}Re^{\frac{1}{i\hbar} (H_R)}
 \end{align}
-$$<br />
-根据密度矩阵在相互作用绘景中的演化方程 $i\hbar \dot{\tilde{\rho}(t)} = [\tilde{V(t)}, \tilde{\rho}(t)]$， 可知在我们粗粒化的时间 <eq>t</eq> 到 $t + \Delta t$ 内，密度矩阵的演化为<br />
+$$
+根据密度矩阵在相互作用绘景中的演化方程 $i\hbar \dot{\tilde{\rho}(t)} = [\tilde{V(t)}, \tilde{\rho}(t)]$， 可知在我们粗粒化的时间 <eq>t</eq> 到 $t + \Delta t$ 内，密度矩阵的演化为
 $$
 \begin{align}
 \tilde{\rho}(t + \Delta t) = \tilde{\rho}(t) + \frac{1}{i\hbar}\int_t^{t+\Delta t} dt'\,
 \left[ \tilde{V}(t'), \tilde{\rho}(t') \right]
 \end{align}
-$$<br />
-我们对上式迭代一次，并把环境求偏迹掉，得到环境密度矩阵 $\tilde{\sigma}(t) = \mathrm{Tr}_R [\tilde{\rho}(t)]$ 的演化增量<br />
+$$
+我们对上式迭代一次，并把环境求偏迹掉，得到环境密度矩阵 $\tilde{\sigma}(t) = \mathrm{Tr}_R [\tilde{\rho}(t)]$ 的演化增量
 $$
 \begin{align}
 \Delta\tilde{\sigma}(t) \equiv &
@@ -250,99 +250,99 @@ $$
 \int_t^{t'} dt''\,
 \mathrm{Tr}_R\left[ \tilde{V}(t'), \left[\tilde{V}(t''), \tilde{\rho}(t'') \right] \right]
 \end{align}
-$$<br />
+$$
 直到上式，都是严格精确的，没有做任何近似。</p>
 <h2 id="对热库的假设">对热库的假设</h2>
 <h3 id="热库很大处于定态">热库很大，处于定态</h3>
 <p>热库，顾名思义，要比研究的系统 <eq>A</eq> 大得多。把系统 <eq>A</eq> 求偏迹掉，热库的密度矩阵记为 $\tilde{\sigma}_R(t) = \mathrm{Tr}_A [\tilde{\rho} (t)]$ 。</p>
-<p>由于热库比系统 <eq>A</eq> 大得多，所以可以认为一直不变<br />
+<p>由于热库比系统 <eq>A</eq> 大得多，所以可以认为一直不变
 $$
 \begin{align}
 \tilde{\sigma}_R(t) \approx \tilde{\sigma}_R(t) = \sigma_R
 \end{align}
-$$<br />
-其次，假设热库一直处在一个定态上，也就是说<br />
+$$
+其次，假设热库一直处在一个定态上，也就是说
 $$
 \begin{align}
 [\sigma_R, H_R] = 0
 \end{align}
-$$<br />
-记热库的能量本征态为<br />
+$$
+记热库的能量本征态为
 $$
 \begin{align}
 H_R |\mu \rangle = E_{\mu} |\mu \rangle
 \end{align}
-$$<br />
-那么定态 $\sigma_R$ 可以展开为<br />
+$$
+那么定态 $\sigma_R$ 可以展开为
 $$
 \begin{align}
 \sigma_R = \sum_{\mu} p_{\mu} | \mu \rangle \langle \mu |
 \end{align}
-$$<br />
-假设 <eq>R</eq> 在 $\sigma_R$ 上的均值为 <eq>0</eq><br />
+$$
+假设 <eq>R</eq> 在 $\sigma_R$ 上的均值为 <eq>0</eq>
 $$
 \begin{align}
 \mathrm{Tr}[\sigma_R R] = \mathrm{Tr}[\sigma_R \tilde{R}(t)]
 \end{align}
-$$<br />
-因此就有<br />
+$$
+因此就有
 $$
 \begin{align}
 \mathrm{Tr}_R[\tilde{V}(t')\sigma_R] = 0
 \end{align}
 $$</p>
 <h3 id="热库关联时间很短">热库关联时间很短</h3>
-<p>定义热库中的算符 <eq>R</eq> 的双时平均<br />
+<p>定义热库中的算符 <eq>R</eq> 的双时平均
 $$
 \begin{align}
 g(\tau) \equiv g(t' - t'') \equiv \mathrm{Tr}\left[\sigma_R \tilde{R}(t') \tilde{R}(t'')\right]
 = \mathrm{Tr}\left[\sigma_R \tilde{R}(\tau) \tilde{R}(0)\right]
 \end{align}
-$$<br />
+$$
 我们假设 $g(\tau)$ 只集中在 $\tau<\tau_c$ 的范围内， 在 $\tau > \tau_c$ 迅速衰减。这在热库很大是，是自然的。热库很大，能谱倾向于连续，求和在 $\tau$ 很大时，就会干涉相消。</p>
 <h3 id="真空电磁场作为热库">真空电磁场作为热库</h3>
-<p>真空电磁场的密度矩阵为<br />
+<p>真空电磁场的密度矩阵为
 $$
 \begin{align}
 \sigma_R = |0\rangle \langle 0|
 \end{align}
-$$<br />
-是一个温度为零的玻色场，每一个模式都处于基态，没有任何光子激发。它显然满足<br />
+$$
+是一个温度为零的玻色场，每一个模式都处于基态，没有任何光子激发。它显然满足
 $$
 \begin{align}
 \mathrm{Tr}_R[\tilde{V}(t')\sigma_R] = -\tilde{A}(t') \langle 0 |\tilde{R}(t') | 0\rangle
 = -\tilde{A}(t') \sum_i \epsilon_i \langle 0 | (a_i - a_i^\dagger) | 0\rangle
 = 0
 \end{align}
-$$<br />
-真空电磁场的 $g(\tau)$ 为<br />
+$$
+真空电磁场的 $g(\tau)$ 为
 $$
 \begin{align}
 g(\tau) = \sum_{i} |\epsilon_i|^2 \langle 0 | a_i e^{i \omega_i\tau} a_i^{\dagger} |0\rangle
 = \sum_i |\epsilon_i|^2 e^{-i\omega_i \tau}
 \end{align}
-$$<br />
+$$
 这个是可以具体算出的，但是可以看出，当 $\omega_i$ 非常密时，当 $\tau$ 大于某个值时，会由于干涉相消变成 <eq>0</eq> 。一个用于理解的情况是，$\epsilon_i$ 是一个常数，$\omega_i$ 太密，以至于连续，求和化积分，结果就变成一个 $\delta$ 函数，只在 $\tau=0$ 时非零。</p>
 <h2 id="对相互作用的假设">对相互作用的假设</h2>
 <p>当然是弱耦合。</p>
-<p>其次，因为是弱耦合，这也会导致系统 <eq>A</eq> 和热库的关联<br />
-$$<br />
-\begin{align}<br />
+<p>其次，因为是弱耦合，这也会导致系统 <eq>A</eq> 和热库的关联
+$$
+\begin{align}
 \tilde{\rho}_{\mathrm{correl}}(t) \equiv \tilde{\rho}(t)</p>
 <ul>
-<li>\mathrm{Tr}_R [\tilde{\rho}(t)]\otimes  \mathrm{Tr}_A [\tilde{\rho}(t)]<br />
-\end{align}<br />
+<li>\mathrm{Tr}_R [\tilde{\rho}(t)]\otimes  \mathrm{Tr}_A [\tilde{\rho}(t)]
+\end{align}
 $$
 在粗粒化的时间尺度下($\tau_c \ll \Delta t$)只作为高阶项贡献（详见书），因此可以将总的密度矩阵近似为直积
-$$<br />
-\begin{align}<br />
-\tilde{\rho}(t)<br />
-\approx \mathrm{Tr}_R [\tilde{\rho}(t)]\otimes  \mathrm{Tr}_A [\tilde{\rho}(t)]<br />
-\end{align}<br />
+$$
+\begin{align}
+\tilde{\rho}(t)
+\approx \mathrm{Tr}_R [\tilde{\rho}(t)]\otimes  \mathrm{Tr}_A [\tilde{\rho}(t)]
+\end{align}
 $$</li>
 </ul>
 <h2 id="近似之后的结果">近似之后的结果</h2>
-<p>现在，我们结合对大环境小系统，弱耦合的假设，对之前的严格结果<br />
+<p>现在，我们结合对大环境小系统，弱耦合的假设，对之前的严格结果
 $$
 \begin{align}
 \Delta\tilde{\sigma}(t) \equiv &
@@ -353,7 +353,7 @@ $$
 \int_t^{t'} dt''\,
 \mathrm{Tr}_R\left[ \tilde{V}(t'), \left[\tilde{V}(t''), \tilde{\rho}(t'') \right] \right]
 \end{align}
-$$<br />
+$$
 进行化简。</p>
 <h3 id="的一阶项为零"><eq>V</eq> 的一阶项为零</h3>
 $$
@@ -376,25 +376,25 @@ $$
 \approx \int_0^{\infty} d\tau \, \int_{t}^{t+\Delta t} dt'\
 \end{align}
 
-$$<p>此时，严格的结果现在变成了<br />
-$$<br />
-\begin{align}<br />
-\frac{\Delta \tilde{\sigma}(t)}{\Delta t}<br />
-=&amp; - \frac{1}{\hbar^2}\int_0^\infty d\tau , \frac{1}{\Delta{t}}\int_t^{t+\Delta t} d t' \<br />
-&amp;\left{<br />
-g(\tau) \left[\tilde{A}(t')\tilde{A}(t'-\tau) \tilde{\sigma}(t)<br />
-- \tilde{A}(t'-\tau) \tilde{\sigma} (t) \tilde{A}(t')\right]<br />
-\right.<br />
-\<br />
+$$<p>此时，严格的结果现在变成了
+$$
+\begin{align}
+\frac{\Delta \tilde{\sigma}(t)}{\Delta t}
+=&amp; - \frac{1}{\hbar^2}\int_0^\infty d\tau , \frac{1}{\Delta{t}}\int_t^{t+\Delta t} d t' \
+&amp;\left{
+g(\tau) \left[\tilde{A}(t')\tilde{A}(t'-\tau) \tilde{\sigma}(t)
+- \tilde{A}(t'-\tau) \tilde{\sigma} (t) \tilde{A}(t')\right]
+\right.
+\
 &amp;\left.</p>
 <ul>
-<li>g(-\tau)\left[<br />
+<li>g(-\tau)\left[
 \tilde{\sigma} (t)\tilde{A}(t'-\tau) \tilde{A}(t')
 <ul>
-<li>\tilde{A}(t') \tilde{\sigma} (t)\tilde{A}(t'-\tau)<br />
-\right]<br />
-\right}<br />
-\end{align}<br />
+<li>\tilde{A}(t') \tilde{\sigma} (t)\tilde{A}(t'-\tau)
+\right]
+\right}
+\end{align}
 $$</li>
 </ul>
 </li>
@@ -407,17 +407,17 @@ $$
 \frac{1}{\Delta t} \int_t^{t+\Delta t} dt'\, e^{-i (\omega_{ba} - \omega_{dc})}
 \end{align}
 
-$$<p>在 $|\omega_{ba} - \omega_{dc}|\Delta t \ll 1$ 时， 结果为 <eq>1</eq> 。<br />
-在 $|\omega_{ba} - \omega_{dc}|\Delta t \gg 1$ 时， 结果为 <eq>0</eq> 。<br />
+$$<p>在 $|\omega_{ba} - \omega_{dc}|\Delta t \ll 1$ 时， 结果为 <eq>1</eq> 。
+在 $|\omega_{ba} - \omega_{dc}|\Delta t \gg 1$ 时， 结果为 <eq>0</eq> 。
 在 $|\omega_{ba} - \omega_{dc}|\Delta t \sim 1$ 时， 为弱耦合，可以忽略。</p>
-<p>因此<br />
+<p>因此
 $$
 \begin{align}
 \frac{\Delta \tilde{\sigma}_{ab}(t)}{\Delta t} = \sum_{c, d}^{\mathrm{sec}}
 e^{-i(\omega_{ba} - \omega_dc)t} \mathcal{R}_{abcd}\tilde{\sigma}_{cd}(t)
 \end{align}
-$$<br />
-其中<br />
+$$
+其中
 $$
 \begin{align}
 \mathcal{R}_{abcd}

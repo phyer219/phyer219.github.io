@@ -54,7 +54,7 @@ class MyMDReader(BaseReader):
     def read(self, source_path):
         """Parse content and metadata of markdown files"""
         self._source_path = source_path
-        self._md = MarkdownIt('commonmark', {'breaks': True, 'html': True})
+        self._md = MarkdownIt('commonmark', {'breaks': False, 'html': True})
         self._md.use(texmath_plugin, delimiters='dollars')
         self._md.use(texmath_plugin, delimiters='brackets')
         self._md.use(front_matter_plugin)

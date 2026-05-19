@@ -212,14 +212,14 @@ I(\Omega) =&-\pi\int_{-1}^1\mathrm{d}x \int_0^{\infty}\mathrm{d}q\cdot
                 \left( q^{+2}+q^{-2} \right)}{|q^+-q^-|}\right]
 \end{align}
 
-$$<p>其中<br />
+$$<p>其中
 $$
 \begin{align}
 \Delta =& (16x)^2-8(\Omega+14) \\
 q^{\pm} =& \frac{16x \pm\sqrt{\Delta}}{2}
 \end{align}
-$$<br />
-而<br />
+$$
+而
 $$
 |q^+ - q^-| = \sqrt{\Delta}
 $$</p>
@@ -241,7 +241,7 @@ $$$$
  =& \frac{1}{2}\int_\sqrt{\frac{\Omega+14}{32}}^1\mathrm{d}x\cdot\left[\frac{(16x)^2}{\sqrt{(16x)^2-8(\Omega+14)}} +\sqrt{(16x)^2-8(\Omega+14)}\right]
 \end{align}
 
-$$<p>上面这两个积分, 想通过数值计算. 值得注意的是, 被积函数在积分下限处发散, 但是 $\mathcal{O}\left(x^{-\frac{1}{2}}\right)$ 形式的发散, 积分结果并不发散. 比如当 $\Omega=-6$ 时<br />
+$$<p>上面这两个积分, 想通过数值计算. 值得注意的是, 被积函数在积分下限处发散, 但是 $\mathcal{O}\left(x^{-\frac{1}{2}}\right)$ 形式的发散, 积分结果并不发散. 比如当 $\Omega=-6$ 时
 $$
 \begin{align}
 \int_\sqrt{\frac{\Omega+14}{32}}^1\mathrm{d}x\cdot\frac{q^{+2}+q^{-2}}{|q^+-q^-|} 
@@ -250,24 +250,24 @@ $$
 \end{align}
 $$</p>
 <h1 id="普遍情况">普遍情况</h1>
-<p>积分<br />
+<p>积分
 $$
 I(B,C,x) = \int_{0}^{\infty}\mathrm{d}q\cdot \mathrm{Im}\left[ 
         \frac{q^2f(q)}{q^2 - qBx+C+\mathrm{i}0^+}\right] 
         ,\quad \mathrm{for} \,\, x\in[-1,1],B>0
 $$</p>
-<p>分母中关于 <eq>q</eq> 的二次函数的根的判别式<br />
+<p>分母中关于 <eq>q</eq> 的二次函数的根的判别式
 $$
 \begin{align}
 \Delta =& (Bx)^2 -4C \\
 \Delta >& 0 \Rightarrow  C<\frac{(Bx)^2}{4} \\
 \end{align}
-$$<br />
-只有 $\Delta>0$ 时, 积分才不为零. 此时分母中关于 <eq>q</eq> 的二次函数有两个根<br />
+$$
+只有 $\Delta>0$ 时, 积分才不为零. 此时分母中关于 <eq>q</eq> 的二次函数有两个根
 $$
 q^{\pm} = \frac{Bx\pm\sqrt{\Delta}}{2}
-$$<br />
-取虚部<br />
+$$
+取虚部
 $$
 \begin{align}
 I(B,C,x) =& -\pi\int_0^{\infty}\mathrm{d}q\cdot 
@@ -313,30 +313,30 @@ $$
 
 $$<p>上式中第二个等号的计算细节.</p>
 <p>只有当第一个对数中大于零, 第二个对数中小于零时积分才不为零.</p>
-<p>二次函数根的判别式相同, 为<br />
+<p>二次函数根的判别式相同, 为
 $$
 \begin{align}
 \Delta = 16^2-8(\Omega + 14)\\
 \Delta > 0 \Rightarrow \Omega < 18 \\
 \sqrt{\Delta} > 16 \Rightarrow \Omega < 14
 \end{align}
-$$<br />
-第一项的根为<br />
+$$
+第一项的根为
 $$
 q^{\pm}= \frac{-16 \pm \sqrt{\Delta}}{2}
 $$</p>
-<p>第二项的根为<br />
+<p>第二项的根为
 $$
 q^{\pm}= \frac{16 \pm \sqrt{\Delta}}{2}
-$$<br />
-积分不为零的条件为<br />
+$$
+积分不为零的条件为
 $$
 \begin{align}
 0<\frac{\sqrt{\Delta}-16}{2}<q<\frac{\sqrt{\Delta}+16}{2},\quad \mathrm{if}\quad \sqrt{\Delta}>14 \\
 0<\frac{16-\sqrt{\Delta}}{2}<q<\frac{16+\sqrt{\Delta}}{2},\quad \mathrm{if}\quad \sqrt{\Delta}<14
 \end{align}
-$$<br />
-所以积分结果为<br />
+$$
+所以积分结果为
 $$
 \begin{align}
 I(\Omega) =& -\pi\left[ 

@@ -157,49 +157,49 @@
 <section class="markdown-body">
   <!-- toc -->
 <!-- more -->
-<p>$F(\rho, z)$ 是一个光滑，并且在正负无穷快速decay到时0,的函数，比如 $F(\rho, z) = 1/(z^2 + 1)$。我们想要计算<br />
+<p>$F(\rho, z)$ 是一个光滑，并且在正负无穷快速decay到时0,的函数，比如 $F(\rho, z) = 1/(z^2 + 1)$。我们想要计算
 $$
 \lim_{\rho\to 0} \frac{\partial}{\partial\rho}\left[\rho
 \int_{-\infty}^{+\infty} \frac{F(\rho, z)}{\rho^2 + z^2}\mathrm{d}z\right]
 $$</p>
-<h1 id="其中的积分可以在--处展开其中第一项代回原式后得也就是说我们想要的就是-但这在数值上如何计算呢我们可以把发散的部分lim_rhoto-0int_-inftyinfty-fracfrho-zrho2--z2mathrmdz">其中的积分<br />
+<h1 id="其中的积分可以在--处展开其中第一项代回原式后得也就是说我们想要的就是-但这在数值上如何计算呢我们可以把发散的部分lim_rhoto-0int_-inftyinfty-fracfrho-zrho2--z2mathrmdz">其中的积分
 $$
 \int_{-\infty}^{+\infty} \frac{F(\rho, z)}{\rho^2 + z^2}\mathrm{d}z
-$$<br />
-可以在 $\rho\to 0$ 处展开<br />
+$$
+可以在 $\rho\to 0$ 处展开
 $$
 \int_{-\infty}^{+\infty} \frac{F(\rho, z)}{\rho^2 + z^2}\mathrm{d}z
 = \frac{\pi}{\rho}F(0, 0) + C_0 + C_1 \rho + C_2\rho^2 + \cdots
-$$<br />
-其中第一项<br />
+$$
+其中第一项
 $$
 \lim_{\rho\to 0}\int_{-\infty}^{+\infty} \frac{F(\rho, z)}{\rho^2 + z^2}\mathrm{d}z
 =\lim_{\rho\to 0}\int_{-\infty}^{+\infty} \frac{F(\rho, z)}{\rho}\frac{\rho}{\rho^2 + z^2}\mathrm{d}z
 =\int_{-\infty}^{+\infty} \frac{F(\rho, z)}{\rho}\pi\delta(z)\mathrm{d}z
 = \frac{\pi}{\rho}F(0, 0)
-$$<br />
-代回原式后得<br />
+$$
+代回原式后得
 $$
 \lim_{\rho\to 0} \frac{\partial}{\partial\rho}\left[\rho
 \int_{-\infty}^{+\infty} \frac{F(\rho, z)}{\rho^2 + z^2}\mathrm{d}z\right]
  = C_0
-$$<br />
-也就是说，我们想要的就是 $C_0$。但这在数值上如何计算呢？我们可以把发散的部分<br />
-$$<br />
+$$
+也就是说，我们想要的就是 $C_0$。但这在数值上如何计算呢？我们可以把发散的部分
+$$
 \lim_{\rho\to 0}\int_{-\infty}^{+\infty} \frac{F(\rho, z)}{\rho^2 + z^2}\mathrm{d}z</h1>
-<h1 id="int_-inftyinfty-fracf0-z-z2mathrmdz-fracpirhof0-0lim_rhoto-0-fracpartialpartialrholeftrhoint_-inftyinfty-fracfrho-zrho2--z2mathrmdzright">\int_{-\infty}^{+\infty} \frac{F(0, z)}{ z^2}\mathrm{d}z<br />
-= \frac{\pi}{\rho}F(0, 0)<br />
+<h1 id="int_-inftyinfty-fracf0-z-z2mathrmdz-fracpirhof0-0lim_rhoto-0-fracpartialpartialrholeftrhoint_-inftyinfty-fracfrho-zrho2--z2mathrmdzright">\int_{-\infty}^{+\infty} \frac{F(0, z)}{ z^2}\mathrm{d}z
+= \frac{\pi}{\rho}F(0, 0)
 $$
 减去，就得到
-$$<br />
-\lim_{\rho\to 0} \frac{\partial}{\partial\rho}\left[\rho<br />
+$$
+\lim_{\rho\to 0} \frac{\partial}{\partial\rho}\left[\rho
 \int_{-\infty}^{+\infty} \frac{F(\rho, z)}{\rho^2 + z^2}\mathrm{d}z\right]</h1>
-<p>\int_{-\infty}^{\infty}\left[<br />
-\frac{F(0, z)}{z^2} - \frac{F(0, 0)}{z^2}\right]\mathrm{d}z<br />
-$$<br />
+<p>\int_{-\infty}^{\infty}\left[
+\frac{F(0, z)}{z^2} - \frac{F(0, 0)}{z^2}\right]\mathrm{d}z
+$$
 这样我们就可以做数值计算了。</p>
 <h1 id="例">例</h1>
-<p>比如$F(\rho, z) = 1/(z^2 + 1)$时，<br />
+<p>比如$F(\rho, z) = 1/(z^2 + 1)$时，
 $$
 \int_{-\infty}^{\infty}\left[
 \frac{1}{z^2}\frac{1}{z^2 + 1} - \frac{1}{z^2}\frac{1}{0^2 + 1}\right]\mathrm{d}z

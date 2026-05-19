@@ -97,7 +97,1153 @@ fig.write_html('check2.html', include_mathjax=&amp;quot;cdn&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;a href="2025-06-16-physics-rwa_check/check.py"&gt;check.py&lt;/a&gt;&lt;/p&gt;
 &lt;iframe src="2025-06-16-physics-rwa_check/check1.html" width="100%" height="600"&gt;&lt;/iframe&gt;
-&lt;iframe src="2025-06-16-physics-rwa_check/check2.html" width="100%" height="600"&gt;&lt;/iframe&gt;</content><category term="physics"/><category term="rotating wave approximation"/><category term="ploly"/></entry><entry><title>围道积分进阶</title><link href="https://zqw.ink/2020-12-07-physics-contourintegral.html" rel="alternate"/><published>2020-12-07T00:00:00+08:00</published><updated>2020-12-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-12-07:/2020-12-07-physics-contourintegral.html</id><summary type="html">
+&lt;iframe src="2025-06-16-physics-rwa_check/check2.html" width="100%" height="600"&gt;&lt;/iframe&gt;</content><category term="physics"/><category term="rotating wave approximation"/><category term="ploly"/></entry><entry><title>Susskind's Statistical Mechanics</title><link href="https://zqw.ink/2021-03-11-physics-susskindsstatisticalmechanics.html" rel="alternate"/><published>2021-03-11T00:00:00+08:00</published><updated>2021-03-11T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-03-11:/2021-03-11-physics-susskindsstatisticalmechanics.html</id><summary type="html">
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#information"&gt;Information&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#lecture-1-entropy-and-conservation-of-information"&gt;Lecture 1: Entropy and conservation of information&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#conservation-of-information"&gt;Conservation of Information&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#entropy"&gt;Entropy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#how-to-define-entropy-for-a-complex-probability-distribution"&gt;How to define entropy for a complex probability distribution?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#definition-of-entropy-in-phase-space"&gt;Definition of Entropy in Phase Space&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#lecture-2-units--temperature"&gt;Lecture 2: Units &amp;amp; Temperature&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#units-declaration"&gt;Units declaration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#what-temperature-is"&gt;What temperature is?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#it-is-temperature"&gt;It is temperature&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#lecture-3-maximizing-entropy"&gt;Lecture 3: Maximizing entropy&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#a-trick-canonical-ensemble"&gt;A Trick (Canonical Ensemble)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#maximizing-entropy"&gt;Maximizing entropy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#lecture-4-the-boltzmann-distribution"&gt;Lecture …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#information"&gt;Information&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#lecture-1-entropy-and-conservation-of-information"&gt;Lecture 1: Entropy and conservation of information&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#conservation-of-information"&gt;Conservation of Information&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#entropy"&gt;Entropy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#how-to-define-entropy-for-a-complex-probability-distribution"&gt;How to define entropy for a complex probability distribution?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#definition-of-entropy-in-phase-space"&gt;Definition of Entropy in Phase Space&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#lecture-2-units--temperature"&gt;Lecture 2: Units &amp;amp; Temperature&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#units-declaration"&gt;Units declaration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#what-temperature-is"&gt;What temperature is?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#it-is-temperature"&gt;It is temperature&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#lecture-3-maximizing-entropy"&gt;Lecture 3: Maximizing entropy&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#a-trick-canonical-ensemble"&gt;A Trick (Canonical Ensemble)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#maximizing-entropy"&gt;Maximizing entropy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#lecture-4-the-boltzmann-distribution"&gt;Lecture 4: The Boltzmann distribution&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#partition-function"&gt;Partition function&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#average-energy-e"&gt;Average Energy &lt;eq&gt;E&lt;/eq&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#entropy-1"&gt;Entropy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#temperature"&gt;Temperature&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#summary"&gt;Summary&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#example-the-ideal-gas"&gt;Example: the Ideal Gas&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#lecture-5-pressure-of-an-ideal-gas--fluctuations"&gt;Lecture 5: Pressure of an Ideal Gas &amp;amp; Fluctuations&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#helmholtz-free-energy"&gt;Helmholtz free energy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#maxwell-relation"&gt;Maxwell' Relation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#pressure--adiabatic"&gt;Pressure &amp;amp; Adiabatic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#example-ideal-gas"&gt;Example: Ideal Gas&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#fluctuation--heat-capacity"&gt;Fluctuation &amp;amp; Heat Capacity&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#lecture-6-weakly-interacting-gases-heat-and-work"&gt;Lecture 6: Weakly interacting gases, heat, and work&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#lecture-7-harmonic-oscillators---entropy-vs-reversibility"&gt;Lecture 7: Harmonic Oscillators ( &amp;amp; Entropy vs. reversibility)&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#single-classical-harmonic-oscillators"&gt;Single Classical Harmonic Oscillators&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#single-quantum-harmonic-oscillators"&gt;Single Quantum Harmonic Oscillators&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#lecture-8-magnetic--1d-ising-model-entropy-reversibility-and-magnetism"&gt;Lecture 8: Magnetic &amp;amp; 1D Ising Model (Entropy, reversibility, and magnetism)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#lecture-9-the-ising-model--phase-transition"&gt;Lecture 9: The Ising model &amp;amp; Phase transition&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#1d-case"&gt;1D case&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#high-dimension-case--mean-field-approximation-self-consistent-field"&gt;High Dimension Case &amp;amp; Mean Field Approximation (Self-Consistent Field)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#plus-external-magnetic-field-b"&gt;Plus External Magnetic Field &lt;eq&gt;B&lt;/eq&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#lecture-10-liquid-gas-phase-transition"&gt;Lecture 10: Liquid-Gas Phase Transition&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#phase-diagram-of-ising-model"&gt;Phase Diagram of Ising Model&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#liquid-gas-phase-transition"&gt;Liquid-Gas Phase Transition&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#interlude"&gt;Interlude&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#stirlings-approximation"&gt;Stirling's Approximation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#lagrange-multiplier"&gt;Lagrange Multiplier&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#about"&gt;...about&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#reference"&gt;Reference&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="information"&gt;Information&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;官方介绍: &lt;a href="https://theoreticalminimum.com/courses/statistical-mechanics/2013/spring"&gt;https://theoreticalminimum.com/courses/statistical-mechanics/2013/spring&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;视频列表地址: &lt;a href="https://www.youtube.com/watch?v=D1RzvXDXyqA&amp;amp;list=PL_IkS0viawhr3HcKH607rXbVqy28W_gB7"&gt;https://www.youtube.com/watch?v=D1RzvXDXyqA&amp;amp;list=PL_IkS0viawhr3HcKH607rXbVqy28W_gB7&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;参考 Note: &lt;a href="https://www.lapasserelle.com/statistical_mechanics/index.html"&gt;https://www.lapasserelle.com/statistical_mechanics/index.html&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;把主要内容整理一下.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="lecture-1-entropy-and-conservation-of-information"&gt;Lecture 1: Entropy and conservation of information&lt;/h2&gt;
+&lt;h3 id="conservation-of-information"&gt;Conservation of Information&lt;/h3&gt;
+&lt;p&gt;一个六面 die, 六个面有不同的颜色 blue, red, green, purple, yellow, orange, 如图&lt;/p&gt;
+&lt;img src="./2021-03-11-physics-SusskindsStatisticalMechanics/die.png" style="width: 50%" alt="die"&gt;
+&lt;p&gt;如果它以某种规律运动, 比如下图中红色的箭头&lt;/p&gt;
+&lt;img src="./2021-03-11-physics-SusskindsStatisticalMechanics/ring1.png" style="width: 50%" alt="ring1"&gt;
+&lt;p&gt;那么无论何时, 发现它处于某一面的概率都是相等的&lt;/p&gt;
+$$
+
+\begin{align}
+P(i) = \frac{1}{6}
+\end{align}
+
+$$&lt;p&gt;&lt;eq&gt;i&lt;/eq&gt; 代表第 &lt;eq&gt;i&lt;/eq&gt; 面朝上的事件.
+如果它按蓝色箭头, 结果是一样的, $P(i) = \frac{1}{6}$ . 又比如, 它按下面的方式运动&lt;/p&gt;
+&lt;img src="./2021-03-11-physics-SusskindsStatisticalMechanics/ring2.png" style="width: 50%" alt="ring2"&gt;
+&lt;p&gt;它会有两种状态. 就是说, 它可以处于上面的循环中, 记这个状态为 $+1$ , 那么在这个状
+态中, 某个面向上的概率是 $P(+1) = \frac{1}{3}$ , 它永远不会跳到下面的态.&lt;/p&gt;
+&lt;p&gt;它也可以处下面的态, 记为 $+1$ , 同样的 $P(+1) = \frac{1}{3}$ .&lt;/p&gt;
+&lt;p&gt;上面的例子都是一些好的运动规律, good laws, 因为它的 information conserved. 也就是说, 不论过了多
+久, 我们知道系统的信息一样的.&lt;/p&gt;
+&lt;p&gt;但是也有一些不好的例子, bad laws, 比如下图&lt;/p&gt;
+&lt;img src="./2021-03-11-physics-SusskindsStatisticalMechanics/ring_bad.png" style="width: 50%" alt="ring bad"&gt;
+&lt;p&gt;它在演化的过程中会 lose information , 这个 information 指初态的 information. 比
+如一开始处于 orange, 过了一会, 它一定会到 red. 它是不可逆的.&lt;/p&gt;
+&lt;p&gt;这种 bad laws 在实际的运动中可以对应比如&lt;/p&gt;
+$$
+
+\begin{align}
+  \frac{\mathrm{d}^2x_n}{\mathrm{d}t^2} = -\gamma \frac{\mathrm{d}x_n}{\mathrm{d}t}
+\end{align}
+
+$$&lt;p&gt;它最终的结果是 every particles come to rest.&lt;/p&gt;
+&lt;p&gt;conservation of information , minus first law.&lt;/p&gt;
+&lt;h3 id="entropy"&gt;Entropy&lt;/h3&gt;
+&lt;p&gt;&lt;eq&gt;N&lt;/eq&gt; is TOTAL number of STATES. 其中 $M &lt; N$ 个态上的占据概率相等, 为 $P=\frac{1}{M}$ , 其它态上的占据概率是 &lt;eq&gt;0&lt;/eq&gt; . 那么定义 entropy&lt;/p&gt;
+$$
+
+\begin{align}
+  S = \log M
+\end{align}
+
+$$&lt;p&gt;Entropy: Measures approximately the number of states which have non-zero
+probability. The bigger it, the less you know.&lt;/p&gt;
+&lt;p&gt;In space of states(phase space) of real mechanics, the volume of phase space
+will stay the same.(Liouville's theorem) i.e. the same number of states.&lt;/p&gt;
+&lt;h3 id="how-to-define-entropy-for-a-complex-probability-distribution"&gt;How to define entropy for a complex probability distribution?&lt;/h3&gt;
+$$
+
+\begin{align}
+  S = - \sum_iP(i) \log P(i)
+\end{align}
+
+$$&lt;p&gt;它可以回到简单的情况. 对于 $P(i) = \frac{1}{M}$ , others zero&lt;/p&gt;
+$$
+
+\begin{align}
+  S = -\sum_i \frac{1}{M}\log \frac{1}{M} = \log M
+\end{align}
+
+$$&lt;p&gt;特例, $M = 1$ , $S = 0$ , Complete knowledge, Entropy zero.&lt;/p&gt;
+&lt;h3 id="definition-of-entropy-in-phase-space"&gt;Definition of Entropy in Phase Space&lt;/h3&gt;
+&lt;p&gt;&lt;img src="./2021-03-11-physics-SusskindsStatisticalMechanics/entropy_phase_space.png" alt="entropy phase space" /&gt;&lt;/p&gt;
+&lt;p&gt;如果像上图一样, 概率是均匀的, 那么&lt;/p&gt;
+$$
+
+\begin{align}
+  S = \log V_{PH}
+\end{align}
+
+$$&lt;p&gt;$V_{PH}$ is volume of phase space.&lt;/p&gt;
+&lt;p&gt;如果概率不均匀, 那么也可以扩展成&lt;/p&gt;
+$$
+
+\begin{align}
+ S = - \int \mathrm{d}p\mathrm{d}x P(p, x) \log P(p, x)
+\end{align}
+
+$$&lt;p&gt;它满足&lt;/p&gt;
+$$
+
+\begin{align}
+  \int P(p, x)\mathrm{d}p \mathrm{d}x = 1
+\end{align}
+
+$$&lt;h2 id="lecture-2-units--temperature"&gt;Lecture 2: Units &amp;amp; Temperature&lt;/h2&gt;
+&lt;h3 id="units-declaration"&gt;Units declaration&lt;/h3&gt;
+&lt;p&gt;$c = \hbar = G = k_{\mathrm{B}} = 1$ . Temperature change is a human construct that
+was invented for convenience.&lt;/p&gt;
+$$
+
+\begin{align}
+  T = k_{\mathrm{B}}t_{\mathrm{K}}
+\end{align}
+
+$$&lt;p&gt;$t_{\mathrm{K}}$ is temperature in Kelvin.&lt;/p&gt;
+&lt;h3 id="what-temperature-is"&gt;What temperature is?&lt;/h3&gt;
+&lt;p&gt;The average energy in state &lt;eq&gt;i&lt;/eq&gt; which average energy is &lt;eq&gt;E&lt;/eq&gt; is&lt;/p&gt;
+$$
+
+\begin{align}
+  \sum_iP(i, E) E_i = \langle E\rangle
+\end{align}
+
+$$&lt;p&gt;the entropy is&lt;/p&gt;
+$$
+
+\begin{align}
+  S(E) = -\sum_i P(i, E)\log P(i, E)
+\end{align}
+
+$$&lt;p&gt;由于&lt;/p&gt;
+$$
+
+\begin{align}
+  \sum_iP(i, E) = 1
+\end{align}
+
+$$&lt;p&gt;所以当比较大的 $E(i)$ 概率变大的化, 整个概率分布看起来会更平. 如下图
+&lt;img src="./2021-03-11-physics-SusskindsStatisticalMechanics/P_i_E.png" alt="P_i(E)" /&gt;
+蓝线到橙线到时红线它们的平均能量 &lt;eq&gt;E&lt;/eq&gt; 是变大的, 同时概率分布变得理平, 意味着
+entropy 也增大.&lt;/p&gt;
+&lt;p&gt;Consider: How much do you have to change the average energy in order to change
+the entropy by &lt;eq&gt;1&lt;/eq&gt; bit( $\log 2$ )? We define temperature like this&lt;/p&gt;
+$$
+
+\begin{align}
+\Delta E = \frac{\partial E}{\partial S} \Delta S
+\end{align}
+
+$$$$
+
+\begin{align}
+\mathrm{d}E = T \mathrm{d}S
+\end{align}
+
+$$&lt;h3 id="it-is-temperature"&gt;It is temperature&lt;/h3&gt;
+&lt;p&gt;下面证明它就是温度, 也就是说两个系统达到热平衡时, 上面定义的温度是相同的.&lt;/p&gt;
+&lt;p&gt;考虑两个系统 $A, B$ , 初始时它们的温度分别为 $T_A, T_B$ 并且 $T_B &gt; T_A$ . First
+law says&lt;/p&gt;
+$$
+
+\begin{align}
+  \mathrm{d}E_A + \mathrm{d}E_B =0
+\end{align}
+
+$$&lt;p&gt;second law says&lt;/p&gt;
+$$
+
+\begin{align}
+  \mathrm{d}S_A + \mathrm{d}S_B &gt; 0
+\end{align}
+
+$$&lt;p&gt;combine them and use our definition of temperature we get&lt;/p&gt;
+$$
+
+\begin{align}
+ \mathrm{d}S_B =&amp; \frac{\mathrm{d}E_B}{T_B} = - \frac{T_A}{T_B}\mathrm{d}S_A \\
+          \Downarrow &amp;\\
+ 0 &lt; &amp; \mathrm{d}S_A + \mathrm{d}S_B = \left(1 - \frac{T_A}{T_B}\right) \mathrm{d}S_A
+\end{align}
+
+$$&lt;p&gt;because $T_B &gt; T_A$ , so&lt;/p&gt;
+$$
+
+\begin{align}
+ \mathrm{d}S_A &gt; &amp; 0\\
+          \Downarrow &amp;\\
+ T_A \mathrm{d} S_A &gt; &amp; 0 \\
+          \Downarrow &amp;\\
+ \mathrm{d}E_A &gt; &amp; 0
+\end{align}
+
+$$&lt;p&gt;so energy flowed from B to A.&lt;/p&gt;
+&lt;p&gt;也就是说能量会从温度高的地方向温度低的地方流动, 也就是说只有温度相同的, 才没有能
+量流动, 也就是说达到了热平衡.&lt;/p&gt;
+&lt;h2 id="lecture-3-maximizing-entropy"&gt;Lecture 3: Maximizing entropy&lt;/h2&gt;
+&lt;p&gt;Zeroth law: there is a notion of temperature which way energy flows. Ultimately
+equilibrium.&lt;/p&gt;
+&lt;h3 id="a-trick-canonical-ensemble"&gt;A Trick (Canonical Ensemble)&lt;/h3&gt;
+&lt;p&gt;Imagine that the system in question is one of a very large number of identical
+systems which are connected together by little pipes that allow heat to flow
+back and forth. One of them is the system we're studying. The rest of them
+simply provide the heat bath.
+&lt;img src="./2021-03-11-physics-SusskindsStatisticalMechanics/ensemble.png" alt="ensemble" /&gt;
+We're going to let them get a large number &lt;eq&gt;N&lt;/eq&gt; of them. Large enough that we can
+think of the heat bath is very big.&lt;/p&gt;
+&lt;p&gt;Each one of the systems is in a state. Call the number of systems in the
+$i\mathrm{th}$ state $n_i = (n_1, n_2, n_3, \cdots)$
+Constrains&lt;/p&gt;
+$$
+
+\begin{align}
+\sum_in_i =&amp; N \\
+\sum_in_i E_i =&amp; N E
+\end{align}
+
+$$&lt;h3 id="maximizing-entropy"&gt;Maximizing entropy&lt;/h3&gt;
+&lt;p&gt;What is the probability that a given one of these systems is in the
+$i\mathrm{th}$ state? It is&lt;/p&gt;
+$$
+
+\begin{align}
+P(i) = \frac{n_i}{N}
+\end{align}
+
+$$&lt;p&gt;use this to rewrite the constrains&lt;/p&gt;
+$$
+
+\begin{align}
+  \sum_iP(i) =&amp; 1 \\
+  \sum_iP(i) E_i =&amp; E
+\end{align}
+
+$$&lt;p&gt;Given the occupation numbers, how many ways of redistributing
+the states?(most of occupation number is zero) That is&lt;/p&gt;
+$$
+
+\begin{align}
+  \mathrm{Number}\quad \mathrm{of} \quad\mathrm{arrangements}
+    =\frac{N!}{\Pi _in_i!}
+\end{align}
+
+$$&lt;p&gt;use Stirling's Approximation $N! \sim N^Ne^{- N}$ as $N\to\infty$&lt;/p&gt;
+$$
+
+\begin{align}
+\log\frac{N!}{\Pi _in_i!} \approx&amp; \log \frac{N^N}{\sum_in_i^{n_i}}
+  = N\log N - \sum_in_i\log n_i \\
+  =&amp; N\log N - \sum_iN P(i)\log [NP(i)] \\
+  =&amp; - N \sum_i P(i) \log P(i)
+\end{align}
+
+$$&lt;p&gt;It's entropy. If we want to find out the occupation numbers which maximize the
+number of ways that you can rearrange the system keep the occupation numbers
+fixed. It simply corresponds to maximizing the entropy.&lt;/p&gt;
+&lt;p&gt;The most probable distribution of occupation numbers corresponds to
+probabilities which maximize the entropy.&lt;/p&gt;
+&lt;h2 id="lecture-4-the-boltzmann-distribution"&gt;Lecture 4: The Boltzmann distribution&lt;/h2&gt;
+&lt;h3 id="partition-function"&gt;Partition function&lt;/h3&gt;
+&lt;p&gt;Use Lagrange Multiplier to maximize the entropy&lt;/p&gt;
+$$
+
+\begin{align}
+  F'(P) = - \sum_iP_i \log P_i  - \alpha \left[\sum_i P_i - 1 \right] - \beta\left[\sum_iE_iP_i - E\right]
+\end{align}
+
+$$&lt;p&gt;let $\frac{\partial F'}{\partial P_i} = 0$, we get&lt;/p&gt;
+$$
+
+\begin{align}
+  P_i = e^{-(1 + \alpha)} e^{- \beta E_i}
+\end{align}
+
+$$&lt;p&gt;call $e^{-(1 + \alpha)} = Z$ partition function, then&lt;/p&gt;
+$$
+
+\begin{align}
+  P_i = \frac{1}{Z} e^{- \beta E_i}
+\end{align}
+
+$$&lt;p&gt;这个分布是在给定平均能量下最有可能的分布.&lt;/p&gt;
+&lt;p&gt;so partition function is&lt;/p&gt;
+$$
+
+\begin{align}
+  Z = \sum_i e^{- \beta E_i}
+\end{align}
+
+$$&lt;p&gt;Tuning $\beta$ , tuning average energy. 限制温度相当于限制平均能量.&lt;/p&gt;
+&lt;p&gt;$E_{i}$ 是系统给定的.&lt;/p&gt;
+&lt;p&gt;关于 $E, \alpha, \beta$ 之间的关系. $\alpha, \beta$ 是拉氏乘子, 它对应两个约束, 一个是概率归一, 一个是能量给定. 结果就是, 由概率归一和能量给定, 就可以得出 $\alpha, \beta$ . 而概率归一是永远知道的, 所以剩下的三个量 $E, \alpha, \beta$ 之中给定任何一个, 就可以结合概率归一
+得出任剩下的两个, 也就是 $E(\alpha), E(\beta), \alpha(E), \alpha(\beta), \beta(E), \beta(\alpha)$ . 而 $\beta$
+是一个我们非常关心的物理量, 下面将会说明它是温度的倒数, 所以常用的关系就是
+$E(\beta)$ 和 $\alpha(\beta)$ , 也就是 $Z(\beta)$ , 因为 &lt;eq&gt;Z&lt;/eq&gt; 和 $\alpha$ 只是做了一个变量替换而已.
+得到了 $Z(\beta)$ 就得到了系统所有的其它热力学量.&lt;/p&gt;
+&lt;h3 id="average-energy"&gt;Average Energy &lt;eq&gt;E&lt;/eq&gt;&lt;/h3&gt;
+&lt;p&gt;如果我们知道了 $Z(\beta)$ , 当然可以得到 &lt;eq&gt;E&lt;/eq&gt; , 因为 $E(Z) = E(Z(\beta)) = E(\beta)$ . 也
+就是说利用关系 $E(Z)$ , $Z(\beta)$ 得到 $E(\beta)$&lt;/p&gt;
+$$
+
+\begin{align}
+  E = \sum_i P_iE_i = \sum_i \frac{1}{Z(\beta)} e^{-\beta E_i}E_i
+        = - \frac{1}{Z(\beta)}\frac{\partial Z(\beta)}{\partial\beta}
+        = - \frac{\partial}{\partial\beta}\log Z(\beta)
+\end{align}
+
+$$&lt;h3 id="entropy-1"&gt;Entropy&lt;/h3&gt;
+$$
+
+\begin{align}
+S = -\sum_i P_i\log P_i
+\end{align}
+
+$$&lt;p&gt;而&lt;/p&gt;
+$$
+
+\begin{align}
+ P_i = \frac{1}{Z(\beta)}e^{-\beta E_i}
+\end{align}
+
+$$&lt;p&gt;so&lt;/p&gt;
+$$
+
+\begin{align}
+S =&amp; -\sum_i P_i\left[ -\beta E_i - \log Z \right] \\
+  =&amp; \beta \sum_i P_iE_i + \sum_iP_i\log Z \\
+  =&amp; \beta E(\beta) +\log Z(\beta)
+\end{align}
+
+$$&lt;h3 id="temperature"&gt;Temperature&lt;/h3&gt;
+$$
+
+\begin{align}
+\mathrm{d}S = \beta \mathrm{d}E + E \mathrm{d}\beta +\frac{\partial \log Z}{\partial \beta}\mathrm{d}\beta
+    = \beta \mathrm{d}E + E \mathrm{d}\beta -E \mathrm{d}\beta = \beta \mathrm{d}E
+\end{align}
+
+$$&lt;p&gt;so&lt;/p&gt;
+$$
+
+\begin{align}
+ T = \frac{\mathrm{d}E}{\mathrm{d}S} = \frac{1}{\beta}
+\end{align}
+
+$$&lt;h3 id="summary"&gt;Summary&lt;/h3&gt;
+$$
+
+\begin{align}
+P_i =&amp; \frac{1}{Z} e^{-\beta E_i} \\
+Z =&amp; \sum_i e^{- \beta E_i} \\
+E =&amp; - \frac{\partial}{\partial\beta} \log Z \\
+T =&amp; \frac{1}{\beta} \\
+S =&amp; \beta E + \log Z
+\end{align}
+
+$$&lt;h3 id="example-the-ideal-gas"&gt;Example: the Ideal Gas&lt;/h3&gt;
+&lt;p&gt;在体积 &lt;eq&gt;V&lt;/eq&gt; 内的 &lt;eq&gt;N&lt;/eq&gt; 个粒子. States: collection $x_1, \cdots, x_{3N}, p_1, p_{3N}$
+. $6N$ 维的相空间中的每个点对应一个 state. 每个 state 的能量为 $\sum_{n=1}^{3N}
+\frac{p^2_n}{2m}$ .&lt;/p&gt;
+$$
+
+\begin{align}
+ Z =&amp; \frac{1}{N!} \int \mathrm{d}^{3N}x \int \mathrm{d}^{3N}p\cdot e^{- \beta\sum_{n=1}^{3N}
+          \frac{p^2_n}{2m}} \\
+   =&amp; \frac{V^N}{N!} \left(\frac{2\pi m}{\beta} \right)^{3N/2}
+\end{align}
+
+$$&lt;p&gt;(因子 $\frac{1}{N!}$ 是因为假设粒子不可分辨, 但对结果无影响)&lt;/p&gt;
+$$
+
+\begin{align}
+\log Z = - \frac{3N}{2} \log\beta + \mathrm{const.}
+\end{align}
+
+$$$$
+
+\begin{align}
+E = - \frac{\partial}{\partial\beta}\log Z = \frac{3}{2}NT
+\end{align}
+
+$$&lt;h2 id="lecture-5-pressure-of-an-ideal-gas--fluctuations"&gt;Lecture 5: Pressure of an Ideal Gas &amp;amp; Fluctuations&lt;/h2&gt;
+&lt;h3 id="helmholtz-free-energy"&gt;Helmholtz free energy&lt;/h3&gt;
+$$
+
+\begin{align}
+S =&amp; \frac{1}{T} E + \log Z
+\end{align}
+
+$$&lt;p&gt;First define a very useful variable Helmholtz free energy&lt;/p&gt;
+$$
+
+\begin{align}
+  A = E - TS = -T \log Z
+\end{align}
+
+$$&lt;h3 id="maxwell-relation"&gt;Maxwell' Relation&lt;/h3&gt;
+&lt;p&gt;它是一个纯数学的关系. 假设 $E, S$ 和 $T, V$ 是两组独立的变量, 那么&lt;/p&gt;
+$$
+
+\begin{align}
+\label{eq:maxwell_relation}
+\left.\frac{\partial E}{\partial V}\right|_S = \left.\frac{\partial E}{\partial V}\right|_T
+    - \left.\frac{\partial E}{\partial S}\right|_V \left.\frac{\partial S}{\partial V}\right|_T
+\end{align}
+
+$$&lt;p&gt;如何理解, 或者说如何证明它?&lt;/p&gt;
+&lt;p&gt;便于直观地看出它的意义, 我们以独立变量 $T, V$ 为坐标, 画出一条&lt;eq&gt;S&lt;/eq&gt; 的等高线. 也就
+是说在这条线上的 $A, B$ 两点, 它的 &lt;eq&gt;S&lt;/eq&gt; 是相等的.
+&lt;img src="./2021-03-11-physics-SusskindsStatisticalMechanics/adiabatic.png" alt="adiabatic" /&gt;
+让我们从一个常规的式子出发&lt;/p&gt;
+$$
+
+\begin{align}
+  \Delta E  = \left.\frac{\partial E}{\partial V}\right|_T \Delta V
+              +\left.\frac{\partial E}{\partial T}\right|_V \Delta T
+\end{align}
+
+$$&lt;p&gt;上式的第一项和 $(\ref{eq:maxwell_relation})$ 的第一项是相同的. 我们限定它是在 &lt;eq&gt;S&lt;/eq&gt;
+不变的这条线上走的, 看它会发生什么. 让两边除以 $\Delta V$ 那么&lt;/p&gt;
+$$
+
+\begin{align}
+\label{eq:dedv}
+  \frac{\Delta E}{\Delta V}  = \left.\frac{\partial E}{\partial V}\right|_T
+              +\left.\frac{\partial E}{\partial T}\right|_V \frac{\Delta T}{\Delta V}
+\end{align}
+
+$$&lt;p&gt;在 &lt;eq&gt;S&lt;/eq&gt; 不变的线上&lt;/p&gt;
+$$
+
+\begin{align}
+  \Delta S  = \left.\frac{\partial S}{\partial V}\right|_T \Delta V
+              +\left.\frac{\partial S}{\partial T}\right|_V \Delta T = 0
+\end{align}
+
+$$&lt;p&gt;那么就可以得到这条线的斜率&lt;/p&gt;
+$$
+
+\begin{align}
+\frac{\Delta T}{\Delta V} = - \left.\frac{\partial S}{\partial V}\right|_{T}
+                    \left/\frac{\partial S}{\partial T}\right|_{V}
+\end{align}
+
+$$&lt;p&gt;把它带到 $(\ref{eq:dedv})$ 里面就得到&lt;/p&gt;
+$$
+
+\begin{align}
+  \frac{\Delta E}{\Delta V}  =&amp; \left.\frac{\partial E}{\partial V}\right|_T
+              -\left.\frac{\partial E}{\partial T}\right|_V \cdot
+                    \left.\frac{\partial S}{\partial V}\right|_{T}
+                    \left/\frac{\partial S}{\partial T}\right|_{V} \\
+             =&amp; \left.\frac{\partial E}{\partial V}\right|_T
+    - \left.\frac{\partial E}{\partial S}\right|_V \left.\frac{\partial S}{\partial V}\right|_T
+\end{align}
+
+$$&lt;p&gt;在 &lt;eq&gt;S&lt;/eq&gt; 不变的线上, $\frac{\Delta E}{\Delta V}$ 就是 $\left.\frac{\partial E}{\partial V}\right|_S$
+. 所以问题得证.&lt;/p&gt;
+&lt;h3 id="pressure--adiabatic"&gt;Pressure &amp;amp; Adiabatic&lt;/h3&gt;
+&lt;p&gt;考虑一个系统体积可变, 如下图, 加一个活塞
+&lt;img src="./2021-03-11-physics-SusskindsStatisticalMechanics/piston.png" alt="piston" /&gt;
+此时系统有了两个可以控制的参量, &lt;eq&gt;T&lt;/eq&gt; 和 &lt;eq&gt;V&lt;/eq&gt; . 然后考虑一个 adiabatic 的过程.
+adiabatic 的意思有两个&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;slow. 比如活塞右移, 如果移动的很慢, 那么气体的压强会有对外界的做功, 但是如果突
+然右移, 气体还没来得及充满整个容器, 所以就没有对外界做功. adiabatic 意味着很慢,
+整个过程中, 系统都始终处于平衡态.&lt;/li&gt;
+&lt;li&gt;no energy comes into the system from outside. 也就是说它是绝热的.
+活塞右移的过程中, 没有能量注入, 也就是说能量的改变就是压强对外做的功&lt;/li&gt;
+&lt;/ul&gt;
+$$
+
+\begin{align}
+  \mathrm{d}E = -P A\mathrm{d}x = - P\mathrm{d}V
+\end{align}
+
+$$&lt;p&gt;因此压强可以由上式定义出&lt;/p&gt;
+$$
+
+\begin{align}
+ P = - \frac{\partial E}{\partial V}
+\end{align}
+
+$$&lt;p&gt;但是, 如何体现 adiabatic 这个过程. 其实等熵的过程就是一个 adiabatic 的过程.
+second law 说熵会增加或者不变. 其中不变的过程就是一个 adiabatic 的过程. 这可以从
+量子力学的角度来理解. 整个系统是被限制在一个 box 中, 那么它的能级将会是分立的.
+而我们绝热地右移活塞, 它们的能级会改变, 但是不会交叉, 还是各自保持独立, 如下图&lt;/p&gt;
+&lt;p&gt;&lt;img src="./2021-03-11-physics-SusskindsStatisticalMechanics/adiabatic_quantum.png" alt="adiabatic quantum" /&gt;&lt;/p&gt;
+&lt;p&gt;也就是说如果系统原来处在某个能级上, 它还是在某个能级上. 进一步说, 就是它的处在某
+个能级上的概率不会改变, 它的概率分布不会改变. 而 熵就是概率分布的函数, 所以熵不
+会改变.&lt;/p&gt;
+&lt;p&gt;所以压强的定义就可以写为&lt;/p&gt;
+$$
+
+\begin{align}
+ P = - \left.\frac{\partial E}{\partial V}\right|_S
+\end{align}
+
+$$&lt;p&gt;但是控制 entropy 不是那么容易, 我们容易控制的是温度. 所以根据之前的
+$(\ref{eq:maxwell_relation})$ , 它可以写为&lt;/p&gt;
+$$
+
+\begin{align}
+ P = - \left.\frac{\partial E}{\partial V}\right|_S
+  =  - \left( \left.\frac{\partial E}{\partial V}\right|_T
+    - \left.\frac{\partial E}{\partial S}\right|_V \left.\frac{\partial S}{\partial V}\right|_T\right)
+\end{align}
+
+$$&lt;p&gt;根据温度的定义, 上式中的 $\left.\frac{\partial E}{\partial S}\right|_V$ 就是温度. 之前我们定义
+温度的时候, 是一个 closed system, 它的体积给定, 正好这是里的定义.&lt;/p&gt;
+&lt;p&gt;因此&lt;/p&gt;
+$$
+
+\begin{align}
+ P  =  -  \left.\frac{\partial (E - TS)}{\partial V}\right|_T
+\end{align}
+
+$$&lt;p&gt;而 $E - TS$ 就是之前定义的 Helmholtz free energy, 这里就可以看出它是很有用的, 它
+可以用来求压强.&lt;/p&gt;
+$$
+
+\begin{align}
+ P  =&amp;  -  \left.\frac{\partial A}{\partial V}
+    \right|_T \\
+   =&amp; \left. T \frac{\partial}{\partial V}\log Z\right|_T
+\end{align}
+
+$$&lt;p&gt;这个定义里的偏导数是给定温度的. 而之前的一节课的热力学量公式中的偏导数实际上就是
+导数, 因为那时只有一个独立变量, 我们常取的就是 $\beta$ . 而此时的系统, 多了另外一个
+独立变量, 也就是体积. 因此这里对体积求偏导时, 就要注明温度不变.&lt;/p&gt;
+&lt;h3 id="example-ideal-gas"&gt;Example: Ideal Gas&lt;/h3&gt;
+&lt;p&gt;现在就用它来计算一下理想气体的压强! 我们甚至都不需要完全计算出配分函数.&lt;/p&gt;
+$$
+
+\begin{align}
+  Z = \frac{1}{N!}\int \mathrm{d}^{3N}x \mathrm{d}^{3N}p e^{- \beta \frac{p^2}{2m}}
+    = \frac{V^N}{N!} f(\beta)
+\end{align}
+
+$$&lt;p&gt;因为压强是给定 $\beta$ 后, 对 &lt;eq&gt;V&lt;/eq&gt; 的导数, 所以我们不关心 $f(\beta)$ 的形式, 只要知道
+$Z\propto V^N$ 就足够了&lt;/p&gt;
+$$
+
+\begin{align}
+  P = T \left.\frac{\partial \log Z}{\partial V}\right|_T = T \frac{N}{V}
+\end{align}
+
+$$&lt;p&gt;这就是理想气体的 equation of state&lt;/p&gt;
+$$
+
+\begin{align}
+ PV = NT
+\end{align}
+
+$$&lt;h3 id="fluctuation--heat-capacity"&gt;Fluctuation &amp;amp; Heat Capacity&lt;/h3&gt;
+&lt;p&gt;fluctuation is defined as&lt;/p&gt;
+$$
+
+\begin{align}
+  \Delta x  \equiv \sqrt{\langle(x - \langle x\rangle)^2\rangle} = \sqrt{\langle x^2\rangle-\langle x\rangle^2}
+\end{align}
+
+$$&lt;p&gt;fluctuation of energy is
+$$
+\begin{align}
+ (\Delta E)^2 = \langle E^2\rangle - \langle E\rangle^2
+\end{align}
+$$&lt;/p&gt;
+&lt;p&gt;其中 $\langle E\rangle$ 就是之前的 &lt;eq&gt;E&lt;/eq&gt; , 可以从 partition function 得到&lt;/p&gt;
+$$
+
+\begin{align}
+  \langle E\rangle = - \frac{\partial \log Z}{\partial \beta}
+\end{align}
+
+$$&lt;p&gt;而 $\langle E^2\rangle$ 可以根据定义来求&lt;/p&gt;
+$$
+
+\begin{align}
+   \langle E^2\rangle = \sum_iP_iE_i^2 = \frac{1}{Z(\beta)}\sum_ie^{- \beta E_i} E_i^2
+     = \frac{1}{Z}\frac{\partial^2 Z}{\partial\beta^2}
+\end{align}
+
+$$&lt;p&gt;so&lt;/p&gt;
+$$
+
+\begin{align}
+ (\Delta E)^2 = \frac{1}{Z}\frac{\partial^2 Z}{\partial\beta^2}
+        - \frac{1}{Z^2}\left(\frac{\partial Z}{\partial \beta} \right)^2
+        = \frac{\partial}{\partial\beta}\left( \frac{1}{Z} \frac{\partial Z}{\partial \beta} \right)
+\end{align}
+
+$$&lt;p&gt;而括号中的恰好就是 $- E$ , 那么&lt;/p&gt;
+$$
+
+\begin{align}
+ (\Delta E)^2 = - \frac{\partial E}{\partial\beta} = - \frac{\partial T}{\partial\beta} \frac{\partial E}{\partial T}
+         = T^2 \frac{\partial E}{\partial T} = T^2C_V(T)
+\end{align}
+
+$$&lt;p&gt;where&lt;/p&gt;
+$$
+
+\begin{align}
+  C_V(T) \equiv \left.\frac{\partial E}{\partial T}\right|_V
+\end{align}
+
+$$&lt;p&gt;is heat capacity.&lt;/p&gt;
+&lt;h2 id="lecture-6-weakly-interacting-gases-heat-and-work"&gt;Lecture 6: Weakly interacting gases, heat, and work&lt;/h2&gt;
+&lt;p&gt;考虑分子之间有两体相互作用能&lt;/p&gt;
+$$
+
+\begin{align}
+  E = \sum_n \frac{p_n^2}{2M} + \sum_{n&gt;m}U(|x_n - x_m|)
+\end{align}
+
+$$&lt;p&gt;先考虑两个粒子之间的相互作用能&lt;/p&gt;
+$$
+
+\begin{align}
+  \int \mathrm{d}^3x_1 \mathrm{d}^3x_2 \cdot U(|x_2 - x_1|)
+  = \int \mathrm{d}^3x_1 \mathrm{d}^3(x_1 + x')\cdot  U(|x'|)
+  = \int \mathrm{d}^3x_1 \mathrm{d}^3(x') \cdot U(|x'|)
+  = V U_0
+\end{align}
+
+$$&lt;p&gt;where $\int \mathrm{d}^3x_1 = V$ , $\int\mathrm{d}^3(x')  U(|x'|) = U_0$ . 记
+$\sum_{n&gt;m}U(|x_n - x_m|) \equiv U(x)$ 那么&lt;/p&gt;
+$$
+
+\begin{align}
+  E = \sum_n \frac{p_n^2}{2M} + \frac{N(N - 1)}{2}VU_0
+\end{align}
+
+$$&lt;p&gt;计算配分函数&lt;/p&gt;
+$$
+
+\begin{align}
+  Z &amp;= \frac{1}{N!} \int \mathrm{d}^{3N}x\int \mathrm{d}^{3N}p\cdot
+         e^{-\beta\sum_n \frac{p_n^2}{2M}} e^{- \beta U(x)}\\
+   &amp;= \left(\frac{V^N}{N!}\int \mathrm{d}^{3N}p\cdot
+         e^{-\beta\sum_n \frac{p_n^2}{2M}}\right)
+         \frac{1}{V^N}\int \mathrm{d}^{3N}x \cdot e^{- \beta U(x)} \\
+   &amp;= Z_0(\beta) \frac{1}{V^N}\int \mathrm{d}^{3N}x \cdot e^{- \beta U(x)} \\
+\end{align}
+
+$$&lt;p&gt;其中 $Z_0$ 是 ideal gas 的配分函数. 如果相互作用很小, 那么我们可以对它展开, 只取
+到一阶项&lt;/p&gt;
+$$
+
+\begin{align}
+  e^{- \beta U(x)} \approx 1 - \beta U(x)
+\end{align}
+
+$$&lt;p&gt;那么&lt;/p&gt;
+$$
+
+\begin{align}
+  \frac{1}{V^N}\int \mathrm{d}^{3N}x \cdot e^{- \beta U(x)}
+  &amp;\approx \frac{1}{V^N}\int \mathrm{d}^{3N}x \cdot [1 -  \beta U(x)] \\
+  &amp;= 1 - \frac{\beta}{V^N} \frac{N(N - 1)}{2} \int \mathrm{d}x_1\mathrm{d}x_2\cdot U(x_1 - x_2)
+      \int \mathrm{d}^3x_{3}\cdots \mathrm{d}^{3}x_N \\
+  &amp;\approx 1 - \frac{N^2}{2}\frac{\beta}{V^{N - (N - 2)}} U_0 V\\
+  &amp;= 1 - \frac{\beta N^2}{2V}U_0
+\end{align}
+
+$$&lt;p&gt;配分函数的对数为&lt;/p&gt;
+$$
+
+\begin{align}
+  \log Z \approx \log Z_0 + \log\left[1 -\frac{\beta N^2}{2V}U_0 \right]
+        \approx \log Z_0 - \frac{\beta N^2}{2V}U_0
+\end{align}
+
+$$&lt;p&gt;其中利用了 $\log(1 - x) = - x + \cdots$&lt;/p&gt;
+&lt;p&gt;之后我们可以计算一些热力学量的修正. 比如能量&lt;/p&gt;
+$$
+
+\begin{align}
+  E = -\frac{\partial \log Z}{\partial\beta} = \frac{3}{2}NT + \frac{N^2}{2V}U_0
+        = \left( \frac{3}{2}T + \frac{\rho}{2}U_0 \right)N
+\end{align}
+
+$$&lt;p&gt;压强&lt;/p&gt;
+$$
+
+\begin{align}
+P = - \left. \frac{\partial A}{\partial V}\right|_V = T \frac{\partial \log Z}{\partial V}
+  = \rho T + \frac{1}{2}\rho^2U_0
+\end{align}
+
+$$&lt;h2 id="lecture-7-harmonic-oscillators---entropy-vs-reversibility"&gt;Lecture 7: Harmonic Oscillators ( &amp;amp; Entropy vs. reversibility)&lt;/h2&gt;
+&lt;h3 id="single-classical-harmonic-oscillators"&gt;Single Classical Harmonic Oscillators&lt;/h3&gt;
+&lt;p&gt;考虑如图的单个弹簧
+&lt;img src="./2021-03-11-physics-SusskindsStatisticalMechanics/spring.png" alt="spring" /&gt;
+它的 partition function 是&lt;/p&gt;
+$$
+
+\begin{align}
+  Z = \int \mathrm{d}p \mathrm{d}x\cdot e^{-\beta \frac{p^2}{2m}} e^{-\beta \frac{kx^2}{2}}
+    = \frac{2\pi}{\omega} \frac{1}{\beta}
+\end{align}
+
+$$&lt;p&gt;where $\frac{1}{\omega} = \sqrt{\frac{m}{k}}$ . so&lt;/p&gt;
+$$
+
+\begin{align}
+  \log Z = \sharp - \log \beta
+\end{align}
+
+$$&lt;p&gt;and&lt;/p&gt;
+$$
+
+\begin{align}
+ E = - \frac{\partial \log Z}{\partial\beta} = T
+\end{align}
+
+$$&lt;h3 id="single-quantum-harmonic-oscillators"&gt;Single Quantum Harmonic Oscillators&lt;/h3&gt;
+&lt;p&gt;量子与经典不同的地方仅在于能级是分立的(Susskind 在此没有计入零点能). So
+partition functino is&lt;/p&gt;
+$$
+
+\begin{align}
+  Z = \sum_n e^{- \beta n\hbar\omega} = \sum_n \left(e^{-\beta\hbar\omega} \right)^n
+    = \frac{1}{1 - e^{- \beta\hbar\omega}}
+\end{align}
+
+$$&lt;p&gt;so&lt;/p&gt;
+$$
+
+\begin{align}
+  E = - \frac{1}{Z}\frac{\partial Z}{\partial\beta} = \frac{\hbar\omega e^{- \beta\hbar\omega}}{1 - e^{- \beta\hbar\omega}}
+\end{align}
+
+$$&lt;p&gt;as $\beta \to 0$ (high temperature), the leading order of energy behaves like&lt;/p&gt;
+$$
+
+\begin{align}
+  E \to T
+\end{align}
+
+$$&lt;p&gt;which is the result of classical case.
+as $\beta \to\infty$ (low temperature), the leading oreder of energy behaves like&lt;/p&gt;
+$$
+
+\begin{align}
+ E \to \hbar\omega e^{- \beta\hbar\omega}
+\end{align}
+
+$$&lt;p&gt;it exponentially goes to zero.&lt;/p&gt;
+&lt;h2 id="lecture-8-magnetic--1d-ising-model-entropy-reversibility-and-magnetism"&gt;Lecture 8: Magnetic &amp;amp; 1D Ising Model (Entropy, reversibility, and magnetism)&lt;/h2&gt;
+&lt;p&gt;Consider 1 D spin chain, &lt;eq&gt;N&lt;/eq&gt; spins can be either $\sigma(i)= + 1$ or $\sigma(i) =
+-1$.&lt;/p&gt;
+&lt;p&gt;&lt;img src="./2021-03-11-physics-SusskindsStatisticalMechanics/1d_ising_pic.png" alt="1D Ising picture" /&gt;&lt;/p&gt;
+&lt;p&gt;Suppose there is a magnetic field, the energy is&lt;/p&gt;
+$$
+
+\begin{align}
+  E = (n - m) \mu H
+\end{align}
+
+$$&lt;p&gt;where &lt;eq&gt;n&lt;/eq&gt; is the number of ups, &lt;eq&gt;m&lt;/eq&gt; is the number of downs, and satisfy $n + m
+= N$ . So partition function&lt;/p&gt;
+$$
+
+\begin{align}
+  Z = \sum_{n, m}e^{-\beta \mu H(n - m)}
+\end{align}
+
+$$&lt;p&gt;where sum is meant over all configurations. For each value of $(n−m)$ , there
+is going to be a certainnumber of configurations. And that number of
+configurations is&lt;/p&gt;
+$$
+
+\begin{align}
+\frac{N!}{n! m!}
+\end{align}
+
+$$&lt;p&gt;so&lt;/p&gt;
+$$
+
+\begin{align}
+  Z = \sum_{n}\frac{N!}{n! (N - n)!} \left(e^{-\beta\mu H}\right)^n
+            \left(e^{\beta\mu H}\right)^{N - n}
+    = (e^{-\beta\mu H} + e^{\beta\mu H})^N
+\end{align}
+
+$$&lt;p&gt;(The sum in the partition functions is over microstates. If there is
+degeneracy, we need to multiply a degeneracy factor). And we rewrite the
+partition function&lt;/p&gt;
+$$
+
+\begin{align}
+ Z = 2^N \cosh^N (\beta \mu H)
+\end{align}
+
+$$&lt;p&gt;Define magnetization as&lt;/p&gt;
+$$
+
+\begin{align}
+  M = \frac{\langle n - m\rangle}{N}
+\end{align}
+
+$$&lt;p&gt;so&lt;/p&gt;
+$$
+
+\begin{align}
+  M = \frac{E}{\mu H N} = - \frac{1}{\mu H N} \frac{\partial \log Z}{\partial \beta} = -\tanh (\beta\mu H)
+\end{align}
+
+$$&lt;p&gt;It behaves like
+&lt;img src="./2021-03-11-physics-SusskindsStatisticalMechanics/1d_ising_solution.png" alt="1D Ising solution" /&gt;&lt;/p&gt;
+&lt;p&gt;There is no phase transition.&lt;/p&gt;
+&lt;h2 id="lecture-9-the-ising-model--phase-transition"&gt;Lecture 9: The Ising model &amp;amp; Phase transition&lt;/h2&gt;
+&lt;h3 id="1d-case"&gt;1D case&lt;/h3&gt;
+&lt;p&gt;Let's use new notion&lt;/p&gt;
+$$
+
+\begin{align}
+ E = - \mu B \sigma \equiv -J \sigma
+\end{align}
+
+$$&lt;p&gt;(He changed &lt;eq&gt;H&lt;/eq&gt; to &lt;eq&gt;B&lt;/eq&gt; and changed the direction of magnetic field!)
+so the solution is&lt;/p&gt;
+$$
+
+\begin{align}
+ \langle \sigma\rangle = \tanh (\beta J)
+\end{align}
+
+$$&lt;p&gt;现在考虑不加磁场了, 但是考虑相邻的 spin 之间有相互作用能, 也就是说能量为&lt;/p&gt;
+$$
+
+\begin{align}
+E = -J \sum \sigma_i \sigma_{i + 1}
+\end{align}
+
+$$&lt;p&gt;for $J &gt; 0$ , spin parallel is favored(lower energy).&lt;/p&gt;
+&lt;p&gt;Now we define correlation function as&lt;/p&gt;
+$$
+
+\begin{align}
+\langle \sigma_i \sigma_{i + n}\rangle
+\end{align}
+
+$$&lt;p&gt;and we call $\sigma_1\sigma_2 = \mu_1 \sigma_2\sigma_3= \mu_2, \cdots$ . So&lt;/p&gt;
+$$
+
+\begin{align}
+E = -J \sum \mu_i
+\end{align}
+
+$$&lt;p&gt;it has the same form of 1 dimension Ising model without interaction energy in a
+magnetic field. So we can right now get&lt;/p&gt;
+$$
+
+\begin{align}
+\langle \mu \rangle = \tanh \beta J
+\end{align}
+
+$$&lt;p&gt;We can calculate correlation function by add some pairs in it (because $\sigma_i \sigma_i
+=1$ )&lt;/p&gt;
+$$
+
+\begin{align}
+\langle \sigma_i \sigma_{i + n}\rangle = \langle \sigma_i \sigma_{i + 1}\sigma_{i + 1} \sigma_{i + 2}\sigma_{i + 2}\cdots
+         \sigma_{i + n - 1}\sigma_{i + n-1}\sigma_{i + n}\sigma_{i + n}\rangle
+   = \langle\mu_1 \mu_2 \cdots \mu_n \rangle = \tanh^N\beta J
+\end{align}
+
+$$&lt;p&gt;the last equivalent is because differnt $\mu_i$ is independent.&lt;/p&gt;
+&lt;p&gt;So, it is a boring system, because the correlation function decays when increase
+the distance except temperature is zero which $\tanh \beta J = 1$ . It is the same
+idea of the game of telephone. The signal decays.&lt;/p&gt;
+&lt;p&gt;Why it is borig? because its dimension is too low. We will see in 2 dimension,
+there will be something like error correction.&lt;/p&gt;
+&lt;h3 id="high-dimension-case--mean-field-approximation-self-consistent-field"&gt;High Dimension Case &amp;amp; Mean Field Approximation (Self-Consistent Field)&lt;/h3&gt;
+&lt;p&gt;In &lt;eq&gt;d&lt;/eq&gt; dimension, there are $2d$ neighbors. Mean field means we approximate the
+neighbor spin as the average spin which labeled as $\bar{\sigma}$. So the energy in
+a site is&lt;/p&gt;
+$$
+
+\begin{align}
+E = -J \sigma \sum_{\mathrm{neighbor}} \sigma \approx -\left(2 d J \bar{\sigma}\right) \sigma
+\end{align}
+
+$$&lt;p&gt;the higher the dimension, the better the approximation is. It seems like if one
+neighbor pass the information wrong, there are other neighbors may pass it
+right, the more the neighbors, the larger the chance which pass the information
+right.&lt;/p&gt;
+&lt;p&gt;This approximation is also called self-consistent field, because we can write
+the average spin as the form (just transform $J \to 2 dJ\bar{\sigma}$)&lt;/p&gt;
+$$
+
+\begin{align}
+ \bar{\bar{\sigma}} = \tanh(2 \beta d J \bar{\sigma})
+\end{align}
+
+$$&lt;p&gt;we can solve it consistently, so the name. We write it in another form (let
+$\bar{\bar{\sigma}} = \bar{\sigma}$)&lt;/p&gt;
+$$
+
+\begin{align}
+T \frac{y}{2dj} = \tanh y, \quad \mathrm{where} \quad y = 2\beta d J \bar{\sigma}
+\end{align}
+
+$$&lt;p&gt;&lt;img src="./2021-03-11-physics-SusskindsStatisticalMechanics/nd_ising_solution.png" alt="nD Ising solution" /&gt;&lt;/p&gt;
+&lt;p&gt;直线的斜率与 &lt;eq&gt;T&lt;/eq&gt; 是成正比的. 可以发现, 当温度很高时, 比如图中蓝线, 它与 $\tanh
+y$ 只有 $y = 0$ , 也就是 $\bar{\sigma} = 0$ 一个交点, 没有磁性, 所有的 spin 都随机排
+序.&lt;/p&gt;
+&lt;p&gt;当温度降低到 $T = 2d J$ , 也就是图中橙色直线时, 它与 $\tanh y$ 相切. 只要温度再
+降一点, 到 $T &lt; 2d J$ 时, 就有三个交点分别在 $y &lt; 0, y &gt; 0$ 以及 $y = 0$ 处. 从能量
+上看, $y &gt; 0, y &lt; 0$ 的两个解能量是相同的, 并且都要比 $y = 0$ 时的解要低. 也就是
+说系统是有磁性的.&lt;/p&gt;
+&lt;p&gt;The temperature $T= 2dJ$, where a transition appears, iscalled thecritical
+temperature. It is not exact. It is a meanfield approximation.&lt;/p&gt;
+&lt;h3 id="plus-external-magnetic-field"&gt;Plus External Magnetic Field &lt;eq&gt;B&lt;/eq&gt;&lt;/h3&gt;
+&lt;p&gt;如果加上外磁场, 那么 Energy is&lt;/p&gt;
+$$
+
+\begin{align}
+  E = -[2 d J \bar{\sigma} + B]\sigma
+\end{align}
+
+$$&lt;p&gt;and&lt;/p&gt;
+$$
+
+\begin{align}
+T \frac{y}{2 d J} = \tanh (y + B\beta)
+\end{align}
+
+$$&lt;p&gt;there is just a shift.&lt;/p&gt;
+&lt;p&gt;&lt;img src="./2021-03-11-physics-SusskindsStatisticalMechanics/nd_ising_shift_solution.png" alt="Ising shift solution" /&gt;&lt;/p&gt;
+&lt;p&gt;此时所有温度都是有确定的磁性.&lt;/p&gt;
+&lt;p&gt;The tiniest little bit of stray magnetic field &lt;eq&gt;h&lt;/eq&gt; will tell us which way to
+go. If &lt;eq&gt;h&lt;/eq&gt;is positive the magnetization will be positive. Right above the &lt;eq&gt;T&lt;/eq&gt;
+-axis it won’t be zero, and right below it won’t be zero either. Spontaneous
+magnetization has happened.&lt;/p&gt;
+&lt;h2 id="lecture-10-liquid-gas-phase-transition"&gt;Lecture 10: Liquid-Gas Phase Transition&lt;/h2&gt;
+&lt;h3 id="phase-diagram-of-ising-model"&gt;Phase Diagram of Ising Model&lt;/h3&gt;
+&lt;p&gt;我们对带有外场&lt;/p&gt;
+$$
+
+\begin{align}
+  E = -J \sum_{\mathrm{links}}\sigma(i)\sigma(j) - \sum_{\mathrm{sites}}h \sigma(i)
+\end{align}
+
+$$&lt;p&gt;的情况做一个总结, 从能量上看, parallel, ups 的能量比较低. 用 mean field 近似的
+结果是&lt;/p&gt;
+$$
+
+\begin{align}
+  \bar{\sigma} = \tanh \left[(2 d J \bar{\sigma} + h)\beta \right]
+\end{align}
+
+$$&lt;p&gt;&lt;img src="./2021-03-11-physics-SusskindsStatisticalMechanics/magnetic_phase.png" alt="magnetic phase" /&gt;&lt;/p&gt;
+&lt;p&gt;沿不同的路径来看这个相图:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;沿 $h = 0$ 来看, 在 $T &lt; T_{\mathrm{C}}$ 时, 它只有两个简并的解, 也就是说它是
+有磁性的, 随着温度的升高, 磁性减小, 直到跨过 $T = T_{\mathrm{C}}$ (The
+phenomena happening there are all characterized bywhat is calledcritical
+exponents), 磁性消失.&lt;/li&gt;
+&lt;li&gt;在 $T=0$ 的轴上, 当 $h &lt; 0$ 时, $\sigma = -1$ . 当 $h&gt;0$ 时, $\sigma = +1$ . That
+comes from the fact thatat zero temperature the spins all choose the lowest
+energy,and there is no fluctuation.&lt;/li&gt;
+&lt;li&gt;沿 $T &lt; T_{\mathrm{C}}$ 的某个温度, 逐渐增大磁场, 也就是图中的虚直线. 在 $h &lt;
+0$ 时, 它有一个 shift, 有 $\sigma &lt; 0$ 的解. 随着 $h\to 0$ , 磁性减小, 但是没有减小
+到 &lt;eq&gt;0&lt;/eq&gt; , 然后一个突然的转变, 变到 $\sigma &gt; 0$ . $h &gt; 0$ 并逐渐增大时, 磁性以开始
+增强.&lt;/li&gt;
+&lt;li&gt;如果我们沿图中半圆虚线, 它绕过了 $T_{\mathrm{C}}$ , 此时 $\sigma$ 连续地由负变到零,
+再变到正.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When we talk strictly about real magnets,Tcis also calledthe Curie
+temperature.&lt;/p&gt;
+&lt;h3 id="liquid-gas-phase-transition"&gt;Liquid-Gas Phase Transition&lt;/h3&gt;
+&lt;p&gt;可以用 Ising model 做为一个简单的数学模型, 来 show liquid-gas phase diagram.&lt;/p&gt;
+&lt;p&gt;liquid gas transition 的发生需要三个条件:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;有一个可变的 chemical potential (Note that $\mu$ is called the chemical
+potential because in gen-eral it is different for different kinds of
+molecules.)&lt;/li&gt;
+&lt;li&gt;有一个 hard core potential&lt;/li&gt;
+&lt;li&gt;有一个 short range attraction potential&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果我们把 Ising model 中 up 看成是存在一个粒子, down 看成是没有粒子. 两个邻近的
+spin parallel 是一个 unbroken bound. 那么有外加磁场的 Ising model 恰好就满足这三
+个条件. 下面考虑二维 $d=2$ 的情况.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;chemical potential 对应外加磁场再加一个 shift. chemical potential 就是增加一个
+粒子的 energy cost. 我们从真空, 也就是 all down 状态增加一个粒子, 也就是 flip
+a down to up, 它会打开四个 bound, 同时加上外磁场的能量 , energy cost 就是 $8 J
+&lt;ul&gt;
+&lt;li&gt;2h$ . 故 chemical potential $\mu = 8J + 2h$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;$\sigma$ 只能是 $\pm 1$ , 不能是其它数值, 也就是说一个 site 是能是没有粒子, 或者有
+一子的状态. 而不能有多个粒子, 也就是对应一个 hard core potential&lt;/li&gt;
+&lt;li&gt;两个相距比较远的粒子, 它们的总能量是 $2(8J + 2h)$ . 而它们互相接近, 直到邻时,
+它们会形成一个 bound , 也就是对应它们是 parall 的, 能量会减少 $4J$ . 这就对应
+一个 short range attraction potential.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在此对应下, 我们可以用 Ising model 的相图来理解 liquid-gas phase transition. 这
+个 transition 对应 $\sigma$ 的突变, 也就是 density 的突变. The difference between
+liquid andvapour is some discontinuity in the density, liquid beingdenser than
+vapor.&lt;/p&gt;
+&lt;p&gt;&lt;img src="./2021-03-11-physics-SusskindsStatisticalMechanics/liquid-gas.png" alt="liquid gase" /&gt;&lt;/p&gt;
+&lt;p&gt;We want to keep the molecular properties fixed, thereforewe are not going to
+play with &lt;eq&gt;J&lt;/eq&gt;. All we can vary is the chemical potential. And that is the same
+thing in our model as varying &lt;eq&gt;h&lt;/eq&gt; .&lt;/p&gt;
+&lt;h2 id="interlude"&gt;Interlude&lt;/h2&gt;
+&lt;h3 id="stirlings-approximation"&gt;Stirling's Approximation&lt;/h3&gt;
+$$
+
+\begin{align}
+N! \approx N^N e^{-N} ,\quad \mathrm{as}\quad N\to\infty
+\end{align}
+
+$$&lt;p&gt;Proof: as $N \to \infty$&lt;/p&gt;
+$$
+
+\begin{align}
+\log (N!) = \sum_{x = 1}^N \log x \approx \int_1^N \mathrm{d}x\cdot\log x \approx N \log N - N
+\end{align}
+
+$$&lt;p&gt;Q.E.D.&lt;/p&gt;
+&lt;h3 id="lagrange-multiplier"&gt;Lagrange Multiplier&lt;/h3&gt;
+&lt;p&gt;另一种不同的理解方式, 不是找 constrain 的切线, 而是 shift了 &lt;eq&gt;F&lt;/eq&gt; 使得 $F(G)$ 在零
+处有极值.&lt;/p&gt;
+&lt;p&gt;具体来讲, function $F(x_i)$ , constrain $G(x_i) = 0$ , 那么在 $x_i$ (如 $x_1 = x,
+x_2 = y$ 时只有两个变量)平面内, $F(x_i)$ 是一圈一圈的等高线, $G(x_i)$ 也有一系列等
+高线. 极值点处两条等高线相切, 在它们的垂线上 &lt;eq&gt;F&lt;/eq&gt; 可以做为 &lt;eq&gt;G&lt;/eq&gt; 的函数, 但此函数在
+$G=0$ 处不一定是极值点. 但我们可以变换一下令 $F' = F +\lambda G$ 使得 $G = 0$ 处为
+$F'$ 极值点, 得出 $x_i$ 后再 令 $G(x_i) = 0$ 解出 $\lambda$ .&lt;/p&gt;
+&lt;p&gt;Exp.&lt;/p&gt;
+$$
+
+\begin{align}
+  F(x, y) =&amp; \frac{x^2 + y^2}{2}\\
+  G(x, y) =&amp; x + y - 1 = 0 \\
+\end{align}
+
+$$&lt;h2 id="about"&gt;...about&lt;/h2&gt;
+&lt;p&gt;我之前一直很模糊, 不清晰的概念, 都跟 Susskind 搞明白了. 比如什么是 adiabatic, 为
+什么压强要在等熵下定义.&lt;/p&gt;
+&lt;p&gt;Susskind, U GREAT!&lt;/p&gt;
+&lt;h2 id="reference"&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Phase_diagram"&gt;Wikipedia: Phase Diagram&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Stirling%27s_approximation"&gt;Wikipedia: Stirling's Approximation&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="physics"/><category term="physics"/><category term="statistical mechanics"/><category term="Susskind"/><category term="entropy"/><category term="Ising model"/><category term="magnetic"/><category term="liquid-gas transition"/></entry><entry><title>围道积分进阶</title><link href="https://zqw.ink/2020-12-07-physics-contourintegral.html" rel="alternate"/><published>2020-12-07T00:00:00+08:00</published><updated>2020-12-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-12-07:/2020-12-07-physics-contourintegral.html</id><summary type="html">
 &lt;h2 id="准备"&gt;准备&lt;/h2&gt;
 &lt;h3 id="high-order-residue"&gt;High Order Residue&lt;/h3&gt;
 &lt;p&gt;Cauchy Integral Formula&lt;/p&gt;
@@ -147,9 +1293,9 @@ $$
   = &amp; \frac{4\pi}{(2\pi)^3}\int_0^{\infty} \mathrm{d}q \frac{q^2}{(q^2 - p^2 - \mathrm{i}\epsilon)^2}
 \end{align}
 
-$$&lt;p&gt;它有两个二阶奇点 &lt;eq&gt;R&lt;/eq&gt; 和 $-R$ , 并且是偶函数.&lt;br /&gt;
-&lt;img src="./2020-12-07-physics-ContourIntegral/I1.png" alt="I1" /&gt;&lt;br /&gt;
-它在远处是 $\frac{1}{q^2} \to 0$ , 所以采用图中的围道. 只要计算 $z = R$ 处的留数即&lt;br /&gt;
+$$&lt;p&gt;它有两个二阶奇点 &lt;eq&gt;R&lt;/eq&gt; 和 $-R$ , 并且是偶函数.
+&lt;img src="./2020-12-07-physics-ContourIntegral/I1.png" alt="I1" /&gt;
+它在远处是 $\frac{1}{q^2} \to 0$ , 所以采用图中的围道. 只要计算 $z = R$ 处的留数即
 可.&lt;/p&gt;
 $$
 
@@ -173,7 +1319,7 @@ $$
       \frac{q (e^{\mathrm{i}qr} - e^{-\mathrm{i}qr})}{(q^2 - p^2 - \mathrm{i}\epsilon)^2}
 \end{align}
 
-$$&lt;p&gt;与 $I_1$ 类似, 也是一个偶函数, 有两个二阶 pole. 不同之处在于, 它在无穷远处的积分&lt;br /&gt;
+$$&lt;p&gt;与 $I_1$ 类似, 也是一个偶函数, 有两个二阶 pole. 不同之处在于, 它在无穷远处的积分
 为零需要由 Jordan's Lemma 来判定.&lt;/p&gt;
 $$
 
@@ -184,8 +1330,8 @@ $$
         \right]
 \end{align}
 
-$$&lt;p&gt;&lt;img src="./2020-12-07-physics-ContourIntegral/I2.png" alt="I2" /&gt;&lt;br /&gt;
-根据 Jordan's Lemma, 第一项在上半平面无穷远的圆弧上积分为为, 第二项是下半平面,&lt;br /&gt;
+$$&lt;p&gt;&lt;img src="./2020-12-07-physics-ContourIntegral/I2.png" alt="I2" /&gt;
+根据 Jordan's Lemma, 第一项在上半平面无穷远的圆弧上积分为为, 第二项是下半平面,
 因此取不同的围道计算两个积分.&lt;/p&gt;
 &lt;p&gt;第一项&lt;/p&gt;
 $$
@@ -228,40 +1374,40 @@ $$&lt;h2 id="reference"&gt;Reference&lt;/h2&gt;
 </content><category term="physics"/><category term="数学"/><category term="留数定理"/><category term="复变函数"/><category term="contour integral"/></entry><entry><title>二次量子化笔记 (update 06/Dec/2019)</title><link href="https://zqw.ink/2018-09-27-physics-second_quant.html" rel="alternate"/><published>2018-09-27T00:00:00+08:00</published><updated>2018-09-27T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-27:/2018-09-27-physics-second_quant.html</id><summary type="html">
 &lt;h2 id="单体力学量"&gt;单体力学量&lt;/h2&gt;
 &lt;h3 id="本征表象"&gt;本征表象&lt;/h3&gt;
-&lt;p&gt;&lt;eq&gt;N&lt;/eq&gt; 个粒子组成的系统，对于单个粒子的力学量 $\hat{f}$ ，其第 &lt;eq&gt;i&lt;/eq&gt; 个本征值为 $f_i$ ，本征态为 $\mid i \rangle$ ，即&lt;br /&gt;
+&lt;p&gt;&lt;eq&gt;N&lt;/eq&gt; 个粒子组成的系统，对于单个粒子的力学量 $\hat{f}$ ，其第 &lt;eq&gt;i&lt;/eq&gt; 个本征值为 $f_i$ ，本征态为 $\mid i \rangle$ ，即
 $$
 \begin{align}
 \hat …&lt;/p&gt;</summary><content type="html">
 &lt;h2 id="单体力学量"&gt;单体力学量&lt;/h2&gt;
 &lt;h3 id="本征表象"&gt;本征表象&lt;/h3&gt;
-&lt;p&gt;&lt;eq&gt;N&lt;/eq&gt; 个粒子组成的系统，对于单个粒子的力学量 $\hat{f}$ ，其第 &lt;eq&gt;i&lt;/eq&gt; 个本征值为 $f_i$ ，本征态为 $\mid i \rangle$ ，即&lt;br /&gt;
+&lt;p&gt;&lt;eq&gt;N&lt;/eq&gt; 个粒子组成的系统，对于单个粒子的力学量 $\hat{f}$ ，其第 &lt;eq&gt;i&lt;/eq&gt; 个本征值为 $f_i$ ，本征态为 $\mid i \rangle$ ，即
 $$
 \begin{align}
 \hat{f} \mid i \rangle = f_i \mid i \rangle
 \end{align}
-$$&lt;br /&gt;
-那么这 $N = \sum_i n_i$ 个粒子就是：&lt;br /&gt;
+$$
+那么这 $N = \sum_i n_i$ 个粒子就是：
 $$
 \begin{align*}
 \hat{F} = \sum_i f_i \hat{n}_i = \sum_i f_i a_i^{\dagger}a_i
 \end{align*}
-$$&lt;br /&gt;
+$$
 $a_i^{\dagger}$ 是 &lt;eq&gt;f&lt;/eq&gt; 的本征表象中的产生算符。&lt;/p&gt;
 &lt;h3 id="非本征表象"&gt;非本征表象&lt;/h3&gt;
-&lt;p&gt;若要写出非本征表象下的形式，则应对 $a_i^{\dagger}$ 做表象变换。 $a_i^{\dagger}$ 的表象变换可让 $a_i^{\dagger}$ 作用在真空态上如下导出：&lt;br /&gt;
+&lt;p&gt;若要写出非本征表象下的形式，则应对 $a_i^{\dagger}$ 做表象变换。 $a_i^{\dagger}$ 的表象变换可让 $a_i^{\dagger}$ 作用在真空态上如下导出：
 $$
 \begin{align*}
 a_i^{\dagger} \mid 0 \rangle = \mid i \rangle = \sum_{\alpha} \mid \alpha \rangle\langle \alpha \mid i \rangle = \sum_{\alpha} a_{\alpha}^{\dagger}\mid 0 \rangle \langle \alpha \mid i \rangle
 \end{align*}
-$$&lt;br /&gt;
-所以可得:&lt;br /&gt;
+$$
+所以可得:
 $$
 \begin{align*}
 a_i^{\dagger}   = \sum_{\alpha} a_{\alpha}^{\dagger}\ \langle \alpha \mid i \rangle
 \end{align*}
-$$&lt;br /&gt;
+$$
 如此看来, 产生算符的表象变换类似于一个右矢, 而消灭算符的表象变换类似于一个左矢. 便于记忆可以认为将 $a_i^{\dagger} \mid 0\rangle$ 简记为了 $a_i^{\dagger}$ ,将  $a_{\alpha}^{\dagger} \mid 0\rangle$ 简记为了 $a_{\alpha}^{\dagger}$. 产生算符作用在右矢空态上才不为零.&lt;/p&gt;
-&lt;p&gt;那么:&lt;br /&gt;
+&lt;p&gt;那么:
 $$
 \begin{align*}
 \hat{F} =&amp; \sum_i f_i a_i^{\dagger}a_i \\
@@ -271,8 +1417,8 @@ $$
 =&amp; \sum_{\alpha \beta}   a_{\alpha}^{\dagger}\langle \alpha \mid \hat{f} \mid \beta \rangle a_{\beta} \\
 =&amp; \sum_{\alpha \beta}  \langle \alpha \mid \hat{f} \mid \beta \rangle a_{\alpha}^{\dagger} a_{\beta}
 \end{align*}
-$$&lt;br /&gt;
-我为了便于理解, 直接将产生消灭算符看成是多体表象中的基矢, 产生算符是右矢, 消灭算符是左矢. 那么, 一切就都说得通了:&lt;br /&gt;
+$$
+我为了便于理解, 直接将产生消灭算符看成是多体表象中的基矢, 产生算符是右矢, 消灭算符是左矢. 那么, 一切就都说得通了:
 $$
 \begin{align*}
 \hat{F} \sim \sum_{\alpha \beta}  \langle \alpha \mid \hat{f} \mid \beta \rangle \cdot \mid \alpha \rangle \langle \beta \mid
@@ -280,45 +1426,45 @@ $$
 $$&lt;/p&gt;
 &lt;h2 id="二体力学量"&gt;二体力学量&lt;/h2&gt;
 &lt;h3 id="本征表象中的二体力学量"&gt;本征表象中的二体力学量&lt;/h3&gt;
-&lt;p&gt;同样的, &lt;eq&gt;N&lt;/eq&gt; 个粒子组成的系统, 于单个粒子的力学量 $\hat{f}$ ，其第 &lt;eq&gt;i&lt;/eq&gt; 个本征值为 $f_i$ ，本征态为 $\mid i \rangle$ ，即&lt;br /&gt;
+&lt;p&gt;同样的, &lt;eq&gt;N&lt;/eq&gt; 个粒子组成的系统, 于单个粒子的力学量 $\hat{f}$ ，其第 &lt;eq&gt;i&lt;/eq&gt; 个本征值为 $f_i$ ，本征态为 $\mid i \rangle$ ，即
 $$
 \begin{align*}
 \hat{f} \mid i \rangle = f_i \mid i \rangle
 \end{align*}
-$$&lt;br /&gt;
-考虑两个粒子间的相互作用,  假设分别在态 $\mid i \rangle$  和 态 $\mid j \rangle$ 上 ,其相互作用的算符为:&lt;br /&gt;
+$$
+考虑两个粒子间的相互作用,  假设分别在态 $\mid i \rangle$  和 态 $\mid j \rangle$ 上 ,其相互作用的算符为:
 $$
 \begin{align*}
 \hat{u} = \hat{u}(\hat{f}_i, \hat{f}_j)
 \end{align*}
-$$&lt;br /&gt;
-即有:&lt;br /&gt;
+$$
+即有:
 $$
 \begin{align*}
 \hat{u}(\hat{f}_i, \hat{f}_j) \mid i,j\rangle = u_{ij} \mid i,j \rangle
 \end{align*}
-$$&lt;br /&gt;
-其中:&lt;br /&gt;
+$$
+其中:
 $$
 \begin{align*}
 \mid i,j \rangle = \mid i \rangle \otimes \mid j \rangle = \mid i \rangle  \mid j \rangle
 \end{align*}
-$$&lt;br /&gt;
+$$
 表示态 $\mid i \rangle$  和 态 $\mid j \rangle$ 上各有一个粒子.&lt;/p&gt;
-&lt;p&gt;那么这 $N = \sum_i n_i$ 个粒子之间所有的两两相互作用就是：&lt;br /&gt;
+&lt;p&gt;那么这 $N = \sum_i n_i$ 个粒子之间所有的两两相互作用就是：
 $$
 \begin{align*}
 \hat{U} = \frac{1}{2} \sum_{i\ne j} u_{ij} \hat{n}_i \hat{n}_j + \frac{1}{2}\sum_i u_{ii} \hat{n}_i(\hat{n}_i - 1)
 \end{align*}
-$$&lt;br /&gt;
+$$
 第一项表示单粒子态 $\mid i \rangle$ 上有 $n_i$ 个粒子, 单粒子态 $\mid j \rangle$ 上有 $n_j$ 个粒子,  $n_i$ 个粒子和 $n_j$ 个粒子之间的两两相互作用一共是 $u_{ij} n_i n_j$, 然后就是对所有的态求和. 第二项是第一项中没有考虑的相同的态上不同粒子之间的相互作用. 每对粒子之间的相互作用都算了两次, 所以要除以 &lt;eq&gt;2&lt;/eq&gt; .&lt;/p&gt;
-&lt;p&gt;还可以写成另一种形式.&lt;br /&gt;
+&lt;p&gt;还可以写成另一种形式.
 $$
 \begin{align*}
 \hat{U} = \frac{1}{2} \sum_{i j} u_{ij} (\hat{n}_i \hat{n}_j - \delta_{ij} \hat{n}_i)
 \end{align*}
-$$&lt;br /&gt;
-第二项是考虑的相同的态上不同粒子之间的相互作用, 因为第一项中计算了两次, 所以要减去一次. 这个形式可以用对易关系进化简:&lt;br /&gt;
+$$
+第二项是考虑的相同的态上不同粒子之间的相互作用, 因为第一项中计算了两次, 所以要减去一次. 这个形式可以用对易关系进化简:
 $$
 \begin{align*}
 \hat{n}_i \hat{n}_j - \delta_{ij} \hat{n}_i =&amp; a_i^{\dagger}a_i a_j^{\dagger}a_j -\delta_{ij} a_i^{\dagger}a_i \\
@@ -329,15 +1475,15 @@ $$
 =&amp; a_i^{\dagger} a_j^{\dagger} (\pm a_i a_j) \\
 =&amp; a_i^{\dagger} a_j^{\dagger}  a_j a_i
 \end{align*}
-$$&lt;br /&gt;
-所以:&lt;br /&gt;
+$$
+所以:
 $$
 \begin{align*}
 \hat{U} = \frac{1}{2} \sum_{i j} u_{ij} a_i^{\dagger} a_j^{\dagger}  a_j a_i
 \end{align*}
 $$&lt;/p&gt;
 &lt;h3 id="非本征表象的二体力学量"&gt;非本征表象的二体力学量&lt;/h3&gt;
-&lt;p&gt;与单体力学量类似的, 直接对本征表象的结果做表象变换:&lt;br /&gt;
+&lt;p&gt;与单体力学量类似的, 直接对本征表象的结果做表象变换:
 $$
 \begin{align*}
 \hat{U} =&amp; \frac{1}{2} \sum_{i j} \sum_{\alpha \beta \gamma \delta}u_{ij} a_i^{\dagger} a_j^{\dagger}  a_j a_i  \\
@@ -347,8 +1493,8 @@ $$
 =&amp; \frac{1}{2} \sum_{i j} \sum_{\alpha \beta \gamma \delta} a_{\alpha}^{\dagger}a_{\beta}^{\dagger} a_{\gamma}  a_{\delta}\cdot \langle \alpha \mid\langle \beta\mid\cdot \left( \hat{u}\mid i \rangle \mid j \rangle   \langle j \mid \langle i\mid\right)\cdot \mid\gamma \rangle \mid \delta \rangle  \\
 =&amp; \frac{1}{2}  \sum_{\alpha \beta \gamma \delta} a_{\alpha}^{\dagger}a_{\beta}^{\dagger} a_{\gamma}  a_{\delta}\cdot \langle \alpha \mid\langle \beta\mid \hat{u}\mid\gamma \rangle \mid \delta \rangle
 \end{align*}
-$$&lt;br /&gt;
-同样, 直接将产生消灭算符看成是多体表象中的基矢:&lt;br /&gt;
+$$
+同样, 直接将产生消灭算符看成是多体表象中的基矢:
 $$
 \begin{align*}
 \hat{U} \sim \frac{1}{2}  \sum_{\alpha \beta \gamma \delta} \mid\alpha \rangle \mid \beta \rangle \langle \gamma \mid\langle \delta\mid\cdot \langle \alpha \mid\langle \beta\mid \hat{u}\mid\gamma \rangle \mid \delta \rangle
@@ -357,8 +1503,8 @@ $$
 $$&lt;/p&gt;
 &lt;h2 id="例-场算符"&gt;例: 场算符&lt;/h2&gt;
 &lt;h3 id="引言"&gt;引言&lt;/h3&gt;
-&lt;p&gt;考虑坐标表象中两体相互作用势为 $u(\vec{r}_1, \vec{r}_2)$ 的多体 Hamiltonian 的二&lt;br /&gt;
-次量子化形式为&lt;br /&gt;
+&lt;p&gt;考虑坐标表象中两体相互作用势为 $u(\vec{r}_1, \vec{r}_2)$ 的多体 Hamiltonian 的二
+次量子化形式为
 $$
 \begin{align}
   \hat{H} = -\frac{\hbar^2}{2m}\int \mathrm{d} \vec{r}\cdot \hat{\psi}^{\dagger}(\vec{r})
@@ -366,122 +1512,122 @@ $$
              \cdot \hat{\psi}^{\dagger}(\vec{r}_1) \hat{\psi}^{\dagger}(\vec{r}_2) u(\vec{r}_1, \vec{r}_2)
               \hat{\psi}(\vec{r}_2) \hat{\psi}(\vec{r}_1)
 \end{align}
-$$&lt;br /&gt;
-其中 $\hat{\psi}(\vec{r}), \hat{\psi}^{\dagger}(\vec{r})$ 是场算符, 也就是坐标表&lt;br /&gt;
+$$
+其中 $\hat{\psi}(\vec{r}), \hat{\psi}^{\dagger}(\vec{r})$ 是场算符, 也就是坐标表
 象下的湮灭算符和产生产生算符.&lt;/p&gt;
-&lt;p&gt;第二项很明显就是二体算符在本征表象中的二次量子化形&lt;br /&gt;
+&lt;p&gt;第二项很明显就是二体算符在本征表象中的二次量子化形
 式, 本征表象嘛, $u(\vec{r}_1, \vec{r}_2)$ 是一个数, 放在中间或者其它地方都无所谓.&lt;/p&gt;
-&lt;p&gt;问题在于第一项的动能项. 只有一重求和, 按之前总结的应该是在本征表象中的表示, 但是&lt;br /&gt;
-中间夹的不是本征值, 而是一个 $\nabla^2$ 算符. 那它是对谁作用呢? 是对它后面的场算&lt;br /&gt;
+&lt;p&gt;问题在于第一项的动能项. 只有一重求和, 按之前总结的应该是在本征表象中的表示, 但是
+中间夹的不是本征值, 而是一个 $\nabla^2$ 算符. 那它是对谁作用呢? 是对它后面的场算
 符作用吗? 对场算符求梯度? 是什么意义?&lt;/p&gt;
 &lt;h3 id="动能算符"&gt;动能算符&lt;/h3&gt;
-&lt;p&gt;真相是: 动能的本征表象不是坐标表象, 而是动量表象, 在动量表象下它的本征值是&lt;br /&gt;
-$\vec{p}^2/(2m)$ 是一个数. 在坐标表象下, 它不是本征表象! 所以动能 $\hat{T}$&lt;br /&gt;
-在坐标表象下的二次量子化形式(也就是用场算符表示动能项)应该是&lt;br /&gt;
+&lt;p&gt;真相是: 动能的本征表象不是坐标表象, 而是动量表象, 在动量表象下它的本征值是
+$\vec{p}^2/(2m)$ 是一个数. 在坐标表象下, 它不是本征表象! 所以动能 $\hat{T}$
+在坐标表象下的二次量子化形式(也就是用场算符表示动能项)应该是
 $$
 \begin{align}
   \hat{T} = \int \mathrm{d} \vec{r}_3 \int \mathrm{d} \vec{r}_4 \cdot
             \hat{\psi}^{\dagger}(\vec{r}_3)  \hat{\psi}(\vec{r}_4)
             \langle \vec{r}_3 | \hat{T} | \vec{r}_4 \rangle
 \end{align}
-$$&lt;br /&gt;
-而&lt;br /&gt;
+$$
+而
 $$
 \begin{align}
   \langle \vec{r}_3 | \hat{T} | \vec{r}_4 \rangle  = -\frac{\hbar^2}{2m}
    \nabla^2_{\vec{r}_3} \delta(\vec{r}_3 - \vec{r}_4)
 \end{align}
-$$&lt;br /&gt;
-所以&lt;br /&gt;
+$$
+所以
 $$
 \begin{align}
   \hat{T} = -\frac{\hbar^2}{2m} \int \mathrm{d} \vec{r}_3 \int \mathrm{d} \vec{r}_4 \cdot
             \hat{\psi}^{\dagger}(\vec{r}_3)  \hat{\psi}(\vec{r}_4)
                \nabla^2_{\vec{r}_3} \delta(\vec{r}_3 - \vec{r}_4)
 \end{align}
-$$&lt;br /&gt;
-交换一下顺序有&lt;br /&gt;
+$$
+交换一下顺序有
 $$
 \begin{align}
   \hat{T} = -\frac{\hbar^2}{2m} \int \mathrm{d} \vec{r}_3  \cdot
             \hat{\psi}^{\dagger}(\vec{r}_3)  \nabla^2_{\vec{r}_3}
             \int \mathrm{d} \vec{r}_4 \cdot\hat{\psi}(\vec{r}_4) \delta(\vec{r}_3 - \vec{r}_4)
 \end{align}
-$$&lt;br /&gt;
-积掉 $\delta$ 函数后&lt;br /&gt;
+$$
+积掉 $\delta$ 函数后
 $$
 \begin{align}
   \hat{T} =  \int \mathrm{d} \vec{r}  \cdot \hat{\psi}^{\dagger}(\vec{r})
              \left(-\frac{\hbar^2}{2m}\nabla^2 \right)
             \hat{\psi}(\vec{r})
 \end{align}
-$$&lt;br /&gt;
-其中 $\nabla^2$ 是对后面的 $\hat{\psi}(\vec{r})$ 作用. $\nabla^{2}$ 对场算符作用的意义, 把场算符写到动&lt;br /&gt;
-量本征基下就很明显了 (因为动量表象是动能的本征表象) (有些书中把这个作为场算符的定义)&lt;br /&gt;
+$$
+其中 $\nabla^2$ 是对后面的 $\hat{\psi}(\vec{r})$ 作用. $\nabla^{2}$ 对场算符作用的意义, 把场算符写到动
+量本征基下就很明显了 (因为动量表象是动能的本征表象) (有些书中把这个作为场算符的定义)
 $$
 \begin{align}
   \hat{\psi}(\vec{r}) = \frac{1}{\sqrt{V}} \sum_{\vec{k}}
    e^{\mathrm{i} \vec{k}\cdot \vec{r}} \hat{a}_{\vec{k}}
 \end{align}
-$$&lt;br /&gt;
-它的意义就是对动量本征波函数作用. 代加后作用的结果就是&lt;br /&gt;
+$$
+它的意义就是对动量本征波函数作用. 代加后作用的结果就是
 $$
 \begin{align}
   \hat{T} = \sum_{\vec{k}}\frac{\hbar^2k^2}{2m}  \hat{a}^{\dagger}_{\vec{k}} \hat{a}_{\vec{k}}
 \end{align}
-$$&lt;br /&gt;
-这正是一个算符在它的本征表象下的二次量子化的形式. 其中利用了 (采用了箱归一化条件)&lt;br /&gt;
+$$
+这正是一个算符在它的本征表象下的二次量子化的形式. 其中利用了 (采用了箱归一化条件)
 $$
 \begin{align}
   \delta_{\vec{k}, \vec{k}'} = \frac{1}{V} \int \mathrm{d} \vec{r} \cdot
   e^{\mathrm{i} (\vec{k} - \vec{k}')\cdot \vec{r}}
 \end{align}
-$$&lt;br /&gt;
-当遇到 $\nabla^2$ 作用到 $\delta$ 函数上时, 也经常用到&lt;br /&gt;
+$$
+当遇到 $\nabla^2$ 作用到 $\delta$ 函数上时, 也经常用到
 $$
 \begin{align}
   \delta(\vec{r}_3 - \vec{r}_4) = \frac{1}{V} \sum_{\vec{k}}e^{\mathrm{i} \vec{k}\cdot(\vec{r}_3- \vec{r}_4)}
 \end{align}
-$$&lt;br /&gt;
-这样的话就可以具体计算 $\nabla^2$ 对 $\delta$ 函数的作用结果. 其本质还是把它变换到了动能的&lt;br /&gt;
+$$
+这样的话就可以具体计算 $\nabla^2$ 对 $\delta$ 函数的作用结果. 其本质还是把它变换到了动能的
 本征表象, 也就是动量表象.&lt;/p&gt;
 &lt;h3 id="动能算符的另一种形式"&gt;动能算符的另一种形式&lt;/h3&gt;
-&lt;p&gt;动能算符有时也写为&lt;br /&gt;
+&lt;p&gt;动能算符有时也写为
 $$
 \begin{align}
   \hat{T} = \frac{\hbar^2}{2m}\int \mathrm{d} \vec{r} \cdot \left[ \nabla \hat{\psi}^{\dagger}(\vec{r}) \right]
             \left[ \nabla \hat{\psi}(\vec{r}) \right]
 \end{align}
-$$&lt;br /&gt;
-其正确性可以将场算符在动量表象写开&lt;br /&gt;
+$$
+其正确性可以将场算符在动量表象写开
 $$
 \begin{align}
   \hat{\psi}(\vec{r}) = \frac{1}{\sqrt{V}} \sum_{\vec{k}}
    e^{-\mathrm{i} \vec{k}\cdot \vec{r}} \hat{a}_{\vec{k}}
 \end{align}
-$$&lt;br /&gt;
-类似的可以写出 $\hat{\psi}^{\dagger}(\vec{r})$ 的形式. 代回后就变成了动能在它的本征表象&lt;br /&gt;
-下的二次量子化形式&lt;br /&gt;
+$$
+类似的可以写出 $\hat{\psi}^{\dagger}(\vec{r})$ 的形式. 代回后就变成了动能在它的本征表象
+下的二次量子化形式
 $$
 \begin{align}
   \hat{T} = \sum_{\vec{k}} \frac{\hbar^2k^2}{2m} \hat{a}^{\dagger}_{\vec{k}} \hat{a}_{\vec{k}}
 \end{align}
 $$&lt;/p&gt;
 &lt;h3 id="用场算符表示波函数"&gt;用场算符表示波函数&lt;/h3&gt;
-&lt;p&gt;任意一个态用场算符表示为&lt;br /&gt;
+&lt;p&gt;任意一个态用场算符表示为
 $$
 \begin{align}
   | \Phi \rangle = \int \mathrm{d}\vec{r}_1 \cdot |\vec{r}_1\rangle
                     \langle \vec{r}_1 | \Phi \rangle
 \end{align}
-$$&lt;br /&gt;
-而&lt;br /&gt;
+$$
+而
 $$
 \begin{align}
   \langle \vec{r}_1 | \Phi \rangle = \phi(\vec{r}_{1})
 \end{align}
-$$&lt;br /&gt;
-就是态 $| \Phi \rangle$ 在坐标表象的表示, 也就是它的波函数. 所以&lt;br /&gt;
+$$
+就是态 $| \Phi \rangle$ 在坐标表象的表示, 也就是它的波函数. 所以
 $$
 \begin{align}
   | \Phi \rangle =&amp;  \int \mathrm{d}\vec{r}_1 \cdot \phi(\vec{r}_1)
@@ -489,7 +1635,7 @@ $$
                  =&amp; \int \mathrm{d}\vec{r}_1 \cdot \phi(\vec{r}_1)
                    \cdot \hat{\psi}^{\dagger}(\vec{r}_1)| 0 \rangle
 \end{align}
-$$&lt;br /&gt;
+$$
 物理意义也很明确, 就是不同位置上产生一个粒子, 然后按波函数叠加.&lt;/p&gt;
 &lt;h3 id="动能算符作用在态上之前不恰当的理解"&gt;&lt;s&gt;动能算符作用在态上(之前不恰当的理解)&lt;/s&gt;&lt;/h3&gt;
 &lt;del&gt;
@@ -555,7 +1701,7 @@ $$
 &lt;/del&gt;
 &lt;h2 id="例-费米子接触势"&gt;例: 费米子接触势&lt;/h2&gt;
 &lt;h3 id="坐标表象"&gt;坐标表象&lt;/h3&gt;
-&lt;p&gt;考虑两分量 $(\uparrow, \downarrow)$ 的费米子接触势, 其在坐标表象的二次量子化形式为&lt;br /&gt;
+&lt;p&gt;考虑两分量 $(\uparrow, \downarrow)$ 的费米子接触势, 其在坐标表象的二次量子化形式为
 $$
 \begin{align}
   \hat{H} = \int \mathrm{d} \vec{r}\cdot \left\{\sum_{\sigma} \left[ \hat{\psi}_{\sigma}^{\dagger}(\vec{r})
@@ -564,34 +1710,34 @@ $$
               + g\hat{\psi}_{\uparrow}^{\dagger}(\vec{r}) \hat{\psi}_{\downarrow}^{\dagger}(\vec{r})
               \hat{\psi}_{\downarrow}(\vec{r}) \hat{\psi}_{\uparrow}(\vec{r}) \right\}
 \end{align}
-$$&lt;br /&gt;
+$$
 第一项就是直接用场算符写出, 只不过多了自旋指标, 并且考虑了化学势.&lt;/p&gt;
-&lt;p&gt;另外需要注意的是 $\hat{\psi}^{\dagger}(\vec{r}) \hat{\psi}(\vec{r})$ 是有量纲的,&lt;br /&gt;
-它的量纲是粒子数密度, 也就是体积的倒数. 这从&lt;br /&gt;
+&lt;p&gt;另外需要注意的是 $\hat{\psi}^{\dagger}(\vec{r}) \hat{\psi}(\vec{r})$ 是有量纲的,
+它的量纲是粒子数密度, 也就是体积的倒数. 这从
 $$
 \begin{align}
   \hat{\psi}(\vec{r}) = \frac{1}{\sqrt{V}} \sum_{\vec{k}}
    e^{-\mathrm{i} \vec{k}\cdot \vec{r}} \hat{a}_{\vec{k}}
 \end{align}
-$$&lt;br /&gt;
+$$
 也可以看出.&lt;/p&gt;
-&lt;p&gt;考虑第二项, 接触势的意思为&lt;br /&gt;
+&lt;p&gt;考虑第二项, 接触势的意思为
 $$
 \begin{align}
   u(\vec{r}_1, \vec{r}_2)  = g \delta(\vec{r}_1 - \vec{r}_2)
 \end{align}
-$$&lt;br /&gt;
-$\delta(\vec{r}_1 - \vec{r}_2)$ 的量纲为体积的倒数, 那么 &lt;eq&gt;g&lt;/eq&gt; 的量纲就为&lt;br /&gt;
-$[g]=[E]\cdot L^3$ , 为能量与体积的乘积. 将上式代入下式&lt;br /&gt;
+$$
+$\delta(\vec{r}_1 - \vec{r}_2)$ 的量纲为体积的倒数, 那么 &lt;eq&gt;g&lt;/eq&gt; 的量纲就为
+$[g]=[E]\cdot L^3$ , 为能量与体积的乘积. 将上式代入下式
 $$
 \begin{align}
    \hat{V} = \frac{1}{2} \int \mathrm{d} \vec{r}_1 \int \mathrm{d} \vec{r}_2
              \cdot \hat{\psi}^{\dagger}(\vec{r}_1) \hat{\psi}^{\dagger}(\vec{r}_2) u(\vec{r}_1, \vec{r}_2)
               \hat{\psi}(\vec{r}_2) \hat{\psi}(\vec{r}_1)
 \end{align}
-$$&lt;br /&gt;
-由于考虑了两种自旋, 所以上式还应有一重对自旋的求和. 由于是接触势, 由 Pauli 不相&lt;br /&gt;
-容原理可知, 只有自旋相反的粒子之间才有相互作用, 所以积掉 Dirac Delta 函数后&lt;br /&gt;
+$$
+由于考虑了两种自旋, 所以上式还应有一重对自旋的求和. 由于是接触势, 由 Pauli 不相
+容原理可知, 只有自旋相反的粒子之间才有相互作用, 所以积掉 Dirac Delta 函数后
 $$
 \begin{align}
    \hat{V} = \frac{1}{2} \int \mathrm{d} \vec{r} \cdot
@@ -606,25 +1752,25 @@ $$
               \hat{\psi}_{\downarrow}(\vec{r}) \hat{\psi}_{\downarrow}(\vec{r})
              \right]
 \end{align}
-$$&lt;br /&gt;
-前两项是相等的(差两个对易子, 都是 $-1$ , 相乘为 &lt;eq&gt;1&lt;/eq&gt; ), 所以&lt;br /&gt;
+$$
+前两项是相等的(差两个对易子, 都是 $-1$ , 相乘为 &lt;eq&gt;1&lt;/eq&gt; ), 所以
 $$
 \begin{align}
   \hat{V}= g\int \mathrm{d} \vec{r} \cdot
            \hat{\psi}_{\uparrow}^{\dagger}(\vec{r}) \hat{\psi}_{\downarrow}^{\dagger}(\vec{r})
            \hat{\psi}_{\downarrow}(\vec{r}) \hat{\psi}_{\uparrow}(\vec{r})
 \end{align}
-$$&lt;br /&gt;
+$$
 所以就得到了我们想要的结果.&lt;/p&gt;
 &lt;h3 id="动量表象"&gt;动量表象&lt;/h3&gt;
-&lt;p&gt;动量表象是动能的本征表象, 所以&lt;br /&gt;
+&lt;p&gt;动量表象是动能的本征表象, 所以
 $$
 \begin{align}
   \hat{T} = \sum_{\vec{k}, \sigma}(\epsilon_{\vec{k}} - \mu) c_{\vec{k},\sigma}^{\dagger} c_{\vec{k},\sigma}
 \end{align}
-$$&lt;br /&gt;
+$$
 其中 $\epsilon_{\vec{k}} = \frac{\hbar^2 k^2}{2m}$ .&lt;/p&gt;
-&lt;p&gt;势能在动量表象中为(类似坐标表象中, 将自旋给定, 乘上一个 &lt;eq&gt;2&lt;/eq&gt; )&lt;br /&gt;
+&lt;p&gt;势能在动量表象中为(类似坐标表象中, 将自旋给定, 乘上一个 &lt;eq&gt;2&lt;/eq&gt; )
 $$
 \begin{align}
   \hat{V} = 2 \cdot \frac{1}{2} \sum_{\vec{k}_1, \vec{k}_2, \vec{k}_3, \vec{k}_4}
@@ -632,8 +1778,8 @@ $$
            | \vec{k}_2, \vec{k}_1\rangle c^{\dagger}_{\vec{k}_4, \uparrow}c^{\dagger}_{\vec{k}_3, \downarrow}
             c_{\vec{k}_2, \downarrow}c_{\vec{k}_1, \uparrow}
 \end{align}
-$$&lt;br /&gt;
-而&lt;br /&gt;
+$$
+而
 $$
 \begin{align}
   &amp;\langle \vec{k}_4, \vec{k}_3| \hat{u}(\vec{r}_1, \vec{r}_2) | \vec{k}_2, \vec{k}_1\rangle \\
@@ -652,15 +1798,15 @@ $$
     e^{\mathrm{i}(\vec{k}_1\cdot \vec{r}_1 + \vec{k}_2 \vec{r}_2 -\vec{k}_3\cdot \vec{r}_2 - \vec{k}_4\cdot \vec{r}_1)} \\
 =&amp; \frac{g}{V}\delta_{\vec{k}_1 + \vec{k}_2, \vec{k}_3 + \vec{k}_4}
 \end{align}
-$$&lt;br /&gt;
-最后一个等号后的 Dirac 函数表示动量守恒. 其中利用了&lt;br /&gt;
+$$
+最后一个等号后的 Dirac 函数表示动量守恒. 其中利用了
 $$
 \begin{align}
   \int \mathrm{d} \vec{r}\cdot e^{\mathrm{i}(\vec{k}_1 - \vec{k}_2)\vec{r}} =&amp; V \delta_{\vec{k}_1, k_2} \\
   \langle \vec{r} | \vec{k} \rangle = \frac{1}{\sqrt{V}} e^{\mathrm{i}\vec{k}\cdot \vec{r}}
 \end{align}
-$$&lt;br /&gt;
-所以最终得到&lt;br /&gt;
+$$
+所以最终得到
 $$
 \begin{align}
   \hat{H} = \sum_{\vec{k}, \sigma}(\epsilon_{\vec{k}} - \mu) c_{\vec{k},\sigma}^{\dagger} c_{\vec{k},\sigma}
@@ -668,13 +1814,13 @@ $$
             c^{\dagger}_{-\vec{k}+\frac{\vec{q}}{2}, \downarrow}
             c_{-\vec{k}' + \frac{\vec{q}}{2}, \downarrow} c_{\vec{k}'+\frac{\vec{q}}{2}, \uparrow}
 \end{align}
-$$&lt;br /&gt;
-势能中, 本来是对四个动量求和, 但由于前面得到的动量守恒的条件, 只剩下三个求和. 将&lt;br /&gt;
+$$
+势能中, 本来是对四个动量求和, 但由于前面得到的动量守恒的条件, 只剩下三个求和. 将
 求和指标换一下, 即为上式.&lt;/p&gt;
 &lt;h2 id="致谢"&gt;致谢&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Qiang Han 老师的课件提供的主要思路.&lt;/li&gt;
-&lt;li&gt;J. J. Sakurai &amp;amp; Jim Napolitano 的 Modern Quantum Mechanics 一书提供的二体力学&lt;br /&gt;
+&lt;li&gt;J. J. Sakurai &amp;amp; Jim Napolitano 的 Modern Quantum Mechanics 一书提供的二体力学
 量在本征表象的二次量子化化简过程.&lt;/li&gt;
 &lt;li&gt;R. K. Pathria &amp;amp; Paul D. Beale, Statistical Mechanics 3ed, Chap 11.1&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://physics.stackexchange.com/questions/223138/kinetic-energy-operator-in-second-quantization-formalism"&gt;https://physics.stackexchange.com/questions/223138/kinetic-energy-operator-in-second-quantization-formalism&lt;/a&gt;&lt;/li&gt;
@@ -689,7 +1835,7 @@ $$&lt;br /&gt;
 &lt;!-- more --&gt;
 &lt;p&gt;在运动方程中, 经常要计算各种产生湮灭算符之间的对易关系. 而对于 Fermion 来说, 它满足的是反对易关系, 因此在最后一步中 …&lt;/p&gt;</summary><content type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
-&lt;p&gt;在运动方程中, 经常要计算各种产生湮灭算符之间的对易关系. 而对于 Fermion 来说, 它满足的是反对易关系, 因此在最后一步中, 需要用下述关系, 写成反对易子的形式&lt;br /&gt;
+&lt;p&gt;在运动方程中, 经常要计算各种产生湮灭算符之间的对易关系. 而对于 Fermion 来说, 它满足的是反对易关系, 因此在最后一步中, 需要用下述关系, 写成反对易子的形式
 $$
 \begin{split}
 [AB, C] =&amp; A\{B, C\} - \{A,C\}B\\
@@ -697,7 +1843,7 @@ $$
 \end{split}
 $$&lt;/p&gt;
 &lt;h1 id="boson"&gt;Boson&lt;/h1&gt;
-&lt;p&gt;Boson 满足对易关系&lt;br /&gt;
+&lt;p&gt;Boson 满足对易关系
 $$
 [a_k, a^{\dagger}_{k'}] = \delta_{kk'}
 $$&lt;/p&gt;
@@ -712,7 +1858,7 @@ $$$$
     =  a^{\dagger}_{k3}a_{k2}
 
 $$&lt;h1 id="fermion"&gt;Fermion&lt;/h1&gt;
-&lt;p&gt;Fermion 满足反对易关系&lt;br /&gt;
+&lt;p&gt;Fermion 满足反对易关系
 $$
 \{a_k, a^{\dagger}_{k'}\} = \delta_{kk'}
 $$&lt;/p&gt;
@@ -923,25 +2069,25 @@ $$
 $$</content><category term="physics"/><category term="数学"/><category term="物理"/><category term="理论力学"/><category term="球坐标"/></entry><entry><title>库仑势的Fourier transform(update 16/Nov/2020)</title><link href="https://zqw.ink/2018-09-24-physics-coulomb_potential_fourier_transform.html" rel="alternate"/><published>2018-09-24T00:00:00+08:00</published><updated>2018-09-24T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-24:/2018-09-24-physics-coulomb_potential_fourier_transform.html</id><summary type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
 &lt;h2 id="问题"&gt;问题&lt;/h2&gt;
-&lt;p&gt;三维库仑势的形式为：&lt;br /&gt;
+&lt;p&gt;三维库仑势的形式为：
 $$
 V(\vec{r}) = \frac{1}{r}
-$$&lt;br /&gt;
-按动量Fourier展开：&lt;br /&gt;
+$$
+按动量Fourier展开：
 $$
 V(\vec{r}) = \frac{1}{(2\pi)^3} \int_{-\infty}^{+\infty} \mathrm{d}^3\vec{k} \cdot V(\vec{k})\cdot e^{i\vec{k}\cdot\vec{r}}
-$$&lt;br /&gt;
+$$
 求 …&lt;/p&gt;</summary><content type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
 &lt;h2 id="问题"&gt;问题&lt;/h2&gt;
-&lt;p&gt;三维库仑势的形式为：&lt;br /&gt;
+&lt;p&gt;三维库仑势的形式为：
 $$
 V(\vec{r}) = \frac{1}{r}
-$$&lt;br /&gt;
-按动量Fourier展开：&lt;br /&gt;
+$$
+按动量Fourier展开：
 $$
 V(\vec{r}) = \frac{1}{(2\pi)^3} \int_{-\infty}^{+\infty} \mathrm{d}^3\vec{k} \cdot V(\vec{k})\cdot e^{i\vec{k}\cdot\vec{r}}
-$$&lt;br /&gt;
+$$
 求 $V(\vec{k})$ 。&lt;/p&gt;
 &lt;h2 id="求解"&gt;求解&lt;/h2&gt;
 $$
@@ -953,11 +2099,11 @@ V{(\vec{k})} = \int_{-\infty}^{+\infty} \mathrm{d}^3\vec{r}\cdot V(\vec{r})\cdot
 
 $$&lt;p&gt;但 $e^{-ikr}$ 与 $e^{-ikr}$ 在 $+\infty$ 处发散。&lt;/p&gt;
 &lt;h2 id="使其收敛"&gt;使其收敛&lt;/h2&gt;
-&lt;p&gt;为了解决发散问题，可在一开始令&lt;br /&gt;
+&lt;p&gt;为了解决发散问题，可在一开始令
 $$
 V(\vec{r}) = \frac{1}{r} = \lim_{\mu\rightarrow 0} \frac{e^{-\mu r}}{r}
-$$&lt;br /&gt;
-所以&lt;br /&gt;
+$$
+所以
 $$
 V{(\vec{k})}  = \lim_{\mu\rightarrow 0} 2\pi\int_0^{+\infty}\mathrm{d}r\cdot \left[(e^{(ik-\mu)r}-e^{(-ik-\mu)r})\frac{1}{ik}\right] \\\\
 = \lim_{\mu\rightarrow 0}\frac{2\pi}{ik}\left[\frac{e^{(ik-\mu)r}}{ik-\mu r}-\frac{e^{(-ik-\mu)r}}{-ik-\mu r}\right] _0^{+\infty} \\\\
@@ -971,11 +2117,11 @@ $$
 $$&lt;h3 id="注"&gt;注&lt;/h3&gt;
 &lt;p&gt;函数满足一致收敛，积分与极限才可交换顺序。&lt;/p&gt;
 &lt;h2 id="类似的变换"&gt;类似的变换&lt;/h2&gt;
-&lt;p&gt;用同样的方法, 可以得到&lt;br /&gt;
+&lt;p&gt;用同样的方法, 可以得到
 $$
 \lim_{\eta \to 0^+}\int \mathrm{d}^3\vec{r} . e^{\mathrm{i}\vec{k}\cdot\vec{r}} r e^{-r\eta}
  = \frac{8 \pi}{k^4}
-$$&lt;br /&gt;
+$$
 $$
 \lim_{\eta \to 0^+}\int \mathrm{d}^3\vec{r} . e^{\mathrm{i}\vec{k}\cdot\vec{r}} e^{-r\eta}
  = 0
@@ -1001,7 +2147,7 @@ $$&lt;/p&gt;
 &lt;p&gt;所求的量  $A = 2\pi r^2 + 2\pi rh$ 在$r-h$ 构成的平面内，当 &lt;eq&gt;A&lt;/eq&gt; 取不同的值时，对应不同的线，所以它就对应一簇线，每一条线上的所有的点都对应 &lt;eq&gt;A&lt;/eq&gt; 取相同的值。&lt;/p&gt;
 &lt;p&gt;线 $V = \pi r^2h$ 与很多条 $A = 2\pi r^2 + 2\pi rh$ 相交&lt;/p&gt;
 &lt;p&gt;要做的就是在 $V = \pi r^2h$ 这条线上找一个点，这个点是和某一条 $A = 2\pi r^2 + 2\pi rh$ 的交点，而且再也找不到另一个点与另一条更大的  $A = 2\pi r^2 + 2\pi rh$ 相交。&lt;/p&gt;
-&lt;p&gt;所以这时两条线应该相切，也就是它们的垂线是平行的，也就是&lt;br /&gt;
+&lt;p&gt;所以这时两条线应该相切，也就是它们的垂线是平行的，也就是
 $$
 \frac{\partial}{\partial r}（2\pi r^2 +2\pi r h） =\lambda \frac{\partial}{\partial r}（ \pi r^2h）
 $$&lt;/p&gt;
@@ -1009,7 +2155,7 @@ $$
 
 \frac{\partial}{\partial h}（2\pi r^2 +2\pi r h） =\lambda \frac{\partial}{\partial h}（ \pi r^2h）
 
-$$&lt;p&gt;可得&lt;br /&gt;
+$$&lt;p&gt;可得
 $$
 \lambda = 2r
 $$&lt;/p&gt;
@@ -1033,12 +2179,12 @@ $$&lt;h1 id="一般形式"&gt;一般形式&lt;/h1&gt;
 &lt;!-- more --&gt;
 &lt;h2 id="问题"&gt;问题&lt;/h2&gt;
 &lt;p&gt;已知 $H=H_0 +V_t$，其中 $V_t = \hat{B} F_t$ ，为一外场 $F_t$ 对原有系统造成的微扰，$\hat{B}$ 是系统中与外场  $F_t$ 相耦合的力学量。求某力学量 $\hat{A}$ 在 &lt;eq&gt;t&lt;/eq&gt; 时刻系综平均值 $\langle A \rangle_t$ 与 &lt;eq&gt;0&lt;/eq&gt; 时刻的系综平均值 $\langle A \rangle_0$ 系综平均值 $\langle A \rangle_t -\langle A \rangle_0 $ 差的近似结果。&lt;/p&gt;
-&lt;p&gt;现取一特例，假设外场 $F_t$ 就是磁场 $\vec{B_t}$ ，那么系统中与外场 $\vec{B_t}$ 相耦合的力学量就是系统的总磁矩 $\vec{m}$ ，总磁矩 $\vec{m}$ 对应的微观量是系统中单个电子的自旋 $\vec{S_i}$ ，下标 &lt;eq&gt;i&lt;/eq&gt; 代表第 &lt;eq&gt;i&lt;/eq&gt; 个电子。其关系为：&lt;br /&gt;
+&lt;p&gt;现取一特例，假设外场 $F_t$ 就是磁场 $\vec{B_t}$ ，那么系统中与外场 $\vec{B_t}$ 相耦合的力学量就是系统的总磁矩 $\vec{m}$ ，总磁矩 $\vec{m}$ 对应的微观量是系统中单个电子的自旋 $\vec{S_i}$ ，下标 &lt;eq&gt;i&lt;/eq&gt; 代表第 &lt;eq&gt;i&lt;/eq&gt; 个电子。其关系为：
 $$
 \vec{m} = \sum_i \vec{m_i} = \frac{g_J \mu_B}{\hbar} \sum_i \vec{S_i}
-$$&lt;br /&gt;
+$$
 假设测量量为磁化强度 $\vec{M} = \vec{m}/V$&lt;/p&gt;
-&lt;p&gt;所以对应关系为：&lt;br /&gt;
+&lt;p&gt;所以对应关系为：
 $$
 \hat{B} \longleftrightarrow \vec{m}
 $$&lt;/p&gt;
@@ -1051,55 +2197,55 @@ $$$$
 \hat{A} \longleftrightarrow \vec{M}
 
 $$&lt;h2 id="初步路线"&gt;初步路线&lt;/h2&gt;
-&lt;p&gt;写出详细表达式进行具体计算：&lt;br /&gt;
+&lt;p&gt;写出详细表达式进行具体计算：
 $$
 \langle \vec{M} \rangle_t -\langle\vec{ M} \rangle_0  = \mathrm{Tr} [(\rho_t - \rho_0)\hat{M}] = \frac{1}{V}\cdot \frac{g_J \mu_B}{\hbar}\sum_i \mathrm{Tr} [(\rho_t - \rho_0)\vec{S_i}]
-$$&lt;br /&gt;
+$$
 接下来求 $\rho_t - \rho_0$ 。&lt;/p&gt;
 &lt;h3 id="求--时刻密度矩阵的近似值"&gt;求 &lt;eq&gt;t&lt;/eq&gt; 时刻密度矩阵的近似值&lt;/h3&gt;
-&lt;p&gt;Dirac表象中密度矩阵的运动方程：&lt;br /&gt;
+&lt;p&gt;Dirac表象中密度矩阵的运动方程：
 $$
 \dot{\rho_t^D} = \frac{1}{i\hbar} [V_t^D, \rho_t^D]
-$$&lt;br /&gt;
-假设初值条件为：&lt;br /&gt;
+$$
+假设初值条件为：
 $$
 \lim_{t\rightarrow -\infty}\rho_t^D(t) =\lim_{t\rightarrow -\infty}\rho_t = \rho_0 = \frac{e^{-\beta H_0}}{\mathrm{Tr}(e^{-\beta H_0})}
-$$&lt;br /&gt;
+$$
 Dirac表象选取 $t_0=0$ 为时间基点，也就是 $U(t,t_0)=e^{\frac{1}{i\hbar}(t-t_0)H_0}=e^{\frac{1}{i\hbar}H_0 t} = U(t)$&lt;/p&gt;
-&lt;p&gt;所以 &lt;eq&gt;t&lt;/eq&gt; 时刻密度矩阵可迭代求解：&lt;br /&gt;
+&lt;p&gt;所以 &lt;eq&gt;t&lt;/eq&gt; 时刻密度矩阵可迭代求解：
 $$
 \rho_t^D = \rho_0 +\frac{1}{i\hbar} \int_{-\infty}^t \mathrm{d}t' [V_{t'}^D, \rho_{t'}^D] =\rho_0 +\frac{1}{i\hbar} \int_{-\infty}^t \mathrm{d}t' [V_{t'}^D, \rho_0] +\cdots
-$$&lt;br /&gt;
-做近似，只取线性项得：&lt;br /&gt;
+$$
+做近似，只取线性项得：
 $$
 \rho_t^D \approx \rho_0 +\frac{1}{i\hbar} \int_{-\infty}^t \mathrm{d}t' [V_{t'}^D, \rho_0]
-$$&lt;br /&gt;
-换到薛定谔表象：&lt;br /&gt;
+$$
+换到薛定谔表象：
 $$
 \rho_t \approx \rho_0 +\frac{1}{i\hbar} \int_{-\infty}^t \mathrm{d}t'  U(t)[V_{t'}^D, \rho_0]U^{\dagger}(t)
 $$&lt;/p&gt;
 &lt;h2 id="求解结果"&gt;求解结果&lt;/h2&gt;
-&lt;p&gt;将 &lt;eq&gt;t&lt;/eq&gt; 时刻密度矩阵的近似结果&lt;br /&gt;
+&lt;p&gt;将 &lt;eq&gt;t&lt;/eq&gt; 时刻密度矩阵的近似结果
 $$
 \rho_t - \rho_0 \approx \frac{1}{i\hbar} \int_{-\infty}^t \mathrm{d}t'  U(t)[V_{t'}^D, \rho_0]U^{\dagger}(t)
-$$&lt;br /&gt;
-代入到详细表达式进行具体计算：&lt;br /&gt;
+$$
+代入到详细表达式进行具体计算：
 $$
 \mathrm{Tr} [(\rho_t - \rho_0)\vec{S_i}] =   \frac{1}{i\hbar} \int_{-\infty}^t \mathrm{d}t'  \mathrm{Tr}  \left( U(t)[V_{t'}^D, \rho_0]U^{\dagger}(t) \vec{S_i}\right)
-$$&lt;br /&gt;
-而&lt;br /&gt;
+$$
+而
 $$
 V_{t'} = -\vec{m}\cdot \vec{B_{t'}} = -\sum_{\alpha = x,y,z} m^{\alpha} B_{t'}^{\alpha} = -\sum_{\alpha = x,y,z} \sum_i \frac{g_J\mu_B}{\hbar} S_i^{\alpha} B_{t'}^{\alpha}
-$$&lt;br /&gt;
-所以&lt;br /&gt;
+$$
+所以
 $$
 \mathrm{Tr}  \left( U(t)[V_{t'}^D, \rho_0]U^{\dagger}(t) \vec{S_i}\right) =  \mathrm{Tr}  \left( [V_{t'}^D, \rho_0] \vec{S_i}(t)\right) = -\sum_{\alpha = x,y,z} \sum_i \frac{g_J\mu_B}{\hbar} \mathrm{Tr}\left( [S_i^{\alpha}(t'),\rho_0] \vec{S_i}(t) \right)B_{t'}^{\alpha}
-$$&lt;br /&gt;
-而&lt;br /&gt;
+$$
+而
 $$
 \mathrm{Tr}\left( [S_i^{\alpha}(t'),\rho_0] \vec{S_i}(t) \right) = \mathrm{Tr}\left( \rho_0 [\vec{S_i}(t),S_i^{\alpha}(t')] \right) = \langle  [\vec{S_i}(t),S_i^{\alpha}(t')]\rangle_0
-$$&lt;br /&gt;
-所以&lt;br /&gt;
+$$
+所以
 $$
 \mathrm{Tr} [(\rho_t - \rho_0)\vec{S_i}] =   -\sum_{\alpha = x,y,z} \sum_i \frac{g_J\mu_B}{\hbar}  \frac{1}{i\hbar} \int_{-\infty}^t \mathrm{d}t' B_{t'}^{\alpha} \langle  [\vec{S_i}(t),S_i^{\alpha}(t')]\rangle_0
 $$&lt;/p&gt;
@@ -1659,36 +2805,36 @@ $$\begin{align}
 &lt;/ul&gt;
 </content><category term="physics"/><category term="物理"/><category term="高等量子力学"/><category term="微扰"/></entry><entry><title>特殊二阶矩阵的本征值求解</title><link href="https://zqw.ink/2018-09-07-physics-2by2matrix_eigen.html" rel="alternate"/><published>2018-09-07T00:00:00+08:00</published><updated>2018-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-07:/2018-09-07-physics-2by2matrix_eigen.html</id><summary type="html">
 &lt;h2 id="对角矩阵元相等"&gt;对角矩阵元相等&lt;/h2&gt;
-&lt;p&gt;形如&lt;br /&gt;
+&lt;p&gt;形如
 $$
 H = \left( \begin{array}{cc}
 		a	&amp;	b\\\\
 		b	&amp;	c
 		\end{array}\right)
-$$&lt;br /&gt;
+$$
 与以下自旋问题类比：&lt;/p&gt;
 &lt;p&gt;在 $x-z$ 平面内任意方向加磁场 $\vec{a} = (a_1, 0, a_3)$ 求解能 …&lt;/p&gt;</summary><content type="html">
 &lt;h2 id="对角矩阵元相等"&gt;对角矩阵元相等&lt;/h2&gt;
-&lt;p&gt;形如&lt;br /&gt;
+&lt;p&gt;形如
 $$
 H = \left( \begin{array}{cc}
 		a	&amp;	b\\\\
 		b	&amp;	c
 		\end{array}\right)
-$$&lt;br /&gt;
+$$
 与以下自旋问题类比：&lt;/p&gt;
-&lt;p&gt;在 $x-z$ 平面内任意方向加磁场 $\vec{a} = (a_1, 0, a_3)$ 求解能量本征值，Hamiltonian写为&lt;br /&gt;
+&lt;p&gt;在 $x-z$ 平面内任意方向加磁场 $\vec{a} = (a_1, 0, a_3)$ 求解能量本征值，Hamiltonian写为
 $$
 H = a_0 + \vec{\sigma}\cdot\vec{a} = \left(\begin{array}{cc}
 								a_0+a_3	&amp;	a_1\\\\
 								a_1		&amp;	a_0-a_3
 							\end{array}\right)
-$$&lt;br /&gt;
-沿 &lt;eq&gt;y&lt;/eq&gt; 轴转动坐标系，将 &lt;eq&gt;z&lt;/eq&gt; 轴转到磁场的方向，由物理意义直接解得能量本征值为&lt;br /&gt;
+$$
+沿 &lt;eq&gt;y&lt;/eq&gt; 轴转动坐标系，将 &lt;eq&gt;z&lt;/eq&gt; 轴转到磁场的方向，由物理意义直接解得能量本征值为
 $$
 E = a_0 \pm \sqrt{a_1^2 +a_3^2}
 $$&lt;/p&gt;
-&lt;p&gt;所以原问题的本征值可直接写出为&lt;br /&gt;
+&lt;p&gt;所以原问题的本征值可直接写出为
 $$
 \lambda = \frac{a+c}{2} \pm \sqrt{b^2 +\frac{(a - c)^2}{4}}
 $$&lt;/p&gt;

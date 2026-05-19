@@ -1,158 +1,282 @@
-#+TITLE: Susskind's Statistical Mechanics
-#+DATE: <2021-03-11>
-#+CATEGORIES: 专业笔记
-#+TAGS: physics, Statistical Mechanics, Susskind, Entropy, Ising Model, Magnetic, Liquid-Gas Transition, Spontaneous Symmetry
-#+HTML: <!-- toc -->
-#+HTML: <!-- more -->
+---
+title: Susskind's Statistical Mechanics
+date: 2021-03-11
+category: physics
+tags:
+  - 'physics'
+  - 'statistical mechanics'
+  - 'Susskind'
+  - 'entropy'
+  - 'Ising model'
+  - 'magnetic'
+  - 'liquid-gas transition'
+---
 
-* Information
-- 官方介绍: https://theoreticalminimum.com/courses/statistical-mechanics/2013/spring
+- [Information](#information)
+- [Lecture 1: Entropy and conservation of information](#lecture-1-entropy-and-conservation-of-information)
+  - [Conservation of Information](#conservation-of-information)
+  - [Entropy](#entropy)
+  - [How to define entropy for a complex probability distribution?](#how-to-define-entropy-for-a-complex-probability-distribution)
+  - [Definition of Entropy in Phase Space](#definition-of-entropy-in-phase-space)
+- [Lecture 2: Units \& Temperature](#lecture-2-units--temperature)
+  - [Units declaration](#units-declaration)
+  - [What temperature is?](#what-temperature-is)
+  - [It is temperature](#it-is-temperature)
+- [Lecture 3: Maximizing entropy](#lecture-3-maximizing-entropy)
+  - [A Trick (Canonical Ensemble)](#a-trick-canonical-ensemble)
+  - [Maximizing entropy](#maximizing-entropy)
+- [Lecture 4: The Boltzmann distribution](#lecture-4-the-boltzmann-distribution)
+  - [Partition function](#partition-function)
+  - [Average Energy $E$](#average-energy-e)
+  - [Entropy](#entropy-1)
+  - [Temperature](#temperature)
+  - [Summary](#summary)
+  - [Example: the Ideal Gas](#example-the-ideal-gas)
+- [Lecture 5: Pressure of an Ideal Gas \& Fluctuations](#lecture-5-pressure-of-an-ideal-gas--fluctuations)
+  - [Helmholtz free energy](#helmholtz-free-energy)
+  - [Maxwell' Relation](#maxwell-relation)
+  - [Pressure \& Adiabatic](#pressure--adiabatic)
+  - [Example: Ideal Gas](#example-ideal-gas)
+  - [Fluctuation \& Heat Capacity](#fluctuation--heat-capacity)
+- [Lecture 6: Weakly interacting gases, heat, and work](#lecture-6-weakly-interacting-gases-heat-and-work)
+- [Lecture 7: Harmonic Oscillators ( \& Entropy vs. reversibility)](#lecture-7-harmonic-oscillators---entropy-vs-reversibility)
+  - [Single Classical Harmonic Oscillators](#single-classical-harmonic-oscillators)
+  - [Single Quantum Harmonic Oscillators](#single-quantum-harmonic-oscillators)
+- [Lecture 8: Magnetic \& 1D Ising Model (Entropy, reversibility, and magnetism)](#lecture-8-magnetic--1d-ising-model-entropy-reversibility-and-magnetism)
+- [Lecture 9: The Ising model \& Phase transition](#lecture-9-the-ising-model--phase-transition)
+  - [1D case](#1d-case)
+  - [High Dimension Case \& Mean Field Approximation (Self-Consistent Field)](#high-dimension-case--mean-field-approximation-self-consistent-field)
+  - [Plus External Magnetic Field $B$](#plus-external-magnetic-field-b)
+- [Lecture 10: Liquid-Gas Phase Transition](#lecture-10-liquid-gas-phase-transition)
+  - [Phase Diagram of Ising Model](#phase-diagram-of-ising-model)
+  - [Liquid-Gas Phase Transition](#liquid-gas-phase-transition)
+- [Interlude](#interlude)
+  - [Stirling's Approximation](#stirlings-approximation)
+  - [Lagrange Multiplier](#lagrange-multiplier)
+- [...about](#about)
+- [Reference](#reference)
 
-- 视频列表地址: https://www.youtube.com/watch?v=D1RzvXDXyqA&list=PL_IkS0viawhr3HcKH607rXbVqy28W_gB7
+## Information
 
-- 参考 Note: https://www.lapasserelle.com/statistical_mechanics/index.html
+- 官方介绍: <https://theoreticalminimum.com/courses/statistical-mechanics/2013/spring>
+
+- 视频列表地址: <https://www.youtube.com/watch?v=D1RzvXDXyqA&list=PL_IkS0viawhr3HcKH607rXbVqy28W_gB7>
+
+- 参考 Note: <https://www.lapasserelle.com/statistical_mechanics/index.html>
 
 - 把主要内容整理一下.
 
-* Lecture 1: Entropy and conservation of information
+## Lecture 1: Entropy and conservation of information
 
-** Conservation of Information
+### Conservation of Information
 
 一个六面 die, 六个面有不同的颜色 blue, red, green, purple, yellow, orange, 如图
-[[file:2021-03-11-physics-SusskindsStatisticalMechanics/die.png]]
+
+<img src="./2021-03-11-physics-SusskindsStatisticalMechanics/die.png" style="width: 50%" alt="die">
+
 如果它以某种规律运动, 比如下图中红色的箭头
-[[file:2021-03-11-physics-SusskindsStatisticalMechanics/ring1.png]]
+
+<img src="./2021-03-11-physics-SusskindsStatisticalMechanics/ring1.png" style="width: 50%" alt="ring1">
+
 那么无论何时, 发现它处于某一面的概率都是相等的
+
+$$
 \begin{align}
 P(i) = \frac{1}{6}
 \end{align}
+$$
+
 $i$ 代表第 $i$ 面朝上的事件.
-如果它按蓝色箭头, 结果是一样的, $P(i) = \frac{1}{6}$ . 又比如, 它按下面的方式运
-动
-[[file:2021-03-11-physics-SusskindsStatisticalMechanics/ring2.png]]
+如果它按蓝色箭头, 结果是一样的, $P(i) = \frac{1}{6}$ . 又比如, 它按下面的方式运动
+
+<img src="./2021-03-11-physics-SusskindsStatisticalMechanics/ring2.png" style="width: 50%" alt="ring2">
+
 它会有两种状态. 就是说, 它可以处于上面的循环中, 记这个状态为 $+1$ , 那么在这个状
 态中, 某个面向上的概率是 $P(+1) = \frac{1}{3}$ , 它永远不会跳到下面的态.
 
 它也可以处下面的态, 记为 $+1$ , 同样的 $P(+1) = \frac{1}{3}$ .
 
-上面的例子都是一些好的运动规律, good laws, 因为它的 infromation conserved. 也就是说, 不论过了多
+上面的例子都是一些好的运动规律, good laws, 因为它的 information conserved. 也就是说, 不论过了多
 久, 我们知道系统的信息一样的.
 
 但是也有一些不好的例子, bad laws, 比如下图
-[[file:2021-03-11-physics-SusskindsStatisticalMechanics/ring_bad.png]]
-它在演化的过程中会 lose information , 这个 information 指初态的 infromation. 比
+
+<img src="./2021-03-11-physics-SusskindsStatisticalMechanics/ring_bad.png" style="width: 50%" alt="ring bad">
+
+它在演化的过程中会 lose information , 这个 information 指初态的 information. 比
 如一开始处于 orange, 过了一会, 它一定会到 red. 它是不可逆的.
 
 这种 bad laws 在实际的运动中可以对应比如
+
+$$
 \begin{align}
   \frac{\mathrm{d}^2x_n}{\mathrm{d}t^2} = -\gamma \frac{\mathrm{d}x_n}{\mathrm{d}t}
 \end{align}
-它最终的结果是 erery particles come to rest.
+$$
+
+它最终的结果是 every particles come to rest.
 
 conservation of information , minus first law.
 
-** Entropy
+### Entropy
 
-$N$ is TOTAL number of STATES. 其中 $M < N$ 个态上的占据概率相等, 为
-$P=\frac{1}{M}$ , 其它态上的占据概率是 $0$ . 那么定义 entropy
+$N$ is TOTAL number of STATES. 其中 $M < N$ 个态上的占据概率相等, 为 $P=\frac{1}{M}$ , 其它态上的占据概率是 $0$ . 那么定义 entropy
+
+$$
 \begin{align}
   S = \log M
 \end{align}
+$$
+
 Entropy: Measures approximately the number of states which have non-zero
 probability. The bigger it, the less you know.
 
 In space of states(phase space) of real mechanics, the volume of phase space
 will stay the same.(Liouville's theorem) i.e. the same number of states.
 
-** How to define entropy for a complex probability distribution?
+### How to define entropy for a complex probability distribution?
 
+$$
 \begin{align}
   S = - \sum_iP(i) \log P(i)
 \end{align}
+$$
+
 它可以回到简单的情况. 对于 $P(i) = \frac{1}{M}$ , others zero
+
+$$
 \begin{align}
   S = -\sum_i \frac{1}{M}\log \frac{1}{M} = \log M
 \end{align}
+$$
+
 特例, $M = 1$ , $S = 0$ , Complete knowledge, Entropy zero.
 
-** Definition of Entropy in Phase Space
+### Definition of Entropy in Phase Space
 
-[[file:2021-03-11-physics-SusskindsStatisticalMechanics/entropy_phase_space.png]]
+![entropy phase space](./2021-03-11-physics-SusskindsStatisticalMechanics/entropy_phase_space.png)
+
 如果像上图一样, 概率是均匀的, 那么
+
+$$
 \begin{align}
   S = \log V_{PH}
 \end{align}
+$$
+
 $V_{PH}$ is volume of phase space.
 
 如果概率不均匀, 那么也可以扩展成
+
+$$
 \begin{align}
  S = - \int \mathrm{d}p\mathrm{d}x P(p, x) \log P(p, x)
 \end{align}
+$$
+
 它满足
+
+$$
 \begin{align}
   \int P(p, x)\mathrm{d}p \mathrm{d}x = 1
 \end{align}
+$$
 
-* Lecture 2: Units & Temperature
+## Lecture 2: Units & Temperature
 
-** Units declaration
+### Units declaration
 
 $c = \hbar = G = k_{\mathrm{B}} = 1$ . Temperature change is a human construct that
 was invented for convenience.
+
+$$
 \begin{align}
   T = k_{\mathrm{B}}t_{\mathrm{K}}
 \end{align}
+$$
+
 $t_{\mathrm{K}}$ is temperature in Kelvin.
 
-** What temperature is?
+### What temperature is?
 
 The average energy in state $i$ which average energy is $E$ is
+
+$$
 \begin{align}
   \sum_iP(i, E) E_i = \langle E\rangle
 \end{align}
+$$
+
 the entropy is
+
+$$
 \begin{align}
   S(E) = -\sum_i P(i, E)\log P(i, E)
 \end{align}
+$$
+
 由于
+
+$$
 \begin{align}
   \sum_iP(i, E) = 1
 \end{align}
+$$
+
 所以当比较大的 $E(i)$ 概率变大的化, 整个概率分布看起来会更平. 如下图
-[[file:2021-03-11-physics-SusskindsStatisticalMechanics/P_i_E.png]]
+![P_i(E)](./2021-03-11-physics-SusskindsStatisticalMechanics/P_i_E.png)
 蓝线到橙线到时红线它们的平均能量 $E$ 是变大的, 同时概率分布变得理平, 意味着
 entropy 也增大.
 
 Consider: How much do you have to change the average energy in order to change
 the entropy by $1$ bit( $\log 2$ )? We define temperature like this
+
+$$
 \begin{align}
 \Delta E = \frac{\partial E}{\partial S} \Delta S
 \end{align}
+$$
 
+$$
 \begin{align}
 \mathrm{d}E = T \mathrm{d}S
 \end{align}
+$$
 
-** It is temperature
+### It is temperature
 
 下面证明它就是温度, 也就是说两个系统达到热平衡时, 上面定义的温度是相同的.
 
 考虑两个系统 $A, B$ , 初始时它们的温度分别为 $T_A, T_B$ 并且 $T_B > T_A$ . First
 law says
+
+$$
 \begin{align}
   \mathrm{d}E_A + \mathrm{d}E_B =0
 \end{align}
+$$
+
 second law says
+
+$$
 \begin{align}
   \mathrm{d}S_A + \mathrm{d}S_B > 0
 \end{align}
+$$
+
 combine them and use our definition of temperature we get
+
+$$
 \begin{align}
  \mathrm{d}S_B =& \frac{\mathrm{d}E_B}{T_B} = - \frac{T_A}{T_B}\mathrm{d}S_A \\
           \Downarrow &\\
  0 < & \mathrm{d}S_A + \mathrm{d}S_B = \left(1 - \frac{T_A}{T_B}\right) \mathrm{d}S_A
 \end{align}
+$$
+
 because $T_B > T_A$ , so
+
+$$
 \begin{align}
  \mathrm{d}S_A > & 0\\
           \Downarrow &\\
@@ -160,59 +284,80 @@ because $T_B > T_A$ , so
           \Downarrow &\\
  \mathrm{d}E_A > & 0
 \end{align}
+$$
+
 so energy flowed from B to A.
 
 也就是说能量会从温度高的地方向温度低的地方流动, 也就是说只有温度相同的, 才没有能
 量流动, 也就是说达到了热平衡.
 
-* Lecture 3: Maximizing entropy
+## Lecture 3: Maximizing entropy
 
 Zeroth law: there is a notion of temperature which way energy flows. Ultimately
 equilibrium.
 
-** A Trick (Canonical Ensemble)
+### A Trick (Canonical Ensemble)
 
 Imagine that the system in question is one of a very large number of identical
 systems which are connected together by little pipes that allow heat to flow
 back and forth. One of them is the system we're studying. The rest of them
 simply provide the heat bath.
-[[file:2021-03-11-physics-SusskindsStatisticalMechanics/ensemble.png]]
+![ensemble](./2021-03-11-physics-SusskindsStatisticalMechanics/ensemble.png)
 We're going to let them get a large number $N$ of them. Large enough that we can
 think of the heat bath is very big.
 
 Each one of the systems is in a state. Call the number of systems in the
 $i\mathrm{th}$ state $n_i = (n_1, n_2, n_3, \cdots)$
 Constrains
+
+$$
 \begin{align}
 \sum_in_i =& N \\
 \sum_in_i E_i =& N E
 \end{align}
+$$
 
-** Maximizing entropy
+### Maximizing entropy
 
 What is the probability that a given one of these systems is in the
 $i\mathrm{th}$ state? It is
+
+$$
 \begin{align}
 P(i) = \frac{n_i}{N}
 \end{align}
+$$
+
 use this to rewrite the constrains
+
+$$
 \begin{align}
   \sum_iP(i) =& 1 \\
   \sum_iP(i) E_i =& E
 \end{align}
+$$
+
 Given the occupation numbers, how many ways of redistributing
 the states?(most of occupation number is zero) That is
+
+$$
 \begin{align}
   \mathrm{Number}\quad \mathrm{of} \quad\mathrm{arrangements}
     =\frac{N!}{\Pi _in_i!}
 \end{align}
+$$
+
 use Stirling's Approximation $N! \sim N^Ne^{- N}$ as $N\to\infty$
+
+$$
 \begin{align}
 \log\frac{N!}{\Pi _in_i!} \approx& \log \frac{N^N}{\sum_in_i^{n_i}}
   = N\log N - \sum_in_i\log n_i \\
   =& N\log N - \sum_iN P(i)\log [NP(i)] \\
   =& - N \sum_i P(i) \log P(i)
 \end{align}
+$$
+
 It's entropy. If we want to find out the occupation numbers which maximize the
 number of ways that you can rearrange the system keep the occupation numbers
 fixed. It simply corresponds to maximizing the entropy.
@@ -220,79 +365,113 @@ fixed. It simply corresponds to maximizing the entropy.
 The most probable distribution of occupation numbers corresponds to
 probabilities which maximize the entropy.
 
-* Lecture 4: The Boltzmann distribution
+## Lecture 4: The Boltzmann distribution
 
-** Partition function
+### Partition function
 
 Use Lagrange Multiplier to maximize the entropy
+
+$$
 \begin{align}
   F'(P) = - \sum_iP_i \log P_i  - \alpha \left[\sum_i P_i - 1 \right] - \beta\left[\sum_iE_iP_i - E\right]
 \end{align}
+$$
+
 let $\frac{\partial F'}{\partial P_i} = 0$, we get
+
+$$
 \begin{align}
   P_i = e^{-(1 + \alpha)} e^{- \beta E_i}
 \end{align}
+$$
+
 call $e^{-(1 + \alpha)} = Z$ partition function, then
+
+$$
 \begin{align}
   P_i = \frac{1}{Z} e^{- \beta E_i}
 \end{align}
+$$
+
 这个分布是在给定平均能量下最有可能的分布.
 
 so partition function is
+
+$$
 \begin{align}
   Z = \sum_i e^{- \beta E_i}
 \end{align}
+$$
+
 Tuning $\beta$ , tuning average energy. 限制温度相当于限制平均能量.
 
 $E_{i}$ 是系统给定的.
 
-关于 $E, \alpha, \beta$ 之间的关系. $\alpha, \beta$ 是拉氏乘子, 它对应两个约束, 一个是概率归一,
-一个是能量给定. 结果就是, 由概率归一和能量给定, 就可以得出 $\alpha, \beta$ . 而概率归一
-是永远知道的, 所以剩下的三个量 $E, \alpha, \beta$ 之中给定任何一个, 就可以结合概率归一
+关于 $E, \alpha, \beta$ 之间的关系. $\alpha, \beta$ 是拉氏乘子, 它对应两个约束, 一个是概率归一, 一个是能量给定. 结果就是, 由概率归一和能量给定, 就可以得出 $\alpha, \beta$ . 而概率归一是永远知道的, 所以剩下的三个量 $E, \alpha, \beta$ 之中给定任何一个, 就可以结合概率归一
 得出任剩下的两个, 也就是 $E(\alpha), E(\beta), \alpha(E), \alpha(\beta), \beta(E), \beta(\alpha)$ . 而 $\beta$
 是一个我们非常关心的物理量, 下面将会说明它是温度的倒数, 所以常用的关系就是
 $E(\beta)$ 和 $\alpha(\beta)$ , 也就是 $Z(\beta)$ , 因为 $Z$ 和 $\alpha$ 只是做了一个变量替换而已.
 得到了 $Z(\beta)$ 就得到了系统所有的其它热力学量.
 
-** Average Energy $E$
+### Average Energy $E$
 
 如果我们知道了 $Z(\beta)$ , 当然可以得到 $E$ , 因为 $E(Z) = E(Z(\beta)) = E(\beta)$ . 也
 就是说利用关系 $E(Z)$ , $Z(\beta)$ 得到 $E(\beta)$
+
+$$
 \begin{align}
   E = \sum_i P_iE_i = \sum_i \frac{1}{Z(\beta)} e^{-\beta E_i}E_i
         = - \frac{1}{Z(\beta)}\frac{\partial Z(\beta)}{\partial\beta}
         = - \frac{\partial}{\partial\beta}\log Z(\beta)
 \end{align}
+$$
 
-** Entropy
+### Entropy
 
+$$
 \begin{align}
 S = -\sum_i P_i\log P_i
 \end{align}
+$$
+
 而
+
+$$
 \begin{align}
  P_i = \frac{1}{Z(\beta)}e^{-\beta E_i}
 \end{align}
+$$
+
 so
+
+$$
 \begin{align}
 S =& -\sum_i P_i\left[ -\beta E_i - \log Z \right] \\
   =& \beta \sum_i P_iE_i + \sum_iP_i\log Z \\
   =& \beta E(\beta) +\log Z(\beta)
 \end{align}
+$$
 
-** Temperature
+### Temperature
 
+$$
 \begin{align}
 \mathrm{d}S = \beta \mathrm{d}E + E \mathrm{d}\beta +\frac{\partial \log Z}{\partial \beta}\mathrm{d}\beta
     = \beta \mathrm{d}E + E \mathrm{d}\beta -E \mathrm{d}\beta = \beta \mathrm{d}E
 \end{align}
+$$
+
 so
+
+$$
 \begin{align}
  T = \frac{\mathrm{d}E}{\mathrm{d}S} = \frac{1}{\beta}
 \end{align}
+$$
 
-** Summary
+### Summary
 
+$$
 \begin{align}
 P_i =& \frac{1}{Z} e^{-\beta E_i} \\
 Z =& \sum_i e^{- \beta E_i} \\
@@ -300,75 +479,112 @@ E =& - \frac{\partial}{\partial\beta} \log Z \\
 T =& \frac{1}{\beta} \\
 S =& \beta E + \log Z
 \end{align}
+$$
 
-** Example: the Ideal Gas
+### Example: the Ideal Gas
 
 在体积 $V$ 内的 $N$ 个粒子. States: collection $x_1, \cdots, x_{3N}, p_1, p_{3N}$
 . $6N$ 维的相空间中的每个点对应一个 state. 每个 state 的能量为 $\sum_{n=1}^{3N}
 \frac{p^2_n}{2m}$ .
+
+$$
 \begin{align}
  Z =& \frac{1}{N!} \int \mathrm{d}^{3N}x \int \mathrm{d}^{3N}p\cdot e^{- \beta\sum_{n=1}^{3N}
           \frac{p^2_n}{2m}} \\
    =& \frac{V^N}{N!} \left(\frac{2\pi m}{\beta} \right)^{3N/2}
 \end{align}
+$$
+
 (因子 $\frac{1}{N!}$ 是因为假设粒子不可分辨, 但对结果无影响)
+
+$$
 \begin{align}
 \log Z = - \frac{3N}{2} \log\beta + \mathrm{const.}
 \end{align}
+$$
+
+$$
 \begin{align}
 E = - \frac{\partial}{\partial\beta}\log Z = \frac{3}{2}NT
 \end{align}
+$$
 
-* Lecture 5: Pressure of an Ideal Gas & Fluctuations
+## Lecture 5: Pressure of an Ideal Gas & Fluctuations
 
-** Helmholtz free energy
+### Helmholtz free energy
 
+$$
 \begin{align}
 S =& \frac{1}{T} E + \log Z
 \end{align}
+$$
+
 First define a very useful variable Helmholtz free energy
+
+$$
 \begin{align}
   A = E - TS = -T \log Z
 \end{align}
+$$
 
-** Maxwell' Relation
+### Maxwell' Relation
 
 它是一个纯数学的关系. 假设 $E, S$ 和 $T, V$ 是两组独立的变量, 那么
+
+$$
 \begin{align}
 \label{eq:maxwell_relation}
 \left.\frac{\partial E}{\partial V}\right|_S = \left.\frac{\partial E}{\partial V}\right|_T
     - \left.\frac{\partial E}{\partial S}\right|_V \left.\frac{\partial S}{\partial V}\right|_T
 \end{align}
+$$
 
 如何理解, 或者说如何证明它?
 
 便于直观地看出它的意义, 我们以独立变量 $T, V$ 为坐标, 画出一条$S$ 的等高线. 也就
 是说在这条线上的 $A, B$ 两点, 它的 $S$ 是相等的.
-[[file:2021-03-11-physics-SusskindsStatisticalMechanics/adiabatic.png]]
+![adiabatic](./2021-03-11-physics-SusskindsStatisticalMechanics/adiabatic.png)
 让我们从一个常规的式子出发
+
+$$
 \begin{align}
   \Delta E  = \left.\frac{\partial E}{\partial V}\right|_T \Delta V
               +\left.\frac{\partial E}{\partial T}\right|_V \Delta T
 \end{align}
+$$
+
 上式的第一项和 $(\ref{eq:maxwell_relation})$ 的第一项是相同的. 我们限定它是在 $S$
 不变的这条线上走的, 看它会发生什么. 让两边除以 $\Delta V$ 那么
 
+$$
 \begin{align}
 \label{eq:dedv}
   \frac{\Delta E}{\Delta V}  = \left.\frac{\partial E}{\partial V}\right|_T
               +\left.\frac{\partial E}{\partial T}\right|_V \frac{\Delta T}{\Delta V}
 \end{align}
+$$
+
 在 $S$ 不变的线上
+
+$$
 \begin{align}
   \Delta S  = \left.\frac{\partial S}{\partial V}\right|_T \Delta V
               +\left.\frac{\partial S}{\partial T}\right|_V \Delta T = 0
 \end{align}
+$$
+
 那么就可以得到这条线的斜率
+
+$$
 \begin{align}
 \frac{\Delta T}{\Delta V} = - \left.\frac{\partial S}{\partial V}\right|_{T}
                     \left/\frac{\partial S}{\partial T}\right|_{V}
 \end{align}
+$$
+
 把它带到 $(\ref{eq:dedv})$ 里面就得到
+
+$$
 \begin{align}
   \frac{\Delta E}{\Delta V}  =& \left.\frac{\partial E}{\partial V}\right|_T
               -\left.\frac{\partial E}{\partial T}\right|_V \cdot
@@ -377,13 +593,15 @@ First define a very useful variable Helmholtz free energy
              =& \left.\frac{\partial E}{\partial V}\right|_T
     - \left.\frac{\partial E}{\partial S}\right|_V \left.\frac{\partial S}{\partial V}\right|_T
 \end{align}
+$$
+
 在 $S$ 不变的线上, $\frac{\Delta E}{\Delta V}$ 就是 $\left.\frac{\partial E}{\partial V}\right|_S$
 . 所以问题得证.
 
-** Pressure & Adiabatic
+### Pressure & Adiabatic
 
 考虑一个系统体积可变, 如下图, 加一个活塞
-[[file:2021-03-11-physics-SusskindsStatisticalMechanics/piston.png]]
+![piston](./2021-03-11-physics-SusskindsStatisticalMechanics/piston.png)
 此时系统有了两个可以控制的参量, $T$ 和 $V$ . 然后考虑一个 adiabatic 的过程.
 adiabatic 的意思有两个
 - slow. 比如活塞右移, 如果移动的很慢, 那么气体的压强会有对外界的做功, 但是如果突
@@ -391,123 +609,201 @@ adiabatic 的意思有两个
   整个过程中, 系统都始终处于平衡态.
 - no energy comes into the system from outside. 也就是说它是绝热的.
 活塞右移的过程中, 没有能量注入, 也就是说能量的改变就是压强对外做的功
+
+$$
 \begin{align}
   \mathrm{d}E = -P A\mathrm{d}x = - P\mathrm{d}V
 \end{align}
+$$
+
 因此压强可以由上式定义出
+
+$$
 \begin{align}
  P = - \frac{\partial E}{\partial V}
 \end{align}
+$$
+
 但是, 如何体现 adiabatic 这个过程. 其实等熵的过程就是一个 adiabatic 的过程.
 second law 说熵会增加或者不变. 其中不变的过程就是一个 adiabatic 的过程. 这可以从
 量子力学的角度来理解. 整个系统是被限制在一个 box 中, 那么它的能级将会是分立的.
 而我们绝热地右移活塞, 它们的能级会改变, 但是不会交叉, 还是各自保持独立, 如下图
-file:2021-03-11-physics-SusskindsStatisticalMechanics/adiabatic_quantum.png
+
+![adiabatic quantum](./2021-03-11-physics-SusskindsStatisticalMechanics/adiabatic_quantum.png)
+
 也就是说如果系统原来处在某个能级上, 它还是在某个能级上. 进一步说, 就是它的处在某
 个能级上的概率不会改变, 它的概率分布不会改变. 而 熵就是概率分布的函数, 所以熵不
 会改变.
 
 所以压强的定义就可以写为
+
+$$
 \begin{align}
  P = - \left.\frac{\partial E}{\partial V}\right|_S
 \end{align}
+$$
+
 但是控制 entropy 不是那么容易, 我们容易控制的是温度. 所以根据之前的
 $(\ref{eq:maxwell_relation})$ , 它可以写为
+
+$$
 \begin{align}
  P = - \left.\frac{\partial E}{\partial V}\right|_S
   =  - \left( \left.\frac{\partial E}{\partial V}\right|_T
     - \left.\frac{\partial E}{\partial S}\right|_V \left.\frac{\partial S}{\partial V}\right|_T\right)
 \end{align}
+$$
+
 根据温度的定义, 上式中的 $\left.\frac{\partial E}{\partial S}\right|_V$ 就是温度. 之前我们定义
 温度的时候, 是一个 closed system, 它的体积给定, 正好这是里的定义.
 
 因此
+
+$$
 \begin{align}
  P  =  -  \left.\frac{\partial (E - TS)}{\partial V}\right|_T
 \end{align}
+$$
+
 而 $E - TS$ 就是之前定义的 Helmholtz free energy, 这里就可以看出它是很有用的, 它
 可以用来求压强.
+
+$$
 \begin{align}
  P  =&  -  \left.\frac{\partial A}{\partial V}
     \right|_T \\
    =& \left. T \frac{\partial}{\partial V}\log Z\right|_T
 \end{align}
+$$
+
 这个定义里的偏导数是给定温度的. 而之前的一节课的热力学量公式中的偏导数实际上就是
 导数, 因为那时只有一个独立变量, 我们常取的就是 $\beta$ . 而此时的系统, 多了另外一个
 独立变量, 也就是体积. 因此这里对体积求偏导时, 就要注明温度不变.
 
-** Example: Ideal Gas
+### Example: Ideal Gas
 
 现在就用它来计算一下理想气体的压强! 我们甚至都不需要完全计算出配分函数.
+
+$$
 \begin{align}
   Z = \frac{1}{N!}\int \mathrm{d}^{3N}x \mathrm{d}^{3N}p e^{- \beta \frac{p^2}{2m}}
     = \frac{V^N}{N!} f(\beta)
 \end{align}
+$$
+
 因为压强是给定 $\beta$ 后, 对 $V$ 的导数, 所以我们不关心 $f(\beta)$ 的形式, 只要知道
 $Z\propto V^N$ 就足够了
+
+$$
 \begin{align}
   P = T \left.\frac{\partial \log Z}{\partial V}\right|_T = T \frac{N}{V}
 \end{align}
+$$
+
 这就是理想气体的 equation of state
+
+$$
 \begin{align}
  PV = NT
 \end{align}
+$$
 
-** Fluctuation & Heat Capacity
+### Fluctuation & Heat Capacity
 
 fluctuation is defined as
+
+$$
 \begin{align}
   \Delta x  \equiv \sqrt{\langle(x - \langle x\rangle)^2\rangle} = \sqrt{\langle x^2\rangle-\langle x\rangle^2}
 \end{align}
+$$
+
 fluctuation of energy is
+$$
 \begin{align}
  (\Delta E)^2 = \langle E^2\rangle - \langle E\rangle^2
 \end{align}
+$$
+
 其中 $\langle E\rangle$ 就是之前的 $E$ , 可以从 partition function 得到
+
+$$
 \begin{align}
   \langle E\rangle = - \frac{\partial \log Z}{\partial \beta}
 \end{align}
+$$
+
 而 $\langle E^2\rangle$ 可以根据定义来求
+
+$$
 \begin{align}
    \langle E^2\rangle = \sum_iP_iE_i^2 = \frac{1}{Z(\beta)}\sum_ie^{- \beta E_i} E_i^2
      = \frac{1}{Z}\frac{\partial^2 Z}{\partial\beta^2}
 \end{align}
+$$
+
 so
+
+$$
 \begin{align}
  (\Delta E)^2 = \frac{1}{Z}\frac{\partial^2 Z}{\partial\beta^2}
         - \frac{1}{Z^2}\left(\frac{\partial Z}{\partial \beta} \right)^2
         = \frac{\partial}{\partial\beta}\left( \frac{1}{Z} \frac{\partial Z}{\partial \beta} \right)
 \end{align}
+$$
+
 而括号中的恰好就是 $- E$ , 那么
+
+$$
 \begin{align}
  (\Delta E)^2 = - \frac{\partial E}{\partial\beta} = - \frac{\partial T}{\partial\beta} \frac{\partial E}{\partial T}
          = T^2 \frac{\partial E}{\partial T} = T^2C_V(T)
 \end{align}
+$$
+
 where
+
+$$
 \begin{align}
   C_V(T) \equiv \left.\frac{\partial E}{\partial T}\right|_V
 \end{align}
+$$
+
 is heat capacity.
 
-* Lecture 6: Weakly interacting gases, heat, and work
+## Lecture 6: Weakly interacting gases, heat, and work
 
 考虑分子之间有两体相互作用能
+
+$$
 \begin{align}
   E = \sum_n \frac{p_n^2}{2M} + \sum_{n>m}U(|x_n - x_m|)
 \end{align}
+$$
+
 先考虑两个粒子之间的相互作用能
+
+$$
 \begin{align}
   \int \mathrm{d}^3x_1 \mathrm{d}^3x_2 \cdot U(|x_2 - x_1|)
   = \int \mathrm{d}^3x_1 \mathrm{d}^3(x_1 + x')\cdot  U(|x'|)
   = \int \mathrm{d}^3x_1 \mathrm{d}^3(x') \cdot U(|x'|)
   = V U_0
 \end{align}
+$$
+
 where $\int \mathrm{d}^3x_1 = V$ , $\int\mathrm{d}^3(x')  U(|x'|) = U_0$ . 记
 $\sum_{n>m}U(|x_n - x_m|) \equiv U(x)$ 那么
+
+$$
 \begin{align}
   E = \sum_n \frac{p_n^2}{2M} + \frac{N(N - 1)}{2}VU_0
 \end{align}
+$$
+
 计算配分函数
+
+$$
 \begin{align}
   Z &= \frac{1}{N!} \int \mathrm{d}^{3N}x\int \mathrm{d}^{3N}p\cdot
          e^{-\beta\sum_n \frac{p_n^2}{2M}} e^{- \beta U(x)}\\
@@ -516,12 +812,20 @@ $\sum_{n>m}U(|x_n - x_m|) \equiv U(x)$ 那么
          \frac{1}{V^N}\int \mathrm{d}^{3N}x \cdot e^{- \beta U(x)} \\
    &= Z_0(\beta) \frac{1}{V^N}\int \mathrm{d}^{3N}x \cdot e^{- \beta U(x)} \\
 \end{align}
+$$
+
 其中 $Z_0$ 是 ideal gas 的配分函数. 如果相互作用很小, 那么我们可以对它展开, 只取
 到一阶项
+
+$$
 \begin{align}
   e^{- \beta U(x)} \approx 1 - \beta U(x)
 \end{align}
+$$
+
 那么
+
+$$
 \begin{align}
   \frac{1}{V^N}\int \mathrm{d}^{3N}x \cdot e^{- \beta U(x)}
   &\approx \frac{1}{V^N}\int \mathrm{d}^{3N}x \cdot [1 -  \beta U(x)] \\
@@ -530,150 +834,249 @@ $\sum_{n>m}U(|x_n - x_m|) \equiv U(x)$ 那么
   &\approx 1 - \frac{N^2}{2}\frac{\beta}{V^{N - (N - 2)}} U_0 V\\
   &= 1 - \frac{\beta N^2}{2V}U_0
 \end{align}
+$$
+
 配分函数的对数为
+
+$$
 \begin{align}
   \log Z \approx \log Z_0 + \log\left[1 -\frac{\beta N^2}{2V}U_0 \right]
         \approx \log Z_0 - \frac{\beta N^2}{2V}U_0
 \end{align}
+$$
+
 其中利用了 $\log(1 - x) = - x + \cdots$
 
 之后我们可以计算一些热力学量的修正. 比如能量
+
+$$
 \begin{align}
   E = -\frac{\partial \log Z}{\partial\beta} = \frac{3}{2}NT + \frac{N^2}{2V}U_0
         = \left( \frac{3}{2}T + \frac{\rho}{2}U_0 \right)N
 \end{align}
+$$
+
 压强
+
+$$
 \begin{align}
 P = - \left. \frac{\partial A}{\partial V}\right|_V = T \frac{\partial \log Z}{\partial V}
   = \rho T + \frac{1}{2}\rho^2U_0
 \end{align}
+$$
 
-* Lecture 7: Harmonic Oscillators ( & Entropy vs. reversibility)
+## Lecture 7: Harmonic Oscillators ( & Entropy vs. reversibility)
 
-** Single Classical Harmonic Oscillators
+### Single Classical Harmonic Oscillators
 
 考虑如图的单个弹簧
-[[file:2021-03-11-physics-SusskindsStatisticalMechanics/spring.png]]
+![spring](./2021-03-11-physics-SusskindsStatisticalMechanics/spring.png)
 它的 partition function 是
+
+$$
 \begin{align}
   Z = \int \mathrm{d}p \mathrm{d}x\cdot e^{-\beta \frac{p^2}{2m}} e^{-\beta \frac{kx^2}{2}}
     = \frac{2\pi}{\omega} \frac{1}{\beta}
 \end{align}
+$$
+
 where $\frac{1}{\omega} = \sqrt{\frac{m}{k}}$ . so
+
+$$
 \begin{align}
   \log Z = \sharp - \log \beta
 \end{align}
+$$
+
 and
+
+$$
 \begin{align}
  E = - \frac{\partial \log Z}{\partial\beta} = T
 \end{align}
+$$
 
-** Single Quantum Harmonic Oscillators
+### Single Quantum Harmonic Oscillators
 
 量子与经典不同的地方仅在于能级是分立的(Susskind 在此没有计入零点能). So
 partition functino is
+
+$$
 \begin{align}
   Z = \sum_n e^{- \beta n\hbar\omega} = \sum_n \left(e^{-\beta\hbar\omega} \right)^n
     = \frac{1}{1 - e^{- \beta\hbar\omega}}
 \end{align}
+$$
+
 so
+
+$$
 \begin{align}
   E = - \frac{1}{Z}\frac{\partial Z}{\partial\beta} = \frac{\hbar\omega e^{- \beta\hbar\omega}}{1 - e^{- \beta\hbar\omega}}
 \end{align}
+$$
+
 as $\beta \to 0$ (high temperature), the leading order of energy behaves like
+
+$$
 \begin{align}
   E \to T
 \end{align}
+$$
+
 which is the result of classical case.
 as $\beta \to\infty$ (low temperature), the leading oreder of energy behaves like
+
+$$
 \begin{align}
  E \to \hbar\omega e^{- \beta\hbar\omega}
 \end{align}
+$$
+
 it exponentially goes to zero.
 
-* Lecture 8: Magnetic & 1D Ising Model (Entropy, reversibility, and magnetism)
+## Lecture 8: Magnetic & 1D Ising Model (Entropy, reversibility, and magnetism)
 
 Consider 1 D spin chain, $N$ spins can be either $\sigma(i)= + 1$ or $\sigma(i) =
 -1$.
-[[file:2021-03-11-physics-SusskindsStatisticalMechanics/1d_ising_pic.png]]
+
+![1D Ising picture](./2021-03-11-physics-SusskindsStatisticalMechanics/1d_ising_pic.png)
+
 Suppose there is a magnetic field, the energy is
+
+$$
 \begin{align}
   E = (n - m) \mu H
 \end{align}
+$$
+
 where $n$ is the number of ups, $m$ is the number of downs, and satisfy $n + m
 = N$ . So partition function
+
+$$
 \begin{align}
   Z = \sum_{n, m}e^{-\beta \mu H(n - m)}
 \end{align}
+$$
+
 where sum is meant over all configurations. For each value of $(n−m)$ , there
 is going to be a certainnumber of configurations. And that number of
 configurations is
+
+$$
 \begin{align}
 \frac{N!}{n! m!}
 \end{align}
+$$
+
 so
+
+$$
 \begin{align}
   Z = \sum_{n}\frac{N!}{n! (N - n)!} \left(e^{-\beta\mu H}\right)^n
             \left(e^{\beta\mu H}\right)^{N - n}
     = (e^{-\beta\mu H} + e^{\beta\mu H})^N
 \end{align}
+$$
+
 (The sum in the partition functions is over microstates. If there is
  degeneracy, we need to multiply a degeneracy factor). And we rewrite the
  partition function
+
+$$
 \begin{align}
  Z = 2^N \cosh^N (\beta \mu H)
 \end{align}
+$$
+
 Define magnetization as
+
+$$
 \begin{align}
   M = \frac{\langle n - m\rangle}{N}
 \end{align}
+$$
+
 so
+
+$$
 \begin{align}
   M = \frac{E}{\mu H N} = - \frac{1}{\mu H N} \frac{\partial \log Z}{\partial \beta} = -\tanh (\beta\mu H)
 \end{align}
+$$
+
 It behaves like
-[[file:2021-03-11-physics-SusskindsStatisticalMechanics/1d_ising_solution.png]]
+![1D Ising solution](./2021-03-11-physics-SusskindsStatisticalMechanics/1d_ising_solution.png)
+
 There is no phase transition.
 
-* Lecture 9: The Ising model & Phase transition
+## Lecture 9: The Ising model & Phase transition
 
-** 1D case
+### 1D case
 
 Let's use new notion
+
+$$
 \begin{align}
  E = - \mu B \sigma \equiv -J \sigma
 \end{align}
+$$
+
 (He changed $H$ to $B$ and changed the direction of magnetic field!)
 so the solution is
+
+$$
 \begin{align}
  \langle \sigma\rangle = \tanh (\beta J)
 \end{align}
+$$
+
 现在考虑不加磁场了, 但是考虑相邻的 spin 之间有相互作用能, 也就是说能量为
+
+$$
 \begin{align}
 E = -J \sum \sigma_i \sigma_{i + 1}
 \end{align}
+$$
+
 for $J > 0$ , spin parallel is favored(lower energy).
 
 Now we define correlation function as
+
+$$
 \begin{align}
 \langle \sigma_i \sigma_{i + n}\rangle
 \end{align}
+$$
+
 and we call $\sigma_1\sigma_2 = \mu_1 \sigma_2\sigma_3= \mu_2, \cdots$ . So
+
+$$
 \begin{align}
 E = -J \sum \mu_i
 \end{align}
+$$
+
 it has the same form of 1 dimension Ising model without interaction energy in a
 magnetic field. So we can right now get
+
+$$
 \begin{align}
 \langle \mu \rangle = \tanh \beta J
 \end{align}
+$$
+
 We can calculate correlation function by add some pairs in it (because $\sigma_i \sigma_i
 =1$ )
+
+$$
 \begin{align}
 \langle \sigma_i \sigma_{i + n}\rangle = \langle \sigma_i \sigma_{i + 1}\sigma_{i + 1} \sigma_{i + 2}\sigma_{i + 2}\cdots
          \sigma_{i + n - 1}\sigma_{i + n-1}\sigma_{i + n}\sigma_{i + n}\rangle
    = \langle\mu_1 \mu_2 \cdots \mu_n \rangle = \tanh^N\beta J
 \end{align}
+$$
+
 the last equivalent is because differnt $\mu_i$ is independent.
 
 So, it is a boring system, because the correlation function decays when increase
@@ -683,14 +1086,18 @@ idea of the game of telephone. The signal decays.
 Why it is borig? because its dimension is too low. We will see in 2 dimension,
 there will be something like error correction.
 
-** High Dimension Case & Mean Field Approximation (Self-Consistent Field)
+### High Dimension Case & Mean Field Approximation (Self-Consistent Field)
 
 In $d$ dimension, there are $2d$ neighbors. Mean field means we approximate the
 neighbor spin as the average spin which labeled as $\bar{\sigma}$. So the energy in
 a site is
+
+$$
 \begin{align}
 E = -J \sigma \sum_{\mathrm{neighbor}} \sigma \approx -\left(2 d J \bar{\sigma}\right) \sigma
 \end{align}
+$$
+
 the higher the dimension, the better the approximation is. It seems like if one
 neighbor pass the information wrong, there are other neighbors may pass it
 right, the more the neighbors, the larger the chance which pass the information
@@ -698,15 +1105,24 @@ right.
 
 This approximation is also called self-consistent field, because we can write
 the average spin as the form (just transform $J \to 2 dJ\bar{\sigma}$)
+
+$$
 \begin{align}
  \bar{\bar{\sigma}} = \tanh(2 \beta d J \bar{\sigma})
 \end{align}
+$$
+
 we can solve it consistently, so the name. We write it in another form (let
 $\bar{\bar{\sigma}} = \bar{\sigma}$)
+
+$$
 \begin{align}
 T \frac{y}{2dj} = \tanh y, \quad \mathrm{where} \quad y = 2\beta d J \bar{\sigma}
 \end{align}
-[[file:2021-03-11-physics-SusskindsStatisticalMechanics/nd_ising_solution.png]]
+$$
+
+![nD Ising solution](./2021-03-11-physics-SusskindsStatisticalMechanics/nd_ising_solution.png)
+
 直线的斜率与 $T$ 是成正比的. 可以发现, 当温度很高时, 比如图中蓝线, 它与 $\tanh
 y$ 只有 $y = 0$ , 也就是 $\bar{\sigma} = 0$ 一个交点, 没有磁性, 所有的 spin 都随机排
 序.
@@ -716,43 +1132,60 @@ y$ 只有 $y = 0$ , 也就是 $\bar{\sigma} = 0$ 一个交点, 没有磁性, 所
 上看, $y > 0, y < 0$ 的两个解能量是相同的, 并且都要比 $y = 0$ 时的解要低. 也就是
 说系统是有磁性的.
 
-The temperatureT= 2dj, where a transition appears, iscalled thecritical
+The temperature $T= 2dJ$, where a transition appears, iscalled thecritical
 temperature. It is not exact. It is a meanfield approximation.
 
-** + External Magnetic Field $B$
+### Plus External Magnetic Field $B$
 
 如果加上外磁场, 那么 Energy is
+
+$$
 \begin{align}
   E = -[2 d J \bar{\sigma} + B]\sigma
 \end{align}
+$$
+
 and
+
+$$
 \begin{align}
 T \frac{y}{2 d J} = \tanh (y + B\beta)
 \end{align}
+$$
+
 there is just a shift.
-[[file:2021-03-11-physics-SusskindsStatisticalMechanics/nd_ising_shift_solution.png]]
+
+![Ising shift solution](./2021-03-11-physics-SusskindsStatisticalMechanics/nd_ising_shift_solution.png)
+
 此时所有温度都是有确定的磁性.
 
 The tiniest little bit of stray magnetic field $h$ will tell us which way to
-go. If $h is positive the magnetization will be positive. Right above the $T$
+go. If $h$is positive the magnetization will be positive. Right above the $T$
 -axis it won’t be zero, and right below it won’t be zero either. Spontaneous
-magnetizationhas happened.
+magnetization has happened.
 
-* Lecture 10: Liquid-Gas Phase Transition
+## Lecture 10: Liquid-Gas Phase Transition
 
-** Phase Diagram of Ising Model
+### Phase Diagram of Ising Model
 
 我们对带有外场
+
+$$
 \begin{align}
   E = -J \sum_{\mathrm{links}}\sigma(i)\sigma(j) - \sum_{\mathrm{sites}}h \sigma(i)
 \end{align}
+$$
+
 的情况做一个总结, 从能量上看, parallel, ups 的能量比较低. 用 mean field 近似的
 结果是
+
+$$
 \begin{align}
   \bar{\sigma} = \tanh \left[(2 d J \bar{\sigma} + h)\beta \right]
 \end{align}
+$$
 
-[[file:2021-03-11-physics-SusskindsStatisticalMechanics/magnetic_phase.png]]
+![magnetic phase](./2021-03-11-physics-SusskindsStatisticalMechanics/magnetic_phase.png)
 
 沿不同的路径来看这个相图:
 - 沿 $h = 0$ 来看, 在 $T < T_{\mathrm{C}}$ 时, 它只有两个简并的解, 也就是说它是
@@ -773,7 +1206,7 @@ When we talk strictly about real magnets,Tcis also calledthe Curie
 temperature.
 
 
-** Liquid-Gas Phase Transition
+### Liquid-Gas Phase Transition
 
 可以用 Ising model 做为一个简单的数学模型, 来 show liquid-gas phase diagram.
 
@@ -801,27 +1234,35 @@ spin parallel 是一个 unbroken bound. 那么有外加磁场的 Ising model 恰
 个 transition 对应 $\sigma$ 的突变, 也就是 density 的突变. The difference between
 liquid andvapour is some discontinuity in the density, liquid beingdenser than
 vapor.
-[[file:2021-03-11-physics-SusskindsStatisticalMechanics/liquid-gas.png]]
+
+![liquid gase](./2021-03-11-physics-SusskindsStatisticalMechanics/liquid-gas.png)
 
 We want to keep the molecular properties fixed, thereforewe are not going to
 play with $J$. All we can vary is the chemical potential. And that is the same
 thing in our model as varying $h$ .
 
 
-* Interlude
+## Interlude
 
-** Stirling's Approximation
+### Stirling's Approximation
 
+$$
 \begin{align}
 N! \approx N^N e^{-N} ,\quad \mathrm{as}\quad N\to\infty
 \end{align}
+$$
+
 Proof: as $N \to \infty$
+
+$$
 \begin{align}
 \log (N!) = \sum_{x = 1}^N \log x \approx \int_1^N \mathrm{d}x\cdot\log x \approx N \log N - N
 \end{align}
+$$
+
 Q.E.D.
 
-** Lagrange Multiplier
+### Lagrange Multiplier
 
 另一种不同的理解方式, 不是找 constrain 的切线, 而是 shift了 $F$ 使得 $F(G)$ 在零
 处有极值.
@@ -833,20 +1274,23 @@ $G=0$ 处不一定是极值点. 但我们可以变换一下令 $F' = F +\lambda 
 $F'$ 极值点, 得出 $x_i$ 后再 令 $G(x_i) = 0$ 解出 $\lambda$ .
 
 Exp.
+
+$$
 \begin{align}
   F(x, y) =& \frac{x^2 + y^2}{2}\\
   G(x, y) =& x + y - 1 = 0 \\
 \end{align}
+$$
 
-* ...about
+## ...about
 
 我之前一直很模糊, 不清晰的概念, 都跟 Susskind 搞明白了. 比如什么是 adiabatic, 为
 什么压强要在等熵下定义.
 
 Susskind, U GREAT!
 
-* Reference
+## Reference
 
-- [[https://en.wikipedia.org/wiki/Phase_diagram][Phase Diagram]]
+- [Wikipedia: Phase Diagram](https://en.wikipedia.org/wiki/Phase_diagram)
 
-- [[https://en.wikipedia.org/wiki/Stirling%27s_approximation][Stirling's Approximation]]
+- [Wikipedia: Stirling's Approximation](https://en.wikipedia.org/wiki/Stirling%27s_approximation)

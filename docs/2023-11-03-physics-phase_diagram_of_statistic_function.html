@@ -172,18 +172,18 @@
 </ul>
 <h1 id="bose-einstein-distribution">Bose-Einstein distribution</h1>
 <h2 id="free-boson">Free Boson</h2>
-<p>For free Bosons, the particle density can be written as the sum of the Bose-Einstein distribution for every energy level with momentum $\mathbf{k}$,<br />
+<p>For free Bosons, the particle density can be written as the sum of the Bose-Einstein distribution for every energy level with momentum $\mathbf{k}$,
 $$
 n(T, \mu) = \frac{1}{V}\sum_{\mathbf{k}}
 \frac{1}{e^{ \frac{1}{k_B T}\left( \frac{\hbar^2 k^2}{2m} - \mu\right)} - 1}
 = \frac{1}{V}\sum_{\mathbf{k}}
 \frac{1}{z^{-1}e^{ \frac{1}{k_B T} \frac{\hbar^2 k^2}{2m}} - 1}
-$$<br />
-where fugacity $z = e^{\frac{\mu}{k_BT}}$. Using<br />
+$$
+where fugacity $z = e^{\frac{\mu}{k_BT}}$. Using
 $$
  \frac{1}{V} \sum_{\mathbf{k}}\to \frac{1}{(2\pi)^3}\int \mathrm{d}^3k
-$$<br />
-convert a sum over momentum states into an integral, then,<br />
+$$
+convert a sum over momentum states into an integral, then,
 $$
 \begin{align}
 n(T, \mu) =& \frac{4\pi}{(2\pi)^3}\int_0^{\infty} \mathrm{d}k
@@ -195,8 +195,8 @@ n(T, \mu) =& \frac{4\pi}{(2\pi)^3}\int_0^{\infty} \mathrm{d}k
 =& \frac{1}{\lambda_{\mathrm{d.B.}}^3} \mathrm{Li}_{3/2}(z) \\
 =& \left(\frac{m k_B T}{2 \pi \hbar^2} \right)^{3/2}\mathrm{Li}_{3/2}(z)
 \end{align}
-$$<br />
-where we have defined the thermal de Broglie wavelength<br />
+$$
+where we have defined the thermal de Broglie wavelength
 $\lambda_{\mathrm{d.B.}} = \sqrt{\frac{2\pi \hbar^2}{m k_B T}}$ by setting</p>
 $$
 
@@ -212,19 +212,19 @@ $$
 $$<p><img src="./2023-11-03-physics-phase_diagram_of_statistic_function/free-bose.svg" alt="free-bose" /></p>
 <p><a href="./2023-11-03-physics-phase_diagram_of_statistic_function/free-bose.py">free-bose.py</a></p>
 <h2 id="condensation-of-free-boson">Condensation of free Boson</h2>
-<p>For free Bosons, when the density fixed, lower the temperature, the chemical potential will approach <eq>0</eq>. Therefore the Bosons will condense to the zero momentum states. Therefore, we can find the condensate critical temperature $T_C$ by setting $\mu\to 0$,<br />
+<p>For free Bosons, when the density fixed, lower the temperature, the chemical potential will approach <eq>0</eq>. Therefore the Bosons will condense to the zero momentum states. Therefore, we can find the condensate critical temperature $T_C$ by setting $\mu\to 0$,
 $$
 k_B T_C = \left(\frac{n}{\mathrm{Li}_{3/2}(1)}\right)^{2/3}\frac{1}{\frac{m}{2\pi\hbar^2}}
-$$<br />
+$$
 where $\mathrm{Li}_{3/2}(1) = \zeta(3/2)\approx2.612$.</p>
 <h2 id="condensation-of-fermi-pairs">Condensation of Fermi pairs</h2>
-<p>The two components Fermion system on the strong BEC side, every two Fermions form a bound Boson pairs. Thus we can consider this system as a free Bosons. We label the density of pairs as <eq>n</eq>, also every component has a density <eq>n</eq>. Label the mass of a Fermion as <eq>m</eq>, so the mass of a pair is $M=2m$, and the chemical potential $2\mu$. We define the Fermi momentum as $k_F^3 = 6\pi^2 n$, and Fermi energy as $E_F = \frac{\hbar^2 k_F^2}{2m}$. Then the density of pairs can be written as<br />
+<p>The two components Fermion system on the strong BEC side, every two Fermions form a bound Boson pairs. Thus we can consider this system as a free Bosons. We label the density of pairs as <eq>n</eq>, also every component has a density <eq>n</eq>. Label the mass of a Fermion as <eq>m</eq>, so the mass of a pair is $M=2m$, and the chemical potential $2\mu$. We define the Fermi momentum as $k_F^3 = 6\pi^2 n$, and Fermi energy as $E_F = \frac{\hbar^2 k_F^2}{2m}$. Then the density of pairs can be written as
 $$
 \begin{align}
 n(T, 2\mu)
 = \left(\frac{M k_B T}{2 \pi \hbar^2} \right)^{3/2}\mathrm{Li}_{3/2}(z)
 \end{align}
-$$<br />
+$$
 where $z=e^{\frac{2\mu}{k_B T}}$. We can get the condensate critical temperature of pairs</p>
 $$
 
@@ -250,12 +250,12 @@ $$
 = -\Gamma(1+\nu)\mathrm{Li}_{1+\nu}(-z)
 
 $$<h1 id="fermi-dirac-distribution">Fermi-Dirac distribution</h1>
-<p>For free Bosons, the particle density can be written as the sum of the Bose-Einstein distribution for every energy level with momentum $\mathbf{k}$,<br />
-$$<br />
+<p>For free Bosons, the particle density can be written as the sum of the Bose-Einstein distribution for every energy level with momentum $\mathbf{k}$,
+$$
 n(T, \mu) = \frac{1}{V}\sum_{\mathbf{k}}</p>
-<p>\frac{1}{z^{-1}e^{ \frac{1}{k_B T} \frac{\hbar^2 k^2}{2m}} + 1}<br />
-$$<br />
-where fugacity $z = e^{\frac{\mu}{k_BT}}$. Convert a sum over momentum states into an integral, then,<br />
+<p>\frac{1}{z^{-1}e^{ \frac{1}{k_B T} \frac{\hbar^2 k^2}{2m}} + 1}
+$$
+where fugacity $z = e^{\frac{\mu}{k_BT}}$. Convert a sum over momentum states into an integral, then,
 $$
 \begin{align}
 n(T, \mu) =& \frac{4\pi}{(2\pi)^3}\int_0^{\infty} \mathrm{d}k
