@@ -1049,7 +1049,7 @@ $$
 \end{align}
 $$
 
-and we call $\sigma_1\sigma_2 = \mu_1 \sigma_2\sigma_3= \mu_2, \cdots$ . So
+and we call $\sigma_1\sigma_2 = \mu_1, \sigma_2\sigma_3= \mu_2, \cdots$ . So
 
 $$
 \begin{align}
@@ -1083,7 +1083,7 @@ So, it is a boring system, because the correlation function decays when increase
 the distance except temperature is zero which $\tanh \beta J = 1$ . It is the same
 idea of the game of telephone. The signal decays.
 
-Why it is borig? because its dimension is too low. We will see in 2 dimension,
+Why it is boring? because its dimension is too low. We will see in 2 dimension,
 there will be something like error correction.
 
 ### High Dimension Case & Mean Field Approximation (Self-Consistent Field)
