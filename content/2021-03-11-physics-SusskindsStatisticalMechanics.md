@@ -1072,7 +1072,7 @@ We can calculate correlation function by add some pairs in it (because $\sigma_i
 $$
 \begin{align}
 \langle \sigma_i \sigma_{i + n}\rangle = \langle \sigma_i \sigma_{i + 1}\sigma_{i + 1} \sigma_{i + 2}\sigma_{i + 2}\cdots
-         \sigma_{i + n - 1}\sigma_{i + n-1}\sigma_{i + n}\sigma_{i + n}\rangle
+         \sigma_{i + n - 1}\sigma_{i + n-1}\sigma_{i + n}\rangle
    = \langle\mu_1 \mu_2 \cdots \mu_n \rangle = \tanh^N\beta J
 \end{align}
 $$
