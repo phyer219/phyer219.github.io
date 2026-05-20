@@ -1202,7 +1202,7 @@ $$
 - 如果我们沿图中半圆虚线, 它绕过了 $T_{\mathrm{C}}$ , 此时 $\sigma$ 连续地由负变到零,
   再变到正.
 
-When we talk strictly about real magnets,Tcis also calledthe Curie
+When we talk strictly about real magnets, $T_C$ is also called the Curie
 temperature.
 
 

@@ -1161,7 +1161,7 @@ energy,and there is no fluctuation.&lt;/li&gt;
 &lt;li&gt;如果我们沿图中半圆虚线, 它绕过了 $T_{\mathrm{C}}$ , 此时 $\sigma$ 连续地由负变到零,
 再变到正.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;When we talk strictly about real magnets,Tcis also calledthe Curie
+&lt;p&gt;When we talk strictly about real magnets, $T_C$ is also called the Curie
 temperature.&lt;/p&gt;
 &lt;h3 id="liquid-gas-phase-transition"&gt;Liquid-Gas Phase Transition&lt;/h3&gt;
 &lt;p&gt;可以用 Ising model 做为一个简单的数学模型, 来 show liquid-gas phase diagram.&lt;/p&gt;
