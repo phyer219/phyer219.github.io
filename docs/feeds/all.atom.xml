@@ -13509,7 +13509,7 @@ temperature.&lt;/p&gt;
 &lt;p&gt;liquid gas transition 的发生需要三个条件:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;有一个可变的 chemical potential (Note that $\mu$ is called the chemical
-potential because in gen-eral it is different for different kinds of
+potential because in general it is different for different kinds of
 molecules.)&lt;/li&gt;
 &lt;li&gt;有一个 hard core potential&lt;/li&gt;
 &lt;li&gt;有一个 short range attraction potential&lt;/li&gt;
@@ -13520,11 +13520,8 @@ spin parallel 是一个 unbroken bound. 那么有外加磁场的 Ising model 恰
 &lt;ul&gt;
 &lt;li&gt;chemical potential 对应外加磁场再加一个 shift. chemical potential 就是增加一个
 粒子的 energy cost. 我们从真空, 也就是 all down 状态增加一个粒子, 也就是 flip
-a down to up, 它会打开四个 bound, 同时加上外磁场的能量 , energy cost 就是 $8 J
-&lt;ul&gt;
-&lt;li&gt;2h$ . 故 chemical potential $\mu = 8J + 2h$&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+a down to up, 它会打开四个 bound, 同时加上外磁场的能量 , energy cost 就是
+$8 J + 2h$ . 故 chemical potential $\mu = 8J + 2h$&lt;/li&gt;
 &lt;li&gt;$\sigma$ 只能是 $\pm 1$ , 不能是其它数值, 也就是说一个 site 是能是没有粒子, 或者有
 一子的状态. 而不能有多个粒子, 也就是对应一个 hard core potential&lt;/li&gt;
 &lt;li&gt;两个相距比较远的粒子, 它们的总能量是 $2(8J + 2h)$ . 而它们互相接近, 直到邻时,
