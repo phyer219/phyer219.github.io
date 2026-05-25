@@ -604,10 +604,12 @@ $$
 ![piston](./2021-03-11-physics-SusskindsStatisticalMechanics/piston.png)
 此时系统有了两个可以控制的参量, $T$ 和 $V$ . 然后考虑一个 adiabatic 的过程.
 adiabatic 的意思有两个
+
 - slow. 比如活塞右移, 如果移动的很慢, 那么气体的压强会有对外界的做功, 但是如果突
   然右移, 气体还没来得及充满整个容器, 所以就没有对外界做功. adiabatic 意味着很慢,
   整个过程中, 系统都始终处于平衡态.
 - no energy comes into the system from outside. 也就是说它是绝热的.
+
 活塞右移的过程中, 没有能量注入, 也就是说能量的改变就是压强对外做的功
 
 $$
@@ -1077,7 +1079,7 @@ $$
 \end{align}
 $$
 
-the last equivalent is because differnt $\mu_i$ is independent.
+the last equivalent is because different $\mu_i$ is independent.
 
 So, it is a boring system, because the correlation function decays when increase
 the distance except temperature is zero which $\tanh \beta J = 1$ . It is the same
@@ -1132,8 +1134,8 @@ y$ 只有 $y = 0$ , 也就是 $\bar{\sigma} = 0$ 一个交点, 没有磁性, 所
 上看, $y > 0, y < 0$ 的两个解能量是相同的, 并且都要比 $y = 0$ 时的解要低. 也就是
 说系统是有磁性的.
 
-The temperature $T= 2dJ$, where a transition appears, iscalled thecritical
-temperature. It is not exact. It is a meanfield approximation.
+The temperature $T= 2dJ$, where a transition appears, is called the critical
+temperature. It is not exact. It is a mean field approximation.
 
 ### Plus External Magnetic Field $B$
 
@@ -1161,7 +1163,7 @@ there is just a shift.
 
 The tiniest little bit of stray magnetic field $h$ will tell us which way to
 go. If $h$is positive the magnetization will be positive. Right above the $T$
--axis it won’t be zero, and right below it won’t be zero either. Spontaneous
+-axis it won't be zero, and right below it won't be zero either. Spontaneous
 magnetization has happened.
 
 ## Lecture 10: Liquid-Gas Phase Transition
@@ -1188,12 +1190,13 @@ $$
 ![magnetic phase](./2021-03-11-physics-SusskindsStatisticalMechanics/magnetic_phase.png)
 
 沿不同的路径来看这个相图:
+
 - 沿 $h = 0$ 来看, 在 $T < T_{\mathrm{C}}$ 时, 它只有两个简并的解, 也就是说它是
   有磁性的, 随着温度的升高, 磁性减小, 直到跨过 $T = T_{\mathrm{C}}$ (The
-  phenomena happening there are all characterized bywhat is calledcritical
+  phenomena happening there are all characterized by what is called critical
   exponents), 磁性消失.
 - 在 $T=0$ 的轴上, 当 $h < 0$ 时, $\sigma = -1$ . 当 $h>0$ 时, $\sigma = +1$ . That
-  comes from the fact thatat zero temperature the spins all choose the lowest
+  comes from the fact that zero temperature the spins all choose the lowest
   energy,and there is no fluctuation.
 - 沿 $T < T_{\mathrm{C}}$ 的某个温度, 逐渐增大磁场, 也就是图中的虚直线. 在 $h <
   0$ 时, 它有一个 shift, 有 $\sigma < 0$ 的解. 随着 $h\to 0$ , 磁性减小, 但是没有减小
@@ -1205,12 +1208,12 @@ $$
 When we talk strictly about real magnets, $T_C$ is also called the Curie
 temperature.
 
-
 ### Liquid-Gas Phase Transition
 
 可以用 Ising model 做为一个简单的数学模型, 来 show liquid-gas phase diagram.
 
 liquid gas transition 的发生需要三个条件:
+
 - 有一个可变的 chemical potential (Note that $\mu$ is called the chemical
   potential because in gen-eral it is different for different kinds of
   molecules.)
@@ -1220,6 +1223,7 @@ liquid gas transition 的发生需要三个条件:
 如果我们把 Ising model 中 up 看成是存在一个粒子, down 看成是没有粒子. 两个邻近的
 spin parallel 是一个 unbroken bound. 那么有外加磁场的 Ising model 恰好就满足这三
 个条件. 下面考虑二维 $d=2$ 的情况.
+
 - chemical potential 对应外加磁场再加一个 shift. chemical potential 就是增加一个
   粒子的 energy cost. 我们从真空, 也就是 all down 状态增加一个粒子, 也就是 flip
   a down to up, 它会打开四个 bound, 同时加上外磁场的能量 , energy cost 就是 $8 J
@@ -1240,7 +1244,6 @@ vapor.
 We want to keep the molecular properties fixed, thereforewe are not going to
 play with $J$. All we can vary is the chemical potential. And that is the same
 thing in our model as varying $h$ .
-
 
 ## Interlude
 

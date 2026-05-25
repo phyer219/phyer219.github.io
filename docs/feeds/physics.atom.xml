@@ -656,9 +656,9 @@ adiabatic 的意思有两个&lt;/p&gt;
 &lt;li&gt;slow. 比如活塞右移, 如果移动的很慢, 那么气体的压强会有对外界的做功, 但是如果突
 然右移, 气体还没来得及充满整个容器, 所以就没有对外界做功. adiabatic 意味着很慢,
 整个过程中, 系统都始终处于平衡态.&lt;/li&gt;
-&lt;li&gt;no energy comes into the system from outside. 也就是说它是绝热的.
-活塞右移的过程中, 没有能量注入, 也就是说能量的改变就是压强对外做的功&lt;/li&gt;
+&lt;li&gt;no energy comes into the system from outside. 也就是说它是绝热的.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;活塞右移的过程中, 没有能量注入, 也就是说能量的改变就是压强对外做的功&lt;/p&gt;
 $$
 
 \begin{align}
@@ -1059,7 +1059,7 @@ $$
    = \langle\mu_1 \mu_2 \cdots \mu_n \rangle = \tanh^n\beta J
 \end{align}
 
-$$&lt;p&gt;the last equivalent is because differnt $\mu_i$ is independent.&lt;/p&gt;
+$$&lt;p&gt;the last equivalent is because different $\mu_i$ is independent.&lt;/p&gt;
 &lt;p&gt;So, it is a boring system, because the correlation function decays when increase
 the distance except temperature is zero which $\tanh \beta J = 1$ . It is the same
 idea of the game of telephone. The signal decays.&lt;/p&gt;
@@ -1103,8 +1103,8 @@ y$ 只有 $y = 0$ , 也就是 $\bar{\sigma} = 0$ 一个交点, 没有磁性, 所
 降一点, 到 $T &lt; 2d J$ 时, 就有三个交点分别在 $y &lt; 0, y &gt; 0$ 以及 $y = 0$ 处. 从能量
 上看, $y &gt; 0, y &lt; 0$ 的两个解能量是相同的, 并且都要比 $y = 0$ 时的解要低. 也就是
 说系统是有磁性的.&lt;/p&gt;
-&lt;p&gt;The temperature $T= 2dJ$, where a transition appears, iscalled thecritical
-temperature. It is not exact. It is a meanfield approximation.&lt;/p&gt;
+&lt;p&gt;The temperature $T= 2dJ$, where a transition appears, is called the critical
+temperature. It is not exact. It is a mean field approximation.&lt;/p&gt;
 &lt;h3 id="plus-external-magnetic-field"&gt;Plus External Magnetic Field &lt;eq&gt;B&lt;/eq&gt;&lt;/h3&gt;
 &lt;p&gt;如果加上外磁场, 那么 Energy is&lt;/p&gt;
 $$
@@ -1125,7 +1125,7 @@ $$&lt;p&gt;there is just a shift.&lt;/p&gt;
 &lt;p&gt;此时所有温度都是有确定的磁性.&lt;/p&gt;
 &lt;p&gt;The tiniest little bit of stray magnetic field &lt;eq&gt;h&lt;/eq&gt; will tell us which way to
 go. If &lt;eq&gt;h&lt;/eq&gt;is positive the magnetization will be positive. Right above the &lt;eq&gt;T&lt;/eq&gt;
--axis it won’t be zero, and right below it won’t be zero either. Spontaneous
+-axis it won't be zero, and right below it won't be zero either. Spontaneous
 magnetization has happened.&lt;/p&gt;
 &lt;h2 id="lecture-10-liquid-gas-phase-transition"&gt;Lecture 10: Liquid-Gas Phase Transition&lt;/h2&gt;
 &lt;h3 id="phase-diagram-of-ising-model"&gt;Phase Diagram of Ising Model&lt;/h3&gt;
@@ -1149,10 +1149,10 @@ $$&lt;p&gt;&lt;img src="./2021-03-11-physics-SusskindsStatisticalMechanics/magne
 &lt;ul&gt;
 &lt;li&gt;沿 $h = 0$ 来看, 在 $T &lt; T_{\mathrm{C}}$ 时, 它只有两个简并的解, 也就是说它是
 有磁性的, 随着温度的升高, 磁性减小, 直到跨过 $T = T_{\mathrm{C}}$ (The
-phenomena happening there are all characterized bywhat is calledcritical
+phenomena happening there are all characterized by what is called critical
 exponents), 磁性消失.&lt;/li&gt;
 &lt;li&gt;在 $T=0$ 的轴上, 当 $h &lt; 0$ 时, $\sigma = -1$ . 当 $h&gt;0$ 时, $\sigma = +1$ . That
-comes from the fact thatat zero temperature the spins all choose the lowest
+comes from the fact that zero temperature the spins all choose the lowest
 energy,and there is no fluctuation.&lt;/li&gt;
 &lt;li&gt;沿 $T &lt; T_{\mathrm{C}}$ 的某个温度, 逐渐增大磁场, 也就是图中的虚直线. 在 $h &lt;
 0$ 时, 它有一个 shift, 有 $\sigma &lt; 0$ 的解. 随着 $h\to 0$ , 磁性减小, 但是没有减小
