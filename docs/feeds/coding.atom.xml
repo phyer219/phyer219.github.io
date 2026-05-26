@@ -908,7 +908,7 @@ wp search-replace 'http://xxx.xxx' 'http://xxx.xxx.xxx.xxx:xxxx' --all-tables --
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id="致谢"&gt;致谢&lt;/h2&gt;
 &lt;p&gt;所有为 ChatGPT 提供训练素材的人。&lt;/p&gt;
-</content><category term="coding"/><category term="SELinux"/><category term="RockyLinux"/></entry><entry><title>Hello org-mode</title><link href="https://zqw.ink/2018-10-18-coding-hello_org-mode.html" rel="alternate"/><published>2018-10-18T00:00:00+08:00</published><updated>2018-10-18T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-10-18:/2018-10-18-coding-hello_org-mode.html</id><summary type="html">
+</content><category term="coding"/><category term="SELinux"/><category term="RockyLinux"/></entry><entry><title>Hello org-mode</title><link href="https://zqw.ink/2018-10-18-coding-Hello_org-mode.html" rel="alternate"/><published>2018-10-18T00:00:00+08:00</published><updated>2018-10-18T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-10-18:/2018-10-18-coding-Hello_org-mode.html</id><summary type="html">
 
 
 &lt;h2&gt;符号说明&lt;/h2&gt;
@@ -1209,7 +1209,7 @@ Tammy Mark Karl Lisa Don
 
 
 
-</content><category term="coding"/><category term="emacs"/><category term="org-mode"/></entry><entry><title>Linux使用笔记(update 28/Jan/2021)</title><link href="https://zqw.ink/2018-09-07-coding-linux_note.html" rel="alternate"/><published>2018-09-07T00:00:00+08:00</published><updated>2018-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-07:/2018-09-07-coding-linux_note.html</id><summary type="html">
+</content><category term="coding"/><category term="emacs"/><category term="org-mode"/></entry><entry><title>Linux使用笔记(update 28/Jan/2021)</title><link href="https://zqw.ink/2018-09-07-coding-Linux_note.html" rel="alternate"/><published>2018-09-07T00:00:00+08:00</published><updated>2018-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-07:/2018-09-07-coding-Linux_note.html</id><summary type="html">
 &lt;h2&gt;常用命令&lt;/h2&gt;
 
 &lt;p&gt;1. 显示已安装的软件包列表：&lt;code&gt;dpkg -l&lt;/code&gt;

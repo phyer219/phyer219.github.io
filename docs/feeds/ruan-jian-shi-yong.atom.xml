@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水 - 软件使用</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/ruan-jian-shi-yong.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2024-10-26T00:00:00+08:00</updated><entry><title>在博客中嵌入 JavaScript 之 Plotly.js</title><link href="https://zqw.ink/2024-10-26-coding-plotlyjs.html" rel="alternate"/><published>2024-10-26T00:00:00+08:00</published><updated>2024-10-26T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2024-10-26:/2024-10-26-coding-plotlyjs.html</id><summary type="html">&lt;script src="https://unpkg.com/mathjs@13.2.0/lib/browser/math.js"&gt;&lt;/script&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水 - 软件使用</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/Ruan-Jian-Shi-Yong.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2024-10-26T00:00:00+08:00</updated><entry><title>在博客中嵌入 JavaScript 之 Plotly.js</title><link href="https://zqw.ink/2024-10-26-coding-plotlyjs.html" rel="alternate"/><published>2024-10-26T00:00:00+08:00</published><updated>2024-10-26T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2024-10-26:/2024-10-26-coding-plotlyjs.html</id><summary type="html">&lt;script src="https://unpkg.com/mathjs@13.2.0/lib/browser/math.js"&gt;&lt;/script&gt;
 &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.35.0/plotly.min.js"&gt;&lt;/script&gt;
 &lt;form id="form", class="img-like"&gt;
   &lt;label for="eq"&gt;Enter an equation: f(x)=&lt;/label&gt;
@@ -1829,7 +1829,7 @@ result of mpmath mpf type: (2.472099451021771, 7.496323446432029e-07)&lt;/code&g
 &lt;li&gt;&lt;a href='https://scicomp.stackexchange.com/questions/21483/how-to-avoid-the-round-off-errors-in-the-larger-calculations'&gt;https://scicomp.stackexchange.com/questions/21483/how-to-avoid-the-round-off-errors-in-the-larger-calculations&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Fan Yang 的讨论&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="软件使用"/><category term="numerical stability"/><category term="unstable method"/><category term="round-off error"/><category term="mpmath"/><category term="integral"/></entry><entry><title>C 中的指针与动态内存分配</title><link href="https://zqw.ink/2021-05-14-coding-c_pointer_malloc.html" rel="alternate"/><published>2021-05-14T00:00:00+08:00</published><updated>2021-05-14T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-05-14:/2021-05-14-coding-c_pointer_malloc.html</id><summary type="html">
+</content><category term="软件使用"/><category term="numerical stability"/><category term="unstable method"/><category term="round-off error"/><category term="mpmath"/><category term="integral"/></entry><entry><title>C 中的指针与动态内存分配</title><link href="https://zqw.ink/2021-05-14-coding-C_pointer_malloc.html" rel="alternate"/><published>2021-05-14T00:00:00+08:00</published><updated>2021-05-14T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-05-14:/2021-05-14-coding-C_pointer_malloc.html</id><summary type="html">
 &lt;p&gt;主要是为 Reference 存个书签.&lt;/p&gt;
 
 &lt;h2&gt;Pointers&lt;/h2&gt;
@@ -3100,7 +3100,7 @@ class PrincipalValueInt():
         imag *= 1/self.coeff[0] # bug No.2 分子要除以 a 才行.
         return imag&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;包中的另一些函数.&lt;/p&gt;
-</content><category term="软件使用"/><category term="python"/></entry><entry><title>SSD 备忘与趣事</title><link href="https://zqw.ink/2020-11-29-coding-newssd.html" rel="alternate"/><published>2020-11-29T00:00:00+08:00</published><updated>2020-11-29T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-11-29:/2020-11-29-coding-newssd.html</id><summary type="html">&lt;!-- toc --&gt;
+</content><category term="软件使用"/><category term="python"/></entry><entry><title>SSD 备忘与趣事</title><link href="https://zqw.ink/2020-11-29-coding-newSSD.html" rel="alternate"/><published>2020-11-29T00:00:00+08:00</published><updated>2020-11-29T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-11-29:/2020-11-29-coding-newSSD.html</id><summary type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
 &lt;h1 id="引言"&gt;引言&lt;/h1&gt;
 &lt;p&gt;办公室电脑原来的机械硬盘实在有点不行了, 换了一块新的 SSD.&lt;/p&gt;
@@ -3346,7 +3346,7 @@ wakatime-mode.elc , 定位到 Error 104 对应的语句&lt;/p&gt;
 完美解决.&lt;/p&gt;
 
 &lt;p&gt;对我来说是解决了, 如果有能力的话, 还是把这个 bug 报给开发都比较好. 我还是算了...&lt;/p&gt;
-</content><category term="软件使用"/><category term="emacs"/><category term="wakatime"/></entry><entry><title>Django 笔记：CentOS+Apache+Mariadb+mod_wsgi+Django</title><link href="https://zqw.ink/2020-02-03-physics-django.html" rel="alternate"/><published>2020-02-03T00:00:00+08:00</published><updated>2020-02-03T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-02-03:/2020-02-03-physics-django.html</id><summary type="html">&lt;!-- toc --&gt;
+</content><category term="软件使用"/><category term="emacs"/><category term="wakatime"/></entry><entry><title>Django 笔记：CentOS+Apache+Mariadb+mod_wsgi+Django</title><link href="https://zqw.ink/2020-02-03-physics-Django.html" rel="alternate"/><published>2020-02-03T00:00:00+08:00</published><updated>2020-02-03T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-02-03:/2020-02-03-physics-Django.html</id><summary type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
 &lt;h1 id="写在前面的声明"&gt;写在前面的声明&lt;/h1&gt;
 &lt;p&gt;本人非专业人士，对于写程序只是业余爱好。以下内容仅供参考，我一个业余人士也不能保证内容的准确 …&lt;/p&gt;</summary><content type="html">&lt;!-- toc --&gt;
@@ -4465,7 +4465,7 @@ def poetry(request):
 &lt;li&gt;https://docs.djangoproject.com/zh-hans/3.0/intro/tutorial01/&lt;/li&gt;
 &lt;li&gt;www.google.com&lt;/li&gt;
 &lt;/ol&gt;
-</content><category term="软件使用"/><category term="Django"/><category term="Mariadb"/><category term="Python"/><category term="mod_wsgi"/><category term="Apache"/></entry><entry><title>面向对象, 花式作图</title><link href="https://zqw.ink/2019-10-25-coding-objectplot.html" rel="alternate"/><published>2019-10-25T00:00:00+08:00</published><updated>2019-10-25T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2019-10-25:/2019-10-25-coding-objectplot.html</id><summary type="html">
+</content><category term="软件使用"/><category term="Django"/><category term="Mariadb"/><category term="Python"/><category term="mod_wsgi"/><category term="Apache"/></entry><entry><title>面向对象, 花式作图</title><link href="https://zqw.ink/2019-10-25-coding-objectPlot.html" rel="alternate"/><published>2019-10-25T00:00:00+08:00</published><updated>2019-10-25T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2019-10-25:/2019-10-25-coding-objectPlot.html</id><summary type="html">
 &lt;h2&gt;面向对象&lt;/h2&gt;
 
 &lt;p&gt;面向对象写程序, 是一直在对一些对象作一些操作.&lt;/p&gt;
@@ -4589,7 +4589,7 @@ myFigure.savefig('myFigure.jpg', bbox_inches = 'tight', facecolor='pink')&lt;/co
 &lt;p&gt;https://www.zhihu.com/question/51745620&lt;/p&gt;
 
 &lt;p&gt;https://zhuanlan.zhihu.com/p/35983270&lt;/p&gt;
-</content><category term="软件使用"/><category term="python"/><category term="matplotlib"/></entry><entry><title>Git 使用备忘</title><link href="https://zqw.ink/2019-04-18-coding-git-shi-yong-bei-wang.html" rel="alternate"/><published>2019-04-18T00:00:00+08:00</published><updated>2019-04-18T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2019-04-18:/2019-04-18-coding-git-shi-yong-bei-wang.html</id><summary type="html">
+</content><category term="软件使用"/><category term="python"/><category term="matplotlib"/></entry><entry><title>Git 使用备忘</title><link href="https://zqw.ink/2019-04-18-coding-Git-Shi-Yong-Bei-Wang.html" rel="alternate"/><published>2019-04-18T00:00:00+08:00</published><updated>2019-04-18T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2019-04-18:/2019-04-18-coding-Git-Shi-Yong-Bei-Wang.html</id><summary type="html">
 &lt;h2&gt;基本命令&lt;/h2&gt;
 
 &lt;h3&gt;本地&lt;/h3&gt;
@@ -4751,7 +4751,7 @@ clone 下来 backup 分支&lt;/p&gt;
 &lt;h2&gt;Reference&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href='https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000'&gt;https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000&lt;/a&gt;&lt;/p&gt;
-</content><category term="软件使用"/><category term="hexo"/><category term="git"/></entry><entry><title>Manjaro-18-Gnome 装机备忘</title><link href="https://zqw.ink/2018-11-11-coding-manjaro-18-gnome-zhuang-ji-bei-wang.html" rel="alternate"/><published>2018-11-11T00:00:00+08:00</published><updated>2018-11-11T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-11-11:/2018-11-11-coding-manjaro-18-gnome-zhuang-ji-bei-wang.html</id><summary type="html">
+</content><category term="软件使用"/><category term="hexo"/><category term="git"/></entry><entry><title>Manjaro-18-Gnome 装机备忘</title><link href="https://zqw.ink/2018-11-11-coding-Manjaro-18-Gnome-Zhuang-Ji-Bei-Wang.html" rel="alternate"/><published>2018-11-11T00:00:00+08:00</published><updated>2018-11-11T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-11-11:/2018-11-11-coding-Manjaro-18-Gnome-Zhuang-Ji-Bei-Wang.html</id><summary type="html">
 &lt;h2&gt;基本安装&lt;/h2&gt;
 
 &lt;h3&gt;刻盘&lt;/h3&gt;
