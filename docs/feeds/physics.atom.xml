@@ -1392,7 +1392,7 @@ thermodynamics.&lt;/p&gt;
 &lt;p&gt;给定一个函数 $F(x)$ 如果它满足&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;是一个凸(conves)函数, 也就是像 $y=x^2$ 这种二阶导数恒正的函数. 并且是光滑的函
+&lt;p&gt;是一个凸(convex)函数, 也就是像 $y=x^2$ 这种二阶导数恒正的函数. 并且是光滑的函
 数.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -1464,7 +1464,7 @@ $$&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="examples"&gt;Examples&lt;/h2&gt;
 &lt;h3 id="lagrangian-to-hamiltonian"&gt;Lagrangian to Hamiltonian&lt;/h3&gt;
-&lt;h3 id="in-statistical-thermodynamics"&gt;In Statistical Thermodynamics&lt;/h3&gt;
+&lt;h3 id="in-statistical-thermodynamics-added-in-2026-05-26"&gt;In Statistical Thermodynamics (added in 2026-05-26)&lt;/h3&gt;
 &lt;p&gt;一个封闭热力学系统，当给定体积 &lt;eq&gt;V&lt;/eq&gt;，粒子数 &lt;eq&gt;N&lt;/eq&gt;，和熵 &lt;eq&gt;S&lt;/eq&gt; 后，他的能量为这三个变量的函数&lt;/p&gt;
 $$
 
