@@ -32,13 +32,14 @@ Have a nice day!
 
 ## 系列文章：
 
-- [#总结](/tag/zong-jie)：个人总结汇总。
+- [#总结](/tag/Zong-Jie)：个人总结汇总。
 - [#blog](/tag/blog)：本博客的搭建历史。
-- [#初中回忆录](/tag/chu-zhong-hui-yi-lu)：初中毕业时写的。以前在新浪博客上，现在搬了过来。
-- [#文学青年](/tag/wen-xue-qing-nian)：虚构故事。文学青年的梦一直在。
-- [#Atomic and Optical Physics](/tag/atomic-and-optical-physics)：Wolfgang Ketterle 的 [AMO 公开课](https://www.youtube.com/playlist?list=PLUl4u3cNGP62FPGcyFJkzhqq9c5cHCK32)笔记。
-- [#Susskind](/tag/susskind)：Susskind 的公开课笔记。
-- [#Carl Bender](/tag/carl-bender)：Carl Bender 的 [Perturbation Theory 公开课](https://www.youtube.com/playlist?list=PLzcd6SoIscwjHuWRE38UXWG92uq0Sy4UF)笔记。
+- [#初中回忆录](/tag/Chu-Zhong-Hui-Yi-Lu)：初中毕业时写的。以前在新浪博客上，现在搬了过来。
+- [#文学青年](/tag/Wen-Xue-Qing-Nian)：虚构故事。文学青年的梦一直在。
+- [#Atomic and Optical Physics](/tag/Atomic-and-Optical-Physics)：Wolfgang Ketterle 的 [AMO 公开课](https://www.youtube.com/playlist?list=PLUl4u3cNGP62FPGcyFJkzhqq9c5cHCK32)笔记。
+- [#Susskind](/tag/Susskind)：Susskind 的公开课笔记。
+- [#Carl Bender](/tag/Carl-Bender)：Carl Bender 的 [Perturbation Theory 公开课](https://www.youtube.com/playlist?list=PLzcd6SoIscwjHuWRE38UXWG92uq0Sy4UF)笔记。
+
 ## Blogroll
 
 这里列出一些优秀的个人站点。
