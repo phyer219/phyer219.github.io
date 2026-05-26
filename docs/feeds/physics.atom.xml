@@ -188,7 +188,7 @@ fig.write_html('check2.html', include_mathjax=&amp;quot;cdn&amp;quot;)
 &lt;li&gt;&lt;a href="#interlude"&gt;Interlude&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="#stirlings-approximation"&gt;Stirling's Approximation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#lagrange-multiplier"&gt;Lagrange Multiplier&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#lagrange-multiplier-%E5%8F%82%E8%A7%812018-09-22-lagrange%E4%B9%98%E5%AD%90%E6%B3%95%E6%B1%82%E5%B8%A6%E6%9C%89%E7%BA%A6%E6%9D%9F%E7%9A%84%E6%9E%81%E6%A4%8D"&gt;Lagrange Multiplier (参见：2018-09-22-Lagrange乘子法求带有约束的极植)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href="#about"&gt;...about&lt;/a&gt;&lt;/li&gt;
@@ -1211,7 +1211,7 @@ $$
 \end{align}
 
 $$&lt;p&gt;Q.E.D.&lt;/p&gt;
-&lt;h3 id="lagrange-multiplier"&gt;Lagrange Multiplier&lt;/h3&gt;
+&lt;h3 id="lagrange-multiplier-参见2018-09-22-lagrange乘子法求带有约束的极植"&gt;Lagrange Multiplier (参见：&lt;a href="./2018-09-22-physics-Lagrange_multiply_optim.html"&gt;2018-09-22-Lagrange乘子法求带有约束的极植&lt;/a&gt;)&lt;/h3&gt;
 &lt;p&gt;另一种不同的理解方式, 不是找 constrain 的切线, 而是 shift了 &lt;eq&gt;F&lt;/eq&gt; 使得 $F(G)$ 在零
 处有极值.&lt;/p&gt;
 &lt;p&gt;具体来讲, function $F(x_i)$ , constrain $G(x_i) = 0$ , 那么在 $x_i$ (如 $x_1 = x,
@@ -1368,7 +1368,184 @@ $$&lt;h2 id="reference"&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;PhysRevA.78.053606, Eqn A13(b), A14(b)&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="physics"/><category term="数学"/><category term="留数定理"/><category term="复变函数"/><category term="contour integral"/></entry><entry><title>二次量子化笔记 (update 06/Dec/2019)</title><link href="https://zqw.ink/2018-09-27-physics-second_quant.html" rel="alternate"/><published>2018-09-27T00:00:00+08:00</published><updated>2018-09-27T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-27:/2018-09-27-physics-second_quant.html</id><summary type="html">
+</content><category term="physics"/><category term="数学"/><category term="留数定理"/><category term="复变函数"/><category term="contour integral"/></entry><entry><title>Legendre Transform</title><link href="https://zqw.ink/2020-08-05-physics-legendretrans.html" rel="alternate"/><published>2020-08-05T00:00:00+08:00</published><updated>2020-08-05T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-08-05:/2020-08-05-physics-legendretrans.html</id><summary type="html">
+&lt;h2 id="intro"&gt;Intro&lt;/h2&gt;
+&lt;p&gt;多次看到过 Legendre transform 这个名词.&lt;/p&gt;
+&lt;p&gt;Reference [Am. J. Phys. 77 (7), July 2009] 非常详细清晰友好地解答了我心中的各种
+疑惑, 现将它做一个整理.&lt;/p&gt;
+&lt;p&gt;它在 …&lt;/p&gt;</summary><content type="html">
+&lt;h2 id="intro"&gt;Intro&lt;/h2&gt;
+&lt;p&gt;多次看到过 Legendre transform 这个名词.&lt;/p&gt;
+&lt;p&gt;Reference [Am. J. Phys. 77 (7), July 2009] 非常详细清晰友好地解答了我心中的各种
+疑惑, 现将它做一个整理.&lt;/p&gt;
+&lt;p&gt;它在开头说道:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The Legendre transform is a powerful tool in theoretical physics and plays an
+important role in classical mechanics, statistical mechanics, and
+thermodynamics.&lt;/p&gt;
+&lt;p&gt;Legendre transform 在理论物理领域是一个强有用的工具, 在经典力学, 统计力学, 以及
+热力学中发挥了的作用.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;进行 Legendre transform 之后, 相当于是相同的信息, 用了不同的方式进行展示
+(display).&lt;/p&gt;
+&lt;h3 id="definition"&gt;Definition&lt;/h3&gt;
+&lt;p&gt;给定一个函数 $F(x)$ 如果它满足&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;是一个凸(conves)函数, 也就是像 $y=x^2$ 这种二阶导数恒正的函数. 并且是光滑的函
+数.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;eq&gt;F&lt;/eq&gt; 的导数, 比 &lt;eq&gt;x&lt;/eq&gt; 本身, 更加容易去测量, 控制或者考虑.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;那么对它 Legendre transform 更加方便.&lt;/p&gt;
+&lt;p&gt;对于函数 $F(x)$ 它的斜率&lt;/p&gt;
+$$
+
+\begin{align}
+  s(x) \equiv \frac{\mathrm{d}F(x)}{\mathrm{d}x}
+\end{align}
+
+$$&lt;p&gt;$s(x)$ 是一个单调函数, 也就是说 &lt;eq&gt;s&lt;/eq&gt; 和 &lt;eq&gt;x&lt;/eq&gt; 是一一对应的. 那么, 就可以将 &lt;eq&gt;s&lt;/eq&gt; 做为
+一个独立变量来代替 &lt;eq&gt;x&lt;/eq&gt;, 即&lt;/p&gt;
+$$
+
+\begin{align}
+  F(x(s))
+\end{align}
+
+$$&lt;p&gt;也就是说我们用了 &lt;eq&gt;F&lt;/eq&gt; 的导数, 而不是 &lt;eq&gt;x&lt;/eq&gt; 本身来描述这个函数关系.&lt;/p&gt;
+&lt;p&gt;这个用复合函数的方法, 将 &lt;eq&gt;x&lt;/eq&gt; 用 &lt;eq&gt;F&lt;/eq&gt; 的导数, 即 &lt;eq&gt;s&lt;/eq&gt; 做了替换. 这是最容易想到的.
+而 Legendre transform 提供了另一种方法, 定义 $F(x)$ 的 Legendre transform $G(s)$
+为&lt;/p&gt;
+$$
+
+\begin{align}
+  G(s) \equiv s x(s) - F(x(s))
+\end{align}
+
+$$&lt;p&gt;需要注意的是上式只有一个独立变量 &lt;eq&gt;s&lt;/eq&gt; . Legendre transform 的好处是, $G(s)$ 和
+$F(x)$ 一种对称的的关系(此外 Reference [Am. J. Phys. 77 (7), July 2009] 给出一一
+种几何上的直观理解) 以及一些其它的性质. 这体现在&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;新函数对新变量的导数是旧变量，反之亦然&lt;/p&gt;
+$$
+
+  \begin{align}
+    x(s) = \frac{\mathrm{d}G}{\mathrm{d}s} \\
+    s(x) = \frac{\mathrm{d}F}{\mathrm{d}x}
+  \end{align}
+  
+$$&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Legendre 变换的逆变换是它本身. 也就是说经过两次 Legendre 变换后, 回到函数本身.
+形式上将这种关系表示为&lt;/p&gt;
+$$
+
+  \begin{align}
+  \{F, x\} \Leftrightarrow \{G, s\} \\
+    G(s) + f(x) = sx
+  \end{align}
+  
+$$&lt;p&gt;要注意独立变量只有一个, $s, x$ 并不相互独立.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;它们的极值&lt;/p&gt;
+$$
+
+  \begin{align}
+    F_{\mathrm{min}} = -G(0) \\
+    G_{\mathrm{min}} = -F(0)
+  \end{align}
+  
+$$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="examples"&gt;Examples&lt;/h2&gt;
+&lt;h3 id="lagrangian-to-hamiltonian"&gt;Lagrangian to Hamiltonian&lt;/h3&gt;
+&lt;h3 id="in-statistical-thermodynamics"&gt;In Statistical Thermodynamics&lt;/h3&gt;
+&lt;p&gt;一个封闭热力学系统，当给定体积 &lt;eq&gt;V&lt;/eq&gt;，粒子数 &lt;eq&gt;N&lt;/eq&gt;，和熵 &lt;eq&gt;S&lt;/eq&gt; 后，他的能量为这三个变量的函数&lt;/p&gt;
+$$
+
+\begin{align}
+  E(N, S, V)
+\end{align}
+
+$$&lt;p&gt;如果我们对 $N, S, V$ 这三个变量做微小改变，那么系统的能量也会做微小改变，即&lt;/p&gt;
+$$
+
+\begin{align}
+  \mathrm{d}E(N, S, V) =&amp;
+  \left.\left(\frac{\partial E}{\partial N}\right)\right|_{S, V} \mathrm{d}N
+  + \left.\left(\frac{\partial E}{\partial S}\right)\right|_{N, V} \mathrm{d}S
+  + \left.\left(\frac{\partial E}{\partial V}\right)\right|_{N, S} \mathrm{d}V\\
+  =&amp; \mu \mathrm{d}N + T \mathrm{d}S  - p \mathrm{d}V
+\end{align}
+
+$$&lt;p&gt;如果我们想用能量来描述这个系统， 也就是说固定系统的 $N, T, V$ (正则系综)。
+那么我们就可以做 Legendre 变换（可以差一个符号约定）得到 Helmholtz free energy,&lt;/p&gt;
+$$
+
+\begin{align}
+  F = E - \left.\left(\frac{\partial E}{\partial S}\right)\right|_{N, V} S
+  = E - T S
+\end{align}
+
+$$&lt;p&gt;那么&lt;/p&gt;
+$$
+
+\begin{align}
+  S = -\left.\left(\frac{\partial F}{\partial T}\right)\right|_{N, V}
+\end{align}
+
+$$&lt;p&gt;对应的微分&lt;/p&gt;
+$$
+
+\begin{align}
+  \mathrm{d}F(N, T, V) =&amp;
+  \left.\left(\frac{\partial F}{\partial N}\right)\right|_{T, V} \mathrm{d}N
+  + \left.\left(\frac{\partial F}{\partial T}\right)\right|_{N, V} \mathrm{d}T
+  + \left.\left(\frac{\partial F}{\partial V}\right)\right|_{N, T} \mathrm{d}V\\
+  =&amp; \mu \mathrm{d}N - S \mathrm{d}T  - p \mathrm{d}V.
+\end{align}
+
+$$&lt;p&gt;同样的，我们也可以对 &lt;eq&gt;N&lt;/eq&gt; 做 Legendre 变换，得到 $\mu, T, V$ 巨正则系综的巨热力学势，&lt;/p&gt;
+$$
+
+\begin{align}
+  \Omega = F - \left.\left(\frac{\partial F}{\partial N}\right)\right|_{T, V} N
+  = F - \mu N = E - T S - \mu N
+\end{align}
+
+$$$$
+
+\begin{align}
+  N = -\left.\left(\frac{\partial \Omega}{\partial \mu}\right)\right|_{T, V}
+\end{align}
+
+$$$$
+
+\begin{align}
+  \mathrm{d}\Omega(\mu, T, V) =&amp;
+  \left.\left(\frac{\partial \Omega}{\partial \mu}\right)\right|_{T, V} \mathrm{d}\mu
+  + \left.\left(\frac{\partial \Omega}{\partial T}\right)\right|_{\mu, V} \mathrm{d}T
+  + \left.\left(\frac{\partial \Omega}{\partial V}\right)\right|_{\mu, T} \mathrm{d}V\\
+  =&amp; -N \mathrm{d}\mu - S \mathrm{d}T  - p \mathrm{d}V.
+\end{align}
+
+$$&lt;p&gt;类似的，还可以把 &lt;eq&gt;F&lt;/eq&gt; 对体积做 Legendre 变换得到等温等压系综的 Gibbs 自由能 $G(T, p, N) = E - TS + pV$，以及把内能 &lt;eq&gt;E&lt;/eq&gt; 对体积做 Legendre 变换得到等温等压系综的焓(Enthalpy) $H(S, p, N) = E + pV$.&lt;/p&gt;
+&lt;h2 id="reference"&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Herbert Goldstein Charles P. Poole John Safko - Classical Mechanics&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Making sense of the Legendre transform, Am. J. Phys. 77 (7), July 2009
+(arXiv:0806.1147v2  [physics.ed-ph]  4 Mar 2009)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="physics"/><category term="物理"/><category term="数学"/><category term="Legendre transformation"/><category term="classical mechanics"/><category term="statistical mechanics"/></entry><entry><title>二次量子化笔记 (update 06/Dec/2019)</title><link href="https://zqw.ink/2018-09-27-physics-second_quant.html" rel="alternate"/><published>2018-09-27T00:00:00+08:00</published><updated>2018-09-27T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-27:/2018-09-27-physics-second_quant.html</id><summary type="html">
 &lt;h2 id="单体力学量"&gt;单体力学量&lt;/h2&gt;
 &lt;h3 id="本征表象"&gt;本征表象&lt;/h3&gt;
 &lt;p&gt;&lt;eq&gt;N&lt;/eq&gt; 个粒子组成的系统，对于单个粒子的力学量 $\hat{f}$ ，其第 &lt;eq&gt;i&lt;/eq&gt; 个本征值为 $f_i$ ，本征态为 $\mid i \rangle$ ，即
@@ -2160,10 +2337,10 @@ $$
 
 h =2r
 
-$$&lt;h1 id="一般形式"&gt;一般形式&lt;/h1&gt;
+$$&lt;h2 id="一般形式"&gt;一般形式&lt;/h2&gt;
 &lt;p&gt;求二维函数 $f(x,y)=0$ 在约束 $g(x,y)=0$ 下的极值. 那么, $f(x,y)$ 的等高线与约束相切的点就是极值. 如图&lt;/p&gt;
-&lt;p&gt;&lt;img src="./2018-09-22-physics-Lagrange%E4%B9%98%E5%AD%90%E6%B3%95%E6%B1%82%E5%B8%A6%E6%9C%89%E7%BA%A6%E6%9D%9F%E7%9A%84%E6%9E%81%E6%A4%8D/fig.jpg" alt="fig" /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="./2018-09-22-physics-Lagrange%E4%B9%98%E5%AD%90%E6%B3%95%E6%B1%82%E5%B8%A6%E6%9C%89%E7%BA%A6%E6%9D%9F%E7%9A%84%E6%9E%81%E6%A4%8D/fig.py"&gt;picture code&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="./2018-09-22-physics-Lagrange_multiply_optim/fig.jpg" alt="fig" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="./2018-09-22-physics-Lagrange_multiply_optim/fig.py"&gt;picture code&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;高维可以做类似的推广.&lt;/p&gt;
 &lt;h2 id="后续补充"&gt;后续补充&lt;/h2&gt;
 &lt;p&gt;画图&lt;/p&gt;

@@ -52,7 +52,7 @@ tags:
   - [Liquid-Gas Phase Transition](#liquid-gas-phase-transition)
 - [Interlude](#interlude)
   - [Stirling's Approximation](#stirlings-approximation)
-  - [Lagrange Multiplier](#lagrange-multiplier)
+  - [Lagrange Multiplier (参见：2018-09-22-Lagrange乘子法求带有约束的极植)](#lagrange-multiplier-参见2018-09-22-lagrange乘子法求带有约束的极植)
 - [...about](#about)
 - [Reference](#reference)
 
@@ -1265,7 +1265,7 @@ $$
 
 Q.E.D.
 
-### Lagrange Multiplier
+### Lagrange Multiplier (参见：[2018-09-22-Lagrange乘子法求带有约束的极植](./2018-09-22-physics-Lagrange_multiply_optim.md))
 
 另一种不同的理解方式, 不是找 constrain 的切线, 而是 shift了 $F$ 使得 $F(G)$ 在零
 处有极值.

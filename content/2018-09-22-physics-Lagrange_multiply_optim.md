@@ -43,15 +43,13 @@ $$
 h =2r
 $$
 
-# 一般形式
+## 一般形式
 
 求二维函数 $f(x,y)=0$ 在约束 $g(x,y)=0$ 下的极值. 那么, $f(x,y)$ 的等高线与约束相切的点就是极值. 如图
 
-![fig](./2018-09-22-physics-Lagrange乘子法求带有约束的极植/fig.jpg)
+![fig](./2018-09-22-physics-Lagrange_multiply_optim/fig.jpg)
 
- [picture code](./2018-09-22-physics-Lagrange乘子法求带有约束的极植/fig.py)
-
-
+ [picture code](./2018-09-22-physics-Lagrange_multiply_optim/fig.py)
 
 高维可以做类似的推广.
 
@@ -62,4 +60,3 @@ $$
 例题
 
 一般形式
-
