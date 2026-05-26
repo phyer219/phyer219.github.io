@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/all.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2026-01-25T00:00:00+08:00</updated><entry><title>Interested talk on SCA/HPCAsia2026</title><link href="https://zqw.ink/2026-01-25-blog-SCA_HPCAsia2026.html" rel="alternate"/><published>2026-01-25T00:00:00+08:00</published><updated>2026-01-25T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2026-01-25:/2026-01-25-blog-SCA_HPCAsia2026.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/all.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2026-01-25T00:00:00+08:00</updated><entry><title>Interested talk on SCA/HPCAsia2026</title><link href="https://zqw.ink/2026-01-25-blog-sca_hpcasia2026.html" rel="alternate"/><published>2026-01-25T00:00:00+08:00</published><updated>2026-01-25T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2026-01-25:/2026-01-25-blog-sca_hpcasia2026.html</id><summary type="html">
 &lt;p&gt;会议日记 &lt;a href="https://www.sca-hpcasia2026.jp/index.html"&gt;https://www.sca-hpcasia2026.jp/index.html&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="#monday-january-26"&gt;Monday, January 26&lt;/a&gt;
@@ -1505,7 +1505,7 @@ wp search-replace 'http://xxx.xxx' 'http://xxx.xxx.xxx.xxx:xxxx' --all-tables --
 两篇都看完了，忍不住吐槽，你这是小学生写作水平，就比记流水账好一些
 王桑还是这么自信，我很放心，绝对不会内耗&lt;/p&gt;
 &lt;/blockquote&gt;
-</content><category term="blog"/><category term="总结"/><category term="深圳"/><category term="延期"/><category term="毕业"/><category term="鹅城"/><category term="惠州"/></entry><entry><title>NSR 计算 s-wave BEC-BCS crossover 的临界温度</title><link href="https://zqw.ink/2024-11-13-physics-NSR-Tc-s-wave.html" rel="alternate"/><published>2024-11-13T00:00:00+08:00</published><updated>2024-11-13T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2024-11-13:/2024-11-13-physics-NSR-Tc-s-wave.html</id><summary type="html">&lt;h2&gt;Sokhotski-Plemelj 积分&lt;/h2&gt;
+</content><category term="blog"/><category term="总结"/><category term="深圳"/><category term="延期"/><category term="毕业"/><category term="鹅城"/><category term="惠州"/></entry><entry><title>NSR 计算 s-wave BEC-BCS crossover 的临界温度</title><link href="https://zqw.ink/2024-11-13-physics-nsr-tc-s-wave.html" rel="alternate"/><published>2024-11-13T00:00:00+08:00</published><updated>2024-11-13T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2024-11-13:/2024-11-13-physics-nsr-tc-s-wave.html</id><summary type="html">&lt;h2&gt;Sokhotski-Plemelj 积分&lt;/h2&gt;
 &lt;p&gt;根据 Sokhotski-Plemelj 定理有
 \begin{align}
   \frac{1}{x + \mathrm{i}0^+}
@@ -2966,7 +2966,7 @@ plt.savefig('HO_propagator.svg', transparent=True)
 &lt;li&gt;&lt;a href="https://physics.stackexchange.com/questions/20797/differentiating-propagator-greens-function-correlation-function-etc/476630#476630"&gt;Physics Stackexchange: Differentiating Propagator, Green's function, Correlation function, etc&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://physics.stackexchange.com/questions/209846/dirac-delta-in-definition-of-green-function"&gt;Physics Stackexchange: Dirac Delta in definition of Green function&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="专业笔记"/><category term="physics"/><category term="scattering"/><category term="propagator"/></entry><entry><title>原子自发辐射与主方程</title><link href="https://zqw.ink/2023-12-31-physics-TLS_master_EQ.html" rel="alternate"/><published>2023-12-31T00:00:00+08:00</published><updated>2023-12-31T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2023-12-31:/2023-12-31-physics-TLS_master_EQ.html</id><summary type="html">&lt;!-- toc --&gt;
+</content><category term="专业笔记"/><category term="physics"/><category term="scattering"/><category term="propagator"/></entry><entry><title>原子自发辐射与主方程</title><link href="https://zqw.ink/2023-12-31-physics-tls_master_eq.html" rel="alternate"/><published>2023-12-31T00:00:00+08:00</published><updated>2023-12-31T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2023-12-31:/2023-12-31-physics-tls_master_eq.html</id><summary type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="#%E5%8E%9F%E5%AD%90%E8%87%AA%E5%8F%91%E8%BE%90%E5%B0%84%E4%B8%8E%E4%B8%BB%E6%96%B9%E7%A8%8B"&gt;原子自发辐射与主方程&lt;/a&gt;
@@ -3556,7 +3556,7 @@ $$&lt;/p&gt;
 &lt;li&gt;Pathria, R. K., and Paul D. Beale. Statistical Mechanics. 3rd ed. Amsterdam ; Boston: Elsevier/Academic Press, 2011. Chap.7 and Appendices D, E.&lt;/li&gt;
 &lt;li&gt;Stoof, Henk T. C., Koos B. Gubbels, and Dennis B. M. Dickerscheid. Ultracold Quantum Fields. Theoretical and Mathematical Physics. Dordrecht ; New York: Springer, 2009. Chap.4.3.&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="专业笔记"/><category term="physics"/><category term="chemical potential"/></entry><entry><title>一个 Hadamard finite part</title><link href="https://zqw.ink/2023-10-23-physics-Hadamard.html" rel="alternate"/><published>2023-10-23T00:00:00+08:00</published><updated>2023-10-23T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2023-10-23:/2023-10-23-physics-Hadamard.html</id><summary type="html">&lt;!-- toc --&gt;
+</content><category term="专业笔记"/><category term="physics"/><category term="chemical potential"/></entry><entry><title>一个 Hadamard finite part</title><link href="https://zqw.ink/2023-10-23-physics-hadamard.html" rel="alternate"/><published>2023-10-23T00:00:00+08:00</published><updated>2023-10-23T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2023-10-23:/2023-10-23-physics-hadamard.html</id><summary type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
 &lt;p&gt;$F(\rho, z)$ 是一个光滑，并且在正负无穷快速decay到时0,的函数，比如 $F(\rho, z) = 1/(z^2 + 1)$。我们想要计算
 $$
@@ -4039,7 +4039,7 @@ fig.savefig(get_file_name(__file__)[:-4] + '.png', dpi=200, transparent=True)
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://matplotlib.org/stable/"&gt;https://matplotlib.org/stable/&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
-</content><category term="软件使用"/><category term="python"/><category term="matplotlib"/></entry><entry><title>Scattering Summarize</title><link href="https://zqw.ink/2023-09-15-physics-Scattering.html" rel="alternate"/><published>2023-09-15T00:00:00+08:00</published><updated>2023-09-15T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2023-09-15:/2023-09-15-physics-Scattering.html</id><summary type="html">&lt;!-- toc --&gt;
+</content><category term="软件使用"/><category term="python"/><category term="matplotlib"/></entry><entry><title>Scattering Summarize</title><link href="https://zqw.ink/2023-09-15-physics-scattering.html" rel="alternate"/><published>2023-09-15T00:00:00+08:00</published><updated>2023-09-15T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2023-09-15:/2023-09-15-physics-scattering.html</id><summary type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
 &lt;p&gt;挖个坑，之后慢慢填。&lt;/p&gt;
 &lt;h1 id="一维方势阱"&gt;一维方势阱&lt;/h1&gt;
@@ -4517,7 +4517,7 @@ print("Elapsed time is ", toc-tic)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;&lt;a href='https://www.intel.com/content/www/us/en/developer/tools/oneapi/ai-analytics-toolkit.html#gs.w44gqo'&gt;Intel® AI Analytics Toolkit (AI Kit)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href='https://www.intel.com/content/www/us/en/developer/tools/oneapi/distribution-for-python.html#gs.w44b4p'&gt;Intel® Distribution for Python&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="软件使用"/><category term="python"/><category term="intel python"/></entry><entry><title>开放系统读书会：非选择测量，连续测量，量子芝诺效应</title><link href="https://zqw.ink/2023-03-28-physics-quantum_Zeno_effect.html" rel="alternate"/><published>2023-03-28T00:00:00+08:00</published><updated>2023-03-28T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2023-03-28:/2023-03-28-physics-quantum_Zeno_effect.html</id><summary type="html">
+</content><category term="软件使用"/><category term="python"/><category term="intel python"/></entry><entry><title>开放系统读书会：非选择测量，连续测量，量子芝诺效应</title><link href="https://zqw.ink/2023-03-28-physics-quantum_zeno_effect.html" rel="alternate"/><published>2023-03-28T00:00:00+08:00</published><updated>2023-03-28T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2023-03-28:/2023-03-28-physics-quantum_zeno_effect.html</id><summary type="html">
 
 &lt;h2&gt;直接连续测量的量子芝诺效应（The Quantum Zeno Effect）&lt;/h2&gt;
 
@@ -5056,7 +5056,7 @@ $\theta\in (-\pi, \pi]$ 选为第一黎曼面，也就是主值所在的黎曼�
 &lt;li&gt;&lt;a href='https://en.wikipedia.org/wiki/Square_root#Square_roots_of_negative_and_complex_numbers'&gt;Wikipedia: Square root&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href='https://en.wikipedia.org/wiki/Exponentiation#Power_functions'&gt;Wikipedia: Exponentiation&lt;/a&gt; Failure of power and logarithm identities 部分&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="专业笔记"/><category term="数学"/><category term="复变函数"/><category term="branch cut"/><category term="contour integral"/></entry><entry><title>Atomic and Optical Physics I, 13 Atom-light Interaction II， Wigner–Eckart theorem</title><link href="https://zqw.ink/2022-12-21-physics-MITAMO13.html" rel="alternate"/><published>2022-12-21T00:00:00+08:00</published><updated>2022-12-21T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-12-21:/2022-12-21-physics-MITAMO13.html</id><summary type="html">
+</content><category term="专业笔记"/><category term="数学"/><category term="复变函数"/><category term="branch cut"/><category term="contour integral"/></entry><entry><title>Atomic and Optical Physics I, 13 Atom-light Interaction II， Wigner–Eckart theorem</title><link href="https://zqw.ink/2022-12-21-physics-mitamo13.html" rel="alternate"/><published>2022-12-21T00:00:00+08:00</published><updated>2022-12-21T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-12-21:/2022-12-21-physics-mitamo13.html</id><summary type="html">
 &lt;h2&gt;Information&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -5343,7 +5343,7 @@ P_e(t) = \frac{d_x^2 E_0^2}{4 \hbar^2}
 &lt;li&gt;&lt;a href='https://physics.stackexchange.com/questions/213736/pi-sigma-atomic-transitions-with-respect-to-the-magnetic-field-axis'&gt;Physics StackExchange: $\pi$ , $\sigma$ - atomic transitions with respect to the magnetic field axis&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href='https://en.wikipedia.org/wiki/Polarization_(waves)'&gt;Wikipedia: Polarization (waves) (defination of $\pi$ , $\sigma$ light)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="专业笔记"/><category term="Atomic and Optical Physics"/><category term="Wigner–Eckart theorem"/></entry><entry><title>Atomic and Optical Physics I, 12 Atoms in External Filds IV and Atom-light Interaction I</title><link href="https://zqw.ink/2022-12-20-physics-MITAMO12.html" rel="alternate"/><published>2022-12-20T00:00:00+08:00</published><updated>2022-12-20T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-12-20:/2022-12-20-physics-MITAMO12.html</id><summary type="html">
+</content><category term="专业笔记"/><category term="Atomic and Optical Physics"/><category term="Wigner–Eckart theorem"/></entry><entry><title>Atomic and Optical Physics I, 12 Atoms in External Filds IV and Atom-light Interaction I</title><link href="https://zqw.ink/2022-12-20-physics-mitamo12.html" rel="alternate"/><published>2022-12-20T00:00:00+08:00</published><updated>2022-12-20T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-12-20:/2022-12-20-physics-mitamo12.html</id><summary type="html">
 &lt;h2&gt;Information&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -5574,7 +5574,7 @@ E1 transition.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Goldstein, H., Poole, C. P. &amp; Safko, J. Classical Mechanics. 665 (2011).&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="专业笔记"/><category term="Atomic and Optical Physics"/><category term="Dipole approximation"/></entry><entry><title>Atomic and Optical Physics I, 11 Atoms in External Filds III, Field Ionization and AC Stark effect</title><link href="https://zqw.ink/2022-12-09-physics-MITAMO11.html" rel="alternate"/><published>2022-12-09T00:00:00+08:00</published><updated>2022-12-09T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-12-09:/2022-12-09-physics-MITAMO11.html</id><summary type="html">
+</content><category term="专业笔记"/><category term="Atomic and Optical Physics"/><category term="Dipole approximation"/></entry><entry><title>Atomic and Optical Physics I, 11 Atoms in External Filds III, Field Ionization and AC Stark effect</title><link href="https://zqw.ink/2022-12-09-physics-mitamo11.html" rel="alternate"/><published>2022-12-09T00:00:00+08:00</published><updated>2022-12-09T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-12-09:/2022-12-09-physics-mitamo11.html</id><summary type="html">
 &lt;h2&gt;Information&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -5844,7 +5844,7 @@ is the photon wave length.&lt;/p&gt;
 &lt;li&gt;&lt;a href='https://en.wikipedia.org/wiki/Bloch%E2%80%93Siegert_shift'&gt;Wikipedia: Bloch–Siegert shift&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href='https://en.wikipedia.org/wiki/Oscillator_strength'&gt;Wikipedia: Oscillator strength&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="专业笔记"/><category term="Atomic and Optical Physics"/><category term="Stark effect"/><category term="AC stark effect"/><category term="Field Ionization"/><category term="Bloch–Siegert shift"/></entry><entry><title>Atomic and Optical Physics I, 10 Atoms in External Filds II, Quadratic DC Stark effect</title><link href="https://zqw.ink/2022-12-04-physics-MITAMO10.html" rel="alternate"/><published>2022-12-04T00:00:00+08:00</published><updated>2022-12-04T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-12-04:/2022-12-04-physics-MITAMO10.html</id><summary type="html">
+</content><category term="专业笔记"/><category term="Atomic and Optical Physics"/><category term="Stark effect"/><category term="AC stark effect"/><category term="Field Ionization"/><category term="Bloch–Siegert shift"/></entry><entry><title>Atomic and Optical Physics I, 10 Atoms in External Filds II, Quadratic DC Stark effect</title><link href="https://zqw.ink/2022-12-04-physics-mitamo10.html" rel="alternate"/><published>2022-12-04T00:00:00+08:00</published><updated>2022-12-04T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-12-04:/2022-12-04-physics-mitamo10.html</id><summary type="html">
 &lt;h2&gt;Information&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -6056,7 +6056,7 @@ like metallic conducting sphere of the same volum.&lt;/blockquote&gt;
 &lt;li&gt;Jackson, J. D. Classical electrodynamics. (Wiley, 1999)&lt;/li&gt;
 &lt;li&gt;Jun John Sakurai, Jim Napolitano, Modern Quantum Mechanics. (Cambridge University Press, 2017)&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="专业笔记"/><category term="Atomic and Optical Physics"/><category term="Stark effect"/><category term="Quadratic DC stark effect"/></entry><entry><title>Atomic and Optical Physics I, 09 Atoms V and Atoms in External Filds I</title><link href="https://zqw.ink/2022-11-22-physics-MITAMO09.html" rel="alternate"/><published>2022-11-22T00:00:00+08:00</published><updated>2022-11-22T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-11-22:/2022-11-22-physics-MITAMO09.html</id><summary type="html">
+</content><category term="专业笔记"/><category term="Atomic and Optical Physics"/><category term="Stark effect"/><category term="Quadratic DC stark effect"/></entry><entry><title>Atomic and Optical Physics I, 09 Atoms V and Atoms in External Filds I</title><link href="https://zqw.ink/2022-11-22-physics-mitamo09.html" rel="alternate"/><published>2022-11-22T00:00:00+08:00</published><updated>2022-11-22T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-11-22:/2022-11-22-physics-mitamo09.html</id><summary type="html">
 &lt;h2&gt;Information&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href='https://ocw.mit.edu/courses/physics/8-421-atomic-and-optical-physics-i-spring-2014/'&gt;MIT官方介绍&lt;/a&gt;&lt;/li&gt;
@@ -6521,7 +6521,7 @@ for i in r.json()['results']:
 &lt;p&gt;返回结果如下：&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;200
 {'backdrop_path': '/cPqA1G5odxY7uVJ0i81z5E2tSSW.jpg', 'first_air_date': '2022-07-02', 'genre_ids': [16, 10759, 35], 'id': 154494, 'name': 'Lycoris Recoil', 'origin_country': ['JP'], 'original_language': 'ja', 'original_name': 'リコリス・リコイル', 'overview': "For these peaceful days――there’s a secret behind it all. A secret organization that prevents crimes: “DA - Direct Attack”. And their group of all-girl agents: “Lycoris”. This peaceful everyday life is all thanks to these young girls. The elite Chisato Nishikigi is the strongest Lycoris agent of all time. Alongside is Takina Inoue, the talented but mysterious Lycoris. They work together at one of its branches–Café LycoReco. Here, the orders this café takes range from coffee and sweets to childcare, shopping, teaching Japanese to foreign students, etc. It's mostly tasks unbefitting of Lycoris. The free-spirited and optimistic pacifist, Chisato. And the cool-headed and efficient Takina. The chaotic everyday lives of this mismatched duo begin!", 'popularity': 112.401, 'poster_path': '/dfGf0Ti3BEKpBpVCVtEXKTjQjNR.jpg', 'vote_average': 7.7, 'vote_count': 10}&lt;/code&gt;&lt;/pre&gt;
-</content><category term="软件使用"/><category term="python"/><category term="api"/></entry><entry><title>Wigner D-matrix</title><link href="https://zqw.ink/2022-06-07-physics-Wigner_D.html" rel="alternate"/><published>2022-06-07T00:00:00+08:00</published><updated>2022-06-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-06-07:/2022-06-07-physics-Wigner_D.html</id><summary type="html">
+</content><category term="软件使用"/><category term="python"/><category term="api"/></entry><entry><title>Wigner D-matrix</title><link href="https://zqw.ink/2022-06-07-physics-wigner_d.html" rel="alternate"/><published>2022-06-07T00:00:00+08:00</published><updated>2022-06-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-06-07:/2022-06-07-physics-wigner_d.html</id><summary type="html">
 &lt;h2&gt;Wigner D-matrix&lt;/h2&gt;
 
 
@@ -6644,7 +6644,7 @@ plt.savefig('magnetic-dipole.png')&lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href='https://en.wikipedia.org/wiki/Magnetic_dipole'&gt;wikipedia: Magnetic diopole&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="专业笔记"/><category term="SO(3)"/><category term="group theory"/></entry><entry><title>SO(3) generators in 3 dimentiona representation in cartesian and spherical basis</title><link href="https://zqw.ink/2022-05-17-physics-SO3_spherical_cartesian_basis.html" rel="alternate"/><published>2022-05-17T00:00:00+08:00</published><updated>2022-05-17T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-05-17:/2022-05-17-physics-SO3_spherical_cartesian_basis.html</id><summary type="html">
+</content><category term="专业笔记"/><category term="SO(3)"/><category term="group theory"/></entry><entry><title>SO(3) generators in 3 dimentiona representation in cartesian and spherical basis</title><link href="https://zqw.ink/2022-05-17-physics-so3_spherical_cartesian_basis.html" rel="alternate"/><published>2022-05-17T00:00:00+08:00</published><updated>2022-05-17T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-05-17:/2022-05-17-physics-so3_spherical_cartesian_basis.html</id><summary type="html">
 &lt;h2&gt;Demo&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href='2022-05-17-physics-SO3_spherical_cartesian_basis/code.py'&gt;code&lt;/a&gt;&lt;/p&gt;
@@ -6810,7 +6810,7 @@ jz_spherical:
 &lt;p&gt;缺点在于一切动要自己写，就显得比较简陋。但这正体现了本博客极简实用的精神。&lt;/p&gt;
 &lt;p&gt;目前正在以非常慢的速度建设中，任何建议请直接 email 博主：&lt;a href="mailto:zeqing6688@126.com"&gt;zeqing6688@126.com&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://zqw.ink/hexo_ver/"&gt;旧版&lt;/a&gt;目前仍可访问。&lt;/p&gt;
-</content><category term="想说"/><category term="blog"/><category term="hexo"/></entry><entry><title>风沙 苹果 外星人 雨 开袋即食</title><link href="https://zqw.ink/2022-03-30-story-Spring_March_2022.html" rel="alternate"/><published>2022-03-30T00:00:00+08:00</published><updated>2022-03-30T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-03-30:/2022-03-30-story-Spring_March_2022.html</id><summary type="html">
+</content><category term="想说"/><category term="blog"/><category term="hexo"/></entry><entry><title>风沙 苹果 外星人 雨 开袋即食</title><link href="https://zqw.ink/2022-03-30-story-spring_march_2022.html" rel="alternate"/><published>2022-03-30T00:00:00+08:00</published><updated>2022-03-30T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-03-30:/2022-03-30-story-spring_march_2022.html</id><summary type="html">
 &lt;p&gt;（一）&lt;/p&gt;
 &lt;p&gt;窗外是一片大风与黄沙，几天前，在这样的早晨醒来。明明昨天还是干净透明的蓝天。&lt;/p&gt;
 &lt;p&gt;回忆刚才的梦。&lt;/p&gt;
@@ -6845,7 +6845,7 @@ jz_spherical:
 &lt;p&gt;还真是一切都像从前。急切地期盼一场雨，因为很久没有下雨了。&lt;/p&gt;
 &lt;p&gt;(五)&lt;/p&gt;
 &lt;p&gt;真空包装食品，写有食用方法。喜凉食，开袋即食。或者喜热食，可微波加热或水浴加热。我喜热食，可是没有微波炉或者热水，所以只能开袋即食。&lt;/p&gt;
-</content><category term="blog"/><category term="文学青年"/><category term="风沙"/><category term="苹果"/><category term="外星人"/><category term="雨"/><category term="开袋即食"/><category term="春天"/></entry><entry><title>Atomic and Optical Physics I, 08 Atoms IV: Hyperfine Structure (updage 17/Nov/2022)</title><link href="https://zqw.ink/2022-02-23-physics-MITAMO08.html" rel="alternate"/><published>2022-02-23T00:00:00+08:00</published><updated>2022-02-23T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-02-23:/2022-02-23-physics-MITAMO08.html</id><summary type="html">
+</content><category term="blog"/><category term="文学青年"/><category term="风沙"/><category term="苹果"/><category term="外星人"/><category term="雨"/><category term="开袋即食"/><category term="春天"/></entry><entry><title>Atomic and Optical Physics I, 08 Atoms IV: Hyperfine Structure (updage 17/Nov/2022)</title><link href="https://zqw.ink/2022-02-23-physics-mitamo08.html" rel="alternate"/><published>2022-02-23T00:00:00+08:00</published><updated>2022-02-23T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-02-23:/2022-02-23-physics-mitamo08.html</id><summary type="html">
 &lt;h2&gt;Information&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;官方介绍: https://ocw.mit.edu/courses/physics/8-421-atomic-and-optical-physics-i-spring-2014/&lt;/li&gt;
@@ -7123,7 +7123,7 @@ $4.4 \times 10^{-6} \mathrm{eV}$ , 对应频率大约为 $10^9 \mathrm{Hz}$ , �
 &lt;li&gt;&lt;a href='https://en.wikipedia.org/wiki/Speed_of_light'&gt;wikipedia: Speed of light&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href='http://wild.life.nctu.edu.tw/class/common/energy-unit-conv-table.html'&gt;Energy unit conversion table&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="专业笔记"/><category term="Atomic and Optical Physics"/></entry><entry><title>Atomic and Optical Physics I, 07 Atoms III: Fine Structure</title><link href="https://zqw.ink/2022-02-19-physics-MITAMO07.html" rel="alternate"/><published>2022-02-19T00:00:00+08:00</published><updated>2022-02-19T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-02-19:/2022-02-19-physics-MITAMO07.html</id><summary type="html">
+</content><category term="专业笔记"/><category term="Atomic and Optical Physics"/></entry><entry><title>Atomic and Optical Physics I, 07 Atoms III: Fine Structure</title><link href="https://zqw.ink/2022-02-19-physics-mitamo07.html" rel="alternate"/><published>2022-02-19T00:00:00+08:00</published><updated>2022-02-19T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2022-02-19:/2022-02-19-physics-mitamo07.html</id><summary type="html">
 &lt;h2&gt;Information&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;官方介绍: https://ocw.mit.edu/courses/physics/8-421-atomic-and-optical-physics-i-spring-2014/&lt;/li&gt;
@@ -7939,7 +7939,7 @@ $$\begin{align}
 &lt;li&gt;&lt;a href='https://en.wikipedia.org/wiki/Partial_trace'&gt;Partial trace&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Zhai, H. Ultracold atomic physics. (Cambridge University Press, 2020).&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="专业笔记"/><category term="density matrix"/><category term="reduced dnesity matrix"/></entry><entry><title>Atomic and Optical Physics I, 06 Atoms II: Hydrogen</title><link href="https://zqw.ink/2021-12-14-physics-MITAMO06.html" rel="alternate"/><published>2021-12-14T00:00:00+08:00</published><updated>2021-12-14T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-12-14:/2021-12-14-physics-MITAMO06.html</id><summary type="html">
+</content><category term="专业笔记"/><category term="density matrix"/><category term="reduced dnesity matrix"/></entry><entry><title>Atomic and Optical Physics I, 06 Atoms II: Hydrogen</title><link href="https://zqw.ink/2021-12-14-physics-mitamo06.html" rel="alternate"/><published>2021-12-14T00:00:00+08:00</published><updated>2021-12-14T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-12-14:/2021-12-14-physics-mitamo06.html</id><summary type="html">
 &lt;h2&gt;Information&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;官方介绍: https://ocw.mit.edu/courses/physics/8-421-atomic-and-optical-physics-i-spring-2014/&lt;/li&gt;
@@ -8539,7 +8539,7 @@ plt.savefig('2d-complex.png')&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;&lt;a href='https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.odeint.html'&gt;scipy.integrate.odeint&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href='https://en.wikipedia.org/wiki/Van_der_Pol_oscillator'&gt;wikipedia: Van der Pol oscillator&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="软件使用"/><category term="python"/><category term="ode"/><category term="Rabi"/><category term="Van der Pol oscillator"/></entry><entry><title>Atomic and Optical Physics I, 05 Resonance V and Atoms I</title><link href="https://zqw.ink/2021-11-24-physics-MITAMO05.html" rel="alternate"/><published>2021-11-24T00:00:00+08:00</published><updated>2021-11-24T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-11-24:/2021-11-24-physics-MITAMO05.html</id><summary type="html">
+</content><category term="软件使用"/><category term="python"/><category term="ode"/><category term="Rabi"/><category term="Van der Pol oscillator"/></entry><entry><title>Atomic and Optical Physics I, 05 Resonance V and Atoms I</title><link href="https://zqw.ink/2021-11-24-physics-mitamo05.html" rel="alternate"/><published>2021-11-24T00:00:00+08:00</published><updated>2021-11-24T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-11-24:/2021-11-24-physics-mitamo05.html</id><summary type="html">
 &lt;h2&gt;Information&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;官方介绍: https://ocw.mit.edu/courses/physics/8-421-atomic-and-optical-physics-i-spring-2014/&lt;/li&gt;
@@ -8982,7 +8982,7 @@ plt.savefig('method2.png')&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;&lt;a href='https://matplotlib.org/stable/tutorials/introductory/customizing.html#customizing-with-matplotlibrc-files'&gt;Matplotlib Documentation: A sample matplotlibrc file&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href='https://matplotlib.org/stable/users/dflt_style_changes.html?highlight=math%20font#math-text'&gt;Matplotlib Documentation: Math text&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="软件使用"/><category term="python"/><category term="matplotlib"/><category term="font_manager"/><category term="mathtext"/></entry><entry><title>Atomic and Optical Physics I, 04 Resonance IV: Quantum Theory</title><link href="https://zqw.ink/2021-11-07-physics-MITAMO04.html" rel="alternate"/><published>2021-11-07T00:00:00+08:00</published><updated>2021-11-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-11-07:/2021-11-07-physics-MITAMO04.html</id><summary type="html">
+</content><category term="软件使用"/><category term="python"/><category term="matplotlib"/><category term="font_manager"/><category term="mathtext"/></entry><entry><title>Atomic and Optical Physics I, 04 Resonance IV: Quantum Theory</title><link href="https://zqw.ink/2021-11-07-physics-mitamo04.html" rel="alternate"/><published>2021-11-07T00:00:00+08:00</published><updated>2021-11-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-11-07:/2021-11-07-physics-mitamo04.html</id><summary type="html">
 &lt;h2&gt;Information&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;官方介绍: https://ocw.mit.edu/courses/physics/8-421-atomic-and-optical-physics-i-spring-2014/&lt;/li&gt;
@@ -9272,7 +9272,7 @@ $$\begin{align}
 
 
 &lt;h2&gt;Reference&lt;/h2&gt;
-</content><category term="专业笔记"/><category term="Rabi frequency"/><category term="adiabatic"/><category term="Atomic and Optical Physics"/></entry><entry><title>Atomic and Optical Physics I, 03 ResonanceIII: Rapid adiabatic passage</title><link href="https://zqw.ink/2021-11-04-physics-MITAMO03.html" rel="alternate"/><published>2021-11-04T00:00:00+08:00</published><updated>2021-11-04T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-11-04:/2021-11-04-physics-MITAMO03.html</id><summary type="html">
+</content><category term="专业笔记"/><category term="Rabi frequency"/><category term="adiabatic"/><category term="Atomic and Optical Physics"/></entry><entry><title>Atomic and Optical Physics I, 03 ResonanceIII: Rapid adiabatic passage</title><link href="https://zqw.ink/2021-11-04-physics-mitamo03.html" rel="alternate"/><published>2021-11-04T00:00:00+08:00</published><updated>2021-11-04T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-11-04:/2021-11-04-physics-mitamo03.html</id><summary type="html">
 &lt;h2&gt;Information&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;官方介绍: https://ocw.mit.edu/courses/physics/8-421-atomic-and-optical-physics-i-spring-2014/&lt;/li&gt;
@@ -9486,7 +9486,7 @@ plt.savefig('fig2.png')&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;&lt;a href='https://stackoverflow.com/questions/38316746/how-to-draw-a-marker-with-dashed-dotted-edge-in-matplotlib/69658923#69658923'&gt;https://stackoverflow.com/questions/38316746/how-to-draw-a-marker-with-dashed-dotted-edge-in-matplotlib/69658923#69658923&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href='https://matplotlib.org/stable/gallery/shapes_and_collections/marker_path.html'&gt;Marker Path&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="软件使用"/><category term="python"/><category term="matplotlib"/><category term="marker"/><category term="dashed"/></entry><entry><title>BEC 极限下的 Tc 的估计</title><link href="https://zqw.ink/2021-10-05-physics-BEC_limit_Tc.html" rel="alternate"/><published>2021-10-05T00:00:00+08:00</published><updated>2021-10-05T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-10-05:/2021-10-05-physics-BEC_limit_Tc.html</id><summary type="html">
+</content><category term="软件使用"/><category term="python"/><category term="matplotlib"/><category term="marker"/><category term="dashed"/></entry><entry><title>BEC 极限下的 Tc 的估计</title><link href="https://zqw.ink/2021-10-05-physics-bec_limit_tc.html" rel="alternate"/><published>2021-10-05T00:00:00+08:00</published><updated>2021-10-05T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-10-05:/2021-10-05-physics-bec_limit_tc.html</id><summary type="html">
 &lt;h2&gt;Theory&lt;/h2&gt;
 &lt;p&gt;取单位 $\hbar = M = 1$ .&lt;/p&gt;
 
@@ -9562,7 +9562,7 @@ print(tcef_p, tcef_d)&lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;Reference&lt;/h2&gt;
 
 &lt;p&gt;Zhai, H. Ultracold atomic physics. (Cambridge University Press, 2020).&lt;/p&gt;
-</content><category term="专业笔记"/><category term="BEC"/></entry><entry><title>多变量数值定积分换元(质心系)</title><link href="https://zqw.ink/2021-09-17-physics-numerical_Jacobian_center_of_mass.html" rel="alternate"/><published>2021-09-17T00:00:00+08:00</published><updated>2021-09-17T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-09-17:/2021-09-17-physics-numerical_Jacobian_center_of_mass.html</id><summary type="html">
+</content><category term="专业笔记"/><category term="BEC"/></entry><entry><title>多变量数值定积分换元(质心系)</title><link href="https://zqw.ink/2021-09-17-physics-numerical_jacobian_center_of_mass.html" rel="alternate"/><published>2021-09-17T00:00:00+08:00</published><updated>2021-09-17T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-09-17:/2021-09-17-physics-numerical_jacobian_center_of_mass.html</id><summary type="html">
 &lt;h2&gt;&lt;code&gt;nuqad&lt;/code&gt; 的用法&lt;/h2&gt;
 
 
@@ -9776,7 +9776,7 @@ plt.savefig('quad_recorded.png', transparent=True)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;&lt;a href='https://en.wikipedia.org/wiki/QUADPACK'&gt;wikipedia: QUADPACK&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href='https://en.wikipedia.org/wiki/Adaptive_quadrature'&gt;wikipedia: Adaptive quadrature&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="软件使用"/><category term="python"/><category term="quadrature"/></entry><entry><title>Atomic and Optical Physics I, 02 ResonanceII: Larmor Procession Note</title><link href="https://zqw.ink/2021-09-11-physics-MITAMO02.html" rel="alternate"/><published>2021-09-11T00:00:00+08:00</published><updated>2021-09-11T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-09-11:/2021-09-11-physics-MITAMO02.html</id><summary type="html">
+</content><category term="软件使用"/><category term="python"/><category term="quadrature"/></entry><entry><title>Atomic and Optical Physics I, 02 ResonanceII: Larmor Procession Note</title><link href="https://zqw.ink/2021-09-11-physics-mitamo02.html" rel="alternate"/><published>2021-09-11T00:00:00+08:00</published><updated>2021-09-11T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-09-11:/2021-09-11-physics-mitamo02.html</id><summary type="html">
 &lt;h2&gt;Information&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;官方介绍: https://ocw.mit.edu/courses/physics/8-421-atomic-and-optical-physics-i-spring-2014/&lt;/li&gt;
@@ -9909,7 +9909,7 @@ fram at the Larmor frequency.&lt;/p&gt;
 &lt;li&gt;&lt;a href='https://en.wikipedia.org/wiki/G-factor_(physics)'&gt;G-factor&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Foot, C. J. Atomic physics. (Oxford University Press, 2005).&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="专业笔记"/><category term="Resonance"/><category term="Atomic and Optical Physics"/></entry><entry><title>Lorentz Model for an Atom</title><link href="https://zqw.ink/2021-09-10-physics-LorentzModel.html" rel="alternate"/><published>2021-09-10T00:00:00+08:00</published><updated>2021-09-10T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-09-10:/2021-09-10-physics-LorentzModel.html</id><summary type="html">
+</content><category term="专业笔记"/><category term="Resonance"/><category term="Atomic and Optical Physics"/></entry><entry><title>Lorentz Model for an Atom</title><link href="https://zqw.ink/2021-09-10-physics-lorentzmodel.html" rel="alternate"/><published>2021-09-10T00:00:00+08:00</published><updated>2021-09-10T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-09-10:/2021-09-10-physics-lorentzmodel.html</id><summary type="html">
 &lt;h2&gt;Information&lt;/h2&gt;
 
 &lt;p&gt;来自 Wolfgang Kettler 的 AMO 课中提到&lt;/p&gt;
@@ -9994,7 +9994,7 @@ $$\begin{align}
 &lt;ul&gt;
 &lt;li&gt;https://physics.byu.edu/faculty/colton/docs/phy442-winter20/lecture-11-Lorentz-oscillator-model.pdf&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="专业笔记"/><category term="Lorentz"/></entry><entry><title>Atomic and Optical Physics I, 01 Resonance Note</title><link href="https://zqw.ink/2021-09-09-physics-MITAMO01.html" rel="alternate"/><published>2021-09-09T00:00:00+08:00</published><updated>2021-09-09T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-09-09:/2021-09-09-physics-MITAMO01.html</id><summary type="html">
+</content><category term="专业笔记"/><category term="Lorentz"/></entry><entry><title>Atomic and Optical Physics I, 01 Resonance Note</title><link href="https://zqw.ink/2021-09-09-physics-mitamo01.html" rel="alternate"/><published>2021-09-09T00:00:00+08:00</published><updated>2021-09-09T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-09-09:/2021-09-09-physics-mitamo01.html</id><summary type="html">
 &lt;h2&gt;Information&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;官方介绍: https://ocw.mit.edu/courses/physics/8-421-atomic-and-optical-physics-i-spring-2014/&lt;/li&gt;
@@ -10193,7 +10193,7 @@ II.&lt;/p&gt;
 学一下.&lt;/p&gt;
 
 &lt;p&gt;last but not least, 我都五年级了, 课题, 抓紧!&lt;/p&gt;
-</content><category term="想说"/><category term="总结"/></entry><entry><title>Susskind's Particle Pyhsics II: Standard Model Note</title><link href="https://zqw.ink/2021-09-06-physics-SusskindsParticlePhysicsII.html" rel="alternate"/><published>2021-09-06T00:00:00+08:00</published><updated>2021-09-06T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-09-06:/2021-09-06-physics-SusskindsParticlePhysicsII.html</id><summary type="html">
+</content><category term="想说"/><category term="总结"/></entry><entry><title>Susskind's Particle Pyhsics II: Standard Model Note</title><link href="https://zqw.ink/2021-09-06-physics-susskindsparticlephysicsii.html" rel="alternate"/><published>2021-09-06T00:00:00+08:00</published><updated>2021-09-06T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-09-06:/2021-09-06-physics-susskindsparticlephysicsii.html</id><summary type="html">
 &lt;h2&gt;Information&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;官方介绍: https://theoreticalminimum.com/courses/particle-physics-2-standard-model/2010/winter&lt;/li&gt;
@@ -10928,7 +10928,7 @@ xps13 去年在家屏幕有问题, 由于还在保, 售后派人从市里坐大�
 &lt;p&gt;可是,&lt;/p&gt;
 &lt;p&gt;还有勇气和力气吗?&lt;/p&gt;
 &lt;hr /&gt;
-</content><category term="blog"/><category term="夏天"/><category term="文学青年"/></entry><entry><title>一个神奇的积分与一个有意思的积分</title><link href="https://zqw.ink/2021-05-25-physics-Pole_of_order_2.html" rel="alternate"/><published>2021-05-25T00:00:00+08:00</published><updated>2021-05-25T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-05-25:/2021-05-25-physics-Pole_of_order_2.html</id><summary type="html">
+</content><category term="blog"/><category term="夏天"/><category term="文学青年"/></entry><entry><title>一个神奇的积分与一个有意思的积分</title><link href="https://zqw.ink/2021-05-25-physics-pole_of_order_2.html" rel="alternate"/><published>2021-05-25T00:00:00+08:00</published><updated>2021-05-25T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-05-25:/2021-05-25-physics-pole_of_order_2.html</id><summary type="html">
 
 &lt;h2&gt;积分之一: 神奇的积分&lt;/h2&gt;
 
@@ -11314,7 +11314,7 @@ result of mpmath mpf type: (2.472099451021771, 7.496323446432029e-07)&lt;/code&g
 &lt;li&gt;&lt;a href='https://scicomp.stackexchange.com/questions/21483/how-to-avoid-the-round-off-errors-in-the-larger-calculations'&gt;https://scicomp.stackexchange.com/questions/21483/how-to-avoid-the-round-off-errors-in-the-larger-calculations&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Fan Yang 的讨论&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="软件使用"/><category term="numerical stability"/><category term="unstable method"/><category term="round-off error"/><category term="mpmath"/><category term="integral"/></entry><entry><title>C 中的指针与动态内存分配</title><link href="https://zqw.ink/2021-05-14-coding-C_pointer_malloc.html" rel="alternate"/><published>2021-05-14T00:00:00+08:00</published><updated>2021-05-14T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-05-14:/2021-05-14-coding-C_pointer_malloc.html</id><summary type="html">
+</content><category term="软件使用"/><category term="numerical stability"/><category term="unstable method"/><category term="round-off error"/><category term="mpmath"/><category term="integral"/></entry><entry><title>C 中的指针与动态内存分配</title><link href="https://zqw.ink/2021-05-14-coding-c_pointer_malloc.html" rel="alternate"/><published>2021-05-14T00:00:00+08:00</published><updated>2021-05-14T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-05-14:/2021-05-14-coding-c_pointer_malloc.html</id><summary type="html">
 &lt;p&gt;主要是为 Reference 存个书签.&lt;/p&gt;
 
 &lt;h2&gt;Pointers&lt;/h2&gt;
@@ -11628,7 +11628,7 @@ int main()
 &lt;li&gt;&lt;a href='https://zh.wikipedia.org/zh-cn/%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F'&gt;wikipedia: 内存泄漏&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href='https://en.wikipedia.org/wiki/Dereference_operator'&gt;wikipeida: Dereference operator&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="软件使用"/><category term="C"/><category term="array"/><category term="malloc"/><category term="memory leak"/></entry><entry><title>Symmetry Factor of φ-4 Scaler Field</title><link href="https://zqw.ink/2021-04-27-physics-Symmetry_Factor_Scaler_Field.html" rel="alternate"/><published>2021-04-27T00:00:00+08:00</published><updated>2021-04-27T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-04-27:/2021-04-27-physics-Symmetry_Factor_Scaler_Field.html</id><summary type="html">
+</content><category term="软件使用"/><category term="C"/><category term="array"/><category term="malloc"/><category term="memory leak"/></entry><entry><title>Symmetry Factor of φ-4 Scaler Field</title><link href="https://zqw.ink/2021-04-27-physics-symmetry_factor_scaler_field.html" rel="alternate"/><published>2021-04-27T00:00:00+08:00</published><updated>2021-04-27T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-04-27:/2021-04-27-physics-symmetry_factor_scaler_field.html</id><summary type="html">
 &lt;h2&gt;Intro&lt;/h2&gt;
 
 &lt;p&gt;Zee, A. Quantum field theory in a nutshell. (Princeton University Press,
@@ -11969,7 +11969,7 @@ print(12*(24 + 72 + 9))&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;这一切都不是因为问题有多复杂, 只是看问题缺乏知识, 流于表面. 或许科研也是这样, 大
 家都这样, 就习以为常了.&lt;/p&gt;
-</content><category term="软件使用"/><category term="emacs"/><category term="lsp"/><category term="pyright"/><category term="flycheck"/><category term="flake8"/></entry><entry><title>Susskind's Particle Pyhsics I: Basic Concepts Note</title><link href="https://zqw.ink/2021-03-19-physics-SusskindsParticlePhysicsI.html" rel="alternate"/><published>2021-03-19T00:00:00+08:00</published><updated>2021-03-19T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-03-19:/2021-03-19-physics-SusskindsParticlePhysicsI.html</id><summary type="html">
+</content><category term="软件使用"/><category term="emacs"/><category term="lsp"/><category term="pyright"/><category term="flycheck"/><category term="flake8"/></entry><entry><title>Susskind's Particle Pyhsics I: Basic Concepts Note</title><link href="https://zqw.ink/2021-03-19-physics-susskindsparticlephysicsi.html" rel="alternate"/><published>2021-03-19T00:00:00+08:00</published><updated>2021-03-19T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-03-19:/2021-03-19-physics-susskindsparticlephysicsi.html</id><summary type="html">
 &lt;h2&gt;Information&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;官方介绍: https://theoreticalminimum.com/courses/particle-physics-1-basic-concepts/2009/fall&lt;/li&gt;
@@ -12438,7 +12438,7 @@ $$\begin{align}
 &lt;p&gt;&lt;p&gt;&lt;img src='2021-03-13-thinking-2nd_rubiks_cube/2nd_cube.png' alt='figalt' max-width:100%&gt;&lt;p&gt;&lt;/p&gt;
 
 &lt;p&gt;Draw by &lt;a href='https://www.geogebra.org/'&gt;Geogebra&lt;/a&gt; : [[file:2021-03-13-thinking-2nd_rubiks_cube/2nd_cube.ggb]]&lt;/p&gt;
-</content><category term="想说"/><category term="Rubik's Cube"/></entry><entry><title>Susskind's Statistical Mechanics</title><link href="https://zqw.ink/2021-03-11-physics-SusskindsStatisticalMechanics.html" rel="alternate"/><published>2021-03-11T00:00:00+08:00</published><updated>2021-03-11T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-03-11:/2021-03-11-physics-SusskindsStatisticalMechanics.html</id><summary type="html">
+</content><category term="想说"/><category term="Rubik's Cube"/></entry><entry><title>Susskind's Statistical Mechanics</title><link href="https://zqw.ink/2021-03-11-physics-susskindsstatisticalmechanics.html" rel="alternate"/><published>2021-03-11T00:00:00+08:00</published><updated>2021-03-11T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-03-11:/2021-03-11-physics-susskindsstatisticalmechanics.html</id><summary type="html">
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="#information"&gt;Information&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#lecture-1-entropy-and-conservation-of-information"&gt;Lecture 1: Entropy and conservation of information&lt;/a&gt;
@@ -13581,7 +13581,7 @@ $$&lt;h2 id="about"&gt;...about&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Stirling%27s_approximation"&gt;Wikipedia: Stirling's Approximation&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="physics"/><category term="physics"/><category term="statistical mechanics"/><category term="Susskind"/><category term="entropy"/><category term="Ising model"/><category term="magnetic"/><category term="liquid-gas transition"/></entry><entry><title>Susskind's Classical Field Theory Note</title><link href="https://zqw.ink/2021-03-04-physics-SusskindsClassicalFieldTheory.html" rel="alternate"/><published>2021-03-04T00:00:00+08:00</published><updated>2021-03-04T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-03-04:/2021-03-04-physics-SusskindsClassicalFieldTheory.html</id><summary type="html">
+</content><category term="physics"/><category term="physics"/><category term="statistical mechanics"/><category term="Susskind"/><category term="entropy"/><category term="Ising model"/><category term="magnetic"/><category term="liquid-gas transition"/></entry><entry><title>Susskind's Classical Field Theory Note</title><link href="https://zqw.ink/2021-03-04-physics-susskindsclassicalfieldtheory.html" rel="alternate"/><published>2021-03-04T00:00:00+08:00</published><updated>2021-03-04T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-03-04:/2021-03-04-physics-susskindsclassicalfieldtheory.html</id><summary type="html">
 &lt;h2&gt;Information&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -14255,7 +14255,7 @@ $$\begin{align}
 &lt;li&gt;Michael E. Peskin, Daniel V. Schroeder - An Introduction To Quantum Field Theory (2018, Westview Press_CRC Press) Chap 2.1&lt;/li&gt;
 &lt;li&gt;&lt;a href='https://physics.stackexchange.com/questions/424587/peskin-schroeder-free-particle-propagation'&gt;https://physics.stackexchange.com/questions/424587/peskin-schroeder-free-particle-propagation&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="专业笔记"/><category term="propagator"/><category term="free particle"/></entry><entry><title>Carl Bender Mathematical Physics Lecture7 Note</title><link href="https://zqw.ink/2021-03-02-physics-CarlBenderMathematicalPhysicsLecture7.html" rel="alternate"/><published>2021-03-02T00:00:00+08:00</published><updated>2021-03-02T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-03-02:/2021-03-02-physics-CarlBenderMathematicalPhysicsLecture7.html</id><summary type="html">
+</content><category term="专业笔记"/><category term="propagator"/><category term="free particle"/></entry><entry><title>Carl Bender Mathematical Physics Lecture7 Note</title><link href="https://zqw.ink/2021-03-02-physics-carlbendermathematicalphysicslecture7.html" rel="alternate"/><published>2021-03-02T00:00:00+08:00</published><updated>2021-03-02T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-03-02:/2021-03-02-physics-carlbendermathematicalphysicslecture7.html</id><summary type="html">
 &lt;h2&gt;Information&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -14656,7 +14656,7 @@ $$\begin{align}
 &lt;ul&gt;
 &lt;li&gt;Harald Siegfried Friedrich, Theoretical Atomic Physics-Springer (2005) Chap 1.4.1&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="专业笔记"/><category term="two body"/><category term="density matrix"/></entry><entry><title>两体束缚态</title><link href="https://zqw.ink/2021-03-01-physics-two_body_in_3D.html" rel="alternate"/><published>2021-03-01T00:00:00+08:00</published><updated>2021-03-01T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-03-01:/2021-03-01-physics-two_body_in_3D.html</id><summary type="html">&lt;!-- toc --&gt;
+</content><category term="专业笔记"/><category term="two body"/><category term="density matrix"/></entry><entry><title>两体束缚态</title><link href="https://zqw.ink/2021-03-01-physics-two_body_in_3d.html" rel="alternate"/><published>2021-03-01T00:00:00+08:00</published><updated>2021-03-01T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-03-01:/2021-03-01-physics-two_body_in_3d.html</id><summary type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
 &lt;h1 id="any"&gt;any&lt;/h1&gt;
 &lt;p&gt;$r &gt; r_0$ 时, $V(r) = 0$ , 径向 Schrodinger 方程为
@@ -16186,7 +16186,7 @@ plt.savefig('fig.png')&lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;致谢&lt;/h2&gt;
 
 &lt;p&gt;Qi&lt;/p&gt;
-</content><category term="专业笔记"/><category term="奇技淫巧"/></entry><entry><title>关于微分方程的解的问题(update 07/June/2021)</title><link href="https://zqw.ink/2021-01-11-physics-Prob_ODE_Solution.html" rel="alternate"/><published>2021-01-11T00:00:00+08:00</published><updated>2021-01-11T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-01-11:/2021-01-11-physics-Prob_ODE_Solution.html</id><summary type="html">
+</content><category term="专业笔记"/><category term="奇技淫巧"/></entry><entry><title>关于微分方程的解的问题(update 07/June/2021)</title><link href="https://zqw.ink/2021-01-11-physics-prob_ode_solution.html" rel="alternate"/><published>2021-01-11T00:00:00+08:00</published><updated>2021-01-11T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-01-11:/2021-01-11-physics-prob_ode_solution.html</id><summary type="html">
 &lt;h2&gt;问题&lt;/h2&gt;
 
 &lt;p&gt;将微分方程&lt;/p&gt;
@@ -16253,7 +16253,7 @@ for a Fermi Gas Close to a p-wave Interaction Resonance.&lt;/p&gt;
   \mathcal{L} \psi(x) = \psi(x)
 \end{align}
 的全部解?&lt;/blockquote&gt;
-</content><category term="专业笔记"/><category term="问题"/><category term="微分方程"/></entry><entry><title>格林函数的格林(翻译)The Green of Green Functions</title><link href="https://zqw.ink/2020-12-24-physics-GeorgeGreen.html" rel="alternate"/><published>2020-12-24T00:00:00+08:00</published><updated>2020-12-24T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-12-24:/2020-12-24-physics-GeorgeGreen.html</id><summary type="html">&lt;!-- toc --&gt;
+</content><category term="专业笔记"/><category term="问题"/><category term="微分方程"/></entry><entry><title>格林函数的格林(翻译)The Green of Green Functions</title><link href="https://zqw.ink/2020-12-24-physics-georgegreen.html" rel="alternate"/><published>2020-12-24T00:00:00+08:00</published><updated>2020-12-24T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-12-24:/2020-12-24-physics-georgegreen.html</id><summary type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
 &lt;p&gt;本文为 Physics Today 56, 12, 41 (2003), Lawrie Challis, The Green of Green Functions 的翻译. 图片可查看原文.&lt;/p&gt;
 &lt;h1 id="格林函数的格林"&gt;格林函数的格林&lt;/h1&gt;

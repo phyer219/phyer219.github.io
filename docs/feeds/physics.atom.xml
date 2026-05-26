@@ -97,7 +97,7 @@ fig.write_html('check2.html', include_mathjax=&amp;quot;cdn&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;a href="2025-06-16-physics-rwa_check/check.py"&gt;check.py&lt;/a&gt;&lt;/p&gt;
 &lt;iframe src="2025-06-16-physics-rwa_check/check1.html" width="100%" height="600"&gt;&lt;/iframe&gt;
-&lt;iframe src="2025-06-16-physics-rwa_check/check2.html" width="100%" height="600"&gt;&lt;/iframe&gt;</content><category term="physics"/><category term="rotating wave approximation"/><category term="ploly"/></entry><entry><title>Susskind's Statistical Mechanics</title><link href="https://zqw.ink/2021-03-11-physics-SusskindsStatisticalMechanics.html" rel="alternate"/><published>2021-03-11T00:00:00+08:00</published><updated>2021-03-11T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-03-11:/2021-03-11-physics-SusskindsStatisticalMechanics.html</id><summary type="html">
+&lt;iframe src="2025-06-16-physics-rwa_check/check2.html" width="100%" height="600"&gt;&lt;/iframe&gt;</content><category term="physics"/><category term="rotating wave approximation"/><category term="ploly"/></entry><entry><title>Susskind's Statistical Mechanics</title><link href="https://zqw.ink/2021-03-11-physics-susskindsstatisticalmechanics.html" rel="alternate"/><published>2021-03-11T00:00:00+08:00</published><updated>2021-03-11T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-03-11:/2021-03-11-physics-susskindsstatisticalmechanics.html</id><summary type="html">
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="#information"&gt;Information&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#lecture-1-entropy-and-conservation-of-information"&gt;Lecture 1: Entropy and conservation of information&lt;/a&gt;
@@ -1240,7 +1240,7 @@ $$&lt;h2 id="about"&gt;...about&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Stirling%27s_approximation"&gt;Wikipedia: Stirling's Approximation&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="physics"/><category term="physics"/><category term="statistical mechanics"/><category term="Susskind"/><category term="entropy"/><category term="Ising model"/><category term="magnetic"/><category term="liquid-gas transition"/></entry><entry><title>围道积分进阶</title><link href="https://zqw.ink/2020-12-07-physics-contourIntegral.html" rel="alternate"/><published>2020-12-07T00:00:00+08:00</published><updated>2020-12-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-12-07:/2020-12-07-physics-contourIntegral.html</id><summary type="html">
+</content><category term="physics"/><category term="physics"/><category term="statistical mechanics"/><category term="Susskind"/><category term="entropy"/><category term="Ising model"/><category term="magnetic"/><category term="liquid-gas transition"/></entry><entry><title>围道积分进阶</title><link href="https://zqw.ink/2020-12-07-physics-contourintegral.html" rel="alternate"/><published>2020-12-07T00:00:00+08:00</published><updated>2020-12-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-12-07:/2020-12-07-physics-contourintegral.html</id><summary type="html">
 &lt;h2 id="准备"&gt;准备&lt;/h2&gt;
 &lt;h3 id="high-order-residue"&gt;High Order Residue&lt;/h3&gt;
 &lt;p&gt;Cauchy Integral Formula&lt;/p&gt;
@@ -1368,7 +1368,7 @@ $$&lt;h2 id="reference"&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;PhysRevA.78.053606, Eqn A13(b), A14(b)&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="physics"/><category term="数学"/><category term="留数定理"/><category term="复变函数"/><category term="contour integral"/></entry><entry><title>Legendre Transform</title><link href="https://zqw.ink/2020-08-05-physics-LegendreTrans.html" rel="alternate"/><published>2020-08-05T00:00:00+08:00</published><updated>2020-08-05T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-08-05:/2020-08-05-physics-LegendreTrans.html</id><summary type="html">
+</content><category term="physics"/><category term="数学"/><category term="留数定理"/><category term="复变函数"/><category term="contour integral"/></entry><entry><title>Legendre Transform</title><link href="https://zqw.ink/2020-08-05-physics-legendretrans.html" rel="alternate"/><published>2020-08-05T00:00:00+08:00</published><updated>2020-08-05T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-08-05:/2020-08-05-physics-legendretrans.html</id><summary type="html">
 &lt;h2 id="intro"&gt;Intro&lt;/h2&gt;
 &lt;p&gt;多次看到过 Legendre transform 这个名词.&lt;/p&gt;
 &lt;p&gt;Reference [Am. J. Phys. 77 (7), July 2009] 非常详细清晰友好地解答了我心中的各种
@@ -2240,7 +2240,7 @@ $$
 +(2\dot{r}\dot{\theta}+r\ddot{\theta}-r\dot{\phi}^2\sin\theta\cos\theta)\hat{e}_{\theta} \\\\
 +(2\dot{r}\dot{\phi}\sin\theta+2r\dot{\theta}\dot{\phi}\cos\theta+r\ddot{\phi}\sin\theta)\hat{e}_{\varphi}
 
-$$</content><category term="physics"/><category term="数学"/><category term="物理"/><category term="理论力学"/><category term="球坐标"/></entry><entry><title>库仑势的Fourier transform(update 16/Nov/2020)</title><link href="https://zqw.ink/2018-09-24-physics-coulomb_potential_Fourier_transform.html" rel="alternate"/><published>2018-09-24T00:00:00+08:00</published><updated>2018-09-24T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-24:/2018-09-24-physics-coulomb_potential_Fourier_transform.html</id><summary type="html">&lt;!-- toc --&gt;
+$$</content><category term="physics"/><category term="数学"/><category term="物理"/><category term="理论力学"/><category term="球坐标"/></entry><entry><title>库仑势的Fourier transform(update 16/Nov/2020)</title><link href="https://zqw.ink/2018-09-24-physics-coulomb_potential_fourier_transform.html" rel="alternate"/><published>2018-09-24T00:00:00+08:00</published><updated>2018-09-24T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-24:/2018-09-24-physics-coulomb_potential_fourier_transform.html</id><summary type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
 &lt;h2 id="问题"&gt;问题&lt;/h2&gt;
 &lt;p&gt;三维库仑势的形式为：
@@ -2305,7 +2305,7 @@ $$&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;关于使其收敛的说明, 分别从物理的角度, 数学的角度阐述这样做的合理性和必要性: https://physics.stackexchange.com/questions/7462/fourier-transform-of-the-coulomb-potential&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="physics"/><category term="数学"/><category term="物理"/><category term="库仑势"/><category term="Fourier"/></entry><entry><title>Lagrange乘子法求带有约束的极植</title><link href="https://zqw.ink/2018-09-22-physics-Lagrange_multiply_optim.html" rel="alternate"/><published>2018-09-22T00:00:00+08:00</published><updated>2018-09-22T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-22:/2018-09-22-physics-Lagrange_multiply_optim.html</id><summary type="html">&lt;!-- toc --&gt;
+</content><category term="physics"/><category term="数学"/><category term="物理"/><category term="库仑势"/><category term="Fourier"/></entry><entry><title>Lagrange乘子法求带有约束的极植</title><link href="https://zqw.ink/2018-09-22-physics-lagrange_multiply_optim.html" rel="alternate"/><published>2018-09-22T00:00:00+08:00</published><updated>2018-09-22T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-22:/2018-09-22-physics-lagrange_multiply_optim.html</id><summary type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
 &lt;h2 id="问题"&gt;问题&lt;/h2&gt;
 &lt;p&gt;圆柱体积恒定，求表面积最大值。&lt;/p&gt;
@@ -3012,7 +3012,7 @@ $$&lt;/p&gt;
 $$
 \lambda = \frac{a+c}{2} \pm \sqrt{b^2 +\frac{(a - c)^2}{4}}
 $$&lt;/p&gt;
-</content><category term="physics"/><category term="数学"/><category term="矩阵"/></entry><entry><title>Fourier transform 总结</title><link href="https://zqw.ink/2018-09-07-physics-Fourier-transform-Zong-Jie.html" rel="alternate"/><published>2018-09-07T00:00:00+08:00</published><updated>2018-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-07:/2018-09-07-physics-Fourier-transform-Zong-Jie.html</id><summary type="html">&lt;h2&gt;总的分类&lt;/h2&gt;
+</content><category term="physics"/><category term="数学"/><category term="矩阵"/></entry><entry><title>Fourier transform 总结</title><link href="https://zqw.ink/2018-09-07-physics-fourier-transform-zong-jie.html" rel="alternate"/><published>2018-09-07T00:00:00+08:00</published><updated>2018-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-07:/2018-09-07-physics-fourier-transform-zong-jie.html</id><summary type="html">&lt;h2&gt;总的分类&lt;/h2&gt;
 
 &lt;p&gt;根据变量的连续与否，F.T.总共有三种。&lt;/p&gt;
 

@@ -45,7 +45,7 @@ READERS = {'html': None}
 DISPLAY_PAGES_ON_MENU = False
 
 SLUGIFY_SOURCE = 'basename'
-SLUGIFY_PRESERVE_CASE = True
+SLUGIFY_PRESERVE_CASE = False
 DEFAULT_CATEGORY = '未分类'
 THEME = './themes/simple-modern'
 DISPLAY_CATEGORIES_ON_MENU = False
