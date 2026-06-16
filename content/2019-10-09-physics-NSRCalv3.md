@@ -1,42 +1,61 @@
-#+TITLE: NSR Calaulate III
-#+DATE: <2019-10-09>
-#+CATEGORIES: 专业笔记
-#+TAGS: 物理, path integral
-#+HTML: <!-- toc -->
-#+HTML: <!-- more -->
+---
+title: NSR Calaulate III
+date: <2019-10-09>
+category: 专业笔记
+tags:
+ - "物理"
+ - "path integral"
+---
 
-* 整体思路
+## 整体思路
+
+$$
 \begin{align}
-  \frac{\Delta F}{NE_n} 
-  = \left[ \tilde{\tilde{\Omega}}_{\mathrm{int}} - \tilde{\Omega}_{0}^{\mathrm{M}} 
+  \frac{\Delta F}{NE_n}
+  = \left[ \tilde{\tilde{\Omega}}_{\mathrm{int}} - \tilde{\Omega}_{0}^{\mathrm{M}}
   + \tilde{\mu} \right]\left( \frac{n_{\varepsilon}}{n} \right)^{2/3}
 \end{align}
+$$
+
+$$
 \begin{align}
-  \frac{n}{n_{\varepsilon}} 
+  \frac{n}{n_{\varepsilon}}
  =& - \frac{\partial}{\partial\tilde{\mu}}\left[
        \tilde{\tilde{\Omega}}_{\mathrm{int}} + \tilde{\Omega}_{0}^{\mathrm{B}}
     \right]
 \end{align}
+$$
+
+$$
 \begin{align}
   \tilde{\tilde{\Omega}}_{\mathrm{int}} = \int \mathrm{d}\tilde{q}\cdot \tilde{q}^2
      \int_0^{\pi}\sin\theta_q\mathrm{d}\theta_q \int_{-\infty}^{+\infty}\mathrm{d}\tilde{\omega}
-      \cdot \frac{3}{2\pi}\cdot \frac{1}{e^{\tilde{\beta}\tilde{\omega}}-1} 
+      \cdot \frac{3}{2\pi}\cdot \frac{1}{e^{\tilde{\beta}\tilde{\omega}}-1}
        \delta^p(\vec{q},z)
 \end{align}
+$$
+
+$$
 \begin{align}
   \tilde{\Omega}_0^{\mathrm{B}} = \frac{3}{\tilde{\beta}} \int_0^{\infty} \mathrm{d}
   \tilde{k} \cdot \tilde{k}^2 \ln \left[1 - e^{- \tilde{\beta} \tilde{\xi}_k}\right]
 \end{align}
+$$
+
+$$
 \begin{align}
-  \delta^p(\vec{q}, z) 
+  \delta^p(\vec{q}, z)
        =& \mathrm{Arg}\left[
              \frac{1}{4\pi}\cdot \frac{2R}{k_{\varepsilon}^2 v}
-            + \tilde{z}\cdot\frac{1}{4\pi} 
-           + \frac{2 R}{M k_{\varepsilon}^2}\Pi_r(\vec{q},z + \mathrm{i}0^+) 
+            + \tilde{z}\cdot\frac{1}{4\pi}
+           + \frac{2 R}{M k_{\varepsilon}^2}\Pi_r(\vec{q},z + \mathrm{i}0^+)
                 \right]
 \end{align}
+$$
+
+$$
 \begin{align}
-  \frac{2 R}{M k_{\varepsilon}^2}\Pi_r(\vec{q},z) 
+  \frac{2 R}{M k_{\varepsilon}^2}\Pi_r(\vec{q},z)
   =& \frac{2}{\pi^2} \cdot k_{\varepsilon}R\cdot \int \mathrm{d}\tilde{k}\\
           & \left\{
         \int_0^{2\pi}\mathrm{d}\phi_k  \int_{0}^{\pi} \sin\theta \mathrm{d}\theta_k
@@ -46,24 +65,30 @@
           {2\tilde{k}^2 - \tilde{z}}
            -\frac{1}{2}\tilde{k}^2
            - \frac{1}{4}\tilde{z}
-          \right\} 
+          \right\}
 \end{align}
+$$
 
 而
 
+$$
 \begin{align}
-  n(\xi_{\vec{k}+\vec{q}/2}) = \frac{1}{e^{\beta(\tilde{k}^2 + \tilde{q}^2/4 
+  n(\xi_{\vec{k}+\vec{q}/2}) = \frac{1}{e^{\beta(\tilde{k}^2 + \tilde{q}^2/4
      + \tilde{k} \tilde{q} x-2\mu)} -1}
 \end{align}
+$$
+
 其中
+
+$$
 \begin{align}
   x = \cos\theta_{kq} =& \sin\theta_k \cos \phi_k \sin \theta_q \cos \phi_q
-   + \sin \theta_k \sin\phi_k \sin \theta_q \sin \phi_q 
+   + \sin \theta_k \sin\phi_k \sin \theta_q \sin \phi_q
    + \cos \theta_k \cos \theta_q \\
-  =& \sin\theta_k \sin \theta_q \cos(\phi_k-\phi_q) 
-   + \cos \theta_k \cos \theta_q 
+  =& \sin\theta_k \sin \theta_q \cos(\phi_k-\phi_q)
+   + \cos \theta_k \cos \theta_q
 \end{align}
-
+$$
 
 带 tilde 的都是以 $\varepsilon$ 或 $k_{\varepsilon}$ 为单位的无量纲量.
 
@@ -74,23 +99,22 @@
 
 还有一些关系: $\tilde{\xi} = \tilde{k}^2 - \tilde{\mu} ,\quad n(\xi) =
 \frac{1}{e^{\tilde{\beta} \tilde{\xi}}-1}, \quad \tilde{z} =
-\tilde{\omega} - \frac{\tilde{q}^2}{2} + 2 \tilde{\mu}$ 
+\tilde{\omega} - \frac{\tilde{q}^2}{2} + 2 \tilde{\mu}$
 
-* Fig
+## Fig
 
-file:./2019-10-09-physics-NSRcalv3/numGiven.png
+![numGiven](./2019-10-09-physics-NSRcalv3/numGiven.png)
 
-file:./2019-10-09-physics-NSRcalv3/TcAll-ana.png
+![TcAll-ana](./2019-10-09-physics-NSRcalv3/TcAll-ana.png)
 
-file:./2019-10-09-physics-NSRcalv3/fig3-p-wave.png
+![fig3-p-wave](./2019-10-09-physics-NSRcalv3/fig3-p-wave.png)
 
-file:./2019-10-09-physics-NSRcalv3/fig4-pwave.png
+![fig4-pwave](./2019-10-09-physics-NSRcalv3/fig4-pwave.png)
 
-file:./2019-10-09-physics-NSRcalv3/fig5-a.png
+![fig5-a](./2019-10-09-physics-NSRcalv3/fig5-a.png)
 
-file:./2019-10-09-physics-NSRcalv3/fig5-b.png
+![fig5-b](./2019-10-09-physics-NSRcalv3/fig5-b.png)
 
-fig3-p-nc
-file:./2019-10-09-physics-NSRcalv3/fig3-p-nc.png
+![fig3-p-nc](./2019-10-09-physics-NSRcalv3/fig3-p-nc.png)
 
-file:./2019-10-09-physics-NSRcalv3/Tc-nc.png
+![Tc-nc](./2019-10-09-physics-NSRcalv3/Tc-nc.png)
