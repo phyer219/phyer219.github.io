@@ -1,6 +1,6 @@
 ---
 title: NSR Calaulate III
-date: <2019-10-09>
+date: 2019-10-09
 category: 专业笔记
 tags:
  - "物理"

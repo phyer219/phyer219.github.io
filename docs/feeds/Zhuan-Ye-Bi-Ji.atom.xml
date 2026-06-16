@@ -18545,7 +18545,119 @@ $\Delta = 0$ , 另一方面, 这个 deep 同时也消失了, 也就是说在 $T_
 &lt;p&gt;Stinati&lt;/p&gt;
 
 &lt;p&gt;Pitaevskii &lt;/p&gt;
-</content><category term="专业笔记"/><category term="物理"/><category term="BCS-BEC Crossover"/><category term="BEC"/><category term="BCS"/></entry><entry><title>几种数值积分方法</title><link href="https://zqw.ink/2019-10-07-physics-NumCal.html" rel="alternate"/><published>2019-10-07T00:00:00+08:00</published><updated>2019-10-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2019-10-07:/2019-10-07-physics-NumCal.html</id><summary type="html">
+</content><category term="专业笔记"/><category term="物理"/><category term="BCS-BEC Crossover"/><category term="BEC"/><category term="BCS"/></entry><entry><title>NSR Calaulate III</title><link href="https://zqw.ink/2019-10-09-physics-NSRCalv3.html" rel="alternate"/><published>2019-10-09T00:00:00+08:00</published><updated>2019-10-09T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2019-10-09:/2019-10-09-physics-NSRCalv3.html</id><summary type="html">
+&lt;h2 id="整体思路"&gt;整体思路&lt;/h2&gt;
+$$
+
+\begin{align}
+  \frac{\Delta F}{NE_n}
+  = \left[ \tilde{\tilde{\Omega}}_{\mathrm{int}} - \tilde{\Omega}_{0}^{\mathrm{M}}
+  + \tilde{\mu} \right]\left( \frac{n_{\varepsilon}}{n} \right)^{2/3}
+\end{align}
+
+$$$$
+
+\begin{align}
+  \frac{n}{n_{\varepsilon}}
+ =&amp; - \frac{\partial}{\partial\tilde{\mu}}\left[
+       \tilde{\tilde …</summary><content type="html">
+&lt;h2 id="整体思路"&gt;整体思路&lt;/h2&gt;
+$$
+
+\begin{align}
+  \frac{\Delta F}{NE_n}
+  = \left[ \tilde{\tilde{\Omega}}_{\mathrm{int}} - \tilde{\Omega}_{0}^{\mathrm{M}}
+  + \tilde{\mu} \right]\left( \frac{n_{\varepsilon}}{n} \right)^{2/3}
+\end{align}
+
+$$$$
+
+\begin{align}
+  \frac{n}{n_{\varepsilon}}
+ =&amp; - \frac{\partial}{\partial\tilde{\mu}}\left[
+       \tilde{\tilde{\Omega}}_{\mathrm{int}} + \tilde{\Omega}_{0}^{\mathrm{B}}
+    \right]
+\end{align}
+
+$$$$
+
+\begin{align}
+  \tilde{\tilde{\Omega}}_{\mathrm{int}} = \int \mathrm{d}\tilde{q}\cdot \tilde{q}^2
+     \int_0^{\pi}\sin\theta_q\mathrm{d}\theta_q \int_{-\infty}^{+\infty}\mathrm{d}\tilde{\omega}
+      \cdot \frac{3}{2\pi}\cdot \frac{1}{e^{\tilde{\beta}\tilde{\omega}}-1}
+       \delta^p(\vec{q},z)
+\end{align}
+
+$$$$
+
+\begin{align}
+  \tilde{\Omega}_0^{\mathrm{B}} = \frac{3}{\tilde{\beta}} \int_0^{\infty} \mathrm{d}
+  \tilde{k} \cdot \tilde{k}^2 \ln \left[1 - e^{- \tilde{\beta} \tilde{\xi}_k}\right]
+\end{align}
+
+$$$$
+
+\begin{align}
+  \delta^p(\vec{q}, z)
+       =&amp; \mathrm{Arg}\left[
+             \frac{1}{4\pi}\cdot \frac{2R}{k_{\varepsilon}^2 v}
+            + \tilde{z}\cdot\frac{1}{4\pi}
+           + \frac{2 R}{M k_{\varepsilon}^2}\Pi_r(\vec{q},z + \mathrm{i}0^+)
+                \right]
+\end{align}
+
+$$$$
+
+\begin{align}
+  \frac{2 R}{M k_{\varepsilon}^2}\Pi_r(\vec{q},z)
+  =&amp; \frac{2}{\pi^2} \cdot k_{\varepsilon}R\cdot \int \mathrm{d}\tilde{k}\\
+          &amp; \left\{
+        \int_0^{2\pi}\mathrm{d}\phi_k  \int_{0}^{\pi} \sin\theta \mathrm{d}\theta_k
+        \cdot \cos^2 \theta_k \left[
+        1+n(\xi_{\vec{k}+\vec{q}/2}) + n(\xi_{-\vec{k}+\vec{q}/2})
+              \right]\frac{3}{4\pi}\frac{\tilde{k}^4}
+          {2\tilde{k}^2 - \tilde{z}}
+           -\frac{1}{2}\tilde{k}^2
+           - \frac{1}{4}\tilde{z}
+          \right\}
+\end{align}
+
+$$&lt;p&gt;而&lt;/p&gt;
+$$
+
+\begin{align}
+  n(\xi_{\vec{k}+\vec{q}/2}) = \frac{1}{e^{\beta(\tilde{k}^2 + \tilde{q}^2/4
+     + \tilde{k} \tilde{q} x-2\mu)} -1}
+\end{align}
+
+$$&lt;p&gt;其中&lt;/p&gt;
+$$
+
+\begin{align}
+  x = \cos\theta_{kq} =&amp; \sin\theta_k \cos \phi_k \sin \theta_q \cos \phi_q
+   + \sin \theta_k \sin\phi_k \sin \theta_q \sin \phi_q
+   + \cos \theta_k \cos \theta_q \\
+  =&amp; \sin\theta_k \sin \theta_q \cos(\phi_k-\phi_q)
+   + \cos \theta_k \cos \theta_q
+\end{align}
+
+$$&lt;p&gt;带 tilde 的都是以 $\varepsilon$ 或 $k_{\varepsilon}$ 为单位的无量纲量.&lt;/p&gt;
+&lt;p&gt;最终画的是 $(1)$ 式. $(1)$ 式左边以 $E_n$ 为单位, 右边乘上 $\left(
+\frac{n_{\varepsilon}}{n} \right)^{2/3}$ 进行单位转换.&lt;/p&gt;
+&lt;p&gt;将 $(2)~(5)$ 式依次代入可得结果&lt;/p&gt;
+&lt;p&gt;还有一些关系: $\tilde{\xi} = \tilde{k}^2 - \tilde{\mu} ,\quad n(\xi) =
+\frac{1}{e^{\tilde{\beta} \tilde{\xi}}-1}, \quad \tilde{z} =
+\tilde{\omega} - \frac{\tilde{q}^2}{2} + 2 \tilde{\mu}$&lt;/p&gt;
+&lt;h2 id="fig"&gt;Fig&lt;/h2&gt;
+&lt;p&gt;&lt;img src="./2019-10-09-physics-NSRcalv3/numGiven.png" alt="numGiven" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="./2019-10-09-physics-NSRcalv3/TcAll-ana.png" alt="TcAll-ana" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="./2019-10-09-physics-NSRcalv3/fig3-p-wave.png" alt="fig3-p-wave" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="./2019-10-09-physics-NSRcalv3/fig4-pwave.png" alt="fig4-pwave" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="./2019-10-09-physics-NSRcalv3/fig5-a.png" alt="fig5-a" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="./2019-10-09-physics-NSRcalv3/fig5-b.png" alt="fig5-b" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="./2019-10-09-physics-NSRcalv3/fig3-p-nc.png" alt="fig3-p-nc" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="./2019-10-09-physics-NSRcalv3/Tc-nc.png" alt="Tc-nc" /&gt;&lt;/p&gt;
+</content><category term="专业笔记"/><category term="物理"/><category term="path integral"/></entry><entry><title>几种数值积分方法</title><link href="https://zqw.ink/2019-10-07-physics-NumCal.html" rel="alternate"/><published>2019-10-07T00:00:00+08:00</published><updated>2019-10-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2019-10-07:/2019-10-07-physics-NumCal.html</id><summary type="html">
 &lt;h2&gt;Gaussian Quadrature &lt;/h2&gt;
 
 
@@ -24845,174 +24957,4 @@ plt.show()
 &lt;p&gt;Junjun Xu, Qiang Gu, and Erich J. Mueller Phys. Rev. A 88, 023604 (2013)&lt;/p&gt;
 
 
-</content><category term="专业笔记"/><category term="RF谱"/></entry><entry><title>留数定理笔记</title><link href="https://zqw.ink/2019-01-05-physics-Liu-Shu-Ding-Li-Bi-Ji.html" rel="alternate"/><published>2019-01-05T00:00:00+08:00</published><updated>2019-01-05T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2019-01-05:/2019-01-05-physics-Liu-Shu-Ding-Li-Bi-Ji.html</id><summary type="html">
-&lt;h2&gt;解析( Anlyticity )&lt;/h2&gt;
-
-&lt;h3&gt;惯用记法&lt;/h3&gt;
-
-&lt;p&gt;任意复数 $z$ 记为&lt;/p&gt;
-
-$$\begin{align*}
-  z = x + \mathrm{i}y
-\end{align*}$$
-
-
-&lt;p&gt;复函数 $f(z)$ 记为&lt;/p&gt;
-
-$$\begin{align*}
-  f(z) = u(x,y) +\mathrm{i} v(x,y)
-\end{align*}$$
-
-
-&lt;p&gt;例如&lt;/p&gt;
-
-$$\begin{align*}
-  f(z …</summary><content type="html">
-&lt;h2&gt;解析( Anlyticity )&lt;/h2&gt;
-
-&lt;h3&gt;惯用记法&lt;/h3&gt;
-
-&lt;p&gt;任意复数 $z$ 记为&lt;/p&gt;
-
-$$\begin{align*}
-  z = x + \mathrm{i}y
-\end{align*}$$
-
-
-&lt;p&gt;复函数 $f(z)$ 记为&lt;/p&gt;
-
-$$\begin{align*}
-  f(z) = u(x,y) +\mathrm{i} v(x,y)
-\end{align*}$$
-
-
-&lt;p&gt;例如&lt;/p&gt;
-
-$$\begin{align*}
-  f(z) = z + z^2 = x + \mathrm{i}y + (x + \mathrm{i}y)^2 = x + x^2 - y^2 + \mathrm{i}(y + 2xy)
-\end{align*}$$
-
-&lt;p&gt;其中&lt;/p&gt;
-
-$$\begin{align*}
-  u(x,y) =&amp; x + x^2 - y^2 \\
-  v(x,y) =&amp; y + 2xy
-\end{align*}$$
-
-
-&lt;h3&gt;导数&lt;/h3&gt;
-
-&lt;p&gt;由于&lt;/p&gt;
-
-$$\begin{align*}
-  f(z) = f(x,\mathrm{i}y)
-\end{align*}$$
-
-&lt;p&gt;可以看成是一个二元函数.
-那么有类似于一般的二元函数梯度&lt;/p&gt;
-
-$$\begin{align*}
-  \nabla g(x,y) = \frac{\partial}{\partial x} g(x,y) \vec{i}+ \frac{\partial}{\partial y} g(x,y) \vec{j}
-\end{align*}$$
-
-&lt;p&gt;的定义, 复函数的导数包含两个正交的方向上的导数&lt;/p&gt;
-
-$$\begin{align*}
-  \frac{\partial}{\partial x} f(x,\mathrm{i}y) =&amp;\frac{\partial u}{\partial x} + \mathrm{i}\frac{\partial v}{\partial x}\\
-  \frac{\partial}{\partial y} f(x,\mathrm{i}y) =&amp;\frac{\partial u}{\partial \mathrm{i}y} + \mathrm{i} \frac{\partial v}{\partial \mathrm{i}y}
-                                               =- \mathrm{i}\frac{\partial u}{\partial y} +\frac{\partial v}{\partial y}
-\end{align*}$$
-
-&lt;p&gt;解析 ( Anlyticity ) 函数的定义是满足以下柯西-黎曼条件 (Cauchy-Riemann conditions)&lt;/p&gt;
-
-$$\begin{align*}
-  \frac{\partial u}{\partial x} =&amp;\quad \frac{\partial v}{\partial y} \\
-  \frac{\partial u}{\partial y} =&amp; -\frac{\partial v}{\partial x}
-\end{align*}$$
-
-&lt;p&gt;的复函数. 可以看出, 对于解析函数, 在 $x$ 方向和在 $\mathrm{i}y$ 方向上的导数是一样的.&lt;/p&gt;
-
-&lt;h3&gt;解析函数一定可以写在 $z$ 的函数&lt;/h3&gt;
-
-&lt;p&gt;一个复函数, 即可以看成是 $(x,y)$ 的函数, 也可以看成是 $(z,z^{*})$ 的函数.
-因为这是两组独立的变量, 变换关系是&lt;/p&gt;
-
-$$\begin{align*}
-  \left\{
-  \begin{array}{c}
-    z = x + \mathrm{i} y \\
-    z^{*} = x - \mathrm{i}y
-      \end{array}
-  \right.
-  \quad  \quad  \quad  \quad
-    \left\{
-  \begin{array}{c}
-    x = \frac{1}{2}(z + z^{* }) \\
-    y = \frac{1}{2\mathrm{i}} (z - z^{*})
-          \end{array}
-  \right.
-\end{align*}$$
-
-
-&lt;p&gt;所以, 复函数更加普遍的定义应该写成 $f(z,z^{* })$ , 但是对于解析函数有&lt;/p&gt;
-
-$$\begin{align*}
-  \frac{\partial}{\partial z^{* }}f(x, y) =&amp; \frac{\partial f}{\partial x}\frac{\partial x}{\partial z^{* }}
-               +\frac{\partial f}{\partial y}\frac{\partial y}{\partial z^{* }} \\
-        =&amp; \left(\frac{\partial u}{\partial x} + \mathrm{i}\frac{\partial v}{\partial x}\right)\left(\frac{1}{2}\right)
-               + \left(\frac{\partial u}{\partial y} +\mathrm{i}\frac{\partial v}{\partial y}\right)\left(-\frac{1}{2\mathrm{i}}\right) \\
-          =&amp;0
-\end{align*}$$
-
-&lt;p&gt;所以解析函数不包含 $z^{* }$ .&lt;/p&gt;
-
-
-&lt;h2&gt;留数定理&lt;/h2&gt;
-
-&lt;p&gt;假设一函数函数可以写成&lt;/p&gt;
-
-$$\begin{align*}
-  g(z) = \frac{f(z)}{z - z_0}
-\end{align*}$$
-
-&lt;p&gt;的形式, 其中 $f(z)$ 没有奇点. 那么它在 $z = z_0$ 处有奇点.对任意包含 $z_0$ 点的路径 $C$ 逆时针积分&lt;/p&gt;
-
-$$\begin{align*}
-  \oint_{C}\frac{f(z)}{z -z_0} \mathrm{d}z
-\end{align*}$$
-
-&lt;p&gt;与在奇点附近上一个无穷小的圆的积分是相等的&lt;/p&gt;
-
-$$\begin{align*}
-  \oint_{C_0}\frac{f(z)}{z -z_0} \mathrm{d}z
-\end{align*}$$
-
-&lt;p&gt;用振幅和辐角来表示　$z-z_{0} = r e^{\mathrm{i}\phi}$ , 因为在圆上积分, 所以 $r$ 是常数, 那么有&lt;/p&gt;
-
-$$\begin{align*}
-  \oint_{C_0}\frac{f(z)}{z -z_0} \mathrm{d}z &amp;= \int_0^{2\pi}\frac{f(z)}{r e^{\mathrm{i}\phi}} \mathrm{i}re^{\mathrm{i}\phi}\mathrm{d}\phi \\
-          &amp;=\mathrm{i}\int_0^{2\pi} f(z_0) \mathrm{d}\phi \\
-           &amp;= \mathrm{i} 2\pi f(z_{0})
-\end{align*}$$
-
-&lt;p&gt;所以最终就有&lt;/p&gt;
-
-$$\begin{align*}
-  \oint_{C}g(z)\mathrm{d}z = \oint_{C}\frac{f_z}{z -z_0}\mathrm{d}z = 2\pi \mathrm{i} f(z_0) = 2\pi \mathrm{i}\cdot g(z)(z-z_{0})|_{z=z_0}
-\end{align*}$$
-
-&lt;p&gt;$g(z)(z-z_0)|_{z=z_0}$ 就是留数, 去掉奇点留下的数.&lt;/p&gt;
-
-&lt;p&gt;推广到多个奇点的情况&lt;/p&gt;
-
-$$\begin{align*}
-  \oint_C g(z) \mathrm{d}z = 2\pi \mathrm{i} \sum_{k=1}^N \mathrm{Res}[g(z_k)]
-\end{align*}$$
-
-
-&lt;h2&gt;参考文献&lt;/h2&gt;
-
-&lt;p&gt;Jim, Napolitano, March 9, 2013, Notes on Complex Analysis in Physics&lt;/p&gt;
-
-&lt;p&gt;&lt;a href='http://www.rpi.edu/dept/phys/Courses/PHYS6520/Spring2018/NotesOnComplexAnalysis.pdf'&gt;http://www.rpi.edu/dept/phys/Courses/PHYS6520/Spring2018/NotesOnComplexAnalysis.pdf&lt;/a&gt;&lt;/p&gt;
-</content><category term="专业笔记"/><category term="数学"/><category term="留数定理"/><category term="复变函数"/></entry></feed>
+</content><category term="专业笔记"/><category term="RF谱"/></entry></feed>
