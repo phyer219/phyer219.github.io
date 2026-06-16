@@ -103,18 +103,18 @@ $$
 
 ## Fig
 
-![numGiven](./2019-10-09-physics-NSRcalv3/numGiven.png)
+![numGiven](./2019-10-09-physics-NSRCalv3/numGiven.png)
 
-![TcAll-ana](./2019-10-09-physics-NSRcalv3/TcAll-ana.png)
+![TcAll-ana](./2019-10-09-physics-NSRCalv3/TcAll-ana.png)
 
-![fig3-p-wave](./2019-10-09-physics-NSRcalv3/fig3-p-wave.png)
+![fig3-p-wave](./2019-10-09-physics-NSRCalv3/fig3-p-wave.png)
 
-![fig4-pwave](./2019-10-09-physics-NSRcalv3/fig4-pwave.png)
+![fig4-pwave](./2019-10-09-physics-NSRCalv3/fig4-pwave.png)
 
-![fig5-a](./2019-10-09-physics-NSRcalv3/fig5-a.png)
+![fig5-a](./2019-10-09-physics-NSRCalv3/fig5-a.png)
 
-![fig5-b](./2019-10-09-physics-NSRcalv3/fig5-b.png)
+![fig5-b](./2019-10-09-physics-NSRCalv3/fig5-b.png)
 
-![fig3-p-nc](./2019-10-09-physics-NSRcalv3/fig3-p-nc.png)
+![fig3-p-nc](./2019-10-09-physics-NSRCalv3/fig3-p-nc.png)
 
-![Tc-nc](./2019-10-09-physics-NSRcalv3/Tc-nc.png)
+![Tc-nc](./2019-10-09-physics-NSRCalv3/Tc-nc.png)
