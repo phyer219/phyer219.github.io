@@ -1,5 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/all.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2026-01-25T00:00:00+08:00</updated><entry><title>Interested talk on SCA/HPCAsia2026</title><link href="https://zqw.ink/2026-01-25-blog-SCA_HPCAsia2026.html" rel="alternate"/><published>2026-01-25T00:00:00+08:00</published><updated>2026-01-25T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2026-01-25:/2026-01-25-blog-SCA_HPCAsia2026.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/all.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2026-06-18T00:00:00+08:00</updated><entry><title>群表示论备忘</title><link href="https://zqw.ink/2026-06-18-physics-group_representation_theory.html" rel="alternate"/><published>2026-06-18T00:00:00+08:00</published><updated>2026-06-18T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2026-06-18:/2026-06-18-physics-group_representation_theory.html</id><summary type="html">
+&lt;h2 id="character-is-a-function-of-class"&gt;Character is a function of class&lt;/h2&gt;
+&lt;p&gt;Dimensions of the irreducible representations:&lt;/p&gt;
+$$
+
+\begin{align}
+  \sum_r d_r^2 = N(G)
+\end{align}
+
+$$&lt;p&gt;Column orthogonality:&lt;/p&gt;
+$$
+
+\begin{align}
+  \sum_c n_c (\chi^{(r)}(c))^* \, \chi^{(s)}(c) = N(G) \delta^{rs}
+\end{align}
+
+$$&lt;p&gt;Row orthogonality:&lt;/p&gt;
+$$
+
+\begin{align}
+  \sum_r \chi^{(r)} (c)^* \, \chi^{(r)}(c') = \frac …</summary><content type="html">
+&lt;h2 id="character-is-a-function-of-class"&gt;Character is a function of class&lt;/h2&gt;
+&lt;p&gt;Dimensions of the irreducible representations:&lt;/p&gt;
+$$
+
+\begin{align}
+  \sum_r d_r^2 = N(G)
+\end{align}
+
+$$&lt;p&gt;Column orthogonality:&lt;/p&gt;
+$$
+
+\begin{align}
+  \sum_c n_c (\chi^{(r)}(c))^* \, \chi^{(s)}(c) = N(G) \delta^{rs}
+\end{align}
+
+$$&lt;p&gt;Row orthogonality:&lt;/p&gt;
+$$
+
+\begin{align}
+  \sum_r \chi^{(r)} (c)^* \, \chi^{(r)}(c') = \frac{N(G)}{n_c} \delta^{c c'}
+\end{align}
+
+$$&lt;p&gt;The character table is square:&lt;/p&gt;
+$$
+
+\begin{align}
+N(C) = N(R)
+\end{align}
+
+$$&lt;p&gt;Great orthogonality theorem&lt;/p&gt;
+$$
+
+\begin{align}
+\sum_g D^{(r) \dagger}(g)^i_{\, j} D^{(s)} (g)^k_{\, l}
+= \frac{N(G)}{d_r} \delta^{rs} \delta^i_{\,l}\delta^k_{\,j}
+\end{align}
+
+$$&lt;h2 id="character-table"&gt;Character table&lt;/h2&gt;
+&lt;h3 id="cyclic-groups"&gt;Cyclic groups $Z_n$&lt;/h3&gt;
+&lt;p&gt;$Z_n$ 是 Abel 群。
+Abel 群的等价类的个数与群元的个数相同。
+Abel 群所有的不可约表示都是一维的。
+不可约表示的个数又与类的个数相同。
+所以 $Z_n$ 有 &lt;eq&gt;n&lt;/eq&gt; 个一维不可约表示。&lt;/p&gt;
+&lt;p&gt;如 $Z_3$ 的群元 $\{I, g, g^2\}$，特征值表为&lt;/p&gt;
+$$
+
+\begin{array}{c|ccc}
+  \hline
+  Z_3   &amp;   I  &amp;  g         &amp;  g^2 \\
+  \hline
+  1     &amp;   1  &amp;  1         &amp;  1   \\
+  1'    &amp;   1  &amp;  \omega    &amp;  \omega^2   \\
+  1'    &amp;   1  &amp;  \omega^2  &amp;  \omega   ,\\
+\end{array}
+
+$$&lt;p&gt;其中 $\omega=e^{2\pi i /3}$ 。&lt;/p&gt;
+&lt;h3 id="even-permutation-group"&gt;Even permutation group $A_3$&lt;/h3&gt;
+$$
+
+\begin{array}{ccc|ccc}
+\hline
+A_3 &amp; n_c &amp;            &amp; 1 &amp; 1'       &amp; 1'' \\
+\hline
+    &amp; 1   &amp; I          &amp; 1 &amp; 1        &amp; 1        \\
+Z_3 &amp; 1   &amp; c=(123)    &amp; 1 &amp; \omega   &amp; \omega^* \\
+Z_3 &amp; 1   &amp; a=(132)    &amp; 1 &amp; \omega^* &amp; \omega  \\
+\hline
+\end{array}
+
+$$&lt;h3 id="even-permutation-group-1"&gt;Even permutation group $A_4$&lt;/h3&gt;
+$$
+
+\begin{array}{ccc|cccc}
+\hline
+A_4   &amp;  n_c  &amp;  c       &amp;  1  &amp;  1'       &amp;   1''      &amp;  3 \\
+\hline
+      &amp;  1    &amp;  I       &amp;  1  &amp;  1        &amp;   1        &amp;  3 \\
+Z_2   &amp;  3    &amp; (12)(34) &amp;  1  &amp;  1        &amp;   1        &amp;  -1 \\
+Z_3   &amp;  4    &amp; (123)    &amp;  1  &amp;  \omega   &amp;   \omega^* &amp;  0  \\
+Z_3   &amp;  4    &amp; (132)    &amp;  1  &amp;  \omega^* &amp;   \omega   &amp;  0  \\
+\hline
+\end{array}
+
+$$&lt;h3 id="permutation-group"&gt;Permutation group $S_3$&lt;/h3&gt;
+$$
+
+\begin{array}{ccc|ccc}
+\hline
+S_3 &amp; n_c &amp;               &amp; 1 &amp; \bar{1} &amp; 2 \\
+\hline
+    &amp; 1 &amp; I               &amp; 1 &amp; 1  &amp; 2  \\
+Z_3 &amp; 2 &amp; (123),(132)     &amp; 1 &amp; 1  &amp; -1_x \\
+Z_2 &amp; 3 &amp; (12),(23),(31)  &amp; 1 &amp; -1 &amp; 0_y  \\
+\hline
+\end{array}
+
+$$&lt;h3 id="permutation-group-1"&gt;Permutation group $S_4$&lt;/h3&gt;
+$$
+
+\begin{array}{ccc|ccccc}
+\hline
+S_4 &amp; n_c &amp;        &amp; 1 &amp; \bar{1} &amp; 2 &amp; 3 &amp; \bar{3} \\
+\hline
+    &amp; 1 &amp; I        &amp; 1 &amp; 1  &amp; 2  &amp; 3  &amp; 3  \\
+Z_2 &amp; 3 &amp; (12)(34) &amp; 1 &amp; 1  &amp; 2  &amp; -1 &amp; -1 \\
+Z_3 &amp; 8 &amp; (123)    &amp; 1 &amp; 1  &amp; -1 &amp; 0  &amp; 0  \\
+Z_2 &amp; 6 &amp; (12)     &amp; 1 &amp; -1 &amp; 0  &amp; 1  &amp; -1 \\
+Z_4 &amp; 6 &amp; (1234)   &amp; 1 &amp; -1 &amp; 0  &amp; -1 &amp; 1  \\
+\hline
+\end{array}
+
+$$&lt;h2 id="reference"&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;2016 - A. Zee - Group Theory in a Nutshell for Physicists (2016, Princeton University Press)&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="physics"/><category term="group theory"/></entry><entry><title>Interested talk on SCA/HPCAsia2026</title><link href="https://zqw.ink/2026-01-25-blog-SCA_HPCAsia2026.html" rel="alternate"/><published>2026-01-25T00:00:00+08:00</published><updated>2026-01-25T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2026-01-25:/2026-01-25-blog-SCA_HPCAsia2026.html</id><summary type="html">
 &lt;p&gt;会议日记 &lt;a href="https://www.sca-hpcasia2026.jp/index.html"&gt;https://www.sca-hpcasia2026.jp/index.html&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="#monday-january-26"&gt;Monday, January 26&lt;/a&gt;
@@ -16429,30 +16566,4 @@ $$
 &lt;h1 id="知识背景"&gt;知识背景&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;罗宾汉&lt;/strong&gt;（英語：&lt;strong&gt;Robin Hood&lt;/strong&gt;）是&lt;a href="https://zh.wikipedia.org/wiki/%E8%8B%B1%E5%9C%8B"&gt;英國&lt;/a&gt;民间传说中的&lt;a href="https://zh.wikipedia.org/wiki/%E4%BF%A0%E7%9B%9C"&gt;俠盜&lt;/a&gt;. 他武艺出众、机智勇敢, 仇视官吏和教士, 是一位劫富濟貧、行俠仗義的綠林&lt;a href="https://zh.wikipedia.org/wiki/%E8%8B%B1%E9%9B%84"&gt;英雄&lt;/a&gt;. 传说他住在&lt;a href="https://zh.wikipedia.org/wiki/%E8%AF%BA%E4%B8%81%E6%B1%89"&gt;诺丁汉&lt;/a&gt;&lt;a href="https://zh.wikipedia.org/wiki/%E9%9B%AA%E4%BC%8D%E5%BE%B7%E6%A3%AE%E6%9E%97"&gt;雪伍德森林&lt;/a&gt;（Sherwood Forest）.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;主日學&lt;/strong&gt;（英語：Sunday school）是&lt;a href="https://zh.wikipedia.org/wiki/%E5%9F%BA%E7%9D%A3%E6%95%99"&gt;基督教&lt;/a&gt;&lt;a href="https://zh.wikipedia.org/wiki/%E6%95%99%E6%9C%83"&gt;教會&lt;/a&gt;於&lt;a href="https://zh.wikipedia.org/wiki/%E4%B8%BB%E6%97%A5"&gt;主日&lt;/a&gt;（通常即&lt;a href="https://zh.wikipedia.org/wiki/%E6%98%9F%E6%9C%9F%E6%97%A5"&gt;星期日&lt;/a&gt;，部分教派为安息日）早上在&lt;a href="https://zh.wikipedia.org/wiki/%E6%95%99%E5%A0%82"&gt;教堂&lt;/a&gt;或其他场所進行的宗教教育，一般在&lt;a href="https://zh.wikipedia.org/wiki/%E7%A4%BC%E6%8B%9C"&gt;主日敬拜&lt;/a&gt;之前或之後舉行。主日學的形式多樣化，因教會而異，內容多以查&lt;a href="https://zh.wikipedia.org/wiki/%E8%81%96%E7%B6%93"&gt;經&lt;/a&gt;、教授基本聖經內容為主，並由教會所指定的小組長、執事、傳道或&lt;a href="https://zh.wikipedia.org/wiki/%E7%89%A7%E5%B8%AB"&gt;牧師&lt;/a&gt;講道。&lt;/p&gt;
-</content><category term="专业笔记"/><category term="Green's function"/><category term="George Green"/></entry><entry><title>和唯一知道星星为什么会发光的人一起散步</title><link href="https://zqw.ink/2020-12-20-blog-walk_with_why_star_shining.html" rel="alternate"/><published>2020-12-20T00:00:00+08:00</published><updated>2020-12-20T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-12-20:/2020-12-20-blog-walk_with_why_star_shining.html</id><summary type="html">
-&lt;p&gt;&lt;em&gt;《和唯一知道星星为什么会发光的人一起散步》, 蒋方舟, 中信出版集团, 2020&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;全局共有四篇小说, 外加一篇后记, 是蒋方舟的新书 …&lt;/p&gt;</summary><content type="html">
-&lt;p&gt;&lt;em&gt;《和唯一知道星星为什么会发光的人一起散步》, 蒋方舟, 中信出版集团, 2020&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;全局共有四篇小说, 外加一篇后记, 是蒋方舟的新书, 买的签名版.&lt;/p&gt;
-&lt;p&gt;上周就读完了, 没有时间来写.&lt;/p&gt;
-&lt;p&gt;如果按喜欢程度排序的话, 是 边境来了陌生人 &amp;gt; 和唯一知道星星为什么会发光的人一起散
-步 &amp;gt; 在海边放了一颗巨大的蛋 &amp;gt; 在威尼斯重建时间&lt;/p&gt;
-&lt;p&gt;我觉得作者写的故事很好, 但是关于科幻, 或者说幻想的部分有些生硬, 奇怪.&lt;/p&gt;
-&lt;h2 id="在海边放了一颗巨大的蛋"&gt;在海边放了一颗巨大的蛋&lt;/h2&gt;
-&lt;p&gt;有一天, 在海边的一个村子里, 突然多出了一块巨大的石头. 至于是从哪里来的, 每个人都
-有不同的看法. 有一个叫普修的人, 在石头里造了一个与世隔绝的世界. 大家后来搬了进去.
-原来这个巨大的石头是南十字星人的一颗棋子.&lt;/p&gt;
-&lt;h2 id="和唯一知道星星为什么会发光的人一起散步"&gt;和唯一知道星星为什么会发光的人一起散步&lt;/h2&gt;
-&lt;p&gt;&amp;quot;我&amp;quot; 经历了大瘟疫, 之后人们的心灵都留下了创伤. 之后嫁给了一位地理老师. 瘟疫在世
-界各国人们心里留下的创伤, 促使世界不断爆发战争. 战争中人们都疯狂了. 战争结束, 国
-家却完全自我封闭, 对国民, 新出生的小孩都教育他们没有外国这个概念的存在. &amp;quot;我&amp;quot; 的
-丈夫和他的一个学生, 也是情人出逃国外, 中途丧生.&lt;/p&gt;
-&lt;h2 id="在威尼斯重建时间"&gt;在威尼斯重建时间&lt;/h2&gt;
-&lt;p&gt;&amp;quot;我&amp;quot; 是一名物理物理学家, 双亲皆不在人世. 却被一位科学家朋友做了他新发明的手术,
-&amp;quot;我&amp;quot; 不再被时间束缚, 穿梭于不同的时间, 不同的世界. &amp;quot;我&amp;quot; 却同时也像是被关在时间的
-牢笼里.&lt;/p&gt;
-&lt;h2 id="边境来了陌生人"&gt;边境来了陌生人&lt;/h2&gt;
-&lt;p&gt;边境小镇来了一位陌生人, 小屋里有许多的人. 每个人都讲了一个美妙绝伦的故事.&lt;/p&gt;
-&lt;h2 id="后记"&gt;后记&lt;/h2&gt;
-&lt;p&gt;原来这四个故事都是对应于一个建筑.&lt;/p&gt;
-</content><category term="blog"/><category term="读书笔记"/><category term="蒋方舟"/></entry></feed>
+</content><category term="专业笔记"/><category term="Green's function"/><category term="George Green"/></entry></feed>

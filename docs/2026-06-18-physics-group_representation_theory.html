@@ -2,13 +2,16 @@
 <html lang="zh_cn">
 
 <head>
-  <title>从冰上的水</title>
+    <title>从冰上的水 - 群表示论备忘</title>
   <meta charset="utf-8" />
   <meta name="generator" content="Pelican" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link
     href="https://zqw.ink/feeds/all.atom.xml"
     type="application/atom+xml" rel="alternate" title="从冰上的水 Full Atom Feed" />
+  <link
+    href="https://zqw.ink/feeds/physics.atom.xml"
+    type="application/atom+xml" rel="alternate" title="从冰上的水 Categories Atom Feed" />
   <link rel="stylesheet" type="text/css" href="https://zqw.ink/theme/css/style.css" />
   <!-- SEO: site-level structured data (WebSite) -->
   <script type="application/ld+json">
@@ -75,6 +78,32 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.1">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.1">
 <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.1">
+
+
+
+  <!-- SEO: page description for search results -->
+    <meta name="description" content="Character is a function of class Dimensions of the irreducible representations: $$ \begin{align} \sum_r d_r^2 = N(G) \end{align} $$Column orthogonality: $$..." />
+
+    <meta name="tags" content="group theory" />
+
+  <!-- SEO: structured data for articles (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "群表示论备忘",
+    "datePublished": "2026-06-18T00:00:00+08:00",
+    "author": {
+      "@type": "Person",
+      "name": "ZQW"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://zqw.ink/2026-06-18-physics-group_representation_theory.html"
+    }
+  }
+  </script>
+
 </head>
 
 <body>
@@ -117,16 +146,138 @@
   </header>
   <main>
 
-<section class="post-list">
-    <h3><a class="post-link" href="https://zqw.ink/category/Gu-Shi.html">故事</a>(1)</h3>
-    <h3><a class="post-link" href="https://zqw.ink/category/Le-Qu.html">乐趣</a>(2)</h3>
-    <h3><a class="post-link" href="https://zqw.ink/category/Ruan-Jian-Shi-Yong.html">软件使用</a>(28)</h3>
-    <h3><a class="post-link" href="https://zqw.ink/category/Xiang-Shuo.html">想说</a>(15)</h3>
-    <h3><a class="post-link" href="https://zqw.ink/category/Zhuan-Ye-Bi-Ji.html">专业笔记</a>(118)</h3>
-    <h3><a class="post-link" href="https://zqw.ink/category/blog.html">blog</a>(67)</h3>
-    <h3><a class="post-link" href="https://zqw.ink/category/coding.html">coding</a>(8)</h3>
-    <h3><a class="post-link" href="https://zqw.ink/category/other.html">other</a>(1)</h3>
-    <h3><a class="post-link" href="https://zqw.ink/category/physics.html">physics</a>(14)</h3>
+<h1 class="post-title">群表示论备忘</h1>
+
+<section class="post-meta">
+    <p>2026-06-18</p>
+    <p>-<a class="post-link" href="https://zqw.ink/category/physics.html">physics</a></p>
+</section>
+
+<section class="markdown-body">
+  
+<h2 id="character-is-a-function-of-class">Character is a function of class</h2>
+<p>Dimensions of the irreducible representations:</p>
+$$
+
+\begin{align}
+  \sum_r d_r^2 = N(G)
+\end{align}
+
+$$<p>Column orthogonality:</p>
+$$
+
+\begin{align}
+  \sum_c n_c (\chi^{(r)}(c))^* \, \chi^{(s)}(c) = N(G) \delta^{rs}
+\end{align}
+
+$$<p>Row orthogonality:</p>
+$$
+
+\begin{align}
+  \sum_r \chi^{(r)} (c)^* \, \chi^{(r)}(c') = \frac{N(G)}{n_c} \delta^{c c'}
+\end{align}
+
+$$<p>The character table is square:</p>
+$$
+
+\begin{align}
+N(C) = N(R)
+\end{align}
+
+$$<p>Great orthogonality theorem</p>
+$$
+
+\begin{align}
+\sum_g D^{(r) \dagger}(g)^i_{\, j} D^{(s)} (g)^k_{\, l}
+= \frac{N(G)}{d_r} \delta^{rs} \delta^i_{\,l}\delta^k_{\,j}
+\end{align}
+
+$$<h2 id="character-table">Character table</h2>
+<h3 id="cyclic-groups">Cyclic groups $Z_n$</h3>
+<p>$Z_n$ 是 Abel 群。
+Abel 群的等价类的个数与群元的个数相同。
+Abel 群所有的不可约表示都是一维的。
+不可约表示的个数又与类的个数相同。
+所以 $Z_n$ 有 <eq>n</eq> 个一维不可约表示。</p>
+<p>如 $Z_3$ 的群元 $\{I, g, g^2\}$，特征值表为</p>
+$$
+
+\begin{array}{c|ccc}
+  \hline
+  Z_3   &   I  &  g         &  g^2 \\
+  \hline
+  1     &   1  &  1         &  1   \\
+  1'    &   1  &  \omega    &  \omega^2   \\
+  1'    &   1  &  \omega^2  &  \omega   ,\\
+\end{array}
+
+$$<p>其中 $\omega=e^{2\pi i /3}$ 。</p>
+<h3 id="even-permutation-group">Even permutation group $A_3$</h3>
+$$
+
+\begin{array}{ccc|ccc}
+\hline
+A_3 & n_c &            & 1 & 1'       & 1'' \\
+\hline
+    & 1   & I          & 1 & 1        & 1        \\
+Z_3 & 1   & c=(123)    & 1 & \omega   & \omega^* \\
+Z_3 & 1   & a=(132)    & 1 & \omega^* & \omega  \\
+\hline
+\end{array}
+
+$$<h3 id="even-permutation-group-1">Even permutation group $A_4$</h3>
+$$
+
+\begin{array}{ccc|cccc}
+\hline
+A_4   &  n_c  &  c       &  1  &  1'       &   1''      &  3 \\
+\hline
+      &  1    &  I       &  1  &  1        &   1        &  3 \\
+Z_2   &  3    & (12)(34) &  1  &  1        &   1        &  -1 \\
+Z_3   &  4    & (123)    &  1  &  \omega   &   \omega^* &  0  \\
+Z_3   &  4    & (132)    &  1  &  \omega^* &   \omega   &  0  \\
+\hline
+\end{array}
+
+$$<h3 id="permutation-group">Permutation group $S_3$</h3>
+$$
+
+\begin{array}{ccc|ccc}
+\hline
+S_3 & n_c &               & 1 & \bar{1} & 2 \\
+\hline
+    & 1 & I               & 1 & 1  & 2  \\
+Z_3 & 2 & (123),(132)     & 1 & 1  & -1_x \\
+Z_2 & 3 & (12),(23),(31)  & 1 & -1 & 0_y  \\
+\hline
+\end{array}
+
+$$<h3 id="permutation-group-1">Permutation group $S_4$</h3>
+$$
+
+\begin{array}{ccc|ccccc}
+\hline
+S_4 & n_c &        & 1 & \bar{1} & 2 & 3 & \bar{3} \\
+\hline
+    & 1 & I        & 1 & 1  & 2  & 3  & 3  \\
+Z_2 & 3 & (12)(34) & 1 & 1  & 2  & -1 & -1 \\
+Z_3 & 8 & (123)    & 1 & 1  & -1 & 0  & 0  \\
+Z_2 & 6 & (12)     & 1 & -1 & 0  & 1  & -1 \\
+Z_4 & 6 & (1234)   & 1 & -1 & 0  & -1 & 1  \\
+\hline
+\end{array}
+
+$$<h2 id="reference">Reference</h2>
+<ul>
+<li>2016 - A. Zee - Group Theory in a Nutshell for Physicists (2016, Princeton University Press)</li>
+</ul>
+
+</section>
+
+<section class="post-meta">
+    <p>
+        <a class="post-link" href="https://zqw.ink/tag/group-theory.html">#group theory</a>
+    </p>
 </section>
 
   </main>

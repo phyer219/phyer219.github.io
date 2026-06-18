@@ -1,5 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水 - physics</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/physics.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2025-06-16T00:00:00+08:00</updated><entry><title>Rotating Wave Approximation Numerical Check</title><link href="https://zqw.ink/2025-06-16-physics-rwa_check.html" rel="alternate"/><published>2025-06-16T00:00:00+08:00</published><updated>2025-06-16T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-06-16:/2025-06-16-physics-rwa_check.html</id><summary type="html">&lt;pre&gt;&lt;code class="language-python"&gt;import numpy as np
+<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水 - physics</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/physics.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2026-06-18T00:00:00+08:00</updated><entry><title>群表示论备忘</title><link href="https://zqw.ink/2026-06-18-physics-group_representation_theory.html" rel="alternate"/><published>2026-06-18T00:00:00+08:00</published><updated>2026-06-18T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2026-06-18:/2026-06-18-physics-group_representation_theory.html</id><summary type="html">
+&lt;h2 id="character-is-a-function-of-class"&gt;Character is a function of class&lt;/h2&gt;
+&lt;p&gt;Dimensions of the irreducible representations:&lt;/p&gt;
+$$
+
+\begin{align}
+  \sum_r d_r^2 = N(G)
+\end{align}
+
+$$&lt;p&gt;Column orthogonality:&lt;/p&gt;
+$$
+
+\begin{align}
+  \sum_c n_c (\chi^{(r)}(c))^* \, \chi^{(s)}(c) = N(G) \delta^{rs}
+\end{align}
+
+$$&lt;p&gt;Row orthogonality:&lt;/p&gt;
+$$
+
+\begin{align}
+  \sum_r \chi^{(r)} (c)^* \, \chi^{(r)}(c') = \frac …</summary><content type="html">
+&lt;h2 id="character-is-a-function-of-class"&gt;Character is a function of class&lt;/h2&gt;
+&lt;p&gt;Dimensions of the irreducible representations:&lt;/p&gt;
+$$
+
+\begin{align}
+  \sum_r d_r^2 = N(G)
+\end{align}
+
+$$&lt;p&gt;Column orthogonality:&lt;/p&gt;
+$$
+
+\begin{align}
+  \sum_c n_c (\chi^{(r)}(c))^* \, \chi^{(s)}(c) = N(G) \delta^{rs}
+\end{align}
+
+$$&lt;p&gt;Row orthogonality:&lt;/p&gt;
+$$
+
+\begin{align}
+  \sum_r \chi^{(r)} (c)^* \, \chi^{(r)}(c') = \frac{N(G)}{n_c} \delta^{c c'}
+\end{align}
+
+$$&lt;p&gt;The character table is square:&lt;/p&gt;
+$$
+
+\begin{align}
+N(C) = N(R)
+\end{align}
+
+$$&lt;p&gt;Great orthogonality theorem&lt;/p&gt;
+$$
+
+\begin{align}
+\sum_g D^{(r) \dagger}(g)^i_{\, j} D^{(s)} (g)^k_{\, l}
+= \frac{N(G)}{d_r} \delta^{rs} \delta^i_{\,l}\delta^k_{\,j}
+\end{align}
+
+$$&lt;h2 id="character-table"&gt;Character table&lt;/h2&gt;
+&lt;h3 id="cyclic-groups"&gt;Cyclic groups $Z_n$&lt;/h3&gt;
+&lt;p&gt;$Z_n$ 是 Abel 群。
+Abel 群的等价类的个数与群元的个数相同。
+Abel 群所有的不可约表示都是一维的。
+不可约表示的个数又与类的个数相同。
+所以 $Z_n$ 有 &lt;eq&gt;n&lt;/eq&gt; 个一维不可约表示。&lt;/p&gt;
+&lt;p&gt;如 $Z_3$ 的群元 $\{I, g, g^2\}$，特征值表为&lt;/p&gt;
+$$
+
+\begin{array}{c|ccc}
+  \hline
+  Z_3   &amp;   I  &amp;  g         &amp;  g^2 \\
+  \hline
+  1     &amp;   1  &amp;  1         &amp;  1   \\
+  1'    &amp;   1  &amp;  \omega    &amp;  \omega^2   \\
+  1'    &amp;   1  &amp;  \omega^2  &amp;  \omega   ,\\
+\end{array}
+
+$$&lt;p&gt;其中 $\omega=e^{2\pi i /3}$ 。&lt;/p&gt;
+&lt;h3 id="even-permutation-group"&gt;Even permutation group $A_3$&lt;/h3&gt;
+$$
+
+\begin{array}{ccc|ccc}
+\hline
+A_3 &amp; n_c &amp;            &amp; 1 &amp; 1'       &amp; 1'' \\
+\hline
+    &amp; 1   &amp; I          &amp; 1 &amp; 1        &amp; 1        \\
+Z_3 &amp; 1   &amp; c=(123)    &amp; 1 &amp; \omega   &amp; \omega^* \\
+Z_3 &amp; 1   &amp; a=(132)    &amp; 1 &amp; \omega^* &amp; \omega  \\
+\hline
+\end{array}
+
+$$&lt;h3 id="even-permutation-group-1"&gt;Even permutation group $A_4$&lt;/h3&gt;
+$$
+
+\begin{array}{ccc|cccc}
+\hline
+A_4   &amp;  n_c  &amp;  c       &amp;  1  &amp;  1'       &amp;   1''      &amp;  3 \\
+\hline
+      &amp;  1    &amp;  I       &amp;  1  &amp;  1        &amp;   1        &amp;  3 \\
+Z_2   &amp;  3    &amp; (12)(34) &amp;  1  &amp;  1        &amp;   1        &amp;  -1 \\
+Z_3   &amp;  4    &amp; (123)    &amp;  1  &amp;  \omega   &amp;   \omega^* &amp;  0  \\
+Z_3   &amp;  4    &amp; (132)    &amp;  1  &amp;  \omega^* &amp;   \omega   &amp;  0  \\
+\hline
+\end{array}
+
+$$&lt;h3 id="permutation-group"&gt;Permutation group $S_3$&lt;/h3&gt;
+$$
+
+\begin{array}{ccc|ccc}
+\hline
+S_3 &amp; n_c &amp;               &amp; 1 &amp; \bar{1} &amp; 2 \\
+\hline
+    &amp; 1 &amp; I               &amp; 1 &amp; 1  &amp; 2  \\
+Z_3 &amp; 2 &amp; (123),(132)     &amp; 1 &amp; 1  &amp; -1_x \\
+Z_2 &amp; 3 &amp; (12),(23),(31)  &amp; 1 &amp; -1 &amp; 0_y  \\
+\hline
+\end{array}
+
+$$&lt;h3 id="permutation-group-1"&gt;Permutation group $S_4$&lt;/h3&gt;
+$$
+
+\begin{array}{ccc|ccccc}
+\hline
+S_4 &amp; n_c &amp;        &amp; 1 &amp; \bar{1} &amp; 2 &amp; 3 &amp; \bar{3} \\
+\hline
+    &amp; 1 &amp; I        &amp; 1 &amp; 1  &amp; 2  &amp; 3  &amp; 3  \\
+Z_2 &amp; 3 &amp; (12)(34) &amp; 1 &amp; 1  &amp; 2  &amp; -1 &amp; -1 \\
+Z_3 &amp; 8 &amp; (123)    &amp; 1 &amp; 1  &amp; -1 &amp; 0  &amp; 0  \\
+Z_2 &amp; 6 &amp; (12)     &amp; 1 &amp; -1 &amp; 0  &amp; 1  &amp; -1 \\
+Z_4 &amp; 6 &amp; (1234)   &amp; 1 &amp; -1 &amp; 0  &amp; -1 &amp; 1  \\
+\hline
+\end{array}
+
+$$&lt;h2 id="reference"&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;2016 - A. Zee - Group Theory in a Nutshell for Physicists (2016, Princeton University Press)&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="physics"/><category term="group theory"/></entry><entry><title>Rotating Wave Approximation Numerical Check</title><link href="https://zqw.ink/2025-06-16-physics-rwa_check.html" rel="alternate"/><published>2025-06-16T00:00:00+08:00</published><updated>2025-06-16T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-06-16:/2025-06-16-physics-rwa_check.html</id><summary type="html">&lt;pre&gt;&lt;code class="language-python"&gt;import numpy as np
 import qutip as qtp
 import plotly.graph_objects as go
 import plotly.io as pio
