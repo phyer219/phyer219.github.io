@@ -1,38 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/all.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2026-06-18T00:00:00+08:00</updated><entry><title>群表示论备忘</title><link href="https://zqw.ink/2026-06-18-physics-group_representation_theory.html" rel="alternate"/><published>2026-06-18T00:00:00+08:00</published><updated>2026-06-18T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2026-06-18:/2026-06-18-physics-group_representation_theory.html</id><summary type="html">
-&lt;h2 id="character-is-a-function-of-class"&gt;Character is a function of class&lt;/h2&gt;
-&lt;p&gt;Dimensions of the irreducible representations:&lt;/p&gt;
+&lt;h2 id="defination-of-group"&gt;Defination of group&lt;/h2&gt;
+&lt;p&gt;群（group）是一个抽象的数学概念。定义如下（&lt;a href="https://en.wikipedia.org/wiki/Group_(mathematics)"&gt;Wikipedia: Group (mathematics)&lt;/a&gt;）:&lt;/p&gt;
+&lt;p&gt;A group is a set &lt;eq&gt;G&lt;/eq&gt; together with a binary operation on ⁠ &lt;eq&gt;G&lt;/eq&gt;⁠, here denoted &amp;quot; $\cdot$ &amp;quot;, that combines any two elements $a, b\in G$ to form an …&lt;/p&gt;</summary><content type="html">
+&lt;h2 id="defination-of-group"&gt;Defination of group&lt;/h2&gt;
+&lt;p&gt;群（group）是一个抽象的数学概念。定义如下（&lt;a href="https://en.wikipedia.org/wiki/Group_(mathematics)"&gt;Wikipedia: Group (mathematics)&lt;/a&gt;）:&lt;/p&gt;
+&lt;p&gt;A group is a set &lt;eq&gt;G&lt;/eq&gt; together with a binary operation on ⁠ &lt;eq&gt;G&lt;/eq&gt;⁠, here denoted &amp;quot; $\cdot$ &amp;quot;, that combines any two elements $a, b\in G$ to form an element of ⁠&lt;eq&gt;G&lt;/eq&gt;, denoted $ab$⁠ , such that the following three requirements, known as group axioms, are satisfied:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Associativity:
+$\forall a, b, c \in G$ ⁠, one has $(ab)c = a(bc)$ ⁠.&lt;/li&gt;
+&lt;li&gt;Identity element
+$\exists e \in G$ , $\forall a\in G$⁠, one has ⁠$e a = a e = a$ ⁠.&lt;/li&gt;
+&lt;li&gt;Inverse element
+$\forall a \in G$ ⁠, $\exists b \in G$ , such that $ab = ba = e$ .&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Notes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通过我们说一个 group &lt;eq&gt;G&lt;/eq&gt; 时，默认是包含乘法关系 $(G, \cdot)$ 乘法 &amp;quot; $\cdot$ &amp;quot;常省略不写。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="definition-of-representation"&gt;Definition of representation&lt;/h2&gt;
+&lt;p&gt;一般一个数学上抽象的群会同态于一些具体的群。群的表示就是把一个群，映射到一个和它同态的矩阵构成的群。
+群的乘法由矩阵乘法表示。
+这样，我们就可以把具体实际物理意义的群，如对称操作构成的群，与矩阵乘法对应起来。&lt;/p&gt;
+&lt;p&gt;定义如下（&lt;a href="https://en.wikipedia.org/wiki/Group_representation"&gt;Wikipedia: Group representation&lt;/a&gt;）：&lt;/p&gt;
+&lt;p&gt;A representation of a group &lt;eq&gt;G&lt;/eq&gt; on a vector space &lt;eq&gt;V&lt;/eq&gt; over a field &lt;eq&gt;K&lt;/eq&gt; is a group homomorphism from &lt;eq&gt;G&lt;/eq&gt; to $GL(V)$, the general linear group on &lt;eq&gt;V&lt;/eq&gt;. That is, a representation is a map&lt;/p&gt;
 $$
 
 \begin{align}
+  \rho \colon G\to \mathrm {GL} \left(V\right)
+\end{align}
+
+$$&lt;p&gt;such that&lt;/p&gt;
+$$
+
+\begin{align}
+  \rho (g_{1}g_{2})=\rho (g_{1})\rho (g_{2}),\qquad \forall g_{1},g_{2}\in G.
+\end{align}
+
+$$&lt;p&gt;Notes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&amp;quot;vector space &lt;eq&gt;V&lt;/eq&gt; over a field &lt;eq&gt;K&lt;/eq&gt;&amp;quot; : &lt;eq&gt;K&lt;/eq&gt; 决定了矢量空间中的数乘来自哪里。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&amp;quot;Field&amp;quot;：有四则运算的集合，比如：实数域 $\mathbb{R}$ 。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Homomorphism：同态。保持结构的映射，不要求一一对应，也不要求满射。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Isomorphism: 同构。既是同态，又是双射。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;群的表示是同态，不是同构，比如平凡表示就是多对一的关系。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$GL(V)$ : General Linear。表示矢量空间 &lt;eq&gt;V&lt;/eq&gt; 上所有可逆线性变换组成的群。一般 $GL(V)$ 非常大，所以 $\rho \colon G\to \mathrm {GL} \left(V\right)$ 一般不是满射。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;忠实表示 faithful representation：$\rho \colon G\to \mathrm {GL} \left(V\right)$ 是一个单射。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="orthogonality-theorems"&gt;Orthogonality theorems&lt;/h2&gt;
+&lt;p&gt;$n_c$ 表示类 &lt;eq&gt;c&lt;/eq&gt; 中群元的个数。 $d_r$ 表示不可约表示 &lt;eq&gt;r&lt;/eq&gt; 的维度。&lt;/p&gt;
+&lt;p&gt;Dimensions of the irreducible representations:&lt;/p&gt;
+$$
+
+\begin{align}\label{eq:d-of-irr}
   \sum_r d_r^2 = N(G)
 \end{align}
 
 $$&lt;p&gt;Column orthogonality:&lt;/p&gt;
 $$
 
-\begin{align}
-  \sum_c n_c (\chi^{(r)}(c))^* \, \chi^{(s)}(c) = N(G) \delta^{rs}
-\end{align}
-
-$$&lt;p&gt;Row orthogonality:&lt;/p&gt;
-$$
-
-\begin{align}
-  \sum_r \chi^{(r)} (c)^* \, \chi^{(r)}(c') = \frac …</summary><content type="html">
-&lt;h2 id="character-is-a-function-of-class"&gt;Character is a function of class&lt;/h2&gt;
-&lt;p&gt;Dimensions of the irreducible representations:&lt;/p&gt;
-$$
-
-\begin{align}
-  \sum_r d_r^2 = N(G)
-\end{align}
-
-$$&lt;p&gt;Column orthogonality:&lt;/p&gt;
-$$
-
-\begin{align}
-  \sum_c n_c (\chi^{(r)}(c))^* \, \chi^{(s)}(c) = N(G) \delta^{rs}
+\begin{align}\label{eq:col-orth}
+  \sum_c n_c \cdot (\chi^{(r)}(c))^* \cdot \chi^{(s)}(c) = N(G) \delta^{rs}
 \end{align}
 
 $$&lt;p&gt;Row orthogonality:&lt;/p&gt;
@@ -57,14 +99,72 @@ $$
 = \frac{N(G)}{d_r} \delta^{rs} \delta^i_{\,l}\delta^k_{\,j}
 \end{align}
 
-$$&lt;h2 id="character-table"&gt;Character table&lt;/h2&gt;
-&lt;h3 id="cyclic-groups"&gt;Cyclic groups $Z_n$&lt;/h3&gt;
-&lt;p&gt;$Z_n$ 是 Abel 群。
-Abel 群的等价类的个数与群元的个数相同。
-Abel 群所有的不可约表示都是一维的。
-不可约表示的个数又与类的个数相同。
-所以 $Z_n$ 有 &lt;eq&gt;n&lt;/eq&gt; 个一维不可约表示。&lt;/p&gt;
-&lt;p&gt;如 $Z_3$ 的群元 $\{I, g, g^2\}$，特征值表为&lt;/p&gt;
+$$&lt;h2 id="正则表示regular-representation约化出所有的不可约表示"&gt;正则表示（&lt;a href="https://en.wikipedia.org/wiki/Regular_representation"&gt;Regular Representation&lt;/a&gt;）约化出所有的不可约表示&lt;/h2&gt;
+&lt;p&gt;正则表示 $D^{(\mathrm{reg})}$ 是把所有的群元当基底，即 $|e\rangle, |g_1\rangle, |g_2\rangle, \cdots$，即&lt;/p&gt;
+$$
+
+\begin{align}
+  D^{(\mathrm{reg})}(g) |h\rangle = |gh\rangle.
+\end{align}
+
+$$&lt;p&gt;将正则表示约化成不可约表示的直和 $D^{(\mathrm{reg})} = \bigoplus_r n_r D^{(r)}$，
+对应的特征标有 $\chi^{(\mathrm{reg})}(c) = \sum_r n_r \chi^{(r)}(c)$ ，其中 $n_r$ 表示不可约表示 &lt;eq&gt;r&lt;/eq&gt; 出现的次数 。
+根据列正交公式 $\eqref{eq:col-orth}$ 可知，&lt;/p&gt;
+$$
+
+\begin{align}
+\sum_c n_c \cdot(\chi^{(r)}(c))^* \cdot \chi^{(\mathrm{reg})}(c)
+=&amp; \sum_c \sum_s n_c\cdot (\chi^{(r)}(c))^* \cdot n_s\cdot \chi^{(s)}(c) \\
+=&amp; \sum_s N(G) \delta_{r,s} \cdot n_s \\
+=&amp; n_r N(G)
+\end{align}
+
+$$&lt;p&gt;即&lt;/p&gt;
+$$
+
+\begin{align}
+  n_r = \frac{1}{N(G)} \sum_c n_c \cdot(\chi^{(r)}(c))^* \cdot \chi^{(\mathrm{reg})}(c)
+\end{align}
+
+$$&lt;p&gt;容易证明：&lt;/p&gt;
+$$
+
+\begin{align}
+  \chi^{(\mathrm{reg})}(g) =
+  \left\{
+  \begin{matrix}
+  N(G), \quad &amp;g=e, \\
+  0, \quad &amp;g\neq e.
+  \end{matrix}
+  \right.
+\end{align}
+
+$$&lt;p&gt;所以&lt;/p&gt;
+$$
+
+\begin{align}
+  n_r =&amp; \frac{1}{N(G)} \sum_c n_c \cdot(\chi^{(r)}(c))^* \cdot N(G)\delta_{c,[e]} \\
+  =&amp; n_{[e]} \cdot (\chi^{(r)}(e))^* \\
+  =&amp; (\chi^{(r)}(e))^* \\
+  =&amp; d_r,
+\end{align}
+
+$$&lt;p&gt;其中 $[e]$ 表示单位元的类，它只有一个群元，即 $n_{[e]} = 1$ 。&lt;/p&gt;
+&lt;p&gt;即： &lt;strong&gt;正则表示可以约化出所有的不可约表示，不可约表示出现的次数等于不可约表示的维度。也容易得公式 $\eqref{eq:d-of-irr}$ $\sum_r d_r^2 = N(G)$ 。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;对于 Abel 群，每个群元都自成一类。
+又因为 the character table is square，不可约表示的个数又与类的个数相同，所以不可约表示的个数 $N(R) = N(G)$。根据 $\sum_r d_r^2 = N(G)$ 可得所有不可约表示都是一维的。
+即，&lt;strong&gt;对于有 &lt;eq&gt;n&lt;/eq&gt; 个群元的 Abel 群，它所有的不可约表示都是一维的，并且一共有 &lt;eq&gt;n&lt;/eq&gt; 个。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;例如：Cyclic groups $Z_n = \{g, g^2, g^3, \cdots g^{n-1}, g^n = e\}$ 是 Abel 群。
+它的第 k 个一维不可约表示记为 $\lambda^{(k)}(g)$ , $k = 0, 1, 2, \cdots, n$ ，
+那么 $\left[\lambda^{(k)}(g)\right]^n = 1$，
+可解得 $\lambda^{(k)} (g) = e^{i k \frac{2\pi}{n}}$ 。
+由正交定理可得
+$$
+\begin{align}
+  \sum_{j = 1}^{n} e^{i \frac{2\pi}{n}j(l - k)} = \sum_{j=1}^n (\lambda^{(k)} (g^j))^*\cdot \lambda^{(l)} (g^j) =n\delta_{k,l}.
+\end{align}
+$$&lt;/p&gt;
+&lt;p&gt;如 $Z_3$ 的特征值表为&lt;/p&gt;
 $$
 
 \begin{array}{c|ccc}
@@ -73,10 +173,11 @@ $$
   \hline
   1     &amp;   1  &amp;  1         &amp;  1   \\
   1'    &amp;   1  &amp;  \omega    &amp;  \omega^2   \\
-  1'    &amp;   1  &amp;  \omega^2  &amp;  \omega   ,\\
+  1''    &amp;   1  &amp;  \omega^2  &amp;  \omega   ,\\
 \end{array}
 
 $$&lt;p&gt;其中 $\omega=e^{2\pi i /3}$ 。&lt;/p&gt;
+&lt;h2 id="character-tables-of-some-group"&gt;Character tables of some group&lt;/h2&gt;
 &lt;h3 id="even-permutation-group"&gt;Even permutation group $A_3$&lt;/h3&gt;
 $$
 
