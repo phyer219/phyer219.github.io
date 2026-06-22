@@ -2,7 +2,11 @@
 title: 库仑势的Fourier transform(update 16/Nov/2020)
 date: 2018/09/24
 categories: physics
-tags: [数学, 物理, 库仑势, Fourier]
+tags:
+  - "数学"
+  - "物理"
+  - "库仑势"
+  - "Fourier transform"
 ---
 
 <!-- toc -->
@@ -74,4 +78,4 @@ $$
 
 ## Reference
 
-- 关于使其收敛的说明, 分别从物理的角度, 数学的角度阐述这样做的合理性和必要性: https://physics.stackexchange.com/questions/7462/fourier-transform-of-the-coulomb-potential
+- 关于使其收敛的说明, 分别从物理的角度, 数学的角度阐述这样做的合理性和必要性: [StackExchange: Fourier transform of the Coulomb potential](https://physics.stackexchange.com/questions/7462/fourier-transform-of-the-coulomb-potential)

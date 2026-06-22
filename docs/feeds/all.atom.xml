@@ -1,9 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/all.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2026-06-18T00:00:00+08:00</updated><entry><title>群表示论备忘</title><link href="https://zqw.ink/2026-06-18-physics-group_representation_theory.html" rel="alternate"/><published>2026-06-18T00:00:00+08:00</published><updated>2026-06-18T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2026-06-18:/2026-06-18-physics-group_representation_theory.html</id><summary type="html">
-&lt;h2 id="defination-of-group"&gt;Defination of group&lt;/h2&gt;
-&lt;p&gt;群（group）是一个抽象的数学概念。定义如下（&lt;a href="https://en.wikipedia.org/wiki/Group_(mathematics)"&gt;Wikipedia: Group (mathematics)&lt;/a&gt;）:&lt;/p&gt;
-&lt;p&gt;A group is a set &lt;eq&gt;G&lt;/eq&gt; together with a binary operation on ⁠ &lt;eq&gt;G&lt;/eq&gt;⁠, here denoted &amp;quot; $\cdot$ &amp;quot;, that combines any two elements $a, b\in G$ to form an …&lt;/p&gt;</summary><content type="html">
-&lt;h2 id="defination-of-group"&gt;Defination of group&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#definition-of-group"&gt;Definition of group&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#definition-of-representation"&gt;Definition of representation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#orthogonality-theorems"&gt;Orthogonality theorems&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E7%A4%BAregular-representation%E7%BA%A6%E5%8C%96%E5%87%BA%E6%89%80%E6%9C%89%E7%9A%84%E4%B8%8D%E5%8F%AF%E7%BA%A6%E8%A1%A8%E7%A4%BA"&gt;正则表示（Regular Representation）约化出所有的不可约表示&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#character-tables-of-some-group"&gt;Character tables of some group&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#even-permutation-group-a_3"&gt;Even permutation group $A\_3$&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#even-permutation-group-a_4"&gt;Even permutation group $A\_4$&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#permutation-group-s_3"&gt;Permutation group $S\_3$&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#permutation-group-s_4"&gt;Permutation group $S\_4$&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#reference"&gt;Reference&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="definition-of-group"&gt;Definition …&lt;/h2&gt;</summary><content type="html">
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#definition-of-group"&gt;Definition of group&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#definition-of-representation"&gt;Definition of representation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#orthogonality-theorems"&gt;Orthogonality theorems&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E7%A4%BAregular-representation%E7%BA%A6%E5%8C%96%E5%87%BA%E6%89%80%E6%9C%89%E7%9A%84%E4%B8%8D%E5%8F%AF%E7%BA%A6%E8%A1%A8%E7%A4%BA"&gt;正则表示（Regular Representation）约化出所有的不可约表示&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#character-tables-of-some-group"&gt;Character tables of some group&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#even-permutation-group-a_3"&gt;Even permutation group $A\_3$&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#even-permutation-group-a_4"&gt;Even permutation group $A\_4$&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#permutation-group-s_3"&gt;Permutation group $S\_3$&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#permutation-group-s_4"&gt;Permutation group $S\_4$&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#reference"&gt;Reference&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="definition-of-group"&gt;Definition of group&lt;/h2&gt;
 &lt;p&gt;群（group）是一个抽象的数学概念。定义如下（&lt;a href="https://en.wikipedia.org/wiki/Group_(mathematics)"&gt;Wikipedia: Group (mathematics)&lt;/a&gt;）:&lt;/p&gt;
 &lt;p&gt;A group is a set &lt;eq&gt;G&lt;/eq&gt; together with a binary operation on ⁠ &lt;eq&gt;G&lt;/eq&gt;⁠, here denoted &amp;quot; $\cdot$ &amp;quot;, that combines any two elements $a, b\in G$ to form an element of ⁠&lt;eq&gt;G&lt;/eq&gt;, denoted $ab$⁠ , such that the following three requirements, known as group axioms, are satisfied:&lt;/p&gt;
 &lt;ol&gt;
@@ -213,10 +241,64 @@ $$
 S_3 &amp; n_c &amp;               &amp; 1 &amp; \bar{1} &amp; 2 \\
 \hline
     &amp; 1 &amp; I               &amp; 1 &amp; 1  &amp; 2  \\
-Z_3 &amp; 2 &amp; (123),(132)     &amp; 1 &amp; 1  &amp; -1_x \\
-Z_2 &amp; 3 &amp; (12),(23),(31)  &amp; 1 &amp; -1 &amp; 0_y  \\
+Z_3 &amp; 2 &amp; (123),(132)     &amp; 1 &amp; 1  &amp; -1 \\
+Z_2 &amp; 3 &amp; (12),(23),(31)  &amp; 1 &amp; -1 &amp; 0  \\
 \hline
 \end{array}
+
+$$&lt;p&gt;三个不可约表示：平凡一维表示 &lt;eq&gt;1&lt;/eq&gt; ，一维符号表示 $\bar{1}$ ，以及二维表示（三角形在平面中的对称操作）：&lt;/p&gt;
+&lt;p&gt;旋转 $120$ 度:&lt;/p&gt;
+$$
+
+\begin{align}
+  D^{(2)}((123)) =
+  \begin{pmatrix}
+    -\frac{1}{2}  &amp; -\frac{\sqrt{3}}{2} \\
+    \frac{\sqrt{3}}{2}  &amp; -\frac{1}{2}
+  \end{pmatrix}
+\end{align}
+
+$$&lt;p&gt;旋转 $-120$ 度:&lt;/p&gt;
+$$
+
+\begin{align}
+  D^{(2)}((132)) =
+  \begin{pmatrix}
+    -\frac{1}{2}  &amp; \frac{\sqrt{3}}{2} \\
+    -\frac{\sqrt{3}}{2}  &amp; -\frac{1}{2}
+  \end{pmatrix}
+\end{align}
+
+$$&lt;p&gt;三个反射操作&lt;/p&gt;
+$$
+
+\begin{align}
+  D^{(2)}((12)) =
+  \begin{pmatrix}
+    -1  &amp; 0 \\
+    0  &amp; 1
+  \end{pmatrix}
+\end{align}
+
+$$$$
+
+\begin{align}
+  D^{(2)}((13)) =
+  \begin{pmatrix}
+    \frac{1}{2}  &amp; -\frac{\sqrt{3}}{2} \\
+    -\frac{\sqrt{3}}{2}  &amp; -\frac{1}{2}
+  \end{pmatrix}
+\end{align}
+
+$$$$
+
+\begin{align}
+  D^{(2)}((23)) =
+  \begin{pmatrix}
+    \frac{1}{2}  &amp; \frac{\sqrt{3}}{2} \\
+    \frac{\sqrt{3}}{2}  &amp; -\frac{1}{2}
+  \end{pmatrix}
+\end{align}
 
 $$&lt;h3 id="permutation-group-1"&gt;Permutation group $S_4$&lt;/h3&gt;
 $$
@@ -237,7 +319,7 @@ $$&lt;h2 id="reference"&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;2016 - A. Zee - Group Theory in a Nutshell for Physicists (2016, Princeton University Press)&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="physics"/><category term="group theory"/></entry><entry><title>Interested talk on SCA/HPCAsia2026</title><link href="https://zqw.ink/2026-01-25-blog-SCA_HPCAsia2026.html" rel="alternate"/><published>2026-01-25T00:00:00+08:00</published><updated>2026-01-25T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2026-01-25:/2026-01-25-blog-SCA_HPCAsia2026.html</id><summary type="html">
+</content><category term="physics"/><category term="group theory"/><category term="Fourier transform"/></entry><entry><title>Interested talk on SCA/HPCAsia2026</title><link href="https://zqw.ink/2026-01-25-blog-SCA_HPCAsia2026.html" rel="alternate"/><published>2026-01-25T00:00:00+08:00</published><updated>2026-01-25T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2026-01-25:/2026-01-25-blog-SCA_HPCAsia2026.html</id><summary type="html">
 &lt;p&gt;会议日记 &lt;a href="https://www.sca-hpcasia2026.jp/index.html"&gt;https://www.sca-hpcasia2026.jp/index.html&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="#monday-january-26"&gt;Monday, January 26&lt;/a&gt;
@@ -799,6 +881,7 @@ tags:
 &lt;li&gt;&lt;a href="/tag/Susskind"&gt;#Susskind&lt;/a&gt;：Susskind 的公开课笔记。&lt;/li&gt;
 &lt;li&gt;&lt;a href="/tag/Carl-Bender"&gt;#Carl Bender&lt;/a&gt;：Carl Bender 的 &lt;a href="https://www.youtube.com/playlist?list=PLzcd6SoIscwjHuWRE38UXWG92uq0Sy4UF"&gt;Perturbation Theory 公开课&lt;/a&gt;笔记。&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;Selected tags: &lt;a href="/tag/Fourier-transform.html"&gt;#Fourier transform&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="blogroll"&gt;Blogroll&lt;/h2&gt;
 &lt;p&gt;这里列出一些优秀的个人站点。&lt;/p&gt;
 &lt;table&gt;

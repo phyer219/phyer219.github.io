@@ -4,9 +4,21 @@ date: 2026-06-18
 category: physics
 tags:
   - "group theory"
+  - "Fourier transform"
 ---
 
-## Defination of group
+- [Definition of group](#definition-of-group)
+- [Definition of representation](#definition-of-representation)
+- [Orthogonality theorems](#orthogonality-theorems)
+- [正则表示（Regular Representation）约化出所有的不可约表示](#正则表示regular-representation约化出所有的不可约表示)
+- [Character tables of some group](#character-tables-of-some-group)
+  - [Even permutation group $A\_3$](#even-permutation-group-a_3)
+  - [Even permutation group $A\_4$](#even-permutation-group-a_4)
+  - [Permutation group $S\_3$](#permutation-group-s_3)
+  - [Permutation group $S\_4$](#permutation-group-s_4)
+- [Reference](#reference)
+
+## Definition of group
 
 群（group）是一个抽象的数学概念。定义如下（[Wikipedia: Group (mathematics)](https://en.wikipedia.org/wiki/Group_(mathematics))）:
 
@@ -235,10 +247,68 @@ $$
 S_3 & n_c &               & 1 & \bar{1} & 2 \\
 \hline
     & 1 & I               & 1 & 1  & 2  \\
-Z_3 & 2 & (123),(132)     & 1 & 1  & -1_x \\
-Z_2 & 3 & (12),(23),(31)  & 1 & -1 & 0_y  \\
+Z_3 & 2 & (123),(132)     & 1 & 1  & -1 \\
+Z_2 & 3 & (12),(23),(31)  & 1 & -1 & 0  \\
 \hline
 \end{array}
+$$
+
+三个不可约表示：平凡一维表示 $1$ ，一维符号表示 $\bar{1}$ ，以及二维表示（三角形在平面中的对称操作）：
+
+旋转 $120$ 度:
+
+$$
+\begin{align}
+  D^{(2)}((123)) =
+  \begin{pmatrix}
+    -\frac{1}{2}  & -\frac{\sqrt{3}}{2} \\
+    \frac{\sqrt{3}}{2}  & -\frac{1}{2}
+  \end{pmatrix}
+\end{align}
+$$
+
+旋转 $-120$ 度:
+
+$$
+\begin{align}
+  D^{(2)}((132)) =
+  \begin{pmatrix}
+    -\frac{1}{2}  & \frac{\sqrt{3}}{2} \\
+    -\frac{\sqrt{3}}{2}  & -\frac{1}{2}
+  \end{pmatrix}
+\end{align}
+$$
+
+三个反射操作
+
+$$
+\begin{align}
+  D^{(2)}((12)) =
+  \begin{pmatrix}
+    -1  & 0 \\
+    0  & 1
+  \end{pmatrix}
+\end{align}
+$$
+
+$$
+\begin{align}
+  D^{(2)}((13)) =
+  \begin{pmatrix}
+    \frac{1}{2}  & -\frac{\sqrt{3}}{2} \\
+    -\frac{\sqrt{3}}{2}  & -\frac{1}{2}
+  \end{pmatrix}
+\end{align}
+$$
+
+$$
+\begin{align}
+  D^{(2)}((23)) =
+  \begin{pmatrix}
+    \frac{1}{2}  & \frac{\sqrt{3}}{2} \\
+    \frac{\sqrt{3}}{2}  & -\frac{1}{2}
+  \end{pmatrix}
+\end{align}
 $$
 
 ### Permutation group $S_4$

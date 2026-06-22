@@ -2,18 +2,24 @@
 <html lang="zh_cn">
 
 <head>
-  <title>从冰上的水 - Fourier tag</title>
+    <title>从冰上的水 - Fourier transform 总结</title>
   <meta charset="utf-8" />
   <meta name="generator" content="Pelican" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="/theme/css/style.css" />
+  <link
+    href="https://zqw.ink/feeds/all.atom.xml"
+    type="application/atom+xml" rel="alternate" title="从冰上的水 Full Atom Feed" />
+  <link
+    href="https://zqw.ink/feeds/physics.atom.xml"
+    type="application/atom+xml" rel="alternate" title="从冰上的水 Categories Atom Feed" />
+  <link rel="stylesheet" type="text/css" href="https://zqw.ink/theme/css/style.css" />
   <!-- SEO: site-level structured data (WebSite) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "从冰上的水",
-    "url": "/"
+    "url": "https://zqw.ink/"
   }
   </script>
   <!-- fonts -->
@@ -72,6 +78,33 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.1">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.1">
 <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.1">
+
+
+
+  <!-- SEO: page description for search results -->
+    <meta name="description" content="分类 例子 实空间离散 实空间有限尺寸 实空间无穷大 分类 根据变量的连续与否，傅立叶变换有以下几种情况： 实空间离散 …" />
+
+    <meta name="tags" content="Fourier transform" />
+    <meta name="tags" content="数学" />
+
+  <!-- SEO: structured data for articles (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Fourier transform 总结",
+    "datePublished": "2018-09-07T00:00:00+08:00",
+    "author": {
+      "@type": "Person",
+      "name": "ZQW"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://zqw.ink/2018-09-07-physics-Fourier_transform_summary.html"
+    }
+  }
+  </script>
+
 </head>
 
 <body>
@@ -105,26 +138,139 @@
           <i class="theme-icon icon-moon fa-solid fa-moon" aria-hidden="true"></i>
         </button>
         <div class="rss">
+            <a href="https://zqw.ink/feeds/all.atom.xml" aria-label="Atom 订阅">
+              <i class="fa-solid fa-rss" aria-hidden="true"></i>
+            </a>
         </div>
       </div>
     </div>
   </header>
   <main>
 
+<h1 class="post-title">Fourier transform 总结</h1>
 
-<section class="post-list">
-<h1># Fourier</h1>
-<p><a href="/tags.html">All tags</a></p>
-
-        <h2 class="post-title">
-            <span class="post-date">2018-09-07</span>
-            <a href="/2018-09-07-physics-Fourier_transform_summary.html" class="post-link" rel="bookmark"
-                title="Permalink to Fourier transform 总结">
-                Fourier transform 总结</a>
-        </h2>
-
+<section class="post-meta">
+    <p>2018-09-07</p>
+    <p>-<a class="post-link" href="https://zqw.ink/category/physics.html">physics</a></p>
 </section>
 
+<section class="markdown-body">
+  
+<ul>
+<li><a href="#%E5%88%86%E7%B1%BB">分类</a></li>
+<li><a href="#%E4%BE%8B%E5%AD%90">例子</a>
+<ul>
+<li><a href="#%E5%AE%9E%E7%A9%BA%E9%97%B4%E7%A6%BB%E6%95%A3">实空间离散</a></li>
+<li><a href="#%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%9C%89%E9%99%90%E5%B0%BA%E5%AF%B8">实空间有限尺寸</a></li>
+<li><a href="#%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%97%A0%E7%A9%B7%E5%A4%A7">实空间无穷大</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="分类">分类</h2>
+<p>根据变量的连续与否，傅立叶变换有以下几种情况：</p>
+<ul>
+<li>实空间离散，动量空间离散（又见<a href="./2026-06-18-physics-group_representation_theory.html">2026-06-18-群表示论备忘</a>的 $Z_n$ 群）</li>
+</ul>
+$$
+
+\begin{align*}
+  \sum_{l = 1}^N e^{-i k'l} e^{i kl}=N\delta_{k,k'},
+  \quad l = 1, 2, \cdots N,
+  \quad k = 0, \frac{2\pi}{N}, 2 \frac{2\pi}{N}, \cdots (N-1)\frac{2\pi}{N}
+\end{align*}
+
+$$<ul>
+<li>实空间有限尺寸，动量空间离散</li>
+</ul>
+$$
+
+\begin{align*}
+  \int_{0}^{L} e^{-ik'x} e^{ikx} \mathrm{d}x = L \delta_{k, k'}, \quad
+  k = 0, \pm\frac{2\pi}{L}, \pm 2\frac{2\pi}{L}, \cdots
+\end{align*}
+
+$$<ul>
+<li>实空间无穷大，动量空间无穷大</li>
+</ul>
+$$
+
+\begin{align*}
+  \int_{-\infty}^{\infty} e^{-ikx} e^{ik'x} \mathrm{d}x = 2\pi \delta (k-k')
+\end{align*}
+
+$$<p>上式的等号在<a href="https://en.wikipedia.org/wiki/Distribution_(mathematical_analysis)#Tempered_distributions_and_Fourier_transform">分布</a>意义下成立。</p>
+<h2 id="例子">例子</h2>
+<h3 id="实空间离散">实空间离散</h3>
+<p>周期性边界条件下的紧束缚模型</p>
+$$
+
+H = -t \sum_{j=1}^{N} \left( c_j^{\dagger} c_{j+1} + c_{j+1}^{\dagger} c_j \right)，
+\quad c_{N + 1} = c_1
+
+$$<p>具有平移对称性，本征态是平面波</p>
+$$
+
+\begin{align}
+  a_k^{\dagger} = \sum_j c_j^{\dagger} \langle j| k\rangle
+  =\frac{1}{\sqrt{N}} \sum_j c_j^{\dagger} e^{i j k},\quad k = 0, \frac{2\pi}{N}, 2\frac{2\pi}{N}, \cdots (N - 1)\frac{2\pi}{N}
+\end{align}
+
+$$<p>所以</p>
+$$
+
+\begin{align}
+  H =& -t \sum_{j = 1}^N \sum_{k_1, k_2} \frac{1}{N}
+   \left( a_{k_1}^\dagger a_{k_2} e^{-i j(k_1 - k_2)} e^{i k_2}
+    +  a_{k_2}^\dagger a_{k_1} e^{-i j(k_2 - k_1)} e^{-ik_2} \right) \\
+    =& -t \sum_k 2\cos k a_{k}^\dagger a_{k}
+\end{align}
+
+$$<h3 id="实空间有限尺寸">实空间有限尺寸</h3>
+<p>尺寸为 <eq>L</eq> 的周期性边界条件的一维系统（箱归一化）</p>
+<p>动量本征态 $\psi_k(x) = \langle x | k\rangle$ 是周期函数</p>
+$$
+
+\begin{align*}
+\psi_k(x+L) = \psi_k(x) = \frac{1}{\sqrt{L}}e^{ikx}, \quad
+k = 0, \pm \frac{2\pi}{L}, \pm 2\frac{2\pi}{L}, \pm 3\frac{2\pi}{L}, \cdots
+\end{align*}
+
+$$<p>动量本征态正交归一</p>
+$$
+
+\begin{align*}
+\langle k | k'\rangle = \int_{0}^{L} e^{-ikx} e^{ik'x} \mathrm{d}x = L \delta(k-k')
+\end{align*}
+
+$$<h3 id="实空间无穷大">实空间无穷大</h3>
+<p>一维无穷空间中的动量本征函数</p>
+$$
+
+\begin{align*}
+-i \frac{\mathrm{d}}{\mathrm{d}x} \langle x|k\rangle
+= k \langle x| k\rangle \quad
+\Longrightarrow \quad \psi_k(x) = \langle x| k\rangle
+= \frac{1}{\sqrt{2\pi}} e^{i kx}
+\end{align*}
+
+$$<p>正交归一</p>
+$$
+
+\begin{align*}
+\langle k | k' \rangle =
+\frac{1}{2\pi}\int_{-\infty}^{\infty} e^{-ikx} e^{ik'x} \mathrm{d}x
+=\frac{1}{2\pi} \int_{-\infty}^{\infty} e^{i(k'-k)x} \mathrm{d}x = \delta(k'-k)
+\end{align*}
+
+$$
+</section>
+
+<section class="post-meta">
+    <p>
+        <a class="post-link" href="https://zqw.ink/tag/Fourier-transform.html">#Fourier transform</a>
+        <a class="post-link" href="https://zqw.ink/tag/Shu-Xue.html">#数学</a>
+    </p>
+</section>
 
   </main>
   <footer role="contentinfo">

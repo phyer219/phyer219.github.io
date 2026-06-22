@@ -1,9 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水 - physics</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/physics.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2026-06-18T00:00:00+08:00</updated><entry><title>群表示论备忘</title><link href="https://zqw.ink/2026-06-18-physics-group_representation_theory.html" rel="alternate"/><published>2026-06-18T00:00:00+08:00</published><updated>2026-06-18T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2026-06-18:/2026-06-18-physics-group_representation_theory.html</id><summary type="html">
-&lt;h2 id="defination-of-group"&gt;Defination of group&lt;/h2&gt;
-&lt;p&gt;群（group）是一个抽象的数学概念。定义如下（&lt;a href="https://en.wikipedia.org/wiki/Group_(mathematics)"&gt;Wikipedia: Group (mathematics)&lt;/a&gt;）:&lt;/p&gt;
-&lt;p&gt;A group is a set &lt;eq&gt;G&lt;/eq&gt; together with a binary operation on ⁠ &lt;eq&gt;G&lt;/eq&gt;⁠, here denoted &amp;quot; $\cdot$ &amp;quot;, that combines any two elements $a, b\in G$ to form an …&lt;/p&gt;</summary><content type="html">
-&lt;h2 id="defination-of-group"&gt;Defination of group&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#definition-of-group"&gt;Definition of group&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#definition-of-representation"&gt;Definition of representation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#orthogonality-theorems"&gt;Orthogonality theorems&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E7%A4%BAregular-representation%E7%BA%A6%E5%8C%96%E5%87%BA%E6%89%80%E6%9C%89%E7%9A%84%E4%B8%8D%E5%8F%AF%E7%BA%A6%E8%A1%A8%E7%A4%BA"&gt;正则表示（Regular Representation）约化出所有的不可约表示&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#character-tables-of-some-group"&gt;Character tables of some group&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#even-permutation-group-a_3"&gt;Even permutation group $A\_3$&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#even-permutation-group-a_4"&gt;Even permutation group $A\_4$&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#permutation-group-s_3"&gt;Permutation group $S\_3$&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#permutation-group-s_4"&gt;Permutation group $S\_4$&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#reference"&gt;Reference&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="definition-of-group"&gt;Definition …&lt;/h2&gt;</summary><content type="html">
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#definition-of-group"&gt;Definition of group&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#definition-of-representation"&gt;Definition of representation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#orthogonality-theorems"&gt;Orthogonality theorems&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E7%A4%BAregular-representation%E7%BA%A6%E5%8C%96%E5%87%BA%E6%89%80%E6%9C%89%E7%9A%84%E4%B8%8D%E5%8F%AF%E7%BA%A6%E8%A1%A8%E7%A4%BA"&gt;正则表示（Regular Representation）约化出所有的不可约表示&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#character-tables-of-some-group"&gt;Character tables of some group&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#even-permutation-group-a_3"&gt;Even permutation group $A\_3$&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#even-permutation-group-a_4"&gt;Even permutation group $A\_4$&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#permutation-group-s_3"&gt;Permutation group $S\_3$&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#permutation-group-s_4"&gt;Permutation group $S\_4$&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#reference"&gt;Reference&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="definition-of-group"&gt;Definition of group&lt;/h2&gt;
 &lt;p&gt;群（group）是一个抽象的数学概念。定义如下（&lt;a href="https://en.wikipedia.org/wiki/Group_(mathematics)"&gt;Wikipedia: Group (mathematics)&lt;/a&gt;）:&lt;/p&gt;
 &lt;p&gt;A group is a set &lt;eq&gt;G&lt;/eq&gt; together with a binary operation on ⁠ &lt;eq&gt;G&lt;/eq&gt;⁠, here denoted &amp;quot; $\cdot$ &amp;quot;, that combines any two elements $a, b\in G$ to form an element of ⁠&lt;eq&gt;G&lt;/eq&gt;, denoted $ab$⁠ , such that the following three requirements, known as group axioms, are satisfied:&lt;/p&gt;
 &lt;ol&gt;
@@ -213,10 +241,64 @@ $$
 S_3 &amp; n_c &amp;               &amp; 1 &amp; \bar{1} &amp; 2 \\
 \hline
     &amp; 1 &amp; I               &amp; 1 &amp; 1  &amp; 2  \\
-Z_3 &amp; 2 &amp; (123),(132)     &amp; 1 &amp; 1  &amp; -1_x \\
-Z_2 &amp; 3 &amp; (12),(23),(31)  &amp; 1 &amp; -1 &amp; 0_y  \\
+Z_3 &amp; 2 &amp; (123),(132)     &amp; 1 &amp; 1  &amp; -1 \\
+Z_2 &amp; 3 &amp; (12),(23),(31)  &amp; 1 &amp; -1 &amp; 0  \\
 \hline
 \end{array}
+
+$$&lt;p&gt;三个不可约表示：平凡一维表示 &lt;eq&gt;1&lt;/eq&gt; ，一维符号表示 $\bar{1}$ ，以及二维表示（三角形在平面中的对称操作）：&lt;/p&gt;
+&lt;p&gt;旋转 $120$ 度:&lt;/p&gt;
+$$
+
+\begin{align}
+  D^{(2)}((123)) =
+  \begin{pmatrix}
+    -\frac{1}{2}  &amp; -\frac{\sqrt{3}}{2} \\
+    \frac{\sqrt{3}}{2}  &amp; -\frac{1}{2}
+  \end{pmatrix}
+\end{align}
+
+$$&lt;p&gt;旋转 $-120$ 度:&lt;/p&gt;
+$$
+
+\begin{align}
+  D^{(2)}((132)) =
+  \begin{pmatrix}
+    -\frac{1}{2}  &amp; \frac{\sqrt{3}}{2} \\
+    -\frac{\sqrt{3}}{2}  &amp; -\frac{1}{2}
+  \end{pmatrix}
+\end{align}
+
+$$&lt;p&gt;三个反射操作&lt;/p&gt;
+$$
+
+\begin{align}
+  D^{(2)}((12)) =
+  \begin{pmatrix}
+    -1  &amp; 0 \\
+    0  &amp; 1
+  \end{pmatrix}
+\end{align}
+
+$$$$
+
+\begin{align}
+  D^{(2)}((13)) =
+  \begin{pmatrix}
+    \frac{1}{2}  &amp; -\frac{\sqrt{3}}{2} \\
+    -\frac{\sqrt{3}}{2}  &amp; -\frac{1}{2}
+  \end{pmatrix}
+\end{align}
+
+$$$$
+
+\begin{align}
+  D^{(2)}((23)) =
+  \begin{pmatrix}
+    \frac{1}{2}  &amp; \frac{\sqrt{3}}{2} \\
+    \frac{\sqrt{3}}{2}  &amp; -\frac{1}{2}
+  \end{pmatrix}
+\end{align}
 
 $$&lt;h3 id="permutation-group-1"&gt;Permutation group $S_4$&lt;/h3&gt;
 $$
@@ -237,7 +319,7 @@ $$&lt;h2 id="reference"&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;2016 - A. Zee - Group Theory in a Nutshell for Physicists (2016, Princeton University Press)&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="physics"/><category term="group theory"/></entry><entry><title>Rotating Wave Approximation Numerical Check</title><link href="https://zqw.ink/2025-06-16-physics-rwa_check.html" rel="alternate"/><published>2025-06-16T00:00:00+08:00</published><updated>2025-06-16T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-06-16:/2025-06-16-physics-rwa_check.html</id><summary type="html">&lt;pre&gt;&lt;code class="language-python"&gt;import numpy as np
+</content><category term="physics"/><category term="group theory"/><category term="Fourier transform"/></entry><entry><title>Rotating Wave Approximation Numerical Check</title><link href="https://zqw.ink/2025-06-16-physics-rwa_check.html" rel="alternate"/><published>2025-06-16T00:00:00+08:00</published><updated>2025-06-16T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2025-06-16:/2025-06-16-physics-rwa_check.html</id><summary type="html">&lt;pre&gt;&lt;code class="language-python"&gt;import numpy as np
 import qutip as qtp
 import plotly.graph_objects as go
 import plotly.io as pio
@@ -1783,7 +1865,364 @@ $$&lt;p&gt;类似的，还可以把 &lt;eq&gt;F&lt;/eq&gt; 对体积做 Legendre
 (arXiv:0806.1147v2  [physics.ed-ph]  4 Mar 2009)&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="physics"/><category term="物理"/><category term="数学"/><category term="Legendre transformation"/><category term="classical mechanics"/><category term="statistical mechanics"/></entry><entry><title>二次量子化笔记 (update 06/Dec/2019)</title><link href="https://zqw.ink/2018-09-27-physics-second_quant.html" rel="alternate"/><published>2018-09-27T00:00:00+08:00</published><updated>2018-09-27T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-27:/2018-09-27-physics-second_quant.html</id><summary type="html">
+</content><category term="physics"/><category term="物理"/><category term="数学"/><category term="Legendre transformation"/><category term="classical mechanics"/><category term="statistical mechanics"/></entry><entry><title>FFT (Fast Fourier Transform) 笔记</title><link href="https://zqw.ink/2019-01-03-physics-FFT_note.html" rel="alternate"/><published>2019-01-03T00:00:00+08:00</published><updated>2019-01-03T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2019-01-03:/2019-01-03-physics-FFT_note.html</id><summary type="html">
+&lt;h2 id="问题"&gt;问题&lt;/h2&gt;
+&lt;p&gt;函数 $f(t)$ 的 Fourier Transform 为&lt;/p&gt;
+$$
+
+\begin{align*}
+  \mathcal{F}(\omega) = \int_{-\infty} ^{\infty} f(t) e^{-\mathrm{i} \omega t} \mathrm{d}t
+\end{align*}
+
+$$&lt;p&gt;假函数 $f(t)$ 它只在 $t \in (0, T)$ 之间有取值, 那么上 …&lt;/p&gt;</summary><content type="html">
+&lt;h2 id="问题"&gt;问题&lt;/h2&gt;
+&lt;p&gt;函数 $f(t)$ 的 Fourier Transform 为&lt;/p&gt;
+$$
+
+\begin{align*}
+  \mathcal{F}(\omega) = \int_{-\infty} ^{\infty} f(t) e^{-\mathrm{i} \omega t} \mathrm{d}t
+\end{align*}
+
+$$&lt;p&gt;假函数 $f(t)$ 它只在 $t \in (0, T)$ 之间有取值, 那么上式就变为&lt;/p&gt;
+$$
+
+\begin{align*}
+  \mathcal{F}(\omega) = \int_{0} ^{T} f(t) e^{-\mathrm{i} \omega t} \mathrm{d}t
+\end{align*}
+
+$$&lt;p&gt;如此做 Fourier Transform , 需要算积分.&lt;/p&gt;
+&lt;h2 id="dft-discrete-fourier-transform"&gt;DFT (Discrete Fourier Transform)&lt;/h2&gt;
+&lt;p&gt;如果用计算机进行数值上的计算, 会对积分进行离散化, 那么就变成了离散的 Fourier Transform .&lt;/p&gt;
+&lt;p&gt;假设将积分均匀地分成 &lt;eq&gt;N&lt;/eq&gt; 份, 那么就有&lt;/p&gt;
+$$
+
+\begin{align*}
+  \mathcal{F}(\omega) =&amp; \int_{0} ^{T} f(t) e^{-\mathrm{i} \omega t} \mathrm{d}t \\
+\approx&amp; \sum_{n=0}^{N-1} f\left( \frac{T}{N}n \right) e^{-\mathrm{i}\omega \frac{T}{N}n} \cdot \frac{T}{N} \\
+\end{align*}
+
+$$&lt;p&gt;如果 &lt;eq&gt;e&lt;/eq&gt; 指数上面是 $\mathrm{i}2\pi$ 的形式, 计算将会变得简单. 所以对上式进行如下操作 ( 进行求和近似后 $\mathcal{F}(\omega)$
+记为 $F(\omega)$ )&lt;/p&gt;
+$$
+
+\begin{align*}
+  F(\omega) =&amp; \sum_{n=0}^{N-1} f\left( \frac{T}{N}n \right) e^{-\mathrm{i}\omega \frac{T}{N}n} \cdot \frac{T}{N} \\
+=&amp;\frac{T}{N} \sum_{n=0}^{N-1} f\left( \frac{T}{N}n \right) e^{-\mathrm{i}2\pi \frac{1}{2\pi}\omega \frac{T}{N}n}
+\end{align*}
+
+$$&lt;h2 id="精髓"&gt;精髓&lt;/h2&gt;
+&lt;p&gt;进行数值计算时, 对应每一个 $\omega$ 都要算一个求和. 我们只能进行有限次数的计算, 因此必须要选取特定的 $\omega$ 进行计算, 也就是
+同样要对 $\omega$ 进行离散化.&lt;/p&gt;
+&lt;p&gt;FFT 将 $\omega$ 同样离散化成 &lt;eq&gt;N&lt;/eq&gt; 个 (这样做的优势以后将会看出) 等间距的 $\omega$ . 起点是 &lt;eq&gt;0&lt;/eq&gt; .然而该如何选取间距呢? 或者说该如何选取最大值呢?&lt;/p&gt;
+&lt;p&gt;我觉得接下来是 FFT 最关键的一步. 这也是我之前对于 FFT 不明白的地方.&lt;/p&gt;
+&lt;p&gt;首先假设 $\omega$ 的间距是 $\Delta \omega$ . 那么原式就变为&lt;/p&gt;
+$$
+
+\begin{align*}
+  F(m \Delta\omega) = \frac{T}{N} \sum_{n=0}^{N-1} f\left( \frac{T}{N}n \right)
+  e^{-\mathrm{i}2\pi \frac{1}{2\pi} m\Delta\omega \frac{T}{N}n}
+\end{align*}
+
+$$&lt;p&gt;其中 $m = 0, 1, 2, \cdots N-1$ . FFT 让&lt;/p&gt;
+$$
+
+\begin{align*}
+ \frac{1}{2\pi}  \Delta \omega T =1
+\end{align*}
+
+$$&lt;p&gt;这样的话, $\Delta \omega$ 就选定了&lt;/p&gt;
+$$
+
+\begin{align*}
+  \Delta \omega = \frac{2\pi}{T}
+\end{align*}
+
+$$&lt;h2 id="结论"&gt;结论&lt;/h2&gt;
+&lt;p&gt;这样选取 $\Delta\omega$ 的结果就使原式变成了&lt;/p&gt;
+$$
+
+\begin{align*}
+  F(m \Delta\omega) = \frac{T}{N} \sum_{n=0}^{N-1} f\left( \frac{T}{N}n \right)
+  e^{-\mathrm{i}\frac{2\pi}{N} m n}
+\end{align*}
+
+$$&lt;p&gt;这实际上就变成了一个矩阵运算&lt;/p&gt;
+$$
+
+\begin{align*}
+  \left(
+  \begin{array}{c}
+    F (0)\\
+    F (\Delta\omega)\\
+    F (2\Delta\omega)\\
+    F (3\Delta\omega)\\
+    \vdots \\
+    F ((N-1)\Delta\omega)\\
+  \end{array}
+ \right)
+   =
+   \frac{T}{N}
+  \left(
+  \begin{array}{cccccc}
+    1 &amp; 1     &amp;    1   &amp;   1  &amp;  \cdots  &amp;  1 \\
+    1    &amp; e^{-\mathrm{i}\frac{2\pi}{N}}     &amp;   e^{-\mathrm{i}\frac{2\pi}{N}\cdot 2}    &amp;   e^{-\mathrm{i}\frac{2\pi}{N}\cdot 3}   &amp;  \cdots  &amp;  e^{-\mathrm{i}\frac{2\pi}{N}\cdot(N-1)}  \\
+    1    &amp; e^{-\mathrm{i}\frac{2\pi}{N}\cdot 2}     &amp;   e^{-\mathrm{i}\frac{2\pi}{N}\cdot 2\times 2}    &amp;   e^{-\mathrm{i}\frac{2\pi}{N}\cdot 2\times 3}   &amp;  \cdots  &amp;  e^{-\mathrm{i}\frac{2\pi}{N}\cdot 2\times(N-1)}  \\
+    1    &amp; e^{-\mathrm{i}\frac{2\pi}{N}\cdot 3}     &amp;   e^{-\mathrm{i}\frac{2\pi}{N}\cdot 3\times 2}    &amp;   e^{-\mathrm{i}\frac{2\pi}{N}\cdot 3\times 3}   &amp;  \cdots  &amp;  e^{-\mathrm{i}\frac{2\pi}{N}\cdot 3\times(N-1)}  \\
+    \vdots    &amp; \vdots     &amp;    \vdots   &amp;   \vdots  &amp;  \ddots  &amp;  \vdots \\
+    1    &amp; e^{\mathrm{-i}\frac{2\pi}{N}\cdot (N-1)}     &amp;   e^{-\mathrm{i}\frac{2\pi}{N}\cdot (N-1)\times 2}    &amp;   e^{-\mathrm{i}\frac{2\pi}{N}\cdot (N-1)\times 3}   &amp;  \cdots  &amp;  e^{-\mathrm{i}\frac{2\pi}{N}\cdot (N-1)\times(N-1)}  \\
+  \end{array}
+ \right)
+  \left(
+  \begin{array}{c}
+    f (0)\\
+    f \left( \frac{T}{N} \right)\\
+    f \left( 2\frac{T}{N} \right)\\
+    f \left( 3\frac{T}{N} \right)\\
+    \vdots \\
+    f \left( (N-1)\frac{T}{N} \right)\\
+  \end{array}
+ \right)
+\end{align*}
+
+$$&lt;p&gt;可以发现, 对于给定 &lt;eq&gt;N&lt;/eq&gt; ,任何函数的 Fourier Transform 的变换矩阵都是一样的. 这使得 Fourier Transform  的数值计算大大简化.&lt;/p&gt;
+&lt;h2 id="简的可以手算的例子"&gt;简的可以手算的例子&lt;/h2&gt;
+&lt;p&gt;我之所以会对这个感兴趣, 是因为我想要用电脑对一些函数做 Fourier Transform ,于是得知有 FFT 这样现成的程序. 但是 FFT 给出的结果
+却令我难过. 因为我不知道它给出的是些什么. 一堆复数, 画出来形状也很奇怪. 不知道输出的结果对应的横坐标.&lt;/p&gt;
+&lt;p&gt;既然这样, 只要知道了 FFT 的原理, 就一定能够得出我想要的答案. 答案就是它的输出, 是上式等号左边那一个列向量的数值然后把 $\frac{T}{N}$
+除掉, 也就是 $F(m\Delta\omega)\frac{N}{T}$&lt;/p&gt;
+&lt;p&gt;参考书上的例子, 拿一个 $N = 4$ 的例子, 进行手算, 然后与程序给出的结果对比, 便能够验证上面的猜想&lt;/p&gt;
+&lt;p&gt;$N = 4$ 的例子:
+假设函数 $f(t)$ 离散化之后的四个数值为 $\{1, 1, 0, 0\}$ , 也就是说&lt;/p&gt;
+$$
+
+\begin{align*}
+  f\left(\frac{0T}{4}\right) = 1 \\
+  f\left(\frac{T}{4}\right) = 1\\
+  f\left(\frac{2T}{4}\right) = 0\\
+  f\left(\frac{3T}{4}\right) = 0
+\end{align*}
+
+$$&lt;p&gt;那么&lt;/p&gt;
+$$
+
+\begin{align*}
+  \frac{4}{T}F(0\cdot\Delta\omega) &amp;= 1\cdot f\left(\frac{0T}{4}\right) + 1\cdot f\left(\frac{T}{4}\right) + 1\cdot f\left(\frac{2T}{4}\right) + 1\cdot f\left(\frac{3T}{4}\right) \\
+                  &amp;= 1\cdot 1 + 1\cdot 1 +1 \cdot 0 + 1\cdot 0\\
+                  &amp;= 2\\
+  \frac{4}{T}F(1\cdot\Delta\omega) &amp;= 1\cdot f\left(\frac{0T}{4}\right) + e^{-\mathrm{i}\frac{2\pi}{4}}\cdot f\left(\frac{T}{4}\right)
+                + e^{-\mathrm{i}\frac{2\pi}{4}\cdot 2}\cdot f\left(\frac{2T}{4}\right) + e^{-\mathrm{i}\frac{2\pi}{4}\cdot 3}\cdot f\left(\frac{3T}{4}\right) \\
+                  &amp; =   1\cdot 1 + (-\mathrm{i})\cdot 1 +(-1) \cdot 0 + (\mathrm{i})\cdot 0\\
+                  &amp;= 1 - \mathrm{i}\\
+  \frac{4}{T}F(2\cdot\Delta\omega) &amp;= 1\cdot f\left(\frac{0T}{4}\right) + e^{-\mathrm{i}\frac{2\pi}{4}\cdot 2}\cdot f\left(\frac{T}{4}\right)
+                + e^{-\mathrm{i}\frac{2\pi}{4}\cdot 2\times 2}\cdot f\left(\frac{2T}{4}\right) + e^{-\mathrm{i}\frac{2\pi}{4}\cdot 2\times 3}\cdot f\left(\frac{3T}{4}\right) \\
+                  &amp; =   1\cdot 1 + (-1)\cdot 1 +1 \cdot 0 + (-1)\cdot 0\\
+                  &amp;= 0\\
+  \frac{4}{T}F(3\cdot\Delta\omega) &amp;= 1\cdot f\left(\frac{0T}{4}\right) + e^{-\mathrm{i}\frac{2\pi}{4}\cdot 3}\cdot f\left(\frac{T}{4}\right)
+                + e^{-\mathrm{i}\frac{2\pi}{4}\cdot 3\times 2}\cdot f\left(\frac{2T}{4}\right) + e^{-\mathrm{i}\frac{2\pi}{4}\cdot 3\times 3}\cdot f\left(\frac{3T}{4}\right)\\
+                  &amp; =   1\cdot 1 + (\mathrm{i})\cdot 1 +( - 1) \cdot 0 + (-\mathrm{i})\cdot 0\\
+                  &amp;= 1 + \mathrm{i}
+\end{align*}
+
+$$&lt;p&gt;也就是&lt;/p&gt;
+$$
+
+\begin{align*}
+  \left(
+    \begin{array}{c}
+       2 \\
+       1-i \\
+       0 \\
+       1+i
+    \end{array}
+  \right)
+  =
+  \left(
+  \begin{array}{cccc}
+    1&amp;1&amp;1&amp;1 \\
+    1&amp;-\mathrm{i}&amp;-1&amp;\mathrm{i}\\
+    1&amp;-1&amp;1&amp;-1 \\
+    1&amp;\mathrm{i}&amp;-1&amp;-\mathrm{i}
+  \end{array}
+    \right)
+  \left(
+    \begin{array}{c}
+       1 \\
+       1 \\
+       0 \\
+       0
+    \end{array}
+\right)\end{align*}
+
+$$&lt;p&gt;然后用 &lt;code&gt;Numpy&lt;/code&gt; 中的 &lt;code&gt;numpy.fft.fft()&lt;/code&gt; 函数计算&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-python"&gt;import numpy as np
+f = ([1,1,0,0])
+F = np.fft.fft(f)
+print(F)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;输出结果为&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-python"&gt;[2.+0.j 1.-1.j 0.+0.j 1.+1.j]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;验证了前面对于 FFT 的原理理解.&lt;/p&gt;
+&lt;h2 id="输出结果分析"&gt;输出结果分析&lt;/h2&gt;
+&lt;h3 id="输出的对称性"&gt;输出的对称性&lt;/h3&gt;
+&lt;p&gt;变换矩阵中的元素&lt;/p&gt;
+$$
+
+\begin{align*}
+  e^{-\mathrm{i}\frac{2\pi}{N}mn}
+\end{align*}
+
+$$&lt;p&gt;当 &lt;eq&gt;n&lt;/eq&gt; 给定的时候, 有&lt;/p&gt;
+$$
+
+\begin{align*}
+  e^{-\mathrm{i}n \frac{2\pi}{N}(N-m)} = e^{-\mathrm{i}n 2\pi}e^{-\mathrm{i}n \frac{2\pi}{N}(-m)} =  e^{\mathrm{i}n \frac{2\pi}{N}m}
+  = \left( e^{-\mathrm{i}n \frac{2\pi}{N}m} \right)^{* }
+\end{align*}
+
+$$&lt;p&gt;也就是说同一列中, &lt;eq&gt;m&lt;/eq&gt; 的元素和 $N-m$ 的元素是互为复共轭的. 那么就可以得出&lt;/p&gt;
+$$
+
+\begin{align*}
+  F(m\Delta\omega) = F^{* }\left((N-m)\Delta\omega\right) \\
+  \mid F(m\Delta\omega)\mid = \mid F\left((N-m)\Delta\omega\right)\mid
+\end{align*}
+
+$$&lt;p&gt;很明显, 手算的例子符合这一结论.&lt;/p&gt;
+&lt;h3 id="三角函数和--指数形式的-fourier-transform-之间的联系"&gt;三角函数和 &lt;eq&gt;e&lt;/eq&gt; 指数形式的 Fourier Transform 之间的联系&lt;/h3&gt;
+&lt;p&gt;对于满足周期为 &lt;eq&gt;T&lt;/eq&gt; ,即 $f(t+T) = f(t)$ 的函数 $f(t)$ ,展开成三角函数的形式为&lt;/p&gt;
+$$
+
+\begin{align*}
+  f(t) = \frac{a_0}{2} +\sum_{n=1}^{\infty}\left[ a_n \cos (n\omega t) +b_n \sin(n\omega t) \right]
+\end{align*}
+
+$$&lt;p&gt;其中 $\omega=\frac{2\pi}{T}$ . 由于三角函数正交且归一到半个周期上, 所以展开系数为&lt;/p&gt;
+$$
+
+\begin{align*}
+  a_n = \frac{2}{T} \int_{0}^{T} f(t)\cos (n\omega t) \mathrm{d} t \\
+  b_n = \frac{2}{T} \int_{0}^{T} f(t)\sin (n\omega t) \mathrm{d} t
+\end{align*}
+
+$$&lt;p&gt;如果把三角函数用 &lt;eq&gt;e&lt;/eq&gt; 指数代换&lt;/p&gt;
+$$
+
+\begin{align*}
+  f(t) =&amp; \frac{a_0}{2} +\sum_{n=1}^{\infty}\left[ a_n \frac{e^{\mathrm{i}n\omega t} + e^{-\mathrm{i}n\omega t}}{2}
+   +b_n \frac{e^{\mathrm{i}n\omega t} - e^{-\mathrm{i}n\omega t}}{2\mathrm{i}}
+   \right] \\
+      =&amp; \frac{a_0}{2} +\sum_{n=1}^{\infty}\left[
+       e^{\mathrm{i}n\omega t} \frac{a_n-\mathrm{i}b_n}{2} +e^{-\mathrm{i}n\omega t} \frac{a_n +\mathrm{i}b_n}{2}
+   \right] \\
+      =&amp; \sum_{n =-\infty}^{\infty}e^{\mathrm{i}n\omega t} \frac{a_n -\mathrm{i}b_n}{2}
+\end{align*}
+
+$$&lt;p&gt;最后一个等号利用了 $a_n = a_{-n}, b_n = -b_{-n}, b_0 = 0$ .
+而&lt;/p&gt;
+$$
+
+\begin{align*}
+  \frac{a_n -\mathrm{i}b_n}{2} =&amp; \frac{2}{T} \int_{0}^{T} f(t)\frac{\cos (n\omega t) - \mathrm{i}\sin(n\omega t)}{2} \mathrm{d} t \\
+                   =&amp; \frac{1}{T} \int_{0}^{T} f(t)e^{-\mathrm{i}n\omega t} \mathrm{d} t
+\end{align*}
+
+$$&lt;p&gt;若令&lt;/p&gt;
+$$
+
+\begin{align*}
+  \frac{a_n - \mathrm{i}b_n}{2}T = \mathcal{F}_n
+\end{align*}
+
+$$&lt;p&gt;则有&lt;/p&gt;
+$$
+
+\begin{align*}
+  \mathcal{F}_n = &amp; \int_{0} ^{T} f(t) e^{-\mathrm{i} n \omega t} \mathrm{d}t \\
+  f(t) = &amp; \frac{1}{T} \sum_{n=-\infty}^{\infty} \mathcal{F}_n e^{\mathrm{i}n\omega t}
+\end{align*}
+
+$$&lt;p&gt;这也和之前 Fourier Transform 总结中的一致.&lt;/p&gt;
+&lt;h3 id="输出结果中有价值的部分"&gt;输出结果中有价值的部分&lt;/h3&gt;
+&lt;p&gt;输出结果的实部和虚部对应同一频率的振幅, 只不过实部是正弦部分, 虚部是余弦部分. 所以用其模长来刻画 Fourier Transform 的结果.&lt;/p&gt;
+&lt;p&gt;而且输出的结果具有对称性, 所以只取前　$\frac{N}{2}+1$ 个结果即可得到变换的全部信息.&lt;/p&gt;
+&lt;h2 id="python-程序示例"&gt;Python 程序示例&lt;/h2&gt;
+&lt;h3 id="三角函数的例子"&gt;三角函数的例子&lt;/h3&gt;
+&lt;p&gt;用 &lt;code&gt;Numpy&lt;/code&gt; 中的 &lt;code&gt;numpy.fft.fft()&lt;/code&gt; 函数计算三角函数&lt;/p&gt;
+$$
+
+\begin{align*}
+  f(t) = \sin(17t) +3 \sin (57t) + 2 \sin(97t)
+\end{align*}
+
+$$&lt;p&gt;的 Fourier Transform&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-python"&gt;import numpy as np
+import matplotlib.pyplot as plt
+N = 1024  #离散化成N个点
+T =8*np.pi #输入T的值
+t = np.linspace(0,T,N) #离散化t
+f = np.sin(17*t) + 3*np.sin(57*t) + 2*np.sin(97*t) #f(t)的表达式
+F = np.fft.fft(f) #进行FFT
+tf = np.linspace(0,N*np.pi/T,N//2 + 1) #设置 \omega 坐标轴,
+plt.plot(tf, np.abs(F[:N//2+1])) #以 \omega 为横轴, 以 F 为纵轴画图. 由于对称性只取前(N/2+1 个点)
+plt.xlabel(&amp;quot;$\omega$&amp;quot;)
+plt.ylabel(&amp;quot;$F(\omega)$&amp;quot;)
+plt.title(&amp;quot;The Results of FFT&amp;quot;)
+plt.show()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;结果&lt;/p&gt;
+&lt;p&gt;&lt;img src="./2019-01-03-physics-FFT_note/sin.png" alt="sin.png" /&gt;&lt;/p&gt;
+&lt;p&gt;正如预期, 分别在频率为 $17, 57, 97$ 出现峰. $57$ 的峰最高, $97$ 次之, $17$ 最低.&lt;/p&gt;
+&lt;h3 id="高斯函数的例子"&gt;高斯函数的例子&lt;/h3&gt;
+&lt;p&gt;用 &lt;code&gt;Numpy&lt;/code&gt; 中的 &lt;code&gt;numpy.fft.fft()&lt;/code&gt; 函数高斯函数&lt;/p&gt;
+$$
+
+\begin{align*}
+  f_1(t) = e^{-t^{2}}
+\end{align*}
+
+$$&lt;p&gt;和&lt;/p&gt;
+$$
+
+\begin{align*}
+  f_2(t) = e^{-10t^{2}}
+\end{align*}
+
+$$&lt;p&gt;的 Fourier Transform&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-python"&gt;import numpy as np
+import matplotlib.pyplot as plt
+N = 512  #离散化成N个点
+T =30 #输入T的值
+t = np.linspace(0,T,N) #离散化t
+f1 = np.exp(-t**2) #f(t)的表达式
+f2 = np.exp(-10*t**2)
+F1 = np.fft.fft(f1) #进行FFT
+F2 = np.fft.fft(f2) #进行FFT
+tf = np.linspace(0,N*np.pi/T,N//2 + 1) #设置 \omega 坐标轴,
+
+plt.subplot(211) #两行一列, 第一个图
+plt.plot(tf, np.abs(F1[:N//2+1])) #以 \omega 为横轴, 以 F1 为纵轴画图. 由于对称性只取前(N/2+1 个点)
+plt.ylabel(&amp;quot;$F_1(\omega)$&amp;quot;)
+plt.subplot(212) #两行一列, 第二个图
+plt.plot(tf, np.abs(F2[:N//2+1])) #
+plt.xlabel(&amp;quot;$\omega$&amp;quot;)
+plt.ylabel(&amp;quot;$F_2(\omega)$&amp;quot;)
+plt.suptitle(&amp;quot;The Results of FFT&amp;quot;)
+plt.show()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;结果为&lt;/p&gt;
+&lt;p&gt;&lt;img src="./2019-01-03-physics-FFT_note/gau.png" alt="gau.png" /&gt;&lt;/p&gt;
+&lt;p&gt;这也符合预期, 原来更尖的高斯函数, 变换之后变得更平.&lt;/p&gt;
+&lt;h2 id="致谢与参考书"&gt;致谢与参考书&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;苏变萍, 陈东立 编 复变函数与积分变换(第二版)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;感谢 Fan Yang 师兄的讨论&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="physics"/><category term="Fourier transform"/><category term="数学"/><category term="Python"/><category term="FFT"/></entry><entry><title>二次量子化笔记 (update 06/Dec/2019)</title><link href="https://zqw.ink/2018-09-27-physics-second_quant.html" rel="alternate"/><published>2018-09-27T00:00:00+08:00</published><updated>2018-09-27T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-27:/2018-09-27-physics-second_quant.html</id><summary type="html">
 &lt;h2 id="单体力学量"&gt;单体力学量&lt;/h2&gt;
 &lt;h3 id="本征表象"&gt;本征表象&lt;/h3&gt;
 &lt;p&gt;&lt;eq&gt;N&lt;/eq&gt; 个粒子组成的系统，对于单个粒子的力学量 $\hat{f}$ ，其第 &lt;eq&gt;i&lt;/eq&gt; 个本征值为 $f_i$ ，本征态为 $\mid i \rangle$ ，即
@@ -2541,9 +2980,9 @@ $$&lt;/p&gt;
 &lt;p&gt;用 Mathematica 可以验证.&lt;/p&gt;
 &lt;h2 id="reference"&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;关于使其收敛的说明, 分别从物理的角度, 数学的角度阐述这样做的合理性和必要性: https://physics.stackexchange.com/questions/7462/fourier-transform-of-the-coulomb-potential&lt;/li&gt;
+&lt;li&gt;关于使其收敛的说明, 分别从物理的角度, 数学的角度阐述这样做的合理性和必要性: &lt;a href="https://physics.stackexchange.com/questions/7462/fourier-transform-of-the-coulomb-potential"&gt;StackExchange: Fourier transform of the Coulomb potential&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="physics"/><category term="数学"/><category term="物理"/><category term="库仑势"/><category term="Fourier"/></entry><entry><title>Lagrange乘子法求带有约束的极植</title><link href="https://zqw.ink/2018-09-22-physics-Lagrange_multiply_optim.html" rel="alternate"/><published>2018-09-22T00:00:00+08:00</published><updated>2018-09-22T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-22:/2018-09-22-physics-Lagrange_multiply_optim.html</id><summary type="html">&lt;!-- toc --&gt;
+</content><category term="physics"/><category term="数学"/><category term="物理"/><category term="库仑势"/><category term="Fourier transform"/></entry><entry><title>Lagrange乘子法求带有约束的极植</title><link href="https://zqw.ink/2018-09-22-physics-Lagrange_multiply_optim.html" rel="alternate"/><published>2018-09-22T00:00:00+08:00</published><updated>2018-09-22T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-22:/2018-09-22-physics-Lagrange_multiply_optim.html</id><summary type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
 &lt;h2 id="问题"&gt;问题&lt;/h2&gt;
 &lt;p&gt;圆柱体积恒定，求表面积最大值。&lt;/p&gt;
@@ -3250,136 +3689,125 @@ $$&lt;/p&gt;
 $$
 \lambda = \frac{a+c}{2} \pm \sqrt{b^2 +\frac{(a - c)^2}{4}}
 $$&lt;/p&gt;
-</content><category term="physics"/><category term="数学"/><category term="矩阵"/></entry><entry><title>Fourier transform 总结</title><link href="https://zqw.ink/2018-09-07-physics-Fourier-transform-Zong-Jie.html" rel="alternate"/><published>2018-09-07T00:00:00+08:00</published><updated>2018-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-07:/2018-09-07-physics-Fourier-transform-Zong-Jie.html</id><summary type="html">&lt;h2&gt;总的分类&lt;/h2&gt;
-
-&lt;p&gt;根据变量的连续与否，F.T.总共有三种。&lt;/p&gt;
-
+</content><category term="physics"/><category term="数学"/><category term="矩阵"/></entry><entry><title>Fourier transform 总结</title><link href="https://zqw.ink/2018-09-07-physics-Fourier_transform_summary.html" rel="alternate"/><published>2018-09-07T00:00:00+08:00</published><updated>2018-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-07:/2018-09-07-physics-Fourier_transform_summary.html</id><summary type="html">
 &lt;ul&gt;
-&lt;li&gt;完全离散&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E5%88%86%E7%B1%BB"&gt;分类&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E4%BE%8B%E5%AD%90"&gt;例子&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#%E5%AE%9E%E7%A9%BA%E9%97%B4%E7%A6%BB%E6%95%A3"&gt;实空间离散&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%9C%89%E9%99%90%E5%B0%BA%E5%AF%B8"&gt;实空间有限尺寸&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%97%A0%E7%A9%B7%E5%A4%A7"&gt;实空间无穷大&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-$$\begin{align*}
-  \sum_l e^{-i\frac{2\pi}{N}k'l} e^{i\frac{2\pi}{N}kl}=N\delta_{kk'}
-\end{align*}$$
-
-
-&lt;ul&gt;
-&lt;li&gt;部分离散 …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;h2&gt;总的分类&lt;/h2&gt;
-
-&lt;p&gt;根据变量的连续与否，F.T.总共有三种。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;完全离散&lt;/li&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-$$\begin{align*}
-  \sum_l e^{-i\frac{2\pi}{N}k'l} e^{i\frac{2\pi}{N}kl}=N\delta_{kk'}
-\end{align*}$$
-
-
+&lt;h2 id="分类"&gt;分类&lt;/h2&gt;
+&lt;p&gt;根据变量的连续与否，傅立叶变换有以下几种情况：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;部分离散&lt;/li&gt;
-&lt;/ul&gt;
-
-$$\begin{align*}
-  \int_{-\infty}^{\infty} e^{-ik'x} e^{ikx} \mathrm{d}x = L \delta_{kk'}
-\end{align*}$$
-
-
+&lt;li&gt;实空间离散 …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
 &lt;ul&gt;
-&lt;li&gt;完全连续&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E5%88%86%E7%B1%BB"&gt;分类&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E4%BE%8B%E5%AD%90"&gt;例子&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#%E5%AE%9E%E7%A9%BA%E9%97%B4%E7%A6%BB%E6%95%A3"&gt;实空间离散&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%9C%89%E9%99%90%E5%B0%BA%E5%AF%B8"&gt;实空间有限尺寸&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E5%AE%9E%E7%A9%BA%E9%97%B4%E6%97%A0%E7%A9%B7%E5%A4%A7"&gt;实空间无穷大&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="分类"&gt;分类&lt;/h2&gt;
+&lt;p&gt;根据变量的连续与否，傅立叶变换有以下几种情况：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;实空间离散，动量空间离散（又见&lt;a href="./2026-06-18-physics-group_representation_theory.html"&gt;2026-06-18-群表示论备忘&lt;/a&gt;的 $Z_n$ 群）&lt;/li&gt;
+&lt;/ul&gt;
+$$
 
-$$\begin{align*}
-  \int_{-\infty}^{\infty} e^{-ikx} e^{ik'x} \mathrm{d}x = 2\pi \delta (x-x')
-\end{align*}$$
+\begin{align*}
+  \sum_{l = 1}^N e^{-i k'l} e^{i kl}=N\delta_{k,k'},
+  \quad l = 1, 2, \cdots N,
+  \quad k = 0, \frac{2\pi}{N}, 2 \frac{2\pi}{N}, \cdots (N-1)\frac{2\pi}{N}
+\end{align*}
 
+$$&lt;ul&gt;
+&lt;li&gt;实空间有限尺寸，动量空间离散&lt;/li&gt;
+&lt;/ul&gt;
+$$
 
-&lt;h2&gt;部分离散&lt;/h2&gt;
+\begin{align*}
+  \int_{0}^{L} e^{-ik'x} e^{ikx} \mathrm{d}x = L \delta_{k, k'}, \quad
+  k = 0, \pm\frac{2\pi}{L}, \pm 2\frac{2\pi}{L}, \cdots
+\end{align*}
 
-&lt;h3&gt;动量本征函数&lt;/h3&gt;
+$$&lt;ul&gt;
+&lt;li&gt;实空间无穷大，动量空间无穷大&lt;/li&gt;
+&lt;/ul&gt;
+$$
 
+\begin{align*}
+  \int_{-\infty}^{\infty} e^{-ikx} e^{ik'x} \mathrm{d}x = 2\pi \delta (k-k')
+\end{align*}
 
-$$\begin{align*}
-\frac{\hbar}{i} \frac{\mathrm{d}}{\mathrm{d}x} \psi = p \psi\quad \Longrightarrow\quad \psi = e^{i\frac{p}{\hbar}x}
-\end{align*}$$
+$$&lt;p&gt;上式的等号在&lt;a href="https://en.wikipedia.org/wiki/Distribution_(mathematical_analysis)#Tempered_distributions_and_Fourier_transform"&gt;分布&lt;/a&gt;意义下成立。&lt;/p&gt;
+&lt;h2 id="例子"&gt;例子&lt;/h2&gt;
+&lt;h3 id="实空间离散"&gt;实空间离散&lt;/h3&gt;
+&lt;p&gt;周期性边界条件下的紧束缚模型&lt;/p&gt;
+$$
 
+H = -t \sum_{j=1}^{N} \left( c_j^{\dagger} c_{j+1} + c_{j+1}^{\dagger} c_j \right)，
+\quad c_{N + 1} = c_1
 
-&lt;h3&gt;归一化&lt;/h3&gt;
+$$&lt;p&gt;具有平移对称性，本征态是平面波&lt;/p&gt;
+$$
 
+\begin{align}
+  a_k^{\dagger} = \sum_j c_j^{\dagger} \langle j| k\rangle
+  =\frac{1}{\sqrt{N}} \sum_j c_j^{\dagger} e^{i j k},\quad k = 0, \frac{2\pi}{N}, 2\frac{2\pi}{N}, \cdots (N - 1)\frac{2\pi}{N}
+\end{align}
 
-$$\begin{align*}
-\langle e^{ikx} \mid e^{ikx'} \rangle = \int_{-\infty}^{\infty} e^{-ikx} e^{ikx'} \mathrm{d}k = \int_{-\infty}^{\infty} e^{ik(x'-x)} \mathrm{d}k = 2\pi \delta(x-x')
-\end{align*}$$
+$$&lt;p&gt;所以&lt;/p&gt;
+$$
 
+\begin{align}
+  H =&amp; -t \sum_{j = 1}^N \sum_{k_1, k_2} \frac{1}{N}
+   \left( a_{k_1}^\dagger a_{k_2} e^{-i j(k_1 - k_2)} e^{i k_2}
+    +  a_{k_2}^\dagger a_{k_1} e^{-i j(k_2 - k_1)} e^{-ik_2} \right) \\
+    =&amp; -t \sum_k 2\cos k a_{k}^\dagger a_{k}
+\end{align}
 
-&lt;h3&gt;周期为 $L$&lt;/h3&gt;
+$$&lt;h3 id="实空间有限尺寸"&gt;实空间有限尺寸&lt;/h3&gt;
+&lt;p&gt;尺寸为 &lt;eq&gt;L&lt;/eq&gt; 的周期性边界条件的一维系统（箱归一化）&lt;/p&gt;
+&lt;p&gt;动量本征态 $\psi_k(x) = \langle x | k\rangle$ 是周期函数&lt;/p&gt;
+$$
 
-&lt;p&gt;$f(x)$ 是周期函数&lt;/p&gt;
+\begin{align*}
+\psi_k(x+L) = \psi_k(x) = \frac{1}{\sqrt{L}}e^{ikx}, \quad
+k = 0, \pm \frac{2\pi}{L}, \pm 2\frac{2\pi}{L}, \pm 3\frac{2\pi}{L}, \cdots
+\end{align*}
 
+$$&lt;p&gt;动量本征态正交归一&lt;/p&gt;
+$$
 
-$$\begin{align*}
-f(x+L) = f(x)
-\end{align*}$$
+\begin{align*}
+\langle k | k'\rangle = \int_{0}^{L} e^{-ikx} e^{ik'x} \mathrm{d}x = L \delta(k-k')
+\end{align*}
 
+$$&lt;h3 id="实空间无穷大"&gt;实空间无穷大&lt;/h3&gt;
+&lt;p&gt;一维无穷空间中的动量本征函数&lt;/p&gt;
+$$
 
-&lt;p&gt;将 $x$ 从 $2\pi$ 拉伸到 $L$&lt;/p&gt;
+\begin{align*}
+-i \frac{\mathrm{d}}{\mathrm{d}x} \langle x|k\rangle
+= k \langle x| k\rangle \quad
+\Longrightarrow \quad \psi_k(x) = \langle x| k\rangle
+= \frac{1}{\sqrt{2\pi}} e^{i kx}
+\end{align*}
 
+$$&lt;p&gt;正交归一&lt;/p&gt;
+$$
 
-$$\begin{align*}
-x \rightarrow x \cdot \frac{2\pi}{L}​
-\end{align*}$$
+\begin{align*}
+\langle k | k' \rangle =
+\frac{1}{2\pi}\int_{-\infty}^{\infty} e^{-ikx} e^{ik'x} \mathrm{d}x
+=\frac{1}{2\pi} \int_{-\infty}^{\infty} e^{i(k'-k)x} \mathrm{d}x = \delta(k'-k)
+\end{align*}
 
-
-&lt;p&gt;相应归一化到 $L$&lt;/p&gt;
-
-
-$$\begin{align*}
-\langle e^{ikx \cdot \frac{2\pi}{L}} \mid e^{ikx' \cdot \frac{2\pi}{L}} \rangle = \int_{-\infty}^{\infty} e^{-ikx \cdot \frac{2\pi}{L}} e^{ikx' \cdot \frac{2\pi}{L}} \mathrm{d}k = L \delta(x-x')
-\end{align*}$$
-
-
-&lt;p&gt;Fourier展开系数由下式求得&lt;/p&gt;
-
-
-$$\begin{align*}
-f(x)= \frac{1}{L} \sum_k \mid e^{ikx \cdot \frac{2\pi}{L}} \rangle \langle e^{ikx \cdot \frac{2\pi}{L}} \mid f(x) \rangle = \sum_k e^{ikx \cdot \frac{2\pi}{L}} C_k
-\end{align*}$$
-
-
-
-$$\begin{align*}
-C_k = \frac{1}{L} \int_{-\infty}^{\infty} f(x) e^{-ikx \cdot \frac{2\pi}{L}} \mathrm{d}x
-\end{align*}$$
-
-
-&lt;h2&gt;完全连续&lt;/h2&gt;
-
-&lt;p&gt;当周期 $L \rightarrow \infty​$ 时，$\frac{2\pi}{L} \rightarrow 0​$ ，指数上的 $k\frac{2\pi}{L}​$ 由原来离散的取值 $\frac{2\pi}{L}, 2\frac{2\pi}{L}, 3\frac{2\pi}{L}, \cdots​$ 变成连续的变量，记为新的 $k​$ ，且 $\mathrm{d}k = \frac{2\pi}{L}​$ 。&lt;/p&gt;
-
-&lt;p&gt;则Fourier展开变为&lt;/p&gt;
-
-
-$$\begin{align*}
-f(x) = \lim_{L\rightarrow \infty} \frac{1}{2 \pi}\frac{2\pi}{L} \sum_k \mid e^{ikx\cdot\frac{2\pi}{L}}\rangle\langle e^{ikx\cdot\frac{2\pi}{L}}\mid f(x) \rangle = \int_{-\infty}^{\infty} \mathrm{d}k \frac{1}{2\pi}\mid e^{ikx\cdot\frac{2\pi}{L}}\rangle\langle e^{ikx\cdot\frac{2\pi}{L}}\mid f(x) \rangle \\\\=\frac{1}{2\pi} \int _{-\infty}^{\infty}\mathrm{d}k\int _{-\infty}^{\infty}\mathrm{d}x' e^{ikx}\cdot e^{-ikx'}f(x')
-\end{align*}$$
-
-
-&lt;p&gt;也就是&lt;/p&gt;
-
-
-$$\begin{align*}
-f(x) = \frac{1}{2\pi} \int_{-\infty}^{\infty} \mathrm{d}k \int_{-\infty}^{\infty} \mathrm{d}x' e^{ik(x-x')} f(x')
-\end{align*}$$
-
-
-&lt;h2&gt;完全离散&lt;/h2&gt;
-
-&lt;p&gt;类似群论中的不可约表示。&lt;/p&gt;
-
-
-$$\begin{align*}
-\sum_l e^{-i\frac{2\pi}{N}k'l} e^{i\frac{2\pi}{N}kl}=N\delta_{kk'}
-\end{align*}$$
-
-</content><category term="physics"/><category term="Fourier"/><category term="数学"/></entry></feed>
+$$</content><category term="physics"/><category term="Fourier transform"/><category term="数学"/></entry></feed>

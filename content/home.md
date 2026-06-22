@@ -40,6 +40,8 @@ Have a nice day!
 - [#Susskind](/tag/Susskind)：Susskind 的公开课笔记。
 - [#Carl Bender](/tag/Carl-Bender)：Carl Bender 的 [Perturbation Theory 公开课](https://www.youtube.com/playlist?list=PLzcd6SoIscwjHuWRE38UXWG92uq0Sy4UF)笔记。
 
+Selected tags: [#Fourier transform](/tag/Fourier-transform.html)
+
 ## Blogroll
 
 这里列出一些优秀的个人站点。

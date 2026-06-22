@@ -6,14 +6,20 @@
   <meta charset="utf-8" />
   <meta name="generator" content="Pelican" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="/theme/css/style.css" />
+  <link
+    href="https://zqw.ink/feeds/all.atom.xml"
+    type="application/atom+xml" rel="alternate" title="从冰上的水 Full Atom Feed" />
+  <link
+    href="https://zqw.ink/feeds/physics.atom.xml"
+    type="application/atom+xml" rel="alternate" title="从冰上的水 Categories Atom Feed" />
+  <link rel="stylesheet" type="text/css" href="https://zqw.ink/theme/css/style.css" />
   <!-- SEO: site-level structured data (WebSite) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "从冰上的水",
-    "url": "/"
+    "url": "https://zqw.ink/"
   }
   </script>
   <!-- fonts -->
@@ -96,7 +102,7 @@
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "/2019-01-03-physics-FFTFast-Fourier-TransformationBi-Ji.html"
+      "@id": "https://zqw.ink/2019-01-03-physics-FFT_note.html"
     }
   }
   </script>
@@ -134,6 +140,9 @@
           <i class="theme-icon icon-moon fa-solid fa-moon" aria-hidden="true"></i>
         </button>
         <div class="rss">
+            <a href="https://zqw.ink/feeds/all.atom.xml" aria-label="Atom 订阅">
+              <i class="fa-solid fa-rss" aria-hidden="true"></i>
+            </a>
         </div>
       </div>
     </div>
@@ -144,7 +153,7 @@
 
 <section class="post-meta">
     <p>2019-01-03</p>
-    <p>-<a class="post-link" href="/category/Zhuan-Ye-Bi-Ji.html">专业笔记</a></p>
+    <p>-<a class="post-link" href="https://zqw.ink/category/physics.html">physics</a></p>
 </section>
 
 <section class="markdown-body">
@@ -165,7 +174,7 @@ $$
 \end{align*}
 
 $$<p>如此做 Fourier Transform , 需要算积分.</p>
-<h2 id="dft-discreate-fourier-transform">DFT (Discreate Fourier Transform)</h2>
+<h2 id="dft-discrete-fourier-transform">DFT (Discrete Fourier Transform)</h2>
 <p>如果用计算机进行数值上的计算, 会对积分进行离散化, 那么就变成了离散的 Fourier Transform .</p>
 <p>假设将积分均匀地分成 <eq>N</eq> 份, 那么就有</p>
 $$
@@ -327,14 +336,14 @@ $$
     \end{array}
 \right)\end{align*}
 
-$$<p>然后用 Numpy 中的 =numpy.fft.fft()= 函数计算</p>
+$$<p>然后用 <code>Numpy</code> 中的 <code>numpy.fft.fft()</code> 函数计算</p>
 <pre><code class="language-python">import numpy as np
 f = ([1,1,0,0])
 F = np.fft.fft(f)
 print(F)
 </code></pre>
 <p>输出结果为</p>
-<pre><code class="language-python">: [2.+0.j 1.-1.j 0.+0.j 1.+1.j]
+<pre><code class="language-python">[2.+0.j 1.-1.j 0.+0.j 1.+1.j]
 </code></pre>
 <p>验证了前面对于 FFT 的原理理解.</p>
 <h2 id="输出结果分析">输出结果分析</h2>
@@ -364,10 +373,6 @@ $$
 
 $$<p>很明显, 手算的例子符合这一结论.</p>
 <h3 id="三角函数和--指数形式的-fourier-transform-之间的联系">三角函数和 <eq>e</eq> 指数形式的 Fourier Transform 之间的联系</h3>
-<p>在我的印象中, Fourier Transform 的结果应该是一个实函数, 比如一个高斯函数的 Fourier Transform 的
-结果还是一个高斯函数. 但这里给出的例子结果是复的.</p>
-<p>我发现这里的变换有所不同. 我印象中的变换一般是一个在正负无穷之间的变换. 而这里是在特定区间上的变换. 我想
-这就是原因. 根本原因我还没有想清楚.</p>
 <p>对于满足周期为 <eq>T</eq> ,即 $f(t+T) = f(t)$ 的函数 $f(t)$ ,展开成三角函数的形式为</p>
 $$
 
@@ -449,30 +454,36 @@ plt.title(&quot;The Results of FFT&quot;)
 plt.show()
 </code></pre>
 <p>结果</p>
-<p>![sin.png](./2019-01-03-physics-FFT(Fast Fourier Transformation)笔记/sin.png)</p>
+<p><img src="./2019-01-03-physics-FFT_note/sin.png" alt="sin.png" /></p>
 <p>正如预期, 分别在频率为 $17, 57, 97$ 出现峰. $57$ 的峰最高, $97$ 次之, $17$ 最低.</p>
-<p>** 高斯函数的例子</p>
-<p>用 Numpy 中的 numpy.fft.fft() 函数高斯函数
+<h3 id="高斯函数的例子">高斯函数的例子</h3>
+<p>用 <code>Numpy</code> 中的 <code>numpy.fft.fft()</code> 函数高斯函数</p>
+$$
+
 \begin{align*}
-f_1(t) = e^{-t^{2}}
+  f_1(t) = e^{-t^{2}}
 \end{align*}
-和
+
+$$<p>和</p>
+$$
+
 \begin{align*}
-f_2(t) = e^{-10t^{2}}
+  f_2(t) = e^{-10t^{2}}
 \end{align*}
-的 Fourier Transform</p>
-<p>#+begin_src python
-import numpy as np
+
+$$<p>的 Fourier Transform</p>
+<pre><code class="language-python">import numpy as np
 import matplotlib.pyplot as plt
 N = 512  #离散化成N个点
 T =30 #输入T的值
 t = np.linspace(0,T,N) #离散化t
-f1 = np.exp(-t<strong>2) #f(t)的表达式
-f2 = np.exp(-10*t</strong>2)
+f1 = np.exp(-t**2) #f(t)的表达式
+f2 = np.exp(-10*t**2)
 F1 = np.fft.fft(f1) #进行FFT
 F2 = np.fft.fft(f2) #进行FFT
-tf = np.linspace(0,N*np.pi/T,N//2 + 1) #设置 \omega 坐标轴,</p>
-<p>plt.subplot(211) #两行一列, 第一个图
+tf = np.linspace(0,N*np.pi/T,N//2 + 1) #设置 \omega 坐标轴,
+
+plt.subplot(211) #两行一列, 第一个图
 plt.plot(tf, np.abs(F1[:N//2+1])) #以 \omega 为横轴, 以 F1 为纵轴画图. 由于对称性只取前(N/2+1 个点)
 plt.ylabel(&quot;$F_1(\omega)$&quot;)
 plt.subplot(212) #两行一列, 第二个图
@@ -481,24 +492,28 @@ plt.xlabel(&quot;$\omega$&quot;)
 plt.ylabel(&quot;$F_2(\omega)$&quot;)
 plt.suptitle(&quot;The Results of FFT&quot;)
 plt.show()
-#+end_src</p>
-<p>结果为
-[[file:./2019-01-03-physics-FFT(Fast Fourier Transformation)笔记/gau.png]]</p>
+</code></pre>
+<p>结果为</p>
+<p><img src="./2019-01-03-physics-FFT_note/gau.png" alt="gau.png" /></p>
 <p>这也符合预期, 原来更尖的高斯函数, 变换之后变得更平.</p>
+<h2 id="致谢与参考书">致谢与参考书</h2>
 <ul>
-<li>致谢与参考书</li>
-</ul>
+<li>
 <p>苏变萍, 陈东立 编 复变函数与积分变换(第二版)</p>
+</li>
+<li>
 <p>感谢 Fan Yang 师兄的讨论</p>
+</li>
+</ul>
 
 </section>
 
 <section class="post-meta">
     <p>
-        <a class="post-link" href="/tag/Fourier-transform.html">#Fourier transform</a>
-        <a class="post-link" href="/tag/Shu-Xue.html">#数学</a>
-        <a class="post-link" href="/tag/Python.html">#Python</a>
-        <a class="post-link" href="/tag/FFT.html">#FFT</a>
+        <a class="post-link" href="https://zqw.ink/tag/Fourier-transform.html">#Fourier transform</a>
+        <a class="post-link" href="https://zqw.ink/tag/Shu-Xue.html">#数学</a>
+        <a class="post-link" href="https://zqw.ink/tag/Python.html">#Python</a>
+        <a class="post-link" href="https://zqw.ink/tag/FFT.html">#FFT</a>
     </p>
 </section>
 

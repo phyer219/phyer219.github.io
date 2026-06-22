@@ -82,9 +82,10 @@
 
 
   <!-- SEO: page description for search results -->
-    <meta name="description" content="Defination of group 群（group）是一个抽象的数学概念。定义如下（Wikipedia: Group (mathematics)）: A group is a set G together with a binary operation on ⁠ G⁠, here denoted "..." />
+    <meta name="description" content="Definition of group Definition of representation Orthogonality theorems 正则表示（Regular Representation）约化出所有的不可约表示 Character tables of some group Even..." />
 
     <meta name="tags" content="group theory" />
+    <meta name="tags" content="Fourier transform" />
 
   <!-- SEO: structured data for articles (JSON-LD) -->
   <script type="application/ld+json">
@@ -155,7 +156,22 @@
 
 <section class="markdown-body">
   
-<h2 id="defination-of-group">Defination of group</h2>
+<ul>
+<li><a href="#definition-of-group">Definition of group</a></li>
+<li><a href="#definition-of-representation">Definition of representation</a></li>
+<li><a href="#orthogonality-theorems">Orthogonality theorems</a></li>
+<li><a href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E7%A4%BAregular-representation%E7%BA%A6%E5%8C%96%E5%87%BA%E6%89%80%E6%9C%89%E7%9A%84%E4%B8%8D%E5%8F%AF%E7%BA%A6%E8%A1%A8%E7%A4%BA">正则表示（Regular Representation）约化出所有的不可约表示</a></li>
+<li><a href="#character-tables-of-some-group">Character tables of some group</a>
+<ul>
+<li><a href="#even-permutation-group-a_3">Even permutation group $A\_3$</a></li>
+<li><a href="#even-permutation-group-a_4">Even permutation group $A\_4$</a></li>
+<li><a href="#permutation-group-s_3">Permutation group $S\_3$</a></li>
+<li><a href="#permutation-group-s_4">Permutation group $S\_4$</a></li>
+</ul>
+</li>
+<li><a href="#reference">Reference</a></li>
+</ul>
+<h2 id="definition-of-group">Definition of group</h2>
 <p>群（group）是一个抽象的数学概念。定义如下（<a href="https://en.wikipedia.org/wiki/Group_(mathematics)">Wikipedia: Group (mathematics)</a>）:</p>
 <p>A group is a set <eq>G</eq> together with a binary operation on ⁠ <eq>G</eq>⁠, here denoted &quot; $\cdot$ &quot;, that combines any two elements $a, b\in G$ to form an element of ⁠<eq>G</eq>, denoted $ab$⁠ , such that the following three requirements, known as group axioms, are satisfied:</p>
 <ol>
@@ -365,10 +381,64 @@ $$
 S_3 & n_c &               & 1 & \bar{1} & 2 \\
 \hline
     & 1 & I               & 1 & 1  & 2  \\
-Z_3 & 2 & (123),(132)     & 1 & 1  & -1_x \\
-Z_2 & 3 & (12),(23),(31)  & 1 & -1 & 0_y  \\
+Z_3 & 2 & (123),(132)     & 1 & 1  & -1 \\
+Z_2 & 3 & (12),(23),(31)  & 1 & -1 & 0  \\
 \hline
 \end{array}
+
+$$<p>三个不可约表示：平凡一维表示 <eq>1</eq> ，一维符号表示 $\bar{1}$ ，以及二维表示（三角形在平面中的对称操作）：</p>
+<p>旋转 $120$ 度:</p>
+$$
+
+\begin{align}
+  D^{(2)}((123)) =
+  \begin{pmatrix}
+    -\frac{1}{2}  & -\frac{\sqrt{3}}{2} \\
+    \frac{\sqrt{3}}{2}  & -\frac{1}{2}
+  \end{pmatrix}
+\end{align}
+
+$$<p>旋转 $-120$ 度:</p>
+$$
+
+\begin{align}
+  D^{(2)}((132)) =
+  \begin{pmatrix}
+    -\frac{1}{2}  & \frac{\sqrt{3}}{2} \\
+    -\frac{\sqrt{3}}{2}  & -\frac{1}{2}
+  \end{pmatrix}
+\end{align}
+
+$$<p>三个反射操作</p>
+$$
+
+\begin{align}
+  D^{(2)}((12)) =
+  \begin{pmatrix}
+    -1  & 0 \\
+    0  & 1
+  \end{pmatrix}
+\end{align}
+
+$$$$
+
+\begin{align}
+  D^{(2)}((13)) =
+  \begin{pmatrix}
+    \frac{1}{2}  & -\frac{\sqrt{3}}{2} \\
+    -\frac{\sqrt{3}}{2}  & -\frac{1}{2}
+  \end{pmatrix}
+\end{align}
+
+$$$$
+
+\begin{align}
+  D^{(2)}((23)) =
+  \begin{pmatrix}
+    \frac{1}{2}  & \frac{\sqrt{3}}{2} \\
+    \frac{\sqrt{3}}{2}  & -\frac{1}{2}
+  \end{pmatrix}
+\end{align}
 
 $$<h3 id="permutation-group-1">Permutation group $S_4$</h3>
 $$
@@ -395,6 +465,7 @@ $$<h2 id="reference">Reference</h2>
 <section class="post-meta">
     <p>
         <a class="post-link" href="https://zqw.ink/tag/group-theory.html">#group theory</a>
+        <a class="post-link" href="https://zqw.ink/tag/Fourier-transform.html">#Fourier transform</a>
     </p>
 </section>
 
