@@ -11,11 +11,16 @@ tags:
 - [Definition of representation](#definition-of-representation)
 - [Orthogonality theorems](#orthogonality-theorems)
 - [正则表示（Regular Representation）约化出所有的不可约表示](#正则表示regular-representation约化出所有的不可约表示)
+- [投影到某个不可约表示的投影算符](#投影到某个不可约表示的投影算符)
+- [Schur's lemma and degeneracy](#schurs-lemma-and-degeneracy)
 - [Character tables of some group](#character-tables-of-some-group)
   - [Even permutation group $A\_3$](#even-permutation-group-a_3)
   - [Even permutation group $A\_4$](#even-permutation-group-a_4)
   - [Permutation group $S\_3$](#permutation-group-s_3)
   - [Permutation group $S\_4$](#permutation-group-s_4)
+- [Appendix](#appendix)
+  - [Covariance and contravariance of vectors](#covariance-and-contravariance-of-vectors)
+  - [直和](#直和)
 - [Reference](#reference)
 
 ## Definition of group
@@ -130,7 +135,7 @@ $$
 \end{align}
 $$
 
-将正则表示约化成不可约表示的直和 $D^{(\mathrm{reg})} = \bigoplus_r n_r D^{(r)}$，
+将正则表示约化成不可约表示的直和 $D^{(\mathrm{reg})} \simeq \bigoplus_r n_r D^{(r)}$，
 对应的特征标有 $\chi^{(\mathrm{reg})}(c) = \sum_r n_r \chi^{(r)}(c)$ ，其中 $n_r$ 表示不可约表示 $r$ 出现的次数 。
 根据列正交公式 $\eqref{eq:col-orth}$ 可知，
 
@@ -208,6 +213,54 @@ $$
 $$
 其中 $\omega=e^{2\pi i /3}$ 。
 
+## 投影到某个不可约表示的投影算符
+
+假设表示 $D(g)$ 可以分解成不可约表示的直和
+$D(g) = \bigoplus_p \left[ I_{n_p}\otimes D^{(p)} \right]$ ，
+那么可以在表示 $D$ 的基底上构建到不可约表示 $r$ 的投影算符：
+
+$$
+\begin{align}
+  P_{r} = \frac{d_r}{N(G)} \sum_{g\in G} \left(\chi^{(r)}(g)\right)^* D(g).
+\end{align}
+$$
+
+可以写成分量式，并利用大正交定理证明它在 $r$ 表示上是单位阵，在其它表示上是 $0$ ，
+
+$$
+\begin{align}
+  \left(P_{r}\right)_{pa_pi, qb_qj}
+  =&  \frac{d_r}{N(G)} \sum_{g\in G}
+   \left[
+    \left( \sum_k D_{kk}^{(r)*}(g) \right)
+    \left( \delta_{pq}\delta_{a_pb_p} D^{(p)}_{ij} \right)
+   \right] \\
+  =& \frac{d_r}{N(G)} \sum_{k} \delta_{pq}\delta_{a_pb_p}
+   \cdot \frac{N(G)}{d_r}\delta_{rp} \delta_{ki}\delta_{kj} \\
+  =& \delta_{rp} \cdot \delta_{rq} \delta_{a_pb_p} \delta_{ij}
+\end{align}
+$$
+其中 $a_p$ 标记的是不可约表示 $p$ 的第几重。
+
+在非块对角的基底下，即 $D'(g) \simeq \bigoplus_p \left[ I_{n_p}\otimes D^{(p)} \right]$ ，
+时，也可以用同样的公式构造投影算符。因为投投影算符不会因为改变基底而改变。
+
+## Schur's lemma and degeneracy
+
+> If $D^{(r)}(g)$ is irreducible representation,
+> If $\exists H, \forall g \in G$ , $HD^{(r)}(g) = D^{(r)}(g) H$,
+> then $H = \lambda I$
+
+也就是说，所有使得 Hamiltonian $H$ 保持不变的操作构成一个群 $G = \{g| g H = H g \}$ 。
+如果选择合适基底，使得 Hilbert 空间所负载的群表示约化成了不可约表示的直和
+$D(g) = \bigoplus_r I_{n_r} \otimes D^{(r)}$，并且所有出于的不可约表示都只有一重，
+那么在这样的基底下， Hamiltonian 也是块对角的，并且每个块都是一个常数矩阵。
+如果有不可约表示出现多重，那么 Hamiltonian 在同一个不可约表示之间可以有非对角项。
+
+所以，如果我们可以找到一个系统的所有对称性，就相当于知道了它的所有的简并度。
+当对称性破缺了一部分时，新对称群变成了原来的对称群的一个子群，原来的一些不可约表示变成了可约的，可进一步约化成维度更低的不可约表示，也就是说一些原来简并的能量本征态会解除简并。
+
+
 ## Character tables of some group
 
 ### Even permutation group $A_3$
@@ -254,6 +307,17 @@ Z_2 & 3 & (12),(23),(31)  & 1 & -1 & 0  \\
 $$
 
 三个不可约表示：平凡一维表示 $1$ ，一维符号表示 $\bar{1}$ ，以及二维表示（三角形在平面中的对称操作）：
+
+单位元：
+
+$$
+\begin{align}
+  D^{(2)}(I) = \begin{pmatrix}
+    1 & 0 \\
+    0 & 1
+  \end{pmatrix}
+\end{align}
+$$
 
 旋转 $120$ 度:
 
@@ -326,6 +390,115 @@ Z_4 & 6 & (1234)   & 1 & -1 & 0  & -1 & 1  \\
 \hline
 \end{array}
 $$
+
+## Appendix
+
+### [Covariance and contravariance of vectors](https://en.wikipedia.org/wiki/Covariance_and_contravariance_of_vectors)
+
+在不正交的基底下：
+
+- Covariance: 在不同表象间，基底的变换是 covariance，用下标， $\psi_j$ 。
+- Contravariance: 在不同表象间，以与基底相反的方式变换，用上标， $\psi^j$ 。
+- 它们之间由 metric 联系： $\psi_i = g_{ij} \psi^j， g^{ij}g_{jk}=\delta^i{}_k$ 。
+
+例如：
+例如，取二维非正交基底
+
+$$
+\begin{align}
+  e_1 = \begin{pmatrix}
+    1 \\
+    0
+  \end{pmatrix}
+  ,\quad
+  e_2 = \begin{pmatrix}
+    1 \\
+    1
+  \end{pmatrix}
+\end{align}
+$$
+
+任意向量 $\psi = \psi^1 e_1 + \psi^2 e_2$ 。如
+
+$$
+\begin{align}
+  \psi = 3 e_1 + 5 e_2 = \begin{pmatrix}
+    8 \\ 5
+  \end{pmatrix}
+\end{align}
+$$
+
+metric $g_{ij} = e_i \cdot e_j$ ,即
+
+$$
+\begin{align}
+  g = \begin{pmatrix}
+    1 & 1 \\
+    1 & 2
+  \end{pmatrix}
+\end{align}
+$$
+
+比如可以用来计算长度 $\psi^i g_{ij} \psi^j = 89$ 。
+
+但在这里考虑的**正交归一基底**下，只是为了少写复共轭符号：
+
+$$
+\begin{align}
+  \psi_i \equiv (\psi^i)^*
+\end{align}
+$$
+
+### 直和
+
+如果一个矩阵是块对角的
+
+$$
+\begin{align}
+  D = \begin{pmatrix}
+    D^{(1)} & 0       & 0       & \cdots  \\
+    0       & D^{(2)} & 0       & \cdots  \\
+    0       & 0       & D^{(3)} & \cdots  \\
+    \vdots  & \vdots  & \vdots  & \ddots
+  \end{pmatrix}
+\end{align}
+$$
+
+那么它可以写成直和的形式
+
+$$
+\begin{align}
+  D =& \bigoplus_r D^{(r)} \\
+    =& D^{(1)}\oplus D^{(2)} \oplus D^{(3)} \oplus \cdots
+\end{align}
+$$
+
+写成分量
+
+$$
+\begin{align}
+  D_{ri, sj} = \delta_{rs} D^{(r)}_{ij}
+\end{align}
+$$
+
+如果同一个矩阵出现多次，则
+
+$$
+\begin{align}
+  D =& \bigoplus_r \left( I_{n_r} \otimes D^{(r)} \right) \\
+\end{align}
+$$
+
+其中 $n_r$ 是矩阵 $D^{(r)}$ 出现的次数，或重数， $I_{n_r}$ 是 $n_r$ 维的单位矩阵。
+写成分量形式
+
+$$
+\begin{align}
+  D_{ra_ri, sb_sj} = \delta_{rs}\delta_{a_r b_r} D^{(r)}_{ij}
+\end{align}
+$$
+
+其中 $a_r , b_s$ 标记的是第 $r$ 个矩阵出现的第几重， $a_r = 1, 2, 3, \cdots, n_r$ 。
 
 ## Reference
 
