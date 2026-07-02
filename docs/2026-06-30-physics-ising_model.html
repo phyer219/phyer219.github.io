@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="zh_cn">
+
+<head>
+    <title>从冰上的水 - Ising model</title>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Pelican" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://zqw.ink/feeds/all.atom.xml"
+    type="application/atom+xml" rel="alternate" title="从冰上的水 Full Atom Feed" />
+  <link
+    href="https://zqw.ink/feeds/physics.atom.xml"
+    type="application/atom+xml" rel="alternate" title="从冰上的水 Categories Atom Feed" />
+  <link rel="stylesheet" type="text/css" href="https://zqw.ink/theme/css/style.css" />
+  <!-- SEO: site-level structured data (WebSite) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "从冰上的水",
+    "url": "https://zqw.ink/"
+  }
+  </script>
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Serif+SC&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.6.1/github-markdown.min.css" integrity="sha512-wpdV3v8V8vWajD1kH8rI1UO1H2q9TQ3s8o1mG7lH8fS1dZ+3q1B1p4lH2tF8rQm2u0n8oV6rN3tV4nQWmY4nTw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!--fonts end  -->
+  <!-- highlight.js -->
+  <link id="hljs-light" rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" disabled>
+  <link id="hljs-dark" rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" disabled>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <script>
+    hljs.highlightAll();
+    (function () {
+      const light = document.getElementById('hljs-light');
+      const dark = document.getElementById('hljs-dark');
+      if (!light || !dark) return;
+
+      function resolveTheme() {
+        return document.documentElement.getAttribute('data-theme') || 'light';
+      }
+
+      function applyTheme(theme) {
+        const isDark = theme === 'dark';
+        light.disabled = isDark;
+        dark.disabled = !isDark;
+      }
+
+      const observer = new MutationObserver(function () {
+        applyTheme(resolveTheme());
+      });
+      observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+      applyTheme(resolveTheme());
+    })();
+  </script>
+  <!-- highlight.js end -->
+
+<script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        tags: 'ams'   // 自动给 AMS 环境/显示公式编号
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.1">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.1">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.1">
+
+
+
+  <!-- SEO: page description for search results -->
+    <meta name="description" content="1D Ising model 2D Ising model Kramers-Wannier duality 方法一：高温展开（High temperature, HT） 方法二：低温展开（Low temperature, LT） 得相变点 Onsager's exact solution Reference..." />
+
+    <meta name="tags" content="Ising model" />
+    <meta name="tags" content="statistical mechanics" />
+
+  <!-- SEO: structured data for articles (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Ising model",
+    "datePublished": "2026-06-30T00:00:00+08:00",
+    "author": {
+      "@type": "Person",
+      "name": "ZQW"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://zqw.ink/2026-06-30-physics-ising_model.html"
+    }
+  }
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <div id="header-container">
+      <button id="nav-toggle" class="nav-toggle" aria-label="打开菜单" aria-expanded="false">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+      <nav id="site-nav">
+        <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/category/physics">Physics</a>
+            </li>
+            <li>
+              <a href="/category/blog">Blog</a>
+            </li>
+            <li>
+              <a href="/category/coding">Coding</a>
+            </li>
+            <li>
+              <a href="/archives">All</a>
+            </li>
+          </ul>
+      </nav>
+      <div class="header-actions">
+        <button id="theme-toggle" aria-label="切换到深色模式" title="切换主题">
+          <i class="theme-icon icon-sun fa-solid fa-sun" aria-hidden="true"></i>
+          <i class="theme-icon icon-moon fa-solid fa-moon" aria-hidden="true"></i>
+        </button>
+        <div class="rss">
+            <a href="https://zqw.ink/feeds/all.atom.xml" aria-label="Atom 订阅">
+              <i class="fa-solid fa-rss" aria-hidden="true"></i>
+            </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+
+<h1 class="post-title">Ising model</h1>
+
+<section class="post-meta">
+    <p>2026-06-30</p>
+    <p>-<a class="post-link" href="https://zqw.ink/category/physics.html">physics</a></p>
+</section>
+
+<section class="markdown-body">
+  
+<ul>
+<li><a href="#1d-ising-model">1D Ising model</a></li>
+<li><a href="#2d-ising-model">2D Ising model</a>
+<ul>
+<li><a href="#kramers-wannier-duality">Kramers-Wannier duality</a>
+<ul>
+<li><a href="#%E6%96%B9%E6%B3%95%E4%B8%80%E9%AB%98%E6%B8%A9%E5%B1%95%E5%BC%80high-temperature-ht">方法一：高温展开（High temperature, HT）</a></li>
+<li><a href="#%E6%96%B9%E6%B3%95%E4%BA%8C%E4%BD%8E%E6%B8%A9%E5%B1%95%E5%BC%80low-temperature-lt">方法二：低温展开（Low temperature, LT）</a></li>
+<li><a href="#%E5%BE%97%E7%9B%B8%E5%8F%98%E7%82%B9">得相变点</a></li>
+</ul>
+</li>
+<li><a href="#onsagers-exact-solution">Onsager's exact solution</a></li>
+</ul>
+</li>
+<li><a href="#reference">Reference</a></li>
+</ul>
+<h2 id="1d-ising-model">1D Ising model</h2>
+<p>见 <a href="./2021-03-11-physics-SusskindsStatisticalMechanics.html">2021-03-11-Susskind's Statistical Mechanics</a></p>
+<h2 id="2d-ising-model">2D Ising model</h2>
+<h3 id="kramers-wannier-duality"><a href="https://en.wikipedia.org/wiki/Kramers%E2%80%93Wannier_duality">Kramers-Wannier duality</a></h3>
+<p>对于二维正方晶格</p>
+$$
+
+\begin{align}
+  H = -J \sum_{\langle i j\rangle} s_i s_j, \quad s_i = \pm 1
+\end{align}
+
+$$<p>我们用两种方法计算配分函数</p>
+$$
+
+\begin{align}
+  Z =& \sum_{\{s_i\}} e^{\beta J \sum_{\langle i j\rangle} s_i s_j}.
+\end{align}
+
+$$<h4 id="方法一高温展开high-temperature-ht">方法一：高温展开（High temperature, HT）</h4>
+$$
+
+\begin{align}
+  Z_{HT} =& \sum_{\{s_i\}} e^{\beta J \sum_{\langle i j\rangle} s_i s_j} \\
+    =& \sum_{\{s_i\}} \prod_{\langle i j \rangle} e^{\beta J s_i s_j} \\
+    =& \sum_{\{s_i\}} \prod_{\langle i j \rangle}
+       \cosh(\beta J) \left[ 1 + s_i s_j \tanh (\beta J) \right] \\
+    =& \cosh^{N_b}(\beta J)\sum_{\{s_i\}} \prod_{\langle i j \rangle}
+        \left[ 1 + s_i s_j \tanh (\beta J) \right]
+\end{align}
+
+$$<p>其中 $N_b$ 是晶格中键的个数。</p>
+<p>可以按照 $\tanh$ 的阶数把对连乘的求和展开</p>
+$$
+
+\begin{align}
+   & \prod_{\langle i j \rangle}
+        \left[ 1 + s_i s_j \tanh (\beta J) \right] \\
+    =& 1 + \sum_{\langle i j\rangle} s_i s_j \tanh(\beta J) \\
+       & +  \sum_{\langle i j\rangle}
+       \sum_{\langle k l\rangle < \langle i j\rangle}
+             s_i s_j s_k s_l \tanh^2 (\beta J) \\
+       & +  \sum_{\langle i j\rangle}
+           \sum_{\langle k l\rangle < \langle i j\rangle}
+            \sum_{\langle m n\rangle < \langle k l\rangle < \langle i j\rangle}
+           s_i s_j s_k s_l s_m s_n \tanh^3 (\beta J) \\
+       & + \cdots
+\end{align}
+
+$$<p>其中 $\sum_{\langle i j \rangle}$ 表示对相邻格点求和，
+$\sum_{\langle k l\rangle < \langle i j\rangle}$ 表示每种组合只计算一次。
+比如一个 $3\times 3$ 的晶格</p>
+<pre><code class="language-shell">a - b - c
+|   |   |
+d - e - f
+|   |   |
+h - i - j
+</code></pre>
+<p>对于一对格点，也就是一个键求和，</p>
+$$
+
+\begin{align}
+  &\sum_{\langle i j\rangle} s_i s_j  \\
+  =&  s_a s_b + s_a s_d + s_b s_c \\
+   & + s_b s_e + s_c s_f + s_d s_h \\
+   & + s_d s_e + s_e s_i + s_e s_f \\
+   & + s_f s_j + s_h s_i + s_i s_j
+\end{align}
+
+$$<p>上式中的每一项，对构型求和都为 <eq>0</eq> ，</p>
+$$
+
+\begin{align}
+  \sum_{s_i, s_j = \pm 1} s_i s_j = \sum_{s_i = \pm 1} s_i \sum_{s_j=\pm 1} s_j
+   = (1 - 1)\times (1 - 1) = 0
+\end{align}
+
+$$<p>对于两对格点的情况，当这两个键没有连在一起时，为 <eq>0</eq> ，当连在一起时，
+$\sum_{s_i, s_j, s_k} s_i (s_j)^2 s_k = \sum_{s_i, s_j, s_k} s_i s_k = 2\sum_{s_i, s_k} s_i s_k = 0$  。</p>
+<p>我们发现，对于每一项，只要选出来的格点对中，存在只用了奇数次的格点时，它就为 <eq>0</eq> 。
+而所有非闭合的链，总是至少存在一个格点只用了一次，所以都为 <eq>0</eq> 。
+对于闭合的链，链中的每个键都会贡献一个 $\tanh(\beta J)$ ，所以</p>
+$$
+
+\begin{align}
+  Z_{HT} = & \cosh^{N_b}(\beta J)\sum_{\{s_i\}} \prod_{\langle i j \rangle}
+        \left[ 1 + s_i s_j \tanh (\beta J) \right] \\
+    = & \cosh^{N_b}(\beta J)2^{N} \sum_{C}  \tanh^{n_C}(\beta J)
+\end{align}
+
+$$<p>其中 <eq>N</eq> 是所有的格点数， <eq>C</eq> 表示闭合的链， $n_C$ 表示闭合链中的键的个数。
+<eq>C</eq> 包含没有键被选中的情况，也就是 $n_C = 0$。
+$2^N$ 来自于求和 $\sum_{\{ s_i \}}$ 。</p>
+<p>之所以叫高温展开，是因为当温度无穷高，$\beta \to 0$ 时，求和项只剩下 $n_C = 0$ 。
+温度越低， $n_C$ 大的闭合回路就贡献越大。如果考虑了所有闭合回路，这个结果是严格的。</p>
+<h4 id="方法二低温展开low-temperature-lt">方法二：低温展开（Low temperature, LT）</h4>
+$$
+
+\begin{align}
+  Z_{LT} = & \sum_{\{s_i\}} \prod_{\langle i j \rangle} e^{\beta J s_i s_j} \\
+    = & 2 e^{N_b \beta J}
+      + 2 e^{N_b \beta J} \sum_{i} e^{-2\beta J \cdot 4} + \cdots \\
+    = & 2 e^{N_b \beta J} \sum_{CD} e^{-2\beta J \cdot n_{CD}}
+\end{align}
+
+$$<p>其中 $CD$ 是表示对偶晶格的闭合回路，即格点变成键，键变成格点。
+第二个等号后面，第一项是零温基态的构型对应的贡献，
+第二项是翻转一个自旋对应的构型的贡献（翻转一个自旋，改变四个键，每个键能量增加 $2 J$）。
+翻转一个自旋，相于这个自旋周围的键形成一个闭合回路，也就是 domain wall。</p>
+<h4 id="得相变点">得相变点</h4>
+<p>如果晶格的对偶晶格还是本身，那么高温展开和低温展开中的闭合回路求和对应同一个函数，记为</p>
+$$
+
+\begin{align}
+  f(x) = \sum_C x^{n_C} = \sum_{CD} x^{n_{CD}}
+\end{align}
+
+$$<p>那么配分函数</p>
+$$
+
+\begin{align}
+  Z_{HT} = \cosh^{N_b}(\beta J)2^{N} f(\tanh(\beta J))
+\end{align}
+
+$$$$
+
+\begin{align}
+  Z_{LT} = 2 e^{N_b \beta J} f (e^{-2\beta J})
+\end{align}
+
+$$<p>它们对应的 Helmholtz 自由能密度</p>
+$$
+
+\frac{F_{HT}}{N} = - \frac{1}{N\beta}\ln Z_{HT}
+       = - \frac{1}{\beta} \left[
+        \frac{N_b}{N} \ln \cosh(\beta J) + \ln 2 + \frac{1}{N}\ln f(\tanh(\beta J))
+         \right]
+
+$$$$
+
+\frac{F_{LT}}{N} = - \frac{1}{N\beta}\ln Z_{LT}
+       = - \frac{1}{\beta} \left[
+        \frac{\ln 2 }{N} + \frac{N_b}{N} \beta J + \frac{1}{N}\ln f(e^{-2 \beta J})
+       \right]
+
+$$<p>如果系统存在，且只存在一个相变点，也就是在某个温度下自由能不解析，
+那么它只能是在热力学极限 $N\to \infty$ 时，
+函数 $f(x)$ 在 <eq>x</eq> 取特定值 $x = x_c$ 时不解析（有限闭合回路求和一定是解析的），
+因为自由能中其它项显然都是解析的
+（$N_b/N$ 是有限的，对于二维正方晶格，
+$\lim_{L\to \infty} 2(L-1)L / L^2 = 2$ , $L^2$ 为格点的数目）。</p>
+<p>而 $F_{HT}$ 和 $F_{LT}$ 对于任意的 $\beta$ 都应该是相同的。
+所以这个唯一的相变点 $\beta = \beta_C$ ，应该对应 $x = x_C$ ，即</p>
+$$
+
+\begin{align}
+  x_C = \tanh(\beta_C J) = e^{- 2 \beta_C J}
+\end{align}
+
+$$<p>由此可解得</p>
+$$
+
+\begin{align}
+\beta_C J = \frac{1}{2} \ln (1 + \sqrt{2})
+\end{align}
+
+$$<p>相变温度</p>
+$$
+
+\begin{align}
+\frac{T_C}{J} = \frac{2}{\ln (1 + \sqrt{2})} \approx 2.269
+\end{align}
+
+$$<p>也容易验证，当 $\beta = \beta_C$ 时，高温展开和低温展开的自由能密度中剩下的解析的部分也相等
+（需要用到 $\lim_{N\to\infty} N_b/N = 2$ ）。</p>
+<p>正方晶格的对偶晶格是它本身，所以如果正方晶格存在唯一的一个相变点，这就是它的相变温度。</p>
+<p>Kramers-Wannier duality 本身并不能说明系统是否存在相变以及相变点的个数，它只能给出相变点的候选位置。</p>
+<h3 id="onsagers-exact-solution">Onsager's exact solution</h3>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Ising_model">Wikipedia: Ising model</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Square_lattice_Ising_model">Wikipedia: Square lattice Ising model</a></li>
+</ul>
+
+</section>
+
+<section class="post-meta">
+    <p>
+        <a class="post-link" href="https://zqw.ink/tag/Ising-model.html">#Ising model</a>
+        <a class="post-link" href="https://zqw.ink/tag/statistical-mechanics.html">#statistical mechanics</a>
+    </p>
+</section>
+
+  </main>
+  <footer role="contentinfo">
+    <p>Copyright &copy; 2018 - 2026 ZQW</p>
+  </footer>
+  <script>
+  (function() {
+    const key = 'theme';
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const saved = localStorage.getItem(key);
+    const init = saved ? saved : 'system';
+    const effective = init === 'system' ? (prefersDark ? 'dark' : 'light') : init;
+    document.documentElement.setAttribute('data-theme', effective);
+    updateThemeButton(effective);
+
+    document.getElementById('theme-toggle')?.addEventListener('click', function () {
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem(key, next);
+      updateThemeButton(next);
+    });
+
+    function updateThemeButton(theme) {
+      const btn = document.getElementById('theme-toggle');
+      if (btn) {
+        btn.setAttribute('aria-label', theme === 'dark' ? '切换到浅色模式' : '切换到深色模式');
+      }
+    }
+  })();
+  </script>
+  <script>
+  (function() {
+    const blocks = document.querySelectorAll('pre > code');
+    blocks.forEach((code) => {
+      const pre = code.parentElement;
+      if (!pre) return;
+
+      if (!pre.dataset.lang) {
+        const cls = Array.from(code.classList);
+        const langClass = cls.find((name) => name.startsWith('language-') || name.startsWith('lang-'));
+        if (langClass) {
+          const raw = langClass.replace(/^language-/, '').replace(/^lang-/, '');
+          pre.dataset.lang = raw.replace(/_/g, ' ').toUpperCase();
+        }
+      }
+
+      if (pre.querySelector('.copy-btn')) return;
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'copy-btn';
+      btn.setAttribute('aria-label', '复制代码');
+      btn.textContent = 'Copy';
+      btn.addEventListener('click', async function () {
+        try {
+          await navigator.clipboard.writeText(code.innerText);
+          btn.textContent = 'Copied';
+        } catch (err) {
+          const range = document.createRange();
+          range.selectNodeContents(code);
+          const selection = window.getSelection();
+          selection.removeAllRanges();
+          selection.addRange(range);
+          try {
+            document.execCommand('copy');
+            btn.textContent = 'Copied';
+          } finally {
+            selection.removeAllRanges();
+          }
+        }
+        setTimeout(() => {
+          btn.textContent = 'Copy';
+        }, 1500);
+      });
+      pre.appendChild(btn);
+    });
+  })();
+  </script>
+  <script>
+  (function() {
+    const toggle = document.getElementById('nav-toggle');
+    const nav = document.getElementById('site-nav');
+    if (!toggle || !nav) return;
+
+    function closeNav() {
+      nav.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', '打开菜单');
+    }
+
+    function openNav() {
+      nav.classList.add('is-open');
+      toggle.setAttribute('aria-expanded', 'true');
+      toggle.setAttribute('aria-label', '关闭菜单');
+    }
+
+    toggle.addEventListener('click', function (event) {
+      event.stopPropagation();
+      const isOpen = nav.classList.contains('is-open');
+      if (isOpen) {
+        closeNav();
+      } else {
+        openNav();
+      }
+    });
+
+    nav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', closeNav);
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!nav.classList.contains('is-open')) return;
+      if (nav.contains(event.target) || toggle.contains(event.target)) return;
+      closeNav();
+    });
+  })();
+  </script>
+</body>
+
+</html>

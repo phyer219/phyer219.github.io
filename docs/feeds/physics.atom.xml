@@ -1,5 +1,225 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水 - physics</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/physics.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2026-06-18T00:00:00+08:00</updated><entry><title>群表示论备忘</title><link href="https://zqw.ink/2026-06-18-physics-group_representation_theory.html" rel="alternate"/><published>2026-06-18T00:00:00+08:00</published><updated>2026-06-18T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2026-06-18:/2026-06-18-physics-group_representation_theory.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水 - physics</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/physics.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2026-06-30T00:00:00+08:00</updated><entry><title>Ising model</title><link href="https://zqw.ink/2026-06-30-physics-ising_model.html" rel="alternate"/><published>2026-06-30T00:00:00+08:00</published><updated>2026-06-30T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2026-06-30:/2026-06-30-physics-ising_model.html</id><summary type="html">
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#1d-ising-model"&gt;1D Ising model&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#2d-ising-model"&gt;2D Ising model&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#kramers-wannier-duality"&gt;Kramers-Wannier duality&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#%E6%96%B9%E6%B3%95%E4%B8%80%E9%AB%98%E6%B8%A9%E5%B1%95%E5%BC%80high-temperature-ht"&gt;方法一：高温展开（High temperature, HT）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E6%96%B9%E6%B3%95%E4%BA%8C%E4%BD%8E%E6%B8%A9%E5%B1%95%E5%BC%80low-temperature-lt"&gt;方法二：低温展开（Low temperature, LT）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E5%BE%97%E7%9B%B8%E5%8F%98%E7%82%B9"&gt;得相变点&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#onsagers-exact-solution"&gt;Onsager's exact solution&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#reference"&gt;Reference&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="1d-ising-model"&gt;1D Ising model&lt;/h2&gt;
+&lt;p&gt;见 &lt;a href="./2021-03-11-physics-SusskindsStatisticalMechanics.html"&gt;2021-03-11-Susskind's Statistical Mechanics&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="2d-ising-model"&gt;2D Ising model&lt;/h2&gt;
+&lt;h3 id="kramers-wannier-duality"&gt;&lt;a href="https://en.wikipedia.org/wiki/Kramers%E2%80%93Wannier_duality"&gt;Kramers-Wannier duality&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;对于 …&lt;/p&gt;</summary><content type="html">
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#1d-ising-model"&gt;1D Ising model&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#2d-ising-model"&gt;2D Ising model&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#kramers-wannier-duality"&gt;Kramers-Wannier duality&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#%E6%96%B9%E6%B3%95%E4%B8%80%E9%AB%98%E6%B8%A9%E5%B1%95%E5%BC%80high-temperature-ht"&gt;方法一：高温展开（High temperature, HT）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E6%96%B9%E6%B3%95%E4%BA%8C%E4%BD%8E%E6%B8%A9%E5%B1%95%E5%BC%80low-temperature-lt"&gt;方法二：低温展开（Low temperature, LT）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E5%BE%97%E7%9B%B8%E5%8F%98%E7%82%B9"&gt;得相变点&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#onsagers-exact-solution"&gt;Onsager's exact solution&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#reference"&gt;Reference&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="1d-ising-model"&gt;1D Ising model&lt;/h2&gt;
+&lt;p&gt;见 &lt;a href="./2021-03-11-physics-SusskindsStatisticalMechanics.html"&gt;2021-03-11-Susskind's Statistical Mechanics&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="2d-ising-model"&gt;2D Ising model&lt;/h2&gt;
+&lt;h3 id="kramers-wannier-duality"&gt;&lt;a href="https://en.wikipedia.org/wiki/Kramers%E2%80%93Wannier_duality"&gt;Kramers-Wannier duality&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;对于二维正方晶格&lt;/p&gt;
+$$
+
+\begin{align}
+  H = -J \sum_{\langle i j\rangle} s_i s_j, \quad s_i = \pm 1
+\end{align}
+
+$$&lt;p&gt;我们用两种方法计算配分函数&lt;/p&gt;
+$$
+
+\begin{align}
+  Z =&amp; \sum_{\{s_i\}} e^{\beta J \sum_{\langle i j\rangle} s_i s_j}.
+\end{align}
+
+$$&lt;h4 id="方法一高温展开high-temperature-ht"&gt;方法一：高温展开（High temperature, HT）&lt;/h4&gt;
+$$
+
+\begin{align}
+  Z_{HT} =&amp; \sum_{\{s_i\}} e^{\beta J \sum_{\langle i j\rangle} s_i s_j} \\
+    =&amp; \sum_{\{s_i\}} \prod_{\langle i j \rangle} e^{\beta J s_i s_j} \\
+    =&amp; \sum_{\{s_i\}} \prod_{\langle i j \rangle}
+       \cosh(\beta J) \left[ 1 + s_i s_j \tanh (\beta J) \right] \\
+    =&amp; \cosh^{N_b}(\beta J)\sum_{\{s_i\}} \prod_{\langle i j \rangle}
+        \left[ 1 + s_i s_j \tanh (\beta J) \right]
+\end{align}
+
+$$&lt;p&gt;其中 $N_b$ 是晶格中键的个数。&lt;/p&gt;
+&lt;p&gt;可以按照 $\tanh$ 的阶数把对连乘的求和展开&lt;/p&gt;
+$$
+
+\begin{align}
+   &amp; \prod_{\langle i j \rangle}
+        \left[ 1 + s_i s_j \tanh (\beta J) \right] \\
+    =&amp; 1 + \sum_{\langle i j\rangle} s_i s_j \tanh(\beta J) \\
+       &amp; +  \sum_{\langle i j\rangle}
+       \sum_{\langle k l\rangle &lt; \langle i j\rangle}
+             s_i s_j s_k s_l \tanh^2 (\beta J) \\
+       &amp; +  \sum_{\langle i j\rangle}
+           \sum_{\langle k l\rangle &lt; \langle i j\rangle}
+            \sum_{\langle m n\rangle &lt; \langle k l\rangle &lt; \langle i j\rangle}
+           s_i s_j s_k s_l s_m s_n \tanh^3 (\beta J) \\
+       &amp; + \cdots
+\end{align}
+
+$$&lt;p&gt;其中 $\sum_{\langle i j \rangle}$ 表示对相邻格点求和，
+$\sum_{\langle k l\rangle &lt; \langle i j\rangle}$ 表示每种组合只计算一次。
+比如一个 $3\times 3$ 的晶格&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-shell"&gt;a - b - c
+|   |   |
+d - e - f
+|   |   |
+h - i - j
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;对于一对格点，也就是一个键求和，&lt;/p&gt;
+$$
+
+\begin{align}
+  &amp;\sum_{\langle i j\rangle} s_i s_j  \\
+  =&amp;  s_a s_b + s_a s_d + s_b s_c \\
+   &amp; + s_b s_e + s_c s_f + s_d s_h \\
+   &amp; + s_d s_e + s_e s_i + s_e s_f \\
+   &amp; + s_f s_j + s_h s_i + s_i s_j
+\end{align}
+
+$$&lt;p&gt;上式中的每一项，对构型求和都为 &lt;eq&gt;0&lt;/eq&gt; ，&lt;/p&gt;
+$$
+
+\begin{align}
+  \sum_{s_i, s_j = \pm 1} s_i s_j = \sum_{s_i = \pm 1} s_i \sum_{s_j=\pm 1} s_j
+   = (1 - 1)\times (1 - 1) = 0
+\end{align}
+
+$$&lt;p&gt;对于两对格点的情况，当这两个键没有连在一起时，为 &lt;eq&gt;0&lt;/eq&gt; ，当连在一起时，
+$\sum_{s_i, s_j, s_k} s_i (s_j)^2 s_k = \sum_{s_i, s_j, s_k} s_i s_k = 2\sum_{s_i, s_k} s_i s_k = 0$  。&lt;/p&gt;
+&lt;p&gt;我们发现，对于每一项，只要选出来的格点对中，存在只用了奇数次的格点时，它就为 &lt;eq&gt;0&lt;/eq&gt; 。
+而所有非闭合的链，总是至少存在一个格点只用了一次，所以都为 &lt;eq&gt;0&lt;/eq&gt; 。
+对于闭合的链，链中的每个键都会贡献一个 $\tanh(\beta J)$ ，所以&lt;/p&gt;
+$$
+
+\begin{align}
+  Z_{HT} = &amp; \cosh^{N_b}(\beta J)\sum_{\{s_i\}} \prod_{\langle i j \rangle}
+        \left[ 1 + s_i s_j \tanh (\beta J) \right] \\
+    = &amp; \cosh^{N_b}(\beta J)2^{N} \sum_{C}  \tanh^{n_C}(\beta J)
+\end{align}
+
+$$&lt;p&gt;其中 &lt;eq&gt;N&lt;/eq&gt; 是所有的格点数， &lt;eq&gt;C&lt;/eq&gt; 表示闭合的链， $n_C$ 表示闭合链中的键的个数。
+&lt;eq&gt;C&lt;/eq&gt; 包含没有键被选中的情况，也就是 $n_C = 0$。
+$2^N$ 来自于求和 $\sum_{\{ s_i \}}$ 。&lt;/p&gt;
+&lt;p&gt;之所以叫高温展开，是因为当温度无穷高，$\beta \to 0$ 时，求和项只剩下 $n_C = 0$ 。
+温度越低， $n_C$ 大的闭合回路就贡献越大。如果考虑了所有闭合回路，这个结果是严格的。&lt;/p&gt;
+&lt;h4 id="方法二低温展开low-temperature-lt"&gt;方法二：低温展开（Low temperature, LT）&lt;/h4&gt;
+$$
+
+\begin{align}
+  Z_{LT} = &amp; \sum_{\{s_i\}} \prod_{\langle i j \rangle} e^{\beta J s_i s_j} \\
+    = &amp; 2 e^{N_b \beta J}
+      + 2 e^{N_b \beta J} \sum_{i} e^{-2\beta J \cdot 4} + \cdots \\
+    = &amp; 2 e^{N_b \beta J} \sum_{CD} e^{-2\beta J \cdot n_{CD}}
+\end{align}
+
+$$&lt;p&gt;其中 $CD$ 是表示对偶晶格的闭合回路，即格点变成键，键变成格点。
+第二个等号后面，第一项是零温基态的构型对应的贡献，
+第二项是翻转一个自旋对应的构型的贡献（翻转一个自旋，改变四个键，每个键能量增加 $2 J$）。
+翻转一个自旋，相于这个自旋周围的键形成一个闭合回路，也就是 domain wall。&lt;/p&gt;
+&lt;h4 id="得相变点"&gt;得相变点&lt;/h4&gt;
+&lt;p&gt;如果晶格的对偶晶格还是本身，那么高温展开和低温展开中的闭合回路求和对应同一个函数，记为&lt;/p&gt;
+$$
+
+\begin{align}
+  f(x) = \sum_C x^{n_C} = \sum_{CD} x^{n_{CD}}
+\end{align}
+
+$$&lt;p&gt;那么配分函数&lt;/p&gt;
+$$
+
+\begin{align}
+  Z_{HT} = \cosh^{N_b}(\beta J)2^{N} f(\tanh(\beta J))
+\end{align}
+
+$$$$
+
+\begin{align}
+  Z_{LT} = 2 e^{N_b \beta J} f (e^{-2\beta J})
+\end{align}
+
+$$&lt;p&gt;它们对应的 Helmholtz 自由能密度&lt;/p&gt;
+$$
+
+\frac{F_{HT}}{N} = - \frac{1}{N\beta}\ln Z_{HT}
+       = - \frac{1}{\beta} \left[
+        \frac{N_b}{N} \ln \cosh(\beta J) + \ln 2 + \frac{1}{N}\ln f(\tanh(\beta J))
+         \right]
+
+$$$$
+
+\frac{F_{LT}}{N} = - \frac{1}{N\beta}\ln Z_{LT}
+       = - \frac{1}{\beta} \left[
+        \frac{\ln 2 }{N} + \frac{N_b}{N} \beta J + \frac{1}{N}\ln f(e^{-2 \beta J})
+       \right]
+
+$$&lt;p&gt;如果系统存在，且只存在一个相变点，也就是在某个温度下自由能不解析，
+那么它只能是在热力学极限 $N\to \infty$ 时，
+函数 $f(x)$ 在 &lt;eq&gt;x&lt;/eq&gt; 取特定值 $x = x_c$ 时不解析（有限闭合回路求和一定是解析的），
+因为自由能中其它项显然都是解析的
+（$N_b/N$ 是有限的，对于二维正方晶格，
+$\lim_{L\to \infty} 2(L-1)L / L^2 = 2$ , $L^2$ 为格点的数目）。&lt;/p&gt;
+&lt;p&gt;而 $F_{HT}$ 和 $F_{LT}$ 对于任意的 $\beta$ 都应该是相同的。
+所以这个唯一的相变点 $\beta = \beta_C$ ，应该对应 $x = x_C$ ，即&lt;/p&gt;
+$$
+
+\begin{align}
+  x_C = \tanh(\beta_C J) = e^{- 2 \beta_C J}
+\end{align}
+
+$$&lt;p&gt;由此可解得&lt;/p&gt;
+$$
+
+\begin{align}
+\beta_C J = \frac{1}{2} \ln (1 + \sqrt{2})
+\end{align}
+
+$$&lt;p&gt;相变温度&lt;/p&gt;
+$$
+
+\begin{align}
+\frac{T_C}{J} = \frac{2}{\ln (1 + \sqrt{2})} \approx 2.269
+\end{align}
+
+$$&lt;p&gt;也容易验证，当 $\beta = \beta_C$ 时，高温展开和低温展开的自由能密度中剩下的解析的部分也相等
+（需要用到 $\lim_{N\to\infty} N_b/N = 2$ ）。&lt;/p&gt;
+&lt;p&gt;正方晶格的对偶晶格是它本身，所以如果正方晶格存在唯一的一个相变点，这就是它的相变温度。&lt;/p&gt;
+&lt;p&gt;Kramers-Wannier duality 本身并不能说明系统是否存在相变以及相变点的个数，它只能给出相变点的候选位置。&lt;/p&gt;
+&lt;h3 id="onsagers-exact-solution"&gt;Onsager's exact solution&lt;/h3&gt;
+&lt;h2 id="reference"&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Ising_model"&gt;Wikipedia: Ising model&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Square_lattice_Ising_model"&gt;Wikipedia: Square lattice Ising model&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="physics"/><category term="Ising model"/><category term="statistical mechanics"/></entry><entry><title>群表示论备忘</title><link href="https://zqw.ink/2026-06-18-physics-group_representation_theory.html" rel="alternate"/><published>2026-06-18T00:00:00+08:00</published><updated>2026-06-18T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2026-06-18:/2026-06-18-physics-group_representation_theory.html</id><summary type="html">
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="#definition-of-group"&gt;Definition of group&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#definition-of-representation"&gt;Definition of representation&lt;/a&gt;&lt;/li&gt;
