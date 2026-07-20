@@ -3,6 +3,7 @@ title: Krylov 空间对角化
 date: 2026-07-07
 category: physics
 tags:
+  - "numerical linear algebra"
   - "group theory"
   - "Krylov subspace"
 ---

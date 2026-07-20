@@ -121,7 +121,472 @@ $$&lt;p&gt;在这个例子里，我们先的初始的矢量 &lt;eq&gt;b&lt;/eq&g
 对于有 $n_r$ 个不变子空间的情况，
 如果初始的 &lt;eq&gt;b&lt;/eq&gt; 在所有不变子空间中都有分量，
 那么只需要 $n_r$ 维的 Krylov 子空间就可以得到所有的本征值。&lt;/p&gt;
-</content><category term="physics"/><category term="group theory"/><category term="Krylov subspace"/></entry><entry><title>Ising model</title><link href="https://zqw.ink/2026-06-30-physics-ising_model.html" rel="alternate"/><published>2026-06-30T00:00:00+08:00</published><updated>2026-06-30T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2026-06-30:/2026-06-30-physics-ising_model.html</id><summary type="html">
+</content><category term="physics"/><category term="numerical linear algebra"/><category term="group theory"/><category term="Krylov subspace"/></entry><entry><title>Arnoldi Iteration</title><link href="https://zqw.ink/2026-07-20-physics-Arnoldi_iteration.html" rel="alternate"/><published>2026-07-07T00:00:00+08:00</published><updated>2026-07-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2026-07-07:/2026-07-20-physics-Arnoldi_iteration.html</id><summary type="html">
+&lt;h2 id="qr-factorization"&gt;QR Factorization&lt;/h2&gt;
+&lt;pre&gt;&lt;code class="language-python"&gt;def gram_schmidt_unstable(A: np.ndarray):
+    &amp;quot;&amp;quot;&amp;quot;
+    Algorithm 7.1 in Book Trefethen&amp;amp;Bau Numerical Linear Algebra.
+
+    A: m*n matrix, m &amp;gt;= n, very high matrix, full column rank.
+
+    test:
+    A = np.random.rand(5, 3) + 1j*np.random.rand(5, 3)
+    Q, R = gram_schmidt_unstable(A)
+    Q1, R1 = np.linalg …&lt;/code&gt;&lt;/pre&gt;</summary><content type="html">
+&lt;h2 id="qr-factorization"&gt;QR Factorization&lt;/h2&gt;
+&lt;pre&gt;&lt;code class="language-python"&gt;def gram_schmidt_unstable(A: np.ndarray):
+    &amp;quot;&amp;quot;&amp;quot;
+    Algorithm 7.1 in Book Trefethen&amp;amp;Bau Numerical Linear Algebra.
+
+    A: m*n matrix, m &amp;gt;= n, very high matrix, full column rank.
+
+    test:
+    A = np.random.rand(5, 3) + 1j*np.random.rand(5, 3)
+    Q, R = gram_schmidt_unstable(A)
+    Q1, R1 = np.linalg.qr(A)
+    print(Q)
+    print(Q1)
+    print(R)
+    print(R1)
+    &amp;quot;&amp;quot;&amp;quot;
+    _, n = A.shape
+    dtype = np.result_type(A, np.float64)
+    R = np.zeros((n, n), dtype=dtype)
+    Q = np.zeros(A.shape, dtype=dtype)
+    for i in range(n):
+        Q[:, i] = A[:, i]
+        for j in range(i):
+            R[j, i] = Q[:, j].conj()@A[:, i]
+            Q[:, i] = Q[:, i] - R[j, i]*Q[:, j]
+        R[i, i] = np.linalg.norm(Q[:, i])
+        Q[:, i] = Q[:, i] / R[i, i]
+    return Q, R
+
+
+def gram_schmidt_modified(A: np.ndarray):
+    &amp;quot;&amp;quot;&amp;quot;
+    Algorithm 8.1 in Book Trefethen&amp;amp;Bau Numerical Linear Algebra.
+
+    A: m*n matrix, m &amp;gt;= n, very high matrix, full column rank.
+
+    A = np.random.rand(3, 3) + 1j*np.random.rand(3, 3)
+    Q, R = gram_schmidt_modified(A)
+    Q1, R1 = np.linalg.qr(A)
+    print(Q)
+    print(Q1)
+    print(R)
+    print(R1)
+    &amp;quot;&amp;quot;&amp;quot;
+    _, n = A.shape
+    dtype = np.result_type(A, np.float64)
+    R = np.zeros((n, n), dtype=dtype)
+    Q = A.astype(dtype, copy=True)
+    for i in range(n):
+        R[i, i] = np.linalg.norm(Q[:, i])
+        Q[:, i] = Q[:, i] / R[i, i]
+        for j in range(i+1, n):
+            R[i, j] = Q[:, i].conj()@Q[:, j]
+            Q[:, j] = Q[:, j] - R[i, j]*Q[:, i]
+    return Q, R
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id="power-iteration"&gt;Power Iteration&lt;/h2&gt;
+&lt;pre&gt;&lt;code class="language-python"&gt;def power_iteration(A: np.ndarray, n: int):
+    &amp;quot;&amp;quot;&amp;quot;
+    test:
+    dim = 50
+    # A = np.random.rand(dim, dim)
+    A = np.random.uniform(-np.sqrt(3/dim), np.sqrt(3/dim), size=(dim, dim))
+    A = A + A.conj().T
+    w, v = np.linalg.eig(A)
+    n = 150
+    iter_num = list(range(1, n+1))
+    eigmax = [res[0] for res in power_iteration(A, n)]
+    fig = px.line(x=iter_num, y=eigmax)
+    for wi in w:
+        fig.add_scatter(x=iter_num, y=[np.real(wi)]*n,
+                        mode='lines', line=dict(color='grey'))
+    fig.show()
+    &amp;quot;&amp;quot;&amp;quot;
+    x = np.random.rand(A.shape[0])
+    ev = x / np.linalg.norm(x)
+    for _ in range(n):
+        x = ev
+        ev = A@x
+        lam = x.conj()@ev
+        ev = ev / np.linalg.norm(ev)
+        yield lam, ev
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id="arnoldi-iteration"&gt;Arnoldi Iteration&lt;/h2&gt;
+&lt;h3 id="definition"&gt;Definition&lt;/h3&gt;
+&lt;p&gt;这里采用线性代数中常用的记号， &lt;eq&gt;*&lt;/eq&gt; 表示厄米共轭，即复共轭加转置。&lt;/p&gt;
+&lt;p&gt;与 power iteration 不同的是，Arnoldi Iteration 每一步都做正交化，类似于 power iteration 与 QR 分解的结合，&lt;/p&gt;
+$$
+
+\begin{align}
+  A = Q R = Q H Q^*,
+  \quad
+  AQ = Q H.
+\end{align}
+
+$$&lt;p&gt;递推公式&lt;/p&gt;
+$$
+
+\begin{align}
+  A Q_n = Q_{n + 1} \tilde{H}_n,
+\end{align}
+
+$$&lt;p&gt;即新一步的会新生一个新的向量，它是 &lt;eq&gt;A&lt;/eq&gt; 作用在前一步上之后，再做线性组合。
+其中 $Q_n = [w_0, w_1, w_2, \cdots , w_{n - 1}]$ ，&lt;/p&gt;
+$$
+
+\begin{align}
+  \tilde{H}_n = \begin{pmatrix}
+    H_{00} &amp; H_{01} &amp; H_{02} &amp; \cdots &amp; H_{0, n-2} &amp; H_{0, n-1} \\
+    H_{10} &amp; H_{11} &amp; H_{12} &amp; \cdots &amp; H_{0, n-2} &amp; H_{1, n-1} \\
+    0      &amp; H_{21} &amp; H_{22} &amp; \cdots &amp; H_{0, n-2} &amp; H_{2, n-1} \\
+    \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots     &amp;\vdots      \\
+    0      &amp; 0      &amp; 0      &amp; \cdots &amp; H_{n, n-1} &amp; H_{n, n-1}
+  \end{pmatrix},
+\end{align}
+
+$$&lt;p&gt;也就是&lt;/p&gt;
+$$
+
+\begin{align}
+ A w_{n-1} = w_0 H_{0, n-1} + w_1 H_{1, n-1} + \cdots + w_{n}H_{n, n-1}.
+\end{align}
+
+$$&lt;h3 id="手算示例"&gt;手算示例&lt;/h3&gt;
+$$
+
+\begin{align}
+  A = \begin{pmatrix}
+    1 &amp; 3 &amp; 0 \\
+    4 &amp; 3 &amp; 7 \\
+    7 &amp; 4 &amp; 1
+  \end{pmatrix}
+\end{align}
+
+$$$$
+
+\begin{align}
+  b = \begin{pmatrix}
+    0 \\ 2 \\ 0
+  \end{pmatrix}
+\end{align}
+
+$$&lt;h4 id="initialize"&gt;Initialize&lt;/h4&gt;
+$$
+
+\begin{align}
+  w_0 = \frac{b}{||b||} = \begin{pmatrix}
+    0 \\ 1 \\ 0
+  \end{pmatrix}
+\end{align}
+
+$$$$
+
+\begin{align}
+  Q = [w_0]
+\end{align}
+
+$$&lt;h4 id="step-1"&gt;Step 1&lt;/h4&gt;
+&lt;p&gt;用 &lt;eq&gt;A&lt;/eq&gt; 作用在上一步的 &lt;eq&gt;Q&lt;/eq&gt; 的最后一个列向量上，&lt;/p&gt;
+$$
+
+\begin{align}
+  w_1^{(1)} = A Q[-1] = A w_0 = \begin{pmatrix}
+    3 \\ 3 \\ 4
+  \end{pmatrix}.
+\end{align}
+
+$$&lt;p&gt;根据定义计算 $H_{00}$ ，也就是 &lt;eq&gt;A&lt;/eq&gt; 在新基底下的矩阵元，&lt;/p&gt;
+$$
+
+\begin{align}
+  H_{00} = w_0^* A w_0 = w^*_0 w_1^{(0)}  = 3,
+\end{align}
+
+$$&lt;p&gt;同时它也是我们下一步需要的。减去在 &lt;eq&gt;Q&lt;/eq&gt; 的其它向量上的分量，构建正交基底，&lt;/p&gt;
+$$
+
+\begin{align}
+  w_1^{(0)} = w_1^{(1)} - w^*_0 w_1^{(0)}\cdot  w_0 = \begin{pmatrix}
+    3 \\ 0 \\ 4
+  \end{pmatrix}.
+\end{align}
+
+$$&lt;p&gt;计算模长，然后归一化，&lt;/p&gt;
+$$
+
+\begin{align}
+  ||w_1^{0}|| = 5,
+\end{align}
+
+$$$$
+
+\begin{align}
+  w_1 = \frac{w_1^{(0)}}{||w_1^{(0)}||} = \begin{pmatrix}
+    \frac{3}{5} \\ 0 \\ \frac{4}{5}
+  \end{pmatrix}.
+\end{align}
+
+$$&lt;p&gt;同时根据 $H_{10}$ 的定义，发现它就是模长，&lt;/p&gt;
+$$
+
+\begin{align}
+  H_{10} = w_1^* A w_0 = \frac{1}{||w_1^{(0)}||} w_1^{(0)*} A w_0
+  = ||w_1^{(0)}|| = 5,
+\end{align}
+
+$$&lt;p&gt;其中投影 $w_1^{(0)*} A w_0$ 的物理意义也很明确，&lt;/p&gt;
+$$
+
+\begin{align}
+  w_1^{(0)*} A w_0 = w_1^{(0)*} w_1^{(1)} = w_1^{(0)*}\left[
+     w_1^{(0)} + w^*_0 w_1^{(0)}\cdot  w_0
+     \right],
+\end{align}
+
+$$&lt;p&gt;第一项是在 $w_1^{(0)}$ 方向上的分量，即为模长 $||w_1^{(0)}||^2$ ，
+第二项是在与之垂直的方向上的分量，为 &lt;eq&gt;0&lt;/eq&gt; 。&lt;/p&gt;
+&lt;p&gt;由此就得了本步的结果：&lt;/p&gt;
+$$
+
+\begin{align}
+  Q = [w_0, w_1] = \begin{pmatrix}
+    0 &amp; \frac{3}{5} \\
+    1 &amp; 0 \\
+    0 &amp; \frac{4}{5}
+  \end{pmatrix},
+\end{align}
+
+$$$$
+
+\begin{align}
+  H = \begin{pmatrix}
+    3 \\ 5
+  \end{pmatrix},
+\end{align}
+
+$$&lt;p&gt;验证，&lt;/p&gt;
+$$
+
+\begin{align}
+  Q[0]^* A Q[0] = 3 = H_{00}.
+\end{align}
+
+$$&lt;h4 id="step-2"&gt;Step 2&lt;/h4&gt;
+&lt;p&gt;用 &lt;eq&gt;A&lt;/eq&gt; 作用在上一步的 &lt;eq&gt;Q&lt;/eq&gt; 的最后一个列向量上，&lt;/p&gt;
+$$
+
+\begin{align}
+  w_2^{(2)} = A Q[-1] = A w_1 = \begin{pmatrix}
+    \frac{3}{5} \\ 8 \\ 5
+  \end{pmatrix}
+\end{align}
+
+$$&lt;p&gt;计算并减掉投影，&lt;/p&gt;
+$$
+
+\begin{align}
+  H_{01} = w_0^* A w_1 = w^*_0 w_2^{(2)} = 8.
+\end{align}
+
+$$$$
+
+\begin{align}
+  w_2^{(1)} = \begin{pmatrix}
+    \frac{3}{5} \\ 0 \\ 5
+  \end{pmatrix}.
+\end{align}
+
+$$&lt;p&gt;计算另一个方向上的投影并减掉，&lt;/p&gt;
+$$
+
+\begin{align}
+  H_{11} =  w_1^* A w_1 = w^*_1 w_2^{(1)} = \frac{109}{25},
+\end{align}
+
+$$$$
+
+\begin{align}
+  w_2^{(0)} = w_2^{(1)} - w_1^* w_2^{(1)} w_1 = \frac{63}{125}\begin{pmatrix}
+    4 \\ 0 \\ 3
+  \end{pmatrix}.
+\end{align}
+
+$$&lt;p&gt;计算模长，并归一化，&lt;/p&gt;
+$$
+
+\begin{align}
+  H_{21} = || w_2^{(0)} || = \frac{63}{25}.
+\end{align}
+
+$$&lt;p&gt;得到本步的结果，&lt;/p&gt;
+$$
+
+\begin{align}
+  w_2 = \frac{1}{5}\begin{pmatrix}
+    -4 \\ 0 \\3
+  \end{pmatrix}.
+\end{align}
+
+$$$$
+
+\begin{align}
+    Q = [w_0, w_1, w_2]
+\end{align}
+
+$$$$
+
+\begin{align}
+  H = \begin{pmatrix}
+    3 &amp; 0 \\
+    5 &amp; 8 \\
+    0 &amp; \frac{63}{25}
+  \end{pmatrix}
+\end{align}
+
+$$&lt;h3 id="code"&gt;code&lt;/h3&gt;
+&lt;pre&gt;&lt;code class="language-python"&gt;def arnoldi_iteration(A: np.ndarray, n: int, b=None, output_all=False):
+    &amp;quot;&amp;quot;&amp;quot;
+    Algorithm 33.1 in Book Trefethen&amp;amp;Bau Numerical Linear Algebra.
+
+    A: square matrix, full rank (no happy breakdown).
+
+    Good example:
+    A = np.array([[1, 3, 0],
+              [4, 3, 7],
+              [7, 4, 1]])
+    b = np.array([0, 2, 0])
+    arnoldi_iteration(A=A, b=b, n=2, output_all=True)
+    &amp;quot;&amp;quot;&amp;quot;
+    if b is None:
+        b = np.random.rand(A.shape[0])
+    dtype = np.result_type(A, b, np.float64)
+    Q = [b/np.linalg.norm(b)]
+    H = np.zeros((n+1, n), dtype=dtype)
+    for i in range(n):
+        v = A@Q[-1]
+        for j in range(i+1):
+            H[j, i] = Q[j].conj()@v
+            v = v - H[j, i]*Q[j]
+        print('===', v)
+        H[i+1, i] = np.linalg.norm(v)
+        Q.append(v/H[i+1, i])
+    if output_all:
+        return np.column_stack(Q), H
+    else:
+        return np.column_stack(Q)[:, :-1], H[:-1, :]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id="arnoldi-and-polynomial-approximation"&gt;Arnoldi and Polynomial Approximation&lt;/h3&gt;
+&lt;p&gt;由递推式能看出 $w_n$ 是关于 &lt;eq&gt;A&lt;/eq&gt; 的 &lt;eq&gt;n&lt;/eq&gt; 次多项式，作用在初始向量 &lt;eq&gt;b&lt;/eq&gt; 上，
+$$
+\begin{align}
+  w_n =&amp; \frac{1}{H_{n, n-1}} \left[
+    A w_{n-1} - \left( w_0 H_{0, n-1} + w_1 H_{1, n-1}, \cdots w_{n-1} H_{n-1, n-1} \right)
+    \right] \\
+    =&amp; p^n(A)b
+    = c_0 b + c_1 Ab + c_2 A^2 b + \cdots +  A^{n} b \\
+    \equiv &amp; Q_n^* y + A^nb,
+\end{align}
+$$
+其中最高阶系数 $c_n = 1$ 。
+由于我们做了正交化，所以 $w_n$ 与
+Krylov 子空间 $\mathcal{K}_{n - 1} = \{b, Ab, A^2, \cdots, A^{n - 1}b\}$ 垂直。
+那么 $||w_n||$ 可以看成是&lt;/p&gt;
+$$
+
+\begin{align}
+\mathrm{Find} \quad   y \in \mathcal{K}, \quad
+\mathrm{min} ||Q _n^* y + A^nb ||
+\end{align}
+
+$$&lt;p&gt;的 Residual 。&lt;/p&gt;
+&lt;h4 id="roots-of"&gt;Roots of $p^n(z)$&lt;/h4&gt;
+&lt;p&gt;$w_n = p^n(A)b \bot \mathcal{K}_{n - 1}$ 可以写成,&lt;/p&gt;
+$$
+
+\begin{align}
+  Q_n^* \cdot p^n(A) b = 0
+\end{align}
+
+$$&lt;p&gt;变换到 &lt;eq&gt;Q&lt;/eq&gt; 基底下，&lt;/p&gt;
+$$
+
+\begin{align}
+  Q_n^* Q \cdot Q^* p^n(A) Q \cdot Q^* b
+  =Q_n^* Q \cdot p^n(H)  \cdot Q^* b = 0,
+\end{align}
+
+$$&lt;p&gt;其中 $Q^* b = (||b||, 0, 0, \cdots)^T$ ，
+所以 $p^n(H)  \cdot Q^* b = ||b|| \cdot p^n(H)[0]$ ，是 $p^n(H)$ 第一列。
+由正交性可得 $Q_n^* Q = (I_n, \mathbf{0})$ 。最终&lt;/p&gt;
+$$
+
+\begin{align}
+  Q_n^* \cdot p^n(A) b = ||b||\cdot p^n(H)[:n, 0] = 0
+\end{align}
+
+$$&lt;p&gt;由于 $p^n(H)$ 左下角为 &lt;eq&gt;0&lt;/eq&gt; ，所以 $p^n(H)[:n, 0] =0$ 就相当于要求 $p^n(H_n) =0$ 。
+由 &lt;a href="https://en.wikipedia.org/wiki/Cayley%E2%80%93Hamilton_theorem"&gt;Cayley-Hamilton theorem&lt;/a&gt; 可知，
+$p^n(H_n)$ 的特征多项式&lt;/p&gt;
+$$
+
+\begin{align}
+   \prod_{i=1}^n (\lambda_i - z)
+\end{align}
+
+$$&lt;p&gt;即是我们要的 $p^n(z)$ 。&lt;/p&gt;
+&lt;h4 id="arnoldi-lemniscates"&gt;Arnoldi Lemniscates&lt;/h4&gt;
+&lt;pre&gt;&lt;code class="language-python"&gt;dim = 100
+A = a = np.random.normal(loc=0, scale=1/np.sqrt(dim), size=(dim, dim))
+A[0, 0] = 1.5
+b = np.random.rand(A.shape[0])
+
+w, v = np.linalg.eig(A)
+n = 8
+Qn, Hn = arnoldi_iteration(A=A, n=n, b=b)
+thetas, _ = np.linalg.eig(Hn)
+
+pz = np.prod(1-thetas)
+n_data = 500
+re = np.linspace(-2, 2, n_data)
+im = np.linspace(-2, 2, n_data)
+RE, IM = np.meshgrid(re, im)
+Z = RE + 1j*IM
+
+
+abs_p = np.prod([np.abs(Z-theta) for theta in thetas], axis=0)
+abs_p = np.log(abs_p)
+
+coeff = np.poly(thetas)
+C = coeff[0] * b
+for c in coeff[1:]:
+    C = A@C + c*b
+C = np.linalg.norm(C) / np.linalg.norm(b)
+C = np.log(C)
+# print(C)
+
+fig = px.scatter(x=w.real, y=w.imag)
+# fig.add_trace(go.Contour(x=re, y=im, z=abs_p))
+fig.add_trace(go.Contour(x=re, y=im, z=abs_p,
+                        #  contours=dict(start=C, end=C,
+                        #                size=1, coloring='lines'),
+                        #  line=dict(color='black', width=1),
+                        #  colorscale=[[0, &amp;quot;black&amp;quot;], [1, &amp;quot;black&amp;quot;]]
+                         ))
+# fig.update_yaxes(scaleanchor='x', scaleratio=1)
+# fig.update_layout(width=700)
+# print(Hn)
+fig.show()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id="reference"&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;1997 - Lloyd N. Trefethen, David Bau - Numerical Linear Algebra&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="physics"/><category term="numerical linear algebra"/><category term="Krylov subspace"/></entry><entry><title>Ising model</title><link href="https://zqw.ink/2026-06-30-physics-ising_model.html" rel="alternate"/><published>2026-06-30T00:00:00+08:00</published><updated>2026-06-30T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2026-06-30:/2026-06-30-physics-ising_model.html</id><summary type="html">
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="#1d-ising-model"&gt;1D Ising model&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#2d-ising-model"&gt;2D Ising model&lt;/a&gt;
@@ -16917,85 +17382,4 @@ class PrincipalValueInt():
         imag *= 1/self.coeff[0] # bug No.2 分子要除以 a 才行.
         return imag&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;包中的另一些函数.&lt;/p&gt;
-</content><category term="软件使用"/><category term="python"/></entry><entry><title>积分阶数的分析技巧</title><link href="https://zqw.ink/2021-01-13-physics-order_analysis.html" rel="alternate"/><published>2021-01-13T00:00:00+08:00</published><updated>2021-01-13T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-01-13:/2021-01-13-physics-order_analysis.html</id><summary type="html">
-&lt;h2&gt;问题&lt;/h2&gt;
-&lt;p&gt;已知积分 &lt;/p&gt;
-
-$$\begin{align}
-  I(\kappa) = \int_{r_c}^{\infty} r^2 F(\kappa r) \mathrm{d}r
-\end{align}$$
-
-&lt;p&gt;其中 $F(\kappa r)$ 是一个无量纲的函数, $r_c$ 是常数. 问 $I(\kappa)$ 在 $\kappa \to 0$ 时的 …&lt;/p&gt;</summary><content type="html">
-&lt;h2&gt;问题&lt;/h2&gt;
-&lt;p&gt;已知积分 &lt;/p&gt;
-
-$$\begin{align}
-  I(\kappa) = \int_{r_c}^{\infty} r^2 F(\kappa r) \mathrm{d}r
-\end{align}$$
-
-&lt;p&gt;其中 $F(\kappa r)$ 是一个无量纲的函数, $r_c$ 是常数. 问 $I(\kappa)$ 在 $\kappa \to 0$ 时的行
-为.&lt;/p&gt;
-
-&lt;h2&gt;方法&lt;/h2&gt;
-
-&lt;p&gt;令 $x = \kappa r$ , 则 &lt;/p&gt;
-
-$$\begin{align}
-  I = \frac{1}{\kappa^3}\int_{\kappa r_c} ^{\infty} x^2 F(x) \mathrm{d}x 
-   \sim \frac{1}{\kappa^3} \int_0^{\infty} x^2 F(x) \mathrm{d}x 
-   = \frac{\sharp}{\kappa^3} \quad \mathrm{as} \quad \kappa \to 0
-\end{align}$$
-
-&lt;p&gt;即 $I(\kappa)$ 在 $\kappa \to 0$ 时以 $1/\kappa^3$ 的速度发散.&lt;/p&gt;
-
-&lt;h2&gt;评述&lt;/h2&gt;
-
-&lt;p&gt;比较直接的思路, 是直接把 $F(\kappa r)$ 在 $\kappa = 0$ 处展开, 再把 $r$ 积掉. 但是 $F$
-形式如果未知就行不通了. &lt;/p&gt;
-
-&lt;p&gt;此法当然要求 $\int_0^{\infty} x^2 F(x) \mathrm{d}x$ 收敛于一个常数, 也要
-求积分限在做换元后也趋于一个常数( $\kappa r_c \to 0$ as $\kappa\to 0$ )&lt;/p&gt;
-
-&lt;h2&gt;数值验证&lt;/h2&gt;
-
-&lt;p&gt;对于 &lt;/p&gt;
-
-$$\begin{align}
-  I(\kappa) = \int_{ - \infty}^{ + \infty} r^{2} e^{ - (\kappa r - 5)^2} \mathrm{d}r
-\end{align}$$
-
-&lt;p&gt;用 sage 验证 $I(\kappa) \sim \sharp/\kappa^3$ , 其中 $\sharp = \int_{ - \infty}^{ + \infty} r^{2} e^{ - (r - 5)^2}
-\mathrm{d}r$ 是一个常数:&lt;/p&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;img src='./2021-01-13-physics-order_analysis/fig.png' alt='figalt' max-width:100%&gt;&lt;p&gt;
-code: (第一次用 Sage, 有些函
-数不知道怎么实现, 只能和 numpy, pyplot 混着用了 ^_^%)&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-python"&gt;# sage file
-# sage file
-import numpy as np
-import matplotlib.pyplot as plt
-x = SR.var('x')
-r = SR.var('r')
-κ = SR.var('κ')
-F = exp(-(x - 5)**2)
-I(κ) = integrate(r**2 * F(κ*r), r, -infinity, infinity)
-
-n = 5
-yy = []
-xx = np.linspace(1e-3, 3e-3, n)
-for i in range(n):
-    yy.append(I(xx[i]))
-
-k = integrate(r**2 * F(r), r, -infinity, infinity) # analytical slope
-
-plt.plot(log(xx), -3*log(xx) + log(k), label='analytical')
-plt.plot(np.log(xx), np.log(yy), 'o', label='numerical')
-plt.xlabel(r'$\log(\kappa)$')
-plt.ylabel(r'$\log(I)$')
-plt.legend()
-plt.savefig('fig.png')&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2&gt;致谢&lt;/h2&gt;
-
-&lt;p&gt;Qi&lt;/p&gt;
-</content><category term="专业笔记"/><category term="奇技淫巧"/></entry></feed>
+</content><category term="软件使用"/><category term="python"/></entry></feed>
