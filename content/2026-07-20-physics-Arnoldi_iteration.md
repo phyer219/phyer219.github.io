@@ -1,6 +1,6 @@
 ---
 title: Arnoldi Iteration
-date: 2026-07-07
+date: 2026-07-20
 category: physics
 tags:
   - "numerical linear algebra"
