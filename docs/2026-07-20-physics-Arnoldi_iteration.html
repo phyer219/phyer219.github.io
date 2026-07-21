@@ -265,10 +265,10 @@ $$
 \begin{align}
   \tilde{H}_n = \begin{pmatrix}
     H_{00} & H_{01} & H_{02} & \cdots & H_{0, n-2} & H_{0, n-1} \\
-    H_{10} & H_{11} & H_{12} & \cdots & H_{0, n-2} & H_{1, n-1} \\
-    0      & H_{21} & H_{22} & \cdots & H_{0, n-2} & H_{2, n-1} \\
+    H_{10} & H_{11} & H_{12} & \cdots & H_{1, n-2} & H_{1, n-1} \\
+    0      & H_{21} & H_{22} & \cdots & H_{2, n-2} & H_{2, n-1} \\
     \vdots & \vdots & \vdots & \ddots & \vdots     &\vdots      \\
-    0      & 0      & 0      & \cdots & H_{n, n-1} & H_{n, n-1}
+    0      & 0      & 0      & \cdots & 0          & H_{n, n-1}
   \end{pmatrix},
 \end{align}
 
@@ -320,21 +320,22 @@ $$
 \begin{align}
   w_1^{(1)} = A Q[-1] = A w_0 = \begin{pmatrix}
     3 \\ 3 \\ 4
-  \end{pmatrix}.
+  \end{pmatrix},
 \end{align}
 
-$$<p>根据定义计算 $H_{00}$ ，也就是 <eq>A</eq> 在新基底下的矩阵元，</p>
+$$<p>其中 <eq>w</eq> 的下标表示迭代的次数，上标表示在一次迭代中还未减去的其它基底的个数。</p>
+<p>根据定义计算 $H_{00}$ ，也就是 <eq>A</eq> 在新基底下的矩阵元，</p>
 $$
 
 \begin{align}
-  H_{00} = w_0^* A w_0 = w^*_0 w_1^{(0)}  = 3,
+  H_{00} = w_0^* A w_0 = w^*_0 w_1^{(1)}  = 3,
 \end{align}
 
 $$<p>同时它也是我们下一步需要的。减去在 <eq>Q</eq> 的其它向量上的分量，构建正交基底，</p>
 $$
 
 \begin{align}
-  w_1^{(0)} = w_1^{(1)} - w^*_0 w_1^{(0)}\cdot  w_0 = \begin{pmatrix}
+  w_1^{(0)} = w_1^{(1)} - w^*_0 w_1^{(1)}\cdot  w_0 = \begin{pmatrix}
     3 \\ 0 \\ 4
   \end{pmatrix}.
 \end{align}
@@ -367,7 +368,7 @@ $$
 
 \begin{align}
   w_1^{(0)*} A w_0 = w_1^{(0)*} w_1^{(1)} = w_1^{(0)*}\left[
-     w_1^{(0)} + w^*_0 w_1^{(0)}\cdot  w_0
+     w_1^{(0)} + w^*_0 w_1^{(1)}\cdot  w_0
      \right],
 \end{align}
 
@@ -435,7 +436,7 @@ $$$$
 
 \begin{align}
   w_2^{(0)} = w_2^{(1)} - w_1^* w_2^{(1)} w_1 = \frac{63}{125}\begin{pmatrix}
-    4 \\ 0 \\ 3
+    - 4 \\ 0 \\ 3
   \end{pmatrix}.
 \end{align}
 
@@ -465,8 +466,8 @@ $$$$
 
 \begin{align}
   H = \begin{pmatrix}
-    3 & 0 \\
-    5 & 8 \\
+    3 & 8 \\
+    5 & \frac{109}{25} \\
     0 & \frac{63}{25}
   \end{pmatrix}
 \end{align}
@@ -476,7 +477,7 @@ $$<h3 id="code">code</h3>
     &quot;&quot;&quot;
     Algorithm 33.1 in Book Trefethen&amp;Bau Numerical Linear Algebra.
 
-    A: square matrix, full rank (no happy breakdown).
+    A: square matrix, full rank, assuming no happy breakdown.
 
     Good example:
     A = np.array([[1, 3, 0],
@@ -495,7 +496,6 @@ $$<h3 id="code">code</h3>
         for j in range(i+1):
             H[j, i] = Q[j].conj()@v
             v = v - H[j, i]*Q[j]
-        print('===', v)
         H[i+1, i] = np.linalg.norm(v)
         Q.append(v/H[i+1, i])
     if output_all:
@@ -510,20 +510,20 @@ $$
   w_n =& \frac{1}{H_{n, n-1}} \left[
     A w_{n-1} - \left( w_0 H_{0, n-1} + w_1 H_{1, n-1}, \cdots w_{n-1} H_{n-1, n-1} \right)
     \right] \\
-    =& p^n(A)b
-    = c_0 b + c_1 Ab + c_2 A^2 b + \cdots +  A^{n} b \\
-    \equiv & Q_n^* y + A^nb,
+    =& \# p^n(A)b
+    = \# \left(c_0 b + c_1 Ab + c_2 A^2 b + \cdots +  A^{n} b \right) \\
+    \equiv & \# \left( Q_n^* y + A^nb \right),
 \end{align}
 $$
-其中最高阶系数 $c_n = 1$ 。
+其中 $\#$ 是一个系数， 最高阶系数 $c_n = 1$ 。
 由于我们做了正交化，所以 $w_n$ 与
 Krylov 子空间 $\mathcal{K}_{n - 1} = \{b, Ab, A^2, \cdots, A^{n - 1}b\}$ 垂直。
-那么 $||w_n||$ 可以看成是</p>
+那么 $||w_n||/\#$ 可以看成是</p>
 $$
 
 \begin{align}
 \mathrm{Find} \quad   y \in \mathcal{K}, \quad
-\mathrm{min} ||Q _n^* y + A^nb ||
+\mathrm{min} ||Q _n y + A^nb ||
 \end{align}
 
 $$<p>的 Residual 。</p>
@@ -552,58 +552,96 @@ $$
   Q_n^* \cdot p^n(A) b = ||b||\cdot p^n(H)[:n, 0] = 0
 \end{align}
 
-$$<p>由于 $p^n(H)$ 左下角为 <eq>0</eq> ，所以 $p^n(H)[:n, 0] =0$ 就相当于要求 $p^n(H_n) =0$ 。
+$$<p>由于 <eq>H</eq> 左下角为 <eq>0</eq> ，所以 $p^n(H)[:n, 0] =0$ 就相当于要求 $p^n(H_n) =0$ 。
 由 <a href="https://en.wikipedia.org/wiki/Cayley%E2%80%93Hamilton_theorem">Cayley-Hamilton theorem</a> 可知，
 $p^n(H_n)$ 的特征多项式</p>
 $$
 
 \begin{align}
-   \prod_{i=1}^n (\lambda_i - z)
+   \prod_{i=1}^n (z - \lambda_i)
 \end{align}
 
 $$<p>即是我们要的 $p^n(z)$ 。</p>
+<p>从物理上讲，我们选定了一个初态，然后用 Hamiltonian 作用在这个初态上。
+每作用一次，相当于多一阶相互作用，把不同的态耦合起来。
+而生成的 Krylov 子空间 $\mathcal{K}_n$ ，相当于从初态出发的 $n - 1$ 阶微扰能够耦合到的一个子空间。</p>
 <h4 id="arnoldi-lemniscates">Arnoldi Lemniscates</h4>
-<pre><code class="language-python">dim = 100
-A = a = np.random.normal(loc=0, scale=1/np.sqrt(dim), size=(dim, dim))
+<p>Arnoldi iteration 的 residual 为</p>
+$$
+
+\begin{align}
+C = \frac{||p^n(A)b||}{||b||}
+\end{align}
+
+$$<p>随着迭代次数的增加，$p^n$ 的根会变多，并且趋近 <eq>A</eq> 的本征值，同时 residual <eq>C</eq> 也逐渐变小。
+如果我们在复平面上画出 $|p(z)|$ ，那么当迭代次数接近 <eq>A</eq> 的维度时，$|p(z)|$ 在 <eq>A</eq> 的本征值也接近于零。</p>
+<p>下面我们画出 $\log |p(z)| = \log C$ 的等高线（红线）。</p>
+<p>当 $n = 1$ 时，Heesenberg 矩阵 <eq>H</eq> 是一维的，只有一个本征值，对应的 $|p(z)| = |z - \lambda|$ ，
+因此在复平面上是一个完美的圆：</p>
+<iframe src="2026-07-20-physics-Arnoldi_iteration/arnoldi_lemniscates_n1.html" width="100%" height="600"></iframe>
+<p>当 $n = 2$ 时， Heesenberg 矩阵 <eq>H</eq> 是二维的，有两个本征值（图中可以看出，在原点附近，位置比较接近）：</p>
+<iframe src="2026-07-20-physics-Arnoldi_iteration/arnoldi_lemniscates_n2.html" width="100%" height="600"></iframe>
+<p>当 $n = 3$ 时，有三个本征值：</p>
+<iframe src="2026-07-20-physics-Arnoldi_iteration/arnoldi_lemniscates_n3.html" width="100%" height="600"></iframe>
+<p>$n = 4$ ：</p>
+<iframe src="2026-07-20-physics-Arnoldi_iteration/arnoldi_lemniscates_n4.html" width="100%" height="600"></iframe>
+<p>$n = 5$ ：</p>
+<iframe src="2026-07-20-physics-Arnoldi_iteration/arnoldi_lemniscates_n5.html" width="100%" height="600"></iframe>
+<p>$n = 6$ ，可以数出，有六个零点：</p>
+<iframe src="2026-07-20-physics-Arnoldi_iteration/arnoldi_lemniscates_n6.html" width="100%" height="600"></iframe>
+<p>$n = 7$ ，它圈出了那个孤立的本征值：</p>
+<iframe src="2026-07-20-physics-Arnoldi_iteration/arnoldi_lemniscates_n7.html" width="100%" height="600"></iframe>
+<p>$n = 8$ ：</p>
+<iframe src="2026-07-20-physics-Arnoldi_iteration/arnoldi_lemniscates_n8.html" width="100%" height="600"></iframe>
+<p>$n = 9$ ：</p>
+<iframe src="2026-07-20-physics-Arnoldi_iteration/arnoldi_lemniscates_n9.html" width="100%" height="600"></iframe>
+<pre><code class="language-python"># Ref: page 262, 263, Book Trefethen&amp;Bau Numerical Linear Algebra.
+
+# Generate random matrix A and initial vector b
+rng = np.random.default_rng(12)
+dim = 100
+A = rng.normal(loc=0, scale=1/np.sqrt(dim), size=(dim, dim))
 A[0, 0] = 1.5
-b = np.random.rand(A.shape[0])
+b = rng.random(A.shape[0])
 
-w, v = np.linalg.eig(A)
-n = 8
+# Solve the exact eigenvalue of A
+w, _ = np.linalg.eig(A)
+# Arnoldi iteration
+n = 9
 Qn, Hn = arnoldi_iteration(A=A, n=n, b=b)
+# Ritz values
 thetas, _ = np.linalg.eig(Hn)
-
-pz = np.prod(1-thetas)
-n_data = 500
+# Generate complex plane
+n_data = 100
 re = np.linspace(-2, 2, n_data)
 im = np.linspace(-2, 2, n_data)
 RE, IM = np.meshgrid(re, im)
 Z = RE + 1j*IM
-
-
-abs_p = np.prod([np.abs(Z-theta) for theta in thetas], axis=0)
-abs_p = np.log(abs_p)
-
+# log(abs(p(z)))
+abs_p = np.sum([np.log(np.abs(Z-theta)) for theta in thetas], axis=0)
+# Calculate the log of residual log(||p(A)b|| / ||b||)
 coeff = np.poly(thetas)
 C = coeff[0] * b
 for c in coeff[1:]:
     C = A@C + c*b
 C = np.linalg.norm(C) / np.linalg.norm(b)
-C = np.log(C)
-# print(C)
 
-fig = px.scatter(x=w.real, y=w.imag)
-# fig.add_trace(go.Contour(x=re, y=im, z=abs_p))
+fig = go.Figure()
+fig.add_trace(go.Heatmap(x=re, y=im, z=abs_p,
+                         colorbar=dict(title='log(||p(z)||)')))
 fig.add_trace(go.Contour(x=re, y=im, z=abs_p,
-                        #  contours=dict(start=C, end=C,
-                        #                size=1, coloring='lines'),
-                        #  line=dict(color='black', width=1),
-                        #  colorscale=[[0, &quot;black&quot;], [1, &quot;black&quot;]]
+                         contours=dict(start=np.log(C), end=np.log(C),
+                                       size=1, coloring='lines'),
+                         line=dict(width=3), showscale=False,
+                         colorscale=[[0, &quot;red&quot;], [1, &quot;red&quot;]]
                          ))
-# fig.update_yaxes(scaleanchor='x', scaleratio=1)
-# fig.update_layout(width=700)
-# print(Hn)
-fig.show()
+fig.add_trace(go.Scatter(x=w.real, y=w.imag,
+                         mode='markers', marker=dict(color='blue')))
+fig.update_layout(width=500, height=500, title=f'n={n}, log(C)={C:.2f}',
+                  xaxis=dict(title='Re'),
+                  yaxis=dict(title='Im', scaleanchor='x', scaleratio=1))
+# fig.show()
+fig.write_html(f'arnoldi_lemniscates_n{n}.html', include_plotlyjs='cdn') #, include_mathjax=&quot;cdn&quot;)
 </code></pre>
 <h2 id="reference">Reference</h2>
 <ul>
