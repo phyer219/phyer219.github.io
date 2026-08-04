@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="zh_cn">
+
+<head>
+    <title>从冰上的水 - Shot noise</title>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Pelican" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://zqw.ink/feeds/all.atom.xml"
+    type="application/atom+xml" rel="alternate" title="从冰上的水 Full Atom Feed" />
+  <link
+    href="https://zqw.ink/feeds/physics.atom.xml"
+    type="application/atom+xml" rel="alternate" title="从冰上的水 Categories Atom Feed" />
+  <link rel="stylesheet" type="text/css" href="https://zqw.ink/theme/css/style.css" />
+  <!-- SEO: site-level structured data (WebSite) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "从冰上的水",
+    "url": "https://zqw.ink/"
+  }
+  </script>
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Serif+SC&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.6.1/github-markdown.min.css" integrity="sha512-wpdV3v8V8vWajD1kH8rI1UO1H2q9TQ3s8o1mG7lH8fS1dZ+3q1B1p4lH2tF8rQm2u0n8oV6rN3tV4nQWmY4nTw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!--fonts end  -->
+  <!-- highlight.js -->
+  <link id="hljs-light" rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" disabled>
+  <link id="hljs-dark" rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" disabled>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <script>
+    hljs.highlightAll();
+    (function () {
+      const light = document.getElementById('hljs-light');
+      const dark = document.getElementById('hljs-dark');
+      if (!light || !dark) return;
+
+      function resolveTheme() {
+        return document.documentElement.getAttribute('data-theme') || 'light';
+      }
+
+      function applyTheme(theme) {
+        const isDark = theme === 'dark';
+        light.disabled = isDark;
+        dark.disabled = !isDark;
+      }
+
+      const observer = new MutationObserver(function () {
+        applyTheme(resolveTheme());
+      });
+      observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+      applyTheme(resolveTheme());
+    })();
+  </script>
+  <!-- highlight.js end -->
+
+<script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        tags: 'ams'   // 自动给 AMS 环境/显示公式编号
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.1">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.1">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.1">
+
+
+
+  <!-- SEO: page description for search results -->
+    <meta name="description" content="对可观测量期望进行参数估计 一个系统处在态 $\rho$ 上，我们想得到某个可观测量 $\hat{O}$ ，的期望 $\langle \hat{O} \rangle = \mathrm{Tr}(\hat{O}\rho)$ 。 $\langle \hat{O …" />
+
+    <meta name="tags" content="quantum computing" />
+    <meta name="tags" content="probability theory" />
+    <meta name="tags" content="random variable" />
+    <meta name="tags" content="estimator" />
+
+  <!-- SEO: structured data for articles (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Shot noise",
+    "datePublished": "2026-07-24T00:00:00+08:00",
+    "author": {
+      "@type": "Person",
+      "name": "ZQW"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://zqw.ink/2026-07-24-physics-shot_noise.html"
+    }
+  }
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <div id="header-container">
+      <button id="nav-toggle" class="nav-toggle" aria-label="打开菜单" aria-expanded="false">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+      <nav id="site-nav">
+        <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/category/physics">Physics</a>
+            </li>
+            <li>
+              <a href="/category/blog">Blog</a>
+            </li>
+            <li>
+              <a href="/category/coding">Coding</a>
+            </li>
+            <li>
+              <a href="/archives">All</a>
+            </li>
+          </ul>
+      </nav>
+      <div class="header-actions">
+        <button id="theme-toggle" aria-label="切换到深色模式" title="切换主题">
+          <i class="theme-icon icon-sun fa-solid fa-sun" aria-hidden="true"></i>
+          <i class="theme-icon icon-moon fa-solid fa-moon" aria-hidden="true"></i>
+        </button>
+        <div class="rss">
+            <a href="https://zqw.ink/feeds/all.atom.xml" aria-label="Atom 订阅">
+              <i class="fa-solid fa-rss" aria-hidden="true"></i>
+            </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+
+<h1 class="post-title">Shot noise</h1>
+
+<section class="post-meta">
+    <p>2026-07-24</p>
+    <p>-<a class="post-link" href="https://zqw.ink/category/physics.html">physics</a></p>
+</section>
+
+<section class="markdown-body">
+  
+<h2 id="对可观测量期望进行参数估计">对可观测量期望进行参数估计</h2>
+<p>一个系统处在态 $\rho$ 上，我们想得到某个可观测量 $\hat{O}$ ，的期望 $\langle \hat{O} \rangle = \mathrm{Tr}(\hat{O}\rho)$ 。</p>
+<p>$\langle \hat{O} \rangle$ 可以看作是系统的一个参数。得到 $\langle \hat{O} \rangle$ 的过程可以看成是一个估计的过程（estimation process）。</p>
+<h2 id="测量过程">测量过程</h2>
+<p>算符 $\hat{O}$ ，可以在它的本征基底 $\{|m\rangle\}$ 下做测量，其中 $|m\rangle$ 是本征值为  $\hat{O}|m\rangle = O_m |m\rangle$ 的本征态。
+在测量后，系统一定处在它的某个本征态上。</p>
+<p>测量过程可以由一系列 measurement operation</p>
+$$
+
+\begin{align}
+    \mathcal{E}_m(\rho) = M_m \rho M_m^\dagger,
+\end{align}
+
+$$<p>描述，其中 $M_m = |m\rangle\langle m|$ 是 measurement operator 。
+测量过后，系统处在态</p>
+$$
+
+\begin{align}
+    \frac{\mathcal{E}_m(\rho)}{\mathrm{Tr}\left( \mathcal{E}_m(\rho) \right)}
+\end{align}
+
+$$<p>上的概率是</p>
+$$
+
+\begin{align}
+    \mathrm{Tr}\left( \mathcal{E}_m(\rho) \right)
+\end{align}
+
+$$<h2 id="随机变量从样本空间到可测空间的函数">随机变量：从样本空间到可测空间的函数</h2>
+<p>假设系统在测量之前处在态 $\rho$ 。</p>
+<p>可观测量的测量数值由随机变量（random variable）</p>
+$$
+
+\begin{align}
+    X_{\hat{O}}:\left\{
+        \frac{\mathcal{E}_m(\rho)}{\mathrm{Tr}\left( \mathcal{E}_m(\rho)\right)}
+        \right\}
+        \to \left\{
+            O_m
+        \right\}
+\end{align}
+
+$$<p>描述。它是一个从样本空间（<a href="https://en.wikipedia.org/wiki/Sample_space">sample space</a>）</p>
+$$
+
+\begin{align}
+    \left\{\frac{\mathcal{E}_m(\rho)}{\mathrm{Tr}\left( \mathcal{E}_m(\rho) \right)}\right\}
+\end{align}
+
+$$<p>到可测空间（<a href="https://en.wikipedia.org/wiki/Measurable_space">measurable space</a>）$\{O_m\}$ 的函数。样本空间就是测量结果，也就是仪器上显示的结果构成的集合。在这里，我们假设仪器显示的结果就是系统在被观测后塌缩到的态。而这里的可测空间则由可观测量所有的本征值 $O_m$ 和上面的<a href="https://en.wikipedia.org/wiki/%CE%A3-algebra"> $\sigma$ 代数</a>构成。</p>
+<p>测量后的结果（outcome） $|m\rangle\langle m|$ 对应的概率是，</p>
+$$
+
+\begin{align}
+    P(X_{\hat{O}} = O_m) = \mathrm{Tr}\left[ \mathcal{E}_m(\rho) \right].
+\end{align}
+
+$$<p>随机变量 $X_{\hat{O}}$ 的期望值是</p>
+$$
+
+\begin{align}
+    E[X_{\hat{O}}] = \sum_m O_m P(X_{\hat{O}} = O_m) =
+     \langle \hat{O}\rangle,
+\end{align}
+
+$$<p>其中 $\langle \hat{O}\rangle = \mathrm{Tr}[\hat{O}\rho]$ 是 $\hat{O}$ 的系综平均。</p>
+<p>方差（variance）为</p>
+$$
+
+\begin{align}
+    \mathrm{var}\left[ X_{\hat{O}} \right]
+    = E[X_{\hat{O}}^2] - E[X_{\hat{O}}]^2
+    = \langle \hat{O}^2\rangle - \langle \hat{O}\rangle^2
+\end{align}
+
+$$<p>如果 $\rho$ 是纯态，它就是量子涨落（quantum fluctuation）。</p>
+<h2 id="estimators"><a href="https://en.wikipedia.org/wiki/Estimator">Estimators</a></h2>
+<p>在实验中，为了得到精确的结果，我们通常重复运行同一个线路 $N_{\mathrm{shots}}$ 次。
+我们可以用不同的估计量（<a href="https://en.wikipedia.org/wiki/Estimator">estimator</a>）来对参数 $\langle \hat{O} \rangle$ 进行估计。</p>
+<p>例如，我们可以选 sample mean estimator,</p>
+$$
+
+\begin{align}
+    \bar{X}_{\hat{O}} = \frac{1}{N_{\mathrm{shots}}}\sum_{l=1}^{N_{\mathrm{shots}}} X_{\hat{O}, l}.
+\end{align}
+
+$$<p>我们假设每次运行线路的都是相同的，每次的测量结果都是相互独立的。
+$\{X_{\hat{O}, l}\}$ 对应的是独立同分布（independent and identically distributed，i.i.d.）。
+sample mean estimator 的期望值（expectation value）为</p>
+$$
+
+\begin{align}
+    E[\bar{X}_{\hat{O}}]
+    = \frac{1}{N_{\mathrm{shots}}}\sum_{l=1}^{N_{\mathrm{shots}}} E[X_{\hat{O}, l}]
+    = \langle \hat{O}\rangle,
+\end{align}
+
+$$<p>方差为</p>
+$$
+
+\begin{align}
+    \mathrm{var}\left[ \bar{X}_{\hat{O}} \right]
+    =& \frac{1}{N_{\mathrm{shots}}^2}\sum_{l=1}^{N_{\mathrm{shots}}}
+    \mathrm{var} [ X_{\hat{O}, l} ]
+    = \frac{1}{N_{\mathrm{shots}}^2} N_{\mathrm{shots}}
+    \mathrm{var} [ X_{\hat{O}} ]\\
+    =& \frac{1}{N_{\mathrm{shots}}}\mathrm{var} [ X_{\hat{O}} ].
+\end{align}
+
+$$<p>因此，在实验次数 $N_{\mathrm{shots}}\to \infty$ 的极限下，方差 $\mathrm{var}\left[ \bar{X}_{\hat{O}} \right] \to 0$ 。
+也就是说，只要我们运行的次数足够多，就可以得到精确的结果。</p>
+<h2 id="bias">Bias</h2>
+<p>量子计算机上有噪声。</p>
+<p>我们测量有噪声的 $\rho$ 与测量理想无噪声的 $\rho_{\mathrm{ideal}}$ ，结果会有所不同。</p>
+<p>无噪声的 $\rho_{\mathrm{ideal}}$ 的期望是</p>
+$$
+
+\begin{align}
+    \langle \bar{X}_{\hat{O}} \rangle_{\mathrm{ideal}} = \mathrm{Tr}[\hat{O}\rho_{\mathrm{ideal}}]
+\end{align}
+
+$$<p>我们的 estimator 给出的估计，会与理想值，或真实值，存在 bias</p>
+$$
+
+\begin{align}
+    \mathrm{bias}[\bar{X}_{\hat{O}}] =
+    E[\bar{X}_{\hat{O}}] - \langle \hat{O} \rangle_{\mathrm{ideal}}.
+\end{align}
+
+$$<p>Estimator 的 mean square error 为</p>
+$$
+
+\begin{align}
+    \mathrm{MSE}[\bar{X}_{\hat{O}}]
+     =& E[(\bar{X}_{\hat{O}} - \langle \hat{O} \rangle_{\mathrm{ideal}})^2] \\
+     =& \mathrm{bias} [\bar{X}_{\hat{O}}]^2 + \mathrm{var}[\bar{X}_{\hat{O}}].
+\end{align}
+
+$$<p>我们可以用 error mitigated estimator 来减少 bias 。</p>
+<h2 id="例子">例子</h2>
+<p>我们测量
+$\hat{\sigma}^z = |1\rangle\langle 1| - |0\rangle\langle 0|$,
+时，它有两个本征值 $-1, 1$, 本征态 $|0\rangle, |1\rangle$ 。</p>
+<p>我们在 computational basis $\{|0\rangle, |1\rangle\}$ 下进行测量。
+对应的 quantum operations $M_m$ for this measurement 是</p>
+$$
+
+\begin{align}
+    M_{|0\rangle\langle 0|} = |0\rangle\langle 0 |,
+    M_{|1\rangle\langle 1|} = |1\rangle\langle 1 |.
+\end{align}
+
+$$<p>我们将这个可观测量 $\hat{\sigma}^z$ 的随机变量记为 $X_{\hat{\sigma}^z}$ 。
+它是一个函数，从 measurement outcomes
+$\{|0\rangle\langle 0|, |1\rangle\langle 1|\}$ 到本征值的集合构成的可测空间 $\hat{\sigma}^z$ $\{-1, 1\}$ 的函数。
+即</p>
+$$
+
+\begin{align}
+    X_{\hat{\sigma}^z} (|0\rangle\langle 0|) =& -1, \\
+    X_{\hat{\sigma}^z} (|1\rangle\langle 1|) =& 1.
+\end{align}
+
+$$<p>对应的概率为</p>
+$$
+
+\begin{align}
+    P(X_{\hat{\sigma}^z} = -1) =& \mathrm{Tr}\left[
+        M_{|0\rangle\langle 0|} \rho M^{\dagger}_{|0\rangle\langle 0|}
+     \right], \\
+     P(X_{\hat{\sigma}^z} = 1) =& \mathrm{Tr}\left[
+        M_{|1\rangle\langle 1|} \rho M^{\dagger}_{|1\rangle\langle 1|}
+     \right]
+\end{align}
+
+$$<p>可观测量的期望为</p>
+$$
+
+\begin{align}
+    E[X_{\hat{\sigma}^z}] =& P(X_{\hat{\sigma}^z} = 1)
+    - P(X_{\hat{\sigma}^z} = -1) \\
+    =& \mathrm{Tr}\left[
+        \hat{\sigma}^z \rho
+    \right] = \langle \hat{\sigma}^z \rangle    .
+\end{align}
+
+$$<p>由</p>
+$$
+
+\begin{align}
+    E[X^2_{\hat{\sigma}^z}] =& P(X_{\hat{\sigma}^z} = 1)
+    +(-1)^2 P(X_{\hat{\sigma}^z} = -1)  \\
+    =& \mathrm{Tr}\left[
+        \left( \hat{\sigma}^z  \right)^2\rho
+    \right] = \langle \left( \hat{\sigma}^z  \right)^2 \rangle
+    =1   .
+\end{align}
+
+$$<p>可以得到这个可观测量的方差 ，</p>
+$$
+
+\begin{align}
+    \mathrm{var}[X_{\hat{\sigma}^z}] = E[X^2_{\hat{\sigma}^z}] - E[X_{\hat{\sigma}^z}]^2 = 1 - \langle \hat{\sigma}^z \rangle ^2.
+\end{align}
+
+$$<p>定义 sample mean estimator ，</p>
+$$
+
+\begin{align}
+    \bar{X}_{\hat{\sigma}^z} = \frac{1}{N_{\mathrm{shots}}}
+    \sum_{l=1}^{N_{\mathrm{shots}}} X_{l, \hat{\sigma}^z}.
+\end{align}
+
+$$<p>其中 $X_{l, \hat{\sigma}^z}$ 是第 <eq>l</eq> 次测量对应的随机变量。
+我们假设密度矩阵是相同的，那么 $\{X_{l, \hat{\sigma}^z}\}$ 就是 independent and identically distributed (i.i.d.).
+因此我们可以计算方差，</p>
+$$
+
+\begin{align}
+    \mathrm{var}\left[ \bar{X}_{\hat{\sigma}^z} \right]
+    =& \frac{1}{N_{\mathrm{shots}}^2}\sum_{l=1}^{N_{\mathrm{shots}}}
+    \mathrm{var}\left[  X_{l, \hat{\sigma}^z}  \right] \\
+    =& \frac{1}{N_{\mathrm{shots}}^2} N_{\mathrm{shots}}
+    \mathrm{var}\left[  X_{\hat{\sigma}^z}  \right] \\
+    =& \frac{1}{N_{\mathrm{shots}}}
+    \mathrm{var}\left[  X_{\hat{\sigma}^z}  \right] \\
+    =& \frac{1}{N_{\mathrm{shots}}}
+    \left[  1 -   \langle \hat{\sigma}^z \rangle ^2\right]
+\end{align}
+
+$$<p>这个 estimator 的标准差（standard errors） $\sqrt{\mathrm{var}[\bar{X}_{\hat{\sigma}^z}]}$ 常被用作 error bar 。</p>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://arxiv.org/abs/2606.27856">arXiv: 2606.27856: Simulating the Dynamics of Markovian Quantum Processes by Quantum Collision Models on Quantum Computers</a></li>
+</ul>
+
+</section>
+
+<section class="post-meta">
+    <p>
+        <a class="post-link" href="https://zqw.ink/tag/quantum-computing.html">#quantum computing</a>
+        <a class="post-link" href="https://zqw.ink/tag/probability-theory.html">#probability theory</a>
+        <a class="post-link" href="https://zqw.ink/tag/random-variable.html">#random variable</a>
+        <a class="post-link" href="https://zqw.ink/tag/estimator.html">#estimator</a>
+    </p>
+</section>
+
+  </main>
+  <footer role="contentinfo">
+    <p>Copyright &copy; 2018 - 2026 ZQW</p>
+  </footer>
+  <script>
+  (function() {
+    const key = 'theme';
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const saved = localStorage.getItem(key);
+    const init = saved ? saved : 'system';
+    const effective = init === 'system' ? (prefersDark ? 'dark' : 'light') : init;
+    document.documentElement.setAttribute('data-theme', effective);
+    updateThemeButton(effective);
+
+    document.getElementById('theme-toggle')?.addEventListener('click', function () {
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem(key, next);
+      updateThemeButton(next);
+    });
+
+    function updateThemeButton(theme) {
+      const btn = document.getElementById('theme-toggle');
+      if (btn) {
+        btn.setAttribute('aria-label', theme === 'dark' ? '切换到浅色模式' : '切换到深色模式');
+      }
+    }
+  })();
+  </script>
+  <script>
+  (function() {
+    const blocks = document.querySelectorAll('pre > code');
+    blocks.forEach((code) => {
+      const pre = code.parentElement;
+      if (!pre) return;
+
+      if (!pre.dataset.lang) {
+        const cls = Array.from(code.classList);
+        const langClass = cls.find((name) => name.startsWith('language-') || name.startsWith('lang-'));
+        if (langClass) {
+          const raw = langClass.replace(/^language-/, '').replace(/^lang-/, '');
+          pre.dataset.lang = raw.replace(/_/g, ' ').toUpperCase();
+        }
+      }
+
+      if (pre.querySelector('.copy-btn')) return;
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'copy-btn';
+      btn.setAttribute('aria-label', '复制代码');
+      btn.textContent = 'Copy';
+      btn.addEventListener('click', async function () {
+        try {
+          await navigator.clipboard.writeText(code.innerText);
+          btn.textContent = 'Copied';
+        } catch (err) {
+          const range = document.createRange();
+          range.selectNodeContents(code);
+          const selection = window.getSelection();
+          selection.removeAllRanges();
+          selection.addRange(range);
+          try {
+            document.execCommand('copy');
+            btn.textContent = 'Copied';
+          } finally {
+            selection.removeAllRanges();
+          }
+        }
+        setTimeout(() => {
+          btn.textContent = 'Copy';
+        }, 1500);
+      });
+      pre.appendChild(btn);
+    });
+  })();
+  </script>
+  <script>
+  (function() {
+    const toggle = document.getElementById('nav-toggle');
+    const nav = document.getElementById('site-nav');
+    if (!toggle || !nav) return;
+
+    function closeNav() {
+      nav.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', '打开菜单');
+    }
+
+    function openNav() {
+      nav.classList.add('is-open');
+      toggle.setAttribute('aria-expanded', 'true');
+      toggle.setAttribute('aria-label', '关闭菜单');
+    }
+
+    toggle.addEventListener('click', function (event) {
+      event.stopPropagation();
+      const isOpen = nav.classList.contains('is-open');
+      if (isOpen) {
+        closeNav();
+      } else {
+        openNav();
+      }
+    });
+
+    nav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', closeNav);
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!nav.classList.contains('is-open')) return;
+      if (nav.contains(event.target) || toggle.contains(event.target)) return;
+      closeNav();
+    });
+  })();
+  </script>
+</body>
+
+</html>

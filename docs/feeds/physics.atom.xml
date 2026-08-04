@@ -1,5 +1,244 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水 - physics</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/physics.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2026-07-20T00:00:00+08:00</updated><entry><title>Arnoldi Iteration</title><link href="https://zqw.ink/2026-07-20-physics-Arnoldi_iteration.html" rel="alternate"/><published>2026-07-20T00:00:00+08:00</published><updated>2026-07-20T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2026-07-20:/2026-07-20-physics-Arnoldi_iteration.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水 - physics</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/physics.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2026-07-24T00:00:00+08:00</updated><entry><title>Shot noise</title><link href="https://zqw.ink/2026-07-24-physics-shot_noise.html" rel="alternate"/><published>2026-07-24T00:00:00+08:00</published><updated>2026-07-24T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2026-07-24:/2026-07-24-physics-shot_noise.html</id><summary type="html">
+&lt;h2 id="对可观测量期望进行参数估计"&gt;对可观测量期望进行参数估计&lt;/h2&gt;
+&lt;p&gt;一个系统处在态 $\rho$ 上，我们想得到某个可观测量 $\hat{O}$ ，的期望 $\langle \hat{O} \rangle = \mathrm{Tr}(\hat{O}\rho)$ 。&lt;/p&gt;
+&lt;p&gt;$\langle \hat{O …&lt;/p&gt;</summary><content type="html">
+&lt;h2 id="对可观测量期望进行参数估计"&gt;对可观测量期望进行参数估计&lt;/h2&gt;
+&lt;p&gt;一个系统处在态 $\rho$ 上，我们想得到某个可观测量 $\hat{O}$ ，的期望 $\langle \hat{O} \rangle = \mathrm{Tr}(\hat{O}\rho)$ 。&lt;/p&gt;
+&lt;p&gt;$\langle \hat{O} \rangle$ 可以看作是系统的一个参数。得到 $\langle \hat{O} \rangle$ 的过程可以看成是一个估计的过程（estimation process）。&lt;/p&gt;
+&lt;h2 id="测量过程"&gt;测量过程&lt;/h2&gt;
+&lt;p&gt;算符 $\hat{O}$ ，可以在它的本征基底 $\{|m\rangle\}$ 下做测量，其中 $|m\rangle$ 是本征值为  $\hat{O}|m\rangle = O_m |m\rangle$ 的本征态。
+在测量后，系统一定处在它的某个本征态上。&lt;/p&gt;
+&lt;p&gt;测量过程可以由一系列 measurement operation&lt;/p&gt;
+$$
+
+\begin{align}
+    \mathcal{E}_m(\rho) = M_m \rho M_m^\dagger,
+\end{align}
+
+$$&lt;p&gt;描述，其中 $M_m = |m\rangle\langle m|$ 是 measurement operator 。
+测量过后，系统处在态&lt;/p&gt;
+$$
+
+\begin{align}
+    \frac{\mathcal{E}_m(\rho)}{\mathrm{Tr}\left( \mathcal{E}_m(\rho) \right)}
+\end{align}
+
+$$&lt;p&gt;上的概率是&lt;/p&gt;
+$$
+
+\begin{align}
+    \mathrm{Tr}\left( \mathcal{E}_m(\rho) \right)
+\end{align}
+
+$$&lt;h2 id="随机变量从样本空间到可测空间的函数"&gt;随机变量：从样本空间到可测空间的函数&lt;/h2&gt;
+&lt;p&gt;假设系统在测量之前处在态 $\rho$ 。&lt;/p&gt;
+&lt;p&gt;可观测量的测量数值由随机变量（random variable）&lt;/p&gt;
+$$
+
+\begin{align}
+    X_{\hat{O}}:\left\{
+        \frac{\mathcal{E}_m(\rho)}{\mathrm{Tr}\left( \mathcal{E}_m(\rho)\right)}
+        \right\}
+        \to \left\{
+            O_m
+        \right\}
+\end{align}
+
+$$&lt;p&gt;描述。它是一个从样本空间（&lt;a href="https://en.wikipedia.org/wiki/Sample_space"&gt;sample space&lt;/a&gt;）&lt;/p&gt;
+$$
+
+\begin{align}
+    \left\{\frac{\mathcal{E}_m(\rho)}{\mathrm{Tr}\left( \mathcal{E}_m(\rho) \right)}\right\}
+\end{align}
+
+$$&lt;p&gt;到可测空间（&lt;a href="https://en.wikipedia.org/wiki/Measurable_space"&gt;measurable space&lt;/a&gt;）$\{O_m\}$ 的函数。样本空间就是测量结果，也就是仪器上显示的结果构成的集合。在这里，我们假设仪器显示的结果就是系统在被观测后塌缩到的态。而这里的可测空间则由可观测量所有的本征值 $O_m$ 和上面的&lt;a href="https://en.wikipedia.org/wiki/%CE%A3-algebra"&gt; $\sigma$ 代数&lt;/a&gt;构成。&lt;/p&gt;
+&lt;p&gt;测量后的结果（outcome） $|m\rangle\langle m|$ 对应的概率是，&lt;/p&gt;
+$$
+
+\begin{align}
+    P(X_{\hat{O}} = O_m) = \mathrm{Tr}\left[ \mathcal{E}_m(\rho) \right].
+\end{align}
+
+$$&lt;p&gt;随机变量 $X_{\hat{O}}$ 的期望值是&lt;/p&gt;
+$$
+
+\begin{align}
+    E[X_{\hat{O}}] = \sum_m O_m P(X_{\hat{O}} = O_m) =
+     \langle \hat{O}\rangle,
+\end{align}
+
+$$&lt;p&gt;其中 $\langle \hat{O}\rangle = \mathrm{Tr}[\hat{O}\rho]$ 是 $\hat{O}$ 的系综平均。&lt;/p&gt;
+&lt;p&gt;方差（variance）为&lt;/p&gt;
+$$
+
+\begin{align}
+    \mathrm{var}\left[ X_{\hat{O}} \right]
+    = E[X_{\hat{O}}^2] - E[X_{\hat{O}}]^2
+    = \langle \hat{O}^2\rangle - \langle \hat{O}\rangle^2
+\end{align}
+
+$$&lt;p&gt;如果 $\rho$ 是纯态，它就是量子涨落（quantum fluctuation）。&lt;/p&gt;
+&lt;h2 id="estimators"&gt;&lt;a href="https://en.wikipedia.org/wiki/Estimator"&gt;Estimators&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;在实验中，为了得到精确的结果，我们通常重复运行同一个线路 $N_{\mathrm{shots}}$ 次。
+我们可以用不同的估计量（&lt;a href="https://en.wikipedia.org/wiki/Estimator"&gt;estimator&lt;/a&gt;）来对参数 $\langle \hat{O} \rangle$ 进行估计。&lt;/p&gt;
+&lt;p&gt;例如，我们可以选 sample mean estimator,&lt;/p&gt;
+$$
+
+\begin{align}
+    \bar{X}_{\hat{O}} = \frac{1}{N_{\mathrm{shots}}}\sum_{l=1}^{N_{\mathrm{shots}}} X_{\hat{O}, l}.
+\end{align}
+
+$$&lt;p&gt;我们假设每次运行线路的都是相同的，每次的测量结果都是相互独立的。
+$\{X_{\hat{O}, l}\}$ 对应的是独立同分布（independent and identically distributed，i.i.d.）。
+sample mean estimator 的期望值（expectation value）为&lt;/p&gt;
+$$
+
+\begin{align}
+    E[\bar{X}_{\hat{O}}]
+    = \frac{1}{N_{\mathrm{shots}}}\sum_{l=1}^{N_{\mathrm{shots}}} E[X_{\hat{O}, l}]
+    = \langle \hat{O}\rangle,
+\end{align}
+
+$$&lt;p&gt;方差为&lt;/p&gt;
+$$
+
+\begin{align}
+    \mathrm{var}\left[ \bar{X}_{\hat{O}} \right]
+    =&amp; \frac{1}{N_{\mathrm{shots}}^2}\sum_{l=1}^{N_{\mathrm{shots}}}
+    \mathrm{var} [ X_{\hat{O}, l} ]
+    = \frac{1}{N_{\mathrm{shots}}^2} N_{\mathrm{shots}}
+    \mathrm{var} [ X_{\hat{O}} ]\\
+    =&amp; \frac{1}{N_{\mathrm{shots}}}\mathrm{var} [ X_{\hat{O}} ].
+\end{align}
+
+$$&lt;p&gt;因此，在实验次数 $N_{\mathrm{shots}}\to \infty$ 的极限下，方差 $\mathrm{var}\left[ \bar{X}_{\hat{O}} \right] \to 0$ 。
+也就是说，只要我们运行的次数足够多，就可以得到精确的结果。&lt;/p&gt;
+&lt;h2 id="bias"&gt;Bias&lt;/h2&gt;
+&lt;p&gt;量子计算机上有噪声。&lt;/p&gt;
+&lt;p&gt;我们测量有噪声的 $\rho$ 与测量理想无噪声的 $\rho_{\mathrm{ideal}}$ ，结果会有所不同。&lt;/p&gt;
+&lt;p&gt;无噪声的 $\rho_{\mathrm{ideal}}$ 的期望是&lt;/p&gt;
+$$
+
+\begin{align}
+    \langle \bar{X}_{\hat{O}} \rangle_{\mathrm{ideal}} = \mathrm{Tr}[\hat{O}\rho_{\mathrm{ideal}}]
+\end{align}
+
+$$&lt;p&gt;我们的 estimator 给出的估计，会与理想值，或真实值，存在 bias&lt;/p&gt;
+$$
+
+\begin{align}
+    \mathrm{bias}[\bar{X}_{\hat{O}}] =
+    E[\bar{X}_{\hat{O}}] - \langle \hat{O} \rangle_{\mathrm{ideal}}.
+\end{align}
+
+$$&lt;p&gt;Estimator 的 mean square error 为&lt;/p&gt;
+$$
+
+\begin{align}
+    \mathrm{MSE}[\bar{X}_{\hat{O}}]
+     =&amp; E[(\bar{X}_{\hat{O}} - \langle \hat{O} \rangle_{\mathrm{ideal}})^2] \\
+     =&amp; \mathrm{bias} [\bar{X}_{\hat{O}}]^2 + \mathrm{var}[\bar{X}_{\hat{O}}].
+\end{align}
+
+$$&lt;p&gt;我们可以用 error mitigated estimator 来减少 bias 。&lt;/p&gt;
+&lt;h2 id="例子"&gt;例子&lt;/h2&gt;
+&lt;p&gt;我们测量
+$\hat{\sigma}^z = |1\rangle\langle 1| - |0\rangle\langle 0|$,
+时，它有两个本征值 $-1, 1$, 本征态 $|0\rangle, |1\rangle$ 。&lt;/p&gt;
+&lt;p&gt;我们在 computational basis $\{|0\rangle, |1\rangle\}$ 下进行测量。
+对应的 quantum operations $M_m$ for this measurement 是&lt;/p&gt;
+$$
+
+\begin{align}
+    M_{|0\rangle\langle 0|} = |0\rangle\langle 0 |,
+    M_{|1\rangle\langle 1|} = |1\rangle\langle 1 |.
+\end{align}
+
+$$&lt;p&gt;我们将这个可观测量 $\hat{\sigma}^z$ 的随机变量记为 $X_{\hat{\sigma}^z}$ 。
+它是一个函数，从 measurement outcomes
+$\{|0\rangle\langle 0|, |1\rangle\langle 1|\}$ 到本征值的集合构成的可测空间 $\hat{\sigma}^z$ $\{-1, 1\}$ 的函数。
+即&lt;/p&gt;
+$$
+
+\begin{align}
+    X_{\hat{\sigma}^z} (|0\rangle\langle 0|) =&amp; -1, \\
+    X_{\hat{\sigma}^z} (|1\rangle\langle 1|) =&amp; 1.
+\end{align}
+
+$$&lt;p&gt;对应的概率为&lt;/p&gt;
+$$
+
+\begin{align}
+    P(X_{\hat{\sigma}^z} = -1) =&amp; \mathrm{Tr}\left[
+        M_{|0\rangle\langle 0|} \rho M^{\dagger}_{|0\rangle\langle 0|}
+     \right], \\
+     P(X_{\hat{\sigma}^z} = 1) =&amp; \mathrm{Tr}\left[
+        M_{|1\rangle\langle 1|} \rho M^{\dagger}_{|1\rangle\langle 1|}
+     \right]
+\end{align}
+
+$$&lt;p&gt;可观测量的期望为&lt;/p&gt;
+$$
+
+\begin{align}
+    E[X_{\hat{\sigma}^z}] =&amp; P(X_{\hat{\sigma}^z} = 1)
+    - P(X_{\hat{\sigma}^z} = -1) \\
+    =&amp; \mathrm{Tr}\left[
+        \hat{\sigma}^z \rho
+    \right] = \langle \hat{\sigma}^z \rangle    .
+\end{align}
+
+$$&lt;p&gt;由&lt;/p&gt;
+$$
+
+\begin{align}
+    E[X^2_{\hat{\sigma}^z}] =&amp; P(X_{\hat{\sigma}^z} = 1)
+    +(-1)^2 P(X_{\hat{\sigma}^z} = -1)  \\
+    =&amp; \mathrm{Tr}\left[
+        \left( \hat{\sigma}^z  \right)^2\rho
+    \right] = \langle \left( \hat{\sigma}^z  \right)^2 \rangle
+    =1   .
+\end{align}
+
+$$&lt;p&gt;可以得到这个可观测量的方差 ，&lt;/p&gt;
+$$
+
+\begin{align}
+    \mathrm{var}[X_{\hat{\sigma}^z}] = E[X^2_{\hat{\sigma}^z}] - E[X_{\hat{\sigma}^z}]^2 = 1 - \langle \hat{\sigma}^z \rangle ^2.
+\end{align}
+
+$$&lt;p&gt;定义 sample mean estimator ，&lt;/p&gt;
+$$
+
+\begin{align}
+    \bar{X}_{\hat{\sigma}^z} = \frac{1}{N_{\mathrm{shots}}}
+    \sum_{l=1}^{N_{\mathrm{shots}}} X_{l, \hat{\sigma}^z}.
+\end{align}
+
+$$&lt;p&gt;其中 $X_{l, \hat{\sigma}^z}$ 是第 &lt;eq&gt;l&lt;/eq&gt; 次测量对应的随机变量。
+我们假设密度矩阵是相同的，那么 $\{X_{l, \hat{\sigma}^z}\}$ 就是 independent and identically distributed (i.i.d.).
+因此我们可以计算方差，&lt;/p&gt;
+$$
+
+\begin{align}
+    \mathrm{var}\left[ \bar{X}_{\hat{\sigma}^z} \right]
+    =&amp; \frac{1}{N_{\mathrm{shots}}^2}\sum_{l=1}^{N_{\mathrm{shots}}}
+    \mathrm{var}\left[  X_{l, \hat{\sigma}^z}  \right] \\
+    =&amp; \frac{1}{N_{\mathrm{shots}}^2} N_{\mathrm{shots}}
+    \mathrm{var}\left[  X_{\hat{\sigma}^z}  \right] \\
+    =&amp; \frac{1}{N_{\mathrm{shots}}}
+    \mathrm{var}\left[  X_{\hat{\sigma}^z}  \right] \\
+    =&amp; \frac{1}{N_{\mathrm{shots}}}
+    \left[  1 -   \langle \hat{\sigma}^z \rangle ^2\right]
+\end{align}
+
+$$&lt;p&gt;这个 estimator 的标准差（standard errors） $\sqrt{\mathrm{var}[\bar{X}_{\hat{\sigma}^z}]}$ 常被用作 error bar 。&lt;/p&gt;
+&lt;h2 id="reference"&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://arxiv.org/abs/2606.27856"&gt;arXiv: 2606.27856: Simulating the Dynamics of Markovian Quantum Processes by Quantum Collision Models on Quantum Computers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="physics"/><category term="quantum computing"/><category term="probability theory"/><category term="random variable"/><category term="estimator"/></entry><entry><title>Arnoldi Iteration</title><link href="https://zqw.ink/2026-07-20-physics-Arnoldi_iteration.html" rel="alternate"/><published>2026-07-20T00:00:00+08:00</published><updated>2026-07-20T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2026-07-20:/2026-07-20-physics-Arnoldi_iteration.html</id><summary type="html">
 &lt;h2 id="qr-factorization"&gt;QR Factorization&lt;/h2&gt;
 &lt;pre&gt;&lt;code class="language-python"&gt;def gram_schmidt_unstable(A: np.ndarray):
     &amp;quot;&amp;quot;&amp;quot;
