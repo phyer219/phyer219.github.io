@@ -19,7 +19,7 @@ tags:
   - [Permutation group $S\_3$](#permutation-group-s_3)
   - [Permutation group $S\_4$](#permutation-group-s_4)
 - [Appendix](#appendix)
-  - [Covariance and contravariance of vectors](#covariance-and-contravariance-of-vectors)
+  - [Covariance and contravariance of vectors（又见2026-08-04: 完备非正交基底）](#covariance-and-contravariance-of-vectors又见2026-08-04-完备非正交基底)
   - [直和](#直和)
 - [Reference](#reference)
 
@@ -393,7 +393,7 @@ $$
 
 ## Appendix
 
-### [Covariance and contravariance of vectors](https://en.wikipedia.org/wiki/Covariance_and_contravariance_of_vectors)
+### [Covariance and contravariance of vectors](https://en.wikipedia.org/wiki/Covariance_and_contravariance_of_vectors)（又见[2026-08-04: 完备非正交基底](./2026-08-04-physics-non_orthogonal_basis.md)）
 
 在不正交的基底下：
 

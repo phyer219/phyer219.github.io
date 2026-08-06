@@ -4,6 +4,10 @@ date: 2026-08-04
 category: physics
 tags:
   - "linear algebra"
+  - "generalized eigenvalue problem"
+  - "non-orthogonal basis"
+  - "mathematics"
+  - "Krylov subspace"
 ---
 
 - [当做普通的量子力学基底来考虑](#当做普通的量子力学基底来考虑)
@@ -13,6 +17,7 @@ tags:
   - [非正交完备基矢和一些相关概念的定义](#非正交完备基矢和一些相关概念的定义)
   - [一些有用的结论](#一些有用的结论)
   - [与正交基底的变换关系](#与正交基底的变换关系)
+  - [应用：非正交基底下的广义本征值问题](#应用非正交基底下的广义本征值问题)
 - [Reference](#reference)
 
 
@@ -391,6 +396,49 @@ $$
         = \sum_{\mu}\sum_n T^{\mu}{}_n \psi^n |e_\mu\rangle
 \end{align}
 $$
+
+### 应用：非正交基底下的广义本征值问题
+
+Hamiltonian $\hat{H}$ 可以生成 Hilbert space 的一个 Krylov subspace
+
+$$
+\begin{align}
+  \mathcal{K}_n =& \mathrm{span}\{|\psi\rangle, \hat{H}|\psi\rangle, \hat{H}^2|\psi\rangle, \cdots, \hat{H}^{n - 1}|\psi\rangle \} \\
+    \equiv& \mathrm{span}\{|e_{\mu}\}
+\end{align}
+$$
+
+$\hat{H}$ 的本征值问题
+
+$$
+\begin{align}
+    \quad \hat{H} |n_{\mathrm{exact}}\rangle = E_n |n_{\mathrm{exact}}\rangle
+\end{align}
+$$
+
+在这个子空间中，可以高效求解（见[2026-07-07: Krylov 空间对角化](./2026-07-07-physics-Krylov_subspace.md)）。
+在子空间中的近似本征态 $|n\rangle \approx |n_{\mathrm{exact}}\rangle$ 满足，
+
+$$
+\begin{align}
+    \sum_{\nu} \langle e_{\mu} |\hat{H}| e_{\nu}\rangle \langle e^{\nu}|n\rangle
+      = \sum_{\nu} E_n \langle e_{\mu} | e_{\nu} \rangle\langle e^{\nu} | n\rangle
+\end{align}
+$$
+
+写成矩阵形式即
+
+$$
+\begin{align}
+    H c_n = E_n Sc_n
+\end{align}
+$$
+
+其中 $H_{\mu \nu} = \langle e_{\mu} | \hat{H} |e_{\nu}\rangle$ ,
+$S_{\mu \nu} = \langle e_{\mu} | e_{\nu}\rangle$ ,
+$(c_n)^{\nu} = \langle e^{\nu}|n\rangle$ ,
+$|n\rangle = \sum_{\nu}(c_n)^{\nu} | e_{\nu}\rangle$ 。
+这是一个广义本征值问题。
 
 ## Reference
 

@@ -85,6 +85,10 @@
     <meta name="description" content="当做普通的量子力学基底来考虑 正交基底与非正交基底之间的变换关系 矢量的分量在基底之间的变换关系 Tensorial formalism 非正 …" />
 
     <meta name="tags" content="linear algebra" />
+    <meta name="tags" content="generalized eigenvalue problem" />
+    <meta name="tags" content="non-orthogonal basis" />
+    <meta name="tags" content="mathematics" />
+    <meta name="tags" content="Krylov subspace" />
 
   <!-- SEO: structured data for articles (JSON-LD) -->
   <script type="application/ld+json">
@@ -167,6 +171,7 @@
 <li><a href="#%E9%9D%9E%E6%AD%A3%E4%BA%A4%E5%AE%8C%E5%A4%87%E5%9F%BA%E7%9F%A2%E5%92%8C%E4%B8%80%E4%BA%9B%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5%E7%9A%84%E5%AE%9A%E4%B9%89">非正交完备基矢和一些相关概念的定义</a></li>
 <li><a href="#%E4%B8%80%E4%BA%9B%E6%9C%89%E7%94%A8%E7%9A%84%E7%BB%93%E8%AE%BA">一些有用的结论</a></li>
 <li><a href="#%E4%B8%8E%E6%AD%A3%E4%BA%A4%E5%9F%BA%E5%BA%95%E7%9A%84%E5%8F%98%E6%8D%A2%E5%85%B3%E7%B3%BB">与正交基底的变换关系</a></li>
+<li><a href="#%E5%BA%94%E7%94%A8%E9%9D%9E%E6%AD%A3%E4%BA%A4%E5%9F%BA%E5%BA%95%E4%B8%8B%E7%9A%84%E5%B9%BF%E4%B9%89%E6%9C%AC%E5%BE%81%E5%80%BC%E9%97%AE%E9%A2%98">应用：非正交基底下的广义本征值问题</a></li>
 </ul>
 </li>
 <li><a href="#reference">Reference</a></li>
@@ -501,7 +506,44 @@ $$$$
         = \sum_{\mu}\sum_n T^{\mu}{}_n \psi^n |e_\mu\rangle
 \end{align}
 
-$$<h2 id="reference">Reference</h2>
+$$<h3 id="应用非正交基底下的广义本征值问题">应用：非正交基底下的广义本征值问题</h3>
+<p>Hamiltonian $\hat{H}$ 可以生成 Hilbert space 的一个 Krylov subspace</p>
+$$
+
+\begin{align}
+  \mathcal{K}_n =& \mathrm{span}\{|\psi\rangle, \hat{H}|\psi\rangle, \hat{H}^2|\psi\rangle, \cdots, \hat{H}^{n - 1}|\psi\rangle \} \\
+    \equiv& \mathrm{span}\{|e_{\mu}\}
+\end{align}
+
+$$<p>$\hat{H}$ 的本征值问题</p>
+$$
+
+\begin{align}
+    \quad \hat{H} |n_{\mathrm{exact}}\rangle = E_n |n_{\mathrm{exact}}\rangle
+\end{align}
+
+$$<p>在这个子空间中，可以高效求解（见<a href="./2026-07-07-physics-Krylov_subspace.html">2026-07-07: Krylov 空间对角化</a>）。
+在子空间中的近似本征态 $|n\rangle \approx |n_{\mathrm{exact}}\rangle$ 满足，</p>
+$$
+
+\begin{align}
+    \sum_{\nu} \langle e_{\mu} |\hat{H}| e_{\nu}\rangle \langle e^{\nu}|n\rangle
+      = \sum_{\nu} E_n \langle e_{\mu} | e_{\nu} \rangle\langle e^{\nu} | n\rangle
+\end{align}
+
+$$<p>写成矩阵形式即</p>
+$$
+
+\begin{align}
+    H c_n = E_n Sc_n
+\end{align}
+
+$$<p>其中 $H_{\mu \nu} = \langle e_{\mu} | \hat{H} |e_{\nu}\rangle$ ,
+$S_{\mu \nu} = \langle e_{\mu} | e_{\nu}\rangle$ ,
+$(c_n)^{\nu} = \langle e^{\nu}|n\rangle$ ,
+$|n\rangle = \sum_{\nu}(c_n)^{\nu} | e_{\nu}\rangle$ 。
+这是一个广义本征值问题。</p>
+<h2 id="reference">Reference</h2>
 <ul>
 <li>2020, Sakurai and Napolitano, Modern Quantum Mechanics</li>
 <li><a href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.43.5770">1991, Phys. Rev. A 43, 5770, Nonorthogonal basis sets in quantum mechanics: Representations and second quantization</a></li>
@@ -514,6 +556,10 @@ $$<h2 id="reference">Reference</h2>
 <section class="post-meta">
     <p>
         <a class="post-link" href="https://zqw.ink/tag/linear-algebra.html">#linear algebra</a>
+        <a class="post-link" href="https://zqw.ink/tag/generalized-eigenvalue-problem.html">#generalized eigenvalue problem</a>
+        <a class="post-link" href="https://zqw.ink/tag/non-orthogonal-basis.html">#non-orthogonal basis</a>
+        <a class="post-link" href="https://zqw.ink/tag/mathematics.html">#mathematics</a>
+        <a class="post-link" href="https://zqw.ink/tag/Krylov-subspace.html">#Krylov subspace</a>
     </p>
 </section>
 

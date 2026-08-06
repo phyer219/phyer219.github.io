@@ -3,9 +3,10 @@ title: Krylov 空间对角化
 date: 2026-07-07
 category: physics
 tags:
-  - "numerical linear algebra"
+  - "linear algebra"
   - "group theory"
   - "Krylov subspace"
+  - "numerical"
 ---
 
 ## Definition of [Krylov subspace](https://en.wikipedia.org/wiki/Krylov_subspace)
