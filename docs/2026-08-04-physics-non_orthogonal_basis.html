@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="zh_cn">
+
+<head>
+    <title>从冰上的水 - 完备非正交基底</title>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Pelican" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://zqw.ink/feeds/all.atom.xml"
+    type="application/atom+xml" rel="alternate" title="从冰上的水 Full Atom Feed" />
+  <link
+    href="https://zqw.ink/feeds/physics.atom.xml"
+    type="application/atom+xml" rel="alternate" title="从冰上的水 Categories Atom Feed" />
+  <link rel="stylesheet" type="text/css" href="https://zqw.ink/theme/css/style.css" />
+  <!-- SEO: site-level structured data (WebSite) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "从冰上的水",
+    "url": "https://zqw.ink/"
+  }
+  </script>
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Serif+SC&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.6.1/github-markdown.min.css" integrity="sha512-wpdV3v8V8vWajD1kH8rI1UO1H2q9TQ3s8o1mG7lH8fS1dZ+3q1B1p4lH2tF8rQm2u0n8oV6rN3tV4nQWmY4nTw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!--fonts end  -->
+  <!-- highlight.js -->
+  <link id="hljs-light" rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" disabled>
+  <link id="hljs-dark" rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" disabled>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <script>
+    hljs.highlightAll();
+    (function () {
+      const light = document.getElementById('hljs-light');
+      const dark = document.getElementById('hljs-dark');
+      if (!light || !dark) return;
+
+      function resolveTheme() {
+        return document.documentElement.getAttribute('data-theme') || 'light';
+      }
+
+      function applyTheme(theme) {
+        const isDark = theme === 'dark';
+        light.disabled = isDark;
+        dark.disabled = !isDark;
+      }
+
+      const observer = new MutationObserver(function () {
+        applyTheme(resolveTheme());
+      });
+      observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+      applyTheme(resolveTheme());
+    })();
+  </script>
+  <!-- highlight.js end -->
+
+<script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        tags: 'ams'   // 自动给 AMS 环境/显示公式编号
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.1">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.1">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.1">
+
+
+
+  <!-- SEO: page description for search results -->
+    <meta name="description" content="当做普通的量子力学基底来考虑 正交基底与非正交基底之间的变换关系 矢量的分量在基底之间的变换关系 Tensorial formalism 非正 …" />
+
+    <meta name="tags" content="linear algebra" />
+
+  <!-- SEO: structured data for articles (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "完备非正交基底",
+    "datePublished": "2026-08-04T00:00:00+08:00",
+    "author": {
+      "@type": "Person",
+      "name": "ZQW"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://zqw.ink/2026-08-04-physics-non_orthogonal_basis.html"
+    }
+  }
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <div id="header-container">
+      <button id="nav-toggle" class="nav-toggle" aria-label="打开菜单" aria-expanded="false">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+      <nav id="site-nav">
+        <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/category/physics">Physics</a>
+            </li>
+            <li>
+              <a href="/category/blog">Blog</a>
+            </li>
+            <li>
+              <a href="/category/coding">Coding</a>
+            </li>
+            <li>
+              <a href="/archives">All</a>
+            </li>
+          </ul>
+      </nav>
+      <div class="header-actions">
+        <button id="theme-toggle" aria-label="切换到深色模式" title="切换主题">
+          <i class="theme-icon icon-sun fa-solid fa-sun" aria-hidden="true"></i>
+          <i class="theme-icon icon-moon fa-solid fa-moon" aria-hidden="true"></i>
+        </button>
+        <div class="rss">
+            <a href="https://zqw.ink/feeds/all.atom.xml" aria-label="Atom 订阅">
+              <i class="fa-solid fa-rss" aria-hidden="true"></i>
+            </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+
+<h1 class="post-title">完备非正交基底</h1>
+
+<section class="post-meta">
+    <p>2026-08-04</p>
+    <p>-<a class="post-link" href="https://zqw.ink/category/physics.html">physics</a></p>
+</section>
+
+<section class="markdown-body">
+  
+<ul>
+<li><a href="#%E5%BD%93%E5%81%9A%E6%99%AE%E9%80%9A%E7%9A%84%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%9F%BA%E5%BA%95%E6%9D%A5%E8%80%83%E8%99%91">当做普通的量子力学基底来考虑</a>
+<ul>
+<li><a href="#%E6%AD%A3%E4%BA%A4%E5%9F%BA%E5%BA%95%E4%B8%8E%E9%9D%9E%E6%AD%A3%E4%BA%A4%E5%9F%BA%E5%BA%95%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8F%98%E6%8D%A2%E5%85%B3%E7%B3%BB">正交基底与非正交基底之间的变换关系</a></li>
+<li><a href="#%E7%9F%A2%E9%87%8F%E7%9A%84%E5%88%86%E9%87%8F%E5%9C%A8%E5%9F%BA%E5%BA%95%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8F%98%E6%8D%A2%E5%85%B3%E7%B3%BB">矢量的分量在基底之间的变换关系</a></li>
+</ul>
+</li>
+<li><a href="#tensorial-formalism">Tensorial formalism</a>
+<ul>
+<li><a href="#%E9%9D%9E%E6%AD%A3%E4%BA%A4%E5%AE%8C%E5%A4%87%E5%9F%BA%E7%9F%A2%E5%92%8C%E4%B8%80%E4%BA%9B%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5%E7%9A%84%E5%AE%9A%E4%B9%89">非正交完备基矢和一些相关概念的定义</a></li>
+<li><a href="#%E4%B8%80%E4%BA%9B%E6%9C%89%E7%94%A8%E7%9A%84%E7%BB%93%E8%AE%BA">一些有用的结论</a></li>
+<li><a href="#%E4%B8%8E%E6%AD%A3%E4%BA%A4%E5%9F%BA%E5%BA%95%E7%9A%84%E5%8F%98%E6%8D%A2%E5%85%B3%E7%B3%BB">与正交基底的变换关系</a></li>
+</ul>
+</li>
+<li><a href="#reference">Reference</a></li>
+</ul>
+<h2 id="当做普通的量子力学基底来考虑">当做普通的量子力学基底来考虑</h2>
+<p>下面的内容，先忽略上标和下标的区别，统一视为下标。后面会说明它们在张量记号下的含义。</p>
+<h3 id="正交基底与非正交基底之间的变换关系">正交基底与非正交基底之间的变换关系</h3>
+<p>在一个线性空间中，有一组正交基底</p>
+$$
+
+\begin{align}
+    |e_n\rangle
+\end{align}
+
+$$<p>和一组非正交基底</p>
+$$
+
+\begin{align}
+    |e_{\mu}\rangle.
+\end{align}
+
+$$<p>它们之间的变换关系为</p>
+$$
+
+\begin{align}
+    |e_{\mu} \rangle = \sum_n |e_n\rangle\langle e^n| e_{\mu}\rangle = \sum_n |e_n\rangle T^n{}_{\mu},
+\end{align}
+
+$$$$
+
+\begin{align}
+    \langle e_{\mu} | = \sum_n \langle e_{\mu}| e^n\rangle \langle e_n|
+     = \sum_n \langle e_n | \left(T^*\right)^n{}_{\mu}.
+\end{align}
+
+$$<p>反之</p>
+$$
+
+\begin{align}
+    |e_n\rangle = \sum_{\mu} |e_{\mu}\rangle \left(T^{-1}\right)^{\mu}{}_n,
+\end{align}
+
+$$$$
+
+\begin{align}
+    \langle e_n | = \sum_{\mu} \left[ \left(T^{-1} \right)^* \right]^{\mu}{}_n
+     \langle e_{\mu}|,
+\end{align}
+
+$$<p>其中</p>
+$$
+
+T^n{}_{\mu} = \langle e^n | e_{\mu} \rangle.
+
+$$<p>由此可得非正交基底的完备关系</p>
+$$
+
+\begin{align}
+    1 =& \sum_n | e_n \rangle \langle e^n|
+    = \sum_n \sum_{\mu \nu} |e_{\mu}\rangle
+       \left(T^{-1}\right)^{\mu}{}_{n}
+      \left[ \left(T^{-1}\right)^*\right]^{\nu}{}_n
+       \langle e_{\nu} | \\
+      =& \sum_{\mu \nu} | e_{\mu} \rangle
+      S^{\mu \nu} \langle e_{\nu}|,
+\end{align}
+
+$$<p>其中</p>
+$$
+
+\begin{align}
+    S^{\mu \nu} = \left[\left(T^{\dagger}T\right)^{-1}\right]^{\mu \nu} , \quad
+    \left( T^{\dagger}T\right)_{\mu \nu} = \langle e_{\mu} | e_{\nu}\rangle.
+\end{align}
+
+$$<h3 id="矢量的分量在基底之间的变换关系">矢量的分量在基底之间的变换关系</h3>
+<p>空间中的任意态 $|\psi\rangle$ 用正交基底展开，</p>
+$$
+
+\begin{align}
+    |\psi\rangle = \sum_n |e_n\rangle \langle e^n | \psi\rangle
+    = \sum_n \psi^n | e_n \rangle.
+\end{align}
+
+$$<p>转换到非正交基底</p>
+$$
+
+\begin{align}
+    |\psi\rangle =
+    \sum_{\mu \nu} | e_{\mu} \rangle
+    S^{\mu \nu} \langle e_{\nu}|
+    \psi\rangle
+    =\sum_{\mu} \psi^{\mu} |e_{\mu} \rangle,
+\end{align}
+
+$$<p>其中</p>
+$$
+
+\psi^{\mu} = \sum_{\nu} S^{\mu \nu} \langle e_{\nu}|
+    \psi\rangle
+    = \sum_n \left(T^{-1}\right)^{\mu}{}_{n} \psi^n.
+
+$$<p>反之</p>
+$$
+
+\begin{align}
+    \psi^n = \sum_{\mu}
+    T^n{}_{\mu}
+     \psi^{\mu}.
+\end{align}
+
+$$<h2 id="tensorial-formalism">Tensorial formalism</h2>
+<p>接下来用张量的上下标的符号来描述非正交基底。</p>
+<h3 id="非正交完备基矢和一些相关概念的定义">非正交完备基矢和一些相关概念的定义</h3>
+<p>在 Hilbert space $\mathcal{H}$ 中的一组非正交（当然正交是一种特殊的情况，也满足这些定义），完备的基矢为</p>
+$$
+
+\begin{align}
+    | e_{\mu} \rangle
+\end{align}
+
+$$<p>在 2020 - Sakurai and Napolitano - Modern Quantum Mechanics 中的 D.C. 的意义下，它有对应的左矢</p>
+$$
+
+\begin{align}
+    \langle e_\mu |
+\end{align}
+
+$$<p>每一基矢都存在一个与之正交归一的矢量，它们构成另外一组基矢，用上标标记</p>
+$$
+
+\begin{align}
+    \langle e^{\mu} |
+\end{align}
+
+$$<p>同样的，它也有对应的右矢</p>
+$$
+
+\begin{align}
+    | e^{\mu} \rangle
+\end{align}
+
+$$<p>在 REF:1991 中，也把它们分为 proper 或 improper ,总结如下</p>
+$$
+
+\begin{align}
+    \begin{matrix}
+        \mathrm{proper} &  \mathrm{improper}
+        \\ \hline
+        |e_{\mu}\rangle &  \langle e_{\mu} | \\
+        \langle e^{\mu}| & |e^{\mu}\rangle
+    \end{matrix}
+\end{align}
+
+$$<p>它们的正交归一性可以写为</p>
+$$
+
+\begin{align}
+    \langle e^{\mu} | e_{\nu}\rangle =& \delta^{\mu}{}_{\nu} \\
+    \langle e_{\mu} | e^{\nu}\rangle =& \delta_{\mu}{}^{\nu}
+\end{align}
+
+$$<p>它们之间的度规（<a href="https://en.wikipedia.org/wiki/Metric_tensor">Metric</a>）定义为</p>
+$$
+
+\begin{align}
+    S_{\mu \nu} \equiv & \langle e_{\mu} | e_{\nu} \rangle \\
+    S^{\mu \nu} \equiv & \langle e^{\mu} | e^{\nu} \rangle
+\end{align}
+
+$$<p>可以发现 metric <eq>S</eq> 是一个厄米矩阵。</p>
+<p>在 Hilbert space $\mathcal{H}$ 中的任意矢量 $|\psi\rangle$ ,定义它在这组基矢上的投影，或分量为（proper 的两个）</p>
+$$
+
+\begin{align}
+    \psi^{\mu} \equiv& \langle e^{\mu} | \psi\rangle \\
+    \psi_{\mu} \equiv& \langle \psi | e_{\mu}\rangle
+\end{align}
+
+$$<p>以及 improper 的两个</p>
+$$
+
+\begin{align}
+    \psi^{\mu *} \equiv& \langle \psi | e^{\mu} \rangle \\
+    \psi_{\mu}^{*} \equiv& \langle e_{\mu} | \psi \rangle
+\end{align}
+
+$$<p>由于 $\psi^{\mu}$ 只有一个指标，没法通过是行指标还是列指标来区分往左矢还投影还是往右矢投影，
+所以固定上指标是往 proper 的左矢投影。
+往上指标右矢的投影就直接写成其复共轭。也有文章用一个占位符，即 $\psi^{\cdot \mu}$ 来表示 $\psi^{\mu *}$ ，这里不采用。</p>
+<p>同理固定下指标 $\psi_{\mu}$ 是往 proper 的右矢投影。</p>
+<h3 id="一些有用的结论">一些有用的结论</h3>
+<p>与正交基底类似的，在非正交基底中也存在单位算符</p>
+$$
+
+\begin{align}
+    1 = \sum_{\mu} | e_\mu \rangle \langle e^{\mu} |
+      = \sum_{\mu} | e^\mu \rangle \langle e_{\mu} |
+\end{align}
+
+$$<p>证明：把它作用在任基矢上
+$\sum_{\mu} | e_\mu \rangle \langle e^{\mu} | e_{\nu}\rangle = \sum_{\mu} | e_\mu \rangle \delta^{\mu}{}_{\nu} = |e_{\nu}\rangle$ ，相当于一个单位算符，易得作用在任意矢量上都相当于一个单位算符。</p>
+<p>虽然 $S_{\mu \nu}$ 和 $S^{\mu \nu}$ 看起来像是同一个矩阵的矩阵元，但实际上它们是两个互逆的矩阵，</p>
+$$
+
+\begin{align}
+    \sum_{\lambda} S_{\mu \lambda} S^{\lambda \nu}
+      =& \sum_{\lambda} \langle e_{\mu} | e_\lambda \rangle
+        \langle e^{\lambda} | e^{\nu}\rangle
+      = \langle e_{\mu} | e^{\nu}\rangle \\
+      =& \delta_{\mu}{}^{\nu}
+\end{align}
+
+$$<p>度规可以把一个指标升上去或降下来，</p>
+$$
+
+\begin{align}
+    \psi^{\mu} =& \langle e^{\mu} | \psi \rangle
+      = \sum_{\nu} \langle e^{\mu} | e^{\nu}\rangle\langle e_{\nu} | \psi \rangle \\
+      =& \sum_{\nu} S^{\mu \nu} \psi_{\nu}^*
+\end{align}
+
+$$<p>同理</p>
+$$
+
+\begin{align}
+    \psi_{\mu}^* = \sum_{\nu} S_{\mu \nu} \psi^{\nu}
+\end{align}
+
+$$<p>对于任意算符也是一样，例如，</p>
+$$
+
+\begin{align}
+    B_{\mu \nu} =& \langle e_{\mu} | B | e_{\nu}\rangle \\
+      =& \sum_{\lambda} S_{\mu \lambda} B^{\lambda}{}_{\nu} \\
+      =& \sum_{\lambda} B_{\mu}{}^{\lambda} S_{\lambda \nu}
+\end{align}
+
+$$<p>对任意态 $|\psi\rangle$ , $\psi^{\mu}$ 和 $\psi^{\nu}$ 分别就是在两组互相对偶的非正交基底上的展开系数，</p>
+$$
+
+\begin{align}
+    |\psi\rangle = \sum_{\mu} | e_{\mu}\rangle \langle e^{\mu}| \psi\rangle
+      = \sum_{\mu} \psi^{\mu} | e_{\mu} \rangle
+\end{align}
+
+$$$$
+
+\begin{align}
+    \langle \psi | = \sum_{\mu} \langle\psi | e_{\mu}\rangle \langle e^{\mu}|
+    = \sum_{\mu} \langle e^{\mu}| \psi_{\mu}
+\end{align}
+
+$$<h3 id="与正交基底的变换关系">与正交基底的变换关系</h3>
+<p>正交基底的对偶基底就是它本身，即</p>
+$$
+
+\begin{align}
+    |e_n \rangle = |e^n\rangle
+\end{align}
+
+$$<p>度规是单位阵</p>
+$$
+
+\begin{align}
+    S_{mn} = \langle e_m | e_n \rangle = \delta_{mn},
+    \quad S^{mn} = \delta^{mn}
+\end{align}
+
+$$<p>展开系数</p>
+$$
+
+\begin{align}
+    \psi^n = \langle e^n | \psi \rangle = \langle e_n | \psi\rangle = \psi_n^*
+\end{align}
+
+$$<p>变换矩阵</p>
+$$
+
+\begin{align}
+    T^n{}_{\mu} = T_{n\mu} = \langle e_n|e_{\mu}\rangle
+      = \langle e^n|e_\mu\rangle
+\end{align}
+
+$$$$
+
+\begin{align}
+    T_n{}^{\mu} = T^{n\mu} = \langle e^n|e^{\mu}\rangle
+      = \langle e_n|e^\mu\rangle
+\end{align}
+
+$$$$
+
+\begin{align}
+    \sum_n T_{\mu n} T^{n \nu}
+      = \sum_n \langle e_{\mu} | e_n\rangle \langle e^n|e^{\nu}\rangle
+      = \delta_\mu{}^{\nu}
+\end{align}
+
+$$<p>注意，类似于度规，在这里 $T_{\mu n}$ 和 $T^{n \mu}$ 是两个互逆的矩阵的矩阵元。</p>
+<p>变换关系为</p>
+$$
+
+\begin{align}
+    \psi^n = T^n{}_{\mu} \psi^{\mu}
+\end{align}
+
+$$$$
+
+\begin{align}
+    \psi^{\mu} = T^{\mu}{}_n \psi^{n}
+\end{align}
+
+$$<p>证明如下</p>
+$$
+
+\begin{align}
+    |\psi\rangle =& \sum_n |e_n\rangle\langle e^n|\psi\rangle
+        = \sum_n \psi^n |e_n\rangle \\
+      =& \sum_n \sum_{\mu} |e_n \rangle \langle e^n | e_{\mu}\rangle
+       \langle e^{\mu} | \psi\rangle
+        = \sum_n \sum_{\mu} T^n{}_{\mu} \psi^{\mu} | e_n \rangle
+\end{align}
+
+$$$$
+
+\begin{align}
+    |\psi\rangle =& \sum_{\mu} | e_{\mu}\rangle \langle e^{\mu} | \psi\rangle
+        = \sum_{\mu} \psi^{\mu} | e_{\mu}\rangle \\
+      =& \sum_{\mu}\sum_n | e_{\mu}\rangle \langle e^{\mu}
+          |e_n\rangle\langle e^n| \psi\rangle
+        = \sum_{\mu}\sum_n T^{\mu}{}_n \psi^n |e_\mu\rangle
+\end{align}
+
+$$<h2 id="reference">Reference</h2>
+<ul>
+<li>2020, Sakurai and Napolitano, Modern Quantum Mechanics</li>
+<li><a href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.43.5770">1991, Phys. Rev. A 43, 5770, Nonorthogonal basis sets in quantum mechanics: Representations and second quantization</a></li>
+<li><a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.95.115155">2017, Phys. Rev. B 95, 115155, Quantum mechanics in an evolving Hilbert space</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Covariance_and_contravariance_of_vectors">Wikipedia: Covariance and contravariance of vectors</a></li>
+</ul>
+
+</section>
+
+<section class="post-meta">
+    <p>
+        <a class="post-link" href="https://zqw.ink/tag/linear-algebra.html">#linear algebra</a>
+    </p>
+</section>
+
+  </main>
+  <footer role="contentinfo">
+    <p>Copyright &copy; 2018 - 2026 ZQW</p>
+  </footer>
+  <script>
+  (function() {
+    const key = 'theme';
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const saved = localStorage.getItem(key);
+    const init = saved ? saved : 'system';
+    const effective = init === 'system' ? (prefersDark ? 'dark' : 'light') : init;
+    document.documentElement.setAttribute('data-theme', effective);
+    updateThemeButton(effective);
+
+    document.getElementById('theme-toggle')?.addEventListener('click', function () {
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem(key, next);
+      updateThemeButton(next);
+    });
+
+    function updateThemeButton(theme) {
+      const btn = document.getElementById('theme-toggle');
+      if (btn) {
+        btn.setAttribute('aria-label', theme === 'dark' ? '切换到浅色模式' : '切换到深色模式');
+      }
+    }
+  })();
+  </script>
+  <script>
+  (function() {
+    const blocks = document.querySelectorAll('pre > code');
+    blocks.forEach((code) => {
+      const pre = code.parentElement;
+      if (!pre) return;
+
+      if (!pre.dataset.lang) {
+        const cls = Array.from(code.classList);
+        const langClass = cls.find((name) => name.startsWith('language-') || name.startsWith('lang-'));
+        if (langClass) {
+          const raw = langClass.replace(/^language-/, '').replace(/^lang-/, '');
+          pre.dataset.lang = raw.replace(/_/g, ' ').toUpperCase();
+        }
+      }
+
+      if (pre.querySelector('.copy-btn')) return;
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'copy-btn';
+      btn.setAttribute('aria-label', '复制代码');
+      btn.textContent = 'Copy';
+      btn.addEventListener('click', async function () {
+        try {
+          await navigator.clipboard.writeText(code.innerText);
+          btn.textContent = 'Copied';
+        } catch (err) {
+          const range = document.createRange();
+          range.selectNodeContents(code);
+          const selection = window.getSelection();
+          selection.removeAllRanges();
+          selection.addRange(range);
+          try {
+            document.execCommand('copy');
+            btn.textContent = 'Copied';
+          } finally {
+            selection.removeAllRanges();
+          }
+        }
+        setTimeout(() => {
+          btn.textContent = 'Copy';
+        }, 1500);
+      });
+      pre.appendChild(btn);
+    });
+  })();
+  </script>
+  <script>
+  (function() {
+    const toggle = document.getElementById('nav-toggle');
+    const nav = document.getElementById('site-nav');
+    if (!toggle || !nav) return;
+
+    function closeNav() {
+      nav.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', '打开菜单');
+    }
+
+    function openNav() {
+      nav.classList.add('is-open');
+      toggle.setAttribute('aria-expanded', 'true');
+      toggle.setAttribute('aria-label', '关闭菜单');
+    }
+
+    toggle.addEventListener('click', function (event) {
+      event.stopPropagation();
+      const isOpen = nav.classList.contains('is-open');
+      if (isOpen) {
+        closeNav();
+      } else {
+        openNav();
+      }
+    });
+
+    nav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', closeNav);
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!nav.classList.contains('is-open')) return;
+      if (nav.contains(event.target) || toggle.contains(event.target)) return;
+      closeNav();
+    });
+  })();
+  </script>
+</body>
+
+</html>

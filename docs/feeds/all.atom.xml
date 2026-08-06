@@ -1,5 +1,369 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/all.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2026-07-24T00:00:00+08:00</updated><entry><title>Shot noise</title><link href="https://zqw.ink/2026-07-24-physics-shot_noise.html" rel="alternate"/><published>2026-07-24T00:00:00+08:00</published><updated>2026-07-24T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2026-07-24:/2026-07-24-physics-shot_noise.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>从冰上的水</title><link href="https://zqw.ink/" rel="alternate"/><link href="https://zqw.ink/feeds/all.atom.xml" rel="self"/><id>https://zqw.ink/</id><updated>2026-08-04T00:00:00+08:00</updated><entry><title>完备非正交基底</title><link href="https://zqw.ink/2026-08-04-physics-non_orthogonal_basis.html" rel="alternate"/><published>2026-08-04T00:00:00+08:00</published><updated>2026-08-04T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2026-08-04:/2026-08-04-physics-non_orthogonal_basis.html</id><summary type="html">
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#%E5%BD%93%E5%81%9A%E6%99%AE%E9%80%9A%E7%9A%84%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%9F%BA%E5%BA%95%E6%9D%A5%E8%80%83%E8%99%91"&gt;当做普通的量子力学基底来考虑&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#%E6%AD%A3%E4%BA%A4%E5%9F%BA%E5%BA%95%E4%B8%8E%E9%9D%9E%E6%AD%A3%E4%BA%A4%E5%9F%BA%E5%BA%95%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8F%98%E6%8D%A2%E5%85%B3%E7%B3%BB"&gt;正交基底与非正交基底之间的变换关系&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E7%9F%A2%E9%87%8F%E7%9A%84%E5%88%86%E9%87%8F%E5%9C%A8%E5%9F%BA%E5%BA%95%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8F%98%E6%8D%A2%E5%85%B3%E7%B3%BB"&gt;矢量的分量在基底之间的变换关系&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#tensorial-formalism"&gt;Tensorial formalism&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#%E9%9D%9E%E6%AD%A3%E4%BA%A4%E5%AE%8C%E5%A4%87%E5%9F%BA%E7%9F%A2%E5%92%8C%E4%B8%80%E4%BA%9B%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5%E7%9A%84%E5%AE%9A%E4%B9%89"&gt;非正 …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#%E5%BD%93%E5%81%9A%E6%99%AE%E9%80%9A%E7%9A%84%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%9F%BA%E5%BA%95%E6%9D%A5%E8%80%83%E8%99%91"&gt;当做普通的量子力学基底来考虑&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#%E6%AD%A3%E4%BA%A4%E5%9F%BA%E5%BA%95%E4%B8%8E%E9%9D%9E%E6%AD%A3%E4%BA%A4%E5%9F%BA%E5%BA%95%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8F%98%E6%8D%A2%E5%85%B3%E7%B3%BB"&gt;正交基底与非正交基底之间的变换关系&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E7%9F%A2%E9%87%8F%E7%9A%84%E5%88%86%E9%87%8F%E5%9C%A8%E5%9F%BA%E5%BA%95%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8F%98%E6%8D%A2%E5%85%B3%E7%B3%BB"&gt;矢量的分量在基底之间的变换关系&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#tensorial-formalism"&gt;Tensorial formalism&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#%E9%9D%9E%E6%AD%A3%E4%BA%A4%E5%AE%8C%E5%A4%87%E5%9F%BA%E7%9F%A2%E5%92%8C%E4%B8%80%E4%BA%9B%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5%E7%9A%84%E5%AE%9A%E4%B9%89"&gt;非正交完备基矢和一些相关概念的定义&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E4%B8%80%E4%BA%9B%E6%9C%89%E7%94%A8%E7%9A%84%E7%BB%93%E8%AE%BA"&gt;一些有用的结论&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E4%B8%8E%E6%AD%A3%E4%BA%A4%E5%9F%BA%E5%BA%95%E7%9A%84%E5%8F%98%E6%8D%A2%E5%85%B3%E7%B3%BB"&gt;与正交基底的变换关系&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#reference"&gt;Reference&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="当做普通的量子力学基底来考虑"&gt;当做普通的量子力学基底来考虑&lt;/h2&gt;
+&lt;p&gt;下面的内容，先忽略上标和下标的区别，统一视为下标。后面会说明它们在张量记号下的含义。&lt;/p&gt;
+&lt;h3 id="正交基底与非正交基底之间的变换关系"&gt;正交基底与非正交基底之间的变换关系&lt;/h3&gt;
+&lt;p&gt;在一个线性空间中，有一组正交基底&lt;/p&gt;
+$$
+
+\begin{align}
+    |e_n\rangle
+\end{align}
+
+$$&lt;p&gt;和一组非正交基底&lt;/p&gt;
+$$
+
+\begin{align}
+    |e_{\mu}\rangle.
+\end{align}
+
+$$&lt;p&gt;它们之间的变换关系为&lt;/p&gt;
+$$
+
+\begin{align}
+    |e_{\mu} \rangle = \sum_n |e_n\rangle\langle e^n| e_{\mu}\rangle = \sum_n |e_n\rangle T^n{}_{\mu},
+\end{align}
+
+$$$$
+
+\begin{align}
+    \langle e_{\mu} | = \sum_n \langle e_{\mu}| e^n\rangle \langle e_n|
+     = \sum_n \langle e_n | \left(T^*\right)^n{}_{\mu}.
+\end{align}
+
+$$&lt;p&gt;反之&lt;/p&gt;
+$$
+
+\begin{align}
+    |e_n\rangle = \sum_{\mu} |e_{\mu}\rangle \left(T^{-1}\right)^{\mu}{}_n,
+\end{align}
+
+$$$$
+
+\begin{align}
+    \langle e_n | = \sum_{\mu} \left[ \left(T^{-1} \right)^* \right]^{\mu}{}_n
+     \langle e_{\mu}|,
+\end{align}
+
+$$&lt;p&gt;其中&lt;/p&gt;
+$$
+
+T^n{}_{\mu} = \langle e^n | e_{\mu} \rangle.
+
+$$&lt;p&gt;由此可得非正交基底的完备关系&lt;/p&gt;
+$$
+
+\begin{align}
+    1 =&amp; \sum_n | e_n \rangle \langle e^n|
+    = \sum_n \sum_{\mu \nu} |e_{\mu}\rangle
+       \left(T^{-1}\right)^{\mu}{}_{n}
+      \left[ \left(T^{-1}\right)^*\right]^{\nu}{}_n
+       \langle e_{\nu} | \\
+      =&amp; \sum_{\mu \nu} | e_{\mu} \rangle
+      S^{\mu \nu} \langle e_{\nu}|,
+\end{align}
+
+$$&lt;p&gt;其中&lt;/p&gt;
+$$
+
+\begin{align}
+    S^{\mu \nu} = \left[\left(T^{\dagger}T\right)^{-1}\right]^{\mu \nu} , \quad
+    \left( T^{\dagger}T\right)_{\mu \nu} = \langle e_{\mu} | e_{\nu}\rangle.
+\end{align}
+
+$$&lt;h3 id="矢量的分量在基底之间的变换关系"&gt;矢量的分量在基底之间的变换关系&lt;/h3&gt;
+&lt;p&gt;空间中的任意态 $|\psi\rangle$ 用正交基底展开，&lt;/p&gt;
+$$
+
+\begin{align}
+    |\psi\rangle = \sum_n |e_n\rangle \langle e^n | \psi\rangle
+    = \sum_n \psi^n | e_n \rangle.
+\end{align}
+
+$$&lt;p&gt;转换到非正交基底&lt;/p&gt;
+$$
+
+\begin{align}
+    |\psi\rangle =
+    \sum_{\mu \nu} | e_{\mu} \rangle
+    S^{\mu \nu} \langle e_{\nu}|
+    \psi\rangle
+    =\sum_{\mu} \psi^{\mu} |e_{\mu} \rangle,
+\end{align}
+
+$$&lt;p&gt;其中&lt;/p&gt;
+$$
+
+\psi^{\mu} = \sum_{\nu} S^{\mu \nu} \langle e_{\nu}|
+    \psi\rangle
+    = \sum_n \left(T^{-1}\right)^{\mu}{}_{n} \psi^n.
+
+$$&lt;p&gt;反之&lt;/p&gt;
+$$
+
+\begin{align}
+    \psi^n = \sum_{\mu}
+    T^n{}_{\mu}
+     \psi^{\mu}.
+\end{align}
+
+$$&lt;h2 id="tensorial-formalism"&gt;Tensorial formalism&lt;/h2&gt;
+&lt;p&gt;接下来用张量的上下标的符号来描述非正交基底。&lt;/p&gt;
+&lt;h3 id="非正交完备基矢和一些相关概念的定义"&gt;非正交完备基矢和一些相关概念的定义&lt;/h3&gt;
+&lt;p&gt;在 Hilbert space $\mathcal{H}$ 中的一组非正交（当然正交是一种特殊的情况，也满足这些定义），完备的基矢为&lt;/p&gt;
+$$
+
+\begin{align}
+    | e_{\mu} \rangle
+\end{align}
+
+$$&lt;p&gt;在 2020 - Sakurai and Napolitano - Modern Quantum Mechanics 中的 D.C. 的意义下，它有对应的左矢&lt;/p&gt;
+$$
+
+\begin{align}
+    \langle e_\mu |
+\end{align}
+
+$$&lt;p&gt;每一基矢都存在一个与之正交归一的矢量，它们构成另外一组基矢，用上标标记&lt;/p&gt;
+$$
+
+\begin{align}
+    \langle e^{\mu} |
+\end{align}
+
+$$&lt;p&gt;同样的，它也有对应的右矢&lt;/p&gt;
+$$
+
+\begin{align}
+    | e^{\mu} \rangle
+\end{align}
+
+$$&lt;p&gt;在 REF:1991 中，也把它们分为 proper 或 improper ,总结如下&lt;/p&gt;
+$$
+
+\begin{align}
+    \begin{matrix}
+        \mathrm{proper} &amp;  \mathrm{improper}
+        \\ \hline
+        |e_{\mu}\rangle &amp;  \langle e_{\mu} | \\
+        \langle e^{\mu}| &amp; |e^{\mu}\rangle
+    \end{matrix}
+\end{align}
+
+$$&lt;p&gt;它们的正交归一性可以写为&lt;/p&gt;
+$$
+
+\begin{align}
+    \langle e^{\mu} | e_{\nu}\rangle =&amp; \delta^{\mu}{}_{\nu} \\
+    \langle e_{\mu} | e^{\nu}\rangle =&amp; \delta_{\mu}{}^{\nu}
+\end{align}
+
+$$&lt;p&gt;它们之间的度规（&lt;a href="https://en.wikipedia.org/wiki/Metric_tensor"&gt;Metric&lt;/a&gt;）定义为&lt;/p&gt;
+$$
+
+\begin{align}
+    S_{\mu \nu} \equiv &amp; \langle e_{\mu} | e_{\nu} \rangle \\
+    S^{\mu \nu} \equiv &amp; \langle e^{\mu} | e^{\nu} \rangle
+\end{align}
+
+$$&lt;p&gt;可以发现 metric &lt;eq&gt;S&lt;/eq&gt; 是一个厄米矩阵。&lt;/p&gt;
+&lt;p&gt;在 Hilbert space $\mathcal{H}$ 中的任意矢量 $|\psi\rangle$ ,定义它在这组基矢上的投影，或分量为（proper 的两个）&lt;/p&gt;
+$$
+
+\begin{align}
+    \psi^{\mu} \equiv&amp; \langle e^{\mu} | \psi\rangle \\
+    \psi_{\mu} \equiv&amp; \langle \psi | e_{\mu}\rangle
+\end{align}
+
+$$&lt;p&gt;以及 improper 的两个&lt;/p&gt;
+$$
+
+\begin{align}
+    \psi^{\mu *} \equiv&amp; \langle \psi | e^{\mu} \rangle \\
+    \psi_{\mu}^{*} \equiv&amp; \langle e_{\mu} | \psi \rangle
+\end{align}
+
+$$&lt;p&gt;由于 $\psi^{\mu}$ 只有一个指标，没法通过是行指标还是列指标来区分往左矢还投影还是往右矢投影，
+所以固定上指标是往 proper 的左矢投影。
+往上指标右矢的投影就直接写成其复共轭。也有文章用一个占位符，即 $\psi^{\cdot \mu}$ 来表示 $\psi^{\mu *}$ ，这里不采用。&lt;/p&gt;
+&lt;p&gt;同理固定下指标 $\psi_{\mu}$ 是往 proper 的右矢投影。&lt;/p&gt;
+&lt;h3 id="一些有用的结论"&gt;一些有用的结论&lt;/h3&gt;
+&lt;p&gt;与正交基底类似的，在非正交基底中也存在单位算符&lt;/p&gt;
+$$
+
+\begin{align}
+    1 = \sum_{\mu} | e_\mu \rangle \langle e^{\mu} |
+      = \sum_{\mu} | e^\mu \rangle \langle e_{\mu} |
+\end{align}
+
+$$&lt;p&gt;证明：把它作用在任基矢上
+$\sum_{\mu} | e_\mu \rangle \langle e^{\mu} | e_{\nu}\rangle = \sum_{\mu} | e_\mu \rangle \delta^{\mu}{}_{\nu} = |e_{\nu}\rangle$ ，相当于一个单位算符，易得作用在任意矢量上都相当于一个单位算符。&lt;/p&gt;
+&lt;p&gt;虽然 $S_{\mu \nu}$ 和 $S^{\mu \nu}$ 看起来像是同一个矩阵的矩阵元，但实际上它们是两个互逆的矩阵，&lt;/p&gt;
+$$
+
+\begin{align}
+    \sum_{\lambda} S_{\mu \lambda} S^{\lambda \nu}
+      =&amp; \sum_{\lambda} \langle e_{\mu} | e_\lambda \rangle
+        \langle e^{\lambda} | e^{\nu}\rangle
+      = \langle e_{\mu} | e^{\nu}\rangle \\
+      =&amp; \delta_{\mu}{}^{\nu}
+\end{align}
+
+$$&lt;p&gt;度规可以把一个指标升上去或降下来，&lt;/p&gt;
+$$
+
+\begin{align}
+    \psi^{\mu} =&amp; \langle e^{\mu} | \psi \rangle
+      = \sum_{\nu} \langle e^{\mu} | e^{\nu}\rangle\langle e_{\nu} | \psi \rangle \\
+      =&amp; \sum_{\nu} S^{\mu \nu} \psi_{\nu}^*
+\end{align}
+
+$$&lt;p&gt;同理&lt;/p&gt;
+$$
+
+\begin{align}
+    \psi_{\mu}^* = \sum_{\nu} S_{\mu \nu} \psi^{\nu}
+\end{align}
+
+$$&lt;p&gt;对于任意算符也是一样，例如，&lt;/p&gt;
+$$
+
+\begin{align}
+    B_{\mu \nu} =&amp; \langle e_{\mu} | B | e_{\nu}\rangle \\
+      =&amp; \sum_{\lambda} S_{\mu \lambda} B^{\lambda}{}_{\nu} \\
+      =&amp; \sum_{\lambda} B_{\mu}{}^{\lambda} S_{\lambda \nu}
+\end{align}
+
+$$&lt;p&gt;对任意态 $|\psi\rangle$ , $\psi^{\mu}$ 和 $\psi^{\nu}$ 分别就是在两组互相对偶的非正交基底上的展开系数，&lt;/p&gt;
+$$
+
+\begin{align}
+    |\psi\rangle = \sum_{\mu} | e_{\mu}\rangle \langle e^{\mu}| \psi\rangle
+      = \sum_{\mu} \psi^{\mu} | e_{\mu} \rangle
+\end{align}
+
+$$$$
+
+\begin{align}
+    \langle \psi | = \sum_{\mu} \langle\psi | e_{\mu}\rangle \langle e^{\mu}|
+    = \sum_{\mu} \langle e^{\mu}| \psi_{\mu}
+\end{align}
+
+$$&lt;h3 id="与正交基底的变换关系"&gt;与正交基底的变换关系&lt;/h3&gt;
+&lt;p&gt;正交基底的对偶基底就是它本身，即&lt;/p&gt;
+$$
+
+\begin{align}
+    |e_n \rangle = |e^n\rangle
+\end{align}
+
+$$&lt;p&gt;度规是单位阵&lt;/p&gt;
+$$
+
+\begin{align}
+    S_{mn} = \langle e_m | e_n \rangle = \delta_{mn},
+    \quad S^{mn} = \delta^{mn}
+\end{align}
+
+$$&lt;p&gt;展开系数&lt;/p&gt;
+$$
+
+\begin{align}
+    \psi^n = \langle e^n | \psi \rangle = \langle e_n | \psi\rangle = \psi_n^*
+\end{align}
+
+$$&lt;p&gt;变换矩阵&lt;/p&gt;
+$$
+
+\begin{align}
+    T^n{}_{\mu} = T_{n\mu} = \langle e_n|e_{\mu}\rangle
+      = \langle e^n|e_\mu\rangle
+\end{align}
+
+$$$$
+
+\begin{align}
+    T_n{}^{\mu} = T^{n\mu} = \langle e^n|e^{\mu}\rangle
+      = \langle e_n|e^\mu\rangle
+\end{align}
+
+$$$$
+
+\begin{align}
+    \sum_n T_{\mu n} T^{n \nu}
+      = \sum_n \langle e_{\mu} | e_n\rangle \langle e^n|e^{\nu}\rangle
+      = \delta_\mu{}^{\nu}
+\end{align}
+
+$$&lt;p&gt;注意，类似于度规，在这里 $T_{\mu n}$ 和 $T^{n \mu}$ 是两个互逆的矩阵的矩阵元。&lt;/p&gt;
+&lt;p&gt;变换关系为&lt;/p&gt;
+$$
+
+\begin{align}
+    \psi^n = T^n{}_{\mu} \psi^{\mu}
+\end{align}
+
+$$$$
+
+\begin{align}
+    \psi^{\mu} = T^{\mu}{}_n \psi^{n}
+\end{align}
+
+$$&lt;p&gt;证明如下&lt;/p&gt;
+$$
+
+\begin{align}
+    |\psi\rangle =&amp; \sum_n |e_n\rangle\langle e^n|\psi\rangle
+        = \sum_n \psi^n |e_n\rangle \\
+      =&amp; \sum_n \sum_{\mu} |e_n \rangle \langle e^n | e_{\mu}\rangle
+       \langle e^{\mu} | \psi\rangle
+        = \sum_n \sum_{\mu} T^n{}_{\mu} \psi^{\mu} | e_n \rangle
+\end{align}
+
+$$$$
+
+\begin{align}
+    |\psi\rangle =&amp; \sum_{\mu} | e_{\mu}\rangle \langle e^{\mu} | \psi\rangle
+        = \sum_{\mu} \psi^{\mu} | e_{\mu}\rangle \\
+      =&amp; \sum_{\mu}\sum_n | e_{\mu}\rangle \langle e^{\mu}
+          |e_n\rangle\langle e^n| \psi\rangle
+        = \sum_{\mu}\sum_n T^{\mu}{}_n \psi^n |e_\mu\rangle
+\end{align}
+
+$$&lt;h2 id="reference"&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;2020, Sakurai and Napolitano, Modern Quantum Mechanics&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.43.5770"&gt;1991, Phys. Rev. A 43, 5770, Nonorthogonal basis sets in quantum mechanics: Representations and second quantization&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.95.115155"&gt;2017, Phys. Rev. B 95, 115155, Quantum mechanics in an evolving Hilbert space&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Covariance_and_contravariance_of_vectors"&gt;Wikipedia: Covariance and contravariance of vectors&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="physics"/><category term="linear algebra"/></entry><entry><title>Shot Noise</title><link href="https://zqw.ink/2026-07-24-physics-shot_noise.html" rel="alternate"/><published>2026-07-24T00:00:00+08:00</published><updated>2026-07-24T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2026-07-24:/2026-07-24-physics-shot_noise.html</id><summary type="html">
 &lt;h2 id="对可观测量期望进行参数估计"&gt;对可观测量期望进行参数估计&lt;/h2&gt;
 &lt;p&gt;一个系统处在态 $\rho$ 上，我们想得到某个可观测量 $\hat{O}$ ，的期望 $\langle \hat{O} \rangle = \mathrm{Tr}(\hat{O}\rho)$ 。&lt;/p&gt;
 &lt;p&gt;$\langle \hat{O …&lt;/p&gt;</summary><content type="html">
@@ -17385,92 +17749,4 @@ G_l(\eta, kr) \to \cos\left( kr - \eta \ln 2kr - \frac{l\pi}{2} + \sigma_l \righ
 &lt;p&gt;昨天返校, 今天终于把从上学期就想整理的东西草草整理了.&lt;/p&gt;
 
 
-</content><category term="专业笔记"/><category term="symmetric potential"/><category term="special functions"/><category term="summary"/></entry><entry><title>python 并行的简单例子</title><link href="https://zqw.ink/2021-01-13-coding-multiprocessor.html" rel="alternate"/><published>2021-01-13T00:00:00+08:00</published><updated>2021-01-13T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2021-01-13:/2021-01-13-coding-multiprocessor.html</id><summary type="html">
-
-&lt;pre&gt;&lt;code class="language-python"&gt;import multiprocessing as mp
-import time
-import functools
-import numpy as np
-import matplotlib.pyplot as plt
-
-def timer(func):
-    """
-    Print the runtime of the decorated function.
-    参考自: https://realpython.com/primer-on-python-decorators/
-    """
-    @functools.wraps(func)
-    def wrapper_timer(*args, **kwargs):
-        start_time = time.perf_counter()
-        value = func(*args, **kwargs)
-        end_time = time …&lt;/code&gt;&lt;/pre&gt;</summary><content type="html">
-
-&lt;pre&gt;&lt;code class="language-python"&gt;import multiprocessing as mp
-import time
-import functools
-import numpy as np
-import matplotlib.pyplot as plt
-
-def timer(func):
-    """
-    Print the runtime of the decorated function.
-    参考自: https://realpython.com/primer-on-python-decorators/
-    """
-    @functools.wraps(func)
-    def wrapper_timer(*args, **kwargs):
-        start_time = time.perf_counter()
-        value = func(*args, **kwargs)
-        end_time = time.perf_counter()
-        run_time = end_time - start_time
-        print(f"Finished {func.__name__!r} in {run_time:.14f} secs")
-        return value
-    return wrapper_timer
-
-
-def foo(x):
-    '''
-    测试函数, 简单地计算 sin(x), 重复 1e5 次
-    '''
-    for i in range(int(1e5)):
-        a = np.sin(x)    
-    a = np.sin(x)
-    return a
-
-n = int(96)
-x = np.linspace(0, 10, n)
-
-@timer
-def loop_single_processing(x, n):
-    y_l_s_p = np.zeros(n)
-    for i in range(n):
-        # 单核运行 n 次 foo(x) 函数
-        y_l_s_p[i] = foo(x[i])
-    y_l_s_p = foo(x)
-    return y_l_s_p
-
-@timer
-def loop_multi_processing(x, n):
-    pool = mp.Pool()
-    y_m_s_p = pool.map(foo, x)
-    pool.close()
-    pool.join()
-    return np.array(y_m_s_p)
-    
-
-lsp = loop_single_processing(x, n)
-lmp = loop_multi_processing(x, n)
-
-plt.plot(x, lsp, '.', label='loop single processing')
-plt.plot(x, lmp+1, '.', label='loop multi processing')
-plt.legend()
-plt.savefig('fig.png')
-plt.show()&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;结果
-file:./2021-01-13-coding-multiprocessor/fig.png&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-python"&gt;Finished 'loop_single_processing' in 9.28632830292918 secs
-Finished 'loop_multi_processing' in 3.00595757691190 secs&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;code: &lt;a href='./2021-01-13-coding-multiprocessor/mp.py'&gt;./2021-01-13-coding-multiprocessor/mp.py&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;从结果上看, 串行与并行当然给出相同的结果. 电脑上有 8 核, 但速度只提升了约 3 倍,
-而不是 8 倍, 是核之间的任务分配与数据交换耗时还是我的程序有问题, 目前并不清楚.&lt;/p&gt;
-</content><category term="软件使用"/><category term="python"/></entry></feed>
+</content><category term="专业笔记"/><category term="symmetric potential"/><category term="special functions"/><category term="summary"/></entry></feed>

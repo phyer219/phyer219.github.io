@@ -1,5 +1,5 @@
 ---
-title: Shot noise
+title: Shot Noise
 date: 2026-07-24
 category: physics
 tags:
