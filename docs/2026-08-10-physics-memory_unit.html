@@ -2,13 +2,16 @@
 <html lang="zh_cn">
 
 <head>
-  <title>从冰上的水 - Authors</title>
+    <title>从冰上的水 - 存储单位</title>
   <meta charset="utf-8" />
   <meta name="generator" content="Pelican" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link
     href="https://zqw.ink/feeds/all.atom.xml"
     type="application/atom+xml" rel="alternate" title="从冰上的水 Full Atom Feed" />
+  <link
+    href="https://zqw.ink/feeds/physics.atom.xml"
+    type="application/atom+xml" rel="alternate" title="从冰上的水 Categories Atom Feed" />
   <link rel="stylesheet" type="text/css" href="https://zqw.ink/theme/css/style.css" />
   <!-- SEO: site-level structured data (WebSite) -->
   <script type="application/ld+json">
@@ -75,6 +78,33 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.1">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.1">
 <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.1">
+
+
+
+  <!-- SEO: page description for search results -->
+    <meta name="description" content="单位 名称 缩写 中文 备注 bit b 比特，位 一个 0 或 1 比位 byte B 字节 1B=8b ，一个 ASCII 字符用 8b 来编码 二进制词头 $1\mathrm{Ki} = 2^{10} = 1024 \approx …" />
+
+    <meta name="tags" content="computer science" />
+    <meta name="tags" content="computer memory" />
+
+  <!-- SEO: structured data for articles (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "存储单位",
+    "datePublished": "2026-08-10T00:00:00+08:00",
+    "author": {
+      "@type": "Person",
+      "name": "ZQW"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://zqw.ink/2026-08-10-physics-memory_unit.html"
+    }
+  }
+  </script>
+
 </head>
 
 <body>
@@ -117,10 +147,137 @@
   </header>
   <main>
 
-    <h2>Authors on 从冰上的水</h2>
-    <ul>
-            <li><a href="https://zqw.ink/author/ZQW.html">ZQW</a> (260)</li>
-    </ul>
+<h1 class="post-title">存储单位</h1>
+
+<section class="post-meta">
+    <p>2026-08-10</p>
+    <p>-<a class="post-link" href="https://zqw.ink/category/physics.html">physics</a></p>
+</section>
+
+<section class="markdown-body">
+  
+<h2 id="单位">单位</h2>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>缩写</th>
+<th>中文</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bit</td>
+<td>b</td>
+<td>比特，位</td>
+<td>一个 0 或 1 比位</td>
+</tr>
+<tr>
+<td>byte</td>
+<td>B</td>
+<td>字节</td>
+<td>1B=8b ，一个 ASCII 字符用 8b 来编码</td>
+</tr>
+</tbody>
+</table>
+<h2 id="二进制词头">二进制词头</h2>
+<ul>
+<li>$1\mathrm{Ki} = 2^{10} = 1024 \approx 10^3$</li>
+<li>$1\mathrm{Mi} = 2^{20}$</li>
+<li>$1\mathrm{Gi} = 2^{30}$</li>
+</ul>
+<h2 id="十进制词头">十进制词头</h2>
+<ul>
+<li>$1\mathrm{k} = 10^3$</li>
+<li>$1\mathrm{M} = 10^6$</li>
+<li>$1\mathrm{G} = 10^9$</li>
+</ul>
+<h2 id="数据类型">数据类型</h2>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>大小</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>float32</code></td>
+<td><code>32b = 4B</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>float64</code></td>
+<td><code>64b = 8B</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>complex64</code></td>
+<td><code>64b = 8B</code></td>
+<td>实部和虚部各 <code>32b</code></td>
+</tr>
+<tr>
+<td><code>complex128</code></td>
+<td><code>128b = 16B</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><code>python</code> 默认用的 <code>int</code> ， <code>float</code> ， <code>complex</code> 都没有固定大小。
+<code>numpy</code> 通常依赖于平台，比如有时会默认用的是 <code>float64</code> , <code>int64</code> , <code>complex128</code> 。</p>
+<pre><code class="language-python">&gt;&gt;&gt; type(1)
+&lt;class 'int'&gt;
+
+&gt;&gt;&gt; type(1.0)
+&lt;class 'float'&gt;
+
+&gt;&gt;&gt; type(1j)
+&lt;class 'complex'&gt;
+
+&gt;&gt;&gt; np.array([[1, 2], [3, 4]]).dtype
+dtype('int64')
+
+&gt;&gt;&gt; np.array([[1.0, 2], [3, 4]]).dtype
+dtype('float64')
+
+&gt;&gt;&gt; np.array([[1.0j, 2], [3, 4]]).dtype
+dtype('complex128')
+</code></pre>
+<h2 id="例子">例子</h2>
+<p>例如，一个 $10000\times 10000$ 的矩阵，大约占的内存是
+$8\times 10^8\mathrm{B}$ ，</p>
+<pre><code class="language-python">a = rng.random((10000, 10000))
+&gt;&gt;&gt; sys.getsizeof(a)
+800000128
+&gt;&gt;&gt; a.dtype
+dtype('float64')
+</code></pre>
+<p>多出的 128 字节是 <code>ndarray</code> 对象自身的管理信息。</p>
+<p>再比如，我们创建一个大一点的矩阵，</p>
+<pre><code class="language-python">a = rng.random((2**15, 2**15, 10))
+&gt;&gt;&gt; sys.getsizeof(a)/2**30
+80.00000013411045
+&gt;&gt;&gt; a.dtype
+dtype('float64')
+</code></pre>
+<pre><code class="language-shell">PID    COMMAND      %CPU TIME     #TH    #WQ  #PORTS MEM
+53402  python3.13   0.0  00:44.53 1      0    22     80G
+</code></pre>
+<p>可以发现，用了大约 $8\times 10\times 2^{30} \mathrm{B} = 80\mathrm{GiB}$ 。</p>
+<p>也就是说，一个 $15$ 个二能级系统的实数 Hamiltonian 在用 <code>float64</code> 稠密矩阵存储时，
+用大概 $8\mathrm{GiB}$ 。</p>
+
+</section>
+
+<section class="post-meta">
+    <p>
+        <a class="post-link" href="https://zqw.ink/tag/computer-science.html">#computer science</a>
+        <a class="post-link" href="https://zqw.ink/tag/computer-memory.html">#computer memory</a>
+    </p>
+</section>
+
   </main>
   <footer role="contentinfo">
     <p>Copyright &copy; 2018 - 2026 ZQW</p>
