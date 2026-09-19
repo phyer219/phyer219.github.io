@@ -1,2 +1,6 @@
+pelican
+markdown
+pyyaml
+nbformat
 markdown-it-py
 mdit_py_plugins
