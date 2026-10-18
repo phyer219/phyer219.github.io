@@ -2,7 +2,7 @@
 title: Emacs使用笔记
 date: 2018/09/07
 categories: 软件使用
-tags: [Emacs, 快捷键]
+tags: [emacs, 快捷键]
 ---
 
 <!-- toc -->

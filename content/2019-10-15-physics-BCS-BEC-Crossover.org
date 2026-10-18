@@ -1,7 +1,7 @@
 #+TITLE: BCS-BEC Crossover
 #+DATE: <2019-10-15>
 #+CATEGORIES: 专业笔记
-#+TAGS: 物理, BCS-BEC Crossover, BEC, BCS
+#+TAGS: 物理, BCS-BEC crossover, BEC, BCS
 #+HTML: <!-- toc -->
 #+HTML: <!-- more -->
 

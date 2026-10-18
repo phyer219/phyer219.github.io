@@ -1,7 +1,7 @@
 #+TITLE: Rotating Wave Approximation
 #+DATE: <2020-04-22>
 #+CATEGORIES: 专业笔记
-#+TAGS: 物理, Rotating Wave Approximation, Atom Light Interaction
+#+TAGS: 物理, rotating wave approximation, Atom Light Interaction
 #+HTML: <!-- toc -->
 #+HTML: <!-- more -->
 

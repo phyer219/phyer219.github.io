@@ -1,7 +1,7 @@
 #+TITLE: 由 rf current 的定义推导其格林函数的表达形式
 #+DATE: <2020-05-02>
 #+CATEGORIES: 专业笔记
-#+TAGS: 物理, rf current, linear repsonse, Green's Function
+#+TAGS: 物理, rf current, linear repsonse, Green's function
 #+HTML: <!-- toc -->
 #+HTML: <!-- more -->
 

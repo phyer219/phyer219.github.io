@@ -1,7 +1,7 @@
 #+TITLE: 格林函数方法求解微分方程
 #+DATE: <2020-07-03>
 #+CATEGORIES: 专业笔记
-#+TAGS: 数学, Green's Function
+#+TAGS: 数学, Green's function
 #+HTML: <!-- toc -->
 #+HTML: <!-- more -->
 

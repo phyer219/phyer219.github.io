@@ -2,7 +2,7 @@
 title: Django 笔记：CentOS+Apache+Mariadb+mod_wsgi+Django 
 date: 2020/02/03
 categories: 软件使用
-tags: [Django, Mariadb, Python, mod_wsgi, Apache]
+tags: [Django, Mariadb, python, mod_wsgi, Apache]
 ---
 
 <!-- toc -->

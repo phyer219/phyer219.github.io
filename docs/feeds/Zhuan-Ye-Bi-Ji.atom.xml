@@ -10030,7 +10030,7 @@ $$\begin{align}
 &lt;li&gt;PhysRevA.86.012711, Renormalization in the three-body problem with resonant p-wave interactions&lt;/li&gt;
 &lt;li&gt;PhysRevA.99.012701, Three-body problem of bosons near a d-wave resonance&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="专业笔记"/><category term="p-wave"/><category term="Renormalization"/><category term="Scattering"/></entry><entry><title>Carl Bender Mathematical Physics Lecture6 Note</title><link href="https://zqw.ink/2020-10-10-physics-CarlBenderMathematicalPhysicsLecture6.html" rel="alternate"/><published>2020-10-10T00:00:00+08:00</published><updated>2020-10-10T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-10-10:/2020-10-10-physics-CarlBenderMathematicalPhysicsLecture6.html</id><summary type="html">
+</content><category term="专业笔记"/><category term="p-wave"/><category term="Renormalization"/><category term="scattering"/></entry><entry><title>Carl Bender Mathematical Physics Lecture6 Note</title><link href="https://zqw.ink/2020-10-10-physics-CarlBenderMathematicalPhysicsLecture6.html" rel="alternate"/><published>2020-10-10T00:00:00+08:00</published><updated>2020-10-10T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-10-10:/2020-10-10-physics-CarlBenderMathematicalPhysicsLecture6.html</id><summary type="html">
 &lt;h2&gt;Information&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -11790,7 +11790,7 @@ y(x) = \frac{1}{\pi ^2} \left[2x + \cos (\pi x) - 1 \right]
 &lt;ul&gt;
 &lt;li&gt;Arfken, Weber, Harris, Mathematical Methods for Physicists 7ed:&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="专业笔记"/><category term="数学"/><category term="Green's Function"/></entry><entry><title>读书笔记: Time Reversal and Kramer's Degeneracy</title><link href="https://zqw.ink/2020-05-21-physics-TimeReversal.html" rel="alternate"/><published>2020-05-21T00:00:00+08:00</published><updated>2020-05-21T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-05-21:/2020-05-21-physics-TimeReversal.html</id><summary type="html">
+</content><category term="专业笔记"/><category term="数学"/><category term="Green's function"/></entry><entry><title>读书笔记: Time Reversal and Kramer's Degeneracy</title><link href="https://zqw.ink/2020-05-21-physics-TimeReversal.html" rel="alternate"/><published>2020-05-21T00:00:00+08:00</published><updated>2020-05-21T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-05-21:/2020-05-21-physics-TimeReversal.html</id><summary type="html">
 &lt;h2&gt;引言: 时间反演概述与 Kramer's Degeneracy&lt;/h2&gt;
 
 &lt;p&gt;对于牛顿力学&lt;/p&gt;
@@ -13685,7 +13685,7 @@ $$\begin{align}
 &lt;li&gt;Phys. Scr. 91 (2016) 043006 ,Päivi Törmä ,Physics of ultracold Fermi gases revealed by spectroscopies&lt;/li&gt;
 &lt;li&gt;Torma P.,Klaus Sengstock K, Quantum Gas Experiments Exploring Many-Body States&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="专业笔记"/><category term="物理"/><category term="rf current"/><category term="linear repsonse"/><category term="Green's Function"/></entry><entry><title>Rotating Wave Approximation</title><link href="https://zqw.ink/2020-04-22-physics-RotatingWaveApprox.html" rel="alternate"/><published>2020-04-22T00:00:00+08:00</published><updated>2020-04-22T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-04-22:/2020-04-22-physics-RotatingWaveApprox.html</id><summary type="html">
+</content><category term="专业笔记"/><category term="物理"/><category term="rf current"/><category term="linear repsonse"/><category term="Green's function"/></entry><entry><title>Rotating Wave Approximation</title><link href="https://zqw.ink/2020-04-22-physics-RotatingWaveApprox.html" rel="alternate"/><published>2020-04-22T00:00:00+08:00</published><updated>2020-04-22T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-04-22:/2020-04-22-physics-RotatingWaveApprox.html</id><summary type="html">
 &lt;h2&gt;Hamiltonian&lt;/h2&gt;
 
 &lt;p&gt;考虑碱金属原子的基态 $|^2S_{1/2}\rangle$ 和两个激发态 $|^2P_{1/2}\rangle, |^2P_{3/2}\rangle$
@@ -14017,7 +14017,7 @@ $V_{\mathrm{p}}^D(t) = H_{r}$ 与之前的结果相符.&lt;/p&gt;
 &lt;li&gt;[1] H. Z. 的 lecture&lt;/li&gt;
 &lt;li&gt;[2] 博客中的 Term Symbol, 多体物理读书会:3.1节 Dirac表象中的演化算符-diagram techniques的起点, 定态微扰论总结 (update 18/Apr/2020)&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="专业笔记"/><category term="物理"/><category term="Rotating Wave Approximation"/><category term="Atom Light Interaction"/></entry><entry><title>Term Symbol</title><link href="https://zqw.ink/2020-04-16-physics-TermSymbl.html" rel="alternate"/><published>2020-04-16T00:00:00+08:00</published><updated>2020-04-16T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-04-16:/2020-04-16-physics-TermSymbl.html</id><summary type="html">
+</content><category term="专业笔记"/><category term="物理"/><category term="rotating wave approximation"/><category term="Atom Light Interaction"/></entry><entry><title>Term Symbol</title><link href="https://zqw.ink/2020-04-16-physics-TermSymbl.html" rel="alternate"/><published>2020-04-16T00:00:00+08:00</published><updated>2020-04-16T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2020-04-16:/2020-04-16-physics-TermSymbl.html</id><summary type="html">
 &lt;h2&gt;Term Symbol&lt;/h2&gt;
 
 &lt;p&gt;Term Symbol 用来描述一个多电子原子的(总)角动量量子数, 也可以用来描述单个电子.&lt;/p&gt;
@@ -18545,7 +18545,7 @@ $\Delta = 0$ , 另一方面, 这个 deep 同时也消失了, 也就是说在 $T_
 &lt;p&gt;Stinati&lt;/p&gt;
 
 &lt;p&gt;Pitaevskii &lt;/p&gt;
-</content><category term="专业笔记"/><category term="物理"/><category term="BCS-BEC Crossover"/><category term="BEC"/><category term="BCS"/></entry><entry><title>NSR Calaulate III</title><link href="https://zqw.ink/2019-10-09-physics-NSRCalv3.html" rel="alternate"/><published>2019-10-09T00:00:00+08:00</published><updated>2019-10-09T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2019-10-09:/2019-10-09-physics-NSRCalv3.html</id><summary type="html">
+</content><category term="专业笔记"/><category term="物理"/><category term="BCS-BEC crossover"/><category term="BEC"/><category term="BCS"/></entry><entry><title>NSR Calaulate III</title><link href="https://zqw.ink/2019-10-09-physics-NSRCalv3.html" rel="alternate"/><published>2019-10-09T00:00:00+08:00</published><updated>2019-10-09T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2019-10-09:/2019-10-09-physics-NSRCalv3.html</id><summary type="html">
 &lt;h2 id="整体思路"&gt;整体思路&lt;/h2&gt;
 $$
 

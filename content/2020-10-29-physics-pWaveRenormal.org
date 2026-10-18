@@ -1,7 +1,7 @@
 #+TITLE: p 波接触相互作用参数的重整化
 #+DATE: <2020-10-29>
 #+CATEGORIES: 专业笔记
-#+TAGS: p-wave, Renormalization, Scattering
+#+TAGS: p-wave, Renormalization, scattering
 #+HTML: <!-- toc -->
 #+HTML: <!-- more -->
 

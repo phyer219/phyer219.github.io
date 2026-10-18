@@ -1,7 +1,7 @@
 #+TITLE: Linux使用笔记(update 28/Jan/2021)
 #+DATE: <2018-09-07>
 #+CATEGORIES: coding
-#+TAGS: Linux
+#+TAGS: linux
 #+HTML: <!-- toc -->
 #+HTML: <!-- more -->
 

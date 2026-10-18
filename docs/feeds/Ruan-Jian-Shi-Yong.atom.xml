@@ -4465,7 +4465,7 @@ def poetry(request):
 &lt;li&gt;https://docs.djangoproject.com/zh-hans/3.0/intro/tutorial01/&lt;/li&gt;
 &lt;li&gt;www.google.com&lt;/li&gt;
 &lt;/ol&gt;
-</content><category term="软件使用"/><category term="Django"/><category term="Mariadb"/><category term="Python"/><category term="mod_wsgi"/><category term="Apache"/></entry><entry><title>面向对象, 花式作图</title><link href="https://zqw.ink/2019-10-25-coding-objectPlot.html" rel="alternate"/><published>2019-10-25T00:00:00+08:00</published><updated>2019-10-25T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2019-10-25:/2019-10-25-coding-objectPlot.html</id><summary type="html">
+</content><category term="软件使用"/><category term="Django"/><category term="Mariadb"/><category term="python"/><category term="mod_wsgi"/><category term="Apache"/></entry><entry><title>面向对象, 花式作图</title><link href="https://zqw.ink/2019-10-25-coding-objectPlot.html" rel="alternate"/><published>2019-10-25T00:00:00+08:00</published><updated>2019-10-25T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2019-10-25:/2019-10-25-coding-objectPlot.html</id><summary type="html">
 &lt;h2&gt;面向对象&lt;/h2&gt;
 
 &lt;p&gt;面向对象写程序, 是一直在对一些对象作一些操作.&lt;/p&gt;
@@ -5045,7 +5045,7 @@ teamviewer&lt;/code&gt;&lt;/pre&gt;
 (require 'sr-speedbar)
 
 &lt;/code&gt;&lt;/pre&gt;
-</content><category term="软件使用"/><category term="Emacs"/><category term="快捷键"/></entry><entry><title>Typora使用笔记</title><link href="https://zqw.ink/2018-09-07-coding-typora_note.html" rel="alternate"/><published>2018-09-07T00:00:00+08:00</published><updated>2018-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-07:/2018-09-07-coding-typora_note.html</id><summary type="html">&lt;!-- toc --&gt;
+</content><category term="软件使用"/><category term="emacs"/><category term="快捷键"/></entry><entry><title>Typora使用笔记</title><link href="https://zqw.ink/2018-09-07-coding-typora_note.html" rel="alternate"/><published>2018-09-07T00:00:00+08:00</published><updated>2018-09-07T00:00:00+08:00</updated><author><name>ZQW</name></author><id>tag:zqw.ink,2018-09-07:/2018-09-07-coding-typora_note.html</id><summary type="html">&lt;!-- toc --&gt;
 &lt;!-- more --&gt;
 &lt;h2 id="标题"&gt;标题&lt;/h2&gt;
 &lt;ul&gt;

@@ -5,7 +5,7 @@ category: physics
 tags:
 - "Fourier transform"
 - "数学"
-- "Python"
+- "python"
 - "FFT"
 ---
 
